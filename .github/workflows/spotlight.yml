@@ -5,10 +5,18 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "build = normal run, check = test every pool entry (writes spotlight/CHECK.md), redraw = rebuild all art"
+        description: "build = normal run · next = skip the card below to its next subject now · check = test every pool entry (spotlight/CHECK.md) · redraw = rebuild all art"
         default: build
         type: choice
-        options: [build, check, redraw]
+        options: [build, next, check, redraw]
+      card:
+        description: "Card for 'next' or 'subject'"
+        default: all
+        type: choice
+        options: [all, headliner, visionary, powerhouse, saga, pulse]
+      subject:
+        description: "Show this subject on the card now, e.g. Pedro Pascal / A24 / Star Wars / Halloween Night (optional)"
+        required: false
       date:
         description: "Pretend today is YYYY-MM-DD (optional, for testing)"
         required: false
@@ -27,13 +35,20 @@ jobs:
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           MODE: ${{ inputs.mode || 'build' }}
+          CARD: ${{ inputs.card || 'all' }}
+          SUBJECT: ${{ inputs.subject }}
           DATE: ${{ inputs.date }}
         run: |
-          args=""
-          [ "$MODE" = check ] && args="--check"
-          [ "$MODE" = redraw ] && args="--redraw"
-          [ -n "$DATE" ] && args="$args --date $DATE"
-          python3 scripts/spotlight.py $args
+          args=()
+          [ "$MODE" = check ] && args+=(--check)
+          [ "$MODE" = redraw ] && args+=(--redraw)
+          [ "$MODE" = next ] && args+=(--next "$CARD")
+          if [ -n "$SUBJECT" ]; then
+            [ "$CARD" = all ] && { echo "::error::Pick a card for the subject"; exit 1; }
+            args+=(--subject "$CARD=$SUBJECT")
+          fi
+          [ -n "$DATE" ] && args+=(--date "$DATE")
+          python3 scripts/spotlight.py "${args[@]}"
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"

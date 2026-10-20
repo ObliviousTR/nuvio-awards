@@ -22,6 +22,7 @@ P = lambda *p: os.path.join(SP, *p)
 API = "https://api.themoviedb.org/3"
 KEY = os.environ.get("TMDB_API_KEY", "").strip()
 LIMIT = 100
+SIMKL_ART = "poster-wall-1"  # bump to redraw the My Simkl cover
 NOISE_TV = "16|99|10762|10763|10764|10766|10767"   # animation, docs, kids, news, reality, soap, talk
 NO_TOON_M = "16"
 MIN_MOVIES = {"headliner": 6, "visionary": 3, "powerhouse": 6, "saga": 3}
@@ -36,6 +37,7 @@ CARDS = {
     "fresh": dict(card="Fresh Out of Theaters", tag="Updated Daily", accent="#22C55E"),
     "boxoffice": dict(card="Box Office Champions", tag="Updated Daily", accent="#EAB308"),
     "certified": dict(card="Certified Fresh & Must-See", tag="Updated Daily", accent="#EF4444"),
+    "simkl": dict(card="My Simkl", tag="Your Lists", accent="#3B82F6"),
 }
 
 
@@ -275,11 +277,23 @@ def awards_catalog(typ, cid):
                  year=x.get("releaseInfo", ""), date="", votes=0, backdrop=None, poster=None) for x in metas]
 
 
-def pulse_theme(pool, today):
+def next_start(pool, today):
+    """Date the next calendar theme starts (after today)."""
+    starts = sorted({t["start"] for t in pool["pulse"]})
+    md = today.strftime("%m-%d")
+    later = [x for x in starts if x > md]
+    y, x = (today.year, later[0]) if later else (today.year + 1, starts[0])
+    return dt.date(y, int(x[:2]), int(x[3:]))
+
+
+def pulse_theme(pool, today, override=None):
     md = today.strftime("%m-%d")
     themes = sorted(pool["pulse"], key=lambda t: t["start"])
     cur = [t for t in themes if t["start"] <= md]
     t = dict(cur[-1] if cur else themes[-1])
+    if override and today.isoformat() < override["until"]:
+        t = dict(next(x for x in themes if x["title"] == override["theme"]))
+    t["_raw"] = t["title"]
     best_year = today.year if today.month == 12 else today.year - 1
     t["title"] = t["title"].format(best_year=best_year)
     t["_best_year"] = best_year
@@ -364,16 +378,26 @@ def candidates(entries, hist, today):
     return seasonal + rest
 
 
-def build_rotating(slot, pool, state, today, period, log):
+def build_rotating(slot, pool, state, today, period, log, force_next=False, force_subject=None):
     st = state.setdefault("cards", {}).setdefault(slot, {})
     hist = state.setdefault("history", {}).setdefault(slot, {})
     entries = pool[slot]
-    by_name = {e["name"]: e for e in entries}
+    by_name = {norm(e["name"]): e for e in entries}
+    by_name.update({norm(e["title"]): e for e in entries if e.get("title")})
     pin = state.get("pin", {}).get(slot)
-    if pin and pin in by_name:
-        order = [by_name[pin]]
-    elif st.get("period") == period and st.get("subject") in by_name:
-        order = [by_name[st["subject"]]]
+    if force_subject:
+        e = by_name.get(norm(force_subject))
+        if not e and slot == "saga":
+            raise SystemExit(f"saga '{force_subject}' is not in pool.json (sagas need their TMDB collections there)")
+        order = [e or {"name": force_subject}]
+        log.append(f"- {slot}: chosen by hand: {order[0]['name']}")
+    elif force_next:
+        order = [e for e in candidates(entries, hist, today) if e["name"] != st.get("subject")]
+        log.append(f"- {slot}: skipped to the next subject by hand")
+    elif pin and norm(pin) in by_name:
+        order = [by_name[norm(pin)]]
+    elif st.get("period") == period and st.get("subject"):
+        order = [by_name.get(norm(st["subject"])) or {"name": st["subject"]}]
     else:
         order = candidates(entries, hist, today)
     fn = {"headliner": lambda e: person_card(e, today, False), "visionary": lambda e: person_card(e, today, True),
@@ -431,6 +455,8 @@ def main():
     ap.add_argument("--date")
     ap.add_argument("--check", action="store_true", help="resolve every pool entry, write spotlight/CHECK.md")
     ap.add_argument("--redraw", action="store_true", help="regenerate all art")
+    ap.add_argument("--next", default="", help="card (or 'all'): show the next subject now instead of waiting")
+    ap.add_argument("--subject", default="", help="'card=Name': show this subject now (until the next rotation)")
     args = ap.parse_args()
     if not KEY:
         sys.exit("TMDB_API_KEY is not set")
@@ -442,12 +468,32 @@ def main():
     if args.check:
         return check(pool, today)
 
+    rotating = ("headliner", "visionary", "powerhouse", "saga")
+    nxt = set(rotating) if args.next == "all" else {args.next} - {""}
+    forced = {}
+    if args.subject:
+        card, _, name = args.subject.partition("=")
+        if card.strip() not in rotating + ("pulse",) or not name.strip():
+            sys.exit("--subject must look like 'headliner=Pedro Pascal' (cards: " + ", ".join(rotating + ("pulse",)) + ")")
+        forced[card.strip()] = name.strip()
+    if "pulse" in forced:
+        bare = lambda x: norm(re.sub(r"\{best_year\}|\b\d{4}\b", "", x))
+        hit = [t for t in pool["pulse"] if bare(t["title"]) == bare(forced["pulse"])]
+        if not hit:
+            sys.exit("pulse theme not in pool.json: " + forced["pulse"] + "\nthemes: " + ", ".join(t["title"] for t in pool["pulse"]))
+        state["pulse_override"] = {"theme": hit[0]["title"], "until": next_start(pool, today).isoformat()}
+    if args.next == "pulse":  # bring the next calendar theme forward; the calendar carries on from it
+        themes = sorted(pool["pulse"], key=lambda t: t["start"])
+        cur = state.get("pulse_override", {}).get("theme") or pulse_theme(pool, today)["_raw"]
+        i = next(k for k, t in enumerate(themes) if t["title"] == cur)
+        state["pulse_override"] = {"theme": themes[(i + 1) % len(themes)]["title"],
+                                   "until": next_start(pool, today).isoformat()}
     period = period_of(pool, today)
     next_change = dt.date.fromisoformat(pool["anchor"]) + dt.timedelta(days=(period + 1) * pool["period_days"])
     log, status, catalogs = [], [], []
     names = {}
-    for slot in ("headliner", "visionary", "powerhouse", "saga"):
-        subject, m, s, a, notes = build_rotating(slot, pool, state, today, period, log)
+    for slot in rotating:
+        subject, m, s, a, notes = build_rotating(slot, pool, state, today, period, log, slot in nxt, forced.get(slot))
         label = CARDS[slot]["card"]
         names[slot] = (f"{label}: {a['title']}", f"{label}: {a['title']} · Series")
         write_catalog("movie", f"spotlight-{slot}-movies", m)
@@ -455,7 +501,11 @@ def main():
         drew = make_art(slot, a, subject, state, args.redraw)
         status.append((label, a["title"], len(m), len(s), notes, drew))
 
-    t = pulse_theme(pool, today)
+    ov = state.get("pulse_override")
+    if ov and today.isoformat() >= ov["until"]:
+        state.pop("pulse_override")
+        ov = None
+    t = pulse_theme(pool, today, ov)
     m, s, a, notes = pulse_card(t, today)
     names["pulse"] = (f"{t['title']} · Movies", f"{t['title']} · Series")
     write_catalog("movie", "spotlight-pulse-movies", m)
@@ -479,6 +529,14 @@ def main():
         drew = make_art(slot, a, "static", state, args.redraw)
         status.append((CARDS[slot]["card"], "daily", len(m), len(s), [], drew))
 
+    if state.get("art", {}).get("simkl") != SIMKL_ART or args.redraw:
+        posters = [x["poster"] for m, s in daily.values() for x in m + s if x.get("poster")]
+        c = CARDS["simkl"]
+        art.poster_wall(P("art", "simkl", "cover.jpg"), list(dict.fromkeys(posters))[:40], card=c["card"], tag=c["tag"],
+                        title="My Simkl", subtitle="Up next · Watching · Plan to watch", accent=c["accent"])
+        state.setdefault("art", {})["simkl"] = SIMKL_ART
+        status.append(("My Simkl", "cover", 0, 0, [], True))
+
     for slot in ("headliner", "visionary", "powerhouse", "saga", "pulse", "fresh", "boxoffice", "certified"):
         mid = f"spotlight-{slot}-movies"
         sid, styp = (f"spotlight-{slot}-alltime", "movie") if slot == "boxoffice" else (f"spotlight-{slot}-series", "series")
@@ -499,7 +557,8 @@ def main():
     IMDB.save()
 
     md = [f"# Spotlight status — {today.isoformat()}", "",
-          f"Next rotation (actor, director, studio, saga): **{next_change.isoformat()}**", "",
+          f"Next rotation (actor, director, studio, saga): **{next_change.isoformat()}**",
+          f"Next Cultural Pulse theme starts: **{next_start(pool, today).isoformat()}**", "",
           "| Card | Subject | Movies | Series | New art |", "|---|---|---:|---:|:-:|"]
     md += [f"| {c} | {sub} | {nm} | {ns} | {'✓' if d else ''} |" for c, sub, nm, ns, _, d in status]
     md += ["", "## Notes"] + [f"- **{c}**: {n}" for c, _, _, _, notes, _ in status for n in notes] + log

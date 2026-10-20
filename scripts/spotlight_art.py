@@ -72,11 +72,15 @@ def spaced(draw, xy, text, fnt, fill, spacing):
     return x
 
 
-def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portrait=None, logo=None, poster=None):
-    """card: small card name top-left ('THE HEADLINER'); tag: label above the title ('ACTOR SPOTLIGHT')."""
+def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portrait=None, logo=None, poster=None,
+          base=None):
+    """card: small card name top-left ('THE HEADLINER'); tag: label above the title ('ACTOR SPOTLIGHT').
+    base: a ready background image (skips the backdrop)."""
     acc = hex_rgb(accent)
-    bg = fetch(backdrop, "w1280")
-    if bg:
+    bg = None if base else fetch(backdrop, "w1280")
+    if base:
+        pass
+    elif bg:
         base = cover_fit(bg.convert("RGB"), W, H)
         base = ImageEnhance.Brightness(base).enhance(0.55)
         base = ImageEnhance.Color(base).enhance(0.8)
@@ -163,3 +167,28 @@ def backdrop(out_path, path):
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     im.save(out_path, "JPEG", quality=82, optimize=True, progressive=True)
     return True
+
+
+def poster_wall(out_path, posters, *, card, tag, title, subtitle, accent, angle=-12):
+    """A tilted wall of posters in the accent colour, used for cards whose content is personal (My Simkl)."""
+    acc = hex_rgb(accent)
+    pw, ph, gap = 170, 255, 16
+    cols, rows = 11, 5
+    wall = Image.new("RGB", (cols * (pw + gap), rows * (ph + gap)), (10, 12, 18))
+    imgs = [im for im in (fetch(p, "w342") for p in posters) if im]
+    for i in range(cols * (rows + 1)):
+        if not imgs:
+            break
+        im = imgs[i % len(imgs)].convert("RGB").resize((pw, ph), Image.LANCZOS)
+        c, r = i % cols, i // cols
+        wall.paste(im, (c * (pw + gap), r * (ph + gap) - (ph // 2 if c % 2 else 0)))
+    wall = wall.rotate(angle, resample=Image.BICUBIC, fillcolor=(10, 12, 18))
+    x, y = (wall.width - W) // 2, (wall.height - H) // 2
+    base = wall.crop((x, y, x + W, y + H))
+    # duotone toward the accent colour, darker toward the text side
+    grey = ImageEnhance.Color(base).enhance(0.15)
+    base = Image.blend(grey, Image.new("RGB", (W, H), acc), 0.3)
+    base = ImageEnhance.Brightness(base).enhance(0.75)
+    glow = Image.new("RGB", (W, H), tuple(min(255, c + 60) for c in acc))
+    base = Image.composite(glow, base, gradient_mask(W, H, [(0, 0), (0.65, 0), (1, 60)]))
+    cover(out_path, card=card, tag=tag, title=title, subtitle=subtitle, accent=accent, base=base)
