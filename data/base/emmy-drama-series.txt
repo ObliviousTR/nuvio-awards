@@ -1,0 +1,44 @@
+tt31938062|250307|2025|The Pitt
+tt2788316|126308|2024|Shōgun
+tt7660850|76331|2018|Succession
+tt5834204|69478|2017|The Handmaid's Tale
+tt4786824|65494|2016|The Crown
+tt1796960|1407|2011|Homeland
+tt0944947|1399|2011|Game of Thrones
+tt0903747|1396|2008|Breaking Bad
+tt0804503|1104|2007|Mad Men
+tt0411008|4607|2004|Lost
+tt0285331|1973|2001|24
+tt0200276|688|1999|The West Wing
+tt0141842|1398|1999|The Sopranos
+tt0118437|3050|1997|The Practice
+tt0108757|4588|1994|ER
+tt0106079|194|1993|NYPD Blue
+tt0103512|206|1992|Picket Fences
+tt0098844|549|1990|Law & Order
+tt0098878|4396|1990|Northern Exposure
+tt0092492|1448|1987|thirtysomething
+tt0090466|732|1986|L.A. Law
+tt0083395|4223|1982|Cagney & Lacey
+tt0081873|3828|1981|Hill Street Blues
+tt0075528|480|1977|Lou Grant
+tt0071042|954|1974|The Rockford Files
+tt0069620|9855|1973|Police Story
+tt0068149|5021|1972|The Waltons
+tt0066722|492|1971|Upstairs, Downstairs
+tt0066652|1103|1971|Elizabeth R
+tt0065278|14346|1970|The Bold Ones: The Senator
+tt0063927|3213|1969|Marcus Welby, M.D.
+tt0439384|15560|1966|NET Playhouse
+tt0060009|4357|1966|Mission: Impossible
+tt0056757|10083|1963|The Fugitive
+tt0054531|11515|1961|The Defenders
+tt0049992|11477|1957|Alcoa Theatre
+tt0048893|11168|1956|Playhouse 90
+tt0047736|3713|1955|Gunsmoke
+tt0046637|14668|1954|Producers' Showcase
+tt0045449|12450|1953|The United States Steel Hour
+tt0044266|4779|1951|Hallmark Hall of Fame
+tt0042138|15562|1950|Pulitzer Prize Playhouse
+tt0042141|14944|1950|Robert Montgomery Presents
+tt0040051|4259|1948|Studio One

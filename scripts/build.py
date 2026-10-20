@@ -1,24 +1,65 @@
-"""Build the static Stremio addon (manifest + catalogs) from data/.
+"""Build the static Stremio addon (manifest.json + catalog/) from data/.
 
-data/base/<catalog>.txt   imdb|tmdb|year|title   (seed lists, copied from MDBList)
-data/additions.txt        catalog|year|imdb|tmdb|title   (winners added since; tmdb may be left empty)
-data/catalogs.json        catalog ids, display names and order
+Sources
+  data/sources/oscars.csv   Academy Awards, every nomination with IMDb ids (github.com/DLu/oscar_data);
+                            refresh with scripts/update_sources.py after each ceremony.
+  data/base/<catalog>.txt   other awards: imdb|tmdb|year|title, newest winner first
+  data/additions.txt        winners added since: catalog|year|imdb|tmdb|title (tmdb may be empty)
+  data/catalogs.json        catalog ids, names, types and how each one is built
 
-Every catalog is newest winner first. Pagination: the whole list is in the first page; skip=N files
-return the rest so clients that page by `skip` still work. Run: python3 scripts/build.py
+Oscar catalog modes: winners (newest ceremony first), nominees (newest ceremony first, winner first inside a
+ceremony), latest (every film nominated at the most recent ceremony, Best Picture first).
+List catalogs: order "list" keeps the file order (newest win first, needed for series whose first-air year
+says nothing about the award year); order "year" sorts by year. Additions always go on top.
+Paging: 100 items per page; catalog/<type>/<id>/skip=N.json serves the next pages.
+Run: python3 scripts/build.py
 """
-import json, os, shutil
+import csv, json, os, shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = lambda *p: os.path.join(ROOT, *p)
-VERSION = "1.0.0"
+VERSION = "2.0.0"
+PAGE = 100
 
 
-def read_base(cid):
+def oscar_rows():
     rows = []
-    for line in open(D("data", "base", f"{cid}.txt"), encoding="utf-8"):
+    for r in csv.DictReader(open(D("data", "sources", "oscars.csv"), encoding="utf-8"), delimiter="\t"):
+        ids, films = r["FilmId"].split("|"), r["Film"].split("|")
+        for i, imdb in enumerate(ids):
+            if not imdb.startswith("tt"):
+                continue
+            rows.append(dict(ceremony=int(r["Ceremony"]), year=int(r["Year"][:4]), cat=r["CanonicalCategory"],
+                             win=r["Winner"] == "True", imdb=imdb, title=films[i] if i < len(films) else films[0]))
+    return rows
+
+
+def oscar_catalog(c, rows, cat_map):
+    cats = [x for key in c["categories"] for x in cat_map[key]]
+    prio = {x: i for i, x in enumerate(cats)}
+    sel = [r for r in rows if r["cat"] in prio]
+    if c["mode"] == "winners":
+        sel = [r for r in sel if r["win"]]
+        sel.sort(key=lambda r: -r["ceremony"])
+    elif c["mode"] == "nominees":
+        sel.sort(key=lambda r: (-r["ceremony"], not r["win"]))
+    elif c["mode"] == "latest":
+        last = max(r["ceremony"] for r in sel)
+        sel = [r for r in sel if r["ceremony"] == last]
+        sel.sort(key=lambda r: (prio[r["cat"]], not r["win"]))
+    return [dict(imdb=r["imdb"], year=r["year"], title=r["title"]) for r in sel]
+
+
+def list_catalog(c, additions):
+    base = []
+    for line in open(D("data", "base", f"{c['id']}.txt"), encoding="utf-8"):
         imdb, tmdb, year, title = line.rstrip("\n").split("|", 3)
-        rows.append(dict(imdb=imdb, tmdb=int(tmdb), year=int(year), title=title))
+        base.append(dict(imdb=imdb, year=int(year), title=title))
+    if c.get("order") == "year":
+        rows = additions.get(c["id"], []) + base
+        rows.sort(key=lambda r: -r["year"])
+    else:
+        rows = sorted(additions.get(c["id"], []), key=lambda r: -r["year"]) + base
     return rows
 
 
@@ -28,54 +69,57 @@ def read_additions():
         if not line.strip() or line.startswith("#"):
             continue
         cid, year, imdb, tmdb, title = line.rstrip("\n").split("|", 4)
-        add.setdefault(cid, []).append(dict(imdb=imdb, tmdb=int(tmdb) if tmdb.strip() else None, year=int(year), title=title))
+        add.setdefault(cid, []).append(dict(imdb=imdb, year=int(year), title=title))
     return add
 
 
-def meta(r):
-    return {"id": r["imdb"], "type": "movie", "name": r["title"], "releaseInfo": str(r["year"]),
-            "poster": f"https://images.metahub.space/poster/medium/{r['imdb']}/img",
-            "posterShape": "poster"}
+def meta(r, typ):
+    return {"id": r["imdb"], "type": typ, "name": r["title"], "releaseInfo": str(r["year"]),
+            "poster": f"https://images.metahub.space/poster/medium/{r['imdb']}/img", "posterShape": "poster"}
+
+
+def write_pages(typ, cid, metas):
+    base = D("catalog", typ, cid)
+    json.dump({"metas": metas[:PAGE]}, open(base + ".json", "w", encoding="utf-8"), ensure_ascii=False)
+    os.makedirs(base, exist_ok=True)
+    for skip in range(PAGE, len(metas) + PAGE, PAGE):
+        json.dump({"metas": metas[skip:skip + PAGE]}, open(os.path.join(base, f"skip={skip}.json"), "w", encoding="utf-8"),
+                  ensure_ascii=False)
 
 
 def main():
-    cats = json.load(open(D("data", "catalogs.json"), encoding="utf-8"))
+    cfg = json.load(open(D("data", "catalogs.json"), encoding="utf-8"))
     additions = read_additions()
-    unknown = set(additions) - {c["id"] for c in cats}
-    assert not unknown, f"additions for unknown catalogs: {unknown}"
-    out = D("catalog")
-    shutil.rmtree(out, ignore_errors=True)
-    os.makedirs(D("catalog", "movie"))
-    summary = []
-    for c in cats:
-        rows = read_base(c["id"]) + additions.get(c["id"], [])
+    ids = {c["id"] for c in cfg["catalogs"]}
+    assert not set(additions) - ids, f"additions for unknown catalogs: {set(additions) - ids}"
+    rows = oscar_rows()
+    last = max(r["ceremony"] for r in rows)
+    ceremony_year = max(r["year"] for r in rows if r["ceremony"] == last) + 1
+    shutil.rmtree(D("catalog"), ignore_errors=True)
+    manifest_catalogs = []
+    for c in cfg["catalogs"]:
+        items = oscar_catalog(c, rows, cfg["oscar_categories"]) if c["source"] == "oscars" else list_catalog(c, additions)
         seen, uniq = set(), []
-        for r in rows:  # one entry per film per catalog
+        for r in items:  # one entry per title per catalog (the most recent one)
             if r["imdb"] not in seen:
                 seen.add(r["imdb"]); uniq.append(r)
-        uniq.sort(key=lambda r: -r["year"])  # stable: keeps list order inside a year
-        metas = [meta(r) for r in uniq]
-        base = D("catalog", "movie", c["id"])
-        json.dump({"metas": metas}, open(base + ".json", "w", encoding="utf-8"), ensure_ascii=False)
-        os.makedirs(base)
-        for skip in sorted(set(list(range(10, len(metas) + 1, 10)) + [len(metas)])):
-            json.dump({"metas": metas[skip:]}, open(os.path.join(base, f"skip={skip}.json"), "w", encoding="utf-8"),
-                      ensure_ascii=False)
-        summary.append((c["id"], len(metas), uniq[0]["year"], uniq[0]["title"]))
+        os.makedirs(D("catalog", c["type"]), exist_ok=True)
+        write_pages(c["type"], c["id"], [meta(r, c["type"]) for r in uniq])
+        name = c["name"].format(ceremony_year=ceremony_year)
+        manifest_catalogs.append({"type": c["type"], "id": c["id"], "name": name})
+        print(f"{c['id']:34} {len(uniq):5}  newest: {uniq[0]['year']} {uniq[0]['title']}")
     manifest = {
         "id": "community.oblivioustr.nuvio-awards",
         "version": VERSION,
         "name": "Nuvio Awards",
-        "description": "Award winner lists (Oscars, Golden Globes, Cannes, Venice, TIFF), newest winner first.",
+        "description": "Award winners and nominees (Oscars, Golden Globes, BAFTA, Emmys, Cannes, Venice, Berlinale, Sundance, TIFF), newest first.",
         "resources": ["catalog"],
-        "types": ["movie"],
+        "types": ["movie", "series"],
         "idPrefixes": ["tt"],
-        "catalogs": [{"type": "movie", "id": c["id"], "name": c["name"]} for c in cats],
+        "catalogs": manifest_catalogs,
         "behaviorHints": {"configurable": False, "configurationRequired": False},
     }
     json.dump(manifest, open(D("manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-    for s in summary:
-        print(f"{s[0]:26} {s[1]:4} items   newest: {s[2]} {s[3]}")
 
 
 if __name__ == "__main__":

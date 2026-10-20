@@ -1,0 +1,77 @@
+tt30144839|1054867|2025|One Battle After Another
+tt20221436|974950|2024|Emilia Pérez
+tt14230458|792307|2023|Poor Things
+tt11813216|674324|2022|The Banshees of Inisherin
+tt3581652|511809|2021|West Side Story
+tt13143964|740985|2020|Borat Subsequent Moviefilm
+tt7131622|466272|2019|Once Upon a Time... in Hollywood
+tt6966692|490132|2018|Green Book
+tt4925292|391713|2017|Lady Bird
+tt3783958|313369|2016|La La Land
+tt3659388|286217|2015|The Martian
+tt2278388|120467|2014|The Grand Budapest Hotel
+tt1800241|168672|2013|American Hustle
+tt1707386|82695|2012|Les Misérables
+tt1655442|74643|2011|The Artist
+tt0842926|39781|2010|The Kids Are All Right
+tt1119646|18785|2009|The Hangover
+tt0497465|5038|2008|Vicky Cristina Barcelona
+tt0408236|13885|2007|Sweeney Todd: The Demon Barber of Fleet Street
+tt0443489|1125|2006|Dreamgirls
+tt0358273|69|2005|Walk the Line
+tt0375063|9675|2004|Sideways
+tt0335266|153|2003|Lost in Translation
+tt0299658|1574|2002|Chicago
+tt0203009|824|2001|Moulin Rouge!
+tt0181875|786|2000|Almost Famous
+tt0120363|863|1999|Toy Story 2
+tt0138097|1934|1998|Shakespeare in Love
+tt0119822|2898|1997|As Good as It Gets
+tt0116250|8818|1996|Evita
+tt0112431|9598|1995|Babe
+tt0110357|8587|1994|The Lion King
+tt0107614|788|1993|Mrs. Doubtfire
+tt0105151|10403|1992|The Player
+tt0101414|10020|1991|Beauty and the Beast
+tt0099699|12157|1990|Green Card
+tt0097239|403|1989|Driving Miss Daisy
+tt0096463|3525|1988|Working Girl
+tt0093209|32054|1987|Hope and Glory
+tt0091167|5143|1986|Hannah and Her Sisters
+tt0089841|2075|1985|Prizzi's Honor
+tt0088011|9326|1984|Romancing the Stone
+tt0086619|10269|1983|Yentl
+tt0084805|9576|1982|Tootsie
+tt0082031|13665|1981|Arthur
+tt0080549|16769|1980|Coal Miner's Daughter
+tt0078902|20283|1979|Breaking Away
+tt0077663|12185|1978|Heaven Can Wait
+tt0076095|14741|1977|The Goodbye Girl
+tt0075265|19610|1976|A Star Is Born
+tt0073766|16561|1975|The Sunshine Boys
+tt0071771|4985|1974|The Longest Yard
+tt0069704|838|1973|American Graffiti
+tt0068327|10784|1972|Cabaret
+tt0067093|14811|1971|Fiddler on the Roof
+tt0066026|651|1970|M*A*S*H
+tt0064952|30298|1970|The Secret of Santa Vittoria
+tt0063385|17917|1968|Oliver!
+tt0061722|37247|1967|The Graduate
+tt0060921|31918|1966|The Russians Are Coming! The Russians Are Coming!
+tt0059742|15121|1965|The Sound of Music
+tt0058385|11113|1964|My Fair Lady
+tt0057590|5769|1963|Tom Jones
+tt0056262|13671|1962|The Music Man
+tt0056575|12708|1962|That Touch of Mink
+tt0055124|158800|1961|A Majority of One
+tt0053604|284|1960|The Apartment
+tt0053182|1940|1959|Porgy and Bess
+tt0053291|239|1959|Some Like It Hot
+tt0051383|16347|1958|Auntie Mame
+tt0051658|17281|1958|Gigi
+tt0050631|43232|1957|Les Girls
+tt0049408|16520|1956|The King and I
+tt0048140|4825|1955|Guys and Dolls
+tt0046828|51044|1954|Carmen Jones
+tt0045333|65787|1952|With a Song in My Heart
+tt0043278|2769|1951|An American in Paris

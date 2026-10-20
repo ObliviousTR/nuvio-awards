@@ -1,0 +1,80 @@
+tt30144839|1054867|2025|One Battle After Another
+tt20215234|974576|2024|Conclave
+tt15398776|872585|2023|Oppenheimer
+tt1016150|49046|2022|All Quiet on the Western Front
+tt10293406|600583|2021|The Power of the Dog
+tt9770150|581734|2021|Nomadland
+tt8579674|530915|2019|1917
+tt6155172|426426|2018|Roma
+tt5027774|359940|2017|Three Billboards Outside Ebbing, Missouri
+tt3783958|313369|2016|La La Land
+tt1663202|281957|2015|The Revenant
+tt1065073|85350|2014|Boyhood
+tt2024544|76203|2013|12 Years a Slave
+tt1024648|68734|2012|Argo
+tt1655442|74643|2011|The Artist
+tt1504320|45269|2010|The King's Speech
+tt1010048|12405|2008|Slumdog Millionaire
+tt0887912|12162|2008|The Hurt Locker
+tt0783233|4347|2007|Atonement
+tt0436697|1165|2006|The Queen
+tt0388795|142|2005|Brokeback Mountain
+tt0338751|2567|2004|The Aviator
+tt0167260|122|2003|The Lord of the Rings: The Return of the King
+tt0253474|423|2002|The Pianist
+tt0120737|120|2001|The Lord of the Rings: The Fellowship of the Ring
+tt0172495|98|2000|Gladiator
+tt0169547|14|1999|American Beauty
+tt0138097|1934|1998|Shakespeare in Love
+tt0119164|9427|1997|The Full Monty
+tt0116209|409|1996|The English Patient
+tt0114388|4584|1995|Sense and Sensibility
+tt0109831|712|1994|Four Weddings and a Funeral
+tt0108052|424|1993|Schindler's List
+tt0104454|8293|1992|Howards End
+tt0101605|11663|1991|The Commitments
+tt0099685|769|1990|GoodFellas
+tt0097165|207|1989|Dead Poets Society
+tt0093389|746|1987|The Last Emperor
+tt0091288|4480|1986|Jean de Florette
+tt0091867|11257|1986|A Room with a View
+tt0089853|10849|1985|The Purple Rose of Cairo
+tt0087553|625|1984|The Killing Fields
+tt0085478|38291|1983|Educating Rita
+tt0083987|783|1982|Gandhi
+tt0082158|9443|1981|Chariots of Fire
+tt0080678|1955|1980|The Elephant Man
+tt0079522|696|1979|Manhattan
+tt0076245|42222|1977|Julia
+tt0075686|703|1977|Annie Hall
+tt0073486|510|1975|One Flew Over the Cuckoo's Nest
+tt0071115|16153|1974|Alice Doesn't Live Here Anymore
+tt0071733|55368|1974|Lacombe, Lucien
+tt0070460|1675|1973|Day for Night
+tt0068327|10784|1972|Cabaret
+tt0067805|45938|1971|Sunday Bloody Sunday
+tt0064115|642|1969|Butch Cassidy and the Sundance Kid
+tt0064665|3116|1969|Midnight Cowboy
+tt0061722|37247|1967|The Graduate
+tt0060665|874|1966|A Man for All Seasons
+tt0061184|396|1966|Who's Afraid of Virginia Woolf?
+tt0058385|11113|1964|My Fair Lady
+tt0057012|935|1964|Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb
+tt0057590|5769|1963|Tom Jones
+tt0056172|947|1962|Lawrence of Arabia
+tt0054997|990|1961|The Hustler
+tt0053604|284|1960|The Apartment
+tt0052600|46592|1959|Ballad of a Soldier
+tt0052618|665|1959|Ben-Hur
+tt0053226|43103|1958|Room at the Top
+tt0050212|826|1957|The Bridge on the River Kwai
+tt0049259|52726|1956|Gervaise
+tt0049674|43323|1955|Richard III
+tt0046268|204|1953|The Wages of Fear
+tt0044446|51619|1952|The Sound Barrier
+tt0043686|5000|1952|Forbidden Games
+tt0042192|705|1950|All About Eve
+tt0042906|50030|1950|La Ronde
+tt0040416|23383|1948|Hamlet
+tt0040522|5156|1948|Bicycle Thieves
+tt0036868|887|1946|The Best Years of Our Lives

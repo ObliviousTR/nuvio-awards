@@ -1,0 +1,85 @@
+tt32888226|1315657|2026|Yellow Letters
+tt30810787|1228682|2024|Dreams
+tt31015216|1101256|2024|Dahomey
+tt26448811|1070449|2023|On the Adamant
+tt11930126|804251|2022|Alcarràs
+tt14033502|790496|2021|Bad Luck Banging or Loony Porn
+tt11697844|667935|2020|There Is No Evil
+tt7016254|501590|2019|Synonyms
+tt4949112|499155|2018|Touch Me Not
+tt3652526|377151|2016|Fire at Sea
+tt4359416|320006|2015|Taxi
+tt3469910|255756|2014|Black Coal, Thin Ice
+tt2187115|160118|2013|Child's Pose
+tt2177511|96821|2012|Caesar Must Die
+tt1832382|60243|2011|A Separation
+tt1571724|44160|2010|Honey
+tt1206488|28644|2009|The Milk of Sorrow
+tt0861739|7347|2007|Elite Squad
+tt0949564|2694|2006|Tuya's Marriage
+tt0464029|317|2006|Grbavica: The Land of My Dreams
+tt0445776|79706|2005|U-Carmen eKhayelitsha
+tt0347048|363|2004|Head-On
+tt0310154|36791|2003|In This World
+tt0280491|4107|2002|Bloody Sunday
+tt0245429|129|2001|Spirited Away
+tt0256103|11845|2001|Intimacy
+tt0175880|334|1999|Magnolia
+tt0120863|8741|1998|The Thin Red Line
+tt0140888|666|1998|Central Station
+tt0117318|1630|1996|The People vs. Larry Flynt
+tt0114388|4584|1995|Sense and Sensibility
+tt0112387|38414|1995|Fresh Bait
+tt0107207|7984|1993|In the Name of the Father
+tt0108608|162841|1993|Women from the Lake of Scented Souls
+tt0107156|9261|1993|The Wedding Banquet
+tt0101969|13697|1991|Grand Canyon
+tt0094841|148757|1991|The House of Smiles
+tt0064994|12078|1990|Larks on a String
+tt0100211|2263|1989|Music Box
+tt0095953|380|1988|Rain Man
+tt0093206|42006|1988|Red Sorghum
+tt0092004|52327|1986|The Baader-Meinhof Gang on Trial
+tt0090310|147747|1985|Wetherby
+tt0089169|163149|1985|The Woman and the Stranger
+tt0087644|52109|1984|Love Streams
+tt0083582|163143|1983|Ascendancy
+tt0083743|104435|1982|The Beehive
+tt0084654|2262|1982|Veronika Voss
+tt0082508|49427|1981|Heartland
+tt0082259|47211|1981|Faster, Faster
+tt0081299|130544|1980|Palermo or Wolfsburg
+tt0079028|163133|1979|David
+tt0079999|131349|1979|The Theme
+tt0076520|162439|1978|What Max Said
+tt0078421|162438|1978|Trout
+tt0075404|50183|1977|The Ascent
+tt0074254|42233|1976|Buffalo Bill and the Indians, or Sitting Bull's History Lesson
+tt0073948|61703|1975|Adoption
+tt0071155|42451|1974|The Apprenticeship of Duddy Kravitz
+tt0069737|113012|1973|Distant Thunder
+tt0067647|5691|1972|The Canterbury Tales
+tt0064874|162421|1971|Early Works
+tt0065777|4789|1970|The Garden of the Finzi-Continis
+tt0063384|122671|1968|Who Saw Him Die?
+tt0061605|137726|1967|The Departure
+tt0060268|4772|1966|Cul-de-sac
+tt0058898|8072|1965|Alphaville
+tt0062322|58897|1963|Dry Summer
+tt0056995|162382|1963|To Bed or Not to Bed
+tt0056141|33765|1962|A Kind of Loving
+tt0054130|41050|1961|La Notte
+tt0052995|162368|1959|El Lazarillo de Tormes
+tt0052708|2363|1959|The Cousins
+tt0050986|614|1957|Wild Strawberries
+tt0050083|389|1957|12 Angry Men
+tt0049367|47310|1956|Invitation to the Dance
+tt0048542|148836|1955|The Rats
+tt0047094|16410|1954|Hobson's Choice
+tt0046268|204|1953|The Wages of Fear
+tt0043652|56719|1951|One Summer of Happiness
+tt0044192|162339|1951|Four in a Jeep
+tt0042923|162344|1951|Without Leaving an Address
+tt0042625|67731|1950|Justice Is Done
+tt0042592|162352|1950|Beaver Valley
+tt0042332|11224|1950|Cinderella

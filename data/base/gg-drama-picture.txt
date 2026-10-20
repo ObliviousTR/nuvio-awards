@@ -1,0 +1,84 @@
+tt14905854|858024|2025|Hamnet
+tt8999762|549509|2024|The Brutalist
+tt15398776|872585|2023|Oppenheimer
+tt14208870|804095|2022|The Fabelmans
+tt10293406|600583|2021|The Power of the Dog
+tt9770150|581734|2021|Nomadland
+tt8579674|530915|2019|1917
+tt1727824|424694|2018|Bohemian Rhapsody
+tt5027774|359940|2017|Three Billboards Outside Ebbing, Missouri
+tt4975722|376867|2016|Moonlight
+tt1663202|281957|2015|The Revenant
+tt1065073|85350|2014|Boyhood
+tt2024544|76203|2013|12 Years a Slave
+tt1024648|68734|2012|Argo
+tt1033575|65057|2011|The Descendants
+tt1285016|37799|2010|The Social Network
+tt0499549|19995|2009|Avatar
+tt1010048|12405|2008|Slumdog Millionaire
+tt0783233|4347|2007|Atonement
+tt0449467|1164|2006|Babel
+tt0388795|142|2005|Brokeback Mountain
+tt0338751|2567|2004|The Aviator
+tt0167260|122|2003|The Lord of the Rings: The Return of the King
+tt0274558|590|2002|The Hours
+tt0268978|453|2001|A Beautiful Mind
+tt0172495|98|2000|Gladiator
+tt0169547|14|1999|American Beauty
+tt0120815|857|1998|Saving Private Ryan
+tt0120338|597|1997|Titanic
+tt0116209|409|1996|The English Patient
+tt0114388|4584|1995|Sense and Sensibility
+tt0109830|13|1994|Forrest Gump
+tt0108052|424|1993|Schindler's List
+tt0105323|9475|1992|Scent of a Woman
+tt0101516|10337|1991|Bugsy
+tt0099348|581|1990|Dances with Wolves
+tt0096969|2604|1989|Born on the Fourth of July
+tt0095953|380|1988|Rain Man
+tt0093389|746|1987|The Last Emperor
+tt0091763|792|1986|Platoon
+tt0089755|606|1985|Out of Africa
+tt0086879|279|1984|Amadeus
+tt0086425|11050|1983|Terms of Endearment
+tt0083866|601|1982|E.T. the Extra-Terrestrial
+tt0082846|11816|1981|On Golden Pond
+tt0081283|16619|1980|Ordinary People
+tt0079417|12102|1979|Kramer vs. Kramer
+tt0077928|11327|1978|Midnight Express
+tt0076843|61280|1977|The Turning Point
+tt0075148|1366|1976|Rocky
+tt0073486|510|1975|One Flew Over the Cuckoo's Nest
+tt0071315|829|1974|Chinatown
+tt0070047|9552|1973|The Exorcist
+tt0068646|238|1972|The Godfather
+tt0067116|1051|1971|The French Connection
+tt0066011|9062|1970|Love Story
+tt0064030|22522|1969|Anne of the Thousand Days
+tt0063227|18988|1968|The Lion in Winter
+tt0061811|10633|1967|In the Heat of the Night
+tt0060665|874|1966|A Man for All Seasons
+tt0059113|907|1965|Doctor Zhivago
+tt0057877|15421|1964|Becket
+tt0056907|3010|1963|The Cardinal
+tt0056172|947|1962|Lawrence of Arabia
+tt0054953|10911|1961|The Guns of Navarone
+tt0054331|967|1960|Spartacus
+tt0052618|665|1959|Ben-Hur
+tt0051525|11414|1958|The Defiant Ones
+tt0050212|826|1957|The Bridge on the River Kwai
+tt0048960|2897|1956|Around the World in 80 Days
+tt0048028|220|1955|East of Eden
+tt0047296|654|1954|On the Waterfront
+tt0046247|29912|1953|The Robe
+tt0044672|27191|1952|The Greatest Show on Earth
+tt0043924|25673|1951|A Place in the Sun
+tt0043014|599|1950|Sunset Boulevard
+tt0041113|25430|1949|All the King's Men
+tt0040495|62000|1948|Johnny Belinda
+tt0040897|3090|1948|The Treasure of the Sierra Madre
+tt0039416|33667|1947|Gentleman's Agreement
+tt0036868|887|1946|The Best Years of Our Lives
+tt0037884|28580|1945|The Lost Weekend
+tt0036872|17661|1944|Going My Way
+tt0036377|43516|1943|The Song of Bernadette

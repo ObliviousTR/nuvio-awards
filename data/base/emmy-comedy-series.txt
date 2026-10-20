@@ -1,0 +1,41 @@
+tt33332385|270476|2026|Widow's Bay
+tt23649128|247767|2025|The Studio
+tt14452776|136315|2022|The Bear
+tt11815682|124101|2021|Hacks
+tt10986410|97546|2020|Ted Lasso
+tt5788792|70796|2017|The Marvelous Mrs. Maisel
+tt5687612|67070|2016|Fleabag
+tt3526078|61662|2015|Schitt's Creek
+tt1759761|2947|2012|Veep
+tt1442437|1421|2009|Modern Family
+tt0496424|4608|2006|30 Rock
+tt0386676|2316|2005|The Office
+tt0367279|4589|2003|Arrested Development
+tt0157246|4454|1998|Will & Grace
+tt0159206|105|1998|Sex and the City
+tt0118254|1480|1997|Ally McBeal
+tt0115167|2140|1996|Everybody Loves Raymond
+tt0108778|1668|1994|Friends
+tt0106004|3452|1993|Frasier
+tt0098904|1400|1989|Seinfeld
+tt0094514|3219|1988|Murphy Brown
+tt0094582|4500|1988|The Wonder Years
+tt0088526|1678|1985|The Golden Girls
+tt0086687|1759|1984|The Cosby Show
+tt0083399|141|1982|Cheers
+tt0077089|2251|1978|Taxi
+tt0072472|3253|1975|Barney Miller
+tt0068098|918|1972|M*A*S*H
+tt0066626|1922|1971|All in the Family
+tt0065314|2962|1970|The Mary Tyler Moore Show
+tt0063934|582|1969|My World and Welcome to It
+tt0060010|7626|1966|The Monkees
+tt0058805|4455|1965|Get Smart
+tt0054522|35226|1961|The Bob Newhart Show
+tt0054533|2132|1961|The Dick Van Dyke Show
+tt1199576|33281|1959|Art Carney Special
+tt0047763|11747|1955|The Phil Silvers Show
+tt0045410|981|1953|The Danny Thomas Show
+tt0043208|2730|1951|I Love Lucy
+tt0043224|10534|1951|The Red Skelton Show
+tt0042116|10151|1950|The Jack Benny Program

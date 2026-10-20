@@ -1,0 +1,27 @@
+tt31806037|249042|2025|Adolescence
+tt13649112|241259|2024|Baby Reindeer
+tt14403178|154385|2023|BEEF
+tt13406094|111803|2021|The White Lotus
+tt6704972|80039|2021|The Underground Railroad
+tt10048342|87739|2020|The Queen's Gambit
+tt7366338|87108|2019|Chernobyl
+tt3920596|66292|2017|Big Little Lies
+tt2788432|64513|2016|American Crime Story
+tt3556920|61697|2015|Wolf Hall
+tt2802850|60622|2014|Fargo
+tt1606375|33907|2010|Downton Abbey
+tt1321865|41693|2010|Carlos
+tt0472027|15114|2008|John Adams
+tt0465326|13291|2005|Elizabeth I
+tt0376591|14968|2005|Empire Falls
+tt0318997|11245|2003|Angels in America
+tt0185906|4613|2001|Band of Brothers
+tt0120570|3556|1998|From the Earth to the Moon
+tt0105413|23540|1992|Sinatra
+tt0096639|41692|1989|Lonesome Dove
+tt0096725|32675|1988|War and Remembrance
+tt0086739|3591|1984|The Jewel in the Crown
+tt0085101|13780|1983|The Thorn Birds
+tt0083390|4951|1981|Brideshead Revisited
+tt0083409|27291|1981|East of Eden
+tt0074464|74367|1976|Eleanor and Franklin

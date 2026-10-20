@@ -1,0 +1,45 @@
+tt34385331|206828|2026|DTF St. Louis
+tt31806037|249042|2025|Adolescence
+tt13649112|241259|2024|Baby Reindeer
+tt14403178|154385|2023|BEEF
+tt13406094|111803|2021|The White Lotus
+tt10048342|87739|2020|The Queen's Gambit
+tt7049682|79788|2019|Watchmen
+tt7366338|87108|2019|Chernobyl
+tt3920596|66292|2017|Big Little Lies
+tt2788432|64513|2016|American Crime Story
+tt3012698|61585|2014|Olive Kitteridge
+tt2802850|60622|2014|Fargo
+tt1606375|33907|2010|Downton Abbey
+tt0374463|16997|2010|The Pacific
+tt1178522|13561|2008|Little Dorrit
+tt0472027|15114|2008|John Adams
+tt0482857|20056|2006|Broken Trail
+tt0465326|13291|2005|Elizabeth I
+tt0318997|11245|2003|Angels in America
+tt0349747|13688|2003|The Lost Prince
+tt0289830|2432|2002|Taken
+tt0185906|4613|2001|Band of Brothers
+tt0246430|21276|2001|Anne Frank: The Whole Story
+tt0224853|14531|2000|The Corner
+tt0120570|3556|1998|From the Earth to the Moon
+tt0115195|13675|1996|Gulliver's Travels
+tt0113483|78944|1995|Joseph
+tt0101238|19255|1991|A Woman Named Jackie
+tt0098898|2583|1991|Prime Suspect
+tt0102879|118691|1991|Separate but Equal
+tt0098782|16142|1990|Drug Wars: The Camarena Story
+tt0096725|32675|1988|War and Remembrance
+tt0095678|47231|1988|The Murder of Mary Phagan
+tt0090549|77044|1986|A Year in the Life
+tt0090502|20753|1986|Peter the Great
+tt0086739|3591|1984|The Jewel in the Crown
+tt0083446|6479|1982|Marco Polo
+tt0080274|13862|1980|Shōgun
+tt0078678|13436|1979|Roots: The Next Generations
+tt0080212|12209|1978|Edward and Mrs Simpson
+tt0077025|15571|1978|Holocaust
+tt0075572|13555|1977|Roots
+tt0068142|15985|1971|Tom Brown's Schooldays
+tt0066722|492|1971|Upstairs, Downstairs
+tt1466074|873|1971|Columbo

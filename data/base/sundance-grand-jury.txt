@@ -1,0 +1,48 @@
+tt32321285|1299329|2026|Josephine
+tt31122579|1239288|2025|Atropia
+tt24805832|1151082|2024|In the Summers
+tt12427158|855263|2023|A Thousand and One
+tt10931784|843932|2022|Nanny
+tt10366460|776503|2021|CODA
+tt10633456|615643|2021|Minari
+tt5577494|565307|2019|Clemency
+tt6257174|426613|2018|The Miseducation of Cameron Post
+tt5710514|425591|2017|I Don't Feel at Home in This World Anymore
+tt4196450|339408|2016|The Birth of a Nation
+tt2582496|308369|2015|Me and Earl and the Dying Girl
+tt2582802|244786|2014|Whiplash
+tt2334649|157354|2013|Fruitvale Station
+tt2125435|84175|2012|Beasts of the Southern Wild
+tt1758692|60420|2011|Like Crazy
+tt1399683|39013|2010|Winter's Bone
+tt0929632|25793|2009|Precious: Based on the Novel 'Push' by Sapphire
+tt0978759|10183|2008|Frozen River
+tt0834938|79983|2007|Blood of My Blood
+tt0451176|64499|2006|Quinceañera
+tt0395543|30082|2005|Forty Shades of Blue
+tt0390384|14337|2004|Primer
+tt0305206|2771|2003|American Splendor
+tt0295238|32625|2002|Personal Velocity
+tt0247199|4012|2001|The Believer
+tt0210075|19348|2000|Girlfight
+tt0203230|14295|2000|You Can Count on Me
+tt0138874|4154|1999|Three Seasons
+tt0139615|37532|1998|Slam
+tt0120244|70805|1997|Sunday
+tt0114906|11446|1996|Welcome to the Dollhouse
+tt0112585|16388|1995|The Brothers McMullen
+tt0111689|83718|1994|What Happened Was...
+tt0108000|47889|1993|Ruby in Paradise
+tt0107895|77064|1993|Public Access
+tt0104503|52936|1992|In the Soup
+tt0101561|102831|1991|Chameleon Street
+tt0102687|47620|1991|Poison
+tt0098528|111605|1989|True Love
+tt0093165|123382|1988|Heat and Sunlight
+tt0094286|223658|1987|Waiting for the Moon
+tt0094187|118500|1987|The Trouble with Dick
+tt0090037|33766|1985|Smooth Talk
+tt0086979|11368|1985|Blood Simple
+tt0087837|104043|1984|Old Enough
+tt0085340|84605|1983|Brainwash
+tt0084553|117511|1983|Purple Haze

@@ -1,13 +1,14 @@
 {
   "id": "community.oblivioustr.nuvio-awards",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": "Nuvio Awards",
-  "description": "Award winner lists (Oscars, Golden Globes, Cannes, Venice, TIFF), newest winner first.",
+  "description": "Award winners and nominees (Oscars, Golden Globes, BAFTA, Emmys, Cannes, Venice, Berlinale, Sundance, TIFF), newest first.",
   "resources": [
     "catalog"
   ],
   "types": [
-    "movie"
+    "movie",
+    "series"
   ],
   "idPrefixes": [
     "tt"
@@ -15,8 +16,58 @@
   "catalogs": [
     {
       "type": "movie",
+      "id": "oscar-latest-nominees",
+      "name": "Oscars 2026 · All Nominees"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-best-picture",
+      "name": "Oscars · Best Picture"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-best-picture-nominees",
+      "name": "Oscars · Best Picture Nominees"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-director",
+      "name": "Oscars · Best Director"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-director-nominees",
+      "name": "Oscars · Best Director Nominees"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-actor",
+      "name": "Oscars · Best Actor"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-actor-nominees",
+      "name": "Oscars · Best Actor Nominees"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-actress",
+      "name": "Oscars · Best Actress"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-actress-nominees",
+      "name": "Oscars · Best Actress Nominees"
+    },
+    {
+      "type": "movie",
       "id": "oscar-supporting-actor",
       "name": "Oscars · Best Supporting Actor"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-supporting-actor-nominees",
+      "name": "Oscars · Best Supporting Actor Nominees"
     },
     {
       "type": "movie",
@@ -25,8 +76,48 @@
     },
     {
       "type": "movie",
+      "id": "oscar-supporting-actress-nominees",
+      "name": "Oscars · Best Supporting Actress Nominees"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-original-screenplay",
+      "name": "Oscars · Best Original Screenplay"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-adapted-screenplay",
+      "name": "Oscars · Best Adapted Screenplay"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-international",
+      "name": "Oscars · Best International Feature"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-international-nominees",
+      "name": "Oscars · Best International Feature Nominees"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-animated",
+      "name": "Oscars · Best Animated Feature"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-animated-nominees",
+      "name": "Oscars · Best Animated Feature Nominees"
+    },
+    {
+      "type": "movie",
       "id": "oscar-documentary",
       "name": "Oscars · Best Documentary Feature"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-cinematography",
+      "name": "Oscars · Best Cinematography"
     },
     {
       "type": "movie",
@@ -70,6 +161,36 @@
     },
     {
       "type": "movie",
+      "id": "oscar-all-winners",
+      "name": "Oscars · All Winning Films"
+    },
+    {
+      "type": "movie",
+      "id": "gg-drama-picture",
+      "name": "Golden Globes · Best Picture – Drama"
+    },
+    {
+      "type": "series",
+      "id": "gg-drama-series",
+      "name": "Golden Globes · Best Drama Series"
+    },
+    {
+      "type": "movie",
+      "id": "gg-comedy-picture",
+      "name": "Golden Globes · Best Picture – Musical or Comedy"
+    },
+    {
+      "type": "series",
+      "id": "gg-comedy-series",
+      "name": "Golden Globes · Best Musical or Comedy Series"
+    },
+    {
+      "type": "series",
+      "id": "gg-limited-series",
+      "name": "Golden Globes · Best Limited Series"
+    },
+    {
+      "type": "movie",
       "id": "gg-director",
       "name": "Golden Globes · Best Director"
     },
@@ -77,6 +198,26 @@
       "type": "movie",
       "id": "gg-non-english",
       "name": "Golden Globes · Best Non-English Language Film"
+    },
+    {
+      "type": "movie",
+      "id": "bafta-best-film",
+      "name": "BAFTA · Best Film"
+    },
+    {
+      "type": "series",
+      "id": "emmy-drama-series",
+      "name": "Emmys · Outstanding Drama Series"
+    },
+    {
+      "type": "series",
+      "id": "emmy-comedy-series",
+      "name": "Emmys · Outstanding Comedy Series"
+    },
+    {
+      "type": "series",
+      "id": "emmy-limited-series",
+      "name": "Emmys · Outstanding Limited Series"
     },
     {
       "type": "movie",
@@ -97,6 +238,16 @@
       "type": "movie",
       "id": "venice-golden-lion",
       "name": "Venice · Golden Lion"
+    },
+    {
+      "type": "movie",
+      "id": "sundance-grand-jury",
+      "name": "Sundance · Grand Jury Prize (Dramatic)"
+    },
+    {
+      "type": "movie",
+      "id": "berlinale-golden-bear",
+      "name": "Berlinale · Golden Bear"
     },
     {
       "type": "movie",
