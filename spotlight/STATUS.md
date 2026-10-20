@@ -27,6 +27,6 @@ Next Cultural Pulse theme starts: **2026-10-25**
 - **The Saga**: series 157239 = Alien: Earth
 - **The Prestige Darling**: TMDB person 5064 Meryl Streep (Acting)
 - **The Living Legend**: TMDB person 1905 Vincent Price (Acting)
-- **Retro Rewind**: 1931–1973; keywords=-
+- **Retro Rewind**: 1931–1975; keywords=-
 - **Yerli Yıldız**: TMDB person 1078769 Kıvanç Tatlıtuğ (Acting)
 - **The Cultural Pulse**: keywords movie=12339|305666|10714 series=12339|305666|10714
