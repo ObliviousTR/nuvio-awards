@@ -50,6 +50,14 @@ https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/spotlight/manife
 - Covers (`spotlight/art/<card>/cover.jpg`) and hero backdrops are generated when a subject changes; their URLs
   never change. `spotlight/STATUS.md` shows what is on now and when the next rotation is.
 
-Run it by hand from the Actions tab: `build`, `check` (tests every pool entry → `spotlight/CHECK.md`) or
-`redraw` (regenerates all art). To force a subject, put it in `spotlight/state.json` → `"pin"`, e.g.
-`{"headliner": "Pedro Pascal"}`; remove it to return to the rotation.
+Run it by hand from the Actions tab (Spotlight → Run workflow):
+
+- `next` + card: skip that card (or `all` four rotating cards) to its next subject now; `pulse` brings the next
+  calendar theme forward.
+- `build` + card + subject: show that subject now, e.g. `headliner` / `Pedro Pascal`, `powerhouse` / `A24`,
+  `saga` / `Star Wars` (sagas must be in `pool.json`), `pulse` / `Halloween Night`. A hand-picked subject stays until
+  the next rotation day (the Cultural Pulse: until the next calendar theme starts).
+- `check` tests every pool entry → `spotlight/CHECK.md`; `redraw` regenerates all art.
+
+To keep a subject across rotations, put it in `spotlight/state.json` → `"pin"`, e.g. `{"headliner": "Pedro Pascal"}`;
+remove it to return to the rotation.
