@@ -1,12 +1,17 @@
-"""Find award winners on English Wikipedia event pages and resolve them to IMDb ids through Wikidata.
+"""Find award winners on English Wikipedia event pages and resolve them to IMDb ids.
 
-winner(catalog_cfg, year) -> {"title", "imdb", "page"} or raises LookupError with a reason.
-Stdlib only; meant to run in GitHub Actions (Wikipedia/Wikidata are reachable there).
+winner(catalog_cfg, year) -> {"title", "imdb", "page", "article"}, or raises LookupError with a reason.
+Categories are recognised by the link to the award's own article (e.g. [[Golden Globe Award for Best Director|...]]),
+which is far more stable than the visible label. Stdlib only; runs in GitHub Actions.
 """
 import json, re, time, urllib.parse, urllib.request
 
 UA = "nuvio-awards/2.0 (https://github.com/ObliviousTR/nuvio-awards)"
 WP = "https://en.wikipedia.org/w/api.php"
+LINK_BODY = r"\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]"
+ITALIC_LINK = re.compile(r"(?<!')(?:''|''''')(?!')\s*" + LINK_BODY)   # ''[[Work]] or '''''[[Work]] (not '''[[Person]])
+BOLD_ITALIC_LINK = re.compile(r"'''''\s*" + LINK_BODY)
+ANY_LINK = re.compile(LINK_BODY)
 
 
 def _get(url, tries=4):
@@ -39,84 +44,104 @@ def wikitext(title):
     return d["parse"]["wikitext"]
 
 
-LINK = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]")
-ITALIC_LINK = re.compile(r"''+\s*\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]")
-BOLD_ITALIC_LINK = re.compile(r"'''''\s*\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]")
+def _award_link(award):
+    a = re.escape(award).replace(r"\ ", r"[ _]")
+    return re.compile(r"\[\[\s*" + a + r"\s*(?:\|[^\]]*)?\]\]", re.I)
+
+
+def _from_award_category(text, award):
+    """{{Award category|color|[[Award article|Label]]}} followed by '* '''''[[Winner]]'''''..."""
+    for m in _award_link(award).finditer(text):
+        head = text.rfind("{{", 0, m.start())
+        if head < 0 or not re.match(r"\{\{\s*Award category", text[head:m.start()], re.I):
+            continue
+        rest = text[m.end():]
+        bullet = re.search(r"^\*(?!\*)(.*)$", rest, re.M)
+        if not bullet:
+            continue
+        line = bullet.group(1)
+        hit = ITALIC_LINK.search(line) or ANY_LINK.search(line)
+        if hit:
+            return hit.group(1).strip()
+    return None
+
+
+def _nearest_italic(text, award):
+    """Festival style: the work link closest to the award link on the same line (lists and infobox lines first)."""
+    best = None
+    for m in _award_link(award).finditer(text):
+        ls, le = text.rfind("\n", 0, m.start()) + 1, text.find("\n", m.end())
+        line = text[ls:le if le >= 0 else len(text)]
+        rank = 0 if line.lstrip()[:1] in "*|#" else 1
+        pos = m.start() - ls
+        for w in ITALIC_LINK.finditer(line):
+            dist = min(abs(w.start() - pos), abs(w.end() - pos))
+            cand = (rank, dist, w.group(1).strip())
+            if best is None or cand < best:
+                best = cand
+    return best[2] if best else None
+
+
+def _section_bold(text, section):
+    i = text.find(section)
+    if i < 0:
+        return None
+    end = re.search(r"\n==", text[i + len(section):])
+    chunk = text[i: i + len(section) + (end.start() if end else len(text))]
+    hit = BOLD_ITALIC_LINK.search(chunk)
+    return hit.group(1).strip() if hit else None
 
 
 def _norm(s):
-    s = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", s)
-    return re.sub(r"[\s'’\-–—]+", " ", s).strip().lower()
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
 
 
-def _table_winner(text, labels):
-    """Ceremony pages: header row(s) of category names, next row has one cell per category; the winner is
-    the first bold (or first) italic link in that cell."""
-    want = [_norm(l) for l in labels]
-    rows = re.split(r"\n\|-[^\n]*", text)
-    for i, row in enumerate(rows):
-        headers = [c for c in re.split(r"\n!|!!", "\n" + row) if c.strip()]
-        headers = [h.split("|", 1)[-1] if "[[" not in h.split("|", 1)[0] else h for h in headers]
-        hnorm = [_norm(h) for h in headers]
-        for w in want:
-            for col, h in enumerate(hnorm):
-                if h == w or h.endswith(" " + w) or h.startswith(w + " ") and len(h) - len(w) < 4:
-                    if i + 1 >= len(rows):
-                        continue
-                    cells = [c for c in re.split(r"\n\|(?!\})", "\n" + rows[i + 1]) if c.strip()]
-                    cells = [c for c in cells if not re.fullmatch(r"\s*(valign|style|align)[^|\n]*\|?\s*", c)]
-                    if col >= len(cells):
-                        continue
-                    cell = cells[col]
-                    m = BOLD_ITALIC_LINK.search(cell) or ITALIC_LINK.search(cell)
-                    if m:
-                        return m.group(1).strip()
-    raise LookupError(f"no winners table for {labels}")
+def _imdb_suggest(title, year):
+    q = urllib.parse.quote(title.lower())
+    data = _get(f"https://v3.sg.media-imdb.com/suggestion/x/{q}.json")
+    for d in data.get("d", []):
+        if d.get("id", "").startswith("tt") and _norm(d.get("l", "")) == _norm(title) and \
+                (not d.get("y") or abs(int(d["y"]) - year) <= 2):
+            return d["id"]
+    return None
 
 
-def _line_winner(text, labels, section=None):
-    """Festival pages: '* [[Palme d'Or]]: ''[[Film]]'' by Director' style lists."""
-    if section:
-        idx = text.find(section)
-        text = text[idx:] if idx >= 0 else text
-    lines = text.split("\n")
-    for label in labels:
-        for i, line in enumerate(lines):
-            plain = _norm(line)
-            if _norm(label) not in plain or plain.startswith("=") or "nominee" in plain:
-                continue
-            chunk = "\n".join(lines[i:i + 3])
-            m = ITALIC_LINK.search(chunk[chunk.find(label) if label in chunk else 0:])
-            if m:
-                return m.group(1).strip()
-    raise LookupError(f"no '{labels[0]}' line")
-
-
-def imdb_for(title):
-    q = urllib.parse.urlencode({"action": "query", "titles": title, "redirects": 1, "prop": "pageprops",
+def imdb_for(article, year):
+    q = urllib.parse.urlencode({"action": "query", "titles": article, "redirects": 1, "prop": "pageprops",
                                 "ppprop": "wikibase_item", "format": "json", "formatversion": 2})
-    pages = _get(f"{WP}?{q}")["query"]["pages"]
-    qid = pages[0].get("pageprops", {}).get("wikibase_item")
-    if not qid:
-        raise LookupError(f"no Wikidata item for '{title}'")
-    q = urllib.parse.urlencode({"action": "wbgetentities", "ids": qid, "props": "claims|labels",
-                                "languages": "en", "format": "json"})
-    ent = _get(f"https://www.wikidata.org/w/api.php?{q}")["entities"][qid]
-    ids = [c["mainsnak"]["datavalue"]["value"] for c in ent.get("claims", {}).get("P345", [])
-           if c["mainsnak"].get("datavalue")]
-    ids = [i for i in ids if i.startswith("tt")]
-    if not ids:
-        raise LookupError(f"no IMDb id on Wikidata for '{title}' ({qid})")
-    label = ent.get("labels", {}).get("en", {}).get("value", pages[0]["title"])
-    return ids[0], label
+    page = _get(f"{WP}?{q}")["query"]["pages"][0]
+    label = re.sub(r"\s*\((?:[^()]*\b(?:film|TV series|series|miniseries)\b[^()]*)\)$", "", page.get("title", article))
+    qid = page.get("pageprops", {}).get("wikibase_item")
+    if qid:
+        q = urllib.parse.urlencode({"action": "wbgetentities", "ids": qid, "props": "claims|labels",
+                                    "languages": "en", "format": "json"})
+        ent = _get(f"https://www.wikidata.org/w/api.php?{q}")["entities"][qid]
+        ids = [c["mainsnak"]["datavalue"]["value"] for c in ent.get("claims", {}).get("P345", [])
+               if c["mainsnak"].get("datavalue")]
+        ids = [i for i in ids if i.startswith("tt")]
+        label = ent.get("labels", {}).get("en", {}).get("value", label)
+        if ids:
+            return ids[0], label
+    imdb = _imdb_suggest(label, year)
+    if imdb:
+        return imdb, label
+    raise LookupError(f"no IMDb id for '{article}'")
 
 
 def winner(cfg, year):
     title = page_title(cfg, year)
     text = wikitext(title)
-    if cfg["mode"] == "table":
-        work = _table_winner(text, cfg["label"])
-    else:
-        work = _line_winner(text, cfg["label"], cfg.get("section"))
-    imdb, label = imdb_for(work)
-    return {"title": label, "imdb": imdb, "page": title}
+    work = None
+    for award in cfg["award"]:
+        if cfg["mode"] == "section_bold":
+            work = _section_bold(text, cfg["section"]) or _nearest_italic(text, award)
+        elif cfg["mode"] == "table":
+            work = _from_award_category(text, award) or _nearest_italic(text, award)
+        else:
+            work = _nearest_italic(text, award)
+        if work:
+            break
+    if not work:
+        raise LookupError(f"winner not found on '{title}'")
+    imdb, label = imdb_for(work, year)
+    return {"title": label, "imdb": imdb, "page": title, "article": work}
