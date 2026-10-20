@@ -5,18 +5,19 @@ Next Cultural Pulse theme starts: **2026-10-25**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
-| The Headliner | Jenna Ortega | 19 | 6 |  |
-| The Visionary | Jordan Peele | 3 | 4 |  |
-| The Powerhouse | Blumhouse Productions | 100 | 3 |  |
-| The Saga | Alien Saga | 4 | 1 |  |
+| The Headliner | Jenna Ortega | 19 | 6 | ✓ |
+| The Visionary | Jordan Peele | 3 | 4 | ✓ |
+| The Powerhouse | Blumhouse Productions | 100 | 3 | ✓ |
+| The Saga | Alien Saga | 4 | 1 | ✓ |
 | The Prestige Darling | Meryl Streep | 63 | 4 | ✓ |
 | The Living Legend | Vincent Price | 72 | 1 | ✓ |
 | Retro Rewind | Universal & Hammer Monsters | 100 | 0 | ✓ |
 | Yerli Yıldız | Kıvanç Tatlıtuğ | 7 | 11 | ✓ |
-| The Cultural Pulse | Slashers & Masked Killers | 100 | 79 |  |
-| Fresh Out of Theaters | daily | 50 | 42 |  |
-| Box Office Champions | daily | 40 | 100 |  |
-| Certified Fresh & Must-See | daily | 60 | 49 |  |
+| The Cultural Pulse | Slashers & Masked Killers | 100 | 79 | ✓ |
+| Fresh Out of Theaters | daily | 50 | 42 | ✓ |
+| Box Office Champions | daily | 40 | 100 | ✓ |
+| Certified Fresh & Must-See | daily | 60 | 49 | ✓ |
+| My Simkl | cover | 0 | 0 | ✓ |
 
 ## Notes
 - **The Headliner**: TMDB person 974169 Jenna Ortega (Acting)
@@ -26,6 +27,6 @@ Next Cultural Pulse theme starts: **2026-10-25**
 - **The Saga**: series 157239 = Alien: Earth
 - **The Prestige Darling**: TMDB person 5064 Meryl Streep (Acting)
 - **The Living Legend**: TMDB person 1905 Vincent Price (Acting)
-- **Retro Rewind**: 1931–1976; keywords=-
+- **Retro Rewind**: 1931–1973; keywords=-
 - **Yerli Yıldız**: TMDB person 1078769 Kıvanç Tatlıtuğ (Acting)
 - **The Cultural Pulse**: keywords movie=12339|305666|10714 series=12339|305666|10714
