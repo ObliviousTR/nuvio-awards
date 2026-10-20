@@ -192,8 +192,11 @@ def person_card(entry, today, director):
             elif (c["media_type"] == "tv" and not g & {99, 10763, 10764, 10766, 10767}
                   and (c.get("episode_count") or 0) >= 3 and c.get("vote_count", 0) >= 10):
                 tv.append(c)
-    mv.sort(key=lambda c: -c.get("vote_count", 0))
-    tv.sort(key=lambda c: -c.get("vote_count", 0))
+    def weight(c):  # actors: cameos and bit parts count a quarter, so lead roles come first
+        small = not director and c["media_type"] == "movie" and (c.get("order") or 0) > 4
+        return -c.get("vote_count", 0) * (0.25 if small else 1)
+    mv.sort(key=weight)
+    tv.sort(key=weight)
     m, s = rows("movie", mv), rows("tv", tv)
     lead = {c["id"] for c in mv + tv if director or (c.get("order") is not None and c["order"] <= 2)}
     backs = [x["backdrop"] for x in m + s if x["backdrop"] and x["tmdb"] in lead]

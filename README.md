@@ -32,3 +32,24 @@ Manual fixes: add a line to `data/additions.txt` (`catalog|year|imdb_id|tmdb_id|
 `python3 scripts/build.py`, commit and push. Nuvio picks changes up on its next refresh.
 
 Seed lists in `data/base/` were copied from public MDBList lists and extended with recent winners.
+
+## Spotlight (second addon in this repo)
+
+```
+https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/spotlight/manifest.json
+```
+
+`.github/workflows/spotlight.yml` runs **every day** (03:17 UTC) and rebuilds `spotlight/` from TMDB
+(repo secret `TMDB_API_KEY`):
+
+- **The Headliner** (actor), **The Visionary** (director), **The Powerhouse** (studio), **The Saga** (franchise):
+  a new subject every 14 days from `spotlight/pool.json`. Entries with `months` are preferred in those months
+  (October horror, December holidays); otherwise the least recently shown subject comes next.
+- **The Cultural Pulse:** the seasonal calendar in `pool.json` (`pulse`), switching on each theme's start date.
+- **Fresh Out of Theaters, Box Office Champions, Certified Fresh & Must-See:** rebuilt every day.
+- Covers (`spotlight/art/<card>/cover.jpg`) and hero backdrops are generated when a subject changes; their URLs
+  never change. `spotlight/STATUS.md` shows what is on now and when the next rotation is.
+
+Run it by hand from the Actions tab: `build`, `check` (tests every pool entry → `spotlight/CHECK.md`) or
+`redraw` (regenerates all art). To force a subject, put it in `spotlight/state.json` → `"pin"`, e.g.
+`{"headliner": "Pedro Pascal"}`; remove it to return to the rotation.
