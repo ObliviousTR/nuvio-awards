@@ -8,6 +8,7 @@ genres = TMDB TV genres (default 10764), sort = pop|top|new|votes, vc = minimum 
 until = first aired up to year.
 """
 ANGLO = "US|GB|AU"
+EXCLUDE = ["wrestling", "professional wrestling", "wwe"]  # wrestling is tagged Reality on TMDB
 
 FOLDERS = [
     ("Trending & New Reality", "Discover Reality TV", [
@@ -16,7 +17,7 @@ FOLDERS = [
         ("Biggest Reality Hits", dict(sort="votes", vc=50)),
         ("Top Rated Reality", dict(sort="top", vc=150)),
         ("Reality Competition Hits", dict(kw=["reality competition", "competition", "elimination"], sort="pop", vc=30)),
-        ("Docusoaps & Social Experiments", dict(kw=["docusoap", "social experiment", "docuseries"], sort="pop", vc=20)),
+        ("Docusoaps & Social Experiments", dict(kw=["docusoap", "social experiment", "docuseries", "celebrity", "reality star"], sort="pop", vc=5)),
         ("Popular in the US", dict(country="US", sort="pop", vc=20)),
         ("Popular in the UK", dict(country="GB", sort="pop", vc=10)),
         ("Popular in Australia", dict(country="AU", sort="pop", vc=5)),
@@ -24,8 +25,7 @@ FOLDERS = [
     ]),
     ("Strategy, Mind Games & Survival", "High-Stakes Competition & Survival", [
         ("Island Survival & Outlast", dict(kw=["survival", "survival competition", "island", "wilderness", "stranded"], sort="votes", vc=10)),
-        ("Strategy & Mind Games", dict(kw=["strategy", "deception", "manipulation", "betrayal", "alliance"], sort="votes", vc=10)),
-        ("House Lock-Ins", dict(kw=["big brother", "isolation", "confinement", "house"], sort="votes", vc=20)),
+        ("Strategy, Lock-Ins & Mind Games", dict(kw=["strategy", "deception", "manipulation", "betrayal", "alliance", "big brother", "confinement"], sort="votes", vc=10)),
         ("Global Race & Travel Challenges", dict(kw=["race", "travel competition", "around the world"], sort="votes", vc=10)),
         ("Extreme Jobs & Real Danger", dict(kw=["dangerous job", "occupation", "fishing", "gold mining", "trucking"], sort="votes", vc=10)),
         ("Physical Challenge Shows", dict(kw=["physical competition", "obstacle course", "athlete"], sort="votes", vc=10)),
@@ -45,8 +45,8 @@ FOLDERS = [
     ]),
     ("British Panel, Quiz & Comedy Shows", "Game Shows, Talent & Trivia", [
         ("British Panel Shows", dict(country="GB", kw=["panel show", "panel game"], genres="35|10767|10764", sort="votes", vc=10)),
-        ("Comedy Challenges & Taskmaster", dict(country="GB|AU|US", kw=["comedy competition", "task", "comedian"], genres="35|10764", sort="votes", vc=10)),
-        ("U&Dave & Channel 4 Comedy", dict(net="388|26", genres="35|10764|10767", sort="votes", vc=10)),
+        ("Comedy Challenges & Taskmaster", dict(country="GB|AU|US", kw=["task", "comedian", "improvisation", "stand-up comedy"], genres="10764|10767", sort="votes", vc=10)),
+        ("U&Dave & Channel 4 Entertainment", dict(net="388|26", genres="10764|10767", sort="votes", vc=10)),
         ("Quiz & Trivia", dict(kw=["quiz show", "quiz", "trivia"], genres="10764|10767|35", sort="votes", vc=5)),
         ("Popular Game Shows", dict(kw=["game show"], genres="10764|10767|35", sort="pop", vc=10)),
         ("Singing & Talent Competitions", dict(kw=["talent show", "singing competition", "talent competition", "singing"], sort="votes", vc=10)),
@@ -58,15 +58,15 @@ FOLDERS = [
         ("Streaming Dating Sensations", dict(net="213|1024|453|2739|3353", kw=["dating", "dating show", "relationship"], sort="pop", vc=5)),
         ("Love Island & UK Dating", dict(country="GB|AU", kw=["dating", "dating show", "love"], sort="votes", vc=5)),
         ("Top Rated Dating Shows", dict(kw=["dating", "dating show", "blind date"], sort="top", vc=30)),
-        ("High-Society & City Drama", dict(net="74|76|158", sort="votes", vc=10)),
-        ("Family & Relationship Docusoaps", dict(net="84|34|129", kw=["family", "marriage", "relationship", "wedding"], sort="votes", vc=10)),
+        ("High-Society & City Drama", dict(net="74|76|158", kw=["housewife", "socialite", "wealth", "rich", "high society", "celebrity", "drama"], sort="votes", vc=10)),
+        ("Family & Relationship Docusoaps", dict(net="84|34|129", kw=["family", "marriage", "relationship", "wedding", "large family", "parenting"], sort="votes", vc=3)),
         ("Korean Dating Shows", dict(country="KR", lang="ko", kw=["dating", "dating show", "romance", "love"], sort="votes", vc=2)),
         ("New Dating Releases", dict(kw=["dating", "dating show", "blind date", "relationship"], sort="new", vc=2)),
     ]),
     ("Makeover, Motors & Craft Battles", "Real Estate, Home & Lifestyle Makeovers", [
         ("Cars, Motors & Garage Builds", dict(kw=["car", "automobile", "car restoration", "motorcycle", "garage"], sort="votes", vc=10, genres="10764|99")),
-        ("Craft & Maker Battles", dict(kw=["craft", "blacksmith", "glassblowing", "woodworking", "artisan"], sort="votes", vc=5)),
-        ("Countryside & Farm Life", dict(kw=["farm", "farming", "countryside", "rural life"], genres="10764|99", sort="votes", vc=10)),
+        ("Craft & Maker Battles", dict(kw=["craft", "blacksmith", "bladesmith", "glassblowing", "woodworking", "artisan", "pottery", "sewing", "art competition", "design competition", "maker"], genres="10764|99", sort="votes", vc=2)),
+        ("Countryside & Farm Life", dict(kw=["farm", "farming", "countryside", "rural life", "ranch", "cowboy", "homestead", "country life"], genres="10764|99", sort="votes", vc=3)),
         ("Home Renovation & Transformation", dict(kw=["home renovation", "renovation", "home improvement", "interior design"], sort="votes", vc=10)),
         ("HGTV & Magnolia Favorites", dict(net="210|4519", sort="votes", vc=5)),
         ("Luxury Real Estate", dict(kw=["real estate", "luxury", "realtor"], sort="votes", vc=5)),

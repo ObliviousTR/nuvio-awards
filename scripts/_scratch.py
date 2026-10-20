@@ -2,14 +2,14 @@
 import datetime as dt, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from spotlight import tmdb, find_keywords
-from _reality_spec import FOLDERS, ANGLO
+from _reality_spec import FOLDERS, ANGLO, EXCLUDE
 
 OUT = "refs/reality"
 os.makedirs(OUT, exist_ok=True)
 SORT = {"pop": "popularity.desc", "top": "vote_average.desc", "new": "first_air_date.desc", "votes": "vote_count.desc"}
 today = dt.date.today().isoformat()
 ids, md = {}, []
-names = sorted({k for _, _, rails in FOLDERS for _, r in rails for k in r.get("kw", [])})
+names = sorted({k for _, _, rails in FOLDERS for _, r in rails for k in r.get("kw", [])} | set(EXCLUDE))
 for n in names:
     ids[n] = find_keywords([n])
 json.dump(ids, open(f"{OUT}/keywords.json", "w"), indent=1)
@@ -19,6 +19,7 @@ for folder, _, rails in FOLDERS:
     for title, r in rails:
         q = {"sort_by": SORT[r["sort"]], "vote_count.gte": r.get("vc", 0), "without_genres": "16",
              "with_original_language": r.get("lang", "en"), "with_origin_country": r.get("country", ANGLO)}
+        q["without_keywords"] = "|".join(i for n in EXCLUDE for i in ids[n].split("|") if i)
         g = r.get("genres", "10764")
         if g:
             q["with_genres"] = g
