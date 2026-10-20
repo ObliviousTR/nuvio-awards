@@ -17,4 +17,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B design-refs
-          git add -f refs/fav && git commit -q -m "Favourites samples" && git push -f origin design-refs
+          git add -f refs spotlight/logos && git commit -q -m "Favourites samples" && git push -f origin design-refs
