@@ -4,14 +4,14 @@ Next rotation (actor, director, studio, saga): **2026-10-26**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
-| The Headliner | Jenna Ortega | 19 | 6 | ✓ |
-| The Visionary | Jordan Peele | 3 | 4 | ✓ |
-| The Powerhouse | Blumhouse Productions | 100 | 3 | ✓ |
-| The Saga | Alien Saga | 4 | 1 | ✓ |
-| The Cultural Pulse | Slashers & Masked Killers | 100 | 79 | ✓ |
-| Fresh Out of Theaters | daily | 50 | 42 | ✓ |
-| Box Office Champions | daily | 40 | 100 | ✓ |
-| Certified Fresh & Must-See | daily | 60 | 49 | ✓ |
+| The Headliner | Jenna Ortega | 19 | 6 |  |
+| The Visionary | Jordan Peele | 3 | 4 |  |
+| The Powerhouse | Blumhouse Productions | 100 | 3 |  |
+| The Saga | Alien Saga | 4 | 1 |  |
+| The Cultural Pulse | Slashers & Masked Killers | 100 | 79 |  |
+| Fresh Out of Theaters | daily | 50 | 42 |  |
+| Box Office Champions | daily | 40 | 100 |  |
+| Certified Fresh & Must-See | daily | 60 | 49 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 974169 Jenna Ortega (Acting)
