@@ -24,6 +24,7 @@ KEY = os.environ.get("TMDB_API_KEY", "").strip()
 LIMIT = 100
 NOISE_TV = "16|99|10762|10763|10764|10766|10767"   # animation, docs, kids, news, reality, soap, talk
 NO_TOON_M = "16"
+MIN_MOVIES = {"headliner": 6, "visionary": 3, "powerhouse": 6, "saga": 3}
 SELF = re.compile(r"\b(self|himself|herself|themselves|narrator|host|archive footage|uncredited)\b", re.I)
 
 CARDS = {
@@ -116,6 +117,9 @@ def rows(kind, results, limit=LIMIT):
 
 
 def discover(kind, params, pages=5, limit=LIMIT):
+    if params.get("with_genres") and params.get("without_genres"):
+        want = set(re.split(r"[|,]", params["with_genres"]))
+        params = {**params, "without_genres": "|".join(g for g in params["without_genres"].split("|") if g not in want)}
     res = []
     for page in range(1, pages + 1):
         d = tmdb(f"/discover/{kind}", page=page, include_adult="false", **params) or {}
@@ -222,7 +226,7 @@ def studio_card(entry, today):
                         "without_genres": NOISE_TV})
     logo = (tmdb(f"/company/{ids[0]}") or {}).get("logo_path")
     top = next((x for x in m if x["backdrop"]), None)
-    a = dict(title=entry["name"], subtitle=f"Studio catalog · {len(m) + len(s)} titles", logo=logo,
+    a = dict(title=entry.get("title", entry["name"]), subtitle=f"Studio catalog · {len(m) + len(s)} titles", logo=logo,
              backdrop=top and top["backdrop"])
     return m, s, a, notes
 
@@ -230,7 +234,11 @@ def studio_card(entry, today):
 def saga_card(entry, today):
     notes, parts, poster, back = [], [], None, None
     for name in entry.get("collections", []):
-        col, exact = find_collection(name)
+        if isinstance(name, int):
+            d0 = tmdb(f"/collection/{name}")
+            col, exact = (d0, True) if d0 else (None, False)
+        else:
+            col, exact = find_collection(name)
         if not col:
             notes.append(f"WARNING collection '{name}' not found")
             continue
@@ -249,7 +257,8 @@ def saga_card(entry, today):
             notes.append(f"WARNING series '{name}' not found")
     shows.sort(key=lambda t: t.get("first_air_date") or "9999")
     m, s = rows("movie", parts), rows("tv", shows)
-    a = dict(title=entry["name"] if "saga" in entry["name"].lower() else entry["name"] + " Saga",
+    t = entry.get("title", entry["name"])
+    a = dict(title=t if re.search(r"saga|universe|trilogy|world", t, re.I) else t + " Saga",
              subtitle=f"In release order · {len(m) + len(s)} titles", poster=poster, backdrop=back)
     return m, s, a, notes
 
@@ -372,7 +381,7 @@ def build_rotating(slot, pool, state, today, period, log):
         except LookupError as err:
             log.append(f"- {slot}: skipped {e['name']}: {err}")
             continue
-        if len(m) < 4:
+        if len(m) < MIN_MOVIES[slot]:
             log.append(f"- {slot}: skipped {e['name']}: only {len(m)} movies")
             continue
         if st.get("subject") != e["name"]:
@@ -501,7 +510,7 @@ def check(pool, today):
                 fn = {"headliner": lambda: person_card(e, today, False), "visionary": lambda: person_card(e, today, True),
                       "powerhouse": lambda: studio_card(e, today), "saga": lambda: saga_card(e, today)}[slot]
                 m, s, a, notes = fn()
-                flag = " ⚠️" if len(m) < 4 or any("WARNING" in n for n in notes) else ""
+                flag = " ⚠️" if len(m) < MIN_MOVIES[slot] or any("WARNING" in n for n in notes) else ""
                 md.append(f"| {e['name']}{flag} | {len(m)} | {len(s)} | {'; '.join(notes)} |")
             except Exception as err:
                 md.append(f"| {e['name']} ⚠️ | – | – | {err} |")

@@ -1,5 +1,5 @@
 {
-  "_comment": "Spotlight subjects. Edit freely: the daily workflow picks the next subject every 14 days (anchor below). Entries with 'months' are preferred in those months (October = horror, December = holidays). People are found by name; studios by TMDB company id (name is checked); sagas by TMDB collection name plus optional series names. To force a subject, set state.json 'pin', e.g. {\"headliner\": \"Pedro Pascal\"}.",
+  "_comment": "Spotlight subjects. Edit freely: the daily workflow picks the next subject every 14 days (anchor below). Entries with 'months' are preferred in those months (October = horror, December = holidays). People are found by name; studios (optional 'title' = name shown on the card) by TMDB company id (name is checked); sagas by TMDB collection name plus optional series names. To force a subject, set state.json 'pin', e.g. {\"headliner\": \"Pedro Pascal\"}.",
   "anchor": "2026-01-05",
   "period_days": 14,
   "headliner": [
@@ -60,8 +60,8 @@
     {"name": "Columbia Pictures", "company": [5]},
     {"name": "Castle Rock Entertainment", "company": [97]},
     {"name": "Blumhouse Productions", "company": [3172], "months": [10]},
-    {"name": "Hammer Films", "company": [1314], "months": [10]},
-    {"name": "Monkeypaw Productions", "company": [3393], "months": [10]},
+    {"name": "Hammer Film Productions", "title": "Hammer Horror", "company": [1314], "months": [10]},
+    {"name": "Monkeypaw Productions", "company": [88934], "months": [10]},
     {"name": "Atomic Monster", "company": [76907], "months": [10]},
     {"name": "Platinum Dunes", "company": [2481], "months": [10]},
     {"name": "Dimension Films", "company": [7405], "months": [10]}
@@ -91,11 +91,10 @@
     {"name": "X-Men", "collections": ["X-Men Collection"]},
     {"name": "Ocean's", "collections": ["Ocean's Collection"], "months": [4]},
     {"name": "The Bourne Saga", "collections": ["The Bourne Collection"]},
-    {"name": "Top Gun", "collections": ["Top Gun Collection"], "months": [5, 6]},
     {"name": "Men in Black", "collections": ["Men in Black Collection"], "months": [7]},
     {"name": "Alien", "collections": ["Alien Collection"], "series": ["Alien: Earth"], "months": [10]},
     {"name": "Predator", "collections": ["Predator Collection"], "months": [10]},
-    {"name": "Evil Dead", "collections": ["The Evil Dead Collection"], "series": ["Ash vs Evil Dead"], "months": [10]},
+    {"name": "Evil Dead", "collections": [1960], "series": ["Ash vs Evil Dead"], "months": [10]},
     {"name": "Halloween", "collections": ["Halloween Collection"], "months": [10]},
     {"name": "Scream", "collections": ["Scream Collection"], "series": ["Scream: The TV Series"], "months": [10]},
     {"name": "The Conjuring Universe", "collections": ["The Conjuring Collection", "Annabelle Collection", "The Nun Collection"], "months": [10]},
@@ -103,9 +102,8 @@
     {"name": "Final Destination", "collections": ["Final Destination Collection"], "months": [10]},
     {"name": "A Nightmare on Elm Street", "collections": ["A Nightmare on Elm Street Collection"], "months": [10]},
     {"name": "Ghostbusters", "collections": ["Ghostbusters Collection"], "months": [10]},
-    {"name": "Home Alone", "collections": ["Home Alone Collection"], "months": [12]},
-    {"name": "Die Hard", "collections": ["Die Hard Collection"], "months": [12]},
-    {"name": "Gremlins", "collections": ["Gremlins Collection"], "months": [12]}
+    {"name": "Home Alone", "collections": [9888], "months": [12]},
+    {"name": "Die Hard", "collections": ["Die Hard Collection"], "months": [12]}
   ],
   "pulse": [
     {"start": "01-01", "title": "{best_year} in Review", "subtitle": "The year's most acclaimed", "best_year": true},
@@ -120,7 +118,7 @@
     {"start": "04-05", "title": "Heists & Cons", "subtitle": "One last job",
      "keywords": ["heist", "con artist", "con man", "bank robbery"]},
     {"start": "04-20", "title": "Our Wild Planet", "subtitle": "Nature on screen",
-     "keywords": ["nature", "wildlife", "animal"], "movie": {"with_genres": "99"}, "series": {"with_genres": "99"}},
+     "keywords": ["nature", "wildlife", "animal"], "movie": {"with_genres": "99", "vote_count.gte": 20}, "series": {"with_genres": "99", "vote_count.gte": 5}},
     {"start": "05-05", "title": "Summer Blockbuster Season", "subtitle": "Go big",
      "movie": {"with_genres": "28|12|878", "sort_by": "revenue.desc", "vote_count.gte": 2000},
      "series": {"with_genres": "10759|10765"}},
