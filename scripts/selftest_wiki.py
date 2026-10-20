@@ -28,13 +28,13 @@ for cid, cfg in events.items():
         except Exception as e:
             bad += 1
             out.append(f"- ERR {cid} {year}: {e}")
-        key = (page_title(cfg, year), cfg["label"][0])
+        key = (page_title(cfg, year), cfg["award"][0])
         if key in dumped:
             continue
         dumped.add(key)
         try:
             text = wikitext(key[0])
-            i = text.find(cfg.get("section") or cfg["label"][0])
+            i = text.find(cfg.get("section") or cfg["award"][0])
             dumps.append(f"### {key[0]} / {key[1]} (found at {i})\n```\n{text[max(0, i - 300):i + 1500] if i >= 0 else text[:1500]}\n```")
         except Exception as e:
             dumps.append(f"### {key[0]}: {e}")
