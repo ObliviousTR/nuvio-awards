@@ -11,7 +11,7 @@ from spotlight import tmdb, P
 from PIL import Image, ImageEnhance
 
 COMMONS = "File:Germany and Argentina face off in the final of the World Cup 2014 -2014-07-13 (5).jpg"
-ONEPACE_BACKDROP = ""  # TMDB file_path of the chosen One Piece backdrop (see onepace/candidates.jpg)
+ONEPACE_BACKDROP = "/6fRwRD7GdCfg6owzmCT3VgQtowl.jpg"  # TMDB file_path of the chosen One Piece backdrop (see onepace/candidates.jpg)
 UA = {"User-Agent": "nuvio-awards (github.com/ObliviousTR/nuvio-awards)"}
 
 
@@ -51,7 +51,8 @@ def main(redraw=False):
     if redraw or not os.path.exists(f"{out}/onepace/cover.jpg"):
         imgs = (tmdb("/tv/37854/images", include_image_language="null") or {}).get("backdrops", [])
         imgs.sort(key=lambda b: (-b.get("vote_average", 0), -b.get("width", 0)))
-        contact_sheet(imgs[:16], f"{out}/onepace/candidates.jpg")
+        if not ONEPACE_BACKDROP:
+            contact_sheet(imgs[:16], f"{out}/onepace/candidates.jpg")
         pick = [b for b in imgs if b["file_path"] == ONEPACE_BACKDROP]
         imgs = pick + [b for b in imgs if b not in pick]
         art.cover(f"{out}/onepace/cover.jpg", card="One Pace", tag="Fan re-cut", title="One Pace",
