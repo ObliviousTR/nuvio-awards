@@ -13,7 +13,6 @@ Next Cultural Pulse theme starts: **2026-10-25**
 | Fresh Out of Theaters | daily | 50 | 42 |  |
 | Box Office Champions | daily | 40 | 100 |  |
 | Certified Fresh & Must-See | daily | 60 | 49 |  |
-| My Simkl | cover | 0 | 0 | ✓ |
 
 ## Notes
 - **The Headliner**: TMDB person 974169 Jenna Ortega (Acting)
@@ -22,3 +21,7 @@ Next Cultural Pulse theme starts: **2026-10-25**
 - **The Saga**: collection 8091 = Alien Collection
 - **The Saga**: series 157239 = Alien: Earth
 - **The Cultural Pulse**: keywords movie=12339|305666|10714 series=12339|305666|10714
+- headliner: added to the auto pool: Robert Downey Jr., Chris Evans, Austin Abrams
+- visionary: added to the auto pool: Joe Russo, Anthony Russo, Kitao Sakurai
+- powerhouse: added to the auto pool: Pascal Pictures, TSG Entertainment, Constantin Film
+- saga: added to the auto pool: The Avengers, Insidious, Fall

@@ -23,10 +23,12 @@
   "cards": {
     "headliner": {
       "period": 20,
+      "reason": null,
       "subject": "Jenna Ortega"
     },
     "powerhouse": {
       "period": 20,
+      "reason": null,
       "subject": "Blumhouse Productions"
     },
     "pulse": {
@@ -35,13 +37,61 @@
     },
     "saga": {
       "period": 20,
+      "reason": null,
       "subject": "Alien"
     },
     "visionary": {
       "period": 20,
+      "reason": null,
       "subject": "Jordan Peele"
     }
   },
+  "collection_ids": {
+    "A Nightmare on Elm Street Collection": 8581,
+    "Alien Collection": 8091,
+    "Annabelle Collection": 402074,
+    "Back to the Future Collection": 264,
+    "Creed Collection": 553717,
+    "Die Hard Collection": 1570,
+    "Dune Collection": 726871,
+    "Fantastic Beasts Collection": 435259,
+    "Final Destination Collection": 8864,
+    "Ghostbusters Collection": 2980,
+    "Halloween Collection": 91361,
+    "Harry Potter Collection": 1241,
+    "Indiana Jones Collection": 84,
+    "James Bond Collection": 645,
+    "John Wick Collection": 404609,
+    "Jurassic Park Collection": 328,
+    "Mad Max Collection": 8945,
+    "Men in Black Collection": 86055,
+    "Mission: Impossible Collection": 87359,
+    "Ocean's Collection": 304,
+    "Pirates of the Caribbean Collection": 295,
+    "Planet of the Apes (Original) Collection": 1709,
+    "Planet of the Apes (Reboot) Collection": 173710,
+    "Predator Collection": 399,
+    "Rocky Collection": 1575,
+    "Saw Collection": 656,
+    "Scream Collection": 2602,
+    "Spider-Man (Avengers) Collection": 531241,
+    "Spider-Man Collection": 556,
+    "Star Wars Collection": 10,
+    "The Amazing Spider-Man Collection": 125574,
+    "The Bourne Collection": 31562,
+    "The Conjuring Collection": 313086,
+    "The Dark Knight Collection": 263,
+    "The Fast and the Furious Collection": 9485,
+    "The Godfather Collection": 230,
+    "The Hobbit Collection": 121938,
+    "The Hunger Games Collection": 131635,
+    "The Lord of the Rings Collection": 119,
+    "The Matrix Collection": 2344,
+    "The Nun Collection": 968052,
+    "The Terminator Collection": 528,
+    "X-Men Collection": 748
+  },
+  "grown": "2026-10-20",
   "history": {
     "headliner": {
       "Jenna Ortega": "2026-10-20"

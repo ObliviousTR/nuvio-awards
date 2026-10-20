@@ -1,0 +1,89 @@
+{
+ "removed": [],
+ "headliner": [
+  {
+   "name": "Robert Downey Jr.",
+   "auto": true,
+   "added": "2026-10-20"
+  },
+  {
+   "name": "Chris Evans",
+   "auto": true,
+   "added": "2026-10-20"
+  },
+  {
+   "name": "Austin Abrams",
+   "auto": true,
+   "added": "2026-10-20"
+  }
+ ],
+ "visionary": [
+  {
+   "name": "Joe Russo",
+   "auto": true,
+   "added": "2026-10-20"
+  },
+  {
+   "name": "Anthony Russo",
+   "auto": true,
+   "added": "2026-10-20"
+  },
+  {
+   "name": "Kitao Sakurai",
+   "auto": true,
+   "added": "2026-10-20"
+  }
+ ],
+ "saga": [
+  {
+   "name": "The Avengers",
+   "collections": [
+    86311
+   ],
+   "auto": true,
+   "added": "2026-10-20"
+  },
+  {
+   "name": "Insidious",
+   "collections": [
+    228446
+   ],
+   "auto": true,
+   "added": "2026-10-20"
+  },
+  {
+   "name": "Fall",
+   "collections": [
+    1102372
+   ],
+   "auto": true,
+   "added": "2026-10-20"
+  }
+ ],
+ "powerhouse": [
+  {
+   "name": "Pascal Pictures",
+   "company": [
+    84041
+   ],
+   "auto": true,
+   "added": "2026-10-20"
+  },
+  {
+   "name": "TSG Entertainment",
+   "company": [
+    22213
+   ],
+   "auto": true,
+   "added": "2026-10-20"
+  },
+  {
+   "name": "Constantin Film",
+   "company": [
+    47
+   ],
+   "auto": true,
+   "added": "2026-10-20"
+  }
+ ]
+}
