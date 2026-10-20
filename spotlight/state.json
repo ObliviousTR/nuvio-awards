@@ -9,6 +9,16 @@
     "saga": "Alien",
     "visionary": "Jordan Peele"
   },
+  "backdrops": {
+    "boxoffice": "/lgotja3xMoJZbynwHfcQcJAEMWH.jpg",
+    "certified": "/8Tfys3mDZVp4tNoH2ktm06a0Tau.jpg",
+    "fresh": "/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
+    "headliner": "/o375tDNib7tihlkWdtLW1fQhNL1.jpg",
+    "powerhouse": "/9pkZesKMnblFfKxEhQx45YQ2kIe.jpg",
+    "pulse": "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "saga": "/6X42JnSMdo3dPAswOHUuvebdTq7.jpg",
+    "visionary": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg"
+  },
   "cards": {
     "headliner": {
       "period": 20,
