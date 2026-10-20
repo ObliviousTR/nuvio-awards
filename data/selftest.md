@@ -1,0 +1,39 @@
+# Wikipedia parser self-test
+10 matched known winners, 26 not matched/errors
+
+- ERR gg-drama-picture 2025: no winners table for ['Best Motion Picture – Drama']
+- ERR gg-drama-picture 2026: no winners table for ['Best Motion Picture – Drama']
+- ERR gg-comedy-picture 2025: no winners table for ['Best Motion Picture – Musical or Comedy']
+- ERR gg-comedy-picture 2026: no winners table for ['Best Motion Picture – Musical or Comedy']
+- ERR gg-drama-series 2025: no winners table for ['Best Television Series – Drama']
+- ERR gg-drama-series 2026: no winners table for ['Best Television Series – Drama']
+- ERR gg-comedy-series 2025: no winners table for ['Best Television Series – Musical or Comedy']
+- ERR gg-comedy-series 2026: no winners table for ['Best Television Series – Musical or Comedy']
+- ERR gg-limited-series 2025: no winners table for ['Best Limited or Anthology Series or Television Film', 'Best Limited Series, Anthology Series or Motion Picture Made for Television', 'Best Miniseries or Television Film']
+- ERR gg-limited-series 2026: no winners table for ['Best Limited or Anthology Series or Television Film', 'Best Limited Series, Anthology Series or Motion Picture Made for Television', 'Best Miniseries or Television Film']
+- ERR gg-director 2025: no winners table for ['Best Director – Motion Picture', 'Best Director']
+- ERR gg-director 2026: no winners table for ['Best Director – Motion Picture', 'Best Director']
+- ERR gg-non-english 2025: no winners table for ['Best Motion Picture – Non-English Language', 'Best Non-English Language Film']
+- ERR gg-non-english 2026: no winners table for ['Best Motion Picture – Non-English Language', 'Best Non-English Language Film']
+- ERR bafta-best-film 2025: no winners table for ['Best Film']
+- ERR bafta-best-film 2026: no winners table for ['Best Film']
+- ERR emmy-drama-series 2025: no winners table for ['Outstanding Drama Series']
+- ERR emmy-drama-series 2026: no winners table for ['Outstanding Drama Series']
+- ERR emmy-comedy-series 2025: no winners table for ['Outstanding Comedy Series']
+- ERR emmy-comedy-series 2026: no winners table for ['Outstanding Comedy Series']
+- ERR emmy-limited-series 2025: no winners table for ['Outstanding Limited or Anthology Series', 'Outstanding Limited Series']
+- NEW emmy-limited-series 2026: Charlie's Angels tt0073972  (78th Primetime Emmy Awards)
+- OK  cannes-palme 2025: It Was Just an Accident tt36491653  (2025 Cannes Film Festival)
+- OK  cannes-palme 2026: Fjord tt35410859  (2026 Cannes Film Festival)
+- OK  cannes-grand-prix 2025: Sentimental Value tt27714581  (2025 Cannes Film Festival)
+- OK  cannes-grand-prix 2026: Minotaur tt37118301  (2026 Cannes Film Festival)
+- ERR cannes-jury-prize 2025: no IMDb id on Wikidata for 'Sirāt' (Q4420721)
+- OK  cannes-jury-prize 2026: The Dreamed Adventure tt21188986  (2026 Cannes Film Festival)
+- OK  venice-golden-lion 2025: Father Mother Sister Brother tt31189315  (82nd Venice International Film Festival)
+- OK  venice-golden-lion 2026: Woman Unknown tt34888026  (83rd Venice International Film Festival)
+- OK  berlinale-golden-bear 2025: Dreams tt30810787  (75th Berlin International Film Festival)
+- OK  berlinale-golden-bear 2026: Yellow Letters tt32888226  (76th Berlin International Film Festival)
+- OK  sundance-grand-jury 2025: Atropia tt31122579  (2025 Sundance Film Festival)
+- ERR sundance-grand-jury 2026: no 'Grand Jury Prize' line
+- ERR tiff-peoples-choice 2025: no IMDb id on Wikidata for 'Deadline Hollywood' (Q4037100)
+- NEW tiff-peoples-choice 2026: Being Heumann tt15095848  (2026 Toronto International Film Festival)
