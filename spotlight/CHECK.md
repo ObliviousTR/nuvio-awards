@@ -1,33 +1,47 @@
 # Spotlight pool check — 2026-10-20
 
-## Retro Rewind
+## The Prestige Darling
 
 | Subject | Movies | Series | Notes |
 |---|---:|---:|---|
-| Film Noir | 100 | 0 | 1940–1958; keywords=9807|207268 |
-| Screwball Comedies | 100 | 0 | 1934–1949; keywords=- |
-| Golden Age Musicals | 85 | 0 | 1933–1968; keywords=- |
-| Classic Westerns | 93 | 10 | 1939–1972; keywords=- |
-| Spaghetti Westerns | 16 | 0 | 1960–1979; keywords=156212 |
-| 50s Sci-Fi | 84 | 0 | 1950–1959; keywords=- |
-| Swinging Sixties Spy Films | 13 | 4 | 1960–1969; keywords=470|4289|5265 |
-| 70s Paranoia Thrillers | 14 | 0 | 1970–1979; keywords=10410|2340|18420 |
-| New Hollywood | 65 | 0 | 1967–1980; keywords=- |
-| 70s Disaster Movies | 13 | 0 | 1970–1980; keywords=10617|189411 |
-| 80s Action Heroes | 100 | 35 | 1980–1989; keywords=- |
-| 80s Teen Movies | 44 | 5 | 1980–1989; keywords=6270|296608|10683 |
-| 80s Sci-Fi & Fantasy | 100 | 33 | 1980–1989; keywords=- |
-| Buddy Cop Classics | 27 | 3 | 1980–1999; keywords=167316 |
-| 90s Blockbusters | 100 | 0 | 1990–1999; keywords=- |
-| 90s Rom-Coms | 100 | 0 | 1990–1999; keywords=- |
-| 90s Crime & Indie | 100 | 35 | 1990–1999; keywords=- |
-| 90s Teen Comedies | 50 | 10 | 1994–2004; keywords=6270|296608|155722 |
-| 90s Sitcom Era | 100 | 62 | 1989–1999; keywords=- |
-| Y2K Thrillers | 100 | 100 | 2000–2009; keywords=- |
-| 2000s Comedies | 100 | 100 | 2000–2009; keywords=- |
-| Cold War Thrillers | 28 | 1 | 1955–1991; keywords=2106 |
-| Universal & Hammer Monsters | 100 | 0 | 1931–1976; keywords=- |
-| Golden Age of Slashers | 50 | 0 | 1978–1989; keywords=12339 |
-| 90s Horror Revival | 100 | 2 | 1990–1999; keywords=- |
-| 80s Christmas Classics | 41 | 0 | 1980–1999; keywords=207317 |
+| Meryl Streep | 63 | 4 | TMDB person 5064 Meryl Streep (Acting) |
+| Jack Nicholson | 55 | 0 | TMDB person 514 Jack Nicholson (Acting) |
+| Daniel Day Lewis | 19 | 0 | TMDB person 11856 Daniel Day-Lewis (Acting) |
+| Frances McDormand | 41 | 3 | TMDB person 3910 Frances McDormand (Acting) |
+| Sean Penn | 46 | 2 | TMDB person 2228 Sean Penn (Acting) |
+| Denzel Washington | 54 | 1 | TMDB person 5292 Denzel Washington (Acting) |
+| Cate Blanchett | 58 | 3 | TMDB person 112 Cate Blanchett (Acting) |
+| Robert De Niro | 100 | 3 | TMDB person 380 Robert De Niro (Acting) |
+| Dustin Hoffman | 55 | 2 | TMDB person 4483 Dustin Hoffman (Acting) |
+| Anthony Hopkins | 88 | 2 | TMDB person 4173 Anthony Hopkins (Acting) |
+| Jessica Lange | 38 | 4 | TMDB person 4431 Jessica Lange (Acting) |
+| Maggie Smith | 55 | 1 | TMDB person 10978 Maggie Smith (Acting) |
+| Michael Caine | 100 | 0 | TMDB person 3895 Michael Caine (Acting) |
+| Tom Hanks | 58 | 2 | TMDB person 31 Tom Hanks (Acting) |
+| Emma Stone | 29 | 3 | TMDB person 54693 Emma Stone (Acting) |
+| Gene Hackman | 71 | 0 | TMDB person 193 Gene Hackman (Acting) |
+| Jodie Foster | 42 | 4 | TMDB person 1038 Jodie Foster (Acting) |
+| Renée Zellweger | 33 | 3 | TMDB person 9137 Renée Zellweger (Acting) |
+| Dianne Wiest | 41 | 6 | TMDB person 1902 Dianne Wiest (Acting) |
+| Sally Field | 38 | 7 | TMDB person 35 Sally Field (Acting) |
+| Adrien Brody | 54 | 3 | TMDB person 3490 Adrien Brody (Acting) |
+| Christoph Waltz | 32 | 3 | TMDB person 27319 Christoph Waltz (Acting) |
+| Hilary Swank | 32 | 4 | TMDB person 448 Hilary Swank (Acting) |
+| Kevin Spacey | 52 | 2 | TMDB person 1979 Kevin Spacey (Acting) |
+| Mahershala Ali | 18 | 7 | TMDB person 932967 Mahershala Ali (Acting) |
+| Al Pacino | 63 | 3 | TMDB person 1158 Al Pacino (Acting) |
+| Paul Newman | 54 | 0 | TMDB person 3636 Paul Newman (Acting) |
+| Judi Dench | 54 | 2 | TMDB person 5309 Judi Dench (Acting) |
+| Jeff Bridges | 64 | 1 | TMDB person 1229 Jeff Bridges (Acting) |
+| Kate Winslet | 41 | 3 | TMDB person 204 Kate Winslet (Acting) |
+| Leonardo DiCaprio | 33 | 1 | TMDB person 6193 Leonardo DiCaprio (Acting) |
+| Robert Duvall | 83 | 2 | TMDB person 3087 Robert Duvall (Acting) |
+| Ellen Burstyn | 60 | 6 | TMDB person 9560 Ellen Burstyn (Acting) |
+| Sissy Spacek | 40 | 6 | TMDB person 5606 Sissy Spacek (Acting) |
+| Vanessa Redgrave | 70 | 3 | TMDB person 13333 Vanessa Redgrave (Acting) |
+| Julianne Moore | 80 | 5 | TMDB person 1231 Julianne Moore (Acting) |
+| Morgan Freeman | 87 | 2 | TMDB person 192 Morgan Freeman (Acting) |
+| Nicole Kidman | 67 | 10 | TMDB person 2227 Nicole Kidman (Acting) |
+| Susan Sarandon | 86 | 6 | TMDB person 4038 Susan Sarandon (Acting) |
+| Alan Arkin | 61 | 2 | TMDB person 1903 Alan Arkin (Acting) |
 
