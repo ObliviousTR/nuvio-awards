@@ -203,10 +203,11 @@ def person_card(entry, today, director, tr=False):
         else:
             if SELF.search(c.get("character") or ""):
                 continue
-            if c["media_type"] == "movie" and 99 not in g and c.get("vote_count", 0) >= 20:
+            # Turkish classics have few TMDB votes, so the Turkish card takes smaller vote counts
+            if c["media_type"] == "movie" and 99 not in g and c.get("vote_count", 0) >= (3 if tr else 20):
                 mv.append(c)
             elif (c["media_type"] == "tv" and not g & {99, 10763, 10764, 10766, 10767}
-                  and (c.get("episode_count") or 0) >= 3 and c.get("vote_count", 0) >= 10):
+                  and (c.get("episode_count") or 0) >= 3 and c.get("vote_count", 0) >= (2 if tr else 10)):
                 tv.append(c)
     def weight(c):  # actors: main roles first (cast order 0-4), then supporting parts and cameos
         small = not director and c["media_type"] == "movie" and (c.get("order") or 0) > 4
