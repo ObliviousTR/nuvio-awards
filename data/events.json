@@ -1,0 +1,21 @@
+{
+  "_comment": "How to find each catalog's winner on the event's English Wikipedia page. page: title pattern ({ord} = ordinal edition, {year} = event year). edition_base: edition number = year - edition_base. mode table = ceremony winners tables (winner listed first, in bold); mode line = festival award lists. year_offset: catalog year = event year + offset. last_event_year: newest event already in the catalog.",
+  "gg-drama-picture":      {"page": "{ord} Golden Globe Awards", "edition_base": 1943, "mode": "table", "label": ["Best Motion Picture – Drama"], "year_offset": -1, "last_event_year": 2026},
+  "gg-comedy-picture":     {"page": "{ord} Golden Globe Awards", "edition_base": 1943, "mode": "table", "label": ["Best Motion Picture – Musical or Comedy"], "year_offset": -1, "last_event_year": 2026},
+  "gg-drama-series":       {"page": "{ord} Golden Globe Awards", "edition_base": 1943, "mode": "table", "label": ["Best Television Series – Drama"], "year_offset": -1, "last_event_year": 2026},
+  "gg-comedy-series":      {"page": "{ord} Golden Globe Awards", "edition_base": 1943, "mode": "table", "label": ["Best Television Series – Musical or Comedy"], "year_offset": -1, "last_event_year": 2026},
+  "gg-limited-series":     {"page": "{ord} Golden Globe Awards", "edition_base": 1943, "mode": "table", "label": ["Best Limited or Anthology Series or Television Film", "Best Limited Series, Anthology Series or Motion Picture Made for Television", "Best Miniseries or Television Film"], "year_offset": -1, "last_event_year": 2026},
+  "gg-director":           {"page": "{ord} Golden Globe Awards", "edition_base": 1943, "mode": "table", "label": ["Best Director – Motion Picture", "Best Director"], "year_offset": -1, "last_event_year": 2026},
+  "gg-non-english":        {"page": "{ord} Golden Globe Awards", "edition_base": 1943, "mode": "table", "label": ["Best Motion Picture – Non-English Language", "Best Non-English Language Film"], "year_offset": -1, "last_event_year": 2026},
+  "bafta-best-film":       {"page": "{ord} British Academy Film Awards", "edition_base": 1947, "mode": "table", "label": ["Best Film"], "year_offset": -1, "last_event_year": 2026},
+  "emmy-drama-series":     {"page": "{ord} Primetime Emmy Awards", "edition_base": 1948, "mode": "table", "label": ["Outstanding Drama Series"], "year_offset": 0, "last_event_year": 2026},
+  "emmy-comedy-series":    {"page": "{ord} Primetime Emmy Awards", "edition_base": 1948, "mode": "table", "label": ["Outstanding Comedy Series"], "year_offset": 0, "last_event_year": 2026},
+  "emmy-limited-series":   {"page": "{ord} Primetime Emmy Awards", "edition_base": 1948, "mode": "table", "label": ["Outstanding Limited or Anthology Series", "Outstanding Limited Series"], "year_offset": 0, "last_event_year": 2026},
+  "cannes-palme":          {"page": "{year} Cannes Film Festival", "mode": "line", "label": ["Palme d'Or"], "year_offset": 0, "last_event_year": 2026},
+  "cannes-grand-prix":     {"page": "{year} Cannes Film Festival", "mode": "line", "label": ["Grand Prix"], "year_offset": 0, "last_event_year": 2026},
+  "cannes-jury-prize":     {"page": "{year} Cannes Film Festival", "mode": "line", "label": ["Jury Prize"], "year_offset": 0, "last_event_year": 2026},
+  "venice-golden-lion":    {"page": "{ord} Venice International Film Festival", "edition_base": 1943, "mode": "line", "label": ["Golden Lion"], "year_offset": 0, "last_event_year": 2026},
+  "berlinale-golden-bear": {"page": "{ord} Berlin International Film Festival", "edition_base": 1950, "mode": "line", "label": ["Golden Bear"], "year_offset": 0, "last_event_year": 2026},
+  "sundance-grand-jury":   {"page": "{year} Sundance Film Festival", "mode": "line", "label": ["Grand Jury Prize"], "section": "Dramatic", "year_offset": 0, "last_event_year": 2026},
+  "tiff-peoples-choice":   {"page": "{year} Toronto International Film Festival", "mode": "line", "label": ["People's Choice Award"], "year_offset": 0, "last_event_year": 2026}
+}
