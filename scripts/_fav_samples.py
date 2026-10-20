@@ -72,57 +72,74 @@ def save(im, name):
 
 
 # Doctor Who: the user's own cover + the show's logo
-dw = grade(get("https://i.pinimg.com/1200x/ce/6d/19/ce6d198219d333e44c15ec35bd18e1f9.jpg"))
-lgs = [l for l in logo("tv", 57243) if l]
-for i, lg in enumerate(lgs[:2]):
-    save(place(fade(dw), lg, "center"), f"doctorwho-A{i}")
-    save(place(fade(dw), lg, "left"), f"doctorwho-B{i}")
+try:
+    dw = grade(get("https://i.pinimg.com/1200x/ce/6d/19/ce6d198219d333e44c15ec35bd18e1f9.jpg"))
+    lgs = [l for l in logo("tv", 57243) if l]
+    for i, lg in enumerate(lgs[:2]):
+        save(place(fade(dw), lg, "center"), f"doctorwho-A{i}")
+        save(place(fade(dw), lg, "left"), f"doctorwho-B{i}")
+except Exception as e:
+    import traceback
+    open(f"{OUT}/errors.txt", "a").write("Doctor Who: the user's own cover + the show's logo\n" + traceback.format_exc() + "\n")
 
-# One Pace: One Piece crew art + One Piece logo + "ONE PACE"
-bd = get("https://image.tmdb.org/t/p/original/6fRwRD7GdCfg6owzmCT3VgQtowl.jpg")
-op = grade(bd, 0.95)
-oplogo = [l for l in logo("tv", 37854) if l]
-if oplogo:
-    im = place(fade(op, 0.45, 190), oplogo[0], "center", maxw=460, maxh=170, bottom=96)
-    d = ImageDraw.Draw(im)
-    f = art.font("ExtraBold", 30)
-    t = "ONE PACE"
-    x = (W - sum(d.textlength(ch, font=f) + 10 for ch in t)) // 2
-    art.spaced(d, (x, H - 76), t, f, (255, 255, 255), 10)
-    save(im, "onepace-A")
-save(wordmark(fade(op, 0.45, 190), "ONE PACE"), "onepace-B")
+# One Pace: One Piece crew art + One Piece logo + ONE PACE
+try:
+    bd = get("https://image.tmdb.org/t/p/original/6fRwRD7GdCfg6owzmCT3VgQtowl.jpg")
+    op = grade(bd, 0.95)
+    oplogo = [l for l in logo("tv", 37854) if l]
+    if oplogo:
+        im = place(fade(op, 0.45, 190), oplogo[0], "center", maxw=460, maxh=170, bottom=96)
+        d = ImageDraw.Draw(im)
+        f = art.font("ExtraBold", 30)
+        t = "ONE PACE"
+        x = (W - sum(d.textlength(ch, font=f) + 10 for ch in t)) // 2
+        art.spaced(d, (x, H - 76), t, f, (255, 255, 255), 10)
+        save(im, "onepace-A")
+    save(wordmark(fade(op, 0.45, 190), "ONE PACE"), "onepace-B")
+except Exception as e:
+    import traceback
+    open(f"{OUT}/errors.txt", "a").write("One Pace: One Piece crew art + One Piece logo + ONE PACE\n" + traceback.format_exc() + "\n")
 
 # Live Sport: stadium, natural light, wordmark + LIVE pill
-st = get("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Germany_and_Argentina_face_off_in_the_final_of_the_World_Cup_2014_-2014-07-13_%285%29.jpg/1920px-Germany_and_Argentina_face_off_in_the_final_of_the_World_Cup_2014_-2014-07-13_%285%29.jpg")
-ls = grade(st, 1.0, 1.08)
-save(art.live_pill(wordmark(fade(ls, 0.5, 180), "LIVE SPORT")), "livesport-A")
+try:
+    from favourites_art import commons, COMMONS
+    st = commons(COMMONS)[0]
+    ls = grade(st, 1.0, 1.08)
+    save(art.live_pill(wordmark(fade(ls, 0.5, 180), "LIVE SPORT")), "livesport-A")
+except Exception as e:
+    import traceback
+    open(f"{OUT}/errors.txt", "a").write("Live Sport: stadium, natural light, wordmark + LIVE pill\n" + traceback.format_exc() + "\n")
 
 # GIF candidate sheets
-GIFS = {
- "onepiece": ["D0jGorbyCnZyE", "uvCxJCIdf1BcY", "dX1iTuEIj4yfwHDUCy", "Nm31pMDFs6k8DYRfhB", "3vIsKbCJgSRojGuUAY",
-              "DSxKEQoQix9hC", "WeyqDp1shHe7u", "7BW9U2cJPQZ0s", "v8rbkCKtuZbRC", "q8ld8Sk7WWyY0"],
- "stadium": ["LaeEI5VSjjP3IFHLDd", "vvaDh9BKJy0mpElmh8", "LRImhef19evRyXDQnx", "DUeCanb3kaAuima0mq",
-             "YtQqKLb4wYPJOOa05w", "zT6eLPuZsiIkvRoeBj", "3ohhwwyFYkqd68YoLu", "cmMzVX4LV157ubMD6V",
-             "nPowS08L20SfJG7xPk", "HJtf633F5Mb9q23EKC", "hKdKx85h8bcGhErnMZ"],
-}
-info = {}
-for group, ids in GIFS.items():
-    rows = []
-    for gid in ids:
-        try:
-            g = get(f"https://media.giphy.com/media/{gid}/giphy.gif")
-        except Exception as e:
-            print("fail", gid, e); continue
-        fr = [f.copy().convert("RGB") for f in ImageSequence.Iterator(g)]
-        info[gid] = {"size": g.size, "frames": len(fr), "ms": g.info.get("duration")}
-        pick = [fr[int(i * (len(fr) - 1) / 4)] for i in range(5)]
-        row = Image.new("RGB", (5 * 256 + 200, 150), (20, 20, 20))
-        for i, p in enumerate(pick):
-            p = art.cover_fit(p, 256, 144); row.paste(p, (200 + i * 256, 3))
-        ImageDraw.Draw(row).text((6, 50), f"{gid}\n{g.size[0]}x{g.size[1]} {len(fr)}f", fill=(255, 255, 0))
-        rows.append(row)
-    sheet = Image.new("RGB", (rows[0].width, 150 * len(rows)))
-    for i, r in enumerate(rows):
-        sheet.paste(r, (0, i * 150))
-    sheet.save(f"{OUT}/gifs-{group}.jpg", quality=80)
-json.dump(info, open(f"{OUT}/gifs.json", "w"), indent=1)
+try:
+    GIFS = {
+     "onepiece": ["D0jGorbyCnZyE", "uvCxJCIdf1BcY", "dX1iTuEIj4yfwHDUCy", "Nm31pMDFs6k8DYRfhB", "3vIsKbCJgSRojGuUAY",
+                  "DSxKEQoQix9hC", "WeyqDp1shHe7u", "7BW9U2cJPQZ0s", "v8rbkCKtuZbRC", "q8ld8Sk7WWyY0"],
+     "stadium": ["LaeEI5VSjjP3IFHLDd", "vvaDh9BKJy0mpElmh8", "LRImhef19evRyXDQnx", "DUeCanb3kaAuima0mq",
+                 "YtQqKLb4wYPJOOa05w", "zT6eLPuZsiIkvRoeBj", "3ohhwwyFYkqd68YoLu", "cmMzVX4LV157ubMD6V",
+                 "nPowS08L20SfJG7xPk", "HJtf633F5Mb9q23EKC", "hKdKx85h8bcGhErnMZ"],
+    }
+    info = {}
+    for group, ids in GIFS.items():
+        rows = []
+        for gid in ids:
+            try:
+                g = get(f"https://media.giphy.com/media/{gid}/giphy.gif")
+            except Exception as e:
+                print("fail", gid, e); continue
+            fr = [f.copy().convert("RGB") for f in ImageSequence.Iterator(g)]
+            info[gid] = {"size": g.size, "frames": len(fr), "ms": g.info.get("duration")}
+            pick = [fr[int(i * (len(fr) - 1) / 4)] for i in range(5)]
+            row = Image.new("RGB", (5 * 256 + 200, 150), (20, 20, 20))
+            for i, p in enumerate(pick):
+                p = art.cover_fit(p, 256, 144); row.paste(p, (200 + i * 256, 3))
+            ImageDraw.Draw(row).text((6, 50), f"{gid}\n{g.size[0]}x{g.size[1]} {len(fr)}f", fill=(255, 255, 0))
+            rows.append(row)
+        sheet = Image.new("RGB", (rows[0].width, 150 * len(rows)))
+        for i, r in enumerate(rows):
+            sheet.paste(r, (0, i * 150))
+        sheet.save(f"{OUT}/gifs-{group}.jpg", quality=80)
+    json.dump(info, open(f"{OUT}/gifs.json", "w"), indent=1)
+except Exception as e:
+    import traceback
+    open(f"{OUT}/errors.txt", "a").write("GIF candidate sheets\n" + traceback.format_exc() + "\n")
