@@ -1,0 +1,21 @@
+{
+  "_comment": "Wikidata award items for the non-Oscar catalogs. year_offset turns the ceremony year into the year the catalog uses (Golden Globes/BAFTA list the film's year = ceremony year - 1).",
+  "gg-drama-picture":      {"search": "Golden Globe Award for Best Motion Picture – Drama", "qid": null, "year_offset": -1},
+  "gg-comedy-picture":     {"search": "Golden Globe Award for Best Motion Picture – Musical or Comedy", "qid": null, "year_offset": -1},
+  "gg-drama-series":       {"search": "Golden Globe Award for Best Television Series – Drama", "qid": null, "year_offset": -1},
+  "gg-comedy-series":      {"search": "Golden Globe Award for Best Television Series – Musical or Comedy", "qid": null, "year_offset": -1},
+  "gg-limited-series":     {"search": "Golden Globe Award for Best Limited or Anthology Series or Television Film", "qid": null, "year_offset": -1},
+  "gg-director":           {"search": "Golden Globe Award for Best Director", "qid": null, "year_offset": -1},
+  "gg-non-english":        {"search": "Golden Globe Award for Best Non-English Language Film", "qid": null, "year_offset": -1},
+  "bafta-best-film":       {"search": "BAFTA Award for Best Film", "qid": null, "year_offset": -1},
+  "emmy-drama-series":     {"search": "Primetime Emmy Award for Outstanding Drama Series", "qid": null, "year_offset": 0},
+  "emmy-comedy-series":    {"search": "Primetime Emmy Award for Outstanding Comedy Series", "qid": null, "year_offset": 0},
+  "emmy-limited-series":   {"search": "Primetime Emmy Award for Outstanding Limited or Anthology Series", "qid": null, "year_offset": 0},
+  "cannes-palme":          {"search": "Palme d'Or", "qid": null, "year_offset": 0},
+  "cannes-grand-prix":     {"search": "Grand Prix Cannes Film Festival", "qid": null, "year_offset": 0},
+  "cannes-jury-prize":     {"search": "Jury Prize Cannes Film Festival", "qid": null, "year_offset": 0},
+  "venice-golden-lion":    {"search": "Golden Lion", "qid": null, "year_offset": 0},
+  "berlinale-golden-bear": {"search": "Golden Bear", "qid": null, "year_offset": 0},
+  "sundance-grand-jury":   {"search": "Sundance Grand Jury Prize Dramatic", "qid": null, "year_offset": 0},
+  "tiff-peoples-choice":   {"search": "People's Choice Award Toronto International Film Festival", "qid": null, "year_offset": 0}
+}
