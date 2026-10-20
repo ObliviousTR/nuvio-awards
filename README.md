@@ -49,8 +49,8 @@ https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/spotlight/manife
   (7 days ago → 21 days ahead), or the franchise a new film belongs to, comes before the pool order. Nothing shown
   in the last 365 days is picked this way. The card says why ("Now in theaters", "New chapter in theaters").
 - **The pool grows by itself:** once a week `scripts/spotlight_live.py` adds up to 3 candidates per card to
-  `spotlight/pool_auto.json` (stars and directors of popular new films, studios behind the recent box office,
-  franchises with a new chapter), each checked against the same minimums as the rotation. New entries have never been
+  `spotlight/pool_auto.json` (stars and directors of popular new films, franchises with a new chapter; studios stay
+  hand-picked because the box office credits financiers more often than real studios), each checked against the same minimums as the rotation. New entries have never been
   shown, so they come up soon. To drop one for good, move its name to `"removed"` in `pool_auto.json`.
 - **The Cultural Pulse:** the seasonal calendar in `pool.json` (`pulse`), switching on each theme's start date.
 - **Fresh Out of Theaters, Box Office Champions, Certified Fresh & Must-See:** rebuilt every day.

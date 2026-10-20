@@ -59,31 +59,5 @@
    "auto": true,
    "added": "2026-10-20"
   }
- ],
- "powerhouse": [
-  {
-   "name": "Pascal Pictures",
-   "company": [
-    84041
-   ],
-   "auto": true,
-   "added": "2026-10-20"
-  },
-  {
-   "name": "TSG Entertainment",
-   "company": [
-    22213
-   ],
-   "auto": true,
-   "added": "2026-10-20"
-  },
-  {
-   "name": "Constantin Film",
-   "company": [
-    47
-   ],
-   "auto": true,
-   "added": "2026-10-20"
-  }
  ]
 }

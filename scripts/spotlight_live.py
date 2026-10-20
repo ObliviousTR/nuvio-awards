@@ -4,7 +4,7 @@ topical(): on a rotation day, The Headliner and The Saga first look at what is o
   (English-language theatrical releases from 7 days ago to 21 days ahead): the top-billed star of a big new film,
   or the franchise a new film belongs to. A subject shown in the last 365 days is never picked this way.
 grow(): once a week, new candidates are added to spotlight/pool_auto.json (separate from the hand-made pool.json):
-  stars and directors of popular new films, studios behind the recent box office, franchises with a new chapter.
+  stars and directors of popular new films and franchises with a new chapter (studios stay hand-picked).
   Names listed under "removed" in pool_auto.json are never added again.
 """
 import datetime as dt, json, os, re
@@ -55,7 +55,8 @@ def collection_of(tmdb, movie_id, min_parts=3):
         return None
     full = tmdb(f"/collection/{col['id']}") or {}
     parts = [p for p in full.get("parts", []) if 16 not in (p.get("genre_ids") or [])]
-    if len(parts) < min_parts:
+    out_now = [p for p in parts if p.get("release_date") and p["release_date"] <= dt.date.today().isoformat()]
+    if len(parts) < min_parts or len(out_now) < 2:
         return None
     return {"id": col["id"], "name": re.sub(r"\s*(?:\(.*?\)\s*)?Collection$", "", col["name"]).strip(), "film": det}
 
@@ -157,13 +158,8 @@ def grow(tmdb, today, pool, auto, state, log):
         if col and col["id"] not in known_cols:
             known_cols.add(col["id"])
             add("saga", {"name": col["name"], "collections": [col["id"]]})
-    # studios behind the box office of the last four months
-    box = tmdb("/discover/movie", region="US", sort_by="revenue.desc", with_original_language="en",
-               without_genres="16", **{"primary_release_date.gte": (today - dt.timedelta(days=120)).isoformat(),
-                                       "primary_release_date.lte": today.isoformat(), "vote_count.gte": 50}) or {}
-    for r in box.get("results", [])[:15]:
-        for c in (tmdb(f"/movie/{r['id']}") or {}).get("production_companies", []):
-            add("powerhouse", {"name": c["name"], "company": [c["id"]]})
+    # Studios are not grown automatically: the box office credits financiers and co-producers (TSG Entertainment,
+    # Pascal Pictures…) far more often than studios worth a spotlight, so The Powerhouse stays hand-picked.
     for slot, names in added.items():
         if names:
             log.append(f"- {slot}: added to the auto pool: {', '.join(names)}")
