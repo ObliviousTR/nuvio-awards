@@ -1,72 +1,64 @@
 # Spotlight pool check — 2026-10-20
 
-## Yerli Yıldız
+## The Living Legend
 
 | Subject | Movies | Series | Notes |
 |---|---:|---:|---|
-| Kıvanç Tatlıtuğ | 6 | 9 | TMDB person 1078769 Kıvanç Tatlıtuğ (Acting) |
-| Haluk Bilginer | 35 | 8 | TMDB person 117640 Haluk Bilginer (Acting) |
-| Cem Yılmaz | 22 | 1 | TMDB person 74376 Cem Yılmaz (Acting) |
-| Beren Saat | 3 | 6 | TMDB person 145499 Beren Saat (Acting) |
-| Tuba Büyüküstün | 4 | 9 | TMDB person 142855 Tuba Büyüküstün (Acting) |
-| Engin Akyürek | 3 | 8 | TMDB person 1004806 Engin Akyürek (Acting) |
-| Çağatay Ulusoy | 4 | 9 | TMDB person 1252061 Çağatay Ulusoy (Acting) |
-| Burak Deniz | 2 | 9 | TMDB person 1577490 Burak Deniz (Acting) |
-| Hande Erçel | 2 | 9 | TMDB person 1522703 Hande Erçel (Acting) |
-| Serenay Sarıkaya | 2 | 8 | TMDB person 1258305 Serenay Sarıkaya (Acting) |
-| Kenan İmirzalıoğlu | 7 | 5 | TMDB person 99315 Kenan İmirzalıoğlu (Acting) |
-| Okan Yalabık | 7 | 8 | TMDB person 121426 Okan Yalabık (Acting) |
-| Nejat İşler | 16 | 6 | TMDB person 98834 Nejat İşler (Acting) |
-| Ata Demirer | 14 | 2 | TMDB person 143393 Ata Demirer (Acting) |
-| Yılmaz Erdoğan | 16 | 1 | TMDB person 99314 Yılmaz Erdoğan (Acting) |
-| Demet Akbağ | 22 | 0 | TMDB person 59754 Demet Akbağ (Acting) |
-| Şahan Gökbakar | 11 | 0 | TMDB person 144191 Şahan Gökbakar (Acting) |
-| Engin Altan Düzyatan | 6 | 3 | TMDB person 120879 Engin Altan Düzyatan (Acting) |
-| Halit Ergenç | 9 | 6 | TMDB person 59764 Halit Ergenç (Acting) |
-| Bergüzar Korel ⚠️ | 2 | 4 | TMDB person 109137 Bergüzar Korel (Acting) |
-| Meryem Uzerli ⚠️ | 3 | 2 | TMDB person 1243837 Meryem Uzerli (Acting) |
-| Elçin Sangu | 2 | 6 | TMDB person 1494304 Elçin Sangu (Acting) |
-| Aras Bulut İynemli | 5 | 4 | TMDB person 1163030 Aras Bulut İynemli (Acting) |
-| Nur Fettahoğlu | 5 | 8 | TMDB person 1246604 Nur Fettahoğlu (Acting) |
-| Özge Özpirinçci | 5 | 6 | TMDB person 582601 Özge Özpirinçci (Acting) |
-| Birce Akalay | 2 | 6 | TMDB person 107905 Birce Akalay (Acting) |
-| Kerem Bürsin | 5 | 9 | TMDB person 134497 Kerem Bürsin (Acting) |
-| Barış Arduç | 4 | 6 | TMDB person 1397246 Barış Arduç (Acting) |
-| Afra Saraçoğlu ⚠️ | 1 | 4 | TMDB person 1955840 Afra Saraçoğlu (Acting) |
-| Burak Özçivit | 4 | 4 | TMDB person 1424928 Burak Özçivit (Acting) |
-| Fahriye Evcen | 3 | 5 | TMDB person 145722 Fahriye Evcen (Acting) |
-| Uğur Yücel | 13 | 4 | TMDB person 109085 Uğur Yücel (Acting) |
-| Cansu Dere | 3 | 6 | TMDB person 113869 Cansu Dere (Acting) |
-| Nurgül Yeşilçay | 6 | 6 | TMDB person 120680 Nurgül Yeşilçay (Acting) |
-| Erkan Kolçak Köstendil | 12 | 6 | TMDB person 1778499 Erkan Kolçak Köstendil (Acting) |
-| Funda Eryiğit | 6 | 5 | TMDB person 1059109 Funda Eryiğit (Acting) |
-| Ahmet Mümtaz Taylan | 24 | 8 | TMDB person 230759 Ahmet Mümtaz Taylan (Acting) |
-| Tuncel Kurtiz | 11 | 3 | TMDB person 20728 Tuncel Kurtiz (Acting) |
-| Kemal Sunal | 81 | 0 | TMDB person 97272 Kemal Sunal (Acting) |
-| Şener Şen | 39 | 1 | TMDB person 77349 Şener Şen (Acting) |
-| Türkan Şoray ⚠️ | 5 | 2 | TMDB person 556475 Türkan Şoray (Acting) |
-| Tarık Akan | 15 | 1 | TMDB person 142766 Tarık Akan (Acting) |
-| Cüneyt Arkın | 19 | 1 | TMDB person 550947 Cüneyt Arkın (Acting) |
-| Hülya Koçyiğit ⚠️ | 6 | 0 | TMDB person 228611 Hülya Koçyiğit (Acting) |
-| Fatma Girik ⚠️ | 4 | 0 | TMDB person 571428 Fatma Girik (Acting) |
-| Kadir İnanır ⚠️ | 4 | 0 | TMDB person 145409 Kadir İnanır (Acting) |
-| Münir Özkul | 23 | 0 | TMDB person 556048 Münir Özkul (Acting) |
-| Adile Naşit | 34 | 0 | TMDB person 97274 Adile Naşit (Acting) |
-| Ayhan Işık ⚠️ | 0 | 0 | TMDB person 1305123 Ayhan Işık (Acting) |
-| Filiz Akın ⚠️ | 2 | 0 | TMDB person 1047994 Filiz Akın (Acting) |
-| Halit Akçatepe | 26 | 3 | TMDB person 556047 Halit Akçatepe (Acting) |
-| İlyas Salman | 12 | 1 | TMDB person 97273 İlyas Salman (Acting) |
-| Metin Akpınar | 17 | 1 | TMDB person 149313 Metin Akpınar (Acting) |
-| Zeki Alasya | 15 | 3 | TMDB person 109138 Zeki Alasya (Acting) |
-| Nuri Bilge Ceylan | 11 | 0 | TMDB person 56214 Nuri Bilge Ceylan (Directing) |
-| Zeki Demirkubuz | 12 | 1 | TMDB person 145518 Zeki Demirkubuz (Directing) |
-| Çağan Irmak | 22 | 9 | TMDB person 142857 Çağan Irmak (Directing) |
-| Yılmaz Güney | 24 | 0 | TMDB person 145352 Yılmaz Güney (Directing) |
-| Ertem Eğilmez | 44 | 0 | TMDB person 109083 Ertem Eğilmez (Directing) |
-| Atıf Yılmaz | 100 | 1 | TMDB person 97278 Atıf Yılmaz (Directing) |
-| Semih Kaplanoğlu | 9 | 0 | TMDB person 130402 Semih Kaplanoğlu (Directing) |
-| Reha Erdem | 15 | 0 | TMDB person 46054 Reha Erdem (Directing) |
-| Ömer Faruk Sorak | 13 | 3 | TMDB person 106782 Ömer Faruk Sorak (Directing) |
-| Onur Ünlü | 16 | 10 | TMDB person 113873 Onur Ünlü (Directing) |
-| Yavuz Turgul | 8 | 1 | TMDB person 109445 Yavuz Turgul (Directing) |
+| Audrey Hepburn | 23 | 0 | TMDB person 1932 Audrey Hepburn (Acting) |
+| Humphrey Bogart | 58 | 0 | TMDB person 4110 Humphrey Bogart (Acting) |
+| Marilyn Monroe | 23 | 0 | TMDB person 3149 Marilyn Monroe (Acting) |
+| James Stewart | 61 | 3 | TMDB person 854 James Stewart (Acting) |
+| Cary Grant | 58 | 0 | TMDB person 2638 Cary Grant (Acting) |
+| Grace Kelly | 11 | 0 | TMDB person 4070 Grace Kelly (Acting) |
+| Katharine Hepburn | 35 | 0 | TMDB person 6598 Katharine Hepburn (Acting) |
+| Marlon Brando | 42 | 1 | TMDB person 3084 Marlon Brando (Acting) |
+| Paul Newman | 54 | 0 | TMDB person 3636 Paul Newman (Acting) |
+| Steve McQueen | 24 | 1 | TMDB person 13565 Steve McQueen (Acting) |
+| Jack Nicholson | 55 | 0 | TMDB person 514 Jack Nicholson (Acting) |
+| Robert Redford | 45 | 0 | TMDB person 4135 Robert Redford (Acting) |
+| Sidney Poitier | 34 | 0 | TMDB person 16897 Sidney Poitier (Acting) |
+| Elizabeth Taylor | 38 | 1 | TMDB person 3635 Elizabeth Taylor (Acting) |
+| Bette Davis | 65 | 0 | TMDB person 3380 Bette Davis (Acting) |
+| Ingrid Bergman | 30 | 0 | TMDB person 4111 Ingrid Bergman (Acting) |
+| Gregory Peck | 53 | 1 | TMDB person 8487 Gregory Peck (Acting) |
+| Gene Kelly | 25 | 1 | TMDB person 13294 Gene Kelly (Acting) |
+| Charlie Chaplin | 75 | 0 | TMDB person 13848 Charlie Chaplin (Acting) |
+| Buster Keaton | 59 | 0 | TMDB person 8635 Buster Keaton (Directing) |
+| Fred Astaire | 32 | 2 | TMDB person 30181 Fred Astaire (Acting) |
+| Henry Fonda | 59 | 1 | TMDB person 4958 Henry Fonda (Acting) |
+| John Wayne | 100 | 0 | TMDB person 4165 John Wayne (Acting) |
+| Kirk Douglas | 62 | 0 | TMDB person 2090 Kirk Douglas (Acting) |
+| Peter O'Toole | 43 | 4 | TMDB person 11390 Peter O'Toole (Acting) |
+| Dustin Hoffman | 55 | 2 | TMDB person 4483 Dustin Hoffman (Acting) |
+| Robert De Niro | 100 | 3 | TMDB person 380 Robert De Niro (Acting) |
+| Al Pacino | 63 | 3 | TMDB person 1158 Al Pacino (Acting) |
+| Sean Connery | 58 | 0 | TMDB person 738 Sean Connery (Acting) |
+| Michael Caine | 100 | 0 | TMDB person 3895 Michael Caine (Acting) |
+| Gene Hackman | 71 | 0 | TMDB person 193 Gene Hackman (Acting) |
+| Faye Dunaway | 51 | 2 | TMDB person 6450 Faye Dunaway (Acting) |
+| Jane Fonda | 43 | 2 | TMDB person 6352 Jane Fonda (Acting) |
+| Diane Keaton | 53 | 2 | TMDB person 3092 Diane Keaton (Acting) |
+| Warren Beatty | 20 | 1 | TMDB person 6449 Warren Beatty (Acting) |
+| Burt Lancaster | 67 | 0 | TMDB person 13784 Burt Lancaster (Acting) |
+| Sophia Loren | 50 | 0 | TMDB person 16757 Sophia Loren (Acting) |
+| Stanley Kubrick | 16 | 0 | TMDB person 240 Stanley Kubrick (Directing) |
+| Alfred Hitchcock | 61 | 6 | TMDB person 2636 Alfred Hitchcock (Directing) |
+| Billy Wilder | 27 | 0 | TMDB person 3146 Billy Wilder (Directing) |
+| Orson Welles | 44 | 3 | TMDB person 40 Orson Welles (Directing) |
+| John Ford | 100 | 5 | TMDB person 8500 John Ford (Directing) |
+| Frank Capra | 54 | 0 | TMDB person 2662 Frank Capra (Directing) |
+| David Lean | 17 | 0 | TMDB person 12238 David Lean (Directing) |
+| Sergio Leone | 8 | 0 | TMDB person 4385 Sergio Leone (Directing) |
+| Sidney Lumet | 57 | 21 | TMDB person 39996 Sidney Lumet (Directing) |
+| Robert Altman | 54 | 24 | TMDB person 9789 Robert Altman (Directing) |
+| Mike Nichols | 20 | 1 | TMDB person 5342 Mike Nichols (Directing) |
+| George Cukor | 52 | 0 | TMDB person 14674 George Cukor (Directing) |
+| Howard Hawks | 41 | 0 | TMDB person 11435 Howard Hawks (Directing) |
+| Elia Kazan | 19 | 0 | TMDB person 2746 Elia Kazan (Directing) |
+| William Wyler | 58 | 0 | TMDB person 10001 William Wyler (Directing) |
+| Vincent Price | 72 | 1 | TMDB person 1905 Vincent Price (Acting) |
+| Boris Karloff | 68 | 1 | TMDB person 2922 Boris Karloff (Acting) |
+| Bela Lugosi | 51 | 0 | TMDB person 1547 Bela Lugosi (Acting) |
+| Christopher Lee | 100 | 6 | TMDB person 113 Christopher Lee (Acting) |
+| Peter Cushing | 71 | 1 | TMDB person 5 Peter Cushing (Acting) |
 
