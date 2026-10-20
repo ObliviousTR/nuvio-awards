@@ -93,8 +93,57 @@ def my_simkl_b(scale=2):
     return trim(im)
 
 
+def my_simkl_c(scale=2):
+    """Pure wordmark: light 'my' + heavy SIMKL, no icon."""
+    s = scale
+    fl, fb = art.font("Medium", 120 * s), art.font("ExtraBold", 120 * s)
+    im = Image.new("RGBA", (1300 * s, 220 * s), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.text((10 * s, 22 * s), "my", font=fl, fill=(255, 255, 255, 215))
+    d.text((10 * s + d.textlength("my", font=fl) + 18 * s, 30 * s), "SIMKL", font=fb, fill=(255, 255, 255, 255))
+    return trim(im)
+
+
+def my_simkl_d(scale=2):
+    """Small icon, thin divider, then 'my simkl' in one weight."""
+    s = scale
+    f = art.font("SemiBold", 110 * s)
+    g = simkl_glyph(104 * s)
+    im = Image.new("RGBA", (1300 * s, 220 * s), (0, 0, 0, 0))
+    im.alpha_composite(g, (10 * s, 58 * s))
+    d = ImageDraw.Draw(im)
+    d.rectangle((150 * s, 50 * s, 155 * s, 170 * s), fill=(255, 255, 255, 140))
+    d.text((190 * s, 32 * s), "my simkl", font=f, fill=(255, 255, 255, 255))
+    return trim(im)
+
+
+def my_simkl_e(scale=2):
+    """Outlined MY tag + SIMKL."""
+    s = scale
+    ft, fb = art.font("ExtraBold", 64 * s), art.font("ExtraBold", 120 * s)
+    im = Image.new("RGBA", (1300 * s, 220 * s), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    tw = d.textlength("MY", font=ft)
+    d.rounded_rectangle((10 * s, 62 * s, 10 * s + tw + 44 * s, 158 * s), radius=16 * s, outline=(255, 255, 255, 255), width=7 * s)
+    d.text((32 * s, 66 * s), "MY", font=ft, fill=(255, 255, 255, 255))
+    d.text((10 * s + tw + 72 * s, 30 * s), "SIMKL", font=fb, fill=(255, 255, 255, 255))
+    return trim(im)
+
+
+def my_simkl_f(scale=2):
+    """SIMKL with a small 'my' tucked above its first letter."""
+    s = scale
+    fs, fb = art.font("SemiBold", 56 * s), art.font("ExtraBold", 130 * s)
+    im = Image.new("RGBA", (1100 * s, 260 * s), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.text((14 * s, 6 * s), "my", font=fs, fill=(255, 255, 255, 230))
+    d.text((10 * s, 58 * s), "SIMKL", font=fb, fill=(255, 255, 255, 255))
+    return trim(im)
+
+
 if __name__ == "__main__":
     for name, fn in (("livesport-a", live_sport_a), ("livesport-b", live_sport_b),
-                     ("mysimkl-a", my_simkl_a), ("mysimkl-b", my_simkl_b)):
+                     ("mysimkl-a", my_simkl_a), ("mysimkl-b", my_simkl_b), ("mysimkl-c", my_simkl_c),
+                     ("mysimkl-d", my_simkl_d), ("mysimkl-e", my_simkl_e), ("mysimkl-f", my_simkl_f)):
         fn().save(os.path.join(OUT, f"{name}.png"))
     print("logos ok")
