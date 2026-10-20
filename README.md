@@ -52,8 +52,16 @@ https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/spotlight/manife
   `spotlight/pool_auto.json` (stars and directors of popular new films, franchises with a new chapter; studios stay
   hand-picked because the box office credits financiers more often than real studios), each checked against the same minimums as the rotation. New entries have never been
   shown, so they come up soon. To drop one for good, move its name to `"removed"` in `pool_auto.json`.
+- **The Prestige Darling:** actors with an Oscar acting nomination since 1990, built from the Oscar data in this repo
+  (most wins and nominations first); from mid-January to March the latest ceremony's nominees come first.
+- **The Living Legend:** classic-era actors and directors (`legend` in `pool.json`).
+- **Retro Rewind:** era × genre themes such as "80s Action Heroes" or "Film Noir" (`retro` in `pool.json`).
+- **Yerli Yıldız:** Turkish actors and directors, films and series (`yerli` in `pool.json`, grown weekly from popular
+  Turkish series and films). The only card outside the English-language rule.
+- A person is never on two cards at the same time.
 - **The Cultural Pulse:** the seasonal calendar in `pool.json` (`pulse`), switching on each theme's start date.
-- **Fresh Out of Theaters, Box Office Champions, Certified Fresh & Must-See:** rebuilt every day.
+- **Fresh Out of Theaters, Box Office Champions, Certified Fresh & Must-See:** rebuilt every day (shown in the Discover row).
+- `scripts/favourites_art.py` draws the One Pace and Live Sport covers for the Favourites row (credits: `spotlight/art/CREDITS.md`).
 - Covers (`spotlight/art/<card>/cover.jpg`) and hero backdrops are generated when a subject changes; their URLs
   never change. `spotlight/STATUS.md` shows what is on now and when the next rotation is.
 

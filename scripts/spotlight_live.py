@@ -7,7 +7,7 @@ grow(): once a week, new candidates are added to spotlight/pool_auto.json (separ
   stars and directors of popular new films and franchises with a new chapter (studios stay hand-picked).
   Names listed under "removed" in pool_auto.json are never added again.
 """
-import datetime as dt, json, os, re
+import datetime as dt, json, os, re, unicodedata
 
 TOPICAL_SLOTS = ("headliner", "saga")
 GROW_CAP = 3          # new entries per card per week
@@ -16,7 +16,9 @@ _releases = {}
 
 
 def norm(s):
-    return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+    s = (s or "").replace("ı", "i").replace("İ", "I")
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
 
 
 def releases(tmdb, today, back, ahead, pages=2):
@@ -117,7 +119,7 @@ def grow(tmdb, today, pool, auto, state, log):
     state["grown"] = today.isoformat()
     removed = {norm(x) for x in auto.get("removed", [])}
     known = {slot: {norm(e["name"]) for e in pool[slot]} | {norm(e.get("title", "")) for e in pool[slot]} | removed
-             for slot in ("headliner", "visionary", "powerhouse", "saga")}
+             for slot in ("headliner", "visionary", "powerhouse", "saga", "yerli")}
     known_cols = {i for e in pool["saga"] for i in collection_ids(tmdb, state, e)}
     added = {k: [] for k in known}
 
@@ -127,6 +129,10 @@ def grow(tmdb, today, pool, auto, state, log):
             d = tmdb("/discover/movie", with_companies=entry["company"][0], without_genres="16",
                      **{"vote_count.gte": 50}) or {}
             return d.get("total_results", 0) >= 15
+        if slot == "yerli":
+            hit = ((tmdb("/search/person", query=entry["name"]) or {}).get("results") or [None])[0]
+            cr = (tmdb(f"/person/{hit['id']}/combined_credits") or {}).get("cast", []) if hit else []
+            return sum(c.get("vote_count", 0) >= 5 for c in cr) >= 8
         if slot in ("headliner", "visionary"):
             hit = ((tmdb("/search/person", query=entry["name"]) or {}).get("results") or [None])[0]
             if not hit:
@@ -158,6 +164,15 @@ def grow(tmdb, today, pool, auto, state, log):
         if col and col["id"] not in known_cols:
             known_cols.add(col["id"])
             add("saga", {"name": col["name"], "collections": [col["id"]]})
+    # Turkish stars: top-billed cast of the most popular Turkish series and films
+    for kind in ("tv", "movie"):
+        d = tmdb(f"/discover/{kind}", with_original_language="tr", sort_by="popularity.desc", without_genres="16|99|10764|10767",
+                 **({"first_air_date.gte": (today - dt.timedelta(days=730)).isoformat()} if kind == "tv"
+                    else {"primary_release_date.gte": (today - dt.timedelta(days=730)).isoformat()})) or {}
+        for r in d.get("results", [])[:10]:
+            cast = (tmdb(f"/{kind}/{r['id']}/credits") or {}).get("cast", [])
+            for c in [c for c in cast if c.get("order", 99) < 2 and c.get("known_for_department") == "Acting"]:
+                add("yerli", {"name": c["name"]})
     # Studios are not grown automatically: the box office credits financiers and co-producers (TSG Entertainment,
     # Pascal Pictures…) far more often than studios worth a spotlight, so The Powerhouse stays hand-picked.
     for slot, names in added.items():

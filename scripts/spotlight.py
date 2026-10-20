@@ -10,7 +10,7 @@ State (current subjects, when each subject was last shown) lives in spotlight/st
 force a subject. Art is regenerated only when a card's subject changes (daily cards: only when missing).
 Needs TMDB_API_KEY (v3 key or v4 read token). Usage: python3 scripts/spotlight.py [--check] [--date YYYY-MM-DD]
 """
-import argparse, datetime as dt, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
+import argparse, csv, datetime as dt, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +26,9 @@ LIMIT = 100
 SIMKL_ART = "poster-wall-1"  # bump to redraw the My Simkl cover
 NOISE_TV = "16|99|10762|10763|10764|10766|10767"   # animation, docs, kids, news, reality, soap, talk
 NO_TOON_M = "16"
-MIN_MOVIES = {"headliner": 6, "visionary": 3, "powerhouse": 6, "saga": 3}
+MIN_MOVIES = {"headliner": 6, "visionary": 3, "powerhouse": 6, "saga": 3, "prestige": 6, "legend": 4, "retro": 10}
+ROTATING = ("headliner", "visionary", "powerhouse", "saga", "prestige", "legend", "retro", "yerli")
+PEOPLE = ("headliner", "visionary", "prestige", "legend", "yerli")
 SELF = re.compile(r"\b(self|himself|herself|themselves|narrator|host|archive footage|uncredited)\b", re.I)
 
 CARDS = {
@@ -39,6 +41,10 @@ CARDS = {
     "boxoffice": dict(card="Box Office Champions", tag="Updated Daily", accent="#EAB308"),
     "certified": dict(card="Certified Fresh & Must-See", tag="Updated Daily", accent="#EF4444"),
     "simkl": dict(card="My Simkl", tag="Your Lists", accent="#3B82F6"),
+    "prestige": dict(card="The Prestige Darling", tag="Oscar Spotlight", accent="#D4AF37"),
+    "legend": dict(card="The Living Legend", tag="Legend Retrospective", accent="#C08457"),
+    "retro": dict(card="Retro Rewind", tag="Era Spotlight", accent="#EC4899"),
+    "yerli": dict(card="Yerli Yıldız", tag="Türk Sineması & Dizileri", accent="#E30A17"),
 }
 
 
@@ -65,7 +71,9 @@ def tmdb(path, **params):
 
 
 def norm(s):
-    return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+    s = (s or "").replace("ı", "i").replace("İ", "I")
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
 
 
 class ImdbCache:
@@ -171,9 +179,13 @@ def find_series(name):
 
 
 # ---------------------------------------------------------------- card builders: return (movies, series, art, notes)
-def person_card(entry, today, director):
+def person_card(entry, today, director, tr=False):
+    director = director or entry.get("role") == "director"
     dept = "Directing" if director else "Acting"
-    p = find_person(entry["name"], dept)
+    p = None
+    if entry.get("imdb"):
+        p = ((tmdb(f"/find/{entry['imdb']}", external_source="imdb_id") or {}).get("person_results") or [None])[0]
+    p = p or find_person(entry["name"], dept)
     if not p:
         raise LookupError(f"person '{entry['name']}' not found")
     cr = tmdb(f"/person/{p['id']}/combined_credits") or {}
@@ -205,8 +217,14 @@ def person_card(entry, today, director):
     lead = {c["id"] for c in mv + tv if director or (c.get("order") is not None and c["order"] <= 2)}
     backs = [x["backdrop"] for x in m + s if x["backdrop"] and x["tmdb"] in lead]
     backs += [x["backdrop"] for x in m + s if x["backdrop"] and x["backdrop"] not in backs]
-    what = "Directorial catalog" if director else "Filmography"
-    a = dict(title=p["name"], subtitle=f"{what} · {len(m) + len(s)} titles", portrait=p.get("profile_path"),
+    n = len(m) + len(s)
+    if tr:
+        what = f"{'Yönetmen' if director else 'Filmografi'} · {n} yapım"
+    else:
+        what = f"{'Directorial catalog' if director else 'Filmography'} · {n} titles"
+    if entry.get("note"):
+        what = entry["note"] + " · " + what
+    a = dict(title=entry.get("title") or p["name"], subtitle=what, portrait=p.get("profile_path"),
              backdrops=backs[:12])
     return m, s, a, [f"TMDB person {p['id']} {p['name']} ({p.get('known_for_department')})"]
 
@@ -362,6 +380,72 @@ def daily_cards(today):
     return out
 
 
+def retro_card(entry, today):
+    y0, y1 = entry["from"], entry["to"]
+    lang = {"with_original_language": "en"} if entry.get("lang", "en") else {}
+    kw = find_keywords(entry["keywords"]) if entry.get("keywords") else ""
+    pm = {"sort_by": "vote_count.desc", "vote_count.gte": 150, "without_genres": NO_TOON_M, **lang,
+          "primary_release_date.gte": f"{y0}-01-01", "primary_release_date.lte": f"{y1}-12-31",
+          **({"with_keywords": kw} if kw else {}), **entry.get("movie", {})}
+    m = discover("movie", pm)
+    s, notes = [], [f"{y0}–{y1}; keywords={kw or '-'}"]
+    if entry.get("series", {}) is not False:
+        ser = dict(entry.get("series") or {})
+        kws = find_keywords(ser.pop("with_keywords_names")) if ser.get("with_keywords_names") else kw
+        pt = {"sort_by": "vote_count.desc", "vote_count.gte": 40, "without_genres": NOISE_TV, **lang,
+              "first_air_date.gte": f"{y0}-01-01", "first_air_date.lte": f"{y1}-12-31",
+              **({"with_keywords": kws} if kws else {}), **ser}
+        s = discover("tv", pt)
+    era = f"{y0}–{y1}" if y1 - y0 != 9 else f"The {str(y0)[2:]}s"
+    a = dict(title=entry["name"], subtitle=f"{era} · {len(m) + len(s)} titles",
+             backdrops=[x["backdrop"] for x in m if x["backdrop"]][:12])
+    return m, s, a, notes
+
+
+ACTING = ("ACTOR IN A LEADING ROLE", "ACTRESS IN A LEADING ROLE", "ACTOR IN A SUPPORTING ROLE", "ACTRESS IN A SUPPORTING ROLE")
+
+
+def prestige_pool(since=1990):
+    """Oscar acting nominees since `since` (film year), most wins / nominations first. Built from the Oscar data."""
+    path = os.path.join(ROOT, "data", "sources", "oscars.csv")
+    people = {}
+    for r in csv.DictReader(open(path, encoding="utf-8"), delimiter="\t"):
+        if r["CanonicalCategory"] not in ACTING or not r["NomineeIds"].startswith("nm"):
+            continue
+        p = people.setdefault(r["NomineeIds"].split("|")[0], {"name": r["Name"], "wins": 0, "noms": 0, "last": 0, "year": 0})
+        p["noms"] += 1  # counted over the whole history, so the card's "3× Oscar winner" is right
+        p["wins"] += r["Winner"] == "True"
+        p["last"] = max(p["last"], int(r["Ceremony"]))
+        p["year"] = max(p["year"], int(r["Year"][:4]))
+    latest = max(p["last"] for p in people.values())
+    people = {k: v for k, v in people.items() if v["year"] >= since}  # a nomination since 1990
+    out = []
+    for nm, p in sorted(people.items(), key=lambda kv: (-kv[1]["wins"], -kv[1]["noms"], kv[1]["name"])):
+        w, n = p["wins"], p["noms"]
+        note = (f"{w}× Oscar winner" if w > 1 else "Oscar winner" if w else "Oscar nominee") + \
+               (f" · {n} nominations" if n > 1 else "")
+        out.append({"name": p["name"], "imdb": nm, "note": note, "latest": p["last"] == latest})
+    return out
+
+
+BUILDERS = {
+    "headliner": lambda e, t: person_card(e, t, False),
+    "visionary": lambda e, t: person_card(e, t, True),
+    "powerhouse": studio_card,
+    "saga": saga_card,
+    "prestige": lambda e, t: person_card(e, t, False),
+    "legend": lambda e, t: person_card(e, t, False),
+    "retro": retro_card,
+    "yerli": lambda e, t: person_card(e, t, False, tr=True),
+}
+
+
+def enough(slot, m, s):
+    if slot == "yerli":
+        return len(m) + len(s) >= 8
+    return len(m) >= MIN_MOVIES[slot]
+
+
 # ---------------------------------------------------------------- rotation
 def period_of(pool, today):
     return (today - dt.date.fromisoformat(pool["anchor"])).days // pool["period_days"]
@@ -380,7 +464,7 @@ def candidates(entries, hist, today):
     return seasonal + rest
 
 
-def build_rotating(slot, pool, state, today, period, log, force_next=False, force_subject=None):
+def build_rotating(slot, pool, state, today, period, log, force_next=False, force_subject=None, busy=()):
     st = state.setdefault("cards", {}).setdefault(slot, {})
     hist = state.setdefault("history", {}).setdefault(slot, {})
     entries = pool[slot]
@@ -415,16 +499,21 @@ def build_rotating(slot, pool, state, today, period, log, force_next=False, forc
             log.append(f"- {slot}: topical: " + "; ".join(f"{e['name']} ({why})" for e, why in tops[:5]))
     elif st.get("reason") and order and order[0]["name"] == st.get("subject"):
         reasons = {st["subject"]: st["reason"]}
-    fn = {"headliner": lambda e: person_card(e, today, False), "visionary": lambda e: person_card(e, today, True),
-          "powerhouse": lambda e: studio_card(e, today), "saga": lambda e: saga_card(e, today)}[slot]
+    if fresh_pick and slot == "prestige" and (1, 15) <= (today.month, today.day) <= (3, 31):
+        # awards season: this year's acting nominees first
+        cutoff = (today - dt.timedelta(days=365)).isoformat()
+        season = [e for e in order if e.get("latest") and hist.get(e["name"], "0") < cutoff]
+        order = season + [e for e in order if e not in season]
+    if fresh_pick and slot in PEOPLE:  # never the same person on two cards at once
+        order = [e for e in order if norm(e["name"]) not in busy]
     for e in order[:15]:
         try:
-            m, s, a, notes = fn(e)
+            m, s, a, notes = BUILDERS[slot](e, today)
         except LookupError as err:
             log.append(f"- {slot}: skipped {e['name']}: {err}")
             continue
-        if len(m) < MIN_MOVIES[slot]:
-            log.append(f"- {slot}: skipped {e['name']}: only {len(m)} movies")
+        if not enough(slot, m, s):
+            log.append(f"- {slot}: skipped {e['name']}: only {len(m)} movies / {len(s)} series")
             continue
         if st.get("subject") != e["name"]:
             hist[e["name"]] = today.isoformat()
@@ -490,10 +579,11 @@ def main():
     state_path = P("state.json")
     state = json.load(open(state_path)) if os.path.exists(state_path) else {"pin": {}}
     IMDB = ImdbCache()
+    pool["prestige"] = prestige_pool()
     if args.check:
         return check(pool, today)
 
-    rotating = ("headliner", "visionary", "powerhouse", "saga")
+    rotating = ROTATING
     nxt = set(rotating) if args.next == "all" else {args.next} - {""}
     forced = {}
     if args.subject:
@@ -522,9 +612,13 @@ def main():
     next_change = dt.date.fromisoformat(pool["anchor"]) + dt.timedelta(days=(period + 1) * pool["period_days"])
     names = {}
     for slot in rotating:
-        subject, m, s, a, notes = build_rotating(slot, pool, state, today, period, log, slot in nxt, forced.get(slot))
+        cards = state.setdefault("cards", {})
+        busy = {norm(cards.get(o, {}).get("subject")) for o in PEOPLE if o != slot} - {""}
+        subject, m, s, a, notes = build_rotating(slot, pool, state, today, period, log, slot in nxt, forced.get(slot),
+                                                 busy)
         label = CARDS[slot]["card"]
-        names[slot] = (f"{label}: {a['title']}", f"{label}: {a['title']} · Series")
+        names[slot] = ((f"{label}: {a['title']} · Filmler", f"{label}: {a['title']} · Diziler") if slot == "yerli"
+                       else (f"{label}: {a['title']}", f"{label}: {a['title']} · Series"))
         write_catalog("movie", f"spotlight-{slot}-movies", m)
         write_catalog("series", f"spotlight-{slot}-series", s)
         drew = make_art(slot, a, subject, state, args.redraw)
@@ -566,7 +660,7 @@ def main():
         state.setdefault("art", {})["simkl"] = SIMKL_ART
         status.append(("My Simkl", "cover", 0, 0, [], True))
 
-    for slot in ("headliner", "visionary", "powerhouse", "saga", "pulse", "fresh", "boxoffice", "certified"):
+    for slot in ROTATING + ("pulse", "fresh", "boxoffice", "certified"):
         mid = f"spotlight-{slot}-movies"
         sid, styp = (f"spotlight-{slot}-alltime", "movie") if slot == "boxoffice" else (f"spotlight-{slot}-series", "series")
         catalogs.append({"type": "movie", "id": mid, "name": names[slot][0]})
@@ -575,7 +669,7 @@ def main():
         "id": "community.oblivioustr.nuvio-spotlight",
         "version": f"1.{period}.{today.strftime('%Y%m%d')}",
         "name": "Nuvio Spotlight",
-        "description": "Rotating spotlights (actor, director, studio, saga, season) and daily charts, rebuilt from TMDB.",
+        "description": "Rotating spotlights (actor, director, studio, saga, season, Oscar talent, legends, eras, Turkish stars) and daily charts, rebuilt from TMDB.",
         "resources": ["catalog"], "types": ["movie", "series"], "idPrefixes": ["tt"],
         "catalogs": catalogs,
         "behaviorHints": {"configurable": False, "configurationRequired": False},
@@ -587,7 +681,7 @@ def main():
     IMDB.save()
 
     md = [f"# Spotlight status — {today.isoformat()}", "",
-          f"Next rotation (actor, director, studio, saga): **{next_change.isoformat()}**",
+          f"Next rotation (all rotating cards): **{next_change.isoformat()}**",
           f"Next Cultural Pulse theme starts: **{next_start(pool, today).isoformat()}**", "",
           "| Card | Subject | Movies | Series | New art |", "|---|---|---:|---:|:-:|"]
     md += [f"| {c} | {sub} | {nm} | {ns} | {'✓' if d else ''} |" for c, sub, nm, ns, _, d in status]
@@ -598,25 +692,27 @@ def main():
 
 def check(pool, today):
     md = [f"# Spotlight pool check — {today.isoformat()}", ""]
-    for slot in ("headliner", "visionary", "powerhouse", "saga"):
+    only = os.environ.get("CHECK_CARDS", "").split(",") if os.environ.get("CHECK_CARDS") else ROTATING
+    for slot in ROTATING:
+        if slot not in only:
+            continue
         md += [f"## {CARDS[slot]['card']}", "", "| Subject | Movies | Series | Notes |", "|---|---:|---:|---|"]
-        for e in pool[slot]:
+        for e in pool[slot][:40] if slot == "prestige" else pool[slot]:
             try:
-                fn = {"headliner": lambda: person_card(e, today, False), "visionary": lambda: person_card(e, today, True),
-                      "powerhouse": lambda: studio_card(e, today), "saga": lambda: saga_card(e, today)}[slot]
-                m, s, a, notes = fn()
-                flag = " ⚠️" if len(m) < MIN_MOVIES[slot] or any("WARNING" in n for n in notes) else ""
+                m, s, a, notes = BUILDERS[slot](e, today)
+                flag = " ⚠️" if not enough(slot, m, s) or any("WARNING" in n for n in notes) else ""
                 md.append(f"| {e['name']}{flag} | {len(m)} | {len(s)} | {'; '.join(notes)} |")
             except Exception as err:
                 md.append(f"| {e['name']} ⚠️ | – | – | {err} |")
         md.append("")
-    md += ["## The Cultural Pulse", "", "| Start | Theme | Movies | Series | Notes |", "|---|---|---:|---:|---|"]
-    for t in sorted(pool["pulse"], key=lambda t: t["start"]):
-        day = dt.date(today.year, int(t["start"][:2]), int(t["start"][3:]))
-        tt = pulse_theme(pool, day)
-        m, s, a, notes = pulse_card(tt, today)
-        flag = " ⚠️" if len(m) < 10 else ""
-        md.append(f"| {t['start']} | {tt['title']}{flag} | {len(m)} | {len(s)} | {'; '.join(notes)} |")
+    if "pulse" in only or not os.environ.get("CHECK_CARDS"):
+        md += ["## The Cultural Pulse", "", "| Start | Theme | Movies | Series | Notes |", "|---|---|---:|---:|---|"]
+        for t in sorted(pool["pulse"], key=lambda t: t["start"]):
+            day = dt.date(today.year, int(t["start"][:2]), int(t["start"][3:]))
+            tt = pulse_theme(pool, day)
+            m, s, a, notes = pulse_card(tt, today)
+            flag = " ⚠️" if len(m) < 10 else ""
+            md.append(f"| {t['start']} | {tt['title']}{flag} | {len(m)} | {len(s)} | {'; '.join(notes)} |")
     IMDB.save()
     open(P("CHECK.md"), "w", encoding="utf-8").write("\n".join(md) + "\n")
     print("\n".join(md))

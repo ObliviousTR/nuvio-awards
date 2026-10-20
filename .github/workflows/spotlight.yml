@@ -13,7 +13,7 @@ on:
         description: "Card for 'next' or 'subject'"
         default: all
         type: choice
-        options: [all, headliner, visionary, powerhouse, saga, pulse]
+        options: [all, headliner, visionary, powerhouse, saga, prestige, legend, retro, yerli, pulse]
       subject:
         description: "Show this subject on the card now, e.g. Pedro Pascal / A24 / Star Wars / Halloween Night (optional)"
         required: false
@@ -40,7 +40,7 @@ jobs:
           DATE: ${{ inputs.date }}
         run: |
           args=()
-          [ "$MODE" = check ] && args+=(--check)
+          [ "$MODE" = check ] && args+=(--check) && [ "$CARD" != all ] && export CHECK_CARDS="$CARD"
           [ "$MODE" = redraw ] && args+=(--redraw)
           [ "$MODE" = next ] && args+=(--next "$CARD")
           if [ -n "$SUBJECT" ]; then
@@ -49,6 +49,7 @@ jobs:
           fi
           [ -n "$DATE" ] && args+=(--date "$DATE")
           python3 scripts/spotlight.py "${args[@]}"
+          [ "$MODE" = check ] || python3 scripts/favourites_art.py $([ "$MODE" = redraw ] && echo --redraw)
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"

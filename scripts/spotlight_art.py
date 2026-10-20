@@ -158,8 +158,10 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
     while sub_font.size > 13 and sum(d.textlength(ch, font=sub_font) + 2 for ch in sub) > W - left - 60:
         sub_font = font("Medium", sub_font.size - 1)
     spaced(d, (left, y), sub, sub_font, (190, 190, 196), 2)
-    os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    base.save(out_path, "JPEG", quality=86, optimize=True, progressive=True)
+    if out_path:
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        base.save(out_path, "JPEG", quality=86, optimize=True, progressive=True)
+    return base
 
 
 def backdrop(out_path, path):
@@ -195,3 +197,41 @@ def poster_wall(out_path, posters, *, card, tag, title, subtitle, accent, angle=
     glow = Image.new("RGB", (W, H), tuple(min(255, c + 60) for c in acc))
     base = Image.composite(glow, base, gradient_mask(W, H, [(0, 0), (0.65, 0), (1, 60)]))
     cover(out_path, card=card, tag=tag, title=title, subtitle=subtitle, accent=accent, base=base)
+
+
+def live_pill(im, glow=1.0):
+    """A red LIVE badge, top-right; glow 0..1 animates the dot."""
+    d = ImageDraw.Draw(im, "RGBA")
+    f = font("ExtraBold", 22)
+    w = 40 + d.textlength("LIVE", font=f) + 26
+    x1, y0 = W - 72, 50
+    x0, y1 = x1 - w, y0 + 44
+    d.rounded_rectangle((x0, y0, x1, y1), radius=22, fill=(229, 9, 20, 235))
+    cx, cy = x0 + 24, (y0 + y1) // 2
+    r = 6 + 5 * glow
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(255, 255, 255, round(70 * glow)))
+    d.ellipse((cx - 6, cy - 6, cx + 6, cy + 6), fill=(255, 255, 255, 255))
+    d.text((cx + 16, y0 + 9), "LIVE", font=f, fill=(255, 255, 255))
+    return im
+
+
+def ken_burns_gif(out_path, render, frames=24, size=(480, 270), ms=100):
+    """render(t) -> 1280x720 RGB frame for t in 0..1. Saves a looping GIF (forward and back)."""
+    import math
+    imgs = []
+    for i in range(frames):
+        t = i / (frames - 1)
+        imgs.append(render(t).resize(size, Image.LANCZOS))
+    imgs += imgs[-2:0:-1]
+    pal = imgs[len(imgs) // 2].convert("P", palette=Image.ADAPTIVE, colors=160)
+    q = [im.quantize(palette=pal, dither=Image.Dither.NONE) for im in imgs]
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    q[0].save(out_path, save_all=True, append_images=q[1:], duration=ms, loop=0, optimize=True, disposal=1)
+
+
+def zoomed(im, z):
+    """Crop toward the centre by factor z (0 = none) and scale back to the frame size."""
+    w, h = im.size
+    cw, ch = round(w / (1 + z)), round(h / (1 + z))
+    x, y = (w - cw) // 2, (h - ch) // 2
+    return im.crop((x, y, x + cw, y + ch)).resize((w, h), Image.LANCZOS)
