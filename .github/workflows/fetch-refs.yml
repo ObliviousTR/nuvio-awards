@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p refs && cd refs
+          mkdir -p refs && pushd refs
           ua="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
           get() { curl -sfL -A "$ua" -o "$1" "$2" || echo "FAILED $1 $2" >> failed.txt; }
           get doctorwho-cover.jpg https://i.pinimg.com/1200x/ce/6d/19/ce6d198219d333e44c15ec35bd18e1f9.jpg
@@ -17,7 +17,8 @@ jobs:
           get doctorwho.gif https://media.giphy.com/media/8dxHohVIpGxGPldCS9/giphy.gif
           get onepace.gif   https://media.giphy.com/media/ngi5zTc3cCX4Z61Yjo/giphy.gif
           get livesport.gif https://media.giphy.com/media/Vmog7h616TliZnYwIU/giphy.gif
-          ls -la
+          ls -la; popd
+      - run: python3 scripts/_commons_refs.py
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
