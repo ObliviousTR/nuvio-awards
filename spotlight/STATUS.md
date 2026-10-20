@@ -1,6 +1,7 @@
 # Spotlight status — 2026-10-20
 
 Next rotation (actor, director, studio, saga): **2026-10-26**
+Next Cultural Pulse theme starts: **2026-10-25**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
@@ -12,6 +13,7 @@ Next rotation (actor, director, studio, saga): **2026-10-26**
 | Fresh Out of Theaters | daily | 50 | 42 |  |
 | Box Office Champions | daily | 40 | 100 |  |
 | Certified Fresh & Must-See | daily | 60 | 49 |  |
+| My Simkl | cover | 0 | 0 | ✓ |
 
 ## Notes
 - **The Headliner**: TMDB person 974169 Jenna Ortega (Acting)
