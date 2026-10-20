@@ -1,0 +1,89 @@
+tt0023990|113638|1933|Eskimo
+tt0026714|19075|1935|A Midsummer Night's Dream
+tt0027300|37658|1936|Anthony Adverse
+tt0029162|3598|1937|Lost Horizon
+tt0029843|10907|1938|The Adventures of Robin Hood
+tt0031381|770|1939|Gone with the Wind
+tt0032850|83360|1940|North West Mounted Police
+tt0034167|16442|1941|Sergeant York
+tt0035211|19140|1942|The Pride of the Yankees
+tt0035616|15807|1943|Air Force
+tt0037465|84084|1944|Wilson
+tt0037120|17641|1945|National Velvet
+tt0036868|887|1946|The Best Years of Our Lives
+tt0039204|17487|1947|Body and Soul
+tt0040636|20482|1948|The Naked City
+tt0041239|25918|1949|Champion
+tt0042646|43388|1950|King Solomon's Mines
+tt0043924|25673|1951|A Place in the Sun
+tt0044706|288|1952|High Noon
+tt0045793|11426|1953|From Here to Eternity
+tt0047296|654|1954|On the Waterfront
+tt0048491|39940|1955|Picnic
+tt0048960|2897|1956|Around the World in 80 Days
+tt0050212|826|1957|The Bridge on the River Kwai
+tt0051658|17281|1958|Gigi
+tt0052618|665|1959|Ben-Hur
+tt0053604|284|1960|The Apartment
+tt0055614|1725|1961|West Side Story
+tt0056172|947|1962|Lawrence of Arabia
+tt0056085|11897|1962|How the West Was Won
+tt0058331|433|1964|Mary Poppins
+tt0059742|15121|1965|The Sound of Music
+tt0060472|20379|1966|Grand Prix
+tt0061811|10633|1967|In the Heat of the Night
+tt0062765|916|1968|Bullitt
+tt0065234|2721|1969|Z
+tt0066206|11202|1970|Patton
+tt0067116|1051|1971|The French Connection
+tt0068327|10784|1972|Cabaret
+tt0070735|9277|1973|The Sting
+tt0072308|5919|1974|The Towering Inferno
+tt0073195|578|1975|Jaws
+tt0075148|1366|1976|Rocky
+tt0076759|11|1977|Star Wars
+tt0077416|11778|1978|The Deer Hunter
+tt0078754|16858|1979|All That Jazz
+tt0081398|1578|1980|Raging Bull
+tt0082971|85|1981|Raiders of the Lost Ark
+tt0083987|783|1982|Gandhi
+tt0086197|9549|1983|The Right Stuff
+tt0087553|625|1984|The Killing Fields
+tt0090329|9281|1985|Witness
+tt0091763|792|1986|Platoon
+tt0093389|746|1987|The Last Emperor
+tt0096438|856|1988|Who Framed Roger Rabbit
+tt0096969|2604|1989|Born on the Fourth of July
+tt0099348|581|1990|Dances with Wolves
+tt0102138|820|1991|JFK
+tt0105695|33|1992|Unforgiven
+tt0108052|424|1993|Schindler's List
+tt0109830|13|1994|Forrest Gump
+tt0112384|568|1995|Apollo 13
+tt0116209|409|1996|The English Patient
+tt0120338|597|1997|Titanic
+tt0120815|857|1998|Saving Private Ryan
+tt0133093|603|1999|The Matrix
+tt0181865|1900|2000|Traffic
+tt0265086|855|2001|Black Hawk Down
+tt0299658|1574|2002|Chicago
+tt0167260|122|2003|The Lord of the Rings: The Return of the King
+tt0338751|2567|2004|The Aviator
+tt0375679|1640|2005|Crash
+tt0407887|1422|2006|The Departed
+tt0440963|2503|2007|The Bourne Ultimatum
+tt1010048|12405|2008|Slumdog Millionaire
+tt0887912|12162|2008|The Hurt Locker
+tt1285016|37799|2010|The Social Network
+tt1568346|65754|2011|The Girl with the Dragon Tattoo
+tt1024648|68734|2012|Argo
+tt1454468|49047|2013|Gravity
+tt2582802|244786|2014|Whiplash
+tt1392190|76341|2015|Mad Max: Fury Road
+tt2119532|324786|2016|Hacksaw Ridge
+tt5013056|374720|2017|Dunkirk
+tt1727824|424694|2018|Bohemian Rhapsody
+tt1950186|359724|2019|Ford v Ferrari
+tt5363618|502033|2020|Sound of Metal
+tt1160419|438631|2021|Dune
+tt6710474|545611|2022|Everything Everywhere All at Once

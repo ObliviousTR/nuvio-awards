@@ -1,0 +1,87 @@
+tt6710474|545611|2022|Everything Everywhere All at Once
+tt7131622|466272|2019|Once Upon a Time... in Hollywood
+tt0468569|155|2008|The Dark Knight
+tt0099685|769|1990|GoodFellas
+tt2582802|244786|2014|Whiplash
+tt0119217|489|1997|Good Will Hunting
+tt0361748|16869|2009|Inglourious Basterds
+tt0477348|6977|2007|No Country for Old Men
+tt0071562|240|1974|The Godfather Part II
+tt1853728|68718|2012|Django Unchained
+tt0114814|629|1995|The Usual Suspects
+tt6966692|490132|2018|Green Book
+tt0181865|1900|2000|Traffic
+tt10366460|776503|2021|CODA
+tt5027774|359940|2017|Three Billboards Outside Ebbing, Missouri
+tt0105695|33|1992|Unforgiven
+tt0449059|773|2006|Little Miss Sunshine
+tt0094226|117|1987|The Untouchables
+tt0109707|522|1994|Ed Wood
+tt0077416|11778|1978|The Deer Hunter
+tt0268126|2757|2002|Adaptation.
+tt0327056|322|2003|Mystic River
+tt4975722|376867|2016|Moonlight
+tt0057163|24748|1963|Hud
+tt0116695|9390|1996|Jerry Maguire
+tt0790636|152532|2013|Dallas Buyers Club
+tt0106977|5503|1993|The Fugitive
+tt0055614|1725|1961|West Side Story
+tt3682448|296098|2015|Bridge of Spies
+tt0405159|70|2004|Million Dollar Baby
+tt0044081|702|1951|A Streetcar Named Desire
+tt0061512|903|1967|Cool Hand Luke
+tt0964517|45317|2010|The Fighter
+tt0074119|891|1976|All the President's Men
+tt0054331|967|1960|Spartacus
+tt0097441|9665|1989|Glory
+tt0048380|37853|1955|Mister Roberts
+tt0052618|665|1959|Ben-Hur
+tt0081283|16619|1980|Ordinary People
+tt0088933|10328|1985|Cocoon
+tt0101587|1406|1991|City Slickers
+tt0084434|2623|1982|An Officer and a Gentleman
+tt0067328|25188|1971|The Last Picture Show
+tt0095159|623|1988|A Fish Called Wanda
+tt0124315|1715|1999|The Cider House Rules
+tt9784798|583406|2021|Judas and the Black Messiah
+tt0086425|11050|1983|Terms of Endearment
+tt0078841|10322|1979|Being There
+tt0051411|12501|1958|The Big Country
+tt0068327|10784|1972|Cabaret
+tt0042192|705|1950|All About Eve
+tt0031971|995|1939|Stagecoach
+tt0040897|3090|1948|The Treasure of the Sierra Madre
+tt0036868|887|1946|The Best Years of Our Lives
+tt0087553|625|1984|The Killing Fields
+tt0045793|11426|1953|From Here to Eternity
+tt0082031|13665|1981|Arthur
+tt0065088|28145|1969|They Shoot Horses, Don't They?
+tt0365737|231|2005|Syriana
+tt0091167|5143|1986|Hannah and Her Sisters
+tt0118564|31662|1998|Affliction
+tt1532503|55347|2011|Beginners
+tt0033729|43266|1941|How Green Was My Valley
+tt0066319|38953|1970|Ryan's Daughter
+tt0041996|15497|1949|Twelve O'Clock High
+tt0056541|33632|1962|Sweet Bird of Youth
+tt0039628|11881|1947|Miracle on 34th Street
+tt0076245|42222|1977|Julia
+tt0070509|14328|1973|The Paper Chase
+tt0280778|11889|2001|Iris
+tt0049456|29592|1956|Lust for Life
+tt0050933|40885|1957|Sayonara
+tt0046754|34689|1954|The Barefoot Contessa
+tt0045296|1810|1952|Viva Zapata!
+tt0060424|1888|1966|The Fortune Cookie
+tt0038190|30177|1945|A Tree Grows in Brooklyn
+tt0058672|5052|1964|Topkapi
+tt0036872|17661|1944|Going My Way
+tt0073766|16561|1975|The Sunshine Boys
+tt0033253|14710|1940|The Westerner
+tt0036172|80616|1943|The More the Merrier
+tt0029146|43278|1937|The Life of Emile Zola
+tt0059798|42731|1965|A Thousand Clowns
+tt0063654|118872|1968|The Subject Was Roses
+tt0027459|93313|1936|Come and Get It
+tt0033774|41495|1941|Johnny Eager
+tt0030317|118889|1938|Kentucky

@@ -1,0 +1,111 @@
+{
+  "id": "community.oblivioustr.nuvio-awards",
+  "version": "1.0.0",
+  "name": "Nuvio Awards",
+  "description": "Award winner lists (Oscars, Golden Globes, Cannes, Venice, TIFF), newest winner first.",
+  "resources": [
+    "catalog"
+  ],
+  "types": [
+    "movie"
+  ],
+  "idPrefixes": [
+    "tt"
+  ],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "oscar-supporting-actor",
+      "name": "Oscars · Best Supporting Actor"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-supporting-actress",
+      "name": "Oscars · Best Supporting Actress"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-documentary",
+      "name": "Oscars · Best Documentary Feature"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-visual-effects",
+      "name": "Oscars · Best Visual Effects"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-score",
+      "name": "Oscars · Best Original Score"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-editing",
+      "name": "Oscars · Best Film Editing"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-production-design",
+      "name": "Oscars · Best Production Design"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-costume",
+      "name": "Oscars · Best Costume Design"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-makeup",
+      "name": "Oscars · Best Makeup & Hairstyling"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-sound",
+      "name": "Oscars · Best Sound"
+    },
+    {
+      "type": "movie",
+      "id": "oscar-song",
+      "name": "Oscars · Best Original Song"
+    },
+    {
+      "type": "movie",
+      "id": "gg-director",
+      "name": "Golden Globes · Best Director"
+    },
+    {
+      "type": "movie",
+      "id": "gg-non-english",
+      "name": "Golden Globes · Best Non-English Language Film"
+    },
+    {
+      "type": "movie",
+      "id": "cannes-palme",
+      "name": "Cannes · Palme d'Or"
+    },
+    {
+      "type": "movie",
+      "id": "cannes-grand-prix",
+      "name": "Cannes · Grand Prix"
+    },
+    {
+      "type": "movie",
+      "id": "cannes-jury-prize",
+      "name": "Cannes · Jury Prize"
+    },
+    {
+      "type": "movie",
+      "id": "venice-golden-lion",
+      "name": "Venice · Golden Lion"
+    },
+    {
+      "type": "movie",
+      "id": "tiff-peoples-choice",
+      "name": "TIFF · People's Choice Award"
+    }
+  ],
+  "behaviorHints": {
+    "configurable": false,
+    "configurationRequired": false
+  }
+}

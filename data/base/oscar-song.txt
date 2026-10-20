@@ -1,0 +1,89 @@
+tt0025164|28288|1934|The Gay Divorcee
+tt0026421|43892|1935|Gold Diggers of 1935
+tt0028333|20325|1936|Swing Time
+tt0029742|74130|1937|Waikiki Wedding
+tt0029912|60562|1938|The Big Broadcast of 1938
+tt0032138|630|1939|The Wizard of Oz
+tt0032910|10895|1940|Pinocchio
+tt0033803|43792|1941|Lady Be Good
+tt0034862|13485|1942|Holiday Inn
+tt0035982|31770|1943|Hello, Frisco, Hello
+tt0036872|17661|1944|Going My Way
+tt0038116|27686|1945|State Fair
+tt0038589|28907|1946|The Harvey Girls
+tt0038969|13850|1946|Song of the South
+tt0040679|17804|1948|The Paleface
+tt0041687|43437|1949|Neptune's Daughter
+tt0042310|129529|1950|Captain Carey, U.S.A.
+tt0043633|27629|1951|Here Comes the Groom
+tt0044706|288|1952|High Noon
+tt0045591|14117|1953|Calamity Jane
+tt0047580|41503|1954|Three Coins in the Fountain
+tt0048316|53879|1955|Love Is a Many-Splendored Thing
+tt0049470|574|1956|The Man Who Knew Too Much
+tt0050569|133792|1957|The Joker is Wild
+tt0051658|17281|1958|Gigi
+tt0052896|33725|1959|A Hole in the Head
+tt0054198|43039|1960|Never on Sunday
+tt0054698|164|1961|Breakfast at Tiffany's
+tt0055895|32488|1963|Days of Wine and Roses
+tt0057400|74088|1963|Papa's Delicate Condition
+tt0058331|433|1964|Mary Poppins
+tt0059674|77915|1965|The Sandpiper
+tt0060182|15347|1966|Born Free
+tt0061584|16081|1967|Doctor Dolittle
+tt0063688|912|1968|The Thomas Crown Affair
+tt0064115|642|1969|Butch Cassidy and the Sundance Kid
+tt0066016|42593|1970|Lovers and Other Strangers
+tt0067741|482|1971|Shaft
+tt0069113|551|1972|The Poseidon Adventure
+tt0070903|10236|1973|The Way We Were
+tt0072308|5919|1974|The Towering Inferno
+tt0073440|3121|1975|Nashville
+tt0075265|19610|1976|A Star Is Born
+tt0076941|42231|1977|You Light Up My Life
+tt0078382|42212|1978|Thank God It's Friday
+tt0079638|40842|1979|Norma Rae
+tt0080716|3537|1980|Fame
+tt0082031|13665|1981|Arthur
+tt0084434|2623|1982|An Officer and a Gentleman
+tt0085549|535|1983|Flashdance
+tt0088414|5968|1984|The Woman in Red
+tt0090319|16082|1985|White Nights
+tt0092099|744|1986|Top Gun
+tt0092890|88|1987|Dirty Dancing
+tt0096463|3525|1988|Working Girl
+tt0097757|10144|1989|The Little Mermaid
+tt0099422|8592|1990|Dick Tracy
+tt0101414|10020|1991|Beauty and the Beast
+tt0103639|812|1992|Aladdin
+tt0107818|9800|1993|Philadelphia
+tt0110357|8587|1994|The Lion King
+tt0114148|10530|1995|Pocahontas
+tt0116250|8818|1996|Evita
+tt0120338|597|1997|Titanic
+tt0120794|9837|1998|The Prince of Egypt
+tt0120855|37135|1999|Tarzan
+tt0185014|11004|2000|Wonder Boys
+tt0198781|585|2001|Monsters, Inc.
+tt0298203|65|2002|8 Mile
+tt0167260|122|2003|The Lord of the Rings: The Return of the King
+tt0318462|1653|2004|The Motorcycle Diaries
+tt0410097|10476|2005|Hustle & Flow
+tt0497116|1781|2006|An Inconvenient Truth
+tt0907657|5723|2007|Once
+tt1010048|12405|2008|Slumdog Millionaire
+tt1263670|25196|2009|Crazy Heart
+tt0435761|10193|2010|Toy Story 3
+tt1204342|64328|2011|The Muppets
+tt1074638|37724|2012|Skyfall
+tt2294629|109445|2013|Frozen
+tt1020072|273895|2014|Selma
+tt2379713|206647|2015|Spectre
+tt3783958|313369|2016|La La Land
+tt2380307|354912|2017|Coco
+tt1517451|332562|2018|A Star Is Born
+tt2066051|504608|2019|Rocketman
+tt9784798|583406|2021|Judas and the Black Messiah
+tt2382320|370172|2021|No Time to Die
+tt8178634|579974|2022|RRR

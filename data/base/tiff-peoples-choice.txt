@@ -1,0 +1,45 @@
+tt14905854|858024|2025|Hamnet
+tt12908150|842924|2025|The Life of Chuck
+tt23561236|1056360|2023|American Fiction
+tt14208870|804095|2022|The Fabelmans
+tt12789558|777270|2021|Belfast
+tt2584384|515001|2019|Jojo Rabbit
+tt6966692|490132|2018|Green Book
+tt5027774|359940|2017|Three Billboards Outside Ebbing, Missouri
+tt3783958|313369|2016|La La Land
+tt3170832|264644|2015|Room
+tt2084970|205596|2014|The Imitation Game
+tt2024544|76203|2013|12 Years a Slave
+tt1045658|82693|2012|Silver Linings Playbook
+tt1772424|77461|2011|Where Do We Go Now?
+tt1504320|45269|2010|The King's Speech
+tt0929632|25793|2009|Precious: Based on the Novel 'Push' by Sapphire
+tt1010048|12405|2008|Slumdog Millionaire
+tt0765443|2252|2007|Eastern Promises
+tt0482463|12586|2006|Bella
+tt0468565|868|2005|Tsotsi
+tt0395169|205|2004|Hotel Rwanda
+tt0363226|246|2003|Zatoichi
+tt0298228|1088|2003|Whale Rider
+tt0211915|194|2001|Amélie
+tt0190332|146|2000|Crouching Tiger, Hidden Dragon
+tt0169547|14|1999|American Beauty
+tt0118799|637|1997|Life Is Beautiful
+tt0125128|35161|1997|The Hanging Garden
+tt0117631|7863|1996|Shine
+tt0112379|880|1995|Antonia's Line
+tt0110889|40156|1995|Priest
+tt0105488|10409|1992|Strictly Ballroom
+tt0101889|177|1991|The Fisher King
+tt0099334|11673|1990|Cyrano de Bergerac
+tt0098213|1779|1989|Roger & Me
+tt0095675|4203|1988|Women on the Verge of a Nervous Breakdown
+tt0090985|18499|1986|The Decline of the American Empire
+tt0089276|29263|1985|The Official Story
+tt0087921|13681|1984|Places in the Heart
+tt0085244|12560|1983|The Big Chill
+tt0084776|48249|1982|Tempest
+tt0082158|9443|1981|Chariots of Fire
+tt0080408|33214|1980|Bad Timing
+tt0078850|42165|1979|Best Boy
+tt0077613|111469|1978|Girlfriends

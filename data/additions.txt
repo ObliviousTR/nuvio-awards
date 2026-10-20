@@ -1,0 +1,48 @@
+# Winners added on top of the base lists (base lists came from MDBList and stop around 2022-2025).
+# catalog|award_year_film|imdb_id|tmdb_id|title     (award_year_film = the year the winning film is credited to)
+oscar-supporting-actor|2023|tt15398776|872585|Oppenheimer
+oscar-supporting-actor|2024|tt21823606|1013850|A Real Pain
+oscar-supporting-actor|2025|tt30144839|1054867|One Battle After Another
+oscar-supporting-actress|2023|tt14849194|840430|The Holdovers
+oscar-supporting-actress|2024|tt20221436|974950|Emilia Pérez
+oscar-supporting-actress|2025|tt26581740|1078605|Weapons
+oscar-documentary|2021|tt7378922|776527|Summer of Soul (...Or, When the Revolution Could Not Be Televised)
+oscar-documentary|2023|tt24082438|1058616|20 Days in Mariupol
+oscar-documentary|2024|tt30953759|1232493|No Other Land
+oscar-documentary|2025|tt34965515|1393151|Mr. Nobody Against Putin
+oscar-visual-effects|2023|tt23289160|940721|Godzilla Minus One
+oscar-visual-effects|2024|tt15239678|693134|Dune: Part Two
+oscar-visual-effects|2025|tt1757678|83533|Avatar: Fire and Ash
+oscar-score|2023|tt15398776|872585|Oppenheimer
+oscar-score|2024|tt8999762|549509|The Brutalist
+oscar-score|2025|tt31193180|1233413|Sinners
+oscar-editing|2023|tt15398776|872585|Oppenheimer
+oscar-editing|2024|tt28607951|1064213|Anora
+oscar-editing|2025|tt30144839|1054867|One Battle After Another
+oscar-production-design|2023|tt14230458|792307|Poor Things
+oscar-production-design|2024|tt1262426|402431|Wicked
+oscar-production-design|2025|tt1312221|1062722|Frankenstein
+oscar-costume|2021|tt3228774|337404|Cruella
+oscar-costume|2023|tt14230458|792307|Poor Things
+oscar-costume|2024|tt1262426|402431|Wicked
+oscar-costume|2025|tt1312221|1062722|Frankenstein
+oscar-makeup|2023|tt14230458|792307|Poor Things
+oscar-makeup|2024|tt17526714|933260|The Substance
+oscar-makeup|2025|tt1312221|1062722|Frankenstein
+oscar-sound|2023|tt7160372|467244|The Zone of Interest
+oscar-sound|2024|tt15239678|693134|Dune: Part Two
+oscar-sound|2025|tt16311594|911430|F1
+oscar-song|2023|tt1517268|346698|Barbie
+oscar-song|2024|tt20221436|974950|Emilia Pérez
+oscar-song|2025|tt14205554|803796|KPop Demon Hunters
+gg-director|2023|tt15398776|872585|Oppenheimer
+gg-director|2024|tt8999762|549509|The Brutalist
+gg-director|2025|tt30144839|1054867|One Battle After Another
+gg-non-english|2023|tt17009710|915935|Anatomy of a Fall
+gg-non-english|2024|tt20221436|974950|Emilia Pérez
+gg-non-english|2025|tt27847051|1220564|The Secret Agent
+cannes-palme|2026|tt35410859|1401459|Fjord
+cannes-grand-prix|2026|tt37118301|848700|Minotaur
+cannes-jury-prize|2026|tt21188986|1013822|The Dreamed Adventure
+venice-golden-lion|2026|tt34888026|1511780|Woman Unknown
+tiff-peoples-choice|2026|tt35511966|1422041|La Bola Negra

@@ -1,0 +1,20 @@
+[
+  {"id": "oscar-supporting-actor",  "name": "Oscars · Best Supporting Actor"},
+  {"id": "oscar-supporting-actress","name": "Oscars · Best Supporting Actress"},
+  {"id": "oscar-documentary",       "name": "Oscars · Best Documentary Feature"},
+  {"id": "oscar-visual-effects",    "name": "Oscars · Best Visual Effects"},
+  {"id": "oscar-score",             "name": "Oscars · Best Original Score"},
+  {"id": "oscar-editing",           "name": "Oscars · Best Film Editing"},
+  {"id": "oscar-production-design", "name": "Oscars · Best Production Design"},
+  {"id": "oscar-costume",           "name": "Oscars · Best Costume Design"},
+  {"id": "oscar-makeup",            "name": "Oscars · Best Makeup & Hairstyling"},
+  {"id": "oscar-sound",             "name": "Oscars · Best Sound"},
+  {"id": "oscar-song",              "name": "Oscars · Best Original Song"},
+  {"id": "gg-director",             "name": "Golden Globes · Best Director"},
+  {"id": "gg-non-english",          "name": "Golden Globes · Best Non-English Language Film"},
+  {"id": "cannes-palme",            "name": "Cannes · Palme d'Or"},
+  {"id": "cannes-grand-prix",       "name": "Cannes · Grand Prix"},
+  {"id": "cannes-jury-prize",       "name": "Cannes · Jury Prize"},
+  {"id": "venice-golden-lion",      "name": "Venice · Golden Lion"},
+  {"id": "tiff-peoples-choice",     "name": "TIFF · People's Choice Award"}
+]

@@ -1,0 +1,69 @@
+tt31189315|1159206|2025|Father Mother Sister Brother
+tt29439114|1088514|2024|The Room Next Door
+tt14230458|792307|2023|Poor Things
+tt21374850|1004663|2022|All the Beauty and the Bloodshed
+tt13880104|793998|2021|Happening
+tt9770150|581734|2021|Nomadland
+tt7286456|475557|2019|Joker
+tt6155172|426426|2018|Roma
+tt5580390|399055|2017|The Shape of Water
+tt5843990|408542|2016|The Woman Who Left
+tt4721400|352162|2015|From Afar
+tt1883180|110390|2014|A Pigeon Sat on a Branch Reflecting on Existence
+tt3172520|216790|2013|Sacro GRA
+tt2299842|123377|2012|Pieta
+tt1437357|77560|2011|Faust
+tt1421051|39210|2010|Somewhere
+tt1483831|32084|2009|Lebanon
+tt1125849|12163|2008|The Wrestler
+tt0808357|4588|2007|Lust, Caution
+tt0859765|2346|2006|Still Life
+tt0388795|142|2005|Brokeback Mountain
+tt0383694|11109|2004|Vera Drake
+tt0376968|11190|2003|The Return
+tt0318411|8094|2002|The Magdalene Sisters
+tt0265343|480|2001|Monsoon Wedding
+tt0255094|13898|2000|The Circle
+tt0209189|36210|1999|Not One Less
+tt0139951|58098|1998|The Way We Laughed
+tt0119250|5910|1997|Fireworks
+tt0117039|1770|1996|Michael Collins
+tt0112767|36266|1995|Cyclo
+tt0109066|11985|1994|Vive L'Amour
+tt0110882|19155|1994|Before the Rain
+tt0108122|695|1993|Short Cuts
+tt0108394|108|1993|Three Colors: Blue
+tt0105197|38143|1992|The Story of Qiu Ju
+tt0103176|36346|1991|Close to Eden
+tt0100519|18971|1991|Rosencrantz & Guildenstern Are Dead
+tt0096908|49982|1989|A City of Sadness
+tt0095513|54990|1988|The Legend of the Holy Drinker
+tt0092593|1786|1987|Au Revoir les Enfants
+tt0091830|54898|1986|The Green Ray
+tt0089960|44018|1985|Vagabond
+tt0088009|42096|1984|A Year of the Quiet Sun
+tt0086153|32689|1983|First Name: Carmen
+tt0084725|30363|1982|The State of Things
+tt0082081|42142|1981|Marianne and Juliane
+tt0080798|10889|1980|Gloria
+tt0080388|23954|1980|Atlantic City
+tt0062679|154582|1968|Artists Under the Big Top: Perplexed
+tt0061395|649|1967|Belle de Jour
+tt0058946|17295|1966|The Battle of Algiers
+tt0059856|92432|1965|Sandra
+tt0058003|26638|1964|Red Desert
+tt0057286|58383|1963|Hands Over the City
+tt0056966|80557|1962|Family Diary
+tt0056111|31442|1962|Ivan's Childhood
+tt0054632|4024|1961|Last Year at Marienbad
+tt0054161|154578|1960|Tomorrow Is My Turn
+tt0052861|55823|1959|The Great War
+tt0053856|43100|1959|General Della Rovere
+tt0051955|43121|1958|The Rickshaw Man
+tt0048956|897|1956|Aparajito
+tt0048452|48035|1955|Ordet
+tt0047029|92784|1954|Romeo and Juliet
+tt0043686|5000|1952|Forbidden Games
+tt0042625|67731|1950|Justice Is Done
+tt0042876|548|1950|Rashomon
+tt0041634|132332|1949|Manon
