@@ -1,7 +1,7 @@
 """Build the static Stremio addon (manifest + catalogs) from data/.
 
 data/base/<catalog>.txt   imdb|tmdb|year|title   (seed lists, copied from MDBList)
-data/additions.txt        catalog|year|imdb|tmdb|title   (winners added since)
+data/additions.txt        catalog|year|imdb|tmdb|title   (winners added since; tmdb may be left empty)
 data/catalogs.json        catalog ids, display names and order
 
 Every catalog is newest winner first. Pagination: the whole list is in the first page; skip=N files
@@ -28,7 +28,7 @@ def read_additions():
         if not line.strip() or line.startswith("#"):
             continue
         cid, year, imdb, tmdb, title = line.rstrip("\n").split("|", 4)
-        add.setdefault(cid, []).append(dict(imdb=imdb, tmdb=int(tmdb), year=int(year), title=title))
+        add.setdefault(cid, []).append(dict(imdb=imdb, tmdb=int(tmdb) if tmdb.strip() else None, year=int(year), title=title))
     return add
 
 
