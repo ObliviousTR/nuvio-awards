@@ -2,7 +2,7 @@
   "id": "community.oblivioustr.nuvio-spotlight",
   "version": "1.20.20261020",
   "name": "Nuvio Spotlight",
-  "description": "Rotating spotlights (actor, director, studio, saga, season) and daily charts, rebuilt from TMDB.",
+  "description": "Rotating spotlights (actor, director, studio, saga, season, Oscar talent, legends, eras, Turkish stars) and daily charts, rebuilt from TMDB.",
   "resources": [
     "catalog"
   ],
@@ -53,6 +53,46 @@
       "type": "series",
       "id": "spotlight-saga-series",
       "name": "The Saga: Alien Saga · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-prestige-movies",
+      "name": "The Prestige Darling: Meryl Streep"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-prestige-series",
+      "name": "The Prestige Darling: Meryl Streep · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-legend-movies",
+      "name": "The Living Legend: Vincent Price"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-legend-series",
+      "name": "The Living Legend: Vincent Price · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-retro-movies",
+      "name": "Retro Rewind: Universal & Hammer Monsters"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-retro-series",
+      "name": "Retro Rewind: Universal & Hammer Monsters · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-yerli-movies",
+      "name": "Yerli Yıldız: Kıvanç Tatlıtuğ · Filmler"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-yerli-series",
+      "name": "Yerli Yıldız: Kıvanç Tatlıtuğ · Diziler"
     },
     {
       "type": "movie",

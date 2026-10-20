@@ -4,21 +4,29 @@
     "certified": "static",
     "fresh": "static",
     "headliner": "Jenna Ortega",
+    "legend": "Vincent Price",
     "powerhouse": "Blumhouse Productions",
+    "prestige": "Meryl Streep",
     "pulse": "Slashers & Masked Killers",
+    "retro": "Universal & Hammer Monsters",
     "saga": "Alien",
     "simkl": "poster-wall-1",
-    "visionary": "Jordan Peele"
+    "visionary": "Jordan Peele",
+    "yerli": "Kıvanç Tatlıtuğ"
   },
   "backdrops": {
     "boxoffice": "/lgotja3xMoJZbynwHfcQcJAEMWH.jpg",
     "certified": "/8Tfys3mDZVp4tNoH2ktm06a0Tau.jpg",
     "fresh": "/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
     "headliner": "/o375tDNib7tihlkWdtLW1fQhNL1.jpg",
+    "legend": "/nxE4O2EFIOfanWkdaCWiBRfwjrn.jpg",
     "powerhouse": "/9pkZesKMnblFfKxEhQx45YQ2kIe.jpg",
+    "prestige": "/gkh6Nt8DtY1XT4gQsyFq9XAVJlJ.jpg",
     "pulse": "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "retro": "/i1yf91svRHX45l9BXL8rVFzLoPH.jpg",
     "saga": "/6X42JnSMdo3dPAswOHUuvebdTq7.jpg",
-    "visionary": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg"
+    "visionary": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+    "yerli": "/hSiKjVcXnUVfVQFC3Sq7KDFilJa.jpg"
   },
   "cards": {
     "headliner": {
@@ -26,14 +34,29 @@
       "reason": null,
       "subject": "Jenna Ortega"
     },
+    "legend": {
+      "period": 20,
+      "reason": null,
+      "subject": "Vincent Price"
+    },
     "powerhouse": {
       "period": 20,
       "reason": null,
       "subject": "Blumhouse Productions"
     },
+    "prestige": {
+      "period": 20,
+      "reason": null,
+      "subject": "Meryl Streep"
+    },
     "pulse": {
       "since": "10-15",
       "subject": "Slashers & Masked Killers"
+    },
+    "retro": {
+      "period": 20,
+      "reason": null,
+      "subject": "Universal & Hammer Monsters"
     },
     "saga": {
       "period": 20,
@@ -44,6 +67,11 @@
       "period": 20,
       "reason": null,
       "subject": "Jordan Peele"
+    },
+    "yerli": {
+      "period": 20,
+      "reason": null,
+      "subject": "Kıvanç Tatlıtuğ"
     }
   },
   "collection_ids": {
@@ -96,14 +124,26 @@
     "headliner": {
       "Jenna Ortega": "2026-10-20"
     },
+    "legend": {
+      "Vincent Price": "2026-10-20"
+    },
     "powerhouse": {
       "Blumhouse Productions": "2026-10-20"
+    },
+    "prestige": {
+      "Meryl Streep": "2026-10-20"
+    },
+    "retro": {
+      "Universal & Hammer Monsters": "2026-10-20"
     },
     "saga": {
       "Alien": "2026-10-20"
     },
     "visionary": {
       "Jordan Peele": "2026-10-20"
+    },
+    "yerli": {
+      "Kıvanç Tatlıtuğ": "2026-10-20"
     }
   },
   "pin": {},

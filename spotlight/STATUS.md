@@ -1,6 +1,6 @@
 # Spotlight status — 2026-10-20
 
-Next rotation (actor, director, studio, saga): **2026-10-26**
+Next rotation (all rotating cards): **2026-10-26**
 Next Cultural Pulse theme starts: **2026-10-25**
 
 | Card | Subject | Movies | Series | New art |
@@ -9,6 +9,10 @@ Next Cultural Pulse theme starts: **2026-10-25**
 | The Visionary | Jordan Peele | 3 | 4 |  |
 | The Powerhouse | Blumhouse Productions | 100 | 3 |  |
 | The Saga | Alien Saga | 4 | 1 |  |
+| The Prestige Darling | Meryl Streep | 63 | 4 | ✓ |
+| The Living Legend | Vincent Price | 72 | 1 | ✓ |
+| Retro Rewind | Universal & Hammer Monsters | 100 | 0 | ✓ |
+| Yerli Yıldız | Kıvanç Tatlıtuğ | 7 | 11 | ✓ |
 | The Cultural Pulse | Slashers & Masked Killers | 100 | 79 |  |
 | Fresh Out of Theaters | daily | 50 | 42 |  |
 | Box Office Champions | daily | 40 | 100 |  |
@@ -20,8 +24,8 @@ Next Cultural Pulse theme starts: **2026-10-25**
 - **The Powerhouse**: company 3172 = Blumhouse Productions
 - **The Saga**: collection 8091 = Alien Collection
 - **The Saga**: series 157239 = Alien: Earth
+- **The Prestige Darling**: TMDB person 5064 Meryl Streep (Acting)
+- **The Living Legend**: TMDB person 1905 Vincent Price (Acting)
+- **Retro Rewind**: 1931–1976; keywords=-
+- **Yerli Yıldız**: TMDB person 1078769 Kıvanç Tatlıtuğ (Acting)
 - **The Cultural Pulse**: keywords movie=12339|305666|10714 series=12339|305666|10714
-- headliner: added to the auto pool: Robert Downey Jr., Chris Evans, Austin Abrams
-- visionary: added to the auto pool: Joe Russo, Anthony Russo, Kitao Sakurai
-- powerhouse: added to the auto pool: Pascal Pictures, TSG Entertainment, Constantin Film
-- saga: added to the auto pool: The Avengers, Insidious, Fall
