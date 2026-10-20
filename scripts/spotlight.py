@@ -195,10 +195,12 @@ def person_card(entry, today, director):
     mv.sort(key=lambda c: -c.get("vote_count", 0))
     tv.sort(key=lambda c: -c.get("vote_count", 0))
     m, s = rows("movie", mv), rows("tv", tv)
-    top = next((x for x in m + s if x["backdrop"]), None)
+    lead = {c["id"] for c in mv + tv if director or (c.get("order") is not None and c["order"] <= 2)}
+    backs = [x["backdrop"] for x in m + s if x["backdrop"] and x["tmdb"] in lead]
+    backs += [x["backdrop"] for x in m + s if x["backdrop"] and x["backdrop"] not in backs]
     what = "Directorial catalog" if director else "Filmography"
     a = dict(title=p["name"], subtitle=f"{what} · {len(m) + len(s)} titles", portrait=p.get("profile_path"),
-             backdrop=top and top["backdrop"])
+             backdrops=backs[:12])
     return m, s, a, [f"TMDB person {p['id']} {p['name']} ({p.get('known_for_department')})"]
 
 
@@ -225,9 +227,8 @@ def studio_card(entry, today):
     s = discover("tv", {"with_companies": comp, "sort_by": "vote_count.desc", "vote_count.gte": 10,
                         "without_genres": NOISE_TV})
     logo = (tmdb(f"/company/{ids[0]}") or {}).get("logo_path")
-    top = next((x for x in m if x["backdrop"]), None)
     a = dict(title=entry.get("title", entry["name"]), subtitle=f"Studio catalog · {len(m) + len(s)} titles", logo=logo,
-             backdrop=top and top["backdrop"])
+             backdrops=[x["backdrop"] for x in m if x["backdrop"]][:12])
     return m, s, a, notes
 
 
@@ -259,7 +260,8 @@ def saga_card(entry, today):
     m, s = rows("movie", parts), rows("tv", shows)
     t = entry.get("title", entry["name"])
     a = dict(title=t if re.search(r"saga|universe|trilogy|world", t, re.I) else t + " Saga",
-             subtitle=f"In release order · {len(m) + len(s)} titles", poster=poster, backdrop=back)
+             subtitle=f"In release order · {len(m) + len(s)} titles", poster=poster,
+             backdrops=([back] if back else []) + [x["backdrop"] for x in m if x["backdrop"]][:12])
     return m, s, a, notes
 
 
@@ -286,14 +288,13 @@ def pulse_card(t, today):
     if t.get("awards_movie"):
         m = awards_catalog("movie", t["awards_movie"])
         s = awards_catalog("series", t["awards_series"]) if t.get("awards_series") else []
-        top = None
-        for x in m[:5]:
+        backs = []
+        for x in m[:6]:
             f = tmdb(f"/find/{x['imdb']}", external_source="imdb_id") or {}
             hit = (f.get("movie_results") or [None])[0]
             if hit and hit.get("backdrop_path"):
-                top = hit["backdrop_path"]
-                break
-        a = dict(title=t["title"], subtitle=f"{t['subtitle']} · {len(m) + len(s)} titles", backdrop=top)
+                backs.append(hit["backdrop_path"])
+        a = dict(title=t["title"], subtitle=f"{t['subtitle']} · {len(m) + len(s)} titles", backdrops=backs)
         return m, s, a, ["from the awards catalogs"]
     base_m = {"sort_by": "vote_count.desc", "vote_count.gte": 150, "with_original_language": "en",
               "without_genres": NO_TOON_M, "primary_release_date.lte": today.isoformat()}
@@ -312,8 +313,7 @@ def pulse_card(t, today):
     pt = {**base_t, **({"with_keywords": kw_t} if kw_t else {}), **t.get("series", {})}
     m = discover("movie", pm)
     s = discover("tv", pt) if (kw_t or t.get("series") or t.get("best_year")) else []
-    top = next((x for x in m if x["backdrop"]), None)
-    a = dict(title=t["title"], subtitle=f"{t['subtitle']} · {len(m) + len(s)} titles", backdrop=top and top["backdrop"])
+    a = dict(title=t["title"], subtitle=f"{t['subtitle']} · {len(m) + len(s)} titles", backdrops=[x["backdrop"] for x in m if x["backdrop"]][:12])
     return m, s, a, notes
 
 
@@ -409,6 +409,10 @@ def make_art(slot, a, key, state, force=False):
     if have and st.get(slot) == key and not force:
         return False
     c = CARDS[slot]
+    shown = state.setdefault("backdrops", {})
+    taken = {v for k, v in shown.items() if k != slot}
+    a["backdrop"] = next((b for b in a.get("backdrops", []) if b not in taken), (a.get("backdrops") or [None])[0])
+    shown[slot] = a["backdrop"]
     art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=c["tag"], accent=c["accent"], title=a["title"],
               subtitle=a["subtitle"], backdrop=a.get("backdrop"), portrait=a.get("portrait"), logo=a.get("logo"),
               poster=a.get("poster"))
@@ -468,8 +472,7 @@ def main():
         write_catalog("movie", f"spotlight-{slot}-movies", m)
         write_catalog("movie" if slot == "boxoffice" else "series", f"spotlight-{slot}-" +
                       ("alltime" if slot == "boxoffice" else "series"), s)
-        top = next((x for x in m if x["backdrop"]), None)
-        a = dict(title=CARDS[slot]["card"], subtitle=subtitles[slot], backdrop=top and top["backdrop"])
+        a = dict(title=CARDS[slot]["card"], subtitle=subtitles[slot], backdrops=[x["backdrop"] for x in m + s if x["backdrop"]][:12])
         drew = make_art(slot, a, "static", state, args.redraw)
         status.append((CARDS[slot]["card"], "daily", len(m), len(s), [], drew))
 
