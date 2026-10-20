@@ -555,7 +555,7 @@ def make_art(slot, a, key, state, force=False):
     shown[slot] = a["backdrop"]
     art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=a.get("tag", c["tag"]), accent=c["accent"], title=a["title"],
               subtitle=a["subtitle"], backdrop=a.get("backdrop"), portrait=a.get("portrait"), logo=a.get("logo"),
-              poster=a.get("poster"))
+              poster=a.get("poster"), tr=slot == "yerli")
     if a.get("backdrop"):
         art.backdrop(P("art", slot, "backdrop.jpg"), a["backdrop"])
     st[slot] = key

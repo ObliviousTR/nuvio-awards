@@ -73,10 +73,11 @@ def spaced(draw, xy, text, fnt, fill, spacing):
 
 
 def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portrait=None, logo=None, poster=None,
-          base=None):
+          base=None, tr=False):
     """card: small card name top-left ('THE HEADLINER'); tag: label above the title ('ACTOR SPOTLIGHT').
     base: a ready background image (skips the backdrop)."""
     acc = hex_rgb(accent)
+    up = (lambda t: t.replace("i", "İ").upper()) if tr else str.upper  # Turkish capitals: i → İ
     bg = None if base else fetch(backdrop, "w1280")
     if base:
         pass
@@ -132,14 +133,14 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
     d = ImageDraw.Draw(base)
     left, maxw = 72, 600
     # card name, top-left
-    spaced(d, (left, 58), card.upper(), font("SemiBold", 20), (235, 235, 235), 4)
+    spaced(d, (left, 58), up(card), font("SemiBold", 20), (235, 235, 235), 4)
     d.rectangle((left, 92, left + 46, 96), fill=acc)
 
     title_font = font("ExtraBold", 64)
-    lines = wrap(d, title.upper(), title_font, maxw)
+    lines = wrap(d, up(title), title_font, maxw)
     if len(lines) > 3:
         title_font = font("ExtraBold", 48)
-        lines = wrap(d, title.upper(), title_font, maxw)[:4]
+        lines = wrap(d, up(title), title_font, maxw)[:4]
     lh = title_font.size + 6
     sub_font = font("Medium", 20)
     tag_font = font("SemiBold", 16)
@@ -147,14 +148,14 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
     y = H - 72 - block
     # tag with accent dot
     d.ellipse((left, y + 5, left + 9, y + 14), fill=acc)
-    spaced(d, (left + 18, y), tag.upper(), tag_font, (230, 230, 230), 3)
+    spaced(d, (left + 18, y), up(tag), tag_font, (230, 230, 230), 3)
     y += 28
     d.rectangle((left - 14, y + 6, left - 9, y + len(lines) * lh - 4), fill=acc)
     for ln in lines:
         d.text((left, y), ln, font=title_font, fill=(255, 255, 255))
         y += lh
     y += 14
-    sub = subtitle.upper()
+    sub = subup(title)
     while sub_font.size > 13 and sum(d.textlength(ch, font=sub_font) + 2 for ch in sub) > W - left - 60:
         sub_font = font("Medium", sub_font.size - 1)
     spaced(d, (left, y), sub, sub_font, (190, 190, 196), 2)

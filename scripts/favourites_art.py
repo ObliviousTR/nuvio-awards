@@ -11,6 +11,7 @@ from spotlight import tmdb, P
 from PIL import Image, ImageEnhance
 
 COMMONS = "File:Germany and Argentina face off in the final of the World Cup 2014 -2014-07-13 (5).jpg"
+ONEPACE_BACKDROP = ""  # TMDB file_path of the chosen One Piece backdrop (see onepace/candidates.jpg)
 UA = {"User-Agent": "nuvio-awards (github.com/ObliviousTR/nuvio-awards)"}
 
 
@@ -25,6 +26,21 @@ def commons(title, width=1920):
     return img, meta, ii["descriptionurl"]
 
 
+def contact_sheet(imgs, path, tw=480, th=270):
+    """Numbered preview of backdrop candidates (file paths in the caption file next to it)."""
+    from PIL import ImageDraw
+    sheet = Image.new("RGB", (4 * tw, ((len(imgs) + 3) // 4) * th), (0, 0, 0))
+    d = ImageDraw.Draw(sheet)
+    for i, b in enumerate(imgs):
+        im = art.fetch(b["file_path"], "w780")
+        if im:
+            sheet.paste(art.cover_fit(im.convert("RGB"), tw, th), ((i % 4) * tw, (i // 4) * th))
+        d.text(((i % 4) * tw + 8, (i // 4) * th + 8), str(i), fill=(255, 255, 0))
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    sheet.save(path, "JPEG", quality=80)
+    open(path.replace(".jpg", ".txt"), "w").write("\n".join(f"{i} {b['file_path']}" for i, b in enumerate(imgs)))
+
+
 def darken(im, b=0.6):
     return ImageEnhance.Brightness(art.cover_fit(im.convert("RGB"), art.W, art.H)).enhance(b)
 
@@ -35,6 +51,9 @@ def main(redraw=False):
     if redraw or not os.path.exists(f"{out}/onepace/cover.jpg"):
         imgs = (tmdb("/tv/37854/images", include_image_language="null") or {}).get("backdrops", [])
         imgs.sort(key=lambda b: (-b.get("vote_average", 0), -b.get("width", 0)))
+        contact_sheet(imgs[:16], f"{out}/onepace/candidates.jpg")
+        pick = [b for b in imgs if b["file_path"] == ONEPACE_BACKDROP]
+        imgs = pick + [b for b in imgs if b not in pick]
         art.cover(f"{out}/onepace/cover.jpg", card="One Pace", tag="Fan re-cut", title="One Pace",
                   subtitle="One Piece · without the filler", accent="#E63946",
                   backdrop=imgs[0]["file_path"] if imgs else None)
