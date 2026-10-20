@@ -1,0 +1,522 @@
+"""Build the Nuvio Spotlight addon (spotlight/manifest.json, spotlight/catalog/, spotlight/art/) from TMDB.
+
+Rotating cards (new subject every `period_days`, picked from spotlight/pool.json):
+  headliner (actor), visionary (director), powerhouse (studio), saga (franchise)
+Seasonal card: pulse (theme from the calendar in pool.json, changes on its start dates)
+Daily cards (rebuilt every run): fresh (new on digital / new series), boxoffice, certified (acclaimed recent)
+
+Every card has a movie and a series catalog, except boxoffice (two movie charts).
+State (current subjects, when each subject was last shown) lives in spotlight/state.json; set "pin" there to
+force a subject. Art is regenerated only when a card's subject changes (daily cards: only when missing).
+Needs TMDB_API_KEY (v3 key or v4 read token). Usage: python3 scripts/spotlight.py [--check] [--date YYYY-MM-DD]
+"""
+import argparse, datetime as dt, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
+from concurrent.futures import ThreadPoolExecutor
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import spotlight_art as art
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SP = os.path.join(ROOT, "spotlight")
+P = lambda *p: os.path.join(SP, *p)
+API = "https://api.themoviedb.org/3"
+KEY = os.environ.get("TMDB_API_KEY", "").strip()
+LIMIT = 100
+NOISE_TV = "16|99|10762|10763|10764|10766|10767"   # animation, docs, kids, news, reality, soap, talk
+NO_TOON_M = "16"
+SELF = re.compile(r"\b(self|himself|herself|themselves|narrator|host|archive footage|uncredited)\b", re.I)
+
+CARDS = {
+    "headliner": dict(card="The Headliner", tag="Actor Spotlight", accent="#FF4D5A"),
+    "visionary": dict(card="The Visionary", tag="Director Spotlight", accent="#F5A623"),
+    "powerhouse": dict(card="The Powerhouse", tag="Studio Spotlight", accent="#8B5CF6"),
+    "saga": dict(card="The Saga", tag="Universe Spotlight", accent="#FF7A1A"),
+    "pulse": dict(card="The Cultural Pulse", tag="Seasonal Spotlight", accent="#14B8A6"),
+    "fresh": dict(card="Fresh Out of Theaters", tag="Updated Daily", accent="#22C55E"),
+    "boxoffice": dict(card="Box Office Champions", tag="Updated Daily", accent="#EAB308"),
+    "certified": dict(card="Certified Fresh & Must-See", tag="Updated Daily", accent="#EF4444"),
+}
+
+
+# ---------------------------------------------------------------- TMDB
+def tmdb(path, **params):
+    headers = {"User-Agent": "nuvio-spotlight", "Accept": "application/json"}
+    if KEY.startswith("eyJ"):
+        headers["Authorization"] = "Bearer " + KEY
+    else:
+        params["api_key"] = KEY
+    url = f"{API}{path}?{urllib.parse.urlencode(params)}"
+    for i in range(5):
+        try:
+            return json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=30).read())
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return None
+            if e.code == 401:
+                sys.exit("TMDB rejected the key (401): check the TMDB_API_KEY secret")
+            time.sleep(2 * (i + 1))
+        except Exception:
+            time.sleep(2 * (i + 1))
+    raise RuntimeError(f"TMDB request failed: {path}")
+
+
+def norm(s):
+    return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+
+
+class ImdbCache:
+    def __init__(self):
+        self.path = P("cache", "imdb.json")
+        self.d = json.load(open(self.path)) if os.path.exists(self.path) else {}
+
+    def get(self, kind, tid):
+        k = f"{kind}:{tid}"
+        if k not in self.d:
+            ext = tmdb(f"/{kind}/{tid}/external_ids") or {}
+            self.d[k] = ext.get("imdb_id") or ""
+        return self.d[k]
+
+    def prefetch(self, kind, ids):
+        todo = [i for i in dict.fromkeys(ids) if f"{kind}:{i}" not in self.d]
+        with ThreadPoolExecutor(8) as ex:
+            for i, ext in zip(todo, ex.map(lambda i: tmdb(f"/{kind}/{i}/external_ids") or {}, todo)):
+                self.d[f"{kind}:{i}"] = ext.get("imdb_id") or ""
+
+    def save(self):
+        os.makedirs(os.path.dirname(self.path), exist_ok=True)
+        json.dump(self.d, open(self.path, "w"), sort_keys=True, separators=(",", ":"))
+
+
+IMDB = None
+
+
+def item(kind, r):
+    """TMDB result -> catalog row (needs an IMDb id; Nuvio and the posters work on IMDb ids)."""
+    imdb = IMDB.get(kind, r["id"])
+    if not imdb:
+        return None
+    date = r.get("release_date") or r.get("first_air_date") or ""
+    return dict(imdb=imdb, tmdb=r["id"], kind=kind, name=r.get("title") or r.get("name"), year=date[:4],
+                date=date, votes=r.get("vote_count", 0), backdrop=r.get("backdrop_path"), poster=r.get("poster_path"))
+
+
+def rows(kind, results, limit=LIMIT):
+    IMDB.prefetch(kind, [r["id"] for r in results[:int(limit * 1.5)]])
+    out, seen = [], set()
+    for r in results:
+        if r["id"] in seen:
+            continue
+        seen.add(r["id"])
+        x = item(kind, r)
+        if x:
+            out.append(x)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def discover(kind, params, pages=5, limit=LIMIT):
+    res = []
+    for page in range(1, pages + 1):
+        d = tmdb(f"/discover/{kind}", page=page, include_adult="false", **params) or {}
+        res += d.get("results", [])
+        if page >= d.get("total_pages", 0) or len(res) >= limit * 1.3:
+            break
+    return rows(kind, res, limit)
+
+
+def released(r, today):
+    d = r.get("release_date") or r.get("first_air_date") or ""
+    return bool(d) and d <= today.isoformat()
+
+
+# ---------------------------------------------------------------- resolvers
+def find_person(name, dept):
+    res = (tmdb("/search/person", query=name) or {}).get("results", [])
+    exact = [r for r in res if norm(r["name"]) == norm(name)] or res
+    exact.sort(key=lambda r: (r.get("known_for_department") != dept, -r.get("popularity", 0)))
+    return exact[0] if exact else None
+
+
+def find_keywords(names):
+    ids = []
+    for n in names:
+        for page in (1, 2):
+            d = tmdb("/search/keyword", query=n, page=page) or {}
+            ids += [str(r["id"]) for r in d.get("results", []) if norm(r["name"]) == norm(n)]
+            if page >= d.get("total_pages", 0):
+                break
+    return "|".join(dict.fromkeys(ids))
+
+
+def find_collection(name):
+    res = (tmdb("/search/collection", query=name) or {}).get("results", [])
+    exact = [r for r in res if norm(r["name"]) == norm(name)]
+    return (exact or res or [None])[0], bool(exact)
+
+
+def find_series(name):
+    res = (tmdb("/search/tv", query=name) or {}).get("results", [])
+    exact = [r for r in res if norm(r["name"]) == norm(name)]
+    exact.sort(key=lambda r: -r.get("popularity", 0))
+    return (exact or res or [None])[0], bool(exact)
+
+
+# ---------------------------------------------------------------- card builders: return (movies, series, art, notes)
+def person_card(entry, today, director):
+    dept = "Directing" if director else "Acting"
+    p = find_person(entry["name"], dept)
+    if not p:
+        raise LookupError(f"person '{entry['name']}' not found")
+    cr = tmdb(f"/person/{p['id']}/combined_credits") or {}
+    pool = cr.get("crew", []) if director else cr.get("cast", [])
+    mv, tv = [], []
+    for c in pool:
+        g = set(c.get("genre_ids") or [])
+        if not released(c, today) or 16 in g:
+            continue
+        if director:
+            if c["media_type"] == "movie" and c.get("job") == "Director":
+                mv.append(c)
+            elif c["media_type"] == "tv" and c.get("job") in ("Director", "Creator") and not g & {99, 10763, 10764, 10767}:
+                tv.append(c)
+        else:
+            if SELF.search(c.get("character") or ""):
+                continue
+            if c["media_type"] == "movie" and 99 not in g and c.get("vote_count", 0) >= 20:
+                mv.append(c)
+            elif (c["media_type"] == "tv" and not g & {99, 10763, 10764, 10766, 10767}
+                  and (c.get("episode_count") or 0) >= 3 and c.get("vote_count", 0) >= 10):
+                tv.append(c)
+    mv.sort(key=lambda c: -c.get("vote_count", 0))
+    tv.sort(key=lambda c: -c.get("vote_count", 0))
+    m, s = rows("movie", mv), rows("tv", tv)
+    top = next((x for x in m + s if x["backdrop"]), None)
+    what = "Directorial catalog" if director else "Filmography"
+    a = dict(title=p["name"], subtitle=f"{what} · {len(m) + len(s)} titles", portrait=p.get("profile_path"),
+             backdrop=top and top["backdrop"])
+    return m, s, a, [f"TMDB person {p['id']} {p['name']} ({p.get('known_for_department')})"]
+
+
+def studio_card(entry, today):
+    notes, ids = [], []
+    for cid in entry.get("company", []):
+        c = tmdb(f"/company/{cid}")
+        if c and (norm(entry["name"]) in norm(c["name"]) or norm(c["name"]) in norm(entry["name"])
+                  or len(entry.get("company", [])) > 1):
+            ids.append(cid)
+            notes.append(f"company {cid} = {c['name']}")
+        else:
+            notes.append(f"WARNING company {cid} is '{c and c['name']}', not '{entry['name']}'")
+    if not ids:
+        res = (tmdb("/search/company", query=entry["name"]) or {}).get("results", [])
+        res = [r for r in res if norm(r["name"]) == norm(entry["name"])]
+        if not res:
+            raise LookupError(f"company '{entry['name']}' not found")
+        ids = [res[0]["id"]]
+        notes.append(f"company found by name: {ids[0]}")
+    comp = "|".join(map(str, ids))
+    m = discover("movie", {"with_companies": comp, "sort_by": "vote_count.desc", "vote_count.gte": 50,
+                           "without_genres": NO_TOON_M, "primary_release_date.lte": today.isoformat()})
+    s = discover("tv", {"with_companies": comp, "sort_by": "vote_count.desc", "vote_count.gte": 10,
+                        "without_genres": NOISE_TV})
+    logo = (tmdb(f"/company/{ids[0]}") or {}).get("logo_path")
+    top = next((x for x in m if x["backdrop"]), None)
+    a = dict(title=entry["name"], subtitle=f"Studio catalog · {len(m) + len(s)} titles", logo=logo,
+             backdrop=top and top["backdrop"])
+    return m, s, a, notes
+
+
+def saga_card(entry, today):
+    notes, parts, poster, back = [], [], None, None
+    for name in entry.get("collections", []):
+        col, exact = find_collection(name)
+        if not col:
+            notes.append(f"WARNING collection '{name}' not found")
+            continue
+        notes.append(f"collection {col['id']} = {col['name']}" + ("" if exact else "  (WARNING: not an exact name match)"))
+        d = tmdb(f"/collection/{col['id']}") or {}
+        poster, back = poster or d.get("poster_path"), back or d.get("backdrop_path")
+        parts += [p for p in d.get("parts", []) if released(p, today)]
+    parts.sort(key=lambda p: p.get("release_date") or "9999")
+    shows = []
+    for name in entry.get("series", []):
+        t, exact = find_series(name)
+        if t and exact and released(t, today):
+            shows.append(t)
+            notes.append(f"series {t['id']} = {t['name']}")
+        else:
+            notes.append(f"WARNING series '{name}' not found")
+    shows.sort(key=lambda t: t.get("first_air_date") or "9999")
+    m, s = rows("movie", parts), rows("tv", shows)
+    a = dict(title=entry["name"] if "saga" in entry["name"].lower() else entry["name"] + " Saga",
+             subtitle=f"In release order · {len(m) + len(s)} titles", poster=poster, backdrop=back)
+    return m, s, a, notes
+
+
+def awards_catalog(typ, cid):
+    path = os.path.join(ROOT, "catalog", typ, f"{cid}.json")
+    metas = json.load(open(path))["metas"] if os.path.exists(path) else []
+    return [dict(imdb=x["id"], tmdb=None, kind="movie" if typ == "movie" else "tv", name=x["name"],
+                 year=x.get("releaseInfo", ""), date="", votes=0, backdrop=None, poster=None) for x in metas]
+
+
+def pulse_theme(pool, today):
+    md = today.strftime("%m-%d")
+    themes = sorted(pool["pulse"], key=lambda t: t["start"])
+    cur = [t for t in themes if t["start"] <= md]
+    t = dict(cur[-1] if cur else themes[-1])
+    best_year = today.year if today.month == 12 else today.year - 1
+    t["title"] = t["title"].format(best_year=best_year)
+    t["_best_year"] = best_year
+    return t
+
+
+def pulse_card(t, today):
+    notes = []
+    if t.get("awards_movie"):
+        m = awards_catalog("movie", t["awards_movie"])
+        s = awards_catalog("series", t["awards_series"]) if t.get("awards_series") else []
+        top = None
+        for x in m[:5]:
+            f = tmdb(f"/find/{x['imdb']}", external_source="imdb_id") or {}
+            hit = (f.get("movie_results") or [None])[0]
+            if hit and hit.get("backdrop_path"):
+                top = hit["backdrop_path"]
+                break
+        a = dict(title=t["title"], subtitle=f"{t['subtitle']} · {len(m) + len(s)} titles", backdrop=top)
+        return m, s, a, ["from the awards catalogs"]
+    base_m = {"sort_by": "vote_count.desc", "vote_count.gte": 150, "with_original_language": "en",
+              "without_genres": NO_TOON_M, "primary_release_date.lte": today.isoformat()}
+    base_t = {"sort_by": "vote_count.desc", "vote_count.gte": 30, "with_original_language": "en",
+              "without_genres": NOISE_TV}
+    if t.get("best_year"):
+        y = t["_best_year"]
+        base_m.update({"primary_release_date.gte": f"{y}-01-01", "primary_release_date.lte": f"{y}-12-31",
+                       "sort_by": "vote_average.desc", "vote_count.gte": 300})
+        base_t.update({"first_air_date.gte": f"{y}-01-01", "first_air_date.lte": f"{y}-12-31",
+                       "sort_by": "vote_average.desc", "vote_count.gte": 80})
+    kw_m = find_keywords(t.get("keywords", [])) if t.get("keywords") else ""
+    kw_t = find_keywords(t["keywords_series"]) if t.get("keywords_series") else kw_m
+    notes.append(f"keywords movie={kw_m or '-'} series={kw_t or '-'}")
+    pm = {**base_m, **({"with_keywords": kw_m} if kw_m else {}), **t.get("movie", {})}
+    pt = {**base_t, **({"with_keywords": kw_t} if kw_t else {}), **t.get("series", {})}
+    m = discover("movie", pm)
+    s = discover("tv", pt) if (kw_t or t.get("series") or t.get("best_year")) else []
+    top = next((x for x in m if x["backdrop"]), None)
+    a = dict(title=t["title"], subtitle=f"{t['subtitle']} · {len(m) + len(s)} titles", backdrop=top and top["backdrop"])
+    return m, s, a, notes
+
+
+def daily_cards(today):
+    d = lambda n: (today - dt.timedelta(days=n)).isoformat()
+    t = today.isoformat()
+    out = {}
+    out["fresh"] = (
+        discover("movie", {"with_release_type": "4|5", "region": "US", "release_date.gte": d(60), "release_date.lte": t,
+                           "sort_by": "popularity.desc", "with_original_language": "en", "without_genres": NO_TOON_M,
+                           "vote_count.gte": 3}, pages=3, limit=50),
+        discover("tv", {"first_air_date.gte": d(45), "first_air_date.lte": t, "sort_by": "popularity.desc",
+                        "with_original_language": "en", "without_genres": NOISE_TV, "vote_count.gte": 2},
+                 pages=3, limit=50))
+    # charts: animation and every language allowed (same exception as the Top 10 charts)
+    out["boxoffice"] = (
+        discover("movie", {"primary_release_date.gte": d(365), "primary_release_date.lte": t,
+                           "sort_by": "revenue.desc", "vote_count.gte": 50}, pages=2, limit=40),
+        discover("movie", {"sort_by": "revenue.desc", "vote_count.gte": 1000}, pages=5))
+    out["certified"] = (
+        discover("movie", {"primary_release_date.gte": d(730), "primary_release_date.lte": t,
+                           "vote_average.gte": 7.2, "vote_count.gte": 400, "sort_by": "vote_average.desc",
+                           "with_original_language": "en", "without_genres": NO_TOON_M}, pages=3, limit=60),
+        discover("tv", {"first_air_date.gte": d(1095), "first_air_date.lte": t, "vote_average.gte": 7.8,
+                        "vote_count.gte": 150, "sort_by": "vote_average.desc", "with_original_language": "en",
+                        "without_genres": NOISE_TV}, pages=3, limit=60))
+    return out
+
+
+# ---------------------------------------------------------------- rotation
+def period_of(pool, today):
+    return (today - dt.date.fromisoformat(pool["anchor"])).days // pool["period_days"]
+
+
+def candidates(entries, hist, today):
+    """Seasonal entries first (not shown in the last 180 days), then the least recently shown others."""
+    def last(e):
+        return hist.get(e["name"], "0000-00-00")
+    cutoff = (today - dt.timedelta(days=180)).isoformat()
+    seasonal = [e for e in entries if today.month in e.get("months", []) and last(e) < cutoff]
+    rest = [e for e in entries if not e.get("months")]
+    seasonal.sort(key=last)
+    rest.sort(key=last)  # stable: pool order breaks ties
+    rest += sorted([e for e in entries if e.get("months") and e not in seasonal], key=last)
+    return seasonal + rest
+
+
+def build_rotating(slot, pool, state, today, period, log):
+    st = state.setdefault("cards", {}).setdefault(slot, {})
+    hist = state.setdefault("history", {}).setdefault(slot, {})
+    entries = pool[slot]
+    by_name = {e["name"]: e for e in entries}
+    pin = state.get("pin", {}).get(slot)
+    if pin and pin in by_name:
+        order = [by_name[pin]]
+    elif st.get("period") == period and st.get("subject") in by_name:
+        order = [by_name[st["subject"]]]
+    else:
+        order = candidates(entries, hist, today)
+    fn = {"headliner": lambda e: person_card(e, today, False), "visionary": lambda e: person_card(e, today, True),
+          "powerhouse": lambda e: studio_card(e, today), "saga": lambda e: saga_card(e, today)}[slot]
+    for e in order[:15]:
+        try:
+            m, s, a, notes = fn(e)
+        except LookupError as err:
+            log.append(f"- {slot}: skipped {e['name']}: {err}")
+            continue
+        if len(m) < 4:
+            log.append(f"- {slot}: skipped {e['name']}: only {len(m)} movies")
+            continue
+        if st.get("subject") != e["name"]:
+            hist[e["name"]] = today.isoformat()
+        st.update(subject=e["name"], period=period)
+        return e["name"], m, s, a, notes
+    raise RuntimeError(f"{slot}: no usable subject")
+
+
+# ---------------------------------------------------------------- output
+def meta(x, typ):
+    return {"id": x["imdb"], "type": typ, "name": x["name"], "releaseInfo": x["year"],
+            "poster": f"https://images.metahub.space/poster/medium/{x['imdb']}/img", "posterShape": "poster"}
+
+
+def write_catalog(typ, cid, items):
+    os.makedirs(P("catalog", typ), exist_ok=True)
+    json.dump({"metas": [meta(x, typ) for x in items]}, open(P("catalog", typ, f"{cid}.json"), "w", encoding="utf-8"),
+              ensure_ascii=False)
+
+
+def make_art(slot, a, key, state, force=False):
+    st = state.setdefault("art", {})
+    have = os.path.exists(P("art", slot, "cover.jpg"))
+    if have and st.get(slot) == key and not force:
+        return False
+    c = CARDS[slot]
+    art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=c["tag"], accent=c["accent"], title=a["title"],
+              subtitle=a["subtitle"], backdrop=a.get("backdrop"), portrait=a.get("portrait"), logo=a.get("logo"),
+              poster=a.get("poster"))
+    if a.get("backdrop"):
+        art.backdrop(P("art", slot, "backdrop.jpg"), a["backdrop"])
+    st[slot] = key
+    return True
+
+
+def main():
+    global IMDB
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--date")
+    ap.add_argument("--check", action="store_true", help="resolve every pool entry, write spotlight/CHECK.md")
+    ap.add_argument("--redraw", action="store_true", help="regenerate all art")
+    args = ap.parse_args()
+    if not KEY:
+        sys.exit("TMDB_API_KEY is not set")
+    today = dt.date.fromisoformat(args.date) if args.date else dt.datetime.utcnow().date()
+    pool = json.load(open(P("pool.json"), encoding="utf-8"))
+    state_path = P("state.json")
+    state = json.load(open(state_path)) if os.path.exists(state_path) else {"pin": {}}
+    IMDB = ImdbCache()
+    if args.check:
+        return check(pool, today)
+
+    period = period_of(pool, today)
+    next_change = dt.date.fromisoformat(pool["anchor"]) + dt.timedelta(days=(period + 1) * pool["period_days"])
+    log, status, catalogs = [], [], []
+    names = {}
+    for slot in ("headliner", "visionary", "powerhouse", "saga"):
+        subject, m, s, a, notes = build_rotating(slot, pool, state, today, period, log)
+        label = CARDS[slot]["card"]
+        names[slot] = (f"{label}: {a['title']}", f"{label}: {a['title']} · Series")
+        write_catalog("movie", f"spotlight-{slot}-movies", m)
+        write_catalog("series", f"spotlight-{slot}-series", s)
+        drew = make_art(slot, a, subject, state, args.redraw)
+        status.append((label, a["title"], len(m), len(s), notes, drew))
+
+    t = pulse_theme(pool, today)
+    m, s, a, notes = pulse_card(t, today)
+    names["pulse"] = (f"{t['title']} · Movies", f"{t['title']} · Series")
+    write_catalog("movie", "spotlight-pulse-movies", m)
+    write_catalog("series", "spotlight-pulse-series", s)
+    drew = make_art("pulse", a, t["title"], state, args.redraw)
+    state.setdefault("cards", {})["pulse"] = {"subject": t["title"], "since": t["start"]}
+    status.append(("The Cultural Pulse", t["title"], len(m), len(s), notes, drew))
+
+    daily = daily_cards(today)
+    titles = {"fresh": ("Fresh Out of Theaters · New on Digital", "Fresh Out of Theaters · New Series"),
+              "boxoffice": ("Box Office · Last 12 Months", "Box Office · All-Time Champions"),
+              "certified": ("Certified Fresh · Must-See Movies", "Certified Fresh · Must-See Series")}
+    subtitles = {"fresh": "New on digital & new series", "boxoffice": "Top grossing films",
+                 "certified": "The most acclaimed of the last two years"}
+    for slot, (m, s) in daily.items():
+        names[slot] = titles[slot]
+        write_catalog("movie", f"spotlight-{slot}-movies", m)
+        write_catalog("movie" if slot == "boxoffice" else "series", f"spotlight-{slot}-" +
+                      ("alltime" if slot == "boxoffice" else "series"), s)
+        top = next((x for x in m if x["backdrop"]), None)
+        a = dict(title=CARDS[slot]["card"], subtitle=subtitles[slot], backdrop=top and top["backdrop"])
+        drew = make_art(slot, a, "static", state, args.redraw)
+        status.append((CARDS[slot]["card"], "daily", len(m), len(s), [], drew))
+
+    for slot in ("headliner", "visionary", "powerhouse", "saga", "pulse", "fresh", "boxoffice", "certified"):
+        mid = f"spotlight-{slot}-movies"
+        sid, styp = (f"spotlight-{slot}-alltime", "movie") if slot == "boxoffice" else (f"spotlight-{slot}-series", "series")
+        catalogs.append({"type": "movie", "id": mid, "name": names[slot][0]})
+        catalogs.append({"type": styp, "id": sid, "name": names[slot][1]})
+    manifest = {
+        "id": "community.oblivioustr.nuvio-spotlight",
+        "version": f"1.{period}.{today.strftime('%Y%m%d')}",
+        "name": "Nuvio Spotlight",
+        "description": "Rotating spotlights (actor, director, studio, saga, season) and daily charts, rebuilt from TMDB.",
+        "resources": ["catalog"], "types": ["movie", "series"], "idPrefixes": ["tt"],
+        "catalogs": catalogs,
+        "behaviorHints": {"configurable": False, "configurationRequired": False},
+    }
+    json.dump(manifest, open(P("manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    state["updated"] = today.isoformat()
+    json.dump(state, open(state_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2, sort_keys=True)
+    IMDB.save()
+
+    md = [f"# Spotlight status — {today.isoformat()}", "",
+          f"Next rotation (actor, director, studio, saga): **{next_change.isoformat()}**", "",
+          "| Card | Subject | Movies | Series | New art |", "|---|---|---:|---:|:-:|"]
+    md += [f"| {c} | {sub} | {nm} | {ns} | {'✓' if d else ''} |" for c, sub, nm, ns, _, d in status]
+    md += ["", "## Notes"] + [f"- **{c}**: {n}" for c, _, _, _, notes, _ in status for n in notes] + log
+    open(P("STATUS.md"), "w", encoding="utf-8").write("\n".join(md) + "\n")
+    print("\n".join(md))
+
+
+def check(pool, today):
+    md = [f"# Spotlight pool check — {today.isoformat()}", ""]
+    for slot in ("headliner", "visionary", "powerhouse", "saga"):
+        md += [f"## {CARDS[slot]['card']}", "", "| Subject | Movies | Series | Notes |", "|---|---:|---:|---|"]
+        for e in pool[slot]:
+            try:
+                fn = {"headliner": lambda: person_card(e, today, False), "visionary": lambda: person_card(e, today, True),
+                      "powerhouse": lambda: studio_card(e, today), "saga": lambda: saga_card(e, today)}[slot]
+                m, s, a, notes = fn()
+                flag = " ⚠️" if len(m) < 4 or any("WARNING" in n for n in notes) else ""
+                md.append(f"| {e['name']}{flag} | {len(m)} | {len(s)} | {'; '.join(notes)} |")
+            except Exception as err:
+                md.append(f"| {e['name']} ⚠️ | – | – | {err} |")
+        md.append("")
+    md += ["## The Cultural Pulse", "", "| Start | Theme | Movies | Series | Notes |", "|---|---|---:|---:|---|"]
+    for t in sorted(pool["pulse"], key=lambda t: t["start"]):
+        day = dt.date(today.year, int(t["start"][:2]), int(t["start"][3:]))
+        tt = pulse_theme(pool, day)
+        m, s, a, notes = pulse_card(tt, today)
+        flag = " ⚠️" if len(m) < 10 else ""
+        md.append(f"| {t['start']} | {tt['title']}{flag} | {len(m)} | {len(s)} | {'; '.join(notes)} |")
+    IMDB.save()
+    open(P("CHECK.md"), "w", encoding="utf-8").write("\n".join(md) + "\n")
+    print("\n".join(md))
+
+
+if __name__ == "__main__":
+    main()

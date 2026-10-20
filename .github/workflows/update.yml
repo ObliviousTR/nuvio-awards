@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
   issues: write
-concurrency: update
+concurrency: repo-writes
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
           git add -A
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "Automatic award update"
-          git push
+          git pull --rebase -q && git push
       - name: Open an issue with the summary
         env:
           GH_TOKEN: ${{ github.token }}
