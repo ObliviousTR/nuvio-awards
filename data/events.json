@@ -28,7 +28,8 @@
     "last_event_year": 2026,
     "award": [
       "Golden Globe Award for Best Television Series – Drama"
-    ]
+    ],
+    "type": "series"
   },
   "gg-comedy-series": {
     "page": "{ord} Golden Globe Awards",
@@ -38,7 +39,8 @@
     "last_event_year": 2026,
     "award": [
       "Golden Globe Award for Best Television Series – Musical or Comedy"
-    ]
+    ],
+    "type": "series"
   },
   "gg-limited-series": {
     "page": "{ord} Golden Globe Awards",
@@ -49,7 +51,8 @@
     "award": [
       "Golden Globe Award for Best Limited or Anthology Series or Television Film",
       "Golden Globe Award for Best Miniseries or Television Film"
-    ]
+    ],
+    "type": "series"
   },
   "gg-director": {
     "page": "{ord} Golden Globe Awards",
@@ -91,7 +94,8 @@
     "last_event_year": 2026,
     "award": [
       "Primetime Emmy Award for Outstanding Drama Series"
-    ]
+    ],
+    "type": "series"
   },
   "emmy-comedy-series": {
     "page": "{ord} Primetime Emmy Awards",
@@ -101,7 +105,8 @@
     "last_event_year": 2026,
     "award": [
       "Primetime Emmy Award for Outstanding Comedy Series"
-    ]
+    ],
+    "type": "series"
   },
   "emmy-limited-series": {
     "page": "{ord} Primetime Emmy Awards",
@@ -112,7 +117,8 @@
     "award": [
       "Primetime Emmy Award for Outstanding Limited or Anthology Series",
       "Primetime Emmy Award for Outstanding Limited Series"
-    ]
+    ],
+    "type": "series"
   },
   "cannes-palme": {
     "page": "{year} Cannes Film Festival",

@@ -52,8 +52,7 @@ def _award_link(award):
 def _from_award_category(text, award):
     """{{Award category|color|[[Award article|Label]]}} followed by '* '''''[[Winner]]'''''..."""
     for m in _award_link(award).finditer(text):
-        head = text.rfind("{{", 0, m.start())
-        if head < 0 or not re.match(r"\{\{\s*Award category", text[head:m.start()], re.I):
+        if not re.search(r"\{\{\s*Award category\s*\|[^\n]*$", text[max(0, m.start() - 250):m.start()], re.I):
             continue
         rest = text[m.end():]
         bullet = re.search(r"^\*(?!\*)(.*)$", rest, re.M)
@@ -62,24 +61,53 @@ def _from_award_category(text, award):
         line = bullet.group(1)
         hit = ITALIC_LINK.search(line) or ANY_LINK.search(line)
         if hit:
-            return hit.group(1).strip()
+            return [hit.group(1).strip()]
     return None
 
 
 def _nearest_italic(text, award):
-    """Festival style: the work link closest to the award link on the same line (lists and infobox lines first)."""
+    """Festival style: the work link closest to the award link on the same line (list and infobox lines first).
+    An award line with no work on it ('* Jury Prize:') takes the works on the '**' lines below (ties)."""
     best = None
     for m in _award_link(award).finditer(text):
         ls, le = text.rfind("\n", 0, m.start()) + 1, text.find("\n", m.end())
         line = text[ls:le if le >= 0 else len(text)]
         rank = 0 if line.lstrip()[:1] in "*|#" else 1
         pos = m.start() - ls
-        for w in ITALIC_LINK.finditer(line):
+        works = list(ITALIC_LINK.finditer(line))
+        if not works and line.lstrip().startswith("*"):
+            subs = []
+            for nxt in text[le + 1:].split("\n"):
+                if not nxt.startswith("**"):
+                    break
+                w = ITALIC_LINK.search(nxt)
+                if w:
+                    subs.append(w.group(1).strip())
+            if subs:
+                return subs
+        for w in works:
             dist = min(abs(w.start() - pos), abs(w.end() - pos))
             cand = (rank, dist, w.group(1).strip())
             if best is None or cand < best:
                 best = cand
-    return best[2] if best else None
+    return [best[2]] if best else None
+
+
+def _infobox(text, award):
+    """Ceremony infobox: | awardN_type = [[Award|..]] / | awardN_winner = ''[[Work]]'' (or plain ''Work'')."""
+    for m in re.finditer(r"\|\s*award(\d+)_type\s*=\s*(.*)", text):
+        if not _award_link(award).search(m.group(2)):
+            continue
+        w = re.search(r"\|\s*award" + m.group(1) + r"_winner\s*=\s*(.*)", text)
+        if not w:
+            continue
+        link = ITALIC_LINK.search(w.group(1)) or ANY_LINK.search(w.group(1))
+        if link:
+            return [link.group(1).strip()]
+        plain = re.search(r"''([^'\[\]]+)''", w.group(1))
+        if plain:
+            return ["plain:" + plain.group(1).strip()]
+    return None
 
 
 def _section_bold(text, section):
@@ -89,24 +117,35 @@ def _section_bold(text, section):
     end = re.search(r"\n==", text[i + len(section):])
     chunk = text[i: i + len(section) + (end.start() if end else len(text))]
     hit = BOLD_ITALIC_LINK.search(chunk)
-    return hit.group(1).strip() if hit else None
+    return [hit.group(1).strip()] if hit else None
 
 
 def _norm(s):
     return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
 
 
-def _imdb_suggest(title, year):
+TV_KINDS = {"tvSeries", "tvMiniSeries"}
+
+
+def _imdb_suggest(title, year, tv=False):
     q = urllib.parse.quote(title.lower())
     data = _get(f"https://v3.sg.media-imdb.com/suggestion/x/{q}.json")
-    for d in data.get("d", []):
-        if d.get("id", "").startswith("tt") and _norm(d.get("l", "")) == _norm(title) and \
-                (not d.get("y") or abs(int(d["y"]) - year) <= 2):
-            return d["id"]
-    return None
+    hits = [d for d in data.get("d", []) if d.get("id", "").startswith("tt") and _norm(d.get("l", "")) == _norm(title)]
+    if tv:
+        hits = [d for d in hits if d.get("qid") in TV_KINDS and (not d.get("y") or int(d["y"]) <= year)]
+        hits.sort(key=lambda d: -(d.get("y") or 0))  # the most recent show of that name that existed by then
+    else:
+        hits = [d for d in hits if not d.get("y") or abs(int(d["y"]) - year) <= 2]
+    return hits[0]["id"] if hits else None
 
 
-def imdb_for(article, year):
+def imdb_for(article, year, tv=False):
+    if article.startswith("plain:"):
+        title = article[6:]
+        imdb = _imdb_suggest(title, year, tv)
+        if imdb:
+            return imdb, title
+        raise LookupError(f"no IMDb id for '{title}'")
     q = urllib.parse.urlencode({"action": "query", "titles": article, "redirects": 1, "prop": "pageprops",
                                 "ppprop": "wikibase_item", "format": "json", "formatversion": 2})
     page = _get(f"{WP}?{q}")["query"]["pages"][0]
@@ -122,26 +161,30 @@ def imdb_for(article, year):
         label = ent.get("labels", {}).get("en", {}).get("value", label)
         if ids:
             return ids[0], label
-    imdb = _imdb_suggest(label, year)
+    imdb = _imdb_suggest(label, year, tv)
     if imdb:
         return imdb, label
     raise LookupError(f"no IMDb id for '{article}'")
 
 
-def winner(cfg, year):
+def winners(cfg, year):
+    """All winners of the catalog's award at that year's event (more than one on a tie)."""
     title = page_title(cfg, year)
     text = wikitext(title)
-    work = None
+    works = None
     for award in cfg["award"]:
         if cfg["mode"] == "section_bold":
-            work = _section_bold(text, cfg["section"]) or _nearest_italic(text, award)
+            works = _section_bold(text, cfg["section"]) or _nearest_italic(text, award)
         elif cfg["mode"] == "table":
-            work = _from_award_category(text, award) or _nearest_italic(text, award)
+            works = _from_award_category(text, award) or _infobox(text, award) or _nearest_italic(text, award)
         else:
-            work = _nearest_italic(text, award)
-        if work:
+            works = _nearest_italic(text, award)
+        if works:
             break
-    if not work:
+    if not works:
         raise LookupError(f"winner not found on '{title}'")
-    imdb, label = imdb_for(work, year)
-    return {"title": label, "imdb": imdb, "page": title, "article": work}
+    out = []
+    for work in works:
+        imdb, label = imdb_for(work, year, tv=cfg.get("type") == "series")
+        out.append({"title": label, "imdb": imdb, "page": title, "article": work})
+    return out

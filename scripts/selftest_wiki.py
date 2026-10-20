@@ -2,7 +2,7 @@
 With failures it also dumps the wikitext around the category label so the parser can be fixed."""
 import json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
-from wiki_winners import winner, wikitext, page_title
+from wiki_winners import winners, wikitext, page_title
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 events = {k: v for k, v in json.load(open(os.path.join(ROOT, "data", "events.json"))).items() if not k.startswith("_")}
@@ -19,10 +19,10 @@ dumped = set()
 for cid, cfg in events.items():
     for year in (2025, 2026):
         try:
-            w = winner(cfg, year)
-            hit = w["imdb"] in known.get(cid, set())
+            ws = winners(cfg, year)
+            hit = all(w["imdb"] in known.get(cid, set()) for w in ws)
             ok += hit; bad += not hit
-            out.append(f"- {'OK ' if hit else 'NEW'} {cid} {year}: {w['title']} {w['imdb']}  ({w['page']})")
+            out.append(f"- {'OK ' if hit else 'NEW'} {cid} {year}: " + "; ".join(f"{w['title']} {w['imdb']}" for w in ws) + f"  ({ws[0]['page']})")
             if hit:
                 continue
         except Exception as e:
