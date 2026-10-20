@@ -1,0 +1,102 @@
+{
+  "id": "community.oblivioustr.nuvio-spotlight",
+  "version": "1.20.20261020",
+  "name": "Nuvio Spotlight",
+  "description": "Rotating spotlights (actor, director, studio, saga, season) and daily charts, rebuilt from TMDB.",
+  "resources": [
+    "catalog"
+  ],
+  "types": [
+    "movie",
+    "series"
+  ],
+  "idPrefixes": [
+    "tt"
+  ],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "spotlight-headliner-movies",
+      "name": "The Headliner: Jenna Ortega"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-headliner-series",
+      "name": "The Headliner: Jenna Ortega · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-visionary-movies",
+      "name": "The Visionary: Jordan Peele"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-visionary-series",
+      "name": "The Visionary: Jordan Peele · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-powerhouse-movies",
+      "name": "The Powerhouse: Blumhouse Productions"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-powerhouse-series",
+      "name": "The Powerhouse: Blumhouse Productions · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-saga-movies",
+      "name": "The Saga: Alien Saga"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-saga-series",
+      "name": "The Saga: Alien Saga · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-pulse-movies",
+      "name": "Slashers & Masked Killers · Movies"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-pulse-series",
+      "name": "Slashers & Masked Killers · Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-fresh-movies",
+      "name": "Fresh Out of Theaters · New on Digital"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-fresh-series",
+      "name": "Fresh Out of Theaters · New Series"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-boxoffice-movies",
+      "name": "Box Office · Last 12 Months"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-boxoffice-alltime",
+      "name": "Box Office · All-Time Champions"
+    },
+    {
+      "type": "movie",
+      "id": "spotlight-certified-movies",
+      "name": "Certified Fresh · Must-See Movies"
+    },
+    {
+      "type": "series",
+      "id": "spotlight-certified-series",
+      "name": "Certified Fresh · Must-See Series"
+    }
+  ],
+  "behaviorHints": {
+    "configurable": false,
+    "configurationRequired": false
+  }
+}

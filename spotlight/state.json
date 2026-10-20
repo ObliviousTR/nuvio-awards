@@ -1,0 +1,50 @@
+{
+  "art": {
+    "boxoffice": "static",
+    "certified": "static",
+    "fresh": "static",
+    "headliner": "Jenna Ortega",
+    "powerhouse": "Blumhouse Productions",
+    "pulse": "Slashers & Masked Killers",
+    "saga": "Alien",
+    "visionary": "Jordan Peele"
+  },
+  "cards": {
+    "headliner": {
+      "period": 20,
+      "subject": "Jenna Ortega"
+    },
+    "powerhouse": {
+      "period": 20,
+      "subject": "Blumhouse Productions"
+    },
+    "pulse": {
+      "since": "10-15",
+      "subject": "Slashers & Masked Killers"
+    },
+    "saga": {
+      "period": 20,
+      "subject": "Alien"
+    },
+    "visionary": {
+      "period": 20,
+      "subject": "Jordan Peele"
+    }
+  },
+  "history": {
+    "headliner": {
+      "Jenna Ortega": "2026-10-20"
+    },
+    "powerhouse": {
+      "Blumhouse Productions": "2026-10-20"
+    },
+    "saga": {
+      "Alien": "2026-10-20"
+    },
+    "visionary": {
+      "Jordan Peele": "2026-10-20"
+    }
+  },
+  "pin": {},
+  "updated": "2026-10-20"
+}
