@@ -192,7 +192,7 @@
     {"name": "Y2K Thrillers", "from": 2000, "to": 2009, "movie": {"with_genres": "53"}, "series": {"with_genres": "9648|80"}},
     {"name": "2000s Comedies", "from": 2000, "to": 2009, "movie": {"with_genres": "35"}, "series": {"with_genres": "35"}},
     {"name": "Cold War Thrillers", "from": 1955, "to": 1991, "keywords": ["cold war"], "series": {"with_keywords_names": ["cold war"]}},
-    {"name": "Universal & Hammer Monsters", "from": 1931, "to": 1975, "movie": {"with_genres": "27", "with_companies": "33|1314", "vote_count.gte": 30}, "series": false, "months": [10]},
+    {"name": "Universal & Hammer Monsters", "from": 1931, "to": 1972, "movie": {"with_genres": "27", "with_companies": "33|1314", "vote_count.gte": 30}, "series": false, "months": [10]},
     {"name": "Golden Age of Slashers", "from": 1978, "to": 1989, "keywords": ["slasher"], "movie": {"with_genres": "27"}, "series": false, "months": [10]},
     {"name": "90s Horror Revival", "from": 1990, "to": 1999, "movie": {"with_genres": "27"}, "series": {"with_keywords_names": ["horror"]}, "months": [10]},
     {"name": "80s Christmas Classics", "from": 1980, "to": 1999, "keywords": ["christmas"], "series": false, "months": [12]}
