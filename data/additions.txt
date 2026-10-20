@@ -10,3 +10,4 @@ cannes-palme|2026|tt35410859|1401459|Fjord
 cannes-grand-prix|2026|tt37118301|848700|Minotaur
 cannes-jury-prize|2026|tt21188986|1013822|The Dreamed Adventure
 venice-golden-lion|2026|tt34888026|1511780|Woman Unknown
+tiff-peoples-choice|2026|tt35511966||La bola negra
