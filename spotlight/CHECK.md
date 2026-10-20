@@ -1,64 +1,33 @@
 # Spotlight pool check — 2026-10-20
 
-## The Living Legend
+## Retro Rewind
 
 | Subject | Movies | Series | Notes |
 |---|---:|---:|---|
-| Audrey Hepburn | 23 | 0 | TMDB person 1932 Audrey Hepburn (Acting) |
-| Humphrey Bogart | 58 | 0 | TMDB person 4110 Humphrey Bogart (Acting) |
-| Marilyn Monroe | 23 | 0 | TMDB person 3149 Marilyn Monroe (Acting) |
-| James Stewart | 61 | 3 | TMDB person 854 James Stewart (Acting) |
-| Cary Grant | 58 | 0 | TMDB person 2638 Cary Grant (Acting) |
-| Grace Kelly | 11 | 0 | TMDB person 4070 Grace Kelly (Acting) |
-| Katharine Hepburn | 35 | 0 | TMDB person 6598 Katharine Hepburn (Acting) |
-| Marlon Brando | 42 | 1 | TMDB person 3084 Marlon Brando (Acting) |
-| Paul Newman | 54 | 0 | TMDB person 3636 Paul Newman (Acting) |
-| Steve McQueen | 24 | 1 | TMDB person 13565 Steve McQueen (Acting) |
-| Jack Nicholson | 55 | 0 | TMDB person 514 Jack Nicholson (Acting) |
-| Robert Redford | 45 | 0 | TMDB person 4135 Robert Redford (Acting) |
-| Sidney Poitier | 34 | 0 | TMDB person 16897 Sidney Poitier (Acting) |
-| Elizabeth Taylor | 38 | 1 | TMDB person 3635 Elizabeth Taylor (Acting) |
-| Bette Davis | 65 | 0 | TMDB person 3380 Bette Davis (Acting) |
-| Ingrid Bergman | 30 | 0 | TMDB person 4111 Ingrid Bergman (Acting) |
-| Gregory Peck | 53 | 1 | TMDB person 8487 Gregory Peck (Acting) |
-| Gene Kelly | 25 | 1 | TMDB person 13294 Gene Kelly (Acting) |
-| Charlie Chaplin | 75 | 0 | TMDB person 13848 Charlie Chaplin (Acting) |
-| Buster Keaton | 59 | 0 | TMDB person 8635 Buster Keaton (Directing) |
-| Fred Astaire | 32 | 2 | TMDB person 30181 Fred Astaire (Acting) |
-| Henry Fonda | 59 | 1 | TMDB person 4958 Henry Fonda (Acting) |
-| John Wayne | 100 | 0 | TMDB person 4165 John Wayne (Acting) |
-| Kirk Douglas | 62 | 0 | TMDB person 2090 Kirk Douglas (Acting) |
-| Peter O'Toole | 43 | 4 | TMDB person 11390 Peter O'Toole (Acting) |
-| Dustin Hoffman | 55 | 2 | TMDB person 4483 Dustin Hoffman (Acting) |
-| Robert De Niro | 100 | 3 | TMDB person 380 Robert De Niro (Acting) |
-| Al Pacino | 63 | 3 | TMDB person 1158 Al Pacino (Acting) |
-| Sean Connery | 58 | 0 | TMDB person 738 Sean Connery (Acting) |
-| Michael Caine | 100 | 0 | TMDB person 3895 Michael Caine (Acting) |
-| Gene Hackman | 71 | 0 | TMDB person 193 Gene Hackman (Acting) |
-| Faye Dunaway | 51 | 2 | TMDB person 6450 Faye Dunaway (Acting) |
-| Jane Fonda | 43 | 2 | TMDB person 6352 Jane Fonda (Acting) |
-| Diane Keaton | 53 | 2 | TMDB person 3092 Diane Keaton (Acting) |
-| Warren Beatty | 20 | 1 | TMDB person 6449 Warren Beatty (Acting) |
-| Burt Lancaster | 67 | 0 | TMDB person 13784 Burt Lancaster (Acting) |
-| Sophia Loren | 50 | 0 | TMDB person 16757 Sophia Loren (Acting) |
-| Stanley Kubrick | 16 | 0 | TMDB person 240 Stanley Kubrick (Directing) |
-| Alfred Hitchcock | 61 | 6 | TMDB person 2636 Alfred Hitchcock (Directing) |
-| Billy Wilder | 27 | 0 | TMDB person 3146 Billy Wilder (Directing) |
-| Orson Welles | 44 | 3 | TMDB person 40 Orson Welles (Directing) |
-| John Ford | 100 | 5 | TMDB person 8500 John Ford (Directing) |
-| Frank Capra | 54 | 0 | TMDB person 2662 Frank Capra (Directing) |
-| David Lean | 17 | 0 | TMDB person 12238 David Lean (Directing) |
-| Sergio Leone | 8 | 0 | TMDB person 4385 Sergio Leone (Directing) |
-| Sidney Lumet | 57 | 21 | TMDB person 39996 Sidney Lumet (Directing) |
-| Robert Altman | 54 | 24 | TMDB person 9789 Robert Altman (Directing) |
-| Mike Nichols | 20 | 1 | TMDB person 5342 Mike Nichols (Directing) |
-| George Cukor | 52 | 0 | TMDB person 14674 George Cukor (Directing) |
-| Howard Hawks | 41 | 0 | TMDB person 11435 Howard Hawks (Directing) |
-| Elia Kazan | 19 | 0 | TMDB person 2746 Elia Kazan (Directing) |
-| William Wyler | 58 | 0 | TMDB person 10001 William Wyler (Directing) |
-| Vincent Price | 72 | 1 | TMDB person 1905 Vincent Price (Acting) |
-| Boris Karloff | 68 | 1 | TMDB person 2922 Boris Karloff (Acting) |
-| Bela Lugosi | 51 | 0 | TMDB person 1547 Bela Lugosi (Acting) |
-| Christopher Lee | 100 | 6 | TMDB person 113 Christopher Lee (Acting) |
-| Peter Cushing | 71 | 1 | TMDB person 5 Peter Cushing (Acting) |
+| Film Noir | 100 | 0 | 1940–1958; keywords=9807|207268 |
+| Screwball Comedies | 100 | 0 | 1934–1949; keywords=- |
+| Golden Age Musicals | 85 | 0 | 1933–1968; keywords=- |
+| Classic Westerns | 93 | 10 | 1939–1972; keywords=- |
+| Spaghetti Westerns | 16 | 0 | 1960–1979; keywords=156212 |
+| 50s Sci-Fi | 84 | 0 | 1950–1959; keywords=- |
+| Swinging Sixties Spy Films | 13 | 4 | 1960–1969; keywords=470|4289|5265 |
+| 70s Paranoia Thrillers | 14 | 0 | 1970–1979; keywords=10410|2340|18420 |
+| New Hollywood | 65 | 0 | 1967–1980; keywords=- |
+| 70s Disaster Movies | 13 | 0 | 1970–1980; keywords=10617|189411 |
+| 80s Action Heroes | 100 | 35 | 1980–1989; keywords=- |
+| 80s Teen Movies | 44 | 5 | 1980–1989; keywords=6270|296608|10683 |
+| 80s Sci-Fi & Fantasy | 100 | 33 | 1980–1989; keywords=- |
+| Buddy Cop Classics | 27 | 3 | 1980–1999; keywords=167316 |
+| 90s Blockbusters | 100 | 0 | 1990–1999; keywords=- |
+| 90s Rom-Coms | 100 | 0 | 1990–1999; keywords=- |
+| 90s Crime & Indie | 100 | 35 | 1990–1999; keywords=- |
+| 90s Teen Comedies | 50 | 10 | 1994–2004; keywords=6270|296608|155722 |
+| 90s Sitcom Era | 100 | 62 | 1989–1999; keywords=- |
+| Y2K Thrillers | 100 | 100 | 2000–2009; keywords=- |
+| 2000s Comedies | 100 | 100 | 2000–2009; keywords=- |
+| Cold War Thrillers | 28 | 1 | 1955–1991; keywords=2106 |
+| Universal & Hammer Monsters | 100 | 0 | 1931–1976; keywords=- |
+| Golden Age of Slashers | 50 | 0 | 1978–1989; keywords=12339 |
+| 90s Horror Revival | 100 | 2 | 1990–1999; keywords=- |
+| 80s Christmas Classics | 41 | 0 | 1980–1999; keywords=207317 |
 
