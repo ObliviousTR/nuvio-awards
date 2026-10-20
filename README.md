@@ -45,6 +45,13 @@ https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/spotlight/manife
 - **The Headliner** (actor), **The Visionary** (director), **The Powerhouse** (studio), **The Saga** (franchise):
   a new subject every 14 days from `spotlight/pool.json`. Entries with `months` are preferred in those months
   (October horror, December holidays); otherwise the least recently shown subject comes next.
+- **Topical first (The Headliner, The Saga):** on a rotation day the star of a big film opening in cinemas
+  (7 days ago → 21 days ahead), or the franchise a new film belongs to, comes before the pool order. Nothing shown
+  in the last 365 days is picked this way. The card says why ("Now in theaters", "New chapter in theaters").
+- **The pool grows by itself:** once a week `scripts/spotlight_live.py` adds up to 3 candidates per card to
+  `spotlight/pool_auto.json` (stars and directors of popular new films, studios behind the recent box office,
+  franchises with a new chapter), each checked against the same minimums as the rotation. New entries have never been
+  shown, so they come up soon. To drop one for good, move its name to `"removed"` in `pool_auto.json`.
 - **The Cultural Pulse:** the seasonal calendar in `pool.json` (`pulse`), switching on each theme's start date.
 - **Fresh Out of Theaters, Box Office Champions, Certified Fresh & Must-See:** rebuilt every day.
 - Covers (`spotlight/art/<card>/cover.jpg`) and hero backdrops are generated when a subject changes; their URLs

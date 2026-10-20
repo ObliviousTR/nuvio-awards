@@ -15,6 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spotlight_art as art
+import spotlight_live as live
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SP = os.path.join(ROOT, "spotlight")
@@ -91,6 +92,7 @@ class ImdbCache:
 
 
 IMDB = None
+AUTO = {}
 
 
 def item(kind, r):
@@ -385,6 +387,7 @@ def build_rotating(slot, pool, state, today, period, log, force_next=False, forc
     by_name = {norm(e["name"]): e for e in entries}
     by_name.update({norm(e["title"]): e for e in entries if e.get("title")})
     pin = state.get("pin", {}).get(slot)
+    fresh_pick = False  # True when a new subject is being chosen by the rotation itself
     if force_subject:
         e = by_name.get(norm(force_subject))
         if not e and slot == "saga":
@@ -394,12 +397,24 @@ def build_rotating(slot, pool, state, today, period, log, force_next=False, forc
     elif force_next:
         order = [e for e in candidates(entries, hist, today) if e["name"] != st.get("subject")]
         log.append(f"- {slot}: skipped to the next subject by hand")
+        fresh_pick = True
     elif pin and norm(pin) in by_name:
         order = [by_name[norm(pin)]]
     elif st.get("period") == period and st.get("subject"):
         order = [by_name.get(norm(st["subject"])) or {"name": st["subject"]}]
     else:
         order = candidates(entries, hist, today)
+        fresh_pick = True
+    reasons = {}
+    if fresh_pick and slot in live.TOPICAL_SLOTS:
+        tops = [(e, why) for e, why in live.topical(slot, tmdb, today, entries, hist, state)
+                if e["name"] != st.get("subject")]
+        reasons = {e["name"]: why for e, why in tops}
+        order = [e for e, _ in tops] + [e for e in order if e["name"] not in reasons]
+        if tops:
+            log.append(f"- {slot}: topical: " + "; ".join(f"{e['name']} ({why})" for e, why in tops[:5]))
+    elif st.get("reason") and order and order[0]["name"] == st.get("subject"):
+        reasons = {st["subject"]: st["reason"]}
     fn = {"headliner": lambda e: person_card(e, today, False), "visionary": lambda e: person_card(e, today, True),
           "powerhouse": lambda e: studio_card(e, today), "saga": lambda e: saga_card(e, today)}[slot]
     for e in order[:15]:
@@ -413,7 +428,15 @@ def build_rotating(slot, pool, state, today, period, log, force_next=False, forc
             continue
         if st.get("subject") != e["name"]:
             hist[e["name"]] = today.isoformat()
-        st.update(subject=e["name"], period=period)
+        why = reasons.get(e["name"])
+        st.update(subject=e["name"], period=period, reason=why)
+        if why:
+            a["tag"] = "Now in theaters" if why.startswith("In theaters") else "Coming to theaters" \
+                if why.startswith("Coming") else "New chapter in theaters"
+            a["subtitle"] = why.split(": ", 1)[-1].split(" · ", 1)[-1] + " · " + a["subtitle"]
+            notes = notes + [f"topical pick: {why}"]
+        if e.get("auto") and not any(norm(x["name"]) == norm(e["name"]) for x in AUTO.get(slot, [])):
+            AUTO.setdefault(slot, []).append({**e, "added": today.isoformat()})
         return e["name"], m, s, a, notes
     raise RuntimeError(f"{slot}: no usable subject")
 
@@ -440,7 +463,7 @@ def make_art(slot, a, key, state, force=False):
     taken = {v for k, v in shown.items() if k != slot}
     a["backdrop"] = next((b for b in a.get("backdrops", []) if b not in taken), (a.get("backdrops") or [None])[0])
     shown[slot] = a["backdrop"]
-    art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=c["tag"], accent=c["accent"], title=a["title"],
+    art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=a.get("tag", c["tag"]), accent=c["accent"], title=a["title"],
               subtitle=a["subtitle"], backdrop=a.get("backdrop"), portrait=a.get("portrait"), logo=a.get("logo"),
               poster=a.get("poster"))
     if a.get("backdrop"):
@@ -450,7 +473,7 @@ def make_art(slot, a, key, state, force=False):
 
 
 def main():
-    global IMDB
+    global IMDB, AUTO
     ap = argparse.ArgumentParser()
     ap.add_argument("--date")
     ap.add_argument("--check", action="store_true", help="resolve every pool entry, write spotlight/CHECK.md")
@@ -462,6 +485,8 @@ def main():
         sys.exit("TMDB_API_KEY is not set")
     today = dt.date.fromisoformat(args.date) if args.date else dt.datetime.utcnow().date()
     pool = json.load(open(P("pool.json"), encoding="utf-8"))
+    auto_path = P("pool_auto.json")
+    AUTO = json.load(open(auto_path, encoding="utf-8")) if os.path.exists(auto_path) else {"removed": []}
     state_path = P("state.json")
     state = json.load(open(state_path)) if os.path.exists(state_path) else {"pin": {}}
     IMDB = ImdbCache()
@@ -488,9 +513,13 @@ def main():
         i = next(k for k, t in enumerate(themes) if t["title"] == cur)
         state["pulse_override"] = {"theme": themes[(i + 1) % len(themes)]["title"],
                                    "until": next_start(pool, today).isoformat()}
+    log, status, catalogs = [], [], []
+    live.grow(tmdb, today, pool, AUTO, state, log)
+    removed = {norm(x) for x in AUTO.get("removed", [])}
+    for slot in rotating:  # the rotation draws from both pools
+        pool[slot] = pool[slot] + [e for e in AUTO.get(slot, []) if norm(e["name"]) not in removed]
     period = period_of(pool, today)
     next_change = dt.date.fromisoformat(pool["anchor"]) + dt.timedelta(days=(period + 1) * pool["period_days"])
-    log, status, catalogs = [], [], []
     names = {}
     for slot in rotating:
         subject, m, s, a, notes = build_rotating(slot, pool, state, today, period, log, slot in nxt, forced.get(slot))
@@ -553,6 +582,7 @@ def main():
     }
     json.dump(manifest, open(P("manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     state["updated"] = today.isoformat()
+    json.dump(AUTO, open(auto_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump(state, open(state_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2, sort_keys=True)
     IMDB.save()
 

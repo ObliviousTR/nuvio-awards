@@ -154,7 +154,10 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
         d.text((left, y), ln, font=title_font, fill=(255, 255, 255))
         y += lh
     y += 14
-    spaced(d, (left, y), subtitle.upper(), sub_font, (190, 190, 196), 2)
+    sub = subtitle.upper()
+    while sub_font.size > 13 and sum(d.textlength(ch, font=sub_font) + 2 for ch in sub) > W - left - 60:
+        sub_font = font("Medium", sub_font.size - 1)
+    spaced(d, (left, y), sub, sub_font, (190, 190, 196), 2)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     base.save(out_path, "JPEG", quality=86, optimize=True, progressive=True)
 
