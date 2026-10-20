@@ -12,7 +12,7 @@ jobs:
       - run: pip install -q pillow
       - env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-        run: python3 scripts/_fav_samples.py
+        run: python3 scripts/_scratch.py
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
