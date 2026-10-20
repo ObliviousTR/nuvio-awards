@@ -236,3 +236,36 @@ def zoomed(im, z):
     cw, ch = round(w / (1 + z)), round(h / (1 + z))
     x, y = (w - cw) // 2, (h - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w, h), Image.LANCZOS)
+
+
+def soft_fade(base, start=0.5, top=170):
+    """Light bottom gradient only (the Favourites style: no vignette, art stays bright)."""
+    shade = Image.new("RGB", (W, H), (0, 0, 0))
+    m = Image.new("L", (1, H))
+    for y in range(H):
+        f = (y / H - start) / (1 - start)
+        m.putpixel((0, y), 0 if f <= 0 else round(top * f ** 1.4))
+    return Image.composite(shade, base, m.resize((W, H)))
+
+
+def put_logo(base, lg, maxw=560, maxh=190, bottom=58):
+    """Logo centred near the bottom, with a soft shadow."""
+    lg = lg.convert("RGBA")
+    w0, h0 = base.size
+    k = w0 / W
+    r = min(maxw * k / lg.width, maxh * k / lg.height)
+    lg = lg.resize((round(lg.width * r), round(lg.height * r)), Image.LANCZOS)
+    x, y = (w0 - lg.width) // 2, round(h0 - bottom * k - lg.height)
+    pad = round(40 * k)
+    sh = Image.new("RGBA", (lg.width + 2 * pad, lg.height + 2 * pad), (0, 0, 0, 0))
+    sh.paste(Image.new("RGBA", lg.size, (0, 0, 0, 255)), (pad, pad), lg.getchannel("A").point(lambda v: v * 0.75))
+    sh = sh.filter(ImageFilter.GaussianBlur(16 * k))
+    out = base.convert("RGBA")
+    out.alpha_composite(sh, (x - pad, y - round(34 * k)))
+    out.alpha_composite(lg, (x, y))
+    return out.convert("RGB")
+
+
+def graded(im, b=0.92, c=1.05, size=(W, H)):
+    im = cover_fit(im.convert("RGB"), *size)
+    return ImageEnhance.Contrast(ImageEnhance.Brightness(im).enhance(b)).enhance(c)

@@ -61,7 +61,9 @@ https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/spotlight/manife
 - A person is never on two cards at the same time.
 - **The Cultural Pulse:** the seasonal calendar in `pool.json` (`pulse`), switching on each theme's start date.
 - **Fresh Out of Theaters, Box Office Champions, Certified Fresh & Must-See:** rebuilt every day (shown in the Discover row).
-- `scripts/favourites_art.py` draws the One Pace and Live Sport covers for the Favourites row (credits: `spotlight/art/CREDITS.md`).
+- `scripts/favourites_art.py` draws the Favourites row (Doctor Who, One Pace, Live Sport, My Simkl): key art + logo covers,
+  hover GIFs and backdrops. Every source image and GIF is mirrored in `spotlight/art/favourites/_sources/`, so nothing
+  depends on Pinterest or Giphy; files are only built when missing (or with `redraw`). Credits: `spotlight/art/CREDITS.md`.
 - Covers (`spotlight/art/<card>/cover.jpg`) and hero backdrops are generated when a subject changes; their URLs
   never change. `spotlight/STATUS.md` shows what is on now and when the next rotation is.
 

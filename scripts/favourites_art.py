@@ -1,87 +1,143 @@
-"""Covers for the Favourites row, in the Spotlight style. Runs in the Spotlight workflow; skips files that exist
-(--redraw to rebuild). Doctor Who keeps the user's own cover and GIF; One Pace keeps its GIF.
-  One Pace:   One Piece backdrop from TMDB (textless), our text block.
-  Live Sport: night stadium photo from Wikimedia Commons (free licence, credited in spotlight/art/CREDITS.md),
-              LIVE badge; hover GIF = slow zoom with a pulsing LIVE dot.
+"""Favourites row art: key art + the show's logo (no vignette), hover GIFs, hero backdrops.
+
+Everything is kept in this repo so nothing depends on Pinterest, Giphy or other hosts: the source images and GIFs
+are mirrored once into spotlight/art/favourites/_sources/ and every output is built from those copies. Files are
+only (re)built when missing, or with --redraw (which still uses the mirrored sources). Nothing here deletes files.
+
+  Doctor Who  the user's cover (Pinterest) + gold Whoniverse logo; hover = the user's Whoniverse ident (Giphy)
+  One Pace    One Piece crew art (TMDB) + One Pace logo (onepace.net); hover = One Piece logo opening (Funimation)
+  Live Sport  night stadium (Wikimedia Commons, CC BY 3.0) + our broadcast logo; hover = floodlit stadium fireworks
+  My Simkl    wall of trending posters (TMDB, frozen once) + our MY SIMKL logo; hover = the wall drifting
 """
-import io, json, os, sys, urllib.parse, urllib.request
+import io, json, os, re, shutil, sys, urllib.parse, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spotlight_art as art
-from spotlight import tmdb, P
 from PIL import Image, ImageEnhance
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FAV = os.path.join(ROOT, "spotlight", "art", "favourites")
+SRC = os.path.join(FAV, "_sources")
+LOGOS = os.path.join(ROOT, "spotlight", "logos")
+UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/124 Safari/537.36 nuvio-awards"}
 COMMONS = "File:Germany and Argentina face off in the final of the World Cup 2014 -2014-07-13 (5).jpg"
-ONEPACE_BACKDROP = "/6fRwRD7GdCfg6owzmCT3VgQtowl.jpg"  # TMDB file_path of the chosen One Piece backdrop (see onepace/candidates.jpg)
-UA = {"User-Agent": "nuvio-awards (github.com/ObliviousTR/nuvio-awards)"}
+SOURCES = {
+    "doctorwho-art.jpg": "https://i.pinimg.com/1200x/ce/6d/19/ce6d198219d333e44c15ec35bd18e1f9.jpg",
+    "doctorwho-hover.gif": "https://media.giphy.com/media/8dxHohVIpGxGPldCS9/giphy.gif",
+    "onepace-art.jpg": "https://image.tmdb.org/t/p/original/6fRwRD7GdCfg6owzmCT3VgQtowl.jpg",
+    "onepace-hover.gif": "https://media.giphy.com/media/D0jGorbyCnZyE/giphy.gif",
+    "livesport-hover.gif": "https://media.giphy.com/media/cmMzVX4LV157ubMD6V/giphy.gif",
+}
+W, H = art.W, art.H
 
 
-def commons(title, width=1920):
-    q = {"action": "query", "titles": title, "prop": "imageinfo", "iiprop": "url|extmetadata",
-         "iiurlwidth": str(width), "iiextmetadatafilter": "Artist|LicenseShortName|LicenseUrl", "format": "json"}
-    d = json.loads(urllib.request.urlopen(urllib.request.Request(
-        "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(q), headers=UA), timeout=60).read())
+def fetch(url):
+    return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=120).read()
+
+
+def source(name):
+    """Local mirror of a source file (downloaded once, then always read from the repo)."""
+    path = os.path.join(SRC, name)
+    if not os.path.exists(path):
+        os.makedirs(SRC, exist_ok=True)
+        data = commons_image() if name == "livesport-art.jpg" else fetch(SOURCES[name])
+        open(path, "wb").write(data)
+    return path
+
+
+def commons_image():
+    q = {"action": "query", "titles": COMMONS, "prop": "imageinfo", "iiprop": "url|extmetadata", "iiurlwidth": "1920",
+         "iiextmetadatafilter": "Artist|LicenseShortName|LicenseUrl", "format": "json"}
+    d = json.loads(fetch("https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(q)))
     ii = next(iter(d["query"]["pages"].values()))["imageinfo"][0]
-    img = Image.open(io.BytesIO(urllib.request.urlopen(urllib.request.Request(ii["thumburl"], headers=UA), timeout=120).read()))
     meta = {k: v.get("value", "") for k, v in ii.get("extmetadata", {}).items()}
-    return img, meta, ii["descriptionurl"]
+    artist = re.sub(r"<[^>]+>", "", meta.get("Artist", "")).strip()
+    open(os.path.join(ROOT, "spotlight", "art", "CREDITS.md"), "w", encoding="utf-8").write(
+        "# Image credits\n\n"
+        f"- **Live Sport** cover and backdrop: “{COMMONS[5:]}” by {artist}, {meta.get('LicenseShortName', '')} "
+        f"({meta.get('LicenseUrl', '')}), via Wikimedia Commons: {ii['descriptionurl']}. Cropped, graded and overlaid "
+        "with a logo.\n"
+        "- Doctor Who, One Pace and Live Sport hover GIFs and the Doctor Who cover art were chosen by the user "
+        "(Giphy / Pinterest) and are mirrored in `favourites/_sources/` so they cannot disappear.\n"
+        "- Whoniverse logo: Wikimedia Commons (File:Whoniverse.svg); One Pace logo: onepace.net; Simkl glyph: "
+        "Simple Icons (CC0).\n"
+        "- Other covers use images from The Movie Database (TMDB). This product uses the TMDB API but is not "
+        "endorsed or certified by TMDB.\n")
+    return fetch(ii["thumburl"])
 
 
-def contact_sheet(imgs, path, tw=480, th=270):
-    """Numbered preview of backdrop candidates (file paths in the caption file next to it)."""
-    from PIL import ImageDraw
-    sheet = Image.new("RGB", (4 * tw, ((len(imgs) + 3) // 4) * th), (0, 0, 0))
-    d = ImageDraw.Draw(sheet)
-    for i, b in enumerate(imgs):
-        im = art.fetch(b["file_path"], "w780")
-        if im:
-            sheet.paste(art.cover_fit(im.convert("RGB"), tw, th), ((i % 4) * tw, (i // 4) * th))
-        d.text(((i % 4) * tw + 8, (i // 4) * th + 8), str(i), fill=(255, 255, 0))
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    sheet.save(path, "JPEG", quality=80)
-    open(path.replace(".jpg", ".txt"), "w").write("\n".join(f"{i} {b['file_path']}" for i, b in enumerate(imgs)))
+def save_jpg(im, *path, q=88):
+    p = os.path.join(FAV, *path)
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    im.save(p, "JPEG", quality=q, optimize=True, progressive=True)
 
 
-def darken(im, b=0.6):
-    return ImageEnhance.Brightness(art.cover_fit(im.convert("RGB"), art.W, art.H)).enhance(b)
+def want(*path, redraw=False):
+    return redraw or not os.path.exists(os.path.join(FAV, *path))
+
+
+def copy_hover(name, folder):
+    dst = os.path.join(FAV, folder, "hover.gif")
+    if not os.path.exists(dst):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.copyfile(source(name), dst)
+
+
+def logo(name):
+    return Image.open(os.path.join(LOGOS, name))
+
+
+def simkl_wall(size=(W, H), shift=0.0):
+    """Tilted wall of posters in natural colour; shift (0..1) slides it along the tilt for the hover."""
+    wall_path = os.path.join(SRC, "mysimkl-wall.png")
+    if not os.path.exists(wall_path):
+        from spotlight import tmdb
+        posters = []
+        for p in ("/trending/movie/week", "/trending/tv/week"):
+            posters += [r["poster_path"] for r in (tmdb(p) or {}).get("results", []) if r.get("poster_path")]
+        pw, ph, gap, cols, rows = 170, 255, 16, 12, 7
+        wall = Image.new("RGB", (cols * (pw + gap), rows * (ph + gap)), (12, 12, 16))
+        imgs = [im for im in (art.fetch(p, "w342") for p in posters[:40]) if im]
+        for i in range(cols * (rows + 1)):
+            im = imgs[i % len(imgs)].convert("RGB").resize((pw, ph), Image.LANCZOS)
+            c, r = i % cols, i // cols
+            wall.paste(im, (c * (pw + gap), r * (ph + gap) - (ph // 2 if c % 2 else 0)))
+        os.makedirs(SRC, exist_ok=True)
+        wall.save(wall_path)
+    wall = Image.open(wall_path).convert("RGB").rotate(-12, resample=Image.BICUBIC, fillcolor=(12, 12, 16))
+    x = (wall.width - W) // 2
+    y = (wall.height - H) // 2 - round(120 * shift)
+    crop = wall.crop((x, y, x + W, y + H))
+    return ImageEnhance.Brightness(crop).enhance(0.82).resize(size, Image.LANCZOS)
 
 
 def main(redraw=False):
-    out = P("art", "favourites")
+    # Doctor Who
+    if want("doctorwho", "cover.jpg", redraw=redraw):
+        im = art.graded(Image.open(source("doctorwho-art.jpg")))
+        save_jpg(art.put_logo(art.soft_fade(im), logo("whoniverse-gold.png"), maxw=600, maxh=190), "doctorwho", "cover.jpg")
+        save_jpg(art.graded(Image.open(source("doctorwho-art.jpg")), 1, 1, (1920, 1080)), "doctorwho", "backdrop.jpg", q=84)
+    copy_hover("doctorwho-hover.gif", "doctorwho")
     # One Pace
-    if redraw or not os.path.exists(f"{out}/onepace/cover.jpg"):
-        imgs = (tmdb("/tv/37854/images", include_image_language="null") or {}).get("backdrops", [])
-        imgs.sort(key=lambda b: (-b.get("vote_average", 0), -b.get("width", 0)))
-        if not ONEPACE_BACKDROP:
-            contact_sheet(imgs[:16], f"{out}/onepace/candidates.jpg")
-        pick = [b for b in imgs if b["file_path"] == ONEPACE_BACKDROP]
-        imgs = pick + [b for b in imgs if b not in pick]
-        art.cover(f"{out}/onepace/cover.jpg", card="One Pace", tag="Fan re-cut", title="One Pace",
-                  subtitle="One Piece · without the filler", accent="#E63946",
-                  backdrop=imgs[0]["file_path"] if imgs else None)
-        if imgs:
-            art.backdrop(f"{out}/onepace/backdrop.jpg", imgs[0]["file_path"])
+    if want("onepace", "cover.jpg", redraw=redraw) or want("onepace", "backdrop.jpg"):
+        im = art.graded(Image.open(source("onepace-art.jpg")), 0.95)
+        save_jpg(art.put_logo(art.soft_fade(im, 0.45, 190), logo("onepace.png"), maxw=520, maxh=200), "onepace", "cover.jpg")
+        save_jpg(art.graded(Image.open(source("onepace-art.jpg")), 1, 1, (1920, 1080)), "onepace", "backdrop.jpg", q=84)
+    copy_hover("onepace-hover.gif", "onepace")
     # Live Sport
-    if redraw or not os.path.exists(f"{out}/livesport/cover.jpg"):
-        photo, meta, url = commons(COMMONS)
-        base = darken(photo, 0.62)
-        kw = dict(card="Live Sport", tag="Matches · Replays · Channels", title="Live Sport",
-                  subtitle="Football · Basketball · Motorsport · Tennis · Darts", accent="#E50914")
-        os.makedirs(f"{out}/livesport", exist_ok=True)
-        art.live_pill(art.cover(None, base=base, **kw)).save(f"{out}/livesport/cover.jpg", "JPEG", quality=86,
-                                                             optimize=True, progressive=True)
-        art.cover_fit(photo.convert("RGB"), 1920, 1080).save(f"{out}/livesport/backdrop.jpg", "JPEG", quality=82)
-        art.ken_burns_gif(f"{out}/livesport/hover.gif",
-                          lambda t: art.live_pill(art.cover(None, base=art.zoomed(base, 0.07 * t), **kw),
-                                                  glow=abs(((t * 4) % 2) - 1)))
-        import re
-        artist = re.sub(r"<[^>]+>", "", meta.get("Artist", "")).strip()
-        open(P("art", "CREDITS.md"), "w", encoding="utf-8").write(
-            "# Image credits\n\n"
-            f"- **Live Sport** cover, backdrop and hover: “{COMMONS[5:]}” by {artist}, "
-            f"{meta.get('LicenseShortName', '')} ({meta.get('LicenseUrl', '')}), via Wikimedia Commons: {url}. "
-            "Cropped, darkened and overlaid with text.\n"
-            "- Other covers use images from The Movie Database (TMDB). This product uses the TMDB API but is not "
-            "endorsed or certified by TMDB.\n")
+    if want("livesport", "cover.jpg", redraw=redraw) or not os.path.exists(os.path.join(SRC, "livesport-art.jpg")):
+        photo = Image.open(source("livesport-art.jpg"))
+        im = art.graded(photo, 1.0, 1.08)
+        save_jpg(art.put_logo(art.soft_fade(im, 0.5, 180), logo("livesport-a.png"), maxw=620, maxh=150), "livesport", "cover.jpg")
+        save_jpg(art.graded(photo, 1, 1, (1920, 1080)), "livesport", "backdrop.jpg", q=84)
+    copy_hover("livesport-hover.gif", "livesport")
+    # My Simkl
+    lg = logo("mysimkl-e.png")
+    if want("mysimkl", "cover.jpg", redraw=redraw):
+        save_jpg(art.put_logo(art.soft_fade(simkl_wall(), 0.4, 200), lg, maxw=560, maxh=150), "mysimkl", "cover.jpg")
+    if want("mysimkl", "hover.gif", redraw=redraw):
+        art.ken_burns_gif(os.path.join(FAV, "mysimkl", "hover.gif"),
+                          lambda t: art.put_logo(art.soft_fade(simkl_wall(shift=t), 0.4, 200), lg, maxw=560, maxh=150),
+                          frames=30, ms=90)
     print("favourites art ok")
 
 

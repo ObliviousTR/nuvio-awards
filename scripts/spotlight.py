@@ -23,7 +23,6 @@ P = lambda *p: os.path.join(SP, *p)
 API = "https://api.themoviedb.org/3"
 KEY = os.environ.get("TMDB_API_KEY", "").strip()
 LIMIT = 100
-SIMKL_ART = "poster-wall-1"  # bump to redraw the My Simkl cover
 NOISE_TV = "16|99|10762|10763|10764|10766|10767"   # animation, docs, kids, news, reality, soap, talk
 NO_TOON_M = "16"
 MIN_MOVIES = {"headliner": 6, "visionary": 3, "powerhouse": 6, "saga": 3, "prestige": 6, "legend": 4, "retro": 10}
@@ -653,13 +652,7 @@ def main():
         drew = make_art(slot, a, "static", state, args.redraw)
         status.append((CARDS[slot]["card"], "daily", len(m), len(s), [], drew))
 
-    if state.get("art", {}).get("simkl") != SIMKL_ART or args.redraw:
-        posters = [x["poster"] for m, s in daily.values() for x in m + s if x.get("poster")]
-        c = CARDS["simkl"]
-        art.poster_wall(P("art", "simkl", "cover.jpg"), list(dict.fromkeys(posters))[:40], card=c["card"], tag=c["tag"],
-                        title="My Simkl", subtitle="Up next · Watching · Plan to watch", accent=c["accent"])
-        state.setdefault("art", {})["simkl"] = SIMKL_ART
-        status.append(("My Simkl", "cover", 0, 0, [], True))
+    # My Simkl moved to Favourites: its art is drawn by scripts/favourites_art.py
 
     for slot in ROTATING + ("pulse", "fresh", "boxoffice", "certified"):
         mid = f"spotlight-{slot}-movies"
