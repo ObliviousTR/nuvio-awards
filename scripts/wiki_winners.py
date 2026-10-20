@@ -59,6 +59,8 @@ def _from_award_category(text, award):
         if not bullet:
             continue
         line = bullet.group(1)
+        if "'''" not in line:  # not announced yet: nominees are listed without bold
+            continue
         hit = ITALIC_LINK.search(line) or ANY_LINK.search(line)
         if hit:
             return [hit.group(1).strip()]
@@ -72,7 +74,9 @@ def _nearest_italic(text, award):
     for m in _award_link(award).finditer(text):
         ls, le = text.rfind("\n", 0, m.start()) + 1, text.find("\n", m.end())
         line = text[ls:le if le >= 0 else len(text)]
-        rank = 0 if line.lstrip()[:1] in "*|#" else 1
+        if line.lstrip()[:1] not in "*|#":  # prose ("competing for the Palme d'Or") is never a result
+            continue
+        rank = 0
         pos = m.start() - ls
         works = list(ITALIC_LINK.finditer(line))
         if not works and line.lstrip().startswith("*"):

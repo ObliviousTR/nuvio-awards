@@ -1,5 +1,5 @@
 {
-  "_comment": "How to find each catalog's winner on the event's English Wikipedia page. page: title pattern ({ord} = ordinal edition, {year} = event year); edition = year - edition_base. award: the award's own Wikipedia article (the page links to it). mode table = ceremony pages ({{Award category}} blocks, winner on the first bullet in bold); line = festival pages (film link nearest to the award link); section_bold = highlighted (bold) row inside a section. year_offset: catalog year = event year + offset. last_event_year: newest event already in the catalog (scripts/update.py advances it).",
+  "_comment": "How to find each catalog's winner on the event's English Wikipedia page. page: title pattern ({ord} = ordinal edition, {year} = event year); edition = year - edition_base. award: the award's own Wikipedia article (the page links to it). mode table = ceremony pages ({{Award category}} blocks, winner on the first bullet in bold); line = festival pages (film link nearest to the award link); section_bold = highlighted (bold) row inside a section. year_offset: catalog year = event year + offset. last_event_year: newest event already in the catalog (scripts/update.py advances it). month: when the event usually happens (a missing winner two months later is reported).",
   "gg-drama-picture": {
     "page": "{ord} Golden Globe Awards",
     "edition_base": 1943,
@@ -8,7 +8,8 @@
     "last_event_year": 2026,
     "award": [
       "Golden Globe Award for Best Motion Picture – Drama"
-    ]
+    ],
+    "month": 1
   },
   "gg-comedy-picture": {
     "page": "{ord} Golden Globe Awards",
@@ -18,7 +19,8 @@
     "last_event_year": 2026,
     "award": [
       "Golden Globe Award for Best Motion Picture – Musical or Comedy"
-    ]
+    ],
+    "month": 1
   },
   "gg-drama-series": {
     "page": "{ord} Golden Globe Awards",
@@ -29,7 +31,8 @@
     "award": [
       "Golden Globe Award for Best Television Series – Drama"
     ],
-    "type": "series"
+    "type": "series",
+    "month": 1
   },
   "gg-comedy-series": {
     "page": "{ord} Golden Globe Awards",
@@ -40,7 +43,8 @@
     "award": [
       "Golden Globe Award for Best Television Series – Musical or Comedy"
     ],
-    "type": "series"
+    "type": "series",
+    "month": 1
   },
   "gg-limited-series": {
     "page": "{ord} Golden Globe Awards",
@@ -52,7 +56,8 @@
       "Golden Globe Award for Best Limited or Anthology Series or Television Film",
       "Golden Globe Award for Best Miniseries or Television Film"
     ],
-    "type": "series"
+    "type": "series",
+    "month": 1
   },
   "gg-director": {
     "page": "{ord} Golden Globe Awards",
@@ -62,7 +67,8 @@
     "last_event_year": 2026,
     "award": [
       "Golden Globe Award for Best Director"
-    ]
+    ],
+    "month": 1
   },
   "gg-non-english": {
     "page": "{ord} Golden Globe Awards",
@@ -74,7 +80,8 @@
       "Golden Globe Award for Best Motion Picture – Non-English Language",
       "Golden Globe Award for Best Non-English Language Film",
       "Golden Globe Award for Best Foreign Language Film"
-    ]
+    ],
+    "month": 1
   },
   "bafta-best-film": {
     "page": "{ord} British Academy Film Awards",
@@ -84,7 +91,8 @@
     "last_event_year": 2026,
     "award": [
       "BAFTA Award for Best Film"
-    ]
+    ],
+    "month": 2
   },
   "emmy-drama-series": {
     "page": "{ord} Primetime Emmy Awards",
@@ -95,7 +103,8 @@
     "award": [
       "Primetime Emmy Award for Outstanding Drama Series"
     ],
-    "type": "series"
+    "type": "series",
+    "month": 9
   },
   "emmy-comedy-series": {
     "page": "{ord} Primetime Emmy Awards",
@@ -106,7 +115,8 @@
     "award": [
       "Primetime Emmy Award for Outstanding Comedy Series"
     ],
-    "type": "series"
+    "type": "series",
+    "month": 9
   },
   "emmy-limited-series": {
     "page": "{ord} Primetime Emmy Awards",
@@ -118,7 +128,8 @@
       "Primetime Emmy Award for Outstanding Limited or Anthology Series",
       "Primetime Emmy Award for Outstanding Limited Series"
     ],
-    "type": "series"
+    "type": "series",
+    "month": 9
   },
   "cannes-palme": {
     "page": "{year} Cannes Film Festival",
@@ -127,7 +138,8 @@
     "last_event_year": 2026,
     "award": [
       "Palme d'Or"
-    ]
+    ],
+    "month": 5
   },
   "cannes-grand-prix": {
     "page": "{year} Cannes Film Festival",
@@ -136,7 +148,8 @@
     "last_event_year": 2026,
     "award": [
       "Grand Prix (Cannes Film Festival)"
-    ]
+    ],
+    "month": 5
   },
   "cannes-jury-prize": {
     "page": "{year} Cannes Film Festival",
@@ -145,7 +158,8 @@
     "last_event_year": 2026,
     "award": [
       "Jury Prize (Cannes Film Festival)"
-    ]
+    ],
+    "month": 5
   },
   "venice-golden-lion": {
     "page": "{ord} Venice International Film Festival",
@@ -155,7 +169,8 @@
     "last_event_year": 2026,
     "award": [
       "Golden Lion"
-    ]
+    ],
+    "month": 9
   },
   "berlinale-golden-bear": {
     "page": "{ord} Berlin International Film Festival",
@@ -165,7 +180,8 @@
     "last_event_year": 2026,
     "award": [
       "Golden Bear"
-    ]
+    ],
+    "month": 2
   },
   "sundance-grand-jury": {
     "page": "{year} Sundance Film Festival",
@@ -176,7 +192,8 @@
     "award": [
       "Grand Jury Prize (Sundance Film Festival)",
       "Sundance Grand Jury Prize"
-    ]
+    ],
+    "month": 1
   },
   "tiff-peoples-choice": {
     "page": "{year} Toronto International Film Festival",
@@ -185,6 +202,7 @@
     "last_event_year": 2026,
     "award": [
       "Toronto International Film Festival People's Choice Award"
-    ]
+    ],
+    "month": 9
   }
 }

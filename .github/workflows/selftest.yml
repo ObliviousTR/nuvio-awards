@@ -1,7 +1,5 @@
-name: Parser self-test (temporary)
+name: Parser self-test
 on:
-  push:
-    paths: [data/events.json, scripts/wiki_winners.py, scripts/selftest_wiki.py, .github/workflows/selftest.yml]
   workflow_dispatch:
 permissions:
   contents: write

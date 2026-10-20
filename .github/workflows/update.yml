@@ -1,0 +1,35 @@
+name: Update award lists
+on:
+  schedule:
+    - cron: "23 5 * * 1"   # every Monday 05:23 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency: update
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Look for new winners
+        run: python3 scripts/update.py "$RUNNER_TEMP/summary.md"
+      - name: Rebuild addon
+        run: python3 scripts/build.py
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "Automatic award update"
+          git push
+      - name: Open an issue with the summary
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -s "$RUNNER_TEMP/summary.md" ]; then
+            gh issue create --title "Ödül listeleri: $(date -u +%Y-%m-%d)" --body-file "$RUNNER_TEMP/summary.md"
+          fi

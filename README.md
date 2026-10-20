@@ -14,12 +14,21 @@ Install in Nuvio with this manifest URL:
 https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/manifest.json
 ```
 
-## Updating
+## How it stays up to date
 
-- **Oscars:** `python3 scripts/update_sources.py` pulls the latest `oscars.csv` from
-  [DLu/oscar_data](https://github.com/DLu/oscar_data) (all nominations with IMDb ids).
-- **Everything else:** add new winners to `data/additions.txt` (`catalog|year|imdb_id|tmdb_id|title`).
-- Then run `python3 scripts/build.py` (rebuilds `manifest.json` and `catalog/`), commit and push.
-  Nuvio picks the change up on its next refresh.
+Everything runs inside this repo — no outside service needed.
+
+- `.github/workflows/update.yml` runs **every Monday** (and on demand from the Actions tab):
+  - **Oscars:** pulls the latest `oscars.csv` from [DLu/oscar_data](https://github.com/DLu/oscar_data)
+    (every nomination with IMDb ids).
+  - **Other awards:** reads each new ceremony / festival page on English Wikipedia (`data/events.json` says which
+    page and award), takes the announced winner, resolves its IMDb id via Wikidata (IMDb search as a fallback)
+    and appends it to `data/additions.txt`.
+  - Rebuilds the addon (`scripts/build.py`), commits, and **opens an issue** listing what was added — or what it
+    could not find two months after the event, so it can be fixed by hand.
+- `.github/workflows/selftest.yml` (manual) checks the Wikipedia parser against known winners → `data/selftest.md`.
+
+Manual fixes: add a line to `data/additions.txt` (`catalog|year|imdb_id|tmdb_id|title`), run
+`python3 scripts/build.py`, commit and push. Nuvio picks changes up on its next refresh.
 
 Seed lists in `data/base/` were copied from public MDBList lists and extended with recent winners.
