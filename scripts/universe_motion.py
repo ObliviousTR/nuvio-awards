@@ -62,10 +62,14 @@ def commons(title, width=1600):
     return Image.open(io.BytesIO(get(info.get("thumburl") or info["url"]))).convert("RGBA")
 
 
-def tmdb_logo(movie_id):
-    im = tmdb(f"/movie/{movie_id}/images", include_image_language="en") or {}
-    lg = sorted([x for x in im.get("logos", []) if x.get("iso_639_1") == "en"], key=lambda x: -x["vote_average"])
-    return Image.open(io.BytesIO(get("https://image.tmdb.org/t/p/original" + lg[0]["file_path"]))).convert("RGBA")
+def tmdb_logo(movie_id=None, path=None):
+    """A TMDB logo: a given file path, or the movie's best-voted English PNG (SVG logos are skipped)."""
+    if not path:
+        im = tmdb(f"/movie/{movie_id}/images", include_image_language="en") or {}
+        lg = sorted([x for x in im.get("logos", []) if x.get("iso_639_1") == "en" and x["file_path"].endswith(".png")],
+                    key=lambda x: -x["vote_average"])
+        path = lg[0]["file_path"]
+    return trim(Image.open(io.BytesIO(get("https://image.tmdb.org/t/p/original" + path))).convert("RGBA"))
 
 
 def sticker(gid):
@@ -107,8 +111,20 @@ def alpha(im, a):
     return im
 
 
+def comp(cv, im, x, y):
+    """alpha_composite that accepts offsets partly or fully outside the canvas."""
+    x, y = round(x), round(y)
+    l, t = max(0, -x), max(0, -y)
+    r, b = min(im.width, cv.width - x), min(im.height, cv.height - y)
+    if r <= l or b <= t:
+        return
+    cv.alpha_composite(im.crop((l, t, r, b)), (x + l, y + t))
+
+
 def place(cv, im, cx, cy, a=1.0):
-    cv.alpha_composite(alpha(im, a), (round(cx - im.width / 2), round(cy - im.height / 2)))
+    if a <= 0:
+        return
+    comp(cv, alpha(im, a) if a < 1 else im, cx - im.width / 2, cy - im.height / 2)
 
 
 def text_layer(text, fnt, color=(255, 255, 255), tracking=0):
@@ -450,6 +466,711 @@ class WorldOfJohnWick(Mark):
         return cv
 
 
+# ---------------------------------------------------------------- shared helpers for the second batch
+def clip(gid, a=0, b=None, maxw=640, maxh=300, keep=None):
+    """Sticker frames a..b, cropped to one common box (so the motion inside the sticker is kept) and scaled."""
+    fr = sticker(gid)[a:b]
+    if keep:
+        fr = [f for f in fr if keep(f)]
+    bb = None
+    for f in fr:
+        x = f.getchannel("A").getbbox()
+        if x:
+            bb = x if bb is None else (min(bb[0], x[0]), min(bb[1], x[1]), max(bb[2], x[2]), max(bb[3], x[3]))
+    fr = [f.crop(bb) for f in fr]
+    k = min(maxw / fr[0].width, maxh / fr[0].height)
+    return [f.resize((round(f.width * k), round(f.height * k)), Image.LANCZOS) for f in fr]
+
+
+def stops_fill(layer, stops):
+    w, h = layer.size
+    g = Image.new("RGBA", (w, h))
+    for y in range(h):
+        f = y / max(1, h - 1)
+        c = stops[-1][1]
+        for (a, ca), (b, cb) in zip(stops, stops[1:]):
+            if a <= f <= b:
+                k = (f - a) / max(1e-6, b - a)
+                c = tuple(round(ca[i] + (cb[i] - ca[i]) * k) for i in range(3))
+                break
+        g.paste(c + (255,), (0, y, w, y + 1))
+    g.putalpha(layer.getchannel("A"))
+    return g
+
+
+CHROME = [(0, (255, 255, 255)), (0.44, (196, 200, 210)), (0.5, (72, 78, 90)), (0.64, (150, 156, 168)), (1, (238, 242, 248))]
+STEEL = [(0, (246, 247, 250)), (0.5, (176, 180, 190)), (1, (110, 114, 124))]
+
+
+def shear(layer, k=0.22):
+    w, h = layer.size
+    return layer.transform((w + round(k * h), h), Image.AFFINE, (1, k, -k * h, 0, 1, 0), resample=Image.BICUBIC)
+
+
+def hblur(im, r):
+    if r < 2:
+        return im
+    return im.resize((max(1, im.width // r), im.height), Image.BILINEAR).resize(im.size, Image.BILINEAR)
+
+
+def tint(im, col, k):
+    lay = Image.new("RGBA", im.size, col + (255,))
+    out = Image.blend(im.convert("RGBA"), lay, k)
+    out.putalpha(im.getchannel("A"))
+    return out
+
+
+def bright(im, k):
+    out = ImageEnhance.Brightness(im.convert("RGB")).enhance(k).convert("RGBA")
+    out.putalpha(im.getchannel("A"))
+    return out
+
+
+def noise(size, blur=0, seed=1):
+    random.seed(seed)
+    n = Image.effect_noise(size, 90)
+    if blur:
+        n = n.filter(ImageFilter.GaussianBlur(blur))
+    from PIL import ImageOps
+    return ImageOps.autocontrast(n)
+
+
+def dissolve(layer, p, nz, soft=28):
+    """Reveal a layer through a noise threshold (p 0..1)."""
+    th = p * (255 + soft)
+    m = nz.resize(layer.size).point(lambda v: max(0, min(255, round((th - v) / soft * 255))))
+    out = layer.copy()
+    out.putalpha(ImageChops.multiply(layer.getchannel("A"), m))
+    return out
+
+
+def vwipe(layer, p, soft=40, up=True):
+    """Reveal bottom-to-top (up) or top-to-bottom."""
+    w, h = layer.size
+    m = Image.new("L", (1, h), 0)
+    edge = -soft + p * (h + 2 * soft)
+    for y in range(h):
+        d = (h - y) if up else y
+        m.putpixel((0, y), round(255 * max(0, min(1, (edge - d) / soft))))
+    m = m.resize((w, h))
+    out = layer.copy()
+    out.putalpha(ImageChops.multiply(layer.getchannel("A"), m))
+    return out
+
+
+def flash(cv, a, col=(255, 255, 255)):
+    if a > 0:
+        cv.alpha_composite(Image.new("RGBA", (W, H), col + (round(255 * min(1, a)),)))
+
+
+def cands(uid):
+    meta = json.load(open(os.environ.get("CAND_META", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "library", "art", "scene_candidates.json"))))
+    return [b[1] for b in meta[uid]["backdrops"]]
+
+
+class Mark2(Mark):
+    """Second-batch base: self.i is the global frame index (set by render), finish() adds the sweep + tagline."""
+    i = 0
+    tag, tagcol, tag_y = "", (255, 255, 255), H / 2 + 200
+
+    def finish(self, cv, t, h, sweep_strength=120):
+        if h is not None and h < 0.5:
+            sweep(cv, h * 2, strength=sweep_strength)
+        if t > 0.85 and self.tag:
+            tagline(cv, self.tag, self.tag_y, (t - 0.85) / 0.15, color=self.tagcol)
+        return cv
+
+
+class MCU(Mark2):
+    """The Marvel Studios opening: comic-fast flips through the saga's scenes washing red, then the logo lands."""
+    build, hold = 30, 30
+    tag, tag_y = "THE INFINITY SAGA  ·  THE MULTIVERSE SAGA", H / 2 + 95
+
+    def __init__(self):
+        self.logo = clip("dC3uDJazzlM4z3lZJ5", maxw=780, maxh=200)
+        self.flip = [ImageEnhance.Brightness(art.graded(art.fetch(p), 0.9, 1.05)).enhance(0.8) for p in cands("mcu")]
+        self.red = Image.new("RGB", (W, H), (200, 18, 30))
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        if t < 0.62:
+            rnd = random.Random(self.i)
+            im = art.zoomed(self.flip[self.i % len(self.flip)], rnd.uniform(0.05, 0.3))
+            red = min(0.75, t / 0.62 * 0.9)
+            fr = Image.blend(im, self.red, red)
+            cv.paste(fr.convert("RGBA"), (0, 0))
+            cv.putalpha(round(255 * (1 - max(0, (t - 0.5) / 0.12))))
+        if t > 0.5:
+            k = ease((t - 0.5) / 0.2)
+            idx = 0 if h is None else int(h * 24) % len(self.logo)
+            lg = self.logo[idx]
+            s = 1.35 - 0.35 * k
+            lg = lg.resize((round(lg.width * s), round(lg.height * s)), Image.LANCZOS)
+            place(cv, glow(padded(lg, 40), 30, (230, 30, 50), 0.9 * k), W / 2, H / 2 - 10, 1)
+            place(cv, lg, W / 2, H / 2 - 10, k)
+        return self.finish(cv, t, h, 90)
+
+
+class DCU(Mark2):
+    """The DC bullet spins in out of the dark, settles and catches the light."""
+    build, hold = 30, 30
+    tag, tagcol, tag_y = "SUPERMAN  ·  BATMAN  ·  WONDER WOMAN  ·  JUSTICE LEAGUE", (225, 235, 255), H / 2 + 215
+
+    def __init__(self):
+        self.spin = clip("46zn5FmNndXaJVjgdG", maxw=360, maxh=360)
+        self.shine = clip("ensd2k3UXTw2ErdEet", maxw=360, maxh=360)
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        if h is None:
+            n = len(self.spin)
+            lg = self.spin[min(n - 1, int(ease(t / 0.9) * (n - 1)))] if t < 0.9 else self.spin[-1]
+        else:
+            lg = self.shine[min(len(self.shine) - 1, int(h / 0.6 * len(self.shine)))] if h < 0.6 else self.shine[-1]
+        s = 0.55 + 0.45 * ease(t / 0.8)
+        lg = lg.resize((round(lg.width * s), round(lg.height * s)), Image.LANCZOS)
+        place(cv, glow(padded(lg, 50), 34, (0, 120, 255), 1.1), W / 2, H / 2 - 30, min(1, t / 0.2))
+        place(cv, lg, W / 2, H / 2 - 30, min(1, t / 0.15))
+        self.tag_y = H / 2 - 30 + 180 + 40
+        if t > 0.85:
+            tagline(cv, self.tag, self.tag_y, (t - 0.85) / 0.15, size=22, color=self.tagcol)
+        if h is not None and h < 0.5:
+            pass  # the sticker's own shine is the sweep
+        return cv
+
+
+class BatmanGotham(Mark2):
+    """The bat-signal burns through the fog, then BATMAN & GOTHAM in brushed steel."""
+    build, hold = 30, 30
+    tag, tagcol = "THE DARK KNIGHT  ·  JOKER  ·  THE PENGUIN", (210, 214, 222)
+
+    def __init__(self):
+        self.fog = clip("erg5dWNomXlY8K4sxu", maxw=420, maxh=380)
+        f = font("anton", 112)
+        self.word = stops_fill(text_layer("BATMAN & GOTHAM", f, (255, 255, 255), 10), STEEL)
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        fg = self.fog[self.i % len(self.fog)]
+        a = ease(t / 0.5)
+        place(cv, glow(padded(fg, 40), 40, (220, 225, 235), 0.5 * a), W / 2, H / 2 - 95, 1)
+        place(cv, fg, W / 2, H / 2 - 95, a)
+        p = max(0, (t - 0.45) / 0.4)
+        if p > 0:
+            yy = H / 2 + 150 + (1 - ease(p)) * 30
+            place(cv, glow(padded(self.word, 30), 16, (0, 0, 0), 1.2), W / 2, yy, ease(p))
+            place(cv, self.word, W / 2, yy, ease(p))
+        self.tag_y = H / 2 + 150 + self.word.height / 2 + 38
+        return self.finish(cv, t, h)
+
+
+class XMen(Mark2):
+    """The X-Men '97 opening logo, stopped before the '97: the X spins in and the name locks beside it."""
+    build, hold = 34, 26
+    tag, tag_y = "X-MEN  ·  WOLVERINE  ·  DEADPOOL", H / 2 + 175
+
+    def __init__(self):
+        self.fr = clip("0sifJvGCjI0tXVcnhM", 0, 40, maxw=900, maxh=420)
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        n = len(self.fr)
+        lg = self.fr[min(n - 1, int(t / 0.85 * (n - 1)))]
+        place(cv, glow(padded(lg, 40), 26, (255, 150, 20), 0.7), W / 2, H / 2 - 20, 1)
+        place(cv, lg, W / 2, H / 2 - 20, 1)
+        return self.finish(cv, t, h)
+
+
+class Dune(Mark2):
+    """The DUNE glyphs ignite out of a sand blast (the film's own sticker), warmed to spice gold."""
+    build, hold = 34, 26
+    tag, tagcol, tag_y = "THE SPICE MUST FLOW", (240, 205, 150), H / 2 + 105
+
+    def __init__(self):
+        fr = clip("V5EflugpxzxrYL0MEE", 2, 52, maxw=820, maxh=200)
+        self.fr = [bright(tint(f, (245, 200, 130), 0.45), 1.35) for f in fr]
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        n = len(self.fr)
+        lg = self.fr[min(n - 1, int(t / 0.9 * (n - 1)))]
+        place(cv, glow(padded(lg, 40), 22, (255, 150, 60), 0.9), W / 2, H / 2, 1)
+        place(cv, lg, W / 2, H / 2, 1)
+        return self.finish(cv, t, h)
+
+
+class StarTrek(Mark2):
+    """Out of warp: star streaks snap to points, the Starfleet delta glints in, STAR TREK settles under it."""
+    build, hold = 30, 30
+    tag, tagcol = "TO BOLDLY GO", (200, 220, 255)
+
+    def __init__(self):
+        self.delta = clip("JtBbQlcLJHdCCeKM4O", maxw=200, maxh=250)
+        self.logo = fit(tmdb_logo(path="/7uaXgLu3hkkS7ci0l0tc9SPHfER.png"), 640, 110)
+        rnd = random.Random(11)
+        self.stars = [(rnd.uniform(0, 2 * math.pi), rnd.uniform(30, 900), rnd.uniform(0.4, 1)) for _ in range(220)]
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, round(150 * (1 - min(1, t / 0.6)))))
+        d = ImageDraw.Draw(cv)
+        warp = max(0, 1 - t / 0.45)
+        for a, r, s in self.stars:
+            rr = r * (1 + 0.8 * (1 - warp))
+            x, y = W / 2 + rr * math.cos(a), H / 2 + rr * 0.6 * math.sin(a)
+            L = 220 * warp * s
+            x0, y0 = W / 2 + (rr - L) * math.cos(a), H / 2 + (rr - L) * 0.6 * math.sin(a)
+            d.line((x0, y0, x, y), fill=(220, 230, 255, round(220 * s * (0.6 + 0.4 * warp))), width=2 if warp > 0.1 else 1)
+        k = ease((t - 0.35) / 0.3)
+        if k > 0:
+            dl = self.delta[self.i % len(self.delta)]
+            place(cv, glow(padded(dl, 40), 22, (255, 190, 80), 0.8 * k), W / 2, H / 2 - 95, 1)
+            place(cv, dl, W / 2, H / 2 - 95, k)
+        p = max(0, (t - 0.55) / 0.35)
+        if p > 0:
+            lg = self.logo
+            place(cv, wipe(lg, p, soft=120), W / 2, H / 2 + 105)
+        self.tag_y = H / 2 + 105 + self.logo.height / 2 + 34
+        return self.finish(cv, t, h)
+
+
+class MissionImpossible(Mark2):
+    """The fuse: a spark races in from the edge along a burning line and lights the M:I mark."""
+    build, hold = 30, 30
+    tag, tag_y = "MISSION: IMPOSSIBLE", H / 2 + 150
+
+    def __init__(self):
+        self.fr = clip("Znclz38sX4JBsdUvX3", maxw=720, maxh=300)
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(cv)
+        cy = H / 2 - 20
+        p = min(1, t / 0.5)
+        x = -40 + ease(p) * (W / 2 + 40)
+        if t < 0.55:
+            trail = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(trail).line((0, cy, x, cy), fill=(255, 140, 40, 230), width=4)
+            cv.alpha_composite(glow(trail, 8, (255, 120, 30), 1.5))
+            cv.alpha_composite(trail)
+            rnd = random.Random(self.i)
+            for _ in range(14):
+                dx, dy = rnd.uniform(-30, 10), rnd.uniform(-22, 22)
+                d.line((x, cy, x + dx, cy + dy), fill=(255, 230, 160, 230), width=2)
+            d.ellipse((x - 9, cy - 9, x + 9, cy + 9), fill=(255, 250, 220, 255))
+        k = ease((t - 0.45) / 0.2)
+        if k > 0:
+            lg = self.fr[self.i % len(self.fr)]
+            place(cv, glow(padded(lg, 40), 26, (255, 60, 20), 0.8 * k), W / 2, cy, 1)
+            place(cv, lg, W / 2, cy, k)
+        flash(cv, max(0, 0.5 - abs(t - 0.5) * 6))
+        return self.finish(cv, t, h)
+
+
+class JurassicPark(Mark2):
+    """Lightning over the gate: the logo comes out of the dark as a silhouette, warms to full colour, then shines."""
+    build, hold = 30, 30
+    tag, tagcol, tag_y = "JURASSIC PARK  ·  JURASSIC WORLD", (245, 225, 170), H / 2 + 215
+
+    def __init__(self):
+        self.fr = clip("3ohzdPbvIlusvgwaQw", maxw=520, maxh=360)
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        lg = self.fr[0] if h is None or h > 0.5 else self.fr[min(len(self.fr) - 1, int(h / 0.5 * len(self.fr)))]
+        lit = ease((t - 0.2) / 0.6)
+        im = bright(lg, 0.05 + 0.95 * lit)
+        yy = H / 2 - 20 + (1 - ease(t / 0.7)) * 40
+        place(cv, glow(padded(lg, 50), 30, (255, 170, 40), 0.9 * (1 - 0.4 * lit)), W / 2, yy, min(1, t / 0.15))
+        place(cv, im, W / 2, yy, min(1, t / 0.15))
+        flash(cv, (0.55 if 0.12 < t < 0.18 else 0) + (0.3 if 0.24 < t < 0.27 else 0), (225, 235, 255))
+        if t > 0.85:
+            tagline(cv, self.tag, self.tag_y, (t - 0.85) / 0.15, color=self.tagcol)
+        return cv
+
+
+class Transformers(Mark2):
+    """The logo assembles itself: horizontal plates slide in from both sides and lock, then a metal glint."""
+    build, hold = 30, 30
+    tag, tagcol = "MORE THAN MEETS THE EYE", (255, 190, 90)
+
+    def __init__(self):
+        self.logo = fit(tmdb_logo(1858), 860, 220)
+        n = 9
+        h = self.logo.height
+        self.plates = [(self.logo.crop((0, round(h * j / n), self.logo.width, round(h * (j + 1) / n))), round(h * j / n)) for j in range(n)]
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        lay = Image.new("RGBA", self.logo.size, (0, 0, 0, 0))
+        for j, (pl, y) in enumerate(self.plates):
+            e = ease((t - j * 0.04) / 0.5)
+            dx = (1 - e) * W * 0.7 * (1 if j % 2 else -1)
+            comp(lay, alpha(pl, min(1, e * 3)), dx, y)
+        place(cv, glow(padded(lay, 40), 26, (60, 140, 255), 0.7), W / 2, H / 2 - 20, 1)
+        place(cv, lay, W / 2, H / 2 - 20)
+        self.tag_y = H / 2 - 20 + self.logo.height / 2 + 44
+        return self.finish(cv, t, h, 160)
+
+
+class Matrix(Mark2):
+    """Digital rain; the logo decodes column by column out of it, green first, then its own colour."""
+    build, hold = 32, 28
+    tag, tagcol = "FREE YOUR MIND", (140, 255, 160)
+    CHARS = "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ0123456789Z:."
+
+    def __init__(self):
+        FONTS["jp"] = "ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf"
+        f = font("jp", 22, weight=500)
+        self.cw = 22
+        self.glyph = {}
+        for c in self.CHARS:
+            g = Image.new("L", (26, 30), 0)
+            ImageDraw.Draw(g).text((2, 0), c, font=f, fill=255)
+            for lv in range(1, 9):
+                for head in (0, 1):
+                    lay = Image.new("RGBA", g.size, ((235, 255, 235) if head else (40, 255, 90)) + (0,))
+                    lay.putalpha(g.point(lambda q, v=lv / 8: round(q * v)))
+                    self.glyph[c, lv, head] = lay
+        rnd = random.Random(5)
+        self.cols = [(rnd.uniform(16, 34), rnd.uniform(0, 900), rnd.randint(8, 20)) for _ in range(W // self.cw + 1)]
+        self.logo = fit(tmdb_logo(603), 760, 230)
+        self.green = Image.new("RGBA", self.logo.size, (130, 255, 150, 0))
+        self.green.putalpha(self.logo.getchannel("A"))
+        self.delay = [rnd.uniform(0.25, 0.7) for _ in range(self.logo.width // 16 + 1)]
+
+    def rain(self, a):
+        im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        rnd = random.Random(self.i * 7)
+        for c, (sp, off, L) in enumerate(self.cols):
+            head = (off + sp * self.i) % (H + L * 26 + 200) - 100
+            for k in range(L):
+                y = head - k * 26
+                lv = round(8 * a * (1 - k / L) ** 1.3)
+                if -30 < y < H and lv > 0:
+                    comp(im, self.glyph[rnd.choice(self.CHARS), lv, int(k == 0)], c * self.cw, y)
+        return im.transpose(Image.FLIP_LEFT_RIGHT)
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, round(120 * (1 - (h or 0) * 0.5))))
+        r = self.rain(1.0 if h is None else 0.85 - 0.45 * h)
+        cv.alpha_composite(glow(r, 6, (40, 255, 90), 0.6))
+        cv.alpha_composite(r)
+        m = Image.new("L", self.logo.size, 0)
+        for j, dl in enumerate(self.delay):
+            v = round(255 * max(0, min(1, (t - dl) / 0.1)))
+            m.paste(v, (j * 16, 0, (j + 1) * 16, self.logo.height))
+        g = self.green.copy()
+        g.putalpha(ImageChops.multiply(g.getchannel("A"), m))
+        place(cv, glow(padded(g, 40), 18, (60, 255, 110), 1.0), W / 2, H / 2 - 10)
+        place(cv, g, W / 2, H / 2 - 10)
+        k = ease((t - 0.75) / 0.25)
+        if k > 0:
+            place(cv, self.logo, W / 2, H / 2 - 10, k)
+        self.tag_y = H / 2 - 10 + self.logo.height / 2 + 44
+        return self.finish(cv, t, h, 100)
+
+
+class Terminator(Mark2):
+    """Terminator vision: the frame goes red, a scan line reads the logo in under a HUD, a last glitch, locked."""
+    build, hold = 32, 28
+    tag, tagcol = "I'LL BE BACK", (255, 90, 80)
+
+    def __init__(self):
+        self.logo = fit(tmdb_logo(path="/ipgDUr7fD8adbqHfCssloIultfN.png"), 820, 200)
+        self.hud = font("orbitron", 17, weight=600)
+
+    def __call__(self, t, h):
+        red = 1 - ease((t - 0.7) / 0.3)
+        cv = Image.new("RGBA", (W, H), (150, 0, 0, round(110 * red)))
+        d = ImageDraw.Draw(cv)
+        lw, lh = self.logo.size
+        x0, y0, x1, y1 = W / 2 - lw / 2 - 30, H / 2 - 20 - lh / 2 - 26, W / 2 + lw / 2 + 30, H / 2 - 20 + lh / 2 + 26
+        ba = round(230 * (0.35 + 0.65 * red))
+        for (x, y, sx, sy) in ((x0, y0, 1, 1), (x1, y0, -1, 1), (x0, y1, 1, -1), (x1, y1, -1, -1)):
+            d.line((x, y, x + 40 * sx, y), fill=(255, 60, 50, ba), width=3)
+            d.line((x, y, x, y + 40 * sy), fill=(255, 60, 50, ba), width=3)
+        if h is None:
+            lines = ["SCAN MODE 43984", "ANALYSIS:", "MATCH  SKYNET", "THREAT ASSESSMENT", "PRIORITY  01"]
+            for j, ln in enumerate(lines[:int(t * 8)]):
+                d.text((70, 90 + j * 26), ln, font=self.hud, fill=(255, 80, 70, round(220 * red)))
+        p = min(1, t / 0.6)
+        sy = y0 + p * (y1 - y0)
+        m = Image.new("L", self.logo.size, 0)
+        if sy > H / 2 - 20 - lh / 2:
+            ImageDraw.Draw(m).rectangle((0, 0, lw, sy - (H / 2 - 20 - lh / 2)), fill=255)
+        lg = self.logo.copy()
+        lg.putalpha(ImageChops.multiply(lg.getchannel("A"), m))
+        if 0.6 < t < 0.78 and self.i % 2 == 0:
+            r = Image.new("RGBA", lg.size, (255, 40, 40, 0)); r.putalpha(lg.getchannel("A"))
+            place(cv, r, W / 2 - 12, H / 2 - 20, 0.7)
+            place(cv, lg, W / 2 + 8, H / 2 - 20)
+        else:
+            place(cv, glow(padded(lg, 30), 14, (255, 40, 30), 0.7), W / 2, H / 2 - 20)
+            place(cv, lg, W / 2, H / 2 - 20)
+        if t < 0.62:
+            sc = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(sc).line((x0 - 60, sy, x1 + 60, sy), fill=(255, 70, 60, 255), width=3)
+            cv.alpha_composite(glow(sc, 10, (255, 40, 30), 2.0))
+            cv.alpha_composite(sc)
+        self.tag_y = y1 + 40
+        return self.finish(cv, t, h)
+
+
+class Conjuring(Mark2):
+    """Candlelight in a dark room: the title flickers into being, then a camera flash burns it in."""
+    build, hold = 30, 30
+    tag, tagcol = "THE CONJURING UNIVERSE  ·  INSIDIOUS", (225, 215, 200)
+
+    def __init__(self):
+        self.logo = fit(tmdb_logo(path="/5qjvxFhRZtvm4mcV90X9QNYLZVj.png"), 760, 200)
+
+    def __call__(self, t, h):
+        dark = 1 - 0.6 * ease((t - 0.68) / 0.2)
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, round(170 * dark)))
+        rnd = random.Random(self.i * 13)
+        if t < 0.68:
+            a = min(1, t / 0.6) * (0.35 + 0.65 * rnd.random()) * 0.6
+        else:
+            a = 1.0 if h is None else (0.86 + 0.14 * rnd.random())
+        place(cv, glow(padded(self.logo, 40), 26, (255, 170, 80), 0.9 * a), W / 2, H / 2 - 20)
+        place(cv, self.logo, W / 2, H / 2 - 20, a)
+        flash(cv, 0.95 if abs(t - 0.7) < 0.02 else (0.5 if abs(t - 0.73) < 0.02 else (0.2 if abs(t - 0.77) < 0.02 else 0)))
+        self.tag_y = H / 2 - 20 + self.logo.height / 2 + 44
+        return self.finish(cv, t, h, 90)
+
+
+class FastSaga(Mark2):
+    """THE FAST SAGA in raked chrome, launched in from the right on speed streaks, braking hard into place."""
+    build, hold = 26, 34
+    tag, tagcol = "IT'S ALL ABOUT FAMILY", (230, 235, 245)
+
+    def __init__(self):
+        big, small = font("anton", 168), font("anton", 64)
+        self.main = shear(stops_fill(text_layer("FAST SAGA", big, (255, 255, 255), 6), CHROME))
+        self.the = shear(stops_fill(text_layer("THE", small, (255, 255, 255), 10), CHROME))
+        rnd = random.Random(9)
+        self.lines = [(rnd.uniform(0, H), rnd.uniform(200, 700), rnd.uniform(0.3, 1)) for _ in range(40)]
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        e = ease(t / 0.55)
+        speed = 1 - e
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        place(lay, self.the, W / 2 - self.main.width / 2 + self.the.width / 2 + 30, H / 2 - 92)
+        place(lay, self.main, W / 2, H / 2 + 20)
+        lay = hblur(lay, round(1 + speed * 26))
+        dx = round(speed * W * 0.9)
+        comp(cv, glow(lay, 22, (60, 140, 255), 0.6), dx, 0)
+        comp(cv, lay, dx, 0)
+        d = ImageDraw.Draw(cv)
+        for (y, L, s) in self.lines:
+            a = round(200 * s * max(0, speed - 0.05))
+            if a:
+                x = ((self.i * 140 * s + y * 7) % (W + L)) - L
+                d.line((W - x, y, W - x - L, y), fill=(255, 255, 255, a), width=2)
+        self.tag_y = H / 2 + 20 + self.main.height / 2 + 40
+        return self.finish(cv, t, h, 170)
+
+
+class MadMaxSaga(Mark2):
+    """A dust storm blows across and leaves MAD MAX burned into the frame in rusted, sun-cracked letters."""
+    build, hold = 30, 30
+    tag, tagcol = "FURY ROAD  ·  FURIOSA  ·  THE ROAD WARRIOR", (245, 210, 160)
+
+    def __init__(self):
+        big, small = font("anton", 196), font("bebas", 64)
+        word = text_layer("MAD MAX", big, (255, 255, 255), 8)
+        cracks = noise(word.size, 0, 3).point(lambda v: 0 if v < 40 else 255)
+        word.putalpha(ImageChops.multiply(word.getchannel("A"), cracks))
+        self.word = stops_fill(word, [(0, (255, 214, 120)), (0.55, (236, 120, 40)), (1, (150, 40, 15))])
+        self.saga = stops_fill(text_layer("S A G A", small, (255, 255, 255), 22), [(0, (250, 230, 200)), (1, (220, 170, 120))])
+        self.nz = noise((240, 80), 3, 4)
+        rnd = random.Random(2)
+        self.dust = [(rnd.uniform(-W, W), rnd.uniform(0, H), rnd.uniform(1, 3.5), rnd.uniform(0.6, 1.4)) for _ in range(260)]
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        storm = max(0, 1 - abs(t - 0.4) / 0.4) if h is None else 0
+        cv.alpha_composite(Image.new("RGBA", (W, H), (200, 140, 80, round(110 * storm))))
+        d = ImageDraw.Draw(cv)
+        g = self.i
+        for (x, y, r, s) in self.dust:
+            xx = (x + g * 60 * s) % (W + 200) - 100
+            a = round(200 * (0.25 + storm * 0.75))
+            d.ellipse((xx - r, y - r, xx + r, y + r), fill=(235, 190, 130, a))
+        p = max(0, (t - 0.25) / 0.6)
+        if p > 0:
+            w = dissolve(self.word, p, self.nz)
+            place(cv, glow(padded(w, 40), 26, (255, 110, 30), 0.9), W / 2, H / 2 - 30)
+            place(cv, w, W / 2, H / 2 - 30)
+        k = ease((t - 0.7) / 0.25)
+        if k > 0:
+            place(cv, self.saga, W / 2, H / 2 - 30 + self.word.height / 2 + 46, k)
+        self.tag_y = H / 2 - 30 + self.word.height / 2 + 112
+        return self.finish(cv, t, h)
+
+
+def first_line(im):
+    """Keep the logo's top line ('INDIANA JONES'), dropping the film subtitle under it."""
+    a = im.getchannel("A")
+    rows = [sum(a.crop((0, y, im.width, y + 1)).getdata()) for y in range(im.height)]
+    lo, hi = int(im.height * 0.32), int(im.height * 0.66)
+    cut = min(range(lo, hi), key=lambda y: rows[y])
+    return trim(im.crop((0, 0, im.width, cut)))
+
+
+class IndianaJones(Mark2):
+    """Torchlight in a tomb: dust drifts through warm, flickering light and the name catches the gold."""
+    build, hold = 30, 30
+    tag, tagcol = "ADVENTURE HAS A NAME", (245, 215, 150)
+
+    def __init__(self):
+        self.logo = fit(first_line(tmdb_logo(path="/yCZMIJaNriW79rR8NL4Kiq1mvWr.png")), 820, 220)
+        rnd = random.Random(4)
+        self.motes = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(1, 2.6), rnd.uniform(-1, 1)) for _ in range(120)]
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        rnd = random.Random(self.i * 3)
+        torch = 0.75 + 0.25 * rnd.random()
+        lightc = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(lightc).ellipse((W / 2 - 520, H / 2 - 330, W / 2 + 520, H / 2 + 300), fill=round(120 * torch * ease(t / 0.5)))
+        lay = Image.new("RGBA", (W, H), (255, 150, 50, 0))
+        lay.putalpha(lightc.filter(ImageFilter.GaussianBlur(120)))
+        cv.alpha_composite(lay)
+        d = ImageDraw.Draw(cv)
+        for (x, y, r, dx) in self.motes:
+            yy = (y - self.i * 2.5) % H
+            d.ellipse((x + dx * self.i - r, yy - r, x + dx * self.i + r, yy + r), fill=(255, 225, 170, round(150 * torch)))
+        k = ease((t - 0.25) / 0.5)
+        if k > 0:
+            s = 1.08 - 0.08 * k
+            lg = self.logo.resize((round(self.logo.width * s), round(self.logo.height * s)), Image.LANCZOS)
+            place(cv, glow(padded(lg, 40), 24, (255, 150, 40), 0.9 * torch), W / 2, H / 2 - 20, k)
+            place(cv, lg, W / 2, H / 2 - 20, k)
+        self.tag_y = H / 2 - 20 + self.logo.height / 2 + 42
+        return self.finish(cv, t, h, 150)
+
+
+class AlienPredator(Mark2):
+    """ALIEN assembles out of thin slits as in the 1979 titles; a tri-laser sight crosses the frame and PREDATOR
+    locks in under it."""
+    build, hold = 34, 26
+    tag, tagcol = "ALIEN  ·  PREDATOR  ·  ALIEN VS. PREDATOR", (200, 230, 210)
+
+    def __init__(self):
+        self.alien = fit(tmdb_logo(path="/riI33EA1vYQ1szTtMe0NR7TwV1p.png"), 700, 70)
+        self.pred = fit(tmdb_logo(path="/6dPMPbU5em2sFzD1uxzQLcuKtLG.png"), 640, 140)
+        self.amp = text_layer("&", font("cinzel", 52, weight=500), (220, 220, 220))
+        a = self.alien.getchannel("A")
+        cols = [sum(a.crop((x, 0, x + 1, a.height)).getdata()) > 0 for x in range(a.width)]
+        self.letters, x = [], 0
+        while x < len(cols):
+            if cols[x]:
+                s = x
+                while x < len(cols) and cols[x]:
+                    x += 1
+                self.letters.append((s, x))
+            x += 1
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ay = H / 2 - 120
+        lay = Image.new("RGBA", self.alien.size, (0, 0, 0, 0))
+        n = len(self.letters)
+        for j, (s, e) in enumerate(self.letters):
+            k = ease((t - j * 0.07) / 0.25)
+            if k <= 0:
+                continue
+            seg = self.alien.crop((s, 0, e, self.alien.height))
+            hh = max(1, round(seg.height * (0.08 + 0.92 * k)))
+            seg = seg.crop((0, (seg.height - hh) // 2, seg.width, (seg.height + hh) // 2))
+            lay.alpha_composite(seg, (s, (self.alien.height - hh) // 2))
+        place(cv, glow(padded(lay, 30), 14, (160, 255, 190), 0.5), W / 2, ay)
+        place(cv, lay, W / 2, ay)
+        place(cv, self.amp, W / 2, ay + 72, ease((t - 0.35) / 0.2))
+        py = ay + 72 + 100
+        p = max(0, (t - 0.4) / 0.45)
+        if p > 0:
+            lw = self.pred.width
+            lx = W / 2 - lw / 2 - 60 + p * (lw + 120)
+            m = Image.new("L", self.pred.size, 0)
+            ImageDraw.Draw(m).rectangle((0, 0, lx - (W / 2 - lw / 2), self.pred.height), fill=255)
+            pr = self.pred.copy()
+            pr.putalpha(ImageChops.multiply(pr.getchannel("A"), m.filter(ImageFilter.GaussianBlur(10))))
+            place(cv, pr, W / 2, py)
+            if p < 1:
+                d = ImageDraw.Draw(cv)
+                for (dx, dy) in ((0, -12), (-11, 8), (11, 8)):
+                    d.ellipse((lx + dx - 5, py + dy - 5, lx + dx + 5, py + dy + 5), fill=(255, 30, 20, 255))
+                dots = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+                ImageDraw.Draw(dots).ellipse((lx - 22, py - 22, lx + 22, py + 22), fill=(255, 40, 20, 200))
+                cv.alpha_composite(glow(dots, 14, (255, 30, 20), 1.2))
+        self.tag_y = py + self.pred.height / 2 + 44
+        return self.finish(cv, t, h)
+
+
+class GodzillaKong(Mark2):
+    """Atomic breath charging: blue light climbs up through the title, flares, and keeps a slow pulse."""
+    build, hold = 30, 30
+    tag, tagcol = "LONG LIVE THE KINGS", (170, 215, 255)
+
+    def __init__(self):
+        f = font("anton", 150)
+        self.word = stops_fill(text_layer("GODZILLA & KONG", f, (255, 255, 255), 8), STEEL)
+        self.hot = gradient_fill(text_layer("GODZILLA & KONG", f, (255, 255, 255), 8), (210, 240, 255), (60, 160, 255))
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        p = min(1, t / 0.6)
+        rnd = random.Random(self.i)
+        charge = (0.6 + 0.4 * rnd.random()) * ease(p) if h is None else 0.7 + 0.3 * math.sin(h * math.pi * 4)
+        hot = vwipe(self.hot, p, soft=60)
+        place(cv, glow(padded(self.word, 50), 34, (50, 150, 255), 1.4 * charge), W / 2, H / 2 - 10, min(1, t / 0.3))
+        place(cv, self.word, W / 2, H / 2 - 10, ease((t - 0.45) / 0.35))
+        place(cv, hot, W / 2, H / 2 - 10, 1 - ease((t - 0.6) / 0.4) * 0.7)
+        self.tag_y = H / 2 - 10 + self.word.height / 2 + 44
+        return self.finish(cv, t, h)
+
+
+class PlanetOfTheApes(Mark2):
+    """Sunrise over the Forbidden Zone: god rays fan out from behind the title as it rises into the light."""
+    build, hold = 30, 30
+    tag, tagcol = "APES TOGETHER STRONG", (245, 220, 175)
+
+    def __init__(self):
+        self.logo = fit(tmdb_logo(path="/5Jn7FPpVjA8ZxkAmqWMvrZvQJ5b.png"), 560, 280)
+
+    def rays(self, rot, a):
+        m = Image.new("L", (W, H), 0)
+        d = ImageDraw.Draw(m)
+        cx, cy = W / 2, H / 2 - 20
+        for j in range(18):
+            ang = rot + j * 2 * math.pi / 18
+            w = 0.07
+            d.polygon([(cx, cy), (cx + 1400 * math.cos(ang - w), cy + 1400 * math.sin(ang - w)),
+                       (cx + 1400 * math.cos(ang + w), cy + 1400 * math.sin(ang + w))], fill=round(120 * a))
+        m = m.filter(ImageFilter.GaussianBlur(18))
+        v = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(v).ellipse((cx - 560, cy - 420, cx + 560, cy + 420), fill=255)
+        m = ImageChops.multiply(m, v.filter(ImageFilter.GaussianBlur(140)))
+        lay = Image.new("RGBA", (W, H), (255, 214, 150, 0))
+        lay.putalpha(m)
+        return lay
+
+    def __call__(self, t, h):
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        g = self.i / (self.build + self.hold)
+        cv.alpha_composite(self.rays(g * 0.6, ease(t / 0.6)))
+        k = ease((t - 0.25) / 0.5)
+        if k > 0:
+            yy = H / 2 - 20 + (1 - k) * 40
+            place(cv, glow(padded(self.logo, 40), 30, (255, 200, 120), 0.8), W / 2, yy, k)
+            place(cv, self.logo, W / 2, yy, k)
+        self.tag_y = H / 2 - 20 + self.logo.height / 2 + 42
+        return self.finish(cv, t, h)
+
+
 MARKS = {
     "spiderman": (SpiderVerse, ["/jHxCeXnSchAuwHnmVatTgqMYdX8.jpg", "/ac0kRKTfiJ4GcoUfb0XIO5vgC8q.jpg",
                                 "/uyrOU4BDm2kbVxFsMiDFIHDhc4d.jpg", "/1ntePsIqeklfmrQJqZPncCydsqY.jpg",
@@ -463,7 +1184,15 @@ def scene_paths(uid, picks):
 
 
 PICKS = {"middleearth": (MiddleEarth, [1, 7, 0, 2, 11]), "wizarding": (WizardingWorld, [14, 3, 17, 19]),
-         "starwars": (StarWars, [1, 13, 17, 19, 5]), "johnwick": (WorldOfJohnWick, [1, 5, 7, 6])}
+         "starwars": (StarWars, [1, 13, 17, 19, 5]), "johnwick": (WorldOfJohnWick, [1, 5, 7, 6]),
+         "mcu": (MCU, [1, 2, 4, 7, 9]), "dc": (DCU, [1, 10, 13, 17, 15]), "batman": (BatmanGotham, [0, 9, 11, 13, 15]),
+         "xmen": (XMen, [6, 11, 17, 20, 21]), "dune": (Dune, [1, 3, 4, 2, 5]), "startrek": (StarTrek, [2, 16, 24, 21, 13]),
+         "mi": (MissionImpossible, [1, 5, 2, 11, 14]), "jurassic": (JurassicPark, [3, 2, 9, 11, 13]),
+         "transformers": (Transformers, [1, 3, 9, 14, 10]), "matrix": (Matrix, [4, 7, 2, 6]),
+         "terminator": (Terminator, [0, 3, 6, 8, 11]), "conjuring": (Conjuring, [0, 3, 8, 14, 26]),
+         "fast": (FastSaga, [0, 12, 3, 6, 19]), "madmax": (MadMaxSaga, [0, 1, 2, 3, 6]),
+         "indiana": (IndianaJones, [1, 3, 6, 9, 4]), "alienpredator": (AlienPredator, [1, 12, 27, 18, 24]),
+         "godzillakong": (GodzillaKong, [0, 3, 24, 25, 20]), "apes": (PlanetOfTheApes, [1, 16, 13, 14, 11])}
 
 
 def render(uid, out_dir):
@@ -480,11 +1209,13 @@ def render(uid, out_dir):
         t = min(1, i / mark.build)
         h = (i - mark.build) / mark.hold if i >= mark.build else None
         bg = background(sc, i / n).convert("RGBA")
+        mark.i = i
         bg.alpha_composite(mark(t, h))
         frames.append(bg.convert("RGB"))
     d = os.path.join(out_dir, uid)
     os.makedirs(d, exist_ok=True)
     cov = vignette(art.zoomed(sc[0], 0.04)).convert("RGBA")
+    mark.i = round(mark.build + 0.75 * mark.hold)
     cov.alpha_composite(mark(1.0, 0.75))
     cov.convert("RGB").save(os.path.join(d, "cover.jpg"), quality=90)
     art.graded(art.fetch(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=88)
