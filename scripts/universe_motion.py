@@ -14,7 +14,7 @@ from spotlight import tmdb
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageSequence
 
 W, H = 1280, 720
-GW, GH = 480, 270
+GW, GH = 512, 288
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/124 Safari/537.36 nuvio-awards"}
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 FONTS = {  # Google Fonts (OFL), fetched once
@@ -338,7 +338,7 @@ class SpiderVerse(Mark2):
         # the drop: falls fast, overshoots, settles; a slow sway afterwards
         p = min(1, t / 0.4)
         y = -self.sp.height + (sy_end + self.sp.height) * (1 - (1 - p) ** 3) + (math.sin(p * math.pi * 2.2) * 26 * (1 - p) if p < 1 else 0)
-        sway = math.sin(self.i * 0.35) * (6 if t < 0.6 else 3)
+        sway = math.sin(self.i * 0.24) * (6 if t < 0.6 else 3)
         sp = self.sp.rotate(sway, resample=Image.BICUBIC, expand=True)
         thread = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         ImageDraw.Draw(thread).line((W / 2, 0, W / 2 + sway * 2, y - self.sp.height / 2 + 14), fill=(255, 255, 255, 190), width=2)
@@ -659,8 +659,7 @@ def cands(uid):
 
 class MCU(Mark2):
     """The Marvel Studios opening: flips through the saga's scenes washing red, then the logo lands."""
-    build, hold = 36, 30
-    dur_build = 85
+    build, hold = 30, 30
     tag, tag_y = "THE INFINITY SAGA  ·  THE MULTIVERSE SAGA", H / 2 + 95
 
     def __init__(self):
@@ -671,7 +670,7 @@ class MCU(Mark2):
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         if t < 0.62:
-            step = self.i // 3  # each page held for 3 frames
+            step = self.i // 2  # each page held for 2 frames (80 ms)
             rnd = random.Random(step)
             im = art.zoomed(self.flip[step % len(self.flip)], rnd.uniform(0.05, 0.3))
             red = min(0.75, t / 0.62 * 0.9)
@@ -916,7 +915,7 @@ class Matrix(Mark2):
 
     def rain(self, a):
         im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        fi = self.i if self.i < self.build else self.i // 3 * 3  # the rain ticks slower once the logo is up
+        fi = self.i if self.i < self.build * SMOOTH else self.i // 3 * 3  # the rain ticks slower once the logo is up
         rnd = random.Random(fi * 7)
         for c, (sp, off, L) in enumerate(self.cols):
             head = (off + sp * fi) % (H + L * 26 + 200) - 100
@@ -1236,7 +1235,7 @@ class PlanetOfTheApes(Mark2):
 
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        g = min(self.i, self.build) / (self.build + self.hold)
+        g = min(self.i, self.build * SMOOTH) / ((self.build + self.hold) * SMOOTH)
         cv.alpha_composite(self.rays(g * 0.6, ease(t / 0.6) * (1 if h is None else 0.7)))
         k = ease((t - 0.25) / 0.5)
         if k > 0:
@@ -1271,10 +1270,12 @@ PICKS = {"middleearth": (MiddleEarth, [1, 7, 0, 2, 11]), "wizarding": (Wizarding
          "godzillakong": (GodzillaKong, [0, 3, 24, 25, 20]), "apes": (PlanetOfTheApes, [1, 16, 13, 14, 11])}
 
 
+SMOOTH = 1.5  # 1.5x the frames at 2/3 the frame time: same pacing, smoother motion (animated WebP keeps it light)
+
+
 def render(uid, out_dir):
-    """Build over the first scene; during the hold the scenes change with short crossfades. Backgrounds stay still
-    (no push-in) so GIF frames only carry what moves, which keeps the file light: Nuvio mobile plays every visible
-    card's GIF at once."""
+    """Hover animation as animated WebP (full colour, no palette banding; Nuvio's Android apps decode it with the same
+    animated-image decoder as GIF). Scenes push in and crossfade across the whole loop as before."""
     if uid in MARKS:
         cls, paths = MARKS[uid]
     else:
@@ -1282,49 +1283,32 @@ def render(uid, out_dir):
         paths = scene_paths(uid, picks)
     mark = cls()
     sc = scenes(paths)
-    still = [vignette(art.zoomed(x, 0.04)) for x in sc]
-    B, HD = mark.build, mark.hold
-    order = list(range(1, len(still))) + [0]
-    per = 10
-    seq = [(still[0], min(1, i / B), None, getattr(mark, "dur_build", 65)) for i in range(B)]
-    k, total = 0, per * len(order)
-    for j, s_ in enumerate(order):
-        prev = still[order[j - 1]] if j else still[0]
-        for f in range(per):
-            h = k / total
-            k += 1
-            if f < 3:
-                seq.append((Image.blend(prev, still[s_], (f + 1) / 4), 1.0, h, 70))
-            else:
-                seq.append((still[s_], 1.0, h, getattr(mark, "dur_hold", 120)))
+    B, HD = round(mark.build * SMOOTH), round(mark.hold * SMOOTH)
+    n = B + HD
     frames = []
-    for i, (bg, t, h, _) in enumerate(seq):
+    for i in range(n):
+        t = min(1, i / B)
+        h = (i - B) / HD if i >= B else None
+        bg = background(sc, i / n).convert("RGBA")
         mark.i = i
-        f = bg.convert("RGBA")
-        f.alpha_composite(mark(t, h))
-        frames.append(f.convert("RGB"))
+        bg.alpha_composite(mark(t, h))
+        frames.append(bg.convert("RGB"))
     d = os.path.join(out_dir, uid)
     os.makedirs(d, exist_ok=True)
-    cov = still[0].convert("RGBA")
+    cov = vignette(art.zoomed(sc[0], 0.04)).convert("RGBA")
     mark.i = round(B + 0.75 * HD)
     cov.alpha_composite(mark(1.0, 0.75))
     cov.convert("RGB").save(os.path.join(d, "cover.jpg"), quality=88)
     art.graded(art.fetch(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=86)
     small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
-    picks = [B // 3, B - 1] + [B + per * j + per - 1 for j in range(len(order))]
-    pal = Image.new("RGB", (GW, GH * len(picks)))
-    for j, idx in enumerate(picks):
-        pal.paste(small[min(idx, len(small) - 1)], (0, GH * j))
-    pal = pal.convert("P", palette=Image.ADAPTIVE, colors=112)
-    q = [f.quantize(palette=pal, dither=Image.Dither.NONE) for f in small]
-    q[0].save(os.path.join(d, "hover.gif"), save_all=True, append_images=q[1:],
-              duration=[x[3] for x in seq], loop=0, optimize=True)
+    dur = [mark.dur(i, B) if hasattr(mark, "dur") else (40 if i < B else 70) for i in range(n)]
+    small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=dur, loop=0,
+                  quality=80, method=5, minimize_size=True, allow_mixed=True)
     strip = Image.new("RGB", (GW * 4, GH * 2))
-    n = len(small)
     for j, idx in enumerate([round(k * (n - 1) / 7) for k in range(8)]):
         strip.paste(small[idx], ((j % 4) * GW, (j // 4) * GH))
     strip.save(os.path.join(d, "frames.jpg"), quality=80)
-    return d, os.path.getsize(os.path.join(d, "hover.gif")) // 1024
+    return d, os.path.getsize(os.path.join(d, "hover.webp")) // 1024
 
 
 if __name__ == "__main__":

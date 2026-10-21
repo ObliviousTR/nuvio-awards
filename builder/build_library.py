@@ -70,7 +70,7 @@ for e in INDEX["franchises"]:
         # ?v=<content hash>: a new version of a file gets a new URL, so the app doesn't keep showing a cached old one
         v = lambda n: u + n + "?v=" + hashlib.md5(open(os.path.join(ART_DIR, e["id"], n), "rb").read()).hexdigest()[:8]
         f.update({"tileShape": "LANDSCAPE", "hideTitle": True, "coverImageUrl": v("cover.jpg"), "coverEmoji": None,
-                  "titleLogoUrl": None, "focusGifUrl": v("hover.gif"), "focusGifEnabled": True,
+                  "titleLogoUrl": None, "focusGifUrl": v("hover.webp"), "focusGifEnabled": True,
                   "heroBackdropUrl": v("backdrop.jpg")})
         k = "own"
     folders.append(f)
