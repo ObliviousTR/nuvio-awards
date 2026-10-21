@@ -27,6 +27,8 @@ from spotlight import tmdb
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 W, H = 1920, 1080
+# backdrops seen to carry text or to be poster art despite having no language tag
+SKIP = {"/oOv2oUXcAaNXakRqUPxYq5lJURz.jpg", "/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg"}
 NOISE = {16, 10763, 10764, 10766, 10767}  # animation, news, reality, soap, talk: not cover material
 
 # id, folder title, kicker, word, letters filled, accent, subtitle (static) / rule
@@ -55,7 +57,7 @@ def textless(kind, tid):
     bd = [b for b in im.get("backdrops", []) if not b.get("iso_639_1") and b["width"] >= 1280]
     bd.sort(key=lambda b: (-b["vote_count"], -b["vote_average"], -b["width"]))
     from PIL import ImageStat
-    for b in bd[:6]:
+    for b in [b for b in bd if b["file_path"] not in SKIP][:6]:
         sm = art.fetch(b["file_path"], "w300")
         if sm is not None and 60 <= ImageStat.Stat(sm.convert("L")).mean[0] <= 175:
             return b["file_path"]
@@ -160,8 +162,14 @@ def make(img, kicker, word, split, accent, sub):
     ring = fa.outline_text(full, 3, (255, 255, 255), 235)
     cx, cy = W / 2, H * 0.48
 
+    bed = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(bed).ellipse((W / 2 - full.width * 0.62, H * 0.48 - full.height * 1.6,
+                                 W / 2 + full.width * 0.62, H * 0.48 + full.height * 1.7), fill=120)
+    bed = bed.filter(ImageFilter.GaussianBlur(120))
+
     def frame(p, z, sweep_s=None):
-        bg = fa.vignette(art.zoomed(base, 0.03 + 0.05 * z), 0.9).convert("RGBA")
+        bg = fa.vignette(art.zoomed(base, 0.03 + 0.05 * z), 0.9)
+        bg = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), bg, bed).convert("RGBA")
         lay = Image.new("RGBA", full.size, (0, 0, 0, 0))
         lay.alpha_composite(um.alpha(ring, um.ease(p / 0.25)))
         m = Image.new("L", full.size, 0)
