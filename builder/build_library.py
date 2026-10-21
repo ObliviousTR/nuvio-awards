@@ -23,6 +23,9 @@ KAPTAIN_ART = {
     "jurassic": "Jurassic Park", "terminator": "The Terminator", "transformers": "Transformers",
     "indiana": "Indiana Jones",
 }
+# our own universe art (nuvio-art/art/universes/<id>/: cover.jpg 1280x720 with the mark, hover.gif, backdrop.jpg)
+ART_DIR = "/home/claude/nuvio-art/art/universes"
+ART_RAW = "https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/art/universes/"
 PERSON_ALIASES = {"Joel & Ethan Coen": "Joel Coen", "Bong Joon-ho": "Bong Joon Ho"}
 
 
@@ -61,8 +64,14 @@ for e in INDEX["franchises"]:
     rails = [lib(c["name"].split(" · ")[-1], c) for c in e["rails"]]
     k = k_fc.get(KAPTAIN_ART.get(e["id"], ""))
     f = folder(f"folder-lib-{e['id']}", e["title"], rails, kaptain=k, poster=e.get("poster"))
+    if os.path.exists(os.path.join(ART_DIR, e["id"], "cover.jpg")):
+        u = ART_RAW + e["id"] + "/"
+        f.update({"tileShape": "LANDSCAPE", "hideTitle": True, "coverImageUrl": u + "cover.jpg", "coverEmoji": None,
+                  "titleLogoUrl": None, "focusGifUrl": u + "hover.gif", "focusGifEnabled": True,
+                  "heroBackdropUrl": u + "backdrop.jpg"})
+        k = "own"
     folders.append(f)
-    report.append(f"## {e['title']} [{e['kind']}] ({len(rails)} rails) art={'kaptain' if k else 'tmdb'}")
+    report.append(f"## {e['title']} [{e['kind']}] ({len(rails)} rails) art={'own' if k == 'own' else 'kaptain' if k else 'tmdb'}")
     report += [f"   - {r['title']}" for r in rails]
 uni["folders"] = folders
 genre = []
