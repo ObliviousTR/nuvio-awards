@@ -1,13 +1,48 @@
-import os, sys
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from spotlight import tmdb
-os.makedirs("refs/q", exist_ok=True)
-out = []
-for c in (6125, 3, 2):
-    d = tmdb(f"/company/{c}") or {}
-    out.append(f"CO {c} | {d.get('name')} | logo {d.get('logo_path')}")
-    for vc, sort in ((25, "primary_release_date.desc"), (50, "popularity.desc"), (500, "vote_average.desc")):
-        r = tmdb("/discover/movie", with_companies=c, without_genres="99", sort_by=sort, **{"vote_count.gte": vc}) or {}
-        out.append(f"   vc{vc} {sort} total={r.get('total_results')} | " + " | ".join(
-            f"{x['title']} ({(x.get('release_date') or '')[:4]})" for x in r.get("results", [])[:12]))
-open("refs/q/out.txt", "w").write("\n".join(out))
+import json, os, sys, io, re, collections, urllib.request, concurrent.futures as cf
+from PIL import Image, ImageDraw
+os.makedirs("refs/art", exist_ok=True)
+d = json.load(open("builder/out/delivered/baseline.json"))
+urls = {}
+for c in d:
+    if c.get("backdropImageUrl"): urls[c["backdropImageUrl"]] = (c["title"], "", "rowbackdrop")
+    for f in c["folders"]:
+        for k in ("coverImageUrl", "focusGifUrl", "titleLogoUrl", "heroBackdropUrl"):
+            if f.get(k): urls.setdefault(f[k], (c["title"], f["title"], k))
+def get(u):
+    try:
+        r = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=40)
+        return u, r.status, r.read()
+    except Exception as e:
+        return u, str(e)[:60], b""
+res = {}
+with cf.ThreadPoolExecutor(16) as ex:
+    for u, st, b in ex.map(get, urls):
+        res[u] = (st, b)
+out, tot, bad = [], collections.Counter(), []
+for u, (st, b) in res.items():
+    row, fol, k = urls[u]
+    tot[k] += len(b)
+    if st != 200: bad.append(f"{st} {row} / {fol} / {k} {u}")
+out.append("SIZES MB " + json.dumps({k: round(v / 1e6, 1) for k, v in tot.items()}) + f" total {round(sum(tot.values())/1e6,1)}")
+out.append(f"BAD {len(bad)}"); out += bad
+big = sorted(((len(b), u) for u, (st, b) in res.items()), reverse=True)[:10]
+out += [f"BIG {round(n/1e6,1)}MB {u}" for n, u in big]
+open("refs/art/report.txt", "w").write("\n".join(out))
+# contact sheets: covers per row
+for c in d:
+    tiles = []
+    for f in c["folders"][:30]:
+        u = f.get("coverImageUrl")
+        if not u or u not in res or not res[u][1]: continue
+        try:
+            im = Image.open(io.BytesIO(res[u][1])); im.seek(0); im = im.convert("RGB")
+        except Exception: continue
+        im.thumbnail((320, 320)); tiles.append((f["title"], im))
+    if not tiles: continue
+    W, H, cols = 330, 330, 6
+    sheet = Image.new("RGB", (W * cols, H * ((len(tiles) + cols - 1) // cols)), (30, 30, 30))
+    dr = ImageDraw.Draw(sheet)
+    for i, (t, im) in enumerate(tiles):
+        x, y = (i % cols) * W, (i // cols) * H
+        sheet.paste(im, (x + 5, y + 5)); dr.text((x + 8, y + H - 18), t[:40], fill=(255, 255, 0))
+    sheet.save(f"refs/art/{re.sub(r'[^a-z0-9]+', '-', c['title'].lower())}.jpg", quality=80)
