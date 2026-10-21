@@ -281,6 +281,7 @@ class MiddleEarth(Mark):
         self.word = gradient_fill(base, (255, 226, 150), (176, 120, 40))
         self.hot = gradient_fill(base, (255, 250, 220), (255, 150, 40))
         self.tag = "THE LORD OF THE RINGS  ·  THE HOBBIT"
+        self.rings = [fit(trim(f), 230, 230) for f in sticker("jU8YU7i8WJFLMMDrEb")]
 
     def ring(self, spin, heat):
         """A thick gold band seen at an angle: filled ellipse minus the hole, lit from above, glowing hot."""
@@ -315,9 +316,13 @@ class MiddleEarth(Mark):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         spin = (t * 2.2 if h is None else 2.2 + h * 1.2) * math.pi
         heat = 1.0 if t < 0.6 else 1.0 - 0.6 * min(1, (t - 0.6) / 0.4)
-        ring = self.ring(spin, heat)
+        idx = int((t * 30 if h is None else 30 + h * 26)) % len(self.rings)
+        r0 = self.rings[idx]
+        ring = Image.new("RGBA", (r0.width + 80, r0.height + 80), (0, 0, 0, 0))
+        ring.alpha_composite(glow(padded(r0, 40), 24, (255, 120, 20), 1.4 * heat))
+        ring.alpha_composite(r0, (40, 40))
         ry = H / 2 - 120 if t > 0.45 else H / 2 - 120 + (1 - ease(t / 0.45)) * 120
-        place(cv, fit(ring, 300, 300), W / 2, ry, min(1, t / 0.2))
+        place(cv, ring, W / 2, ry, min(1, t / 0.2))
         p = max(0, (t - 0.4) / 0.55)
         if p > 0:
             hot = wipe(self.hot, p, soft=80)
@@ -340,8 +345,13 @@ class WizardingWorld(Mark):
     build, hold = 34, 30
 
     def __init__(self):
-        fr = [f for f in sticker("L2lkyiSIYFq6f4gAqq")
-              if sum(1 for v in f.getchannel("A").resize((40, 27)).getdata() if v > 200) < 60]
+        def solid(f):  # the sticker opens on a white placeholder card: a filled box, not a line drawing
+            bb = f.getchannel("A").getbbox()
+            if not bb:
+                return True
+            a = f.getchannel("A").crop(bb).resize((40, 40))
+            return sum(1 for v in a.getdata() if v > 200) > 1000
+        fr = [f for f in sticker("L2lkyiSIYFq6f4gAqq") if not solid(f)]
         self.sig = [fit(trim(f), 330, 330) for f in fr if f.getchannel("A").getbbox()]
         self.logo = fit(trim(whiten_dark(commons("File:Wizarding World logo.svg"))), 660, 230)
         rnd = random.Random(7)
