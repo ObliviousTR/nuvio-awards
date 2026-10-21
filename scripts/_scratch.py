@@ -8,8 +8,8 @@ for uid in U.SPECS:
     g = Image.open(os.path.join(d, "hover.gif"))
     fr = [f.convert("RGB").copy() for f in ImageSequence.Iterator(g)]
     pick = fr[::max(1, len(fr) // 8)][:8]
-    strip = Image.new("RGB", (640 * 4, 360 * 2))
+    strip = Image.new("RGB", (512 * 4, 288 * 2))
     for i, f in enumerate(pick):
-        strip.paste(f, ((i % 4) * 640, (i // 4) * 360))
+        strip.paste(f, ((i % 4) * 512, (i // 4) * 288))
     strip.save(os.path.join(d, "hover-frames.jpg"), quality=80)
     print(uid, len(fr), os.path.getsize(os.path.join(d, "hover.gif")) // 1024, "KB")

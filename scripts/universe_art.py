@@ -48,7 +48,16 @@ def get_logo(spec):
     im = commons_png(ref) if kind == "commons" else art.fetch(ref)
     im = im.convert("RGBA")
     bbox = im.getchannel("A").getbbox()
-    return im.crop(bbox) if bbox else im
+    im = im.crop(bbox) if bbox else im
+    # dark lettering (black "STUDIOS", the black Wizarding World wordmark) turns white on our dark covers;
+    # coloured parts (Marvel red) stay as they are
+    px = im.load()
+    for y in range(im.height):
+        for x in range(im.width):
+            r, g, b, a = px[x, y]
+            if a and max(r, g, b) < 90:
+                px[x, y] = (255, 255, 255, a)
+    return im
 
 
 def typeset(name, size=(W, H)):
@@ -93,7 +102,7 @@ def build(uid, out_dir):
     # hero backdrop: the first panel image, full frame, with the logo
     art.graded(imgs[0], 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=88)
     # hover: each image in turn, push-in, crossfade, logo held
-    frames, per, fade = [], 14, 5
+    frames, per, fade = [], 10, 4
     full = [art.soft_fade(art.graded(im, 0.92, 1.05), 0.45, 200) for im in imgs]
     for i, im in enumerate(full):
         nxt = full[(i + 1) % len(full)]
@@ -103,13 +112,13 @@ def build(uid, out_dir):
             if k >= per - fade:
                 a = (k - (per - fade) + 1) / (fade + 1)
                 fr = Image.blend(fr, art.zoomed(nxt, 0.02), a)
-            frames.append(art.put_logo(fr, lg, maxw=620, maxh=170, bottom=54).resize((640, 360), Image.LANCZOS))
-    pal = Image.new("RGB", (640, 360 * 3))
-    for j, idx in enumerate((0, len(frames) // 3, 2 * len(frames) // 3)):
-        pal.paste(frames[idx], (0, 360 * j))
-    pal = pal.convert("P", palette=Image.ADAPTIVE, colors=200)
-    q = [f.quantize(palette=pal, dither=Image.Dither.FLOYDSTEINBERG) for f in frames]
-    q[0].save(os.path.join(d, "hover.gif"), save_all=True, append_images=q[1:], duration=110, loop=0, optimize=True)
+            frames.append(art.put_logo(fr, lg, maxw=620, maxh=170, bottom=54).resize((512, 288), Image.LANCZOS))
+    pal = Image.new("RGB", (512, 288 * len(full)))
+    for j in range(len(full)):
+        pal.paste(frames[j * per + 2], (0, 288 * j))
+    pal = pal.convert("P", palette=Image.ADAPTIVE, colors=160)
+    q = [f.quantize(palette=pal, dither=Image.Dither.NONE) for f in frames]
+    q[0].save(os.path.join(d, "hover.gif"), save_all=True, append_images=q[1:], duration=120, loop=0, optimize=True)
     return d
 
 
