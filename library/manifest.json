@@ -16,18 +16,53 @@
  "catalogs": [
   {
    "type": "movie",
-   "id": "lib-batman-films",
-   "name": "Batman & Gotham · Films"
-  },
-  {
-   "type": "series",
-   "id": "lib-batman-series",
-   "name": "Batman & Gotham · Series"
+   "id": "lib-batman-burton-schumacher-films",
+   "name": "Batman & Gotham · Burton & Schumacher Films"
   },
   {
    "type": "movie",
-   "id": "lib-batman-animated-films",
-   "name": "Batman & Gotham · Animated Films"
+   "id": "lib-batman-the-dark-knight-trilogy",
+   "name": "Batman & Gotham · The Dark Knight Trilogy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-batman-the-batman-epic-crime-saga",
+   "name": "Batman & Gotham · The Batman Epic Crime Saga"
+  },
+  {
+   "type": "movie",
+   "id": "lib-batman-joker",
+   "name": "Batman & Gotham · Joker"
+  },
+  {
+   "type": "movie",
+   "id": "lib-batman-gotham-in-the-dc-extended-universe",
+   "name": "Batman & Gotham · Gotham in the DC Extended Universe"
+  },
+  {
+   "type": "movie",
+   "id": "lib-batman-classic-batman",
+   "name": "Batman & Gotham · Classic Batman"
+  },
+  {
+   "type": "series",
+   "id": "lib-batman-live-action-series",
+   "name": "Batman & Gotham · Live-Action Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-batman-batman-the-animated-series-films",
+   "name": "Batman & Gotham · Batman: The Animated Series Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-batman-dc-animated-movies",
+   "name": "Batman & Gotham · DC Animated Movies"
+  },
+  {
+   "type": "movie",
+   "id": "lib-batman-lego-batman",
+   "name": "Batman & Gotham · LEGO Batman"
   },
   {
    "type": "series",
@@ -36,18 +71,33 @@
   },
   {
    "type": "movie",
-   "id": "lib-spiderman-films",
-   "name": "Spider-Man Universe · Films"
-  },
-  {
-   "type": "series",
-   "id": "lib-spiderman-series",
-   "name": "Spider-Man Universe · Series"
+   "id": "lib-spiderman-sam-raimi-trilogy",
+   "name": "Spider-Man Universe · Sam Raimi Trilogy"
   },
   {
    "type": "movie",
-   "id": "lib-spiderman-animated-films",
-   "name": "Spider-Man Universe · Animated Films"
+   "id": "lib-spiderman-the-amazing-spider-man",
+   "name": "Spider-Man Universe · The Amazing Spider-Man"
+  },
+  {
+   "type": "movie",
+   "id": "lib-spiderman-mcu-spider-man",
+   "name": "Spider-Man Universe · MCU Spider-Man"
+  },
+  {
+   "type": "movie",
+   "id": "lib-spiderman-sony-s-spider-man-universe",
+   "name": "Spider-Man Universe · Sony's Spider-Man Universe"
+  },
+  {
+   "type": "movie",
+   "id": "lib-spiderman-spider-verse",
+   "name": "Spider-Man Universe · Spider-Verse"
+  },
+  {
+   "type": "series",
+   "id": "lib-spiderman-live-action-series",
+   "name": "Spider-Man Universe · Live-Action Series"
   },
   {
    "type": "series",
@@ -56,8 +106,28 @@
   },
   {
    "type": "movie",
-   "id": "lib-xmen-films",
-   "name": "X-Men & Mutants · Films"
+   "id": "lib-spiderman-classic-spider-man-films",
+   "name": "Spider-Man Universe · Classic Spider-Man Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-xmen-x-men-saga",
+   "name": "X-Men & Mutants · X-Men Saga"
+  },
+  {
+   "type": "movie",
+   "id": "lib-xmen-wolverine-trilogy",
+   "name": "X-Men & Mutants · Wolverine Trilogy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-xmen-deadpool",
+   "name": "X-Men & Mutants · Deadpool"
+  },
+  {
+   "type": "movie",
+   "id": "lib-xmen-more-mutant-films",
+   "name": "X-Men & Mutants · More Mutant Films"
   },
   {
    "type": "series",
@@ -71,13 +141,43 @@
   },
   {
    "type": "movie",
-   "id": "lib-mcu-films",
-   "name": "Marvel Cinematic Universe · Films"
+   "id": "lib-mcu-phase-one",
+   "name": "Marvel Cinematic Universe · Phase One"
+  },
+  {
+   "type": "movie",
+   "id": "lib-mcu-phase-two",
+   "name": "Marvel Cinematic Universe · Phase Two"
+  },
+  {
+   "type": "movie",
+   "id": "lib-mcu-phase-three",
+   "name": "Marvel Cinematic Universe · Phase Three"
+  },
+  {
+   "type": "movie",
+   "id": "lib-mcu-phase-four",
+   "name": "Marvel Cinematic Universe · Phase Four"
+  },
+  {
+   "type": "movie",
+   "id": "lib-mcu-phase-five",
+   "name": "Marvel Cinematic Universe · Phase Five"
+  },
+  {
+   "type": "movie",
+   "id": "lib-mcu-phase-six",
+   "name": "Marvel Cinematic Universe · Phase Six"
   },
   {
    "type": "series",
-   "id": "lib-mcu-series",
-   "name": "Marvel Cinematic Universe · Series"
+   "id": "lib-mcu-disney-series",
+   "name": "Marvel Cinematic Universe · Disney+ Series"
+  },
+  {
+   "type": "series",
+   "id": "lib-mcu-marvel-television-abc-netflix-hulu",
+   "name": "Marvel Cinematic Universe · Marvel Television (ABC, Netflix & Hulu)"
   },
   {
    "type": "series",
@@ -86,18 +186,53 @@
   },
   {
    "type": "movie",
-   "id": "lib-dc-films",
-   "name": "DC Universe · Films"
-  },
-  {
-   "type": "series",
-   "id": "lib-dc-series",
-   "name": "DC Universe · Series"
+   "id": "lib-dc-classic-superman-films",
+   "name": "DC Universe · Classic Superman Films"
   },
   {
    "type": "movie",
-   "id": "lib-dc-animated-films",
-   "name": "DC Universe · Animated Films"
+   "id": "lib-dc-dc-extended-universe",
+   "name": "DC Universe · DC Extended Universe"
+  },
+  {
+   "type": "movie",
+   "id": "lib-dc-the-new-dc-universe",
+   "name": "DC Universe · The New DC Universe"
+  },
+  {
+   "type": "movie",
+   "id": "lib-dc-more-dc-films",
+   "name": "DC Universe · More DC Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-dc-arrowverse",
+   "name": "DC Universe · Arrowverse"
+  },
+  {
+   "type": "series",
+   "id": "lib-dc-modern-dc-series",
+   "name": "DC Universe · Modern DC Series"
+  },
+  {
+   "type": "series",
+   "id": "lib-dc-classic-dc-series",
+   "name": "DC Universe · Classic DC Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-dc-justice-league-animated-films",
+   "name": "DC Universe · Justice League Animated Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-dc-superman-animated-films",
+   "name": "DC Universe · Superman Animated Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-dc-more-dc-animated-films",
+   "name": "DC Universe · More DC Animated Films"
   },
   {
    "type": "series",
@@ -106,18 +241,18 @@
   },
   {
    "type": "movie",
-   "id": "lib-starwars-films",
-   "name": "Star Wars · Films"
-  },
-  {
-   "type": "series",
-   "id": "lib-starwars-series",
-   "name": "Star Wars · Series"
+   "id": "lib-starwars-the-skywalker-saga",
+   "name": "Star Wars · The Skywalker Saga"
   },
   {
    "type": "movie",
-   "id": "lib-starwars-animated-films",
-   "name": "Star Wars · Animated Films"
+   "id": "lib-starwars-anthology-spin-off-films",
+   "name": "Star Wars · Anthology & Spin-off Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-starwars-live-action-series",
+   "name": "Star Wars · Live-Action Series"
   },
   {
    "type": "series",
@@ -125,14 +260,44 @@
    "name": "Star Wars · Animated Series"
   },
   {
+   "type": "series",
+   "id": "lib-starwars-lego-young-audiences",
+   "name": "Star Wars · LEGO & Young Audiences"
+  },
+  {
    "type": "movie",
-   "id": "lib-startrek-films",
-   "name": "Star Trek · Films"
+   "id": "lib-starwars-animated-films",
+   "name": "Star Wars · Animated Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-startrek-the-original-series-films",
+   "name": "Star Trek · The Original Series Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-startrek-the-next-generation-films",
+   "name": "Star Trek · The Next Generation Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-startrek-kelvin-timeline",
+   "name": "Star Trek · Kelvin Timeline"
+  },
+  {
+   "type": "movie",
+   "id": "lib-startrek-more-star-trek-films",
+   "name": "Star Trek · More Star Trek Films"
   },
   {
    "type": "series",
-   "id": "lib-startrek-series",
-   "name": "Star Trek · Series"
+   "id": "lib-startrek-classic-era-series",
+   "name": "Star Trek · Classic Era Series"
+  },
+  {
+   "type": "series",
+   "id": "lib-startrek-modern-era-series",
+   "name": "Star Trek · Modern Era Series"
   },
   {
    "type": "series",
@@ -141,8 +306,13 @@
   },
   {
    "type": "movie",
-   "id": "lib-middleearth-films",
-   "name": "Middle-earth · Films"
+   "id": "lib-middleearth-the-lord-of-the-rings-trilogy",
+   "name": "Middle-earth · The Lord of the Rings Trilogy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-middleearth-the-hobbit-trilogy",
+   "name": "Middle-earth · The Hobbit Trilogy"
   },
   {
    "type": "series",
@@ -156,8 +326,33 @@
   },
   {
    "type": "movie",
-   "id": "lib-godzillakong-films",
-   "name": "Godzilla & Kong · Films"
+   "id": "lib-godzillakong-monsterverse",
+   "name": "Godzilla & Kong · MonsterVerse"
+  },
+  {
+   "type": "movie",
+   "id": "lib-godzillakong-showa-era-19541975",
+   "name": "Godzilla & Kong · Showa Era (1954–1975)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-godzillakong-heisei-era-19841995",
+   "name": "Godzilla & Kong · Heisei Era (1984–1995)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-godzillakong-millennium-era-19992004",
+   "name": "Godzilla & Kong · Millennium Era (1999–2004)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-godzillakong-reiwa-era-2016",
+   "name": "Godzilla & Kong · Reiwa Era (2016– )"
+  },
+  {
+   "type": "movie",
+   "id": "lib-godzillakong-hollywood-kong-godzilla",
+   "name": "Godzilla & Kong · Hollywood Kong & Godzilla"
   },
   {
    "type": "series",
@@ -176,8 +371,28 @@
   },
   {
    "type": "movie",
-   "id": "lib-alienpredator-films",
-   "name": "Alien & Predator · Films"
+   "id": "lib-alienpredator-alien",
+   "name": "Alien & Predator · Alien"
+  },
+  {
+   "type": "movie",
+   "id": "lib-alienpredator-prometheus-prequels",
+   "name": "Alien & Predator · Prometheus Prequels"
+  },
+  {
+   "type": "movie",
+   "id": "lib-alienpredator-predator",
+   "name": "Alien & Predator · Predator"
+  },
+  {
+   "type": "movie",
+   "id": "lib-alienpredator-alien-vs-predator",
+   "name": "Alien & Predator · Alien vs. Predator"
+  },
+  {
+   "type": "movie",
+   "id": "lib-alienpredator-more-films",
+   "name": "Alien & Predator · More Films"
   },
   {
    "type": "series",
@@ -196,13 +411,38 @@
   },
   {
    "type": "movie",
-   "id": "lib-wizarding-films",
-   "name": "Wizarding World · Films"
+   "id": "lib-wizarding-harry-potter",
+   "name": "Wizarding World · Harry Potter"
   },
   {
    "type": "movie",
-   "id": "lib-bond-films",
-   "name": "007 James Bond · Films"
+   "id": "lib-wizarding-fantastic-beasts",
+   "name": "Wizarding World · Fantastic Beasts"
+  },
+  {
+   "type": "movie",
+   "id": "lib-bond-sean-connery-george-lazenby",
+   "name": "007 James Bond · Sean Connery & George Lazenby"
+  },
+  {
+   "type": "movie",
+   "id": "lib-bond-roger-moore",
+   "name": "007 James Bond · Roger Moore"
+  },
+  {
+   "type": "movie",
+   "id": "lib-bond-timothy-dalton",
+   "name": "007 James Bond · Timothy Dalton"
+  },
+  {
+   "type": "movie",
+   "id": "lib-bond-pierce-brosnan",
+   "name": "007 James Bond · Pierce Brosnan"
+  },
+  {
+   "type": "movie",
+   "id": "lib-bond-daniel-craig",
+   "name": "007 James Bond · Daniel Craig"
   },
   {
    "type": "series",
@@ -251,8 +491,18 @@
   },
   {
    "type": "movie",
-   "id": "lib-apes-films",
-   "name": "Planet of the Apes · Films"
+   "id": "lib-apes-original-saga-19681973",
+   "name": "Planet of the Apes · Original Saga (1968–1973)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-apes-reboot-saga",
+   "name": "Planet of the Apes · Reboot Saga"
+  },
+  {
+   "type": "movie",
+   "id": "lib-apes-more-apes-films",
+   "name": "Planet of the Apes · More Apes Films"
   },
   {
    "type": "series",
@@ -286,8 +536,13 @@
   },
   {
    "type": "movie",
-   "id": "lib-jurassic-films",
-   "name": "Jurassic Park · Films"
+   "id": "lib-jurassic-jurassic-park-trilogy",
+   "name": "Jurassic Park · Jurassic Park Trilogy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-jurassic-jurassic-world",
+   "name": "Jurassic Park · Jurassic World"
   },
   {
    "type": "series",
@@ -311,8 +566,13 @@
   },
   {
    "type": "movie",
-   "id": "lib-transformers-films",
-   "name": "Transformers · Films"
+   "id": "lib-transformers-michael-bay-films",
+   "name": "Transformers · Michael Bay Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-transformers-bumblebee-beyond",
+   "name": "Transformers · Bumblebee & Beyond"
   },
   {
    "type": "movie",

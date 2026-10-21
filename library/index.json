@@ -5357,16 +5357,16 @@
       "Thor",
       "The Other Boleyn Girl",
       "Beautiful Girls",
-      "May December",
       "Goya's Ghosts",
       "Star Wars: Episode II - Attack of the Clones",
       "Star Wars: Episode I - The Phantom Menace",
+      "May December",
       "Thor: The Dark World",
       "Annihilation",
       "Jackie",
       "Everyone Says I Love You",
-      "My Blueberry Nights",
       "Mars Attacks!",
+      "My Blueberry Nights",
       "Thor: Love and Thunder",
       "No Strings Attached",
       "Mr. Magorium's Wonder Emporium",
@@ -7247,8 +7247,8 @@
       "The Twilight Saga: Breaking Dawn - Part 1",
       "Maps to the Stars",
       "Die My Love",
-      "Life",
       "The Twilight Saga: New Moon",
+      "Life",
       "Waiting for the Barbarians",
       "Queen of the Desert",
       "High Life",
@@ -9612,8 +9612,8 @@
       "Little Children",
       "Heavenly Creatures",
       "Quills",
-      "A Little Chaos",
       "Lee",
+      "A Little Chaos",
       "Ammonite",
       "Hamlet",
       "Enigma",
@@ -10631,8 +10631,8 @@
      "id": "lib-a-robert-downey-jr-top-rated",
      "name": "Robert Downey Jr. · Top Rated",
      "titles": [
-      "Avengers: Endgame",
       "Avengers: Infinity War",
+      "Avengers: Endgame",
       "The Avengers",
       "Oppenheimer",
       "Iron Man",
@@ -12421,8 +12421,8 @@
       "Aliens",
       "Titanic",
       "The Terminator",
-      "Avatar: Fire and Ash",
       "Avatar",
+      "Avatar: Fire and Ash",
       "Avatar: The Way of Water",
       "The Abyss",
       "True Lies",
@@ -13801,31 +13801,75 @@
    "poster": "/31SwN5tZuJNsWTLx6DNNyQSAXdx.jpg",
    "rails": [
     {
-     "count": 14,
-     "id": "lib-batman-films",
-     "name": "Batman & Gotham · Films",
+     "count": 4,
+     "id": "lib-batman-burton-schumacher-films",
+     "name": "Batman & Gotham · Burton & Schumacher Films",
      "titles": [
-      "Batman",
-      "Batman",
       "Batman",
       "Batman Returns",
       "Batman Forever",
-      "Batman & Robin",
+      "Batman & Robin"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 3,
+     "id": "lib-batman-the-dark-knight-trilogy",
+     "name": "Batman & Gotham · The Dark Knight Trilogy",
+     "titles": [
       "Batman Begins",
       "The Dark Knight",
-      "The Dark Knight Rises",
-      "Batman v Superman: Dawn of Justice",
+      "The Dark Knight Rises"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 1,
+     "id": "lib-batman-the-batman-epic-crime-saga",
+     "name": "Batman & Gotham · The Batman Epic Crime Saga",
+     "titles": [
+      "The Batman"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-batman-joker",
+     "name": "Batman & Gotham · Joker",
+     "titles": [
       "Joker",
-      "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
-      "The Batman",
       "Joker: Folie à Deux"
      ],
      "type": "movie"
     },
     {
      "count": 6,
-     "id": "lib-batman-series",
-     "name": "Batman & Gotham · Series",
+     "id": "lib-batman-gotham-in-the-dc-extended-universe",
+     "name": "Batman & Gotham · Gotham in the DC Extended Universe",
+     "titles": [
+      "Batman v Superman: Dawn of Justice",
+      "Suicide Squad",
+      "Justice League",
+      "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+      "Zack Snyder's Justice League",
+      "The Flash"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-batman-classic-batman",
+     "name": "Batman & Gotham · Classic Batman",
+     "titles": [
+      "Batman",
+      "Batman"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 6,
+     "id": "lib-batman-live-action-series",
+     "name": "Batman & Gotham · Live-Action Series",
      "titles": [
       "Batman",
       "Gotham",
@@ -13837,12 +13881,22 @@
      "type": "series"
     },
     {
-     "count": 21,
-     "id": "lib-batman-animated-films",
-     "name": "Batman & Gotham · Animated Films",
+     "count": 4,
+     "id": "lib-batman-batman-the-animated-series-films",
+     "name": "Batman & Gotham · Batman: The Animated Series Films",
      "titles": [
       "Batman: Mask of the Phantasm",
+      "Batman & Mr. Freeze: SubZero",
       "Batman Beyond: Return of the Joker",
+      "Batman: Mystery of the Batwoman"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 17,
+     "id": "lib-batman-dc-animated-movies",
+     "name": "Batman & Gotham · DC Animated Movies",
+     "titles": [
       "Batman: Gotham Knight",
       "Batman: Under the Red Hood",
       "Batman: Year One",
@@ -13851,9 +13905,7 @@
       "Son of Batman",
       "Batman: Assault on Arkham",
       "Batman: Bad Blood",
-      "LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout",
       "Batman: The Killing Joke",
-      "The Lego Batman Movie",
       "Batman: Gotham by Gaslight",
       "Batman Ninja",
       "Batman: Hush",
@@ -13862,6 +13914,16 @@
       "Batman: The Doom That Came to Gotham",
       "Aztec Batman: Clash of Empires",
       "Batman: Knightfall Part 1: Knightfall"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-batman-lego-batman",
+     "name": "Batman & Gotham · LEGO Batman",
+     "titles": [
+      "LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout",
+      "The Lego Batman Movie"
      ],
      "type": "movie"
     },
@@ -13893,50 +13955,72 @@
    "poster": "/bp5PqLa06QA1LsELA1SsKZ008H7.jpg",
    "rails": [
     {
-     "count": 17,
-     "id": "lib-spiderman-films",
-     "name": "Spider-Man Universe · Films",
+     "count": 3,
+     "id": "lib-spiderman-sam-raimi-trilogy",
+     "name": "Spider-Man Universe · Sam Raimi Trilogy",
      "titles": [
       "Spider-Man",
-      "Spider-Man Strikes Back",
-      "Spider-Man",
       "Spider-Man 2",
-      "Spider-Man 3",
+      "Spider-Man 3"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-spiderman-the-amazing-spider-man",
+     "name": "Spider-Man Universe · The Amazing Spider-Man",
+     "titles": [
       "The Amazing Spider-Man",
-      "The Amazing Spider-Man 2",
+      "The Amazing Spider-Man 2"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 4,
+     "id": "lib-spiderman-mcu-spider-man",
+     "name": "Spider-Man Universe · MCU Spider-Man",
+     "titles": [
       "Spider-Man: Homecoming",
-      "Venom",
       "Spider-Man: Far From Home",
-      "Venom: Let There Be Carnage",
       "Spider-Man: No Way Home",
-      "Morbius",
-      "Madame Web",
-      "Venom: The Last Dance",
-      "Kraven the Hunter",
       "Spider-Man: Brand New Day"
      ],
      "type": "movie"
     },
     {
+     "count": 6,
+     "id": "lib-spiderman-sony-s-spider-man-universe",
+     "name": "Spider-Man Universe · Sony's Spider-Man Universe",
+     "titles": [
+      "Venom",
+      "Venom: Let There Be Carnage",
+      "Morbius",
+      "Madame Web",
+      "Venom: The Last Dance",
+      "Kraven the Hunter"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-spiderman-spider-verse",
+     "name": "Spider-Man Universe · Spider-Verse",
+     "titles": [
+      "Spider-Man: Into the Spider-Verse",
+      "Spider-Man: Across the Spider-Verse"
+     ],
+     "type": "movie"
+    },
+    {
      "count": 3,
-     "id": "lib-spiderman-series",
-     "name": "Spider-Man Universe · Series",
+     "id": "lib-spiderman-live-action-series",
+     "name": "Spider-Man Universe · Live-Action Series",
      "titles": [
       "The Amazing Spider-Man",
       "Japanese Spiderman",
       "Spider-Noir"
      ],
      "type": "series"
-    },
-    {
-     "count": 2,
-     "id": "lib-spiderman-animated-films",
-     "name": "Spider-Man Universe · Animated Films",
-     "titles": [
-      "Spider-Man: Into the Spider-Verse",
-      "Spider-Man: Across the Spider-Verse"
-     ],
-     "type": "movie"
     },
     {
      "count": 10,
@@ -13955,6 +14039,16 @@
       "Your Friendly Neighborhood Spider-Man"
      ],
      "type": "series"
+    },
+    {
+     "count": 2,
+     "id": "lib-spiderman-classic-spider-man-films",
+     "name": "Spider-Man Universe · Classic Spider-Man Films",
+     "titles": [
+      "Spider-Man",
+      "Spider-Man Strikes Back"
+     ],
+     "type": "movie"
     }
    ],
    "title": "Spider-Man Universe"
@@ -13965,25 +14059,49 @@
    "poster": "/31rqs6ZxFdi5nWZZaFPIr17q8jt.jpg",
    "rails": [
     {
-     "count": 15,
-     "id": "lib-xmen-films",
-     "name": "X-Men & Mutants · Films",
+     "count": 7,
+     "id": "lib-xmen-x-men-saga",
+     "name": "X-Men & Mutants · X-Men Saga",
      "titles": [
       "X-Men",
       "X2",
       "X-Men: The Last Stand",
-      "X-Men Origins: Wolverine",
       "X-Men: First Class",
-      "The Wolverine",
       "X-Men: Days of Future Past",
-      "Deadpool",
       "X-Men: Apocalypse",
-      "Logan",
+      "Dark Phoenix"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 3,
+     "id": "lib-xmen-wolverine-trilogy",
+     "name": "X-Men & Mutants · Wolverine Trilogy",
+     "titles": [
+      "X-Men Origins: Wolverine",
+      "The Wolverine",
+      "Logan"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 4,
+     "id": "lib-xmen-deadpool",
+     "name": "X-Men & Mutants · Deadpool",
+     "titles": [
+      "Deadpool",
       "Deadpool 2",
       "Once Upon a Deadpool",
-      "Dark Phoenix",
-      "The New Mutants",
       "Deadpool & Wolverine"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 1,
+     "id": "lib-xmen-more-mutant-films",
+     "name": "X-Men & Mutants · More Mutant Films",
+     "titles": [
+      "The New Mutants"
      ],
      "type": "movie"
     },
@@ -14020,22 +14138,38 @@
    "poster": "/yFSIUVTCvgYrpalUktulvk3Gi5Y.jpg",
    "rails": [
     {
-     "count": 41,
-     "id": "lib-mcu-films",
-     "name": "Marvel Cinematic Universe · Films",
+     "count": 6,
+     "id": "lib-mcu-phase-one",
+     "name": "Marvel Cinematic Universe · Phase One",
      "titles": [
       "Iron Man",
       "The Incredible Hulk",
       "Iron Man 2",
       "Thor",
       "Captain America: The First Avenger",
-      "The Avengers",
+      "The Avengers"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 6,
+     "id": "lib-mcu-phase-two",
+     "name": "Marvel Cinematic Universe · Phase Two",
+     "titles": [
       "Iron Man 3",
       "Thor: The Dark World",
       "Captain America: The Winter Soldier",
       "Guardians of the Galaxy",
       "Avengers: Age of Ultron",
-      "Ant-Man",
+      "Ant-Man"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 11,
+     "id": "lib-mcu-phase-three",
+     "name": "Marvel Cinematic Universe · Phase Three",
+     "titles": [
       "Captain America: Civil War",
       "Doctor Strange",
       "Guardians of the Galaxy Vol. 2",
@@ -14046,7 +14180,15 @@
       "Ant-Man and the Wasp",
       "Captain Marvel",
       "Avengers: Endgame",
-      "Spider-Man: Far From Home",
+      "Spider-Man: Far From Home"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 9,
+     "id": "lib-mcu-phase-four",
+     "name": "Marvel Cinematic Universe · Phase Four",
+     "titles": [
       "Black Widow",
       "Shang-Chi and the Legend of the Ten Rings",
       "Eternals",
@@ -14055,13 +14197,29 @@
       "Thor: Love and Thunder",
       "Werewolf by Night",
       "Black Panther: Wakanda Forever",
-      "The Guardians of the Galaxy Holiday Special",
+      "The Guardians of the Galaxy Holiday Special"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 6,
+     "id": "lib-mcu-phase-five",
+     "name": "Marvel Cinematic Universe · Phase Five",
+     "titles": [
       "Ant-Man and the Wasp: Quantumania",
       "Guardians of the Galaxy Vol. 3",
       "The Marvels",
       "Deadpool & Wolverine",
       "Captain America: Brave New World",
-      "Thunderbolts*",
+      "Thunderbolts*"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 3,
+     "id": "lib-mcu-phase-six",
+     "name": "Marvel Cinematic Universe · Phase Six",
+     "titles": [
       "The Fantastic 4: First Steps",
       "The Punisher: One Last Kill",
       "Spider-Man: Brand New Day"
@@ -14069,23 +14227,10 @@
      "type": "movie"
     },
     {
-     "count": 27,
-     "id": "lib-mcu-series",
-     "name": "Marvel Cinematic Universe · Series",
+     "count": 14,
+     "id": "lib-mcu-disney-series",
+     "name": "Marvel Cinematic Universe · Disney+ Series",
      "titles": [
-      "Marvel's Agents of S.H.I.E.L.D.",
-      "Marvel's Agent Carter",
-      "Marvel's Daredevil",
-      "Marvel's Jessica Jones",
-      "Marvel's Luke Cage",
-      "Marvel's Agents of S.H.I.E.L.D.: Slingshot",
-      "Marvel's Iron Fist",
-      "Marvel's The Defenders",
-      "Marvel's Inhumans",
-      "Marvel's The Punisher",
-      "Marvel's Runaways",
-      "Marvel's Cloak & Dagger",
-      "Helstrom",
       "WandaVision",
       "The Falcon and the Winter Soldier",
       "Loki",
@@ -14100,6 +14245,27 @@
       "Ironheart",
       "Wonder Man",
       "VisionQuest"
+     ],
+     "type": "series"
+    },
+    {
+     "count": 13,
+     "id": "lib-mcu-marvel-television-abc-netflix-hulu",
+     "name": "Marvel Cinematic Universe · Marvel Television (ABC, Netflix & Hulu)",
+     "titles": [
+      "Marvel's Agents of S.H.I.E.L.D.",
+      "Marvel's Agent Carter",
+      "Marvel's Daredevil",
+      "Marvel's Jessica Jones",
+      "Marvel's Luke Cage",
+      "Marvel's Agents of S.H.I.E.L.D.: Slingshot",
+      "Marvel's Iron Fist",
+      "Marvel's The Defenders",
+      "Marvel's Inhumans",
+      "Marvel's The Punisher",
+      "Marvel's Runaways",
+      "Marvel's Cloak & Dagger",
+      "Helstrom"
      ],
      "type": "series"
     },
@@ -14125,21 +14291,24 @@
    "poster": "/k1d3n4TJAGTF90x93QhL9jKUaXv.jpg",
    "rails": [
     {
-     "count": 29,
-     "id": "lib-dc-films",
-     "name": "DC Universe · Films",
+     "count": 6,
+     "id": "lib-dc-classic-superman-films",
+     "name": "DC Universe · Classic Superman Films",
      "titles": [
-      "Superman",
       "Superman",
       "Superman II",
       "Superman III",
       "Supergirl",
       "Superman IV: The Quest for Peace",
-      "Justice League of America",
-      "Constantine",
-      "Superman Returns",
-      "Watchmen",
-      "Green Lantern",
+      "Superman Returns"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 16,
+     "id": "lib-dc-dc-extended-universe",
+     "name": "DC Universe · DC Extended Universe",
+     "titles": [
       "Man of Steel",
       "Batman v Superman: Dawn of Justice",
       "Suicide Squad",
@@ -14155,68 +14324,121 @@
       "Shazam! Fury of the Gods",
       "The Flash",
       "Blue Beetle",
-      "Aquaman and the Lost Kingdom",
+      "Aquaman and the Lost Kingdom"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-dc-the-new-dc-universe",
+     "name": "DC Universe · The New DC Universe",
+     "titles": [
       "Superman",
       "Supergirl"
      ],
      "type": "movie"
     },
     {
-     "count": 14,
-     "id": "lib-dc-series",
-     "name": "DC Universe · Series",
+     "count": 5,
+     "id": "lib-dc-more-dc-films",
+     "name": "DC Universe · More DC Films",
      "titles": [
-      "Adventures of Superman",
-      "Wonder Woman",
-      "Lois & Clark: The New Adventures of Superman",
-      "Smallville",
+      "Superman",
+      "Justice League of America",
+      "Constantine",
+      "Watchmen",
+      "Green Lantern"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 6,
+     "id": "lib-dc-arrowverse",
+     "name": "DC Universe · Arrowverse",
+     "titles": [
       "Arrow",
       "The Flash",
       "Supergirl",
       "DC's Legends of Tomorrow",
+      "DC's Stargirl",
+      "Superman & Lois"
+     ],
+     "type": "series"
+    },
+    {
+     "count": 4,
+     "id": "lib-dc-modern-dc-series",
+     "name": "DC Universe · Modern DC Series",
+     "titles": [
       "Titans",
       "Doom Patrol",
-      "DC's Stargirl",
-      "Superman & Lois",
       "Peacemaker",
       "Lanterns"
      ],
      "type": "series"
     },
     {
-     "count": 29,
-     "id": "lib-dc-animated-films",
-     "name": "DC Universe · Animated Films",
+     "count": 4,
+     "id": "lib-dc-classic-dc-series",
+     "name": "DC Universe · Classic DC Series",
      "titles": [
-      "Superman",
+      "Adventures of Superman",
+      "Wonder Woman",
+      "Lois & Clark: The New Adventures of Superman",
+      "Smallville"
+     ],
+     "type": "series"
+    },
+    {
+     "count": 17,
+     "id": "lib-dc-justice-league-animated-films",
+     "name": "DC Universe · Justice League Animated Films",
+     "titles": [
       "Justice League: Secret Origins",
       "Justice League: Paradise Lost",
       "Justice League: Starcrossed - The Movie",
-      "Superman: Doomsday",
       "Justice League: The New Frontier",
-      "Superman/Batman: Public Enemies",
       "Justice League: Crisis on Two Earths",
-      "Superman/Batman: Apocalypse",
-      "All Star Superman",
       "Justice League: Doom",
-      "Superman vs. The Elite",
-      "Superman: Unbound",
       "Justice League: The Flashpoint Paradox",
       "Justice League: War",
       "Justice League: Throne of Atlantis",
       "Justice League: Gods and Monsters",
       "Justice League vs. Teen Titans",
       "Justice League Dark",
-      "Suicide Squad: Hell to Pay",
-      "Teen Titans Go! To the Movies",
-      "The Death of Superman",
       "Justice League vs. the Fatal Five",
-      "Superman: Red Son",
       "Justice League Dark: Apokolips War",
-      "Superman: Man of Tomorrow",
       "Justice League: Warworld",
       "Justice League: Crisis on Infinite Earths Part One",
       "Justice League: Crisis on Infinite Earths Part Three"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 10,
+     "id": "lib-dc-superman-animated-films",
+     "name": "DC Universe · Superman Animated Films",
+     "titles": [
+      "Superman",
+      "Superman: Doomsday",
+      "Superman/Batman: Public Enemies",
+      "Superman/Batman: Apocalypse",
+      "All Star Superman",
+      "Superman vs. The Elite",
+      "Superman: Unbound",
+      "The Death of Superman",
+      "Superman: Red Son",
+      "Superman: Man of Tomorrow"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-dc-more-dc-animated-films",
+     "name": "DC Universe · More DC Animated Films",
+     "titles": [
+      "Suicide Squad: Hell to Pay",
+      "Teen Titans Go! To the Movies"
      ],
      "type": "movie"
     },
@@ -14249,30 +14471,38 @@
    "poster": "/pWVLFh4OuejTpUaDQbB1C4zoS2p.jpg",
    "rails": [
     {
-     "count": 13,
-     "id": "lib-starwars-films",
-     "name": "Star Wars · Films",
+     "count": 9,
+     "id": "lib-starwars-the-skywalker-saga",
+     "name": "Star Wars · The Skywalker Saga",
      "titles": [
       "Star Wars",
-      "The Star Wars Holiday Special",
       "The Empire Strikes Back",
       "Return of the Jedi",
       "Star Wars: Episode I - The Phantom Menace",
       "Star Wars: Episode II - Attack of the Clones",
       "Star Wars: Episode III - Revenge of the Sith",
       "Star Wars: The Force Awakens",
-      "Rogue One: A Star Wars Story",
       "Star Wars: The Last Jedi",
+      "Star Wars: The Rise of Skywalker"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 4,
+     "id": "lib-starwars-anthology-spin-off-films",
+     "name": "Star Wars · Anthology & Spin-off Films",
+     "titles": [
+      "The Star Wars Holiday Special",
+      "Rogue One: A Star Wars Story",
       "Solo: A Star Wars Story",
-      "Star Wars: The Rise of Skywalker",
       "The Mandalorian and Grogu"
      ],
      "type": "movie"
     },
     {
      "count": 7,
-     "id": "lib-starwars-series",
-     "name": "Star Wars · Series",
+     "id": "lib-starwars-live-action-series",
+     "name": "Star Wars · Live-Action Series",
      "titles": [
       "The Mandalorian",
       "The Book of Boba Fett",
@@ -14281,6 +14511,38 @@
       "Ahsoka",
       "The Acolyte",
       "Star Wars: Skeleton Crew"
+     ],
+     "type": "series"
+    },
+    {
+     "count": 11,
+     "id": "lib-starwars-animated-series",
+     "name": "Star Wars · Animated Series",
+     "titles": [
+      "Star Wars: Clone Wars",
+      "Star Wars: The Clone Wars",
+      "Star Wars Rebels",
+      "Star Wars Resistance",
+      "Star Wars: The Bad Batch",
+      "Star Wars: Visions",
+      "Star Wars: Tales of the Jedi",
+      "Star Wars: Tales of the Empire",
+      "Star Wars: Tales of the Underworld",
+      "Star Wars: Maul - Shadow Lord",
+      "Star Wars: Visions Presents - The Ninth Jedi"
+     ],
+     "type": "series"
+    },
+    {
+     "count": 5,
+     "id": "lib-starwars-lego-young-audiences",
+     "name": "Star Wars · LEGO & Young Audiences",
+     "titles": [
+      "LEGO Star Wars: Droid Tales",
+      "Star Wars: Forces of Destiny",
+      "LEGO Star Wars: All-Stars",
+      "Star Wars Galaxy of Adventures",
+      "LEGO Star Wars: Rebuild the Galaxy"
      ],
      "type": "series"
     },
@@ -14296,30 +14558,6 @@
       "LEGO Star Wars: The Mandalorian"
      ],
      "type": "movie"
-    },
-    {
-     "count": 16,
-     "id": "lib-starwars-animated-series",
-     "name": "Star Wars · Animated Series",
-     "titles": [
-      "Star Wars: Clone Wars",
-      "Star Wars: The Clone Wars",
-      "Star Wars Rebels",
-      "LEGO Star Wars: Droid Tales",
-      "Star Wars: Forces of Destiny",
-      "Star Wars Resistance",
-      "LEGO Star Wars: All-Stars",
-      "Star Wars Galaxy of Adventures",
-      "Star Wars: The Bad Batch",
-      "Star Wars: Visions",
-      "Star Wars: Tales of the Jedi",
-      "Star Wars: Tales of the Empire",
-      "LEGO Star Wars: Rebuild the Galaxy",
-      "Star Wars: Tales of the Underworld",
-      "Star Wars: Maul - Shadow Lord",
-      "Star Wars: Visions Presents - The Ninth Jedi"
-     ],
-     "type": "series"
     }
    ],
    "title": "Star Wars"
@@ -14330,37 +14568,69 @@
    "poster": "/vNrbrsHOpXS3whk9DLuBNcjJy1s.jpg",
    "rails": [
     {
-     "count": 14,
-     "id": "lib-startrek-films",
-     "name": "Star Trek · Films",
+     "count": 6,
+     "id": "lib-startrek-the-original-series-films",
+     "name": "Star Trek · The Original Series Films",
      "titles": [
       "Star Trek: The Motion Picture",
       "Star Trek II: The Wrath of Khan",
       "Star Trek III: The Search for Spock",
       "Star Trek IV: The Voyage Home",
       "Star Trek V: The Final Frontier",
-      "Star Trek VI: The Undiscovered Country",
+      "Star Trek VI: The Undiscovered Country"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 4,
+     "id": "lib-startrek-the-next-generation-films",
+     "name": "Star Trek · The Next Generation Films",
+     "titles": [
       "Star Trek: Generations",
       "Star Trek: First Contact",
       "Star Trek: Insurrection",
-      "Star Trek: Nemesis",
+      "Star Trek: Nemesis"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 3,
+     "id": "lib-startrek-kelvin-timeline",
+     "name": "Star Trek · Kelvin Timeline",
+     "titles": [
       "Star Trek",
       "Star Trek Into Darkness",
-      "Star Trek Beyond",
+      "Star Trek Beyond"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 1,
+     "id": "lib-startrek-more-star-trek-films",
+     "name": "Star Trek · More Star Trek Films",
+     "titles": [
       "Star Trek: Section 31"
      ],
      "type": "movie"
     },
     {
-     "count": 10,
-     "id": "lib-startrek-series",
-     "name": "Star Trek · Series",
+     "count": 5,
+     "id": "lib-startrek-classic-era-series",
+     "name": "Star Trek · Classic Era Series",
      "titles": [
       "Star Trek",
       "Star Trek: The Next Generation",
       "Star Trek: Deep Space Nine",
       "Star Trek: Voyager",
-      "Star Trek: Enterprise",
+      "Star Trek: Enterprise"
+     ],
+     "type": "series"
+    },
+    {
+     "count": 5,
+     "id": "lib-startrek-modern-era-series",
+     "name": "Star Trek · Modern Era Series",
+     "titles": [
       "Star Trek: Discovery",
       "Star Trek: Short Treks",
       "Star Trek: Picard",
@@ -14389,13 +14659,21 @@
    "poster": "/oENY593nKRVL2PnxXsMtlh8izb4.jpg",
    "rails": [
     {
-     "count": 6,
-     "id": "lib-middleearth-films",
-     "name": "Middle-earth · Films",
+     "count": 3,
+     "id": "lib-middleearth-the-lord-of-the-rings-trilogy",
+     "name": "Middle-earth · The Lord of the Rings Trilogy",
      "titles": [
       "The Lord of the Rings: The Fellowship of the Ring",
       "The Lord of the Rings: The Two Towers",
-      "The Lord of the Rings: The Return of the King",
+      "The Lord of the Rings: The Return of the King"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 3,
+     "id": "lib-middleearth-the-hobbit-trilogy",
+     "name": "Middle-earth · The Hobbit Trilogy",
+     "titles": [
       "The Hobbit: An Unexpected Journey",
       "The Hobbit: The Desolation of Smaug",
       "The Hobbit: The Battle of the Five Armies"
@@ -14432,17 +14710,25 @@
    "poster": "/m4JJ0c2vFu5QDGaMNnhjOLFgkJh.jpg",
    "rails": [
     {
-     "count": 41,
-     "id": "lib-godzillakong-films",
-     "name": "Godzilla & Kong · Films",
+     "count": 5,
+     "id": "lib-godzillakong-monsterverse",
+     "name": "Godzilla & Kong · MonsterVerse",
      "titles": [
-      "King Kong",
-      "The Son of Kong",
+      "Godzilla",
+      "Kong: Skull Island",
+      "Godzilla: King of the Monsters",
+      "Godzilla vs. Kong",
+      "Godzilla x Kong: The New Empire"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 11,
+     "id": "lib-godzillakong-showa-era-19541975",
+     "name": "Godzilla & Kong · Showa Era (1954–1975)",
+     "titles": [
       "Godzilla",
       "Godzilla Raids Again",
-      "Godzilla, King of the Monsters!",
-      "Godzilla, the Monster of the Pacific Ocean",
-      "King Kong vs. Godzilla",
       "King Kong vs. Godzilla",
       "Mothra vs. Godzilla",
       "King Kong Escapes",
@@ -14451,32 +14737,64 @@
       "Godzilla vs. Gigan",
       "Godzilla vs. Megalon",
       "Godzilla vs. Mechagodzilla",
-      "Terror of Mechagodzilla",
-      "King Kong",
-      "Godzilla",
+      "Terror of Mechagodzilla"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 8,
+     "id": "lib-godzillakong-heisei-era-19841995",
+     "name": "Godzilla & Kong · Heisei Era (1984–1995)",
+     "titles": [
       "The Return of Godzilla",
       "Godzilla 1985",
-      "King Kong Lives",
       "Godzilla vs. Biollante",
       "Godzilla vs. King Ghidorah",
       "Godzilla vs. Mothra",
       "Godzilla vs. Mechagodzilla II",
       "Godzilla vs. SpaceGodzilla",
-      "Godzilla vs. Destoroyah",
-      "Godzilla",
+      "Godzilla vs. Destoroyah"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 5,
+     "id": "lib-godzillakong-millennium-era-19992004",
+     "name": "Godzilla & Kong · Millennium Era (1999–2004)",
+     "titles": [
       "Godzilla 2000: Millennium",
       "Godzilla vs. Megaguirus",
       "Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack",
       "Godzilla Against MechaGodzilla",
-      "Godzilla: Final Wars",
+      "Godzilla: Final Wars"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-godzillakong-reiwa-era-2016",
+     "name": "Godzilla & Kong · Reiwa Era (2016– )",
+     "titles": [
+      "Shin Godzilla",
+      "Godzilla Minus One"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 10,
+     "id": "lib-godzillakong-hollywood-kong-godzilla",
+     "name": "Godzilla & Kong · Hollywood Kong & Godzilla",
+     "titles": [
+      "King Kong",
+      "The Son of Kong",
+      "Godzilla, King of the Monsters!",
+      "Godzilla, the Monster of the Pacific Ocean",
+      "King Kong vs. Godzilla",
       "King Kong",
       "Godzilla",
-      "Shin Godzilla",
-      "Kong: Skull Island",
-      "Godzilla: King of the Monsters",
-      "Godzilla vs. Kong",
-      "Godzilla Minus One",
-      "Godzilla x Kong: The New Empire"
+      "King Kong Lives",
+      "Godzilla",
+      "King Kong"
      ],
      "type": "movie"
     },
@@ -14525,26 +14843,58 @@
    "poster": "/gWFHIY77cRVoBRGERwMHqpD27gc.jpg",
    "rails": [
     {
-     "count": 16,
-     "id": "lib-alienpredator-films",
-     "name": "Alien & Predator · Films",
+     "count": 5,
+     "id": "lib-alienpredator-alien",
+     "name": "Alien & Predator · Alien",
      "titles": [
       "Alien",
       "Aliens",
-      "Predator",
       "Alien Nation",
-      "Predator 2",
-      "Alien³",
       "Alien Resurrection",
-      "AVP: Alien vs. Predator",
-      "Aliens vs Predator: Requiem",
-      "Predators",
+      "Alien: Romulus"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-alienpredator-prometheus-prequels",
+     "name": "Alien & Predator · Prometheus Prequels",
+     "titles": [
       "Prometheus",
-      "Alien: Covenant",
+      "Alien: Covenant"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 6,
+     "id": "lib-alienpredator-predator",
+     "name": "Alien & Predator · Predator",
+     "titles": [
+      "Predator",
+      "Predator 2",
+      "Predators",
       "The Predator",
       "Prey",
-      "Alien: Romulus",
       "Predator: Badlands"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-alienpredator-alien-vs-predator",
+     "name": "Alien & Predator · Alien vs. Predator",
+     "titles": [
+      "AVP: Alien vs. Predator",
+      "Aliens vs Predator: Requiem"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 1,
+     "id": "lib-alienpredator-more-films",
+     "name": "Alien & Predator · More Films",
+     "titles": [
+      "Alien³"
      ],
      "type": "movie"
     },
@@ -14584,9 +14934,9 @@
    "poster": "/eVPs2Y0LyvTLZn6AP5Z6O2rtiGB.jpg",
    "rails": [
     {
-     "count": 11,
-     "id": "lib-wizarding-films",
-     "name": "Wizarding World · Films",
+     "count": 8,
+     "id": "lib-wizarding-harry-potter",
+     "name": "Wizarding World · Harry Potter",
      "titles": [
       "Harry Potter and the Philosopher's Stone",
       "Harry Potter and the Chamber of Secrets",
@@ -14595,7 +14945,15 @@
       "Harry Potter and the Order of the Phoenix",
       "Harry Potter and the Half-Blood Prince",
       "Harry Potter and the Deathly Hallows: Part 1",
-      "Harry Potter and the Deathly Hallows: Part 2",
+      "Harry Potter and the Deathly Hallows: Part 2"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 3,
+     "id": "lib-wizarding-fantastic-beasts",
+     "name": "Wizarding World · Fantastic Beasts",
+     "titles": [
       "Fantastic Beasts and Where to Find Them",
       "Fantastic Beasts: The Crimes of Grindelwald",
       "Fantastic Beasts: The Secrets of Dumbledore"
@@ -14611,9 +14969,9 @@
    "poster": "/ofwSiqOFShhunAIYYdSMHMJQSx2.jpg",
    "rails": [
     {
-     "count": 26,
-     "id": "lib-bond-films",
-     "name": "007 James Bond · Films",
+     "count": 8,
+     "id": "lib-bond-sean-connery-george-lazenby",
+     "name": "007 James Bond · Sean Connery & George Lazenby",
      "titles": [
       "Dr. No",
       "From Russia with Love",
@@ -14622,20 +14980,52 @@
       "You Only Live Twice",
       "On Her Majesty's Secret Service",
       "Diamonds Are Forever",
+      "Never Say Never Again"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 7,
+     "id": "lib-bond-roger-moore",
+     "name": "007 James Bond · Roger Moore",
+     "titles": [
       "Live and Let Die",
       "The Man with the Golden Gun",
       "The Spy Who Loved Me",
       "Moonraker",
       "For Your Eyes Only",
       "Octopussy",
-      "Never Say Never Again",
-      "A View to a Kill",
+      "A View to a Kill"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-bond-timothy-dalton",
+     "name": "007 James Bond · Timothy Dalton",
+     "titles": [
       "The Living Daylights",
-      "Licence to Kill",
+      "Licence to Kill"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 4,
+     "id": "lib-bond-pierce-brosnan",
+     "name": "007 James Bond · Pierce Brosnan",
+     "titles": [
       "GoldenEye",
       "Tomorrow Never Dies",
       "The World Is Not Enough",
-      "Die Another Day",
+      "Die Another Day"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 5,
+     "id": "lib-bond-daniel-craig",
+     "name": "007 James Bond · Daniel Craig",
+     "titles": [
       "Casino Royale",
       "Quantum of Solace",
       "Skyfall",
@@ -14798,20 +15188,36 @@
    "poster": "/keo1Vvsh1gbY7G7QqCzFGy4DVTP.jpg",
    "rails": [
     {
-     "count": 10,
-     "id": "lib-apes-films",
-     "name": "Planet of the Apes · Films",
+     "count": 5,
+     "id": "lib-apes-original-saga-19681973",
+     "name": "Planet of the Apes · Original Saga (1968–1973)",
      "titles": [
       "Planet of the Apes",
       "Beneath the Planet of the Apes",
       "Escape from the Planet of the Apes",
       "Conquest of the Planet of the Apes",
-      "Battle for the Planet of the Apes",
-      "Planet of the Apes",
+      "Battle for the Planet of the Apes"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 4,
+     "id": "lib-apes-reboot-saga",
+     "name": "Planet of the Apes · Reboot Saga",
+     "titles": [
       "Rise of the Planet of the Apes",
       "Dawn of the Planet of the Apes",
       "War for the Planet of the Apes",
       "Kingdom of the Planet of the Apes"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 1,
+     "id": "lib-apes-more-apes-films",
+     "name": "Planet of the Apes · More Apes Films",
+     "titles": [
+      "Planet of the Apes"
      ],
      "type": "movie"
     },
@@ -14918,13 +15324,21 @@
    "poster": "/qIm2nHXLpBBdMxi8dvfrnDkBUDh.jpg",
    "rails": [
     {
-     "count": 7,
-     "id": "lib-jurassic-films",
-     "name": "Jurassic Park · Films",
+     "count": 3,
+     "id": "lib-jurassic-jurassic-park-trilogy",
+     "name": "Jurassic Park · Jurassic Park Trilogy",
      "titles": [
       "Jurassic Park",
       "The Lost World: Jurassic Park",
-      "Jurassic Park III",
+      "Jurassic Park III"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 4,
+     "id": "lib-jurassic-jurassic-world",
+     "name": "Jurassic Park · Jurassic World",
+     "titles": [
       "Jurassic World",
       "Jurassic World: Fallen Kingdom",
       "Jurassic World Dominion",
@@ -14991,15 +15405,23 @@
    "poster": "/nnFgBA6nR0pHorxdFaDvdY4nVHL.jpg",
    "rails": [
     {
-     "count": 7,
-     "id": "lib-transformers-films",
-     "name": "Transformers · Films",
+     "count": 5,
+     "id": "lib-transformers-michael-bay-films",
+     "name": "Transformers · Michael Bay Films",
      "titles": [
       "Transformers",
       "Transformers: Revenge of the Fallen",
       "Transformers: Dark of the Moon",
       "Transformers: Age of Extinction",
-      "Transformers: The Last Knight",
+      "Transformers: The Last Knight"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-transformers-bumblebee-beyond",
+     "name": "Transformers · Bumblebee & Beyond",
+     "titles": [
       "Bumblebee",
       "Transformers: Rise of the Beasts"
      ],

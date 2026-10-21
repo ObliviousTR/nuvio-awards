@@ -1,68 +1,116 @@
 # Library report — 2026-10-21
 
-622 catalogs
+674 catalogs
 
 ## Batman & Gotham (universe)
-- **Films** (14): Batman, Batman, Batman, Batman Returns, Batman Forever, Batman & Robin, Batman Begins, The Dark Knight, The Dark Knight Rises, Batman v Superman: Dawn of Justice, Joker, Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn), The Batman, Joker: Folie à Deux
-- **Series** (6): Batman, Gotham, Pennyworth: The Origin of Batman's Butler, Batwoman, Gotham Knights, The Penguin
-- **Animated Films** (21): Batman: Mask of the Phantasm, Batman Beyond: Return of the Joker, Batman: Gotham Knight, Batman: Under the Red Hood, Batman: Year One, Batman: The Dark Knight Returns, Part 1, Batman: The Dark Knight Returns, Part 2, Son of Batman, Batman: Assault on Arkham, Batman: Bad Blood, LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout, Batman: The Killing Joke, The Lego Batman Movie, Batman: Gotham by Gaslight, Batman Ninja, Batman: Hush, Batman: The Long Halloween, Part One, Batman: The Long Halloween, Part Two, Batman: The Doom That Came to Gotham, Aztec Batman: Clash of Empires, Batman: Knightfall Part 1: Knightfall
+- **Burton & Schumacher Films** (4): Batman, Batman Returns, Batman Forever, Batman & Robin
+- **The Dark Knight Trilogy** (3): Batman Begins, The Dark Knight, The Dark Knight Rises
+- **The Batman Epic Crime Saga** (1): The Batman
+- **Joker** (2): Joker, Joker: Folie à Deux
+- **Gotham in the DC Extended Universe** (6): Batman v Superman: Dawn of Justice, Suicide Squad, Justice League, Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn), Zack Snyder's Justice League, The Flash
+- **Classic Batman** (2): Batman, Batman
+- **Live-Action Series** (6): Batman, Gotham, Pennyworth: The Origin of Batman's Butler, Batwoman, Gotham Knights, The Penguin
+- **Batman: The Animated Series Films** (4): Batman: Mask of the Phantasm, Batman & Mr. Freeze: SubZero, Batman Beyond: Return of the Joker, Batman: Mystery of the Batwoman
+- **DC Animated Movies** (17): Batman: Gotham Knight, Batman: Under the Red Hood, Batman: Year One, Batman: The Dark Knight Returns, Part 1, Batman: The Dark Knight Returns, Part 2, Son of Batman, Batman: Assault on Arkham, Batman: Bad Blood, Batman: The Killing Joke, Batman: Gotham by Gaslight, Batman Ninja, Batman: Hush, Batman: The Long Halloween, Part One, Batman: The Long Halloween, Part Two, Batman: The Doom That Came to Gotham, Aztec Batman: Clash of Empires, Batman: Knightfall Part 1: Knightfall
+- **LEGO Batman** (2): LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout, The Lego Batman Movie
 - **Animated Series** (11): The Adventures of Batman, The New Adventures of Batman, Batman: The Animated Series, The New Batman Adventures, Batman Beyond, Gotham Girls, The Batman, Batman: The Brave and the Bold, Beware the Batman, Harley Quinn, Batman: Caped Crusader
 
 ## Spider-Man Universe (universe)
-- **Films** (17): Spider-Man, Spider-Man Strikes Back, Spider-Man, Spider-Man 2, Spider-Man 3, The Amazing Spider-Man, The Amazing Spider-Man 2, Spider-Man: Homecoming, Venom, Spider-Man: Far From Home, Venom: Let There Be Carnage, Spider-Man: No Way Home, Morbius, Madame Web, Venom: The Last Dance, Kraven the Hunter, Spider-Man: Brand New Day
-- **Series** (3): The Amazing Spider-Man, Japanese Spiderman, Spider-Noir
-- **Animated Films** (2): Spider-Man: Into the Spider-Verse, Spider-Man: Across the Spider-Verse
+- **Sam Raimi Trilogy** (3): Spider-Man, Spider-Man 2, Spider-Man 3
+- **The Amazing Spider-Man** (2): The Amazing Spider-Man, The Amazing Spider-Man 2
+- **MCU Spider-Man** (4): Spider-Man: Homecoming, Spider-Man: Far From Home, Spider-Man: No Way Home, Spider-Man: Brand New Day
+- **Sony's Spider-Man Universe** (6): Venom, Venom: Let There Be Carnage, Morbius, Madame Web, Venom: The Last Dance, Kraven the Hunter
+- **Spider-Verse** (2): Spider-Man: Into the Spider-Verse, Spider-Man: Across the Spider-Verse
+- **Live-Action Series** (3): The Amazing Spider-Man, Japanese Spiderman, Spider-Noir
 - **Animated Series** (10): Spider-Man, Spider-Man and His Amazing Friends, Spider-Man, Spider-Man, Spider-Man Unlimited, Spider-Man: The New Animated Series, The Spectacular Spider-Man, Marvel's Ultimate Spider-Man, Marvel's Spider-Man, Your Friendly Neighborhood Spider-Man
+- **Classic Spider-Man Films** (2): Spider-Man, Spider-Man Strikes Back
 
 ## X-Men & Mutants (universe)
-- **Films** (15): X-Men, X2, X-Men: The Last Stand, X-Men Origins: Wolverine, X-Men: First Class, The Wolverine, X-Men: Days of Future Past, Deadpool, X-Men: Apocalypse, Logan, Deadpool 2, Once Upon a Deadpool, Dark Phoenix, The New Mutants, Deadpool & Wolverine
+- **X-Men Saga** (7): X-Men, X2, X-Men: The Last Stand, X-Men: First Class, X-Men: Days of Future Past, X-Men: Apocalypse, Dark Phoenix
+- **Wolverine Trilogy** (3): X-Men Origins: Wolverine, The Wolverine, Logan
+- **Deadpool** (4): Deadpool, Deadpool 2, Once Upon a Deadpool, Deadpool & Wolverine
+- **More Mutant Films** (1): The New Mutants
 - **Series** (2): Legion, The Gifted
 - **Animated Series** (6): X-Men, X-Men: Evolution, Wolverine and the X-Men, Wolverine, X-Men, X-Men '97
 
 ## Marvel Cinematic Universe (universe)
-- **Films** (41): Iron Man, The Incredible Hulk, Iron Man 2, Thor, Captain America: The First Avenger, The Avengers, Iron Man 3, Thor: The Dark World, Captain America: The Winter Soldier, Guardians of the Galaxy, Avengers: Age of Ultron, Ant-Man, Captain America: Civil War, Doctor Strange, Guardians of the Galaxy Vol. 2, Spider-Man: Homecoming, Thor: Ragnarok, Black Panther, Avengers: Infinity War, Ant-Man and the Wasp, Captain Marvel, Avengers: Endgame, Spider-Man: Far From Home, Black Widow, Shang-Chi and the Legend of the Ten Rings, Eternals, Spider-Man: No Way Home, Doctor Strange in the Multiverse of Madness, Thor: Love and Thunder, Werewolf by Night, Black Panther: Wakanda Forever, The Guardians of the Galaxy Holiday Special, Ant-Man and the Wasp: Quantumania, Guardians of the Galaxy Vol. 3, The Marvels, Deadpool & Wolverine, Captain America: Brave New World, Thunderbolts*, The Fantastic 4: First Steps, The Punisher: One Last Kill, Spider-Man: Brand New Day
-- **Series** (27): Marvel's Agents of S.H.I.E.L.D., Marvel's Agent Carter, Marvel's Daredevil, Marvel's Jessica Jones, Marvel's Luke Cage, Marvel's Agents of S.H.I.E.L.D.: Slingshot, Marvel's Iron Fist, Marvel's The Defenders, Marvel's Inhumans, Marvel's The Punisher, Marvel's Runaways, Marvel's Cloak & Dagger, Helstrom, WandaVision, The Falcon and the Winter Soldier, Loki, Hawkeye, Moon Knight, Ms. Marvel, She-Hulk: Attorney at Law, Secret Invasion, Echo, Agatha All Along, Daredevil: Born Again, Ironheart, Wonder Man, VisionQuest
+- **Phase One** (6): Iron Man, The Incredible Hulk, Iron Man 2, Thor, Captain America: The First Avenger, The Avengers
+- **Phase Two** (6): Iron Man 3, Thor: The Dark World, Captain America: The Winter Soldier, Guardians of the Galaxy, Avengers: Age of Ultron, Ant-Man
+- **Phase Three** (11): Captain America: Civil War, Doctor Strange, Guardians of the Galaxy Vol. 2, Spider-Man: Homecoming, Thor: Ragnarok, Black Panther, Avengers: Infinity War, Ant-Man and the Wasp, Captain Marvel, Avengers: Endgame, Spider-Man: Far From Home
+- **Phase Four** (9): Black Widow, Shang-Chi and the Legend of the Ten Rings, Eternals, Spider-Man: No Way Home, Doctor Strange in the Multiverse of Madness, Thor: Love and Thunder, Werewolf by Night, Black Panther: Wakanda Forever, The Guardians of the Galaxy Holiday Special
+- **Phase Five** (6): Ant-Man and the Wasp: Quantumania, Guardians of the Galaxy Vol. 3, The Marvels, Deadpool & Wolverine, Captain America: Brave New World, Thunderbolts*
+- **Phase Six** (3): The Fantastic 4: First Steps, The Punisher: One Last Kill, Spider-Man: Brand New Day
+- **Disney+ Series** (14): WandaVision, The Falcon and the Winter Soldier, Loki, Hawkeye, Moon Knight, Ms. Marvel, She-Hulk: Attorney at Law, Secret Invasion, Echo, Agatha All Along, Daredevil: Born Again, Ironheart, Wonder Man, VisionQuest
+- **Marvel Television (ABC, Netflix & Hulu)** (13): Marvel's Agents of S.H.I.E.L.D., Marvel's Agent Carter, Marvel's Daredevil, Marvel's Jessica Jones, Marvel's Luke Cage, Marvel's Agents of S.H.I.E.L.D.: Slingshot, Marvel's Iron Fist, Marvel's The Defenders, Marvel's Inhumans, Marvel's The Punisher, Marvel's Runaways, Marvel's Cloak & Dagger, Helstrom
 - **Animated Series** (5): What If...?, X-Men '97, Your Friendly Neighborhood Spider-Man, Eyes of Wakanda, Marvel Zombies
 
 ## DC Universe (universe)
-- **Films** (29): Superman, Superman, Superman II, Superman III, Supergirl, Superman IV: The Quest for Peace, Justice League of America, Constantine, Superman Returns, Watchmen, Green Lantern, Man of Steel, Batman v Superman: Dawn of Justice, Suicide Squad, Wonder Woman, Justice League, Aquaman, Shazam!, Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn), Wonder Woman 1984, Zack Snyder's Justice League, The Suicide Squad, Black Adam, Shazam! Fury of the Gods, The Flash, Blue Beetle, Aquaman and the Lost Kingdom, Superman, Supergirl
-- **Series** (14): Adventures of Superman, Wonder Woman, Lois & Clark: The New Adventures of Superman, Smallville, Arrow, The Flash, Supergirl, DC's Legends of Tomorrow, Titans, Doom Patrol, DC's Stargirl, Superman & Lois, Peacemaker, Lanterns
-- **Animated Films** (29): Superman, Justice League: Secret Origins, Justice League: Paradise Lost, Justice League: Starcrossed - The Movie, Superman: Doomsday, Justice League: The New Frontier, Superman/Batman: Public Enemies, Justice League: Crisis on Two Earths, Superman/Batman: Apocalypse, All Star Superman, Justice League: Doom, Superman vs. The Elite, Superman: Unbound, Justice League: The Flashpoint Paradox, Justice League: War, Justice League: Throne of Atlantis, Justice League: Gods and Monsters, Justice League vs. Teen Titans, Justice League Dark, Suicide Squad: Hell to Pay, Teen Titans Go! To the Movies, The Death of Superman, Justice League vs. the Fatal Five, Superman: Red Son, Justice League Dark: Apokolips War, Superman: Man of Tomorrow, Justice League: Warworld, Justice League: Crisis on Infinite Earths Part One, Justice League: Crisis on Infinite Earths Part Three
+- **Classic Superman Films** (6): Superman, Superman II, Superman III, Supergirl, Superman IV: The Quest for Peace, Superman Returns
+- **DC Extended Universe** (16): Man of Steel, Batman v Superman: Dawn of Justice, Suicide Squad, Wonder Woman, Justice League, Aquaman, Shazam!, Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn), Wonder Woman 1984, Zack Snyder's Justice League, The Suicide Squad, Black Adam, Shazam! Fury of the Gods, The Flash, Blue Beetle, Aquaman and the Lost Kingdom
+- **The New DC Universe** (2): Superman, Supergirl
+- **More DC Films** (5): Superman, Justice League of America, Constantine, Watchmen, Green Lantern
+- **Arrowverse** (6): Arrow, The Flash, Supergirl, DC's Legends of Tomorrow, DC's Stargirl, Superman & Lois
+- **Modern DC Series** (4): Titans, Doom Patrol, Peacemaker, Lanterns
+- **Classic DC Series** (4): Adventures of Superman, Wonder Woman, Lois & Clark: The New Adventures of Superman, Smallville
+- **Justice League Animated Films** (17): Justice League: Secret Origins, Justice League: Paradise Lost, Justice League: Starcrossed - The Movie, Justice League: The New Frontier, Justice League: Crisis on Two Earths, Justice League: Doom, Justice League: The Flashpoint Paradox, Justice League: War, Justice League: Throne of Atlantis, Justice League: Gods and Monsters, Justice League vs. Teen Titans, Justice League Dark, Justice League vs. the Fatal Five, Justice League Dark: Apokolips War, Justice League: Warworld, Justice League: Crisis on Infinite Earths Part One, Justice League: Crisis on Infinite Earths Part Three
+- **Superman Animated Films** (10): Superman, Superman: Doomsday, Superman/Batman: Public Enemies, Superman/Batman: Apocalypse, All Star Superman, Superman vs. The Elite, Superman: Unbound, The Death of Superman, Superman: Red Son, Superman: Man of Tomorrow
+- **More DC Animated Films** (2): Suicide Squad: Hell to Pay, Teen Titans Go! To the Movies
 - **Animated Series** (12): The New Adventures of Superman, The Superman/Aquaman Hour of Adventure, Superman, Superman: The Animated Series, Justice League, Teen Titans, Justice League Unlimited, Young Justice, Teen Titans Go!, Justice League: Gods and Monsters Chronicles, My Adventures with Superman, Creature Commandos
 
 ## Star Wars (universe)
-- **Films** (13): Star Wars, The Star Wars Holiday Special, The Empire Strikes Back, Return of the Jedi, Star Wars: Episode I - The Phantom Menace, Star Wars: Episode II - Attack of the Clones, Star Wars: Episode III - Revenge of the Sith, Star Wars: The Force Awakens, Rogue One: A Star Wars Story, Star Wars: The Last Jedi, Solo: A Star Wars Story, Star Wars: The Rise of Skywalker, The Mandalorian and Grogu
-- **Series** (7): The Mandalorian, The Book of Boba Fett, Obi-Wan Kenobi, Andor, Ahsoka, The Acolyte, Star Wars: Skeleton Crew
+- **The Skywalker Saga** (9): Star Wars, The Empire Strikes Back, Return of the Jedi, Star Wars: Episode I - The Phantom Menace, Star Wars: Episode II - Attack of the Clones, Star Wars: Episode III - Revenge of the Sith, Star Wars: The Force Awakens, Star Wars: The Last Jedi, Star Wars: The Rise of Skywalker
+- **Anthology & Spin-off Films** (4): The Star Wars Holiday Special, Rogue One: A Star Wars Story, Solo: A Star Wars Story, The Mandalorian and Grogu
+- **Live-Action Series** (7): The Mandalorian, The Book of Boba Fett, Obi-Wan Kenobi, Andor, Ahsoka, The Acolyte, Star Wars: Skeleton Crew
+- **Animated Series** (11): Star Wars: Clone Wars, Star Wars: The Clone Wars, Star Wars Rebels, Star Wars Resistance, Star Wars: The Bad Batch, Star Wars: Visions, Star Wars: Tales of the Jedi, Star Wars: Tales of the Empire, Star Wars: Tales of the Underworld, Star Wars: Maul - Shadow Lord, Star Wars: Visions Presents - The Ninth Jedi
+- **LEGO & Young Audiences** (5): LEGO Star Wars: Droid Tales, Star Wars: Forces of Destiny, LEGO Star Wars: All-Stars, Star Wars Galaxy of Adventures, LEGO Star Wars: Rebuild the Galaxy
 - **Animated Films** (5): Star Wars: The Clone Wars, LEGO Star Wars Holiday Special, LEGO Star Wars Terrifying Tales, LEGO Star Wars Summer Vacation, LEGO Star Wars: The Mandalorian
-- **Animated Series** (16): Star Wars: Clone Wars, Star Wars: The Clone Wars, Star Wars Rebels, LEGO Star Wars: Droid Tales, Star Wars: Forces of Destiny, Star Wars Resistance, LEGO Star Wars: All-Stars, Star Wars Galaxy of Adventures, Star Wars: The Bad Batch, Star Wars: Visions, Star Wars: Tales of the Jedi, Star Wars: Tales of the Empire, LEGO Star Wars: Rebuild the Galaxy, Star Wars: Tales of the Underworld, Star Wars: Maul - Shadow Lord, Star Wars: Visions Presents - The Ninth Jedi
 
 ## Star Trek (universe)
-- **Films** (14): Star Trek: The Motion Picture, Star Trek II: The Wrath of Khan, Star Trek III: The Search for Spock, Star Trek IV: The Voyage Home, Star Trek V: The Final Frontier, Star Trek VI: The Undiscovered Country, Star Trek: Generations, Star Trek: First Contact, Star Trek: Insurrection, Star Trek: Nemesis, Star Trek, Star Trek Into Darkness, Star Trek Beyond, Star Trek: Section 31
-- **Series** (10): Star Trek, Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager, Star Trek: Enterprise, Star Trek: Discovery, Star Trek: Short Treks, Star Trek: Picard, Star Trek: Strange New Worlds, Star Trek: Starfleet Academy
+- **The Original Series Films** (6): Star Trek: The Motion Picture, Star Trek II: The Wrath of Khan, Star Trek III: The Search for Spock, Star Trek IV: The Voyage Home, Star Trek V: The Final Frontier, Star Trek VI: The Undiscovered Country
+- **The Next Generation Films** (4): Star Trek: Generations, Star Trek: First Contact, Star Trek: Insurrection, Star Trek: Nemesis
+- **Kelvin Timeline** (3): Star Trek, Star Trek Into Darkness, Star Trek Beyond
+- **More Star Trek Films** (1): Star Trek: Section 31
+- **Classic Era Series** (5): Star Trek, Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager, Star Trek: Enterprise
+- **Modern Era Series** (5): Star Trek: Discovery, Star Trek: Short Treks, Star Trek: Picard, Star Trek: Strange New Worlds, Star Trek: Starfleet Academy
 - **Animated Series** (3): Star Trek, Star Trek: Lower Decks, Star Trek: Prodigy
 
 ## Middle-earth (universe)
-- **Films** (6): The Lord of the Rings: The Fellowship of the Ring, The Lord of the Rings: The Two Towers, The Lord of the Rings: The Return of the King, The Hobbit: An Unexpected Journey, The Hobbit: The Desolation of Smaug, The Hobbit: The Battle of the Five Armies
+- **The Lord of the Rings Trilogy** (3): The Lord of the Rings: The Fellowship of the Ring, The Lord of the Rings: The Two Towers, The Lord of the Rings: The Return of the King
+- **The Hobbit Trilogy** (3): The Hobbit: An Unexpected Journey, The Hobbit: The Desolation of Smaug, The Hobbit: The Battle of the Five Armies
 - **Series** (1): The Lord of the Rings: The Rings of Power
 - **Animated Films** (4): The Hobbit, The Lord of the Rings, The Return of the King, The Lord of the Rings: The War of the Rohirrim
 
 ## Godzilla & Kong (universe)
-- **Films** (41): King Kong, The Son of Kong, Godzilla, Godzilla Raids Again, Godzilla, King of the Monsters!, Godzilla, the Monster of the Pacific Ocean, King Kong vs. Godzilla, King Kong vs. Godzilla, Mothra vs. Godzilla, King Kong Escapes, Son of Godzilla, Godzilla vs. Hedorah, Godzilla vs. Gigan, Godzilla vs. Megalon, Godzilla vs. Mechagodzilla, Terror of Mechagodzilla, King Kong, Godzilla, The Return of Godzilla, Godzilla 1985, King Kong Lives, Godzilla vs. Biollante, Godzilla vs. King Ghidorah, Godzilla vs. Mothra, Godzilla vs. Mechagodzilla II, Godzilla vs. SpaceGodzilla, Godzilla vs. Destoroyah, Godzilla, Godzilla 2000: Millennium, Godzilla vs. Megaguirus, Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack, Godzilla Against MechaGodzilla, Godzilla: Final Wars, King Kong, Godzilla, Shin Godzilla, Kong: Skull Island, Godzilla: King of the Monsters, Godzilla vs. Kong, Godzilla Minus One, Godzilla x Kong: The New Empire
+- **MonsterVerse** (5): Godzilla, Kong: Skull Island, Godzilla: King of the Monsters, Godzilla vs. Kong, Godzilla x Kong: The New Empire
+- **Showa Era (1954–1975)** (11): Godzilla, Godzilla Raids Again, King Kong vs. Godzilla, Mothra vs. Godzilla, King Kong Escapes, Son of Godzilla, Godzilla vs. Hedorah, Godzilla vs. Gigan, Godzilla vs. Megalon, Godzilla vs. Mechagodzilla, Terror of Mechagodzilla
+- **Heisei Era (1984–1995)** (8): The Return of Godzilla, Godzilla 1985, Godzilla vs. Biollante, Godzilla vs. King Ghidorah, Godzilla vs. Mothra, Godzilla vs. Mechagodzilla II, Godzilla vs. SpaceGodzilla, Godzilla vs. Destoroyah
+- **Millennium Era (1999–2004)** (5): Godzilla 2000: Millennium, Godzilla vs. Megaguirus, Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack, Godzilla Against MechaGodzilla, Godzilla: Final Wars
+- **Reiwa Era (2016– )** (2): Shin Godzilla, Godzilla Minus One
+- **Hollywood Kong & Godzilla** (10): King Kong, The Son of Kong, Godzilla, King of the Monsters!, Godzilla, the Monster of the Pacific Ocean, King Kong vs. Godzilla, King Kong, Godzilla, King Kong Lives, Godzilla, King Kong
 - **Series** (2): Godzilla Island, Monarch: Legacy of Monsters
 - **Animated Films** (3): Godzilla: Planet of the Monsters, Godzilla: City on the Edge of Battle, Godzilla: The Planet Eater
 - **Animated Series** (7): The King Kong Show, Godzilla, Godzilla: The Series, Kong: The Animated Series, Kong: King of the Apes, Godzilla Singular Point, Skull Island
 
 ## Alien & Predator (universe)
-- **Films** (16): Alien, Aliens, Predator, Alien Nation, Predator 2, Alien³, Alien Resurrection, AVP: Alien vs. Predator, Aliens vs Predator: Requiem, Predators, Prometheus, Alien: Covenant, The Predator, Prey, Alien: Romulus, Predator: Badlands
+- **Alien** (5): Alien, Aliens, Alien Nation, Alien Resurrection, Alien: Romulus
+- **Prometheus Prequels** (2): Prometheus, Alien: Covenant
+- **Predator** (6): Predator, Predator 2, Predators, The Predator, Prey, Predator: Badlands
+- **Alien vs. Predator** (2): AVP: Alien vs. Predator, Aliens vs Predator: Requiem
+- **More Films** (1): Alien³
 - **Series** (1): Alien: Earth
 - **Animated Films** (1): Predator: Killer of Killers
 - **Animated Series** (1): Alien: Isolation - The Digital Series
 
 ## Wizarding World (single)
-- **Films** (11): Harry Potter and the Philosopher's Stone, Harry Potter and the Chamber of Secrets, Harry Potter and the Prisoner of Azkaban, Harry Potter and the Goblet of Fire, Harry Potter and the Order of the Phoenix, Harry Potter and the Half-Blood Prince, Harry Potter and the Deathly Hallows: Part 1, Harry Potter and the Deathly Hallows: Part 2, Fantastic Beasts and Where to Find Them, Fantastic Beasts: The Crimes of Grindelwald, Fantastic Beasts: The Secrets of Dumbledore
+- **Harry Potter** (8): Harry Potter and the Philosopher's Stone, Harry Potter and the Chamber of Secrets, Harry Potter and the Prisoner of Azkaban, Harry Potter and the Goblet of Fire, Harry Potter and the Order of the Phoenix, Harry Potter and the Half-Blood Prince, Harry Potter and the Deathly Hallows: Part 1, Harry Potter and the Deathly Hallows: Part 2
+- **Fantastic Beasts** (3): Fantastic Beasts and Where to Find Them, Fantastic Beasts: The Crimes of Grindelwald, Fantastic Beasts: The Secrets of Dumbledore
 
 ## 007 James Bond (single)
-- **Films** (26): Dr. No, From Russia with Love, Goldfinger, Thunderball, You Only Live Twice, On Her Majesty's Secret Service, Diamonds Are Forever, Live and Let Die, The Man with the Golden Gun, The Spy Who Loved Me, Moonraker, For Your Eyes Only, Octopussy, Never Say Never Again, A View to a Kill, The Living Daylights, Licence to Kill, GoldenEye, Tomorrow Never Dies, The World Is Not Enough, Die Another Day, Casino Royale, Quantum of Solace, Skyfall, Spectre, No Time to Die
+- **Sean Connery & George Lazenby** (8): Dr. No, From Russia with Love, Goldfinger, Thunderball, You Only Live Twice, On Her Majesty's Secret Service, Diamonds Are Forever, Never Say Never Again
+- **Roger Moore** (7): Live and Let Die, The Man with the Golden Gun, The Spy Who Loved Me, Moonraker, For Your Eyes Only, Octopussy, A View to a Kill
+- **Timothy Dalton** (2): The Living Daylights, Licence to Kill
+- **Pierce Brosnan** (4): GoldenEye, Tomorrow Never Dies, The World Is Not Enough, Die Another Day
+- **Daniel Craig** (5): Casino Royale, Quantum of Solace, Skyfall, Spectre, No Time to Die
 - **Animated Series** (1): James Bond Jr.
 
 ## Dune (single)
@@ -84,7 +132,9 @@
 - **Films** (5): Mad Max, Mad Max 2, Mad Max Beyond Thunderdome, Mad Max: Fury Road, Furiosa: A Mad Max Saga
 
 ## Planet of the Apes (single)
-- **Films** (10): Planet of the Apes, Beneath the Planet of the Apes, Escape from the Planet of the Apes, Conquest of the Planet of the Apes, Battle for the Planet of the Apes, Planet of the Apes, Rise of the Planet of the Apes, Dawn of the Planet of the Apes, War for the Planet of the Apes, Kingdom of the Planet of the Apes
+- **Original Saga (1968–1973)** (5): Planet of the Apes, Beneath the Planet of the Apes, Escape from the Planet of the Apes, Conquest of the Planet of the Apes, Battle for the Planet of the Apes
+- **Reboot Saga** (4): Rise of the Planet of the Apes, Dawn of the Planet of the Apes, War for the Planet of the Apes, Kingdom of the Planet of the Apes
+- **More Apes Films** (1): Planet of the Apes
 - **Series** (1): Planet of the Apes
 - **Animated Series** (1): Return to the Planet of the Apes
 
@@ -97,7 +147,8 @@
 - **Animated Series** (1): Fast & Furious Spy Racers
 
 ## Jurassic Park (single)
-- **Films** (7): Jurassic Park, The Lost World: Jurassic Park, Jurassic Park III, Jurassic World, Jurassic World: Fallen Kingdom, Jurassic World Dominion, Jurassic World Rebirth
+- **Jurassic Park Trilogy** (3): Jurassic Park, The Lost World: Jurassic Park, Jurassic Park III
+- **Jurassic World** (4): Jurassic World, Jurassic World: Fallen Kingdom, Jurassic World Dominion, Jurassic World Rebirth
 - **Animated Series** (2): Jurassic World Camp Cretaceous, Jurassic World: Chaos Theory
 
 ## Terminator (single)
@@ -106,7 +157,8 @@
 - **Animated Series** (1): Terminator Zero
 
 ## Transformers (single)
-- **Films** (7): Transformers, Transformers: Revenge of the Fallen, Transformers: Dark of the Moon, Transformers: Age of Extinction, Transformers: The Last Knight, Bumblebee, Transformers: Rise of the Beasts
+- **Michael Bay Films** (5): Transformers, Transformers: Revenge of the Fallen, Transformers: Dark of the Moon, Transformers: Age of Extinction, Transformers: The Last Knight
+- **Bumblebee & Beyond** (2): Bumblebee, Transformers: Rise of the Beasts
 - **Animated Films** (4): The Transformers: The Movie, Transformers Prime: Beast Hunters - Predacons Rising, Transformers: Titans Return, Transformers One
 - **Animated Series** (12): The Transformers, Transformers: Victory, Beast Wars: Transformers, Beast Machines: Transformers, Transformers: Armada, Transformers: Energon, Transformers: Cybertron, Transformers: Animated, Transformers: Prime, Transformers: Robots In Disguise, Transformers: Cyberverse, Transformers: EarthSpark
 
@@ -236,3 +288,4 @@
 ## Candidates (one signal — approve or reject)
 
 ## Log
+- Alien & Predator: added Alien Nation (1988) [co+title]
