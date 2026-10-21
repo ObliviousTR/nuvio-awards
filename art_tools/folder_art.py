@@ -350,17 +350,14 @@ def logo_tile(logo, top, bottom, maxw=0.52, maxh=0.42, glow_col=None, img=None, 
 
 
 def network(logos, stills, w=PW, h=PH):
+    """Networks row look: one dark, softly blurred show still behind white logos."""
     def frame(p, z):
-        bg = Image.new("RGB", (w, h), (8, 8, 10))
-        tile_h = h // len(stills)
-        for i, s in enumerate(stills):
-            t = ImageEnhance.Brightness(art.cover_fit(s, w, tile_h)).enhance(0.28).filter(ImageFilter.GaussianBlur(6))
-            bg.paste(t, (0, i * tile_h))
+        bg = ImageEnhance.Brightness(art.zoomed(art.cover_fit(stills[0], w, h), 0.02 + 0.05 * z).filter(ImageFilter.GaussianBlur(8))).enhance(0.3)
         bg = vignette(bg, 0.9).convert("RGBA")
-        y = h / 2 - sum(l.height for l in logos) / 2 - 40 * (len(logos) - 1) / 2
+        y = h / 2 - (sum(l.height for l in logos) + 90 * (len(logos) - 1)) / 2
         for l in logos:
             um.place(bg, l, w / 2, y + l.height / 2, um.ease(p / 0.6))
-            y += l.height + 80
+            y += l.height + 90
         return bg.convert("RGB")
     return frame
 
@@ -384,7 +381,7 @@ def portrait(person_img, lines, sub, w=PW, h=PH):
     out = vignette(bg.convert("RGB"), 0.55)
     sys.path.insert(0, HERE)
     from reletter import letter
-    return letter(out, lines, sub)
+    return letter(out, lines, sub, tint=(14, 14, 16))
 
 
 # ---------------------------------------------------------------- jobs
@@ -416,7 +413,7 @@ def jobs():
         J("Anime", "Seinen, Dark & Psychological", lambda: anime_sheet(still(tv, 88803), "SEINEN", "青年", "LAYOUT  ·  CUT 07", "Vinland Saga")),
         J("Anime", "All-Time Top Rated Anime", lambda: anime_sheet(still(tv, 31911), "LEGENDS", "名作", "KEY FRAME  ·  CUT 01", "Fullmetal Alchemist: Brotherhood")),
         J("Anime", "Anime Movies & Feature Films", lambda: anime_sheet(still(m, 372058), "FILMS", "映画", "CLEAN-UP  ·  CUT 22", "Your Name.")),
-        J("Anime", "Anime Film Collections", lambda: anime_sheet(still(m, 283566), "SAGAS", "劇場版", "TIMING  ·  CUT 31", "Evangelion: 3.0+1.0")),
+        J("Anime", "Anime Film Collections", lambda: anime_sheet(still(m, 149), "SAGAS", "劇場版", "TIMING  ·  CUT 31", "Akira")),
         # Streaming (Turkey)
         J("Streaming Services", "Exxen", lambda: logo_tile(plate_to_alpha(um.commons("File:Exxen.png", 1600)), (12, 12, 12), (0, 0, 0), glow_col=(255, 200, 0))),
         J("Streaming Services", "GAİN", lambda: logo_tile(ink_from_white(um.commons("File:GAİN LOGO.jpg", 1600)), (20, 20, 22), (0, 0, 0), maxw=0.4, glow_col=(230, 30, 40))),
@@ -429,7 +426,7 @@ def jobs():
         J("Awards & Festivals", "Criterion Collection & Arthouse", lambda: logo_tile(whiten(um.trim(um.commons("File:The Criterion Collection logo and wordmark.svg", 2000)), False), None, None, maxw=0.55, img=still(m, 490), img_b=0.3)),
         J("Awards & Festivals", "The Emmy Awards", emmy),
         # Networks
-        J("Networks", "Fuji TV / MBS", lambda: network([um.fit(whiten(logo_png("/4x4GsmRmSLLL0RVNKsoqAVH43tz.png")), 640, 260), um.fit(whiten(net_logo(94)), 520, 200)],
+        J("Networks", "Fuji TV / MBS", lambda: network([um.fit(whiten(logo_png("/4x4GsmRmSLLL0RVNKsoqAVH43tz.png")), 640, 260), um.fit(whiten(net_logo(94), False), 420, 160)],
                                                        net_stills("1|94"))),
     ] + [J("Iconic Actors", n, (lambda n=n: ("portrait", n, "FEATURED FILMOGRAPHY"))) for n in (
         "Frances McDormand", "Edward Norton", "Philip Seymour Hoffman", "Bryan Cranston", "Tilda Swinton", "Toni Collette",

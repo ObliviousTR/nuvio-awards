@@ -37,13 +37,13 @@ def width(text, fnt, sp):
     return sum(d.textlength(c, font=fnt) + sp for c in text) - sp
 
 
-def letter(im, lines, sub, focus=False):
+def letter(im, lines, sub, focus=False, tint=None):
     im = im.convert("RGB")
     W, H = im.size
     k = W / 1000
     inset = round(30 * k) if focus else 0
     # tint for the fade: the card's own colour just above the text block
-    tint = tuple(int(v * 0.55) for v in ImageStat.Stat(im.crop((inset + 20, int(H * 0.64), W - inset - 20, int(H * 0.66)))).mean)
+    tint = tint or tuple(int(v * 0.55) for v in ImageStat.Stat(im.crop((inset + 20, int(H * 0.64), W - inset - 20, int(H * 0.66)))).mean)
     fade = Image.new("L", (W, H), 0)
     fd = ImageDraw.Draw(fade)
     y0 = int(H * 0.66)
