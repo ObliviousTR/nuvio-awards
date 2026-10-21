@@ -15076,7 +15076,7 @@
     {
      "count": 5,
      "id": "lib-johnwick-films",
-     "name": "John Wick · Films",
+     "name": "The World of John Wick · Films",
      "titles": [
       "John Wick",
       "John Wick: Chapter 2",
@@ -15089,14 +15089,14 @@
     {
      "count": 1,
      "id": "lib-johnwick-series",
-     "name": "John Wick · Series",
+     "name": "The World of John Wick · Series",
      "titles": [
       "The Continental: From the World of John Wick"
      ],
      "type": "series"
     }
    ],
-   "title": "John Wick"
+   "title": "The World of John Wick"
   },
   {
    "id": "mi",
@@ -15161,7 +15161,7 @@
     {
      "count": 5,
      "id": "lib-madmax-films",
-     "name": "Mad Max · Films",
+     "name": "Mad Max Saga · Films",
      "titles": [
       "Mad Max",
       "Mad Max 2",
@@ -15172,7 +15172,7 @@
      "type": "movie"
     }
    ],
-   "title": "Mad Max"
+   "title": "Mad Max Saga"
   },
   {
    "id": "apes",
@@ -15282,7 +15282,7 @@
     {
      "count": 11,
      "id": "lib-fast-films",
-     "name": "Fast & Furious · Films",
+     "name": "The Fast Saga · Films",
      "titles": [
       "The Fast and the Furious",
       "2 Fast 2 Furious",
@@ -15301,14 +15301,14 @@
     {
      "count": 1,
      "id": "lib-fast-animated-series",
-     "name": "Fast & Furious · Animated Series",
+     "name": "The Fast Saga · Animated Series",
      "titles": [
       "Fast & Furious Spy Racers"
      ],
      "type": "series"
     }
    ],
-   "title": "Fast & Furious"
+   "title": "The Fast Saga"
   },
   {
    "id": "jurassic",

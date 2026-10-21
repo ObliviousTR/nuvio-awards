@@ -457,12 +457,12 @@
   {
    "type": "movie",
    "id": "lib-johnwick-films",
-   "name": "John Wick · Films"
+   "name": "The World of John Wick · Films"
   },
   {
    "type": "series",
    "id": "lib-johnwick-series",
-   "name": "John Wick · Series"
+   "name": "The World of John Wick · Series"
   },
   {
    "type": "movie",
@@ -482,7 +482,7 @@
   {
    "type": "movie",
    "id": "lib-madmax-films",
-   "name": "Mad Max · Films"
+   "name": "Mad Max Saga · Films"
   },
   {
    "type": "movie",
@@ -522,12 +522,12 @@
   {
    "type": "movie",
    "id": "lib-fast-films",
-   "name": "Fast & Furious · Films"
+   "name": "The Fast Saga · Films"
   },
   {
    "type": "series",
    "id": "lib-fast-animated-series",
-   "name": "Fast & Furious · Animated Series"
+   "name": "The Fast Saga · Animated Series"
   },
   {
    "type": "movie",
