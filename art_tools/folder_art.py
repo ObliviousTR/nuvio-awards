@@ -465,7 +465,9 @@ def emmy():
 
 
 def slug(s):
-    return "".join(c if c.isalnum() else "-" for c in s.lower()).strip("-").replace("--", "-")
+    import re, unicodedata
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
 def person(name):

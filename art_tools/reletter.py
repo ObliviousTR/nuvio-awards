@@ -70,6 +70,12 @@ def letter(im, lines, sub, focus=False):
     return im
 
 
+def slug(s):
+    import re, unicodedata
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
 def main(out):
     d = json.load(open(os.path.join(ROOT, "builder", "out", "delivered", "baseline.json"), encoding="utf-8"))
     for row in d:
@@ -77,8 +83,7 @@ def main(out):
             if fo["title"] not in JOBS:
                 continue
             lines, sub = JOBS[fo["title"]]
-            slug = "".join(c if c.isalnum() else "-" for c in fo["title"].lower()).strip("-")
-            dd = os.path.join(out, slug)
+            dd = os.path.join(out, slug(fo["title"]))
             os.makedirs(dd, exist_ok=True)
             for key, name, focus in (("coverImageUrl", "cover.jpg", False), ("focusGifUrl", "focus.jpg", True)):
                 u = fo.get(key)
