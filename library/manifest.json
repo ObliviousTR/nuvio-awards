@@ -1491,6 +1491,11 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-96850",
+   "name": "Evangelion"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-1189668",
    "name": "My Hero Academia"
   },
@@ -1503,6 +1508,11 @@
    "type": "movie",
    "id": "lib-col-23456",
    "name": "One Piece"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-925155",
+   "name": "Demon Slayer"
   },
   {
    "type": "movie",

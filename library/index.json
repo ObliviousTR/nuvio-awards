@@ -10631,8 +10631,8 @@
      "id": "lib-a-robert-downey-jr-top-rated",
      "name": "Robert Downey Jr. · Top Rated",
      "titles": [
-      "Avengers: Infinity War",
       "Avengers: Endgame",
+      "Avengers: Infinity War",
       "The Avengers",
       "Oppenheimer",
       "Iron Man",
@@ -11204,6 +11204,19 @@
     },
     {
      "count": 4,
+     "id": "lib-col-96850",
+     "name": "Evangelion",
+     "poster": "/1FHZmNWcyz5zzGH2PQf1w0S4JZ1.jpg",
+     "titles": [
+      "Neon Genesis Evangelion: Death and Rebirth",
+      "Neon Genesis Evangelion: The End of Evangelion",
+      "Revival of Evangelion",
+      "EVANGELION: DEATH (TRUE)²"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 4,
      "id": "lib-col-1189668",
      "name": "My Hero Academia",
      "poster": "/xTlc93PezcZHMcvmAtPL3cyX0yE.jpg",
@@ -11255,6 +11268,17 @@
       "One Piece Film: GOLD",
       "One Piece: Stampede",
       "One Piece Film Red"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-col-925155",
+     "name": "Demon Slayer",
+     "poster": "/3exjjYTseefny9nYjSbkIblZZdK.jpg",
+     "titles": [
+      "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+      "Demon Slayer: Kimetsu no Yaiba Infinity Castle"
      ],
      "type": "movie"
     },
@@ -12397,8 +12421,8 @@
       "Aliens",
       "Titanic",
       "The Terminator",
-      "Avatar",
       "Avatar: Fire and Ash",
+      "Avatar",
       "Avatar: The Way of Water",
       "The Abyss",
       "True Lies",

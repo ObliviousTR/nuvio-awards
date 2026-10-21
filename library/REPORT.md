@@ -1,6 +1,6 @@
 # Library report — 2026-10-21
 
-619 catalogs
+621 catalogs
 
 ## Batman & Gotham (universe)
 - **Films** (13): Batman, Batman, Batman Returns, Batman Forever, Batman & Robin, Batman Begins, The Dark Knight, The Dark Knight Rises, Batman v Superman: Dawn of Justice, Joker, Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn), The Batman, Joker: Folie à Deux
@@ -125,7 +125,7 @@
 - **Sci-Fi Collections**: 37 rails — Alien (4), Back to the Future (3), Blade Runner (2), Divergent (3), Dune (2), Godzilla (3), Guardians of the Galaxy (3), Jurassic Park (7), King Kong (1976) (2), Mad Max (5), Man of Steel (2), Pacific Rim (2), Planet of the Apes (Original) (5), Predator (6), RoboCop (3), Spider-Man (3), Star Trek: Alternate Reality (3), Star Wars (9), Starship Troopers (3), The Terminator (6), The Hunger Games (4), The Matrix (4), Transformers (5), TRON (3), X-Men (7), Avatar (3), Planet of the Apes (Reboot) (4), Cloverfield (3), The Meg (2), Star Trek: The Original Series Movies (6), Star Trek: The Next Generation Movies (4), Alien vs. Predator (2), The Chronicles of Riddick (3), The Fly (3), Batman Collection (1989-1997) (4), Superman Classic (4), Bill & Ted (3)
 - **Thriller Collections**: 16 rails — The Hannibal Lecter (3), Escape Room (2), Don't Breathe (2), Sicario (2), The Purge (5), Final Destination (6), A Quiet Place (2), Eastrail 177 (3), The Jack Ryan (3), Has Fallen (3), Extraction (2), Basic Instinct (2), Psycho (4), Escape Plan (3), Speed (2), The Meg (2)
 - **War Collections**: 6 rails — Rambo (5), Sniper (12), Jarhead (4), Behind Enemy Lines (4), Missing in Action (3), The Dirty Dozen (4)
-- **Anime Film Collections**: 6 rails — Detective Conan (29), Dragon Ball (4), My Hero Academia (4), Naruto (11), One Piece (14), Pokémon (5)
+- **Anime Film Collections**: 8 rails — Detective Conan (29), Dragon Ball (4), Evangelion (4), My Hero Academia (4), Naruto (11), One Piece (14), Demon Slayer (2), Pokémon (5)
 
 ## People
 - Christian Bale: Essential Films 49; Top Rated 42; Latest 49
@@ -351,5 +351,3 @@
 - Transformers → Transformers: War for Cybertron: Earthrise (2020) `tv:117682` [title]
 
 ## Log
-- Anime Film Collections: collection not found: Evangelion Collection
-- Anime Film Collections: collection not found: Demon Slayer Collection
