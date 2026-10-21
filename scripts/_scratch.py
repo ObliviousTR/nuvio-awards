@@ -1,48 +1,50 @@
-import json, os, sys, io, re, collections, urllib.request, concurrent.futures as cf
+import json, os, sys, io, urllib.request, urllib.parse
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from spotlight import tmdb
 from PIL import Image, ImageDraw
-os.makedirs("refs/art", exist_ok=True)
-d = json.load(open("builder/out/delivered/baseline.json"))
-urls = {}
-for c in d:
-    if c.get("backdropImageUrl"): urls[c["backdropImageUrl"]] = (c["title"], "", "rowbackdrop")
-    for f in c["folders"]:
-        for k in ("coverImageUrl", "focusGifUrl", "titleLogoUrl", "heroBackdropUrl"):
-            if f.get(k): urls.setdefault(f[k], (c["title"], f["title"], k))
-def get(u):
-    try:
-        r = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=40)
-        return u, r.status, r.read()
-    except Exception as e:
-        return u, str(e)[:60], b""
-res = {}
-with cf.ThreadPoolExecutor(16) as ex:
-    for u, st, b in ex.map(get, urls):
-        res[u] = (st, b)
-out, tot, bad = [], collections.Counter(), []
-for u, (st, b) in res.items():
-    row, fol, k = urls[u]
-    tot[k] += len(b)
-    if st != 200: bad.append(f"{st} {row} / {fol} / {k} {u}")
-out.append("SIZES MB " + json.dumps({k: round(v / 1e6, 1) for k, v in tot.items()}) + f" total {round(sum(tot.values())/1e6,1)}")
-out.append(f"BAD {len(bad)}"); out += bad
-big = sorted(((len(b), u) for u, (st, b) in res.items()), reverse=True)[:10]
-out += [f"BIG {round(n/1e6,1)}MB {u}" for n, u in big]
-open("refs/art/report.txt", "w").write("\n".join(out))
-# contact sheets: covers per row
-for c in d:
-    tiles = []
-    for f in c["folders"][:30]:
-        u = f.get("coverImageUrl")
-        if not u or u not in res or not res[u][1]: continue
-        try:
-            im = Image.open(io.BytesIO(res[u][1])); im.seek(0); im = im.convert("RGB")
-        except Exception: continue
-        im.thumbnail((320, 320)); tiles.append((f["title"], im))
-    if not tiles: continue
-    W, H, cols = 330, 330, 6
-    sheet = Image.new("RGB", (W * cols, H * ((len(tiles) + cols - 1) // cols)), (30, 30, 30))
-    dr = ImageDraw.Draw(sheet)
-    for i, (t, im) in enumerate(tiles):
-        x, y = (i % cols) * W, (i // cols) * H
-        sheet.paste(im, (x + 5, y + 5)); dr.text((x + 8, y + H - 18), t[:40], fill=(255, 255, 0))
-    sheet.save(f"refs/art/{re.sub(r'[^a-z0-9]+', '-', c['title'].lower())}.jpg", quality=80)
+os.makedirs("refs/uni", exist_ok=True)
+UA = {"User-Agent": "Mozilla/5.0 nuvio-awards"}
+def img(path, size="w500"):
+    return Image.open(io.BytesIO(urllib.request.urlopen(urllib.request.Request(f"https://image.tmdb.org/t/p/{size}{path}", headers=UA), timeout=40).read()))
+U = {
+ "wizarding": dict(cols=[1241, 435259], movies=[]),
+ "mcu": dict(cols=[86311], movies=[1726, 118340, 284054, 284052, 284053, 634649, 299534, 533535]),
+ "batman": dict(cols=[263], movies=[268, 414906, 475557, 364]),
+}
+meta = {}
+for u, spec in U.items():
+    ids = list(spec["movies"])
+    for c in spec["cols"]:
+        ids += [p["id"] for p in (tmdb(f"/collection/{c}") or {}).get("parts", [])]
+    bds, logos = [], []
+    for mid in dict.fromkeys(ids):
+        m = tmdb(f"/movie/{mid}") or {}
+        im = tmdb(f"/movie/{mid}/images", include_image_language="en,null") or {}
+        b = sorted([x for x in im.get("backdrops", []) if not x.get("iso_639_1") and x["width"] >= 1920], key=lambda x: -x["vote_average"])[:2]
+        bds += [(m.get("title"), x["file_path"]) for x in b]
+        l = sorted([x for x in im.get("logos", []) if x.get("iso_639_1") == "en"], key=lambda x: -x["vote_average"])[:1]
+        logos += [(m.get("title"), x["file_path"]) for x in l]
+    for c in spec["cols"]:
+        ci = tmdb(f"/collection/{c}/images", include_image_language="en,null") or {}
+        bds += [("COL " + str(c), x["file_path"]) for x in sorted([x for x in ci.get("backdrops", []) if not x.get("iso_639_1")], key=lambda x: -x["vote_average"])[:4]]
+    meta[u] = {"backdrops": bds, "logos": logos}
+    for kind, items, tw, th in (("backdrops", bds, 400, 225), ("logos", logos, 400, 160)):
+        cols = 5; rows = (len(items) + cols - 1) // cols or 1
+        sheet = Image.new("RGB", (cols * (tw + 10), rows * (th + 30)), (60, 60, 60)); dr = ImageDraw.Draw(sheet)
+        for i, (t, p) in enumerate(items):
+            try:
+                im = img(p, "w500").convert("RGBA"); im.thumbnail((tw, th))
+            except Exception:
+                continue
+            x, y = (i % cols) * (tw + 10), (i // cols) * (th + 30)
+            sheet.paste(im, (x, y), im); dr.text((x + 4, y + th + 4), f"{i}: {t}"[:60], fill=(255, 255, 0))
+        sheet.save(f"refs/uni/{u}-{kind}.jpg", quality=82)
+for c in (420, 9993, 128064, 429):
+    d = tmdb(f"/company/{c}") or {}
+    meta[f"company{c}"] = [d.get("name"), d.get("logo_path")]
+# Wikimedia Commons logo search
+for q in ("Wizarding World logo", "Marvel Cinematic Universe logo", "Batman logo", "Marvel Studios logo"):
+    r = json.loads(urllib.request.urlopen(urllib.request.Request("https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(
+        {"action": "query", "list": "search", "srsearch": q, "srnamespace": 6, "format": "json", "srlimit": 8}), headers=UA), timeout=30).read())
+    meta["commons " + q] = [x["title"] for x in r["query"]["search"]]
+json.dump(meta, open("refs/uni/meta.json", "w"), indent=1)
