@@ -556,6 +556,11 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-115762",
+   "name": "Alien vs. Predator"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-2794",
    "name": "The Chronicles of Riddick"
   },
@@ -691,6 +696,11 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-130440",
+   "name": "The Pink Panther (Reboot)"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-96665",
    "name": "Dumb and Dumber"
   },
@@ -771,8 +781,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-123800",
-   "name": "The Before Trilogy"
+   "id": "lib-list-the-before-trilogy",
+   "name": "The Before"
   },
   {
    "type": "movie",
@@ -1396,6 +1406,11 @@
   },
   {
    "type": "movie",
+   "id": "lib-list-cloverfield-collection",
+   "name": "Cloverfield"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-151",
    "name": "Star Trek: The Original Series Movies"
   },
@@ -1413,6 +1428,11 @@
    "type": "movie",
    "id": "lib-col-748919",
    "name": "Don't Breathe"
+  },
+  {
+   "type": "movie",
+   "id": "lib-list-eastrail-177-trilogy",
+   "name": "Eastrail 177"
   },
   {
    "type": "movie",

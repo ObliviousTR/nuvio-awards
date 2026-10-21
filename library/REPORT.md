@@ -1,6 +1,6 @@
 # Library report — 2026-10-21
 
-614 catalogs
+618 catalogs
 
 ## Batman & Gotham (universe)
 - **Films** (13): Batman, Batman, Batman Returns, Batman Forever, Batman & Robin, Batman Begins, The Dark Knight, The Dark Knight Rises, Batman v Superman: Dawn of Justice, Joker, Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn), The Batman, Joker: Folie à Deux
@@ -32,7 +32,7 @@
 
 ## Star Wars (universe)
 - **Films** (13): Star Wars, The Star Wars Holiday Special, The Empire Strikes Back, Return of the Jedi, Star Wars: Episode I - The Phantom Menace, Star Wars: Episode II - Attack of the Clones, Star Wars: Episode III - Revenge of the Sith, Star Wars: The Force Awakens, Rogue One: A Star Wars Story, Star Wars: The Last Jedi, Solo: A Star Wars Story, Star Wars: The Rise of Skywalker, The Mandalorian and Grogu
-- **Series** (9): The Mandalorian, Star Wars Vehicle Flythroughs, Star Wars Galaxy of Sounds, The Book of Boba Fett, Obi-Wan Kenobi, Andor, Ahsoka, The Acolyte, Star Wars: Skeleton Crew
+- **Series** (7): The Mandalorian, The Book of Boba Fett, Obi-Wan Kenobi, Andor, Ahsoka, The Acolyte, Star Wars: Skeleton Crew
 - **Animated Films** (5): Star Wars: The Clone Wars, LEGO Star Wars Holiday Special, LEGO Star Wars Terrifying Tales, LEGO Star Wars Summer Vacation, LEGO Star Wars: The Mandalorian
 - **Animated Series** (14): Star Wars: Clone Wars, Star Wars: The Clone Wars, Star Wars Rebels, LEGO Star Wars: Droid Tales, Star Wars Resistance, LEGO Star Wars: All-Stars, Star Wars: The Bad Batch, Star Wars: Visions, Star Wars: Tales of the Jedi, Star Wars: Tales of the Empire, LEGO Star Wars: Rebuild the Galaxy, Star Wars: Tales of the Underworld, Star Wars: Maul - Shadow Lord, Star Wars: Visions Presents - The Ninth Jedi
 
@@ -47,7 +47,7 @@
 - **Animated Films** (4): The Hobbit, The Lord of the Rings, The Return of the King, The Lord of the Rings: The War of the Rohirrim
 
 ## Godzilla & Kong (universe)
-- **Films** (42): King Kong, The Son of Kong, Godzilla, Godzilla Raids Again, Godzilla, King of the Monsters!, Godzilla, the Monster of the Pacific Ocean, King Kong vs. Godzilla, King Kong vs. Godzilla, Mothra vs. Godzilla, King Kong Escapes, Son of Godzilla, King of Kong Island, Godzilla vs. Hedorah, Godzilla vs. Gigan, Godzilla vs. Megalon, Godzilla vs. Mechagodzilla, Terror of Mechagodzilla, King Kong, Godzilla, The Return of Godzilla, Godzilla 1985, King Kong Lives, Godzilla vs. Biollante, Godzilla vs. King Ghidorah, Godzilla vs. Mothra, Godzilla vs. Mechagodzilla II, Godzilla vs. SpaceGodzilla, Godzilla vs. Destoroyah, Godzilla, Godzilla 2000: Millennium, Godzilla vs. Megaguirus, Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack, Godzilla Against MechaGodzilla, Godzilla: Final Wars, King Kong, Godzilla, Shin Godzilla, Kong: Skull Island, Godzilla: King of the Monsters, Godzilla vs. Kong, Godzilla Minus One, Godzilla x Kong: The New Empire
+- **Films** (41): King Kong, The Son of Kong, Godzilla, Godzilla Raids Again, Godzilla, King of the Monsters!, Godzilla, the Monster of the Pacific Ocean, King Kong vs. Godzilla, King Kong vs. Godzilla, Mothra vs. Godzilla, King Kong Escapes, Son of Godzilla, Godzilla vs. Hedorah, Godzilla vs. Gigan, Godzilla vs. Megalon, Godzilla vs. Mechagodzilla, Terror of Mechagodzilla, King Kong, Godzilla, The Return of Godzilla, Godzilla 1985, King Kong Lives, Godzilla vs. Biollante, Godzilla vs. King Ghidorah, Godzilla vs. Mothra, Godzilla vs. Mechagodzilla II, Godzilla vs. SpaceGodzilla, Godzilla vs. Destoroyah, Godzilla, Godzilla 2000: Millennium, Godzilla vs. Megaguirus, Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack, Godzilla Against MechaGodzilla, Godzilla: Final Wars, King Kong, Godzilla, Shin Godzilla, Kong: Skull Island, Godzilla: King of the Monsters, Godzilla vs. Kong, Godzilla Minus One, Godzilla x Kong: The New Empire
 - **Series** (1): Monarch: Legacy of Monsters
 - **Animated Films** (3): Godzilla: Planet of the Monsters, Godzilla: City on the Edge of Battle, Godzilla: The Planet Eater
 - **Animated Series** (5): Godzilla, Godzilla: The Series, Kong: King of the Apes, Godzilla Singular Point, Skull Island
@@ -114,16 +114,16 @@
 - **Series** (1): The Young Indiana Jones Chronicles
 
 ## Genre collection folders
-- **Action Collections**: 48 rails — Bad Boys (4), Die Hard (5), Dirty Harry (5), The Fast and the Furious (11), James Bond (26), John Wick (4), Kingsman (3), Lethal Weapon (4), Mission: Impossible (8), Ocean's (3), Rambo (5), Rocky (2), Sicario (2), The Bourne (5), The Dark Knight (3), The Equalizer (3), The Expendables (4), The Karate Kid (6), The Transporter (3), Top Gun (2), G.I. Joe (Live-Action) (2), Men in Black (3), Ride Along (2), Taken (3), The Avengers (4), The Hitman's Bodyguard (2), The Raid (2), The Jack Ryan (3), Has Fallen (3), Extraction (2), Johnny English (3), Spy Kids (4), Shaft (5), Escape Plan (3), Death Wish (5), Speed (2), The Meg (2), Ip Man (4), Police Story (6), Tomb Raider (2), Kick-Ass (2), Hellboy (2), The Crow (4), Conan the Barbarian (2), Ong Bak (3), The Chronicles of Riddick (3), Batman Collection (1989-1997) (4), Superman Classic (4)
-- **Comedy Collections**: 33 rails — Ace Ventura (3), American Pie (4), Anchorman (2), Austin Powers (3), Big Momma's House (3), Bridget Jones (4), Clerks (3), Daddy's Home (2), Jump Street (2), Legally Blonde (3), Meet the Parents (3), National Lampoon's Vacation (4), Now You See Me (3), Pitch Perfect (3), Rush Hour (3), Scary Movie (6), The Hangover (3), Wayne's World (2), Zoolander (2), Bring It On (7), Grown Ups (2), Horrible Bosses (2), Major League (3), Johnny English (3), The Pink Panther (Original) (9), Police Story (6), Kick-Ass (2), Dumb and Dumber (3), The Naked Gun (4), Police Academy (7), Harold & Kumar (3), Bill & Ted (3), Look Who's Talking (3)
+- **Action Collections**: 49 rails — Bad Boys (4), Die Hard (5), Dirty Harry (5), The Fast and the Furious (11), James Bond (26), John Wick (4), Kingsman (3), Lethal Weapon (4), Mission: Impossible (8), Ocean's (3), Rambo (5), Rocky (2), Sicario (2), The Bourne (5), The Dark Knight (3), The Equalizer (3), The Expendables (4), The Karate Kid (6), The Transporter (3), Top Gun (2), G.I. Joe (Live-Action) (2), Men in Black (3), Ride Along (2), Taken (3), The Avengers (4), The Hitman's Bodyguard (2), The Raid (2), The Jack Ryan (3), Has Fallen (3), Extraction (2), Johnny English (3), Spy Kids (4), Shaft (5), Escape Plan (3), Death Wish (5), Speed (2), The Meg (2), Ip Man (4), Police Story (6), Tomb Raider (2), Kick-Ass (2), Hellboy (2), The Crow (4), Conan the Barbarian (2), Ong Bak (3), Alien vs. Predator (2), The Chronicles of Riddick (3), Batman Collection (1989-1997) (4), Superman Classic (4)
+- **Comedy Collections**: 34 rails — Ace Ventura (3), American Pie (4), Anchorman (2), Austin Powers (3), Big Momma's House (3), Bridget Jones (4), Clerks (3), Daddy's Home (2), Jump Street (2), Legally Blonde (3), Meet the Parents (3), National Lampoon's Vacation (4), Now You See Me (3), Pitch Perfect (3), Rush Hour (3), Scary Movie (6), The Hangover (3), Wayne's World (2), Zoolander (2), Bring It On (7), Grown Ups (2), Horrible Bosses (2), Major League (3), Johnny English (3), The Pink Panther (Original) (9), The Pink Panther (Reboot) (2), Police Story (6), Kick-Ass (2), Dumb and Dumber (3), The Naked Gun (4), Police Academy (7), Harold & Kumar (3), Bill & Ted (3), Look Who's Talking (3)
 - **Crime Collections**: 9 rails — Ocean's (3), Bad Boys (4), Lethal Weapon (4), Beverly Hills Cop (4), The Boondock Saints (2), Rush Hour (3), The Pink Panther (Original) (9), Shaft (5), Death Wish (5)
-- **Drama Collections**: 10 rails — The Godfather (3), Creed (3), Magic Mike (3), Step Up (5), Fifty Shades (3), Rocky (2), Goal! (3), Jack Reacher (2), The Mighty Ducks (3), The Before Trilogy (3)
+- **Drama Collections**: 10 rails — The Godfather (3), Creed (3), Magic Mike (3), Step Up (5), Fifty Shades (3), Rocky (2), Goal! (3), Jack Reacher (2), The Mighty Ducks (3), The Before (3)
 - **Family & Animation Collections**: 37 rails — Alvin and the Chipmunks (4), Cars (3), Despicable Me (4), Diary of a Wimpy Kid (4), Finding Nemo (2), Home Alone (2), Hotel Transylvania (4), How to Train Your Dragon (3), Ice Age (6), Kung Fu Panda (4), Madagascar (3), Monsters, Inc. (2), Paddington (3), Scooby-Doo (2), Shrek (4), Sing (2), Spider-Man: Spider-Verse (2), The Addams Family (Animated) (2), The Boss Baby (2), The Incredibles (2), The Lego Movie (2), The Secret Life of Pets (2), Toy Story (5), Trolls Holiday (2), Wreck-It Ralph (2), Cloudy with a Chance of Meatballs (2), Inside Out (4), Minions (2), Spy Kids (4), The Lion King (3), Aladdin (3), Beauty and the Beast (3), The Little Mermaid (3), Mulan (2), The Land Before Time (14), Teenage Mutant Ninja Turtles (12), Open Season (4)
 - **Fantasy Collections**: 20 rails — Fantastic Beasts (3), Ghostbusters (4), Harry Potter (8), Indiana Jones (5), Jumanji (3), National Treasure (2), Night at the Museum (3), Percy Jackson (2), Pirates of the Caribbean (5), The Chronicles of Narnia (3), The Hobbit (3), The Maze Runner (3), The Mummy (3), The Twilight (1), Clash of the Titans (2), Highlander (5), Ted (2), Hellboy (2), The Crow (4), Conan the Barbarian (2)
 - **Horror Collections**: 40 rails — A Nightmare on Elm Street (7), A Quiet Place (2), Blade (2), Child's Play (7), Evil Dead (3), Final Destination (6), Friday the 13th (1), Halloween (2), The Hannibal Lecter (3), Hellraiser (10), Insidious (6), It (2), Jaws (4), Paranormal Activity (7), Poltergeist (7), Resident Evil (6), Saw (10), Scream (7), The Conjuring (2), The Exorcist (6), The Grudge (3), The Omen (5), The Purge (5), The Ring (3), Tremors (7), Underworld (5), V/H/S (9), 28 Days/Weeks/Years Later (4), Annabelle (3), Jeepers Creepers (3), Texas Chainsaw Massacre (10), The Nun (2), Zombieland (2), Psycho (2), The Fly (3), Candyman (4), Sinister (2), Silent Hill (3), Phantasm (5), The Amityville (10)
 - **Mystery Collections**: 5 rails — Knives Out (3), Robert Langdon (3), Sherlock Holmes (4), Enola Holmes (3), Now You See Me (3)
-- **Sci-Fi Collections**: 35 rails — Alien (3), Back to the Future (3), Blade Runner (2), Divergent (3), Dune (2), Godzilla (3), Guardians of the Galaxy (3), Jurassic Park (7), King Kong (1976) (2), Mad Max (5), Man of Steel (2), Pacific Rim (2), Planet of the Apes (Original) (5), Predator (6), RoboCop (3), Spider-Man (3), Star Trek: Alternate Reality (3), Star Wars (9), Starship Troopers (3), The Terminator (6), The Hunger Games (4), The Matrix (4), Transformers (5), TRON (3), X-Men (7), Avatar (3), Planet of the Apes (Reboot) (4), The Meg (2), Star Trek: The Original Series Movies (6), Star Trek: The Next Generation Movies (4), The Chronicles of Riddick (3), The Fly (3), Batman Collection (1989-1997) (4), Superman Classic (4), Bill & Ted (3)
-- **Thriller Collections**: 15 rails — The Hannibal Lecter (3), Escape Room (2), Don't Breathe (2), Sicario (2), The Purge (5), Final Destination (6), A Quiet Place (2), The Jack Ryan (3), Has Fallen (3), Extraction (2), Basic Instinct (2), Psycho (2), Escape Plan (3), Speed (2), The Meg (2)
+- **Sci-Fi Collections**: 37 rails — Alien (3), Back to the Future (3), Blade Runner (2), Divergent (3), Dune (2), Godzilla (3), Guardians of the Galaxy (3), Jurassic Park (7), King Kong (1976) (2), Mad Max (5), Man of Steel (2), Pacific Rim (2), Planet of the Apes (Original) (5), Predator (6), RoboCop (3), Spider-Man (3), Star Trek: Alternate Reality (3), Star Wars (9), Starship Troopers (3), The Terminator (6), The Hunger Games (4), The Matrix (4), Transformers (5), TRON (3), X-Men (7), Avatar (3), Planet of the Apes (Reboot) (4), Cloverfield (3), The Meg (2), Star Trek: The Original Series Movies (6), Star Trek: The Next Generation Movies (4), Alien vs. Predator (2), The Chronicles of Riddick (3), The Fly (3), Batman Collection (1989-1997) (4), Superman Classic (4), Bill & Ted (3)
+- **Thriller Collections**: 16 rails — The Hannibal Lecter (3), Escape Room (2), Don't Breathe (2), Sicario (2), The Purge (5), Final Destination (6), A Quiet Place (2), Eastrail 177 (3), The Jack Ryan (3), Has Fallen (3), Extraction (2), Basic Instinct (2), Psycho (2), Escape Plan (3), Speed (2), The Meg (2)
 - **War Collections**: 6 rails — Rambo (5), Sniper (12), Jarhead (4), Behind Enemy Lines (4), Missing in Action (3), The Dirty Dozen (4)
 - **Anime Film Collections**: 8 rails — Detective Conan (29), Dragon Ball (4), Evangelion (4), My Hero Academia (4), Naruto (11), One Piece (14), Demon Slayer (2), Pokémon (5)
 
@@ -351,161 +351,3 @@
 - Transformers → Transformers: War for Cybertron: Earthrise (2020) `tv:117682` [title]
 
 ## Log
-- Batman & Gotham: added Batman: Knightfall Part 1: Knightfall (2026) [co+title]
-- Batman & Gotham: added Batman v Superman: Dawn of Justice (2016) [co+title]
-- Batman & Gotham: added Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn) (2020) [co+title]
-- Batman & Gotham: added Batman: Assault on Arkham (2014) [co+title]
-- Batman & Gotham: added Batman: The Doom That Came to Gotham (2023) [co+title]
-- Batman & Gotham: added Batman Ninja (2018) [co+title]
-- Batman & Gotham: added Batman: Gotham Knight (2008) [co+title]
-- Batman & Gotham: added Son of Batman (2014) [co+title]
-- Batman & Gotham: added Batman: Hush (2019) [co+title]
-- Batman & Gotham: added Batman: Bad Blood (2016) [co+title]
-- Batman & Gotham: added Aztec Batman: Clash of Empires (2025) [co+title]
-- Batman & Gotham: added LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout (2016) [co+title]
-- Batman & Gotham: added Gotham Knights (2023) [co+title]
-- Batman & Gotham: added Gotham Girls (2000) [co+title]
-- X-Men & Mutants: added Once Upon a Deadpool (2018) [co+title]
-- Marvel Cinematic Universe: added Spider-Man: Brand New Day (2026) [kw+title]
-- Marvel Cinematic Universe: added Spider-Man: No Way Home (2021) [kw+title]
-- Marvel Cinematic Universe: added Deadpool & Wolverine (2024) [kw+title]
-- Marvel Cinematic Universe: added Guardians of the Galaxy Vol. 3 (2023) [kw+title]
-- Marvel Cinematic Universe: added The Fantastic 4: First Steps (2025) [kw+title]
-- Marvel Cinematic Universe: added Iron Man 2 (2010) [kw+title]
-- Marvel Cinematic Universe: added Doctor Strange in the Multiverse of Madness (2022) [kw+title]
-- Marvel Cinematic Universe: added Iron Man (2008) [kw+title]
-- Marvel Cinematic Universe: added Shang-Chi and the Legend of the Ten Rings (2021) [kw+title]
-- Marvel Cinematic Universe: added Black Panther (2018) [kw+title]
-- Marvel Cinematic Universe: added Iron Man 3 (2013) [kw+title]
-- Marvel Cinematic Universe: added Spider-Man: Homecoming (2017) [kw+title]
-- Marvel Cinematic Universe: added Captain America: Civil War (2016) [kw+title]
-- Marvel Cinematic Universe: added The Punisher: One Last Kill (2026) [kw+title]
-- Marvel Cinematic Universe: added Thunderbolts* (2025) [kw+title]
-- Marvel Cinematic Universe: added Spider-Man: Far From Home (2019) [kw+title]
-- Marvel Cinematic Universe: added The Incredible Hulk (2008) [kw+title]
-- Marvel Cinematic Universe: added Thor: Ragnarok (2017) [kw+title]
-- Marvel Cinematic Universe: added Thor: The Dark World (2013) [kw+title]
-- Marvel Cinematic Universe: added Black Panther: Wakanda Forever (2022) [kw+title]
-- Marvel Cinematic Universe: added Doctor Strange (2016) [kw+title]
-- Marvel Cinematic Universe: added Guardians of the Galaxy Vol. 2 (2017) [kw+title]
-- Marvel Cinematic Universe: added Thor: Love and Thunder (2022) [kw+title]
-- Marvel Cinematic Universe: added Thor (2011) [kw+title]
-- Marvel Cinematic Universe: added Captain America: Brave New World (2025) [kw+title]
-- Marvel Cinematic Universe: added Black Widow (2021) [kw+title]
-- Marvel Cinematic Universe: added Ant-Man and the Wasp: Quantumania (2023) [kw+title]
-- Marvel Cinematic Universe: added The Marvels (2023) [kw+title]
-- Marvel Cinematic Universe: added Ant-Man and the Wasp (2018) [kw+title]
-- Marvel Cinematic Universe: added Captain Marvel (2019) [kw+title]
-- Marvel Cinematic Universe: added Guardians of the Galaxy (2014) [kw+title]
-- Marvel Cinematic Universe: added Eternals (2021) [kw+title]
-- Marvel Cinematic Universe: added Ant-Man (2015) [kw+title]
-- Marvel Cinematic Universe: added Captain America: The Winter Soldier (2014) [kw+title]
-- Marvel Cinematic Universe: added Captain America: The First Avenger (2011) [kw+title]
-- Marvel Cinematic Universe: added Werewolf by Night (2022) [kw+title]
-- Marvel Cinematic Universe: added The Guardians of the Galaxy Holiday Special (2022) [kw+title]
-- Marvel Cinematic Universe: added VisionQuest (2026) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Agents of S.H.I.E.L.D. (2013) [kw+title]
-- Marvel Cinematic Universe: added Loki (2021) [kw+title]
-- Marvel Cinematic Universe: added Marvel's The Punisher (2017) [kw+title]
-- Marvel Cinematic Universe: added Daredevil: Born Again (2025) [kw+title]
-- Marvel Cinematic Universe: added What If...? (2021) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Daredevil (2015) [kw+title]
-- Marvel Cinematic Universe: added Hawkeye (2021) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Jessica Jones (2015) [kw+title]
-- Marvel Cinematic Universe: added WandaVision (2021) [kw+title]
-- Marvel Cinematic Universe: added Your Friendly Neighborhood Spider-Man (2025) [kw+title]
-- Marvel Cinematic Universe: added X-Men '97 (2024) [kw+title]
-- Marvel Cinematic Universe: added Agatha All Along (2024) [kw+title]
-- Marvel Cinematic Universe: added She-Hulk: Attorney at Law (2022) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Agent Carter (2015) [kw+title]
-- Marvel Cinematic Universe: added Moon Knight (2022) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Luke Cage (2016) [kw+title]
-- Marvel Cinematic Universe: added Wonder Man (2026) [kw+title]
-- Marvel Cinematic Universe: added Eyes of Wakanda (2025) [kw+title]
-- Marvel Cinematic Universe: added Secret Invasion (2023) [kw+title]
-- Marvel Cinematic Universe: added Ironheart (2025) [kw+title]
-- Marvel Cinematic Universe: added The Falcon and the Winter Soldier (2021) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Runaways (2017) [kw+title]
-- Marvel Cinematic Universe: added Marvel Zombies (2025) [kw+title]
-- Marvel Cinematic Universe: added Ms. Marvel (2022) [kw+title]
-- Marvel Cinematic Universe: added Helstrom (2020) [kw+title]
-- Marvel Cinematic Universe: added Echo (2024) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Inhumans (2017) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Cloak & Dagger (2018) [kw+title]
-- Marvel Cinematic Universe: added Marvel's The Defenders (2017) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Iron Fist (2017) [kw+title]
-- Marvel Cinematic Universe: added Marvel's Agents of S.H.I.E.L.D.: Slingshot (2016) [kw+title]
-- DC Universe: added Teen Titans Go! To the Movies (2018) [co+title]
-- DC Universe: added Suicide Squad: Hell to Pay (2018) [co+title]
-- DC Universe: added Justice League: Crisis on Infinite Earths Part Three (2024) [co+title]
-- DC Universe: added Superman: Unbound (2013) [co+title]
-- DC Universe: added Superman: Red Son (2020) [co+title]
-- DC Universe: added All Star Superman (2011) [co+title]
-- DC Universe: added Superman/Batman: Apocalypse (2010) [co+title]
-- DC Universe: added The Death of Superman (2019) [co+title]
-- DC Universe: added Superman: Man of Tomorrow (2020) [co+title]
-- DC Universe: added Superman/Batman: Public Enemies (2009) [co+title]
-- DC Universe: added Superman vs. The Elite (2012) [co+title]
-- DC Universe: added Justice League: Doom (2012) [co+title]
-- DC Universe: added Justice League: Warworld (2023) [co+title]
-- DC Universe: added Justice League Dark: Apokolips War (2020) [co+title]
-- DC Universe: added Justice League: Throne of Atlantis (2015) [co+title]
-- DC Universe: added Justice League: The New Frontier (2008) [co+title]
-- DC Universe: added Justice League vs. Teen Titans (2016) [co+title]
-- DC Universe: added Justice League: Gods and Monsters (2015) [co+title]
-- DC Universe: added Justice League: Secret Origins (2001) [co+title]
-- DC Universe: added Justice League: Crisis on Two Earths (2010) [co+title]
-- DC Universe: added Justice League: Paradise Lost (2003) [co+title]
-- DC Universe: added Justice League vs. the Fatal Five (2019) [co+title]
-- DC Universe: added Justice League: Starcrossed - The Movie (2004) [co+title]
-- DC Universe: added Teen Titans Go! (2013) [co+title]
-- DC Universe: added Justice League: Gods and Monsters Chronicles (2015) [co+title]
-- Star Wars: added LEGO Star Wars: The Mandalorian (2026) [co+title]
-- Star Wars: added LEGO Star Wars Terrifying Tales (2021) [co+title]
-- Star Wars: added LEGO Star Wars Holiday Special (2020) [co+title]
-- Star Wars: added LEGO Star Wars Summer Vacation (2022) [co+title]
-- Star Wars: added The Star Wars Holiday Special (1978) [co+title]
-- Star Wars: added Star Wars: Visions Presents - The Ninth Jedi (2026) [co+kw+title]
-- Star Wars: added Star Wars: Maul - Shadow Lord (2026) [co+title]
-- Star Wars: added LEGO Star Wars: Rebuild the Galaxy (2024) [co+title]
-- Star Wars: added Star Wars: Tales of the Underworld (2025) [co+title]
-- Star Wars: added LEGO Star Wars: Droid Tales (2015) [co+title]
-- Star Wars: added LEGO Star Wars: All-Stars (2018) [co+title]
-- Star Wars: added LEGO Star Wars: Rebuild the Galaxy - Pieces of the Past (2025) [co+title]
-- Star Wars: added Star Wars Galaxy of Sounds (2021) [co+title]
-- Star Wars: added Star Wars Vehicle Flythroughs (2021) [co+title]
-- Middle-earth: added The Lord of the Rings: The Rings of Power Global Fan Screening (2022) [co+title]
-- Godzilla & Kong: added Godzilla: Final Wars (2004) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Biollante (1989) [kw+title]
-- Godzilla & Kong: added Mothra vs. Godzilla (1964) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Megalon (1973) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Mechagodzilla (1974) [kw+title]
-- Godzilla & Kong: added King Kong vs. Godzilla (1963) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Megaguirus (2000) [kw+title]
-- Godzilla & Kong: added Godzilla, King of the Monsters! (1956) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Destoroyah (1995) [kw+title]
-- Godzilla & Kong: added Godzilla Against MechaGodzilla (2002) [kw+title]
-- Godzilla & Kong: added Godzilla vs. SpaceGodzilla (1994) [kw+title]
-- Godzilla & Kong: added Godzilla Raids Again (1955) [kw+title]
-- Godzilla & Kong: added The Return of Godzilla (1984) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Hedorah (1971) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Mechagodzilla II (1993) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Mothra (1992) [kw+title]
-- Godzilla & Kong: added Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack (2001) [kw+title]
-- Godzilla & Kong: added King Kong Escapes (1967) [kw+title]
-- Godzilla & Kong: added Godzilla vs. King Ghidorah (1991) [kw+title]
-- Godzilla & Kong: added Terror of Mechagodzilla (1975) [kw+title]
-- Godzilla & Kong: added Godzilla 2000: Millennium (1999) [kw+title]
-- Godzilla & Kong: added Son of Godzilla (1967) [kw+title]
-- Godzilla & Kong: added Godzilla 1985 (1985) [kw+title]
-- Godzilla & Kong: added Godzilla vs. Gigan (1972) [kw+title]
-- Godzilla & Kong: added Godzilla (1977) [kw+title]
-- Godzilla & Kong: added Godzilla, the Monster of the Pacific Ocean (1957) [kw+title]
-- Godzilla & Kong: added King of Kong Island (1968) [kw+title]
-- Alien & Predator: added Alien Nation (1988) [co+title]
-- Alien & Predator: added Alien: Isolation - The Digital Series (2019) [co+title]
-- Action Collections: collection not found: Alien vs. Predator Collection
-- Comedy Collections: collection not found: The Pink Panther (Reboot)
-- Sci-Fi Collections: collection not found: Cloverfield collection
-- Sci-Fi Collections: collection not found: Alien vs. Predator Collection
-- Thriller Collections: collection not found: Eastrail 177 Trilogy

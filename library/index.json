@@ -73,8 +73,8 @@
       "Batman Begins",
       "The Machinist",
       "Empire of the Sun",
-      "American Psycho",
       "The Flowers of War",
+      "American Psycho",
       "The Big Short",
       "The Fighter",
       "Little Women",
@@ -88,8 +88,8 @@
       "American Hustle",
       "The Pale Blue Eye",
       "The Promise",
-      "Newsies",
       "Swing Kids",
+      "Newsies",
       "Public Enemies",
       "Out of the Furnace",
       "The New World",
@@ -6351,8 +6351,8 @@
       "The Adventures of Baron Munchausen",
       "Insomnia",
       "Hook",
-      "Jakob the Liar",
       "The World According to Garp",
+      "Jakob the Liar",
       "One Hour Photo",
       "World's Greatest Dad",
       "Night at the Museum",
@@ -14253,13 +14253,11 @@
      "type": "movie"
     },
     {
-     "count": 9,
+     "count": 7,
      "id": "lib-starwars-series",
      "name": "Star Wars · Series",
      "titles": [
       "The Mandalorian",
-      "Star Wars Vehicle Flythroughs",
-      "Star Wars Galaxy of Sounds",
       "The Book of Boba Fett",
       "Obi-Wan Kenobi",
       "Andor",
@@ -14414,7 +14412,7 @@
    "poster": "/m4JJ0c2vFu5QDGaMNnhjOLFgkJh.jpg",
    "rails": [
     {
-     "count": 42,
+     "count": 41,
      "id": "lib-godzillakong-films",
      "name": "Godzilla & Kong · Films",
      "titles": [
@@ -14429,7 +14427,6 @@
       "Mothra vs. Godzilla",
       "King Kong Escapes",
       "Son of Godzilla",
-      "King of Kong Island",
       "Godzilla vs. Hedorah",
       "Godzilla vs. Gigan",
       "Godzilla vs. Megalon",
@@ -15622,6 +15619,17 @@
      "type": "movie"
     },
     {
+     "count": 2,
+     "id": "lib-col-115762",
+     "name": "Alien vs. Predator",
+     "poster": "/onE2OosgiHdjYXPoAD62sf0XsVa.jpg",
+     "titles": [
+      "AVP: Alien vs. Predator",
+      "Aliens vs Predator: Requiem"
+     ],
+     "type": "movie"
+    },
+    {
      "count": 3,
      "id": "lib-col-2794",
      "name": "The Chronicles of Riddick",
@@ -15974,6 +15982,17 @@
      "type": "movie"
     },
     {
+     "count": 2,
+     "id": "lib-col-130440",
+     "name": "The Pink Panther (Reboot)",
+     "poster": "/xYbMC6vo4rMIX8hkTUZva86r0i5.jpg",
+     "titles": [
+      "The Pink Panther",
+      "The Pink Panther 2"
+     ],
+     "type": "movie"
+    },
+    {
      "count": 6,
      "id": "lib-col-269098",
      "name": "Police Story",
@@ -16316,9 +16335,9 @@
     },
     {
      "count": 3,
-     "id": "lib-col-123800",
-     "name": "The Before Trilogy",
-     "poster": "/bBS1CfspKXq5RBok85hYvtW9ZwE.jpg",
+     "id": "lib-list-the-before-trilogy",
+     "name": "The Before",
+     "poster": "/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
      "titles": [
       "Before Sunrise",
       "Before Sunset",
@@ -18018,6 +18037,18 @@
      "type": "movie"
     },
     {
+     "count": 3,
+     "id": "lib-list-cloverfield-collection",
+     "name": "Cloverfield",
+     "poster": "/qIegUGJqyMMCRjkKV1s7A9MqdJ8.jpg",
+     "titles": [
+      "Cloverfield",
+      "10 Cloverfield Lane",
+      "The Cloverfield Paradox"
+     ],
+     "type": "movie"
+    },
+    {
      "count": 2,
      "id": "lib-col-742536",
      "name": "The Meg",
@@ -18053,6 +18084,17 @@
       "Star Trek: First Contact",
       "Star Trek: Insurrection",
       "Star Trek: Nemesis"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 2,
+     "id": "lib-col-115762",
+     "name": "Alien vs. Predator",
+     "poster": "/onE2OosgiHdjYXPoAD62sf0XsVa.jpg",
+     "titles": [
+      "AVP: Alien vs. Predator",
+      "Aliens vs Predator: Requiem"
      ],
      "type": "movie"
     },
@@ -18205,6 +18247,18 @@
      "titles": [
       "A Quiet Place",
       "A Quiet Place Part II"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 3,
+     "id": "lib-list-eastrail-177-trilogy",
+     "name": "Eastrail 177",
+     "poster": "/mLuehrGLiK5zFCyRmDDOH6gbfPf.jpg",
+     "titles": [
+      "Unbreakable",
+      "Split",
+      "Glass"
      ],
      "type": "movie"
     },
