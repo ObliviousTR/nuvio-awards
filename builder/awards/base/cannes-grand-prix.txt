@@ -1,0 +1,66 @@
+tt27714581|1124566|2025|Sentimental Value
+tt32086077|927547|2024|All We Imagine as Light
+tt7160372|467244|2023|The Zone of Interest
+tt9660502|901563|2022|Close
+tt10354106|603204|2022|Stars at Noon
+tt11777738|672208|2021|A Hero
+tt10262648|588182|2021|Compartment No. 6
+tt10199586|496967|2019|Atlantics
+tt7349662|487558|2018|BlacKkKlansman
+tt6135348|451945|2017|BPM (Beats per Minute)
+tt4645368|338189|2016|It's Only the End of the World
+tt3808342|336050|2015|Son of Saul
+tt3044244|265226|2014|The Wonders
+tt2042568|86829|2013|Inside Llewyn Davis
+tt1846487|103758|2012|Reality
+tt1827487|74879|2011|Once Upon a Time in Anatolia
+tt1827512|63831|2011|The Kid with a Bike
+tt1588337|46332|2010|Of Gods and Men
+tt1235166|21575|2009|A Prophet
+tt0929425|8882|2008|Gomorrah
+tt1016205|2010|2007|The Mourning Forest
+tt0450680|36143|2006|Flanders
+tt0412019|308|2005|Broken Flowers
+tt0364569|670|2003|Oldboy
+tt0346094|31026|2002|Distant
+tt0311519|7294|2002|The Man Without a Past
+tt0245929|25838|2001|Devils on the Doorstep
+tt0254686|1791|2001|The Piano Teacher
+tt0197569|65296|1999|Humanité
+tt0118799|637|1997|Life Is Beautiful
+tt0120255|10217|1997|The Sweet Hereafter
+tt0115751|145|1996|Breaking the Waves
+tt0114863|22549|1995|Ulysses' Gaze
+tt0110081|31439|1994|To Live
+tt0111579|50797|1994|Burnt by the Sun
+tt0107209|10434|1993|Faraway, So Close!
+tt0104663|47714|1992|The Stolen Children
+tt0101428|12627|1991|La Belle Noiseuse
+tt0100784|65482|1990|The Law
+tt0131012|128775|1990|The Sting of Death
+tt0098520|48524|1989|Too Beautiful for You
+tt0095765|11216|1988|Cinema Paradiso
+tt0096464|41949|1988|A World Apart
+tt0093754|96920|1987|Repentance
+tt0091670|24657|1986|The Sacrifice
+tt0086969|11296|1984|Birdy
+tt0084388|84946|1984|Diary for My Children
+tt0085959|4543|1983|Monty Python's The Meaning of Life
+tt0084422|42130|1982|The Night of the Shooting Stars
+tt0080373|101330|1981|Light Years Away
+tt0081176|39543|1980|My American Uncle
+tt0079907|68553|1979|Siberiade
+tt0078259|48131|1978|The Shout
+tt0075848|42200|1978|Bye Bye Monkey
+tt0074360|51857|1976|Cria!
+tt0074870|48205|1976|The Marquise of O
+tt0071691|11710|1974|The Enigma of Kaspar Hauser
+tt0071502|47406|1974|Arabian Nights
+tt0070359|48693|1973|The Mother and the Whore
+tt0069293|593|1972|Solaris
+tt0067277|16328|1971|Johnny Got His Gun
+tt0067820|59881|1971|Taking Off
+tt0065889|26451|1970|Investigation of a Citizen Above Suspicion
+tt0065261|87208|1969|Adalen 31
+tt0062277|59088|1967|I Even Met Happy Gypsies
+tt0061328|74544|1967|Accident

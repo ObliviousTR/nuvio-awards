@@ -1,0 +1,83 @@
+tt0031835|115109|1939|The Rains Came
+tt0033152|12232|1940|The Thief of Bagdad
+tt0033741|131766|1941|I Wanted Wings
+tt0035244|63617|1942|Reap the Wild Wind
+tt0035763|74012|1943|Crash Dive
+tt0037366|18770|1944|Thirty Seconds Over Tokyo
+tt0038260|34127|1945|Wonder Man
+tt0038363|19072|1945|Blithe Spirit
+tt0039437|108994|1947|Green Dolphin Street
+tt0040705|32558|1948|Portrait of Jennie
+tt0041650|39314|1949|Mighty Joe Young
+tt0042393|25392|1950|Destination Moon
+tt0044207|16380|1951|When Worlds Collide
+tt0045039|90968|1952|Plymouth Adventure
+tt0046534|8974|1953|The War of the Worlds
+tt0046672|173|1954|20,000 Leagues Under the Sea
+tt0046806|35580|1954|The Bridges at Toko-Ri
+tt0049833|6844|1956|The Ten Commandments
+tt0050356|15876|1957|The Enemy Below
+tt0052427|56931|1958|Tom Thumb
+tt0052618|665|1959|Ben-Hur
+tt0054387|2134|1960|The Time Machine
+tt0054953|10911|1961|The Guns of Navarone
+tt0056197|9289|1962|The Longest Day
+tt0056937|8095|1963|Cleopatra
+tt0058331|433|1964|Mary Poppins
+tt0059800|660|1965|Thunderball
+tt0060397|2161|1966|Fantastic Voyage
+tt0061584|16081|1967|Doctor Dolittle
+tt0062622|62|1968|2001: A Space Odyssey
+tt0064639|40140|1969|Marooned
+tt0066473|11165|1970|Tora! Tora! Tora!
+tt0066817|12335|1971|Bedknobs and Broomsticks
+tt0069113|551|1972|The Poseidon Adventure
+tt0071455|11123|1974|Earthquake
+tt0073113|17599|1975|The Hindenburg
+tt0074751|10730|1976|King Kong
+tt0076759|11|1977|Star Wars
+tt0078346|1924|1978|Superman
+tt0078748|348|1979|Alien
+tt0080684|1891|1980|The Empire Strikes Back
+tt0082971|85|1981|Raiders of the Lost Ark
+tt0083866|601|1982|E.T. the Extra-Terrestrial
+tt0086190|1892|1983|Return of the Jedi
+tt0087469|87|1984|Indiana Jones and the Temple of Doom
+tt0088933|10328|1985|Cocoon
+tt0090605|679|1986|Aliens
+tt0093260|2614|1987|Innerspace
+tt0096438|856|1988|Who Framed Roger Rabbit
+tt0096754|2756|1989|The Abyss
+tt0100802|861|1990|Total Recall
+tt0103064|280|1991|Terminator 2: Judgment Day
+tt0104070|9374|1992|Death Becomes Her
+tt0107290|329|1993|Jurassic Park
+tt0109830|13|1994|Forrest Gump
+tt0112431|9598|1995|Babe
+tt0116629|602|1996|Independence Day
+tt0120338|597|1997|Titanic
+tt0120889|12159|1998|What Dreams May Come
+tt0133093|603|1999|The Matrix
+tt0172495|98|2000|Gladiator
+tt0120737|120|2001|The Lord of the Rings: The Fellowship of the Ring
+tt0167261|121|2002|The Lord of the Rings: The Two Towers
+tt0167260|122|2003|The Lord of the Rings: The Return of the King
+tt0316654|558|2004|Spider-Man 2
+tt0360717|254|2005|King Kong
+tt0383574|58|2006|Pirates of the Caribbean: Dead Man's Chest
+tt0385752|2268|2007|The Golden Compass
+tt0421715|4922|2008|The Curious Case of Benjamin Button
+tt0499549|19995|2009|Avatar
+tt1375666|27205|2010|Inception
+tt0970179|44826|2011|Hugo
+tt0454876|87827|2012|Life of Pi
+tt1454468|49047|2013|Gravity
+tt0816692|157336|2014|Interstellar
+tt0470752|264660|2015|Ex Machina
+tt3040964|278927|2016|The Jungle Book
+tt1856101|335984|2017|Blade Runner 2049
+tt1213641|369972|2018|First Man
+tt8579674|530915|2019|1917
+tt6723592|577922|2020|Tenet
+tt1160419|438631|2021|Dune
+tt1630029|76600|2022|Avatar: The Way of Water

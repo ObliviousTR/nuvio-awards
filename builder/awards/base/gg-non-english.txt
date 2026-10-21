@@ -1,0 +1,91 @@
+tt0040522|5156|1948|Bicycle Thieves
+tt0047281|43339|1954|Twenty-Four Eyes
+tt0117193|37431|1995|No Way Back
+tt0178772|158830|1953|The Lady of the Camelias
+tt0045808|43346|1953|Genevieve
+tt0048452|48035|1955|Ordet
+tt0048657|47778|1955|Stella
+tt0048255|237854|1955|Children, Mother, and the General
+tt0262548|277958|1956|Eyes of Children
+tt0049928|280137|1956|Before Sundown
+tt0049419|98184|1956|A Girl in Black
+tt0049821|169697|1956|The Rose on His Arm
+tt0049934|11706|1956|War and Peace
+tt0045283|84944|1952|The White Reindeer
+tt0050179|2030|1957|Confessions of Felix Krull
+tt0051090|103199|1957|Tizoc
+tt0050591|171749|1957|Yellow Crow
+tt0050346|199189|1958|Girl and the River
+tt0052250|202756|1958|The Year Long Road
+tt0051963|4382|1958|Rosemary
+tt0050986|614|1957|Wild Strawberries
+tt0052654|1566|1959|The Bridge
+tt0053146|40423|1959|Black Orpheus
+tt0052957|43095|1959|Odd Obsession
+tt0052400|6905|1958|Aren't We Wonderful
+tt0053976|11656|1960|The Virgin Spring
+tt0054452|61711|1960|The Truth
+tt0054749|24167|1960|Two Women
+tt0055913|20271|1961|Divorce Italian Style
+tt0057344|22650|1963|Any Number Can Win
+tt0058335|49687|1964|Marriage Italian Style
+tt0058541|116762|1964|Sallah
+tt0059229|19120|1965|Juliet of the Spirits
+tt0061138|42726|1966|A Man and a Woman
+tt0062452|76295|1967|Live for Life
+tt0063794|29266|1968|War and Peace
+tt0065234|2721|1969|Z
+tt0064791|27889|1970|Rider on the Rain
+tt0185610|1013318|1971|Policeman
+tt0067919|40732|1971|The Emigrants
+tt0069035|42488|1972|The New Land
+tt0070086|42460|1973|The Pedestrian
+tt6725014|133919|1974|Scenes from a Marriage
+tt0073293|92285|1975|Lies My Father Told Me
+tt0074147|29454|1976|Face to Face
+tt0076085|42229|1977|A Special Day
+tt0077711|12761|1978|Autumn Sonata
+tt0077288|4484|1978|La Cage aux Folles
+tt0080009|11121|1979|Tess
+tt0082158|9443|1981|Chariots of Fire
+tt0083987|783|1982|Gandhi
+tt0083922|5961|1982|Fanny and Alexander
+tt0087892|15927|1984|A Passage to India
+tt0089276|29263|1985|The Official Story
+tt0090576|2753|1986|The Assault
+tt0089606|8816|1985|My Life as a Dog
+tt0093713|11174|1987|Pelle the Conqueror
+tt0095765|11216|1988|Cinema Paradiso
+tt0099334|11673|1990|Cyrano de Bergerac
+tt0099776|8996|1990|Europa Europa
+tt0104507|2731|1992|Indochine
+tt0106332|10997|1993|Farewell My Concubine
+tt0109771|10954|1994|Farinelli
+tt0113828|48750|1995|Les Miserables
+tt0116790|784|1996|Kolya
+tt0119590|27103|1997|My Life in Pink
+tt0140888|666|1998|Central Station
+tt0185125|99|1999|All About My Mother
+tt0190332|146|2000|Crouching Tiger, Hidden Dragon
+tt0283509|8342|2001|No Man's Land
+tt0287467|64|2002|Talk to Her
+tt0368913|14757|2004|Osama
+tt0369702|1913|2004|The Sea Inside
+tt0445620|67|2005|Paradise Now
+tt0498380|1251|2006|Letters from Iwo Jima
+tt0401383|2013|2007|The Diving Bell and the Butterfly
+tt1185616|8885|2008|Waltz with Bashir
+tt1149362|37903|2009|The White Ribbon
+tt1340107|44716|2010|In a Better World
+tt1832382|60243|2011|A Separation
+tt1602620|86837|2012|Amour
+tt2358891|179144|2013|The Great Beauty
+tt2802154|265180|2014|Leviathan
+tt3808342|336050|2015|Son of Saul
+tt3716530|337674|2016|Elle
+tt5723272|423646|2017|In the Fade
+tt6155172|426426|2018|Roma
+tt6751668|496243|2019|Parasite
+tt10633456|615643|2021|Minari
+tt14039582|758866|2021|Drive My Car
+tt15301048|714888|2022|Argentina 1985

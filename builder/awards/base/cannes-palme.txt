@@ -1,0 +1,98 @@
+tt36491653|1456349|2025|It Was Just an Accident
+tt0036914|51144|1944|Torment
+tt28607951|1064213|2024|Anora
+tt0110912|680|1994|Pulp Fiction
+tt6751668|496243|2019|Parasite
+tt0078788|28|1979|Apocalypse Now
+tt0075314|103|1976|Taxi Driver
+tt2278871|152584|2013|Blue Is the Warmest Color
+tt0253474|423|2002|The Pianist
+tt7322224|497828|2022|Triangle of Sadness
+tt0087884|655|1984|Paris, Texas
+tt17009710|915935|2023|Anatomy of a Fall
+tt0071360|592|1974|The Conversation
+tt0066026|651|1970|M*A*S*H
+tt0100935|483|1990|Wild at Heart
+tt10944760|630240|2021|Titane
+tt0478304|8967|2011|The Tree of Life
+tt0168629|16|2000|Dancer in the Dark
+tt0098724|1412|1989|sex, lies, and videotape
+tt0107822|713|1993|The Piano
+tt0041959|1092|1949|The Third Man
+tt0091530|11416|1986|The Mission
+tt0084335|15600|1982|Missing
+tt0060176|1052|1966|Blow-Up
+tt0078754|16858|1979|All That Jazz
+tt0101410|290|1991|Barton Fink
+tt0070643|31587|1973|Scarecrow
+tt0363589|1807|2003|Elephant
+tt0053779|439|1960|La Dolce Vita
+tt0057091|1040|1963|The Leopard
+tt8075192|505192|2018|Shoplifters
+tt4995790|401246|2017|The Square
+tt0460989|1116|2006|The Wind That Shakes the Barley
+tt0078875|659|1979|The Tin Drum
+tt0117589|11159|1996|Secrets & Lies
+tt0046268|204|1953|The Wages of Fear
+tt0061138|42726|1966|A Man and a Woman
+tt0120265|30020|1997|Taste of Cherry
+tt1602620|86837|2012|Amour
+tt1149362|37903|2009|The White Ribbon
+tt0106332|10997|1993|Farewell My Concubine
+tt0114787|11902|1995|Underground
+tt0058450|5967|1964|The Umbrellas of Cherbourg
+tt0037558|851|1945|Brief Encounter
+tt0080979|11953|1980|Kagemusha
+tt0032080|43837|1939|Union Pacific
+tt0048356|15919|1955|Marty
+tt1032846|2009|2007|4 Months, 3 Weeks and 2 Days
+tt0053146|40423|1959|Black Orpheus
+tt0361596|1777|2004|Fahrenheit 9/11
+tt0050634|38360|1957|The Cranes Are Flying
+tt0049233|43258|1956|Friendly Persuasion
+tt2758880|265169|2014|Winter Sleep
+tt0063850|14794|1968|if....
+tt0037884|28580|1945|The Lost Weekend
+tt5168192|374473|2016|I, Daniel Blake
+tt0038890|307|1945|Rome, Open City
+tt0055601|4497|1962|Viridiana
+tt0156794|24858|1998|Eternity and a Day
+tt0200071|11489|1999|Rosetta
+tt1068646|8841|2008|The Class
+tt4082068|314402|2015|Dheepan
+tt1588895|38368|2010|Uncle Boonmee Who Can Recall His Past Lives
+tt0093713|11174|1987|Pelle the Conqueror
+tt0077138|31542|1978|The Tree of Wooden Clogs
+tt0456396|11490|2005|The Child
+tt0067144|36194|1971|The Go-Between
+tt0208990|11447|2001|The Son's Room
+tt0089748|21042|1985|When Father Was Away on Business
+tt0084390|42113|1983|The Ballad of Narayama
+tt0045251|47697|1951|Othello
+tt0043809|43379|1951|Miracle in Milan
+tt0084934|52556|1982|The Road
+tt0104350|41764|1992|The Best Intentions
+tt0072782|52555|1975|Chronicle of the Years of Fire
+tt0120408|20506|1997|The Eel
+tt0094011|31300|1987|Under the Sun of Satan
+tt0054426|131836|1961|The Long Absence
+tt0066919|56231|1971|The Working Class Goes to Heaven
+tt0059362|42744|1965|The Knack... and How to Get It
+tt0043567|18650|1951|Miss Julie
+tt0037054|60225|1944|Maria Candelaria
+tt0056322|59990|1962|The Given Word
+tt0076517|42225|1977|Padre Padrone
+tt0045935|43349|1953|Gate of Hell
+tt0070180|80382|1973|The Hireling
+tt0068346|62382|1972|The Mattei Affair
+tt0062271|17974|1966|The Birds, the Bees and the Italians
+tt0082222|225|1981|Man of Iron
+tt0049518|60234|1956|The Silent World
+tt0037871|101772|1945|The Last Chance
+tt0044572|117478|1952|Two Cents Worth of Hope
+tt0039004|117500|1946|Pastoral Symphony
+tt0038043|99272|1945|Red Meadows
+tt0154942|154879|1946|Neecha Nagar
+tt0037426|154620|1945|The Turning Point
+tt0038647|154646|1946|Iris and the Lieutenant
+tt0038760|154623|1946|Men Without Wings
