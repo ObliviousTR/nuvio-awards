@@ -11,11 +11,6 @@
    "title": "Alien Convergence (2017)"
   },
   {
-   "key": "movie:10128",
-   "signals": "title",
-   "title": "Alien Nation (1988)"
-  },
-  {
    "key": "movie:593035",
    "signals": "title",
    "title": "Alien Warfare (2019)"
@@ -128,39 +123,9 @@
  ],
  "batman": [
   {
-   "key": "movie:485942",
-   "signals": "title",
-   "title": "Batman Ninja (2018)"
-  },
-  {
-   "key": "movie:13851",
-   "signals": "title",
-   "title": "Batman: Gotham Knight (2008)"
-  },
-  {
-   "key": "movie:251519",
-   "signals": "title",
-   "title": "Son of Batman (2014)"
-  },
-  {
-   "key": "movie:537056",
-   "signals": "title",
-   "title": "Batman: Hush (2019)"
-  },
-  {
-   "key": "movie:366924",
-   "signals": "title",
-   "title": "Batman: Bad Blood (2016)"
-  },
-  {
    "key": "movie:125249",
    "signals": "title",
    "title": "Batman (1943)"
-  },
-  {
-   "key": "movie:987400",
-   "signals": "title",
-   "title": "Aztec Batman: Clash of Empires (2025)"
   },
   {
    "key": "movie:41875",
@@ -168,29 +133,14 @@
    "title": "Gotham (1988)"
   },
   {
-   "key": "movie:396330",
-   "signals": "title",
-   "title": "LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout (2016)"
-  },
-  {
    "key": "movie:129507",
    "signals": "title",
    "title": "Joker (2012)"
   },
   {
-   "key": "tv:100535",
-   "signals": "title",
-   "title": "Batman Unlimited (2015)"
-  },
-  {
    "key": "tv:31749",
    "signals": "title",
    "title": "The Adventures of Batman (1968)"
-  },
-  {
-   "key": "tv:326416",
-   "signals": "title",
-   "title": "Absolute Batman ()"
   },
   {
    "key": "tv:10502",
@@ -201,16 +151,6 @@
    "key": "tv:233598",
    "signals": "title",
    "title": "Gotham Comedy Live (2012)"
-  },
-  {
-   "key": "tv:195868",
-   "signals": "title",
-   "title": "Gotham Knights (2023)"
-  },
-  {
-   "key": "tv:15185",
-   "signals": "title",
-   "title": "Gotham Girls (2000)"
   },
   {
    "key": "tv:61434",
@@ -284,21 +224,6 @@
  ],
  "dc": [
   {
-   "key": "movie:166076",
-   "signals": "title",
-   "title": "Superman: Unbound (2013)"
-  },
-  {
-   "key": "movie:618355",
-   "signals": "title",
-   "title": "Superman: Red Son (2020)"
-  },
-  {
-   "key": "movie:56590",
-   "signals": "title",
-   "title": "All Star Superman (2011)"
-  },
-  {
    "key": "movie:95414",
    "signals": "title",
    "title": "Superman (1941)"
@@ -309,94 +234,9 @@
    "title": "Superman (1948)"
   },
   {
-   "key": "movie:45162",
-   "signals": "title",
-   "title": "Superman/Batman: Apocalypse (2010)"
-  },
-  {
-   "key": "movie:487670",
-   "signals": "title",
-   "title": "The Death of Superman (2019)"
-  },
-  {
-   "key": "movie:618354",
-   "signals": "title",
-   "title": "Superman: Man of Tomorrow (2020)"
-  },
-  {
-   "key": "movie:22855",
-   "signals": "title",
-   "title": "Superman/Batman: Public Enemies (2009)"
-  },
-  {
-   "key": "movie:103269",
-   "signals": "title",
-   "title": "Superman vs. The Elite (2012)"
-  },
-  {
-   "key": "movie:76589",
-   "signals": "title",
-   "title": "Justice League: Doom (2012)"
-  },
-  {
-   "key": "movie:1003581",
-   "signals": "title",
-   "title": "Justice League: Warworld (2023)"
-  },
-  {
-   "key": "movie:618344",
-   "signals": "title",
-   "title": "Justice League Dark: Apokolips War (2020)"
-  },
-  {
-   "key": "movie:297556",
-   "signals": "title",
-   "title": "Justice League: Throne of Atlantis (2015)"
-  },
-  {
-   "key": "movie:14011",
-   "signals": "title",
-   "title": "Justice League: The New Frontier (2008)"
-  },
-  {
-   "key": "movie:379291",
-   "signals": "title",
-   "title": "Justice League vs. Teen Titans (2016)"
-  },
-  {
-   "key": "movie:323027",
-   "signals": "title",
-   "title": "Justice League: Gods and Monsters (2015)"
-  },
-  {
-   "key": "movie:300386",
-   "signals": "title",
-   "title": "Justice League: Secret Origins (2001)"
-  },
-  {
-   "key": "movie:30061",
-   "signals": "title",
-   "title": "Justice League: Crisis on Two Earths (2010)"
-  },
-  {
-   "key": "movie:360908",
-   "signals": "title",
-   "title": "Justice League: Paradise Lost (2003)"
-  },
-  {
    "key": "movie:69336",
    "signals": "title",
    "title": "Justice League of America (1997)"
-  },
-  {
-   "key": "movie:537059",
-   "signals": "title",
-   "title": "Justice League vs. the Fatal Five (2019)"
-  },
-  {
-   "key": "movie:268899",
-   "signals": "title",
-   "title": "Justice League: Starcrossed - The Movie (2004)"
   },
   {
    "key": "movie:9651",
@@ -434,11 +274,6 @@
    "title": "The Superman/Aquaman Hour of Adventure (1967)"
   },
   {
-   "key": "tv:63266",
-   "signals": "title",
-   "title": "Justice League: Gods and Monsters Chronicles (2015)"
-  },
-  {
    "key": "tv:34168",
    "signals": "title",
    "title": "Nana the Supergirl (1983)"
@@ -469,11 +304,6 @@
   }
  ],
  "godzillakong": [
-  {
-   "key": "movie:1381071",
-   "signals": "title",
-   "title": "Godzilla Minus Zero (2026)"
-  },
   {
    "key": "movie:11053",
    "signals": "title",
@@ -583,11 +413,6 @@
  ],
  "middleearth": [
   {
-   "key": "movie:1016184",
-   "signals": "title",
-   "title": "The Lord of the Rings: The Rings of Power Global Fan Screening (2022)"
-  },
-  {
    "key": "movie:211047",
    "signals": "title",
    "title": "The Hobbit: The Fabulous Journey of Mr. Bilbo Baggins (1985)"
@@ -658,11 +483,6 @@
   }
  ],
  "starwars": [
-  {
-   "key": "movie:42979",
-   "signals": "title",
-   "title": "Robot Chicken: Star Wars (2007)"
-  },
   {
    "key": "movie:392216",
    "signals": "title",
@@ -779,21 +599,6 @@
   }
  ],
  "xmen": [
-  {
-   "key": "movie:15257",
-   "signals": "title",
-   "title": "Hulk vs. Wolverine (2009)"
-  },
-  {
-   "key": "movie:567604",
-   "signals": "title",
-   "title": "Once Upon a Deadpool (2018)"
-  },
-  {
-   "key": "movie:558144",
-   "signals": "title",
-   "title": "Deadpool: No Good Deed (2017)"
-  },
   {
    "key": "tv:43146",
    "signals": "title",

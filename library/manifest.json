@@ -386,7 +386,7 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-1575",
+   "id": "lib-col-694606",
    "name": "Rocky"
   },
   {
@@ -428,11 +428,6 @@
    "type": "movie",
    "id": "lib-col-531330",
    "name": "Top Gun"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-52785",
-   "name": "xXx"
   },
   {
    "type": "movie",
@@ -531,11 +526,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-9818",
-   "name": "Mortal Kombat"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-2467",
    "name": "Tomb Raider"
   },
@@ -566,18 +556,18 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-115762",
-   "name": "Alien vs. Predator"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-2794",
    "name": "The Chronicles of Riddick"
   },
   {
    "type": "movie",
-   "id": "lib-col-1582",
-   "name": "Teenage Mutant Ninja Turtles"
+   "id": "lib-col-120794",
+   "name": "Batman Collection (1989-1997)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8537",
+   "name": "Superman Classic"
   },
   {
    "type": "movie",
@@ -781,6 +771,11 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-123800",
+   "name": "The Before Trilogy"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-167613",
    "name": "Alvin and the Chipmunks"
   },
@@ -911,12 +906,12 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-1022790",
+   "id": "lib-col-981142",
    "name": "Inside Out"
   },
   {
    "type": "movie",
-   "id": "lib-col-544669",
+   "id": "lib-col-1704573",
    "name": "Minions"
   },
   {
@@ -951,6 +946,11 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-1195879",
+   "name": "Teenage Mutant Ninja Turtles"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-66761",
    "name": "Open Season"
   },
@@ -981,11 +981,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-119",
-   "name": "The Lord of the Rings"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-52984",
    "name": "National Treasure"
   },
@@ -1006,7 +1001,7 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-420",
+   "id": "lib-col-925022",
    "name": "The Chronicles of Narnia"
   },
   {
@@ -1056,7 +1051,7 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-735",
+   "id": "lib-col-609920",
    "name": "Blade"
   },
   {
@@ -1076,12 +1071,12 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-9735",
+   "id": "lib-col-1190758",
    "name": "Friday the 13th"
   },
   {
    "type": "movie",
-   "id": "lib-col-91361",
+   "id": "lib-col-995662",
    "name": "Halloween"
   },
   {
@@ -1116,7 +1111,7 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-10453",
+   "id": "lib-col-1681981",
    "name": "Poltergeist"
   },
   {
@@ -1136,7 +1131,7 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-313086",
+   "id": "lib-col-1018874",
    "name": "The Conjuring"
   },
   {
@@ -1211,7 +1206,7 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-119674",
+   "id": "lib-col-1673010",
    "name": "Psycho"
   },
   {
@@ -1256,7 +1251,7 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-102322",
+   "id": "lib-col-522048",
    "name": "Sherlock Holmes"
   },
   {
@@ -1266,7 +1261,7 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-8091",
+   "id": "lib-col-1742094",
    "name": "Alien"
   },
   {
@@ -1398,6 +1393,16 @@
    "type": "movie",
    "id": "lib-col-173710",
    "name": "Planet of the Apes (Reboot)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-151",
+   "name": "Star Trek: The Original Series Movies"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-115570",
+   "name": "Star Trek: The Next Generation Movies"
   },
   {
    "type": "movie",
