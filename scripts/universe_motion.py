@@ -670,7 +670,7 @@ class XMen(Mark2):
     tag, tag_y = "X-MEN  ·  WOLVERINE  ·  DEADPOOL", H / 2 + 175
 
     def __init__(self):
-        self.fr = clip("0sifJvGCjI0tXVcnhM", 0, 40, maxw=900, maxh=420)
+        self.fr = clip("0sifJvGCjI0tXVcnhM", 0, 36, maxw=900, maxh=420)
 
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -1014,8 +1014,8 @@ def first_line(im):
     """Keep the logo's top line ('INDIANA JONES'), dropping the film subtitle under it."""
     a = im.getchannel("A")
     rows = [sum(a.crop((0, y, im.width, y + 1)).getdata()) for y in range(im.height)]
-    lo, hi = int(im.height * 0.32), int(im.height * 0.66)
-    cut = min(range(lo, hi), key=lambda y: rows[y])
+    top = max(rows)
+    cut = next((y for y in range(int(im.height * 0.3), im.height) if rows[y] < 0.12 * top), im.height)
     return trim(im.crop((0, 0, im.width, cut)))
 
 
@@ -1063,7 +1063,7 @@ class AlienPredator(Mark2):
         self.pred = fit(tmdb_logo(path="/6dPMPbU5em2sFzD1uxzQLcuKtLG.png"), 640, 140)
         self.amp = text_layer("&", font("cinzel", 52, weight=500), (220, 220, 220))
         a = self.alien.getchannel("A")
-        cols = [sum(a.crop((x, 0, x + 1, a.height)).getdata()) > 0 for x in range(a.width)]
+        cols = [a.crop((x, 0, x + 1, a.height)).getbbox() is not None for x in range(a.width)]
         self.letters, x = [], 0
         while x < len(cols):
             if cols[x]:
@@ -1095,7 +1095,8 @@ class AlienPredator(Mark2):
             lw = self.pred.width
             lx = W / 2 - lw / 2 - 60 + p * (lw + 120)
             m = Image.new("L", self.pred.size, 0)
-            ImageDraw.Draw(m).rectangle((0, 0, lx - (W / 2 - lw / 2), self.pred.height), fill=255)
+            if lx > W / 2 - lw / 2:
+                ImageDraw.Draw(m).rectangle((0, 0, lx - (W / 2 - lw / 2), self.pred.height), fill=255)
             pr = self.pred.copy()
             pr.putalpha(ImageChops.multiply(pr.getchannel("A"), m.filter(ImageFilter.GaussianBlur(10))))
             place(cv, pr, W / 2, py)
@@ -1145,12 +1146,12 @@ class PlanetOfTheApes(Mark2):
         m = Image.new("L", (W, H), 0)
         d = ImageDraw.Draw(m)
         cx, cy = W / 2, H / 2 - 20
-        for j in range(18):
-            ang = rot + j * 2 * math.pi / 18
-            w = 0.07
+        for j in range(14):
+            ang = rot + j * 2 * math.pi / 14
+            w = 0.06
             d.polygon([(cx, cy), (cx + 1400 * math.cos(ang - w), cy + 1400 * math.sin(ang - w)),
-                       (cx + 1400 * math.cos(ang + w), cy + 1400 * math.sin(ang + w))], fill=round(120 * a))
-        m = m.filter(ImageFilter.GaussianBlur(18))
+                       (cx + 1400 * math.cos(ang + w), cy + 1400 * math.sin(ang + w))], fill=round(80 * a))
+        m = m.filter(ImageFilter.GaussianBlur(34))
         v = Image.new("L", (W, H), 0)
         ImageDraw.Draw(v).ellipse((cx - 560, cy - 420, cx + 560, cy + 420), fill=255)
         m = ImageChops.multiply(m, v.filter(ImageFilter.GaussianBlur(140)))
@@ -1161,7 +1162,7 @@ class PlanetOfTheApes(Mark2):
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         g = self.i / (self.build + self.hold)
-        cv.alpha_composite(self.rays(g * 0.6, ease(t / 0.6)))
+        cv.alpha_composite(self.rays(g * 0.6, ease(t / 0.6) * (1 if h is None else 1 - 0.45 * h)))
         k = ease((t - 0.25) / 0.5)
         if k > 0:
             yy = H / 2 - 20 + (1 - k) * 40
