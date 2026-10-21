@@ -295,6 +295,15 @@ def main():
         toon_ok = folder in ("Family & Animation Collections", "Anime Film Collections")
         fentry = {"title": folder, "rails": []}
         for n in names:
+            alias = defs.get("collection_aliases", {}).get(n)
+            if isinstance(alias, list):  # no TMDB collection: the films are listed by hand
+                films = [r for r in (resolve("movie", spec) for spec in alias) if r]
+                films = sorted([dict(r, _kind="movie") for r in films if released(r)], key=date_of)
+                c = write(f"lib-list-{slug(n)}", "movie", re.sub(r"(?i)\s*(collection|trilogy)$", "", n).strip(), films)
+                if c:
+                    c["poster"] = films[0].get("poster_path") if films else None
+                    fentry["rails"].append(c)
+                continue
             col = find_col(n, defs.get("collection_aliases", {}))
             if not col:
                 log.append(f"- {folder}: collection not found: {n}"); continue

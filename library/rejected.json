@@ -1,1 +1,9 @@
-{"godzillakong": ["movie:IGNORE"]}
+{
+ "godzillakong": [
+  "movie:107920"
+ ],
+ "starwars": [
+  "tv:124734",
+  "tv:135211"
+ ]
+}

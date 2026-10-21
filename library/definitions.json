@@ -1376,9 +1376,22 @@
   "Star Trek: The Original Series Movies": 151,
   "Star Trek: The Next Generation Movies": 115570,
   "The Twilight Collection": "The Twilight Saga Collection",
-  "Cloverfield collection": "Cloverfield Collection",
-  "The Before Trilogy": "Before Collection",
-  "The Pink Panther (Reboot)": "The Pink Panther (Reboot) Collection",
-  "Eastrail 177 Trilogy": "Unbreakable Collection"
+  "Cloverfield collection": [
+   "Cloverfield (2008)",
+   "10 Cloverfield Lane (2016)",
+   "The Cloverfield Paradox (2018)"
+  ],
+  "The Before Trilogy": [
+   "Before Sunrise (1995)",
+   "Before Sunset (2004)",
+   "Before Midnight (2013)"
+  ],
+  "The Pink Panther (Reboot)": 130440,
+  "Eastrail 177 Trilogy": [
+   "Unbreakable (2000)",
+   "Split (2016)",
+   "Glass (2019)"
+  ],
+  "Alien vs. Predator Collection": 115762
  }
 }
