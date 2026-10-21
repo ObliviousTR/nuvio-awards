@@ -28,7 +28,7 @@ FOLDERS = {  # row title -> folder titles in order (unlisted folders keep their 
                       "Dark & Gritty", "Spooky & Creepy", "Tearjerkers", "80s & 90s Vibes"],
     "Universes & Franchises": ["Marvel Cinematic Universe", "DC Universe", "Batman & Gotham", "Spider-Verse",
                                "X-Men & Mutants", "Middle-earth", "Star Wars", "Wizarding World", "Dune", "Star Trek",
-                               "007 James Bond", "Mission: Impossible", "John Wick", "Fast & Furious", "Mad Max",
+                               "007 James Bond", "Mission: Impossible", "The World of John Wick", "The Fast Saga", "Mad Max Saga",
                                "Indiana Jones", "The Matrix", "Alien & Predator", "Godzilla & Kong", "Jurassic Park",
                                "Planet of the Apes", "Terminator", "Transformers", "The Conjuring & Insidious"],
     "Film Collections": ["Action Collections", "Sci-Fi Collections", "Fantasy Collections", "Comedy Collections",
