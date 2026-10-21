@@ -1,9 +1,116 @@
 {
+ "alienpredator": [
+  "movie:258193",
+  "movie:460962",
+  "movie:593035",
+  "movie:656561",
+  "movie:9773",
+  "movie:312526",
+  "movie:22076",
+  "movie:12120",
+  "movie:548257",
+  "movie:1330373",
+  "movie:574037",
+  "movie:65364",
+  "movie:67203",
+  "movie:82628",
+  "tv:96580",
+  "tv:1717",
+  "tv:5383",
+  "tv:31109",
+  "tv:6040",
+  "tv:43086",
+  "tv:278367",
+  "tv:107422",
+  "tv:92779",
+  "tv:72520"
+ ],
+ "batman": [
+  "movie:41875",
+  "movie:129507",
+  "tv:233598",
+  "tv:61434",
+  "tv:65949",
+  "tv:59791",
+  "tv:6428",
+  "tv:240692"
+ ],
+ "conjuring": [
+  "movie:1359977",
+  "movie:381170",
+  "movie:1022103",
+  "movie:1766192",
+  "movie:1173559",
+  "movie:19344",
+  "movie:13664"
+ ],
+ "dc": [
+  "movie:64992",
+  "movie:47790",
+  "tv:34168"
+ ],
+ "dune": [
+  "movie:697620",
+  "movie:881460",
+  "movie:744738"
+ ],
+ "fast": [
+  "movie:20174"
+ ],
  "godzillakong": [
-  "movie:107920"
+  "movie:107920",
+  "movie:11053",
+  "tv:7484",
+  "tv:2784",
+  "tv:10106",
+  "tv:8582"
+ ],
+ "johnwick": [
+  "movie:619022"
+ ],
+ "jurassic": [
+  "movie:1712453",
+  "movie:166660",
+  "movie:992090",
+  "movie:315024",
+  "movie:504982",
+  "tv:93895",
+  "tv:99127"
+ ],
+ "matrix": [
+  "movie:21769",
+  "movie:33322",
+  "movie:555879",
+  "tv:711"
+ ],
+ "middleearth": [
+  "movie:211047",
+  "movie:99457"
+ ],
+ "spiderman": [
+  "movie:270768",
+  "movie:50410",
+  "movie:1106299",
+  "movie:7182",
+  "movie:30789",
+  "movie:29889"
  ],
  "starwars": [
   "tv:124734",
-  "tv:135211"
+  "tv:135211",
+  "movie:392216"
+ ],
+ "terminator": [
+  "movie:61904",
+  "movie:40027",
+  "movie:66664"
+ ],
+ "transformers": [
+  "movie:25565",
+  "tv:38881",
+  "tv:295480"
+ ],
+ "xmen": [
+  "tv:65487"
  ]
 }
