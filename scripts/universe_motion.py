@@ -1025,7 +1025,7 @@ class IndianaJones(Mark2):
     tag, tagcol = "ADVENTURE HAS A NAME", (245, 215, 150)
 
     def __init__(self):
-        self.logo = fit(first_line(tmdb_logo(path="/yCZMIJaNriW79rR8NL4Kiq1mvWr.png")), 820, 220)
+        self.logo = fit(trim(commons("File:Indiana Jones logo.svg", 2000)), 820, 220)
         rnd = random.Random(4)
         self.motes = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(1, 2.6), rnd.uniform(-1, 1)) for _ in range(120)]
 
