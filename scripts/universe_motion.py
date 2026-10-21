@@ -100,10 +100,10 @@ def key_black(im, lo=40, hi=110):
     return im
 
 
-def blocks(im, gap=0.015):
+def blocks(im, gap=0.015, thr=10):
     """Vertical text blocks of a logo (rows of ink separated by empty rows): [(y0, y1), ...]."""
     a = im.getchannel("A").resize((1, im.height), Image.BOX)
-    rows = [v > 2 for v in a.getdata()]
+    rows = [v > thr for v in a.getdata()]
     out, y, g = [], 0, max(2, int(im.height * gap))
     while y < len(rows):
         if rows[y]:
@@ -115,8 +115,8 @@ def blocks(im, gap=0.015):
     return out
 
 
-def line_of(im, which):
-    b = blocks(im)
+def line_of(im, which, thr=10):
+    b = blocks(im, thr=thr)
     y0, y1 = b[which]
     return trim(im.crop((0, y0, im.width, y1)))
 
@@ -916,9 +916,10 @@ class Matrix(Mark2):
 
     def rain(self, a):
         im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        rnd = random.Random(self.i * 7)
+        fi = self.i if self.i < self.build else self.i // 3 * 3  # the rain ticks slower once the logo is up
+        rnd = random.Random(fi * 7)
         for c, (sp, off, L) in enumerate(self.cols):
-            head = (off + sp * self.i) % (H + L * 26 + 200) - 100
+            head = (off + sp * fi) % (H + L * 26 + 200) - 100
             for k in range(L):
                 y = head - k * 26
                 lv = round(8 * a * (1 - k / L) ** 1.3)
@@ -1052,7 +1053,12 @@ class MadMaxSaga(Mark2):
 
     def __init__(self):
         small = font("bebas", 64)
-        self.word = fit(line_of(tmdb_logo(path="/cBAO0i9fZCux5SqJnizRECS8qfU.png"), 0), 900, 230)
+        lg = tmdb_logo(path="/cBAO0i9fZCux5SqJnizRECS8qfU.png")
+        for thr in (10, 30, 60, 90):  # stop once FURY ROAD has come off: MAD MAX alone is a wide line
+            word = line_of(lg, 0, thr)
+            if word.width / word.height > 3.6:
+                break
+        self.word = fit(word, 900, 230)
         self.saga = stops_fill(text_layer("S A G A", small, (255, 255, 255), 22), [(0, (250, 230, 200)), (1, (220, 170, 120))])
         self.nz = noise((240, 80), 3, 4)
         rnd = random.Random(2)
@@ -1102,14 +1108,14 @@ class IndianaJones(Mark2):
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         rnd = random.Random(self.i * 3)
-        torch = 0.75 + 0.25 * rnd.random()
+        torch = 0.75 + 0.25 * rnd.random() if h is None else 0.9  # flickers while it builds, steady after
         lightc = Image.new("L", (W, H), 0)
         ImageDraw.Draw(lightc).ellipse((W / 2 - 520, H / 2 - 330, W / 2 + 520, H / 2 + 300), fill=round(120 * torch * ease(t / 0.5)))
         lay = Image.new("RGBA", (W, H), (255, 150, 50, 0))
         lay.putalpha(lightc.filter(ImageFilter.GaussianBlur(120)))
         cv.alpha_composite(lay)
         d = ImageDraw.Draw(cv)
-        for (x, y, r, dx) in self.motes:
+        for (x, y, r, dx) in (self.motes if h is None else ()):
             yy = (y - self.i * 2.5) % H
             d.ellipse((x + dx * self.i - r, yy - r, x + dx * self.i + r, yy + r), fill=(255, 225, 170, round(150 * torch)))
         k = ease((t - 0.25) / 0.5)
@@ -1230,8 +1236,8 @@ class PlanetOfTheApes(Mark2):
 
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        g = self.i / (self.build + self.hold)
-        cv.alpha_composite(self.rays(g * 0.6, ease(t / 0.6) * (1 if h is None else 1 - 0.45 * h)))
+        g = min(self.i, self.build) / (self.build + self.hold)
+        cv.alpha_composite(self.rays(g * 0.6, ease(t / 0.6) * (1 if h is None else 0.7)))
         k = ease((t - 0.25) / 0.5)
         if k > 0:
             yy = H / 2 - 20 + (1 - k) * 40
