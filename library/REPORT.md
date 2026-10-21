@@ -15,7 +15,7 @@
 - **LEGO Batman** (2): LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout, The Lego Batman Movie
 - **Animated Series** (11): The Adventures of Batman, The New Adventures of Batman, Batman: The Animated Series, The New Batman Adventures, Batman Beyond, Gotham Girls, The Batman, Batman: The Brave and the Bold, Beware the Batman, Harley Quinn, Batman: Caped Crusader
 
-## Spider-Man Universe (universe)
+## Spider-Verse (universe)
 - **Sam Raimi Trilogy** (3): Spider-Man, Spider-Man 2, Spider-Man 3
 - **The Amazing Spider-Man** (2): The Amazing Spider-Man, The Amazing Spider-Man 2
 - **MCU Spider-Man** (4): Spider-Man: Homecoming, Spider-Man: Far From Home, Spider-Man: No Way Home, Spider-Man: Brand New Day
@@ -54,7 +54,7 @@
 - **Classic DC Series** (4): Adventures of Superman, Wonder Woman, Lois & Clark: The New Adventures of Superman, Smallville
 - **Justice League Animated Films** (17): Justice League: Secret Origins, Justice League: Paradise Lost, Justice League: Starcrossed - The Movie, Justice League: The New Frontier, Justice League: Crisis on Two Earths, Justice League: Doom, Justice League: The Flashpoint Paradox, Justice League: War, Justice League: Throne of Atlantis, Justice League: Gods and Monsters, Justice League vs. Teen Titans, Justice League Dark, Justice League vs. the Fatal Five, Justice League Dark: Apokolips War, Justice League: Warworld, Justice League: Crisis on Infinite Earths Part One, Justice League: Crisis on Infinite Earths Part Three
 - **Superman Animated Films** (10): Superman, Superman: Doomsday, Superman/Batman: Public Enemies, Superman/Batman: Apocalypse, All Star Superman, Superman vs. The Elite, Superman: Unbound, The Death of Superman, Superman: Red Son, Superman: Man of Tomorrow
-- **More DC Animated Films** (2): Suicide Squad: Hell to Pay, Teen Titans Go! To the Movies
+- **More DC Animated Films** (3): Suicide Squad: Hell to Pay, Teen Titans Go! To the Movies, Wonder Woman: Bloodlines
 - **Animated Series** (12): The New Adventures of Superman, The Superman/Aquaman Hour of Adventure, Superman, Superman: The Animated Series, Justice League, Teen Titans, Justice League Unlimited, Young Justice, Teen Titans Go!, Justice League: Gods and Monsters Chronicles, My Adventures with Superman, Creature Commandos
 
 ## Star Wars (universe)
@@ -285,5 +285,8 @@
 - Billy Wilder: Best Of 24; Recent 27
 
 ## Candidates (one signal — approve or reject)
+- Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
+- Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
 
 ## Log
+- DC Universe: added Wonder Woman: Bloodlines (2019) [co+title]

@@ -1,1 +1,14 @@
-{}
+{
+ "transformers": [
+  {
+   "key": "tv:20469",
+   "signals": "title",
+   "title": "Transformers: Robots in Disguise (2000)"
+  },
+  {
+   "key": "tv:19237",
+   "signals": "title",
+   "title": "Transformers: The Headmasters (1987)"
+  }
+ ]
+}
