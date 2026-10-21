@@ -128,6 +128,22 @@ def discover_candidates(f, members):
     return out
 
 
+def find_col(name, aliases):
+    """TMDB collection for a Kaptain collection name: alias id / alias name, then a strict name match."""
+    a = aliases.get(name)
+    if isinstance(a, int):
+        d = tmdb(f"/collection/{a}") or {}
+        return {"id": a, "name": d.get("name"), "poster_path": d.get("poster_path")} if d else None
+    query = a or name
+    bare = lambda x: re.sub(r"\b(the|collection|trilogy|saga)\b", "", norm(x)).split()
+    for q in dict.fromkeys([query, re.sub(r"\s*\(.*?\)", "", query), re.sub(r"(?i)\s*collection$", "", query)]):
+        for r in (tmdb("/search/collection", query=q) or {}).get("results", []):
+            want, got = " ".join(bare(query)), " ".join(bare(r["name"]))
+            if want and (want == got or want in got or got in want):
+                return r
+    return None
+
+
 def is_short(r):
     if r["_kind"] != "movie":
         return False
@@ -182,7 +198,16 @@ def build_franchise(f, auto, approved, rejected, log, cands_out):
     for k, (r, sigs) in discover_candidates(f, members).items():
         if k in rejected.get(fid, []):
             continue
+        if f.get("min_year") and date_of(r)[:4] and int(date_of(r)[:4]) < f["min_year"]:
+            continue
+        if sigs == {"title"} and f.get("companies"):  # check the title's own production companies
+            det = tmdb(f"/{r['_kind']}/{r['id']}") or {}
+            if {c["id"] for c in det.get("production_companies", [])} & set(f["companies"]):
+                sigs.add("co")
         sure = ("kw" in sigs and f.get("strong_keyword")) or ("title" in sigs and sigs & {"kw", "co"})
+        enough_votes = r.get("vote_count", 0) >= (10 if r["_kind"] == "movie" else 5)
+        if sure and (not enough_votes or 10762 in genres_of(r)):  # junk extras and pre-school spin-offs
+            continue
         if sure:
             if is_short(r):
                 continue
@@ -270,11 +295,9 @@ def main():
         toon_ok = folder in ("Family & Animation Collections", "Anime Film Collections")
         fentry = {"title": folder, "rails": []}
         for n in names:
-            col, exact = S.find_collection(n)
+            col = find_col(n, defs.get("collection_aliases", {}))
             if not col:
                 log.append(f"- {folder}: collection not found: {n}"); continue
-            if not exact:
-                log.append(f"- {folder}: '{n}' matched '{col['name']}'")
             name, parts = collection_parts(col["id"])
             parts = sorted([p for p in parts if released(p) and (toon_ok or 16 not in genres_of(p))], key=date_of)
             label = re.sub(r"\s*Collection$", "", n).strip()

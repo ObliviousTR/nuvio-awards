@@ -49,9 +49,10 @@
     "gotham city"
    ],
    "companies": [
+    429,
+    2785,
     9993,
-    128064,
-    429
+    128064
    ],
    "pattern": "\\bBatman\\b|\\bGotham\\b|\\bJoker\\b|\\bPenguin\\b|Harley Quinn|Batwoman|Pennyworth",
    "search": [
@@ -97,7 +98,9 @@
    "companies": [
     7505,
     420,
-    34
+    34,
+    5,
+    19551
    ],
    "pattern": "Spider|Venom|Morbius|Kraven|Madame Web",
    "search": [
@@ -134,7 +137,10 @@
    ],
    "companies": [
     7505,
-    420
+    420,
+    34,
+    5,
+    19551
    ],
    "pattern": "X-Men|Wolverine|Deadpool|\\bLogan\\b|New Mutants|Legion|The Gifted|X-Men '97",
    "search": [
@@ -154,11 +160,10 @@
     "marvel cinematic universe (mcu)"
    ],
    "strong_keyword": true,
-   "companies": [
-    420
-   ],
+   "companies": [],
    "pattern": ".",
-   "search": []
+   "search": [],
+   "min_year": 2008
   },
   {
    "id": "dc",
@@ -227,9 +232,10 @@
     "wonder woman"
    ],
    "companies": [
+    429,
+    2785,
     9993,
-    128064,
-    429
+    128064
    ],
    "pattern": "Superman|Justice League|Wonder Woman|Aquaman|Shazam|\\bFlash\\b|Suicide Squad|Peacemaker|Green Lantern|Lanterns|Supergirl|Black Adam|Blue Beetle|Titans|\\bArrow\\b|Doom Patrol|Constantine|Creature Commandos",
    "search": [
@@ -1363,5 +1369,16 @@
     "name": "Billy Wilder"
    }
   ]
+ },
+ "collection_aliases": {
+  "Batman Collection (1989-1997)": 120794,
+  "Superman Classic Collection": 8537,
+  "Star Trek: The Original Series Movies": 151,
+  "Star Trek: The Next Generation Movies": 115570,
+  "The Twilight Collection": "The Twilight Saga Collection",
+  "Cloverfield collection": "Cloverfield Collection",
+  "The Before Trilogy": "Before Collection",
+  "The Pink Panther (Reboot)": "The Pink Panther (Reboot) Collection",
+  "Eastrail 177 Trilogy": "Unbreakable Collection"
  }
 }
