@@ -1,43 +1,28 @@
-import os, io, json, urllib.request, concurrent.futures as cf
-from PIL import Image, ImageSequence, ImageDraw
-os.makedirs("refs/gif", exist_ok=True)
-UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/124 Safari/537.36"}
-C = {
- "mcu": "10ADhj1QPawFna NUsKoYiGm1RPHl1eWM PmFpJVVXjbZl4iRwWK Nk5GOMLGMPB6g IhOZQhKKVkQyCvYRSS LA2CdQtSj0KfOuZ0Wh 3ov9kbNvyGQt71EVJ6",
- "bond": "3o85xmm5dm9dUOV1Re 5ub8PQ6NYXuCgnmF9p QiSA2VfUsQgu1emmN9 3o6fIYxb0CXpYAEZMI fSSTnNq8ZKKc0 26uf2rIZX5fhKaIrm",
- "wizarding": "H6Epdyz7fjCCBNUW80",
- "starwars": "l1uguGf2RVIsTXNDO GoeAgxrr0lkqI dvD7tyzx38ccrCkSQN 5wikad3qSOqAg 3oEdv03nb7yaQQJfEY d2Z833qjHtEIfxD2",
- "batman": "fZ9HskQBBeBhe SgBFcIje2WNkk 3o7aDdcQx11g5eSG9q KJgUXGbWZ4NNHao2DO",
- "spiderman": "W2u4SUQ4C9zP18B9Na 2cfdgTni5AkHm k0oQX8bo3BFumjnSKK Af9SdN3B8xblEobPln HZMTEoz9K9Mxa dB4mmxqxAHbWkMX91U nR4f2N4SOARyM",
- "xmen": "RfjVSLS9ngamagRc6V hVIRzkRs1UcYi70Z05 NnDYDoc9XVXhkigHPn 3o85g3kVp71g6i42ly",
- "lotr": "W4bPsfAh9iYfe XgE4LlECZjw6k KOi0Y5N1BWQJG RB7HBNCuzR0fzjv8Rj 2XflxzGoMXkpe9bvyk8",
- "startrek": "3og0ILocFFVTlrRAbu g1Xx49lSthethnAbcu URphtArd9IVtSsqk3Z 3o7aCXdmWiaMCOFIpG Xa3t5TBdH7Kak7ftcv",
- "mi": "AT1qsBCUcEHj2rBziM xUA7aY5OvnxIo5idY4",
- "dc": "3c5rvyUlKpdBcNV6PU vN3Ec0hJ2iagjTLHmF",
-}
-def get(gid):
-    try:
-        return gid, urllib.request.urlopen(urllib.request.Request(f"https://media.giphy.com/media/{gid}/giphy.gif", headers=UA), timeout=60).read()
-    except Exception as e:
-        return gid, None
-info = {}
-for u, ids in C.items():
-    ids = ids.split()
-    with cf.ThreadPoolExecutor(8) as ex:
-        res = list(ex.map(get, ids))
-    rows = []
-    for gid, b in res:
-        if not b: continue
-        g = Image.open(io.BytesIO(b)); fr = [f.convert("RGB").copy() for f in ImageSequence.Iterator(g)]
-        info[gid] = dict(u=u, w=g.width, h=g.height, n=len(fr), kb=len(b) // 1024)
-        pick = [fr[min(len(fr) - 1, round(i * (len(fr) - 1) / 5))] for i in range(6)]
-        row = Image.new("RGB", (6 * 260, 170), (40, 40, 40)); d = ImageDraw.Draw(row)
-        for i, f in enumerate(pick):
-            f.thumbnail((256, 150)); row.paste(f, (i * 260, 0))
-        d.text((4, 152), f"{gid}  {g.width}x{g.height}  {len(fr)}fr  {len(b)//1024}KB", fill=(255, 255, 0))
-        rows.append(row)
-    if rows:
-        sheet = Image.new("RGB", (6 * 260, 170 * len(rows)))
-        for i, r in enumerate(rows): sheet.paste(r, (0, 170 * i))
-        sheet.save(f"refs/gif/{u}.jpg", quality=80)
-json.dump(info, open("refs/gif/info.json", "w"), indent=1)
+import os, subprocess, json, glob
+from PIL import Image, ImageDraw
+os.makedirs("refs/yt", exist_ok=True)
+Q = {"wizarding": "ytsearch3:Wizarding World logo intro 4K", "mcu": "ytsearch3:Marvel Studios intro 2016 logo 4K",
+     "bond": "ytsearch3:James Bond gun barrel sequence Daniel Craig HD", "matrix": "ytsearch3:The Matrix opening code rain logo"}
+log = []
+for k, q in Q.items():
+    r = subprocess.run(["yt-dlp", "--print", "%(id)s | %(title)s | %(duration)s | %(height)s", "--skip-download", q],
+                       capture_output=True, text=True, timeout=300)
+    log.append(f"== {k}\n{r.stdout}\n{r.stderr[-600:]}")
+    first = r.stdout.split(" | ")[0].strip() if r.stdout.strip() else None
+    if not first:
+        continue
+    out = f"refs/yt/{k}.mp4"
+    r2 = subprocess.run(["yt-dlp", "-f", "bv*[height<=720][ext=mp4]/b[height<=720]", "--download-sections", "*0-20",
+                         "-o", out, f"https://www.youtube.com/watch?v={first}"], capture_output=True, text=True, timeout=600)
+    log.append(r2.stdout[-400:] + r2.stderr[-600:])
+    if os.path.exists(out):
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", out, "-vf", "fps=1/2.5,scale=320:-1", f"refs/yt/{k}-%02d.jpg"])
+        fr = sorted(glob.glob(f"refs/yt/{k}-*.jpg"))
+        if fr:
+            ims = [Image.open(f) for f in fr]
+            sheet = Image.new("RGB", (330 * len(ims), ims[0].height + 10))
+            for i, im in enumerate(ims): sheet.paste(im, (i * 330, 0))
+            sheet.save(f"refs/yt/{k}-sheet.jpg", quality=80)
+            for f in fr: os.remove(f)
+        os.remove(out)
+open("refs/yt/log.txt", "w").write("\n".join(log))
