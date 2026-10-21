@@ -26,7 +26,7 @@ for i, (k, p) in enumerate(cands[:20]):
     t = art.fetch(p, "w300").convert("RGB"); t.thumbnail((320, 180))
     sheet.paste(t, ((i % 4) * 330, (i // 4) * 190)); d.text(((i % 4) * 330 + 4, (i // 4) * 190 + 4), f"{i} {k}", fill=(255, 255, 0))
 sheet.save(os.path.join(OUT, "cands.jpg"), quality=80)
-pick = [cands[i] for i in (0, 4, 8, 12, 16) if i < len(cands)]
+pick = [cands[i] for i in (2, 6, 10, 12, 18) if i < len(cands)]
 
 # ---- the wordmark (original design): condensed caps, white face, red / blue dimensional offsets
 def word_layer(text, size, color):
@@ -48,7 +48,7 @@ def web(size, progress):
     for i in range(n):
         a = i * 2 * math.pi / n - math.pi / 2
         r = c * rays
-        d.line((c, c, c + r * math.cos(a), c + r * math.sin(a)), fill=(255, 255, 255, 120), width=3)
+        d.line((c, c, c + r * math.cos(a), c + r * math.sin(a)), fill=(255, 255, 255, 70), width=2)
     rings = max(0, (progress - 0.25) / 0.75)
     for j in range(1, 6):
         if rings * 5 < j - 0.999: break
@@ -60,7 +60,7 @@ def web(size, progress):
             mx, my = (p0[0] + p1[0]) / 2, (p0[1] + p1[1]) / 2
             sag = 0.92
             mx, my = c + (mx - c) * sag, c + (my - c) * sag
-            d.line((p0, (mx, my), p1), fill=(255, 255, 255, 95), width=2, joint="curve")
+            d.line((p0, (mx, my), p1), fill=(255, 255, 255, 55), width=2, joint="curve")
     return im
 
 TEXT = "SPIDER-VERSE"
@@ -70,8 +70,10 @@ LW = face.width
 def logo(t, shimmer=None):
     """t 0..1 build: web draws, colour copies glitch in and lock onto the white face."""
     cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    wb = web(560, min(1, t / 0.55))
-    cv.alpha_composite(wb, ((W - 560) // 2, (H - 560) // 2 - 10))
+    wb = web(620, min(1, t / 0.55))
+    if t >= 0.85:  # once the name locks, the web steps back
+        wb.putalpha(wb.getchannel("A").point(lambda v: round(v * 0.55)))
+    cv.alpha_composite(wb, ((W - 620) // 2, (H - 620) // 2 - 10))
     x0, y0 = (W - LW) // 2, (H - face.height) // 2
     k = max(0, min(1, (t - 0.25) / 0.6))           # 0 scattered -> 1 locked
     e = 1 - (1 - k) ** 3
@@ -113,7 +115,7 @@ def vignette(im):
     v = Image.new("L", (W, H), 0); ImageDraw.Draw(v).ellipse((-W * 0.2, -H * 0.3, W * 1.2, H * 1.3), fill=255)
     v = v.filter(ImageFilter.GaussianBlur(120))
     return Image.composite(im, Image.new("RGB", (W, H), (0, 0, 0)), v)
-BUILD, HOLD = 26, 44
+BUILD, HOLD = 26, 34
 N = BUILD + HOLD
 frames = []
 for i in range(N):
@@ -135,10 +137,10 @@ logo(1.0).save(os.path.join(OUT, "logo.png"))
 small = [f.resize((512, 288), Image.LANCZOS) for f in frames]
 pal = Image.new("RGB", (512, 288 * 4))
 for j, idx in enumerate((5, BUILD, BUILD + 20, N - 1)): pal.paste(small[idx], (0, 288 * j))
-pal = pal.convert("P", palette=Image.ADAPTIVE, colors=160)
+pal = pal.convert("P", palette=Image.ADAPTIVE, colors=128)
 q = [f.quantize(palette=pal, dither=Image.Dither.NONE) for f in small]
-q[0].save(os.path.join(OUT, "hover.gif"), save_all=True, append_images=q[1:], duration=[60] * BUILD + [80] * HOLD, loop=0, optimize=True)
+q[0].save(os.path.join(OUT, "hover.gif"), save_all=True, append_images=q[1:], duration=[60] * BUILD + [95] * HOLD, loop=0, optimize=True)
 strip = Image.new("RGB", (512 * 4, 288 * 2))
-for j, idx in enumerate([0, 6, 12, 18, 24, 34, 50, N - 1]): strip.paste(small[idx], ((j % 4) * 512, (j // 4) * 288))
+for j, idx in enumerate([0, 6, 12, 18, 24, 34, 46, N - 1]): strip.paste(small[idx], ((j % 4) * 512, (j // 4) * 288))
 strip.save(os.path.join(OUT, "frames.jpg"), quality=80)
 open(os.path.join(OUT, "log.txt"), "w").write(f"picked {pick}\ngif {os.path.getsize(os.path.join(OUT, 'hover.gif'))//1024} KB")
