@@ -10631,8 +10631,8 @@
      "id": "lib-a-robert-downey-jr-top-rated",
      "name": "Robert Downey Jr. · Top Rated",
      "titles": [
-      "Avengers: Infinity War",
       "Avengers: Endgame",
+      "Avengers: Infinity War",
       "The Avengers",
       "Oppenheimer",
       "Iron Man",
@@ -12421,8 +12421,8 @@
       "Aliens",
       "Titanic",
       "The Terminator",
-      "Avatar",
       "Avatar: Fire and Ash",
+      "Avatar",
       "Avatar: The Way of Water",
       "The Abyss",
       "True Lies",
@@ -14723,12 +14723,15 @@
      "type": "movie"
     },
     {
-     "count": 11,
+     "count": 14,
      "id": "lib-godzillakong-showa-era-19541975",
      "name": "Godzilla & Kong · Showa Era (1954–1975)",
      "titles": [
       "Godzilla",
       "Godzilla Raids Again",
+      "Godzilla, King of the Monsters!",
+      "Godzilla, the Monster of the Pacific Ocean",
+      "King Kong vs. Godzilla",
       "King Kong vs. Godzilla",
       "Mothra vs. Godzilla",
       "King Kong Escapes",
@@ -14781,15 +14784,12 @@
      "type": "movie"
     },
     {
-     "count": 10,
+     "count": 7,
      "id": "lib-godzillakong-hollywood-kong-godzilla",
      "name": "Godzilla & Kong · Hollywood Kong & Godzilla",
      "titles": [
       "King Kong",
       "The Son of Kong",
-      "Godzilla, King of the Monsters!",
-      "Godzilla, the Monster of the Pacific Ocean",
-      "King Kong vs. Godzilla",
       "King Kong",
       "Godzilla",
       "King Kong Lives",
@@ -14849,7 +14849,7 @@
      "titles": [
       "Alien",
       "Aliens",
-      "Alien Nation",
+      "Alien³",
       "Alien Resurrection",
       "Alien: Romulus"
      ],
@@ -14886,15 +14886,6 @@
      "titles": [
       "AVP: Alien vs. Predator",
       "Aliens vs Predator: Requiem"
-     ],
-     "type": "movie"
-    },
-    {
-     "count": 1,
-     "id": "lib-alienpredator-more-films",
-     "name": "Alien & Predator · More Films",
-     "titles": [
-      "Alien³"
      ],
      "type": "movie"
     },
@@ -15214,8 +15205,8 @@
     },
     {
      "count": 1,
-     "id": "lib-apes-more-apes-films",
-     "name": "Planet of the Apes · More Apes Films",
+     "id": "lib-apes-tim-burton-s-planet-of-the-apes",
+     "name": "Planet of the Apes · Tim Burton's Planet of the Apes",
      "titles": [
       "Planet of the Apes"
      ],

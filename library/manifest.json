@@ -390,11 +390,6 @@
    "name": "Alien & Predator · Alien vs. Predator"
   },
   {
-   "type": "movie",
-   "id": "lib-alienpredator-more-films",
-   "name": "Alien & Predator · More Films"
-  },
-  {
    "type": "series",
    "id": "lib-alienpredator-series",
    "name": "Alien & Predator · Series"
@@ -501,8 +496,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-apes-more-apes-films",
-   "name": "Planet of the Apes · More Apes Films"
+   "id": "lib-apes-tim-burton-s-planet-of-the-apes",
+   "name": "Planet of the Apes · Tim Burton's Planet of the Apes"
   },
   {
    "type": "series",

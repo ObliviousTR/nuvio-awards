@@ -1,6 +1,6 @@
 # Library report — 2026-10-21
 
-674 catalogs
+673 catalogs
 
 ## Batman & Gotham (universe)
 - **Burton & Schumacher Films** (4): Batman, Batman Returns, Batman Forever, Batman & Robin
@@ -82,21 +82,20 @@
 
 ## Godzilla & Kong (universe)
 - **MonsterVerse** (5): Godzilla, Kong: Skull Island, Godzilla: King of the Monsters, Godzilla vs. Kong, Godzilla x Kong: The New Empire
-- **Showa Era (1954–1975)** (11): Godzilla, Godzilla Raids Again, King Kong vs. Godzilla, Mothra vs. Godzilla, King Kong Escapes, Son of Godzilla, Godzilla vs. Hedorah, Godzilla vs. Gigan, Godzilla vs. Megalon, Godzilla vs. Mechagodzilla, Terror of Mechagodzilla
+- **Showa Era (1954–1975)** (14): Godzilla, Godzilla Raids Again, Godzilla, King of the Monsters!, Godzilla, the Monster of the Pacific Ocean, King Kong vs. Godzilla, King Kong vs. Godzilla, Mothra vs. Godzilla, King Kong Escapes, Son of Godzilla, Godzilla vs. Hedorah, Godzilla vs. Gigan, Godzilla vs. Megalon, Godzilla vs. Mechagodzilla, Terror of Mechagodzilla
 - **Heisei Era (1984–1995)** (8): The Return of Godzilla, Godzilla 1985, Godzilla vs. Biollante, Godzilla vs. King Ghidorah, Godzilla vs. Mothra, Godzilla vs. Mechagodzilla II, Godzilla vs. SpaceGodzilla, Godzilla vs. Destoroyah
 - **Millennium Era (1999–2004)** (5): Godzilla 2000: Millennium, Godzilla vs. Megaguirus, Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack, Godzilla Against MechaGodzilla, Godzilla: Final Wars
 - **Reiwa Era (2016– )** (2): Shin Godzilla, Godzilla Minus One
-- **Hollywood Kong & Godzilla** (10): King Kong, The Son of Kong, Godzilla, King of the Monsters!, Godzilla, the Monster of the Pacific Ocean, King Kong vs. Godzilla, King Kong, Godzilla, King Kong Lives, Godzilla, King Kong
+- **Hollywood Kong & Godzilla** (7): King Kong, The Son of Kong, King Kong, Godzilla, King Kong Lives, Godzilla, King Kong
 - **Series** (2): Godzilla Island, Monarch: Legacy of Monsters
 - **Animated Films** (3): Godzilla: Planet of the Monsters, Godzilla: City on the Edge of Battle, Godzilla: The Planet Eater
 - **Animated Series** (7): The King Kong Show, Godzilla, Godzilla: The Series, Kong: The Animated Series, Kong: King of the Apes, Godzilla Singular Point, Skull Island
 
 ## Alien & Predator (universe)
-- **Alien** (5): Alien, Aliens, Alien Nation, Alien Resurrection, Alien: Romulus
+- **Alien** (5): Alien, Aliens, Alien³, Alien Resurrection, Alien: Romulus
 - **Prometheus Prequels** (2): Prometheus, Alien: Covenant
 - **Predator** (6): Predator, Predator 2, Predators, The Predator, Prey, Predator: Badlands
 - **Alien vs. Predator** (2): AVP: Alien vs. Predator, Aliens vs Predator: Requiem
-- **More Films** (1): Alien³
 - **Series** (1): Alien: Earth
 - **Animated Films** (1): Predator: Killer of Killers
 - **Animated Series** (1): Alien: Isolation - The Digital Series
@@ -134,7 +133,7 @@
 ## Planet of the Apes (single)
 - **Original Saga (1968–1973)** (5): Planet of the Apes, Beneath the Planet of the Apes, Escape from the Planet of the Apes, Conquest of the Planet of the Apes, Battle for the Planet of the Apes
 - **Reboot Saga** (4): Rise of the Planet of the Apes, Dawn of the Planet of the Apes, War for the Planet of the Apes, Kingdom of the Planet of the Apes
-- **More Apes Films** (1): Planet of the Apes
+- **Tim Burton's Planet of the Apes** (1): Planet of the Apes
 - **Series** (1): Planet of the Apes
 - **Animated Series** (1): Return to the Planet of the Apes
 
@@ -288,4 +287,3 @@
 ## Candidates (one signal — approve or reject)
 
 ## Log
-- Alien & Predator: added Alien Nation (1988) [co+title]
