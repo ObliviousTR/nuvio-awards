@@ -7,7 +7,7 @@ franchise's own idiom, or, where no single logo covers the folder, an original w
 tagline. Everything renders at 1280x720; the GIF is 512x288 and kept around 3 MB.
 usage: python3 scripts/universe_motion.py OUT_DIR [ids...]
 """
-import io, json, math, os, random, sys, urllib.parse, urllib.request
+import io, json, math, os, random, sys, urllib.error, urllib.parse, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spotlight_art as art
 from spotlight import tmdb
@@ -26,10 +26,20 @@ FONTS = {  # Google Fonts (OFL), fetched once
 
 
 def get(url):
+    import time
     os.makedirs(CACHE, exist_ok=True)
     p = os.path.join(CACHE, urllib.parse.quote(url, safe="")[-150:])
     if not os.path.exists(p):
-        open(p, "wb").write(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90).read())
+        # Wikimedia asks for a descriptive agent with a contact; others get a browser-like one
+        ua = {"User-Agent": "nuvio-awards/1.0 (https://github.com/ObliviousTR/nuvio-awards)"} if "wiki" in url else UA
+        for k in range(5):
+            try:
+                open(p, "wb").write(urllib.request.urlopen(urllib.request.Request(url, headers=ua), timeout=90).read())
+                break
+            except urllib.error.HTTPError as e:
+                if e.code != 429 or k == 4:
+                    raise
+                time.sleep(5 * (k + 1))
     return open(p, "rb").read()
 
 
