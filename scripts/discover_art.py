@@ -28,7 +28,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 W, H = 1920, 1080
 # backdrops seen to carry text or to be poster art despite having no language tag
-SKIP = {"/oOv2oUXcAaNXakRqUPxYq5lJURz.jpg", "/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg"}
+SKIP = {"/oOv2oUXcAaNXakRqUPxYq5lJURz.jpg", "/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg", "/xw383myGoydmJyL2yzFj0tVljll.jpg"}
 NOISE = {16, 10763, 10764, 10766, 10767}  # animation, news, reality, soap, talk: not cover material
 
 # id, folder title, kicker, word, letters filled, accent, subtitle (static) / rule
@@ -43,7 +43,7 @@ FOLDERS = [
      ("pool", "movie", [14784, 17431, 206487, 220289, 103731, 210479, 290250, 188166, 12149, 49049],
       "UNDERRATED FILMS WORTH DISCOVERING")),
     ("prestige", "Awards & Prestige", "OSCARS · CANNES · VENICE", "PRESTIGE", 4, (235, 200, 110),
-     ("pool", "movie", [496243, 872585, 545611, 1064213, 581734, 376867, 314365, 194662, 76203, 776503],
+     ("pool", "movie", [496243, 872585, 1064213, 545611, 581734, 376867, 314365, 194662, 76203, 776503],
       "AWARD WINNERS & CRITICS' FAVOURITES")),
     ("top-rated", "All-Time Top Rated", "ALL-TIME", "TOP RATED", 3, (255, 170, 50),
      ("pool", "movie", [238, 278, 155, 389, 424, 122, 680, 769, 550, 13], "THE GREATEST FILMS EVER MADE")),
