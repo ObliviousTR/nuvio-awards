@@ -44,7 +44,7 @@ def get(url):
 
 
 def font(name, size, weight=None):
-    b = get("https://github.com/google/fonts/raw/main/" + FONTS[name])
+    b = get("https://raw.githubusercontent.com/google/fonts/main/" + FONTS[name])
     f = ImageFont.truetype(io.BytesIO(b), size)
     if weight:
         try:
