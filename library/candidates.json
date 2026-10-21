@@ -1,0 +1,813 @@
+{
+ "alienpredator": [
+  {
+   "key": "movie:258193",
+   "signals": "title",
+   "title": "Alien Abduction (2014)"
+  },
+  {
+   "key": "movie:460962",
+   "signals": "title",
+   "title": "Alien Convergence (2017)"
+  },
+  {
+   "key": "movie:10128",
+   "signals": "title",
+   "title": "Alien Nation (1988)"
+  },
+  {
+   "key": "movie:593035",
+   "signals": "title",
+   "title": "Alien Warfare (2019)"
+  },
+  {
+   "key": "movie:656561",
+   "signals": "title",
+   "title": "Alien Xmas (2020)"
+  },
+  {
+   "key": "movie:9773",
+   "signals": "title",
+   "title": "Alien Autopsy (2006)"
+  },
+  {
+   "key": "movie:312526",
+   "signals": "title",
+   "title": "Alien Outpost (2014)"
+  },
+  {
+   "key": "movie:22076",
+   "signals": "title",
+   "title": "Alien Hunter (2003)"
+  },
+  {
+   "key": "movie:12120",
+   "signals": "title",
+   "title": "My Stepmother Is an Alien (1988)"
+  },
+  {
+   "key": "movie:548257",
+   "signals": "title",
+   "title": "Alien Predator (2018)"
+  },
+  {
+   "key": "movie:1330373",
+   "signals": "title",
+   "title": "Alien: Rubicon (2024)"
+  },
+  {
+   "key": "movie:574037",
+   "signals": "title",
+   "title": "Crazy Alien (2019)"
+  },
+  {
+   "key": "movie:65364",
+   "signals": "title",
+   "title": "Sexual Predator (2001)"
+  },
+  {
+   "key": "movie:67203",
+   "signals": "title",
+   "title": "Frost Giant (2010)"
+  },
+  {
+   "key": "movie:82628",
+   "signals": "title",
+   "title": "Xtinction: Predator X (2010)"
+  },
+  {
+   "key": "tv:96580",
+   "signals": "title",
+   "title": "Resident Alien (2021)"
+  },
+  {
+   "key": "tv:1717",
+   "signals": "title",
+   "title": "Pet Alien (2005)"
+  },
+  {
+   "key": "tv:5383",
+   "signals": "title",
+   "title": "Alien Nation (1989)"
+  },
+  {
+   "key": "tv:31109",
+   "signals": "title",
+   "title": "Ben 10: Ultimate Alien (2010)"
+  },
+  {
+   "key": "tv:6040",
+   "signals": "title",
+   "title": "Ben 10: Alien Force (2008)"
+  },
+  {
+   "key": "tv:43086",
+   "signals": "title",
+   "title": "Alien Nine (2001)"
+  },
+  {
+   "key": "tv:278367",
+   "signals": "title",
+   "title": "Me and the Alien MuMu (2025)"
+  },
+  {
+   "key": "tv:107422",
+   "signals": "title",
+   "title": "Alien TV (2020)"
+  },
+  {
+   "key": "tv:92779",
+   "signals": "title",
+   "title": "My Girlfriend is an Alien (2019)"
+  },
+  {
+   "key": "tv:72520",
+   "signals": "title",
+   "title": "A Predator in a Skirt (2017)"
+  }
+ ],
+ "batman": [
+  {
+   "key": "movie:485942",
+   "signals": "title",
+   "title": "Batman Ninja (2018)"
+  },
+  {
+   "key": "movie:13851",
+   "signals": "title",
+   "title": "Batman: Gotham Knight (2008)"
+  },
+  {
+   "key": "movie:251519",
+   "signals": "title",
+   "title": "Son of Batman (2014)"
+  },
+  {
+   "key": "movie:537056",
+   "signals": "title",
+   "title": "Batman: Hush (2019)"
+  },
+  {
+   "key": "movie:366924",
+   "signals": "title",
+   "title": "Batman: Bad Blood (2016)"
+  },
+  {
+   "key": "movie:125249",
+   "signals": "title",
+   "title": "Batman (1943)"
+  },
+  {
+   "key": "movie:987400",
+   "signals": "title",
+   "title": "Aztec Batman: Clash of Empires (2025)"
+  },
+  {
+   "key": "movie:41875",
+   "signals": "title",
+   "title": "Gotham (1988)"
+  },
+  {
+   "key": "movie:396330",
+   "signals": "title",
+   "title": "LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout (2016)"
+  },
+  {
+   "key": "movie:129507",
+   "signals": "title",
+   "title": "Joker (2012)"
+  },
+  {
+   "key": "tv:100535",
+   "signals": "title",
+   "title": "Batman Unlimited (2015)"
+  },
+  {
+   "key": "tv:31749",
+   "signals": "title",
+   "title": "The Adventures of Batman (1968)"
+  },
+  {
+   "key": "tv:326416",
+   "signals": "title",
+   "title": "Absolute Batman ()"
+  },
+  {
+   "key": "tv:10502",
+   "signals": "title",
+   "title": "The New Adventures of Batman (1977)"
+  },
+  {
+   "key": "tv:233598",
+   "signals": "title",
+   "title": "Gotham Comedy Live (2012)"
+  },
+  {
+   "key": "tv:195868",
+   "signals": "title",
+   "title": "Gotham Knights (2023)"
+  },
+  {
+   "key": "tv:15185",
+   "signals": "title",
+   "title": "Gotham Girls (2000)"
+  },
+  {
+   "key": "tv:61434",
+   "signals": "title",
+   "title": "Mysterious Joker (2014)"
+  },
+  {
+   "key": "tv:65949",
+   "signals": "title",
+   "title": "JOKER GAME (2016)"
+  },
+  {
+   "key": "tv:59791",
+   "signals": "title",
+   "title": "Joker: Unforgiven Investigator (2010)"
+  },
+  {
+   "key": "tv:6428",
+   "signals": "title",
+   "title": "The Joker's Wild (1972)"
+  },
+  {
+   "key": "tv:240692",
+   "signals": "title",
+   "title": "Jack & Joker: U Steal My Heart! (2024)"
+  }
+ ],
+ "bond": [
+  {
+   "key": "tv:42245",
+   "signals": "title",
+   "title": "James Bond Jr. (1991)"
+  }
+ ],
+ "conjuring": [
+  {
+   "key": "movie:1359977",
+   "signals": "title",
+   "title": "Conjuring the Cult (2024)"
+  },
+  {
+   "key": "movie:381170",
+   "signals": "title",
+   "title": "American Conjuring (2016)"
+  },
+  {
+   "key": "movie:1022103",
+   "signals": "title",
+   "title": "Conjuring: The Beyond (2022)"
+  },
+  {
+   "key": "movie:1766192",
+   "signals": "title",
+   "title": "Insidious Rewind ()"
+  },
+  {
+   "key": "movie:1173559",
+   "signals": "title",
+   "title": "Insidious Inferno (2024)"
+  },
+  {
+   "key": "movie:19344",
+   "signals": "title",
+   "title": "Loving Annabelle (2007)"
+  },
+  {
+   "key": "movie:13664",
+   "signals": "title",
+   "title": "Annabelle's Wish (1997)"
+  }
+ ],
+ "dc": [
+  {
+   "key": "movie:166076",
+   "signals": "title",
+   "title": "Superman: Unbound (2013)"
+  },
+  {
+   "key": "movie:618355",
+   "signals": "title",
+   "title": "Superman: Red Son (2020)"
+  },
+  {
+   "key": "movie:56590",
+   "signals": "title",
+   "title": "All Star Superman (2011)"
+  },
+  {
+   "key": "movie:95414",
+   "signals": "title",
+   "title": "Superman (1941)"
+  },
+  {
+   "key": "movie:126712",
+   "signals": "title",
+   "title": "Superman (1948)"
+  },
+  {
+   "key": "movie:45162",
+   "signals": "title",
+   "title": "Superman/Batman: Apocalypse (2010)"
+  },
+  {
+   "key": "movie:487670",
+   "signals": "title",
+   "title": "The Death of Superman (2019)"
+  },
+  {
+   "key": "movie:618354",
+   "signals": "title",
+   "title": "Superman: Man of Tomorrow (2020)"
+  },
+  {
+   "key": "movie:22855",
+   "signals": "title",
+   "title": "Superman/Batman: Public Enemies (2009)"
+  },
+  {
+   "key": "movie:103269",
+   "signals": "title",
+   "title": "Superman vs. The Elite (2012)"
+  },
+  {
+   "key": "movie:76589",
+   "signals": "title",
+   "title": "Justice League: Doom (2012)"
+  },
+  {
+   "key": "movie:1003581",
+   "signals": "title",
+   "title": "Justice League: Warworld (2023)"
+  },
+  {
+   "key": "movie:618344",
+   "signals": "title",
+   "title": "Justice League Dark: Apokolips War (2020)"
+  },
+  {
+   "key": "movie:297556",
+   "signals": "title",
+   "title": "Justice League: Throne of Atlantis (2015)"
+  },
+  {
+   "key": "movie:14011",
+   "signals": "title",
+   "title": "Justice League: The New Frontier (2008)"
+  },
+  {
+   "key": "movie:379291",
+   "signals": "title",
+   "title": "Justice League vs. Teen Titans (2016)"
+  },
+  {
+   "key": "movie:323027",
+   "signals": "title",
+   "title": "Justice League: Gods and Monsters (2015)"
+  },
+  {
+   "key": "movie:300386",
+   "signals": "title",
+   "title": "Justice League: Secret Origins (2001)"
+  },
+  {
+   "key": "movie:30061",
+   "signals": "title",
+   "title": "Justice League: Crisis on Two Earths (2010)"
+  },
+  {
+   "key": "movie:360908",
+   "signals": "title",
+   "title": "Justice League: Paradise Lost (2003)"
+  },
+  {
+   "key": "movie:69336",
+   "signals": "title",
+   "title": "Justice League of America (1997)"
+  },
+  {
+   "key": "movie:537059",
+   "signals": "title",
+   "title": "Justice League vs. the Fatal Five (2019)"
+  },
+  {
+   "key": "movie:268899",
+   "signals": "title",
+   "title": "Justice League: Starcrossed - The Movie (2004)"
+  },
+  {
+   "key": "movie:9651",
+   "signals": "title",
+   "title": "Supergirl (1984)"
+  },
+  {
+   "key": "movie:64992",
+   "signals": "title",
+   "title": "Human Lanterns (1982)"
+  },
+  {
+   "key": "movie:47790",
+   "signals": "title",
+   "title": "The Red Lanterns (1963)"
+  },
+  {
+   "key": "tv:12662",
+   "signals": "title",
+   "title": "Adventures of Superman (1952)"
+  },
+  {
+   "key": "tv:10223",
+   "signals": "title",
+   "title": "Superman (1988)"
+  },
+  {
+   "key": "tv:10786",
+   "signals": "title",
+   "title": "The New Adventures of Superman (1966)"
+  },
+  {
+   "key": "tv:3014",
+   "signals": "title",
+   "title": "The Superman/Aquaman Hour of Adventure (1967)"
+  },
+  {
+   "key": "tv:63266",
+   "signals": "title",
+   "title": "Justice League: Gods and Monsters Chronicles (2015)"
+  },
+  {
+   "key": "tv:34168",
+   "signals": "title",
+   "title": "Nana the Supergirl (1983)"
+  }
+ ],
+ "dune": [
+  {
+   "key": "movie:697620",
+   "signals": "title",
+   "title": "Dune (2020)"
+  },
+  {
+   "key": "movie:881460",
+   "signals": "title",
+   "title": "Planet Dune (2021)"
+  },
+  {
+   "key": "movie:744738",
+   "signals": "title",
+   "title": "Dune Drifter (2020)"
+  }
+ ],
+ "fast": [
+  {
+   "key": "movie:20174",
+   "signals": "title",
+   "title": "The Fast and the Furious (1954)"
+  }
+ ],
+ "godzillakong": [
+  {
+   "key": "movie:1381071",
+   "signals": "title",
+   "title": "Godzilla Minus Zero (2026)"
+  },
+  {
+   "key": "movie:11053",
+   "signals": "title",
+   "title": "Flatfoot in Hong Kong (1975)"
+  },
+  {
+   "key": "tv:12966",
+   "signals": "title",
+   "title": "Godzilla Island (1997)"
+  },
+  {
+   "key": "tv:7484",
+   "signals": "title",
+   "title": "Hong Kong (1960)"
+  },
+  {
+   "key": "tv:2784",
+   "signals": "title",
+   "title": "Donkey Kong Country (1998)"
+  },
+  {
+   "key": "tv:10106",
+   "signals": "title",
+   "title": "Hong Kong Phooey (1974)"
+  },
+  {
+   "key": "tv:12620",
+   "signals": "title",
+   "title": "Kong: The Animated Series (2000)"
+  },
+  {
+   "key": "tv:15126",
+   "signals": "title",
+   "title": "The King Kong Show (1966)"
+  },
+  {
+   "key": "tv:8582",
+   "signals": "title",
+   "title": "Kaya Kong Abutin Ang Langit (2009)"
+  }
+ ],
+ "johnwick": [
+  {
+   "key": "movie:619022",
+   "signals": "title",
+   "title": "John Wick: Assassin's Code (2015)"
+  }
+ ],
+ "jurassic": [
+  {
+   "key": "movie:1712453",
+   "signals": "title",
+   "title": "Jurassic Rampage (2026)"
+  },
+  {
+   "key": "movie:166660",
+   "signals": "title",
+   "title": "Jurassic Attack (2013)"
+  },
+  {
+   "key": "movie:992090",
+   "signals": "title",
+   "title": "Jurassic Domination (2022)"
+  },
+  {
+   "key": "movie:315024",
+   "signals": "title",
+   "title": "Jurassic City (2015)"
+  },
+  {
+   "key": "movie:504982",
+   "signals": "title",
+   "title": "The Jurassic Games (2018)"
+  },
+  {
+   "key": "tv:93895",
+   "signals": "title",
+   "title": "LEGO: Jurassic World - Legend of Isla Nublar (2019)"
+  },
+  {
+   "key": "tv:99127",
+   "signals": "title",
+   "title": "LEGO Jurassic World: The Secret Exhibit (2018)"
+  }
+ ],
+ "matrix": [
+  {
+   "key": "movie:21769",
+   "signals": "title",
+   "title": "Armitage: Dual Matrix (2002)"
+  },
+  {
+   "key": "movie:33322",
+   "signals": "title",
+   "title": "Armitage III: Poly Matrix (1996)"
+  },
+  {
+   "key": "movie:555879",
+   "signals": "title",
+   "title": "Matrix (1998)"
+  },
+  {
+   "key": "tv:711",
+   "signals": "title",
+   "title": "Threat Matrix (2003)"
+  }
+ ],
+ "middleearth": [
+  {
+   "key": "movie:1016184",
+   "signals": "title",
+   "title": "The Lord of the Rings: The Rings of Power Global Fan Screening (2022)"
+  },
+  {
+   "key": "movie:211047",
+   "signals": "title",
+   "title": "The Hobbit: The Fabulous Journey of Mr. Bilbo Baggins (1985)"
+  },
+  {
+   "key": "movie:99457",
+   "signals": "title",
+   "title": "J. R. R. Tolkien's The Hobbit (1967)"
+  }
+ ],
+ "spiderman": [
+  {
+   "key": "movie:225914",
+   "signals": "title",
+   "title": "Spider-Man (1977)"
+  },
+  {
+   "key": "movie:270768",
+   "signals": "title",
+   "title": "Daredevil vs. Spider-Man (2003)"
+  },
+  {
+   "key": "movie:50410",
+   "signals": "title",
+   "title": "Spider-Man: The Venom Saga (2005)"
+  },
+  {
+   "key": "movie:225925",
+   "signals": "title",
+   "title": "Spider-Man Strikes Back (1978)"
+  },
+  {
+   "key": "movie:1106299",
+   "signals": "title",
+   "title": "The Spider Within: A Spider-Verse Story (2023)"
+  },
+  {
+   "key": "movie:7182",
+   "signals": "title",
+   "title": "Venom (2005)"
+  },
+  {
+   "key": "movie:30789",
+   "signals": "title",
+   "title": "Venom (1981)"
+  },
+  {
+   "key": "movie:29889",
+   "signals": "title",
+   "title": "Silent Venom (2009)"
+  },
+  {
+   "key": "tv:3973",
+   "signals": "title",
+   "title": "Spider-Man (1981)"
+  },
+  {
+   "key": "tv:2640",
+   "signals": "title",
+   "title": "Japanese Spiderman (1978)"
+  }
+ ],
+ "startrek": [
+  {
+   "key": "tv:82491",
+   "signals": "title",
+   "title": "Star Trek: Short Treks (2018)"
+  }
+ ],
+ "starwars": [
+  {
+   "key": "movie:42979",
+   "signals": "title",
+   "title": "Robot Chicken: Star Wars (2007)"
+  },
+  {
+   "key": "movie:392216",
+   "signals": "title",
+   "title": "Phineas and Ferb: Star Wars (2014)"
+  },
+  {
+   "key": "tv:71412",
+   "signals": "title",
+   "title": "Star Wars: Forces of Destiny (2017)"
+  },
+  {
+   "key": "tv:85536",
+   "signals": "title",
+   "title": "Star Wars Galaxy of Adventures (2018)"
+  }
+ ],
+ "terminator": [
+  {
+   "key": "movie:61904",
+   "signals": "title",
+   "title": "Lady Terminator (1988)"
+  },
+  {
+   "key": "movie:40027",
+   "signals": "title",
+   "title": "Ninja Terminator (1986)"
+  },
+  {
+   "key": "movie:66664",
+   "signals": "title",
+   "title": "Shocking Dark (1989)"
+  }
+ ],
+ "transformers": [
+  {
+   "key": "movie:667538",
+   "signals": "title",
+   "title": "Transformers: Rise of the Beasts (2023)"
+  },
+  {
+   "key": "movie:25565",
+   "signals": "title",
+   "title": "Transformers: Beginnings (2007)"
+  },
+  {
+   "key": "movie:521494",
+   "signals": "title",
+   "title": "Transformers: Titans Return (2017)"
+  },
+  {
+   "key": "movie:268092",
+   "signals": "title",
+   "title": "Transformers Prime: Beast Hunters - Predacons Rising (2013)"
+  },
+  {
+   "key": "tv:10548",
+   "signals": "title",
+   "title": "Transformers: Animated (2007)"
+  },
+  {
+   "key": "tv:38881",
+   "signals": "title",
+   "title": "Transformers: Rescue Bots (2012)"
+  },
+  {
+   "key": "tv:63090",
+   "signals": "title",
+   "title": "Transformers: Robots In Disguise (2015)"
+  },
+  {
+   "key": "tv:295480",
+   "signals": "title",
+   "title": "Transformers: CYBERWORLD (2025)"
+  },
+  {
+   "key": "tv:83002",
+   "signals": "title",
+   "title": "Transformers: Cyberverse (2018)"
+  },
+  {
+   "key": "tv:932",
+   "signals": "title",
+   "title": "Beast Machines: Transformers (1999)"
+  },
+  {
+   "key": "tv:982",
+   "signals": "title",
+   "title": "Transformers: Armada (2003)"
+  },
+  {
+   "key": "tv:75911",
+   "signals": "title",
+   "title": "Transformers: Energon (2004)"
+  },
+  {
+   "key": "tv:19553",
+   "signals": "title",
+   "title": "Transformers: Victory (1989)"
+  },
+  {
+   "key": "tv:10085",
+   "signals": "title",
+   "title": "Transformers: Cybertron (2005)"
+  },
+  {
+   "key": "tv:100617",
+   "signals": "title",
+   "title": "Transformers: War for Cybertron: Siege (2020)"
+  },
+  {
+   "key": "tv:117682",
+   "signals": "title",
+   "title": "Transformers: War for Cybertron: Earthrise (2020)"
+  }
+ ],
+ "xmen": [
+  {
+   "key": "movie:15257",
+   "signals": "title",
+   "title": "Hulk vs. Wolverine (2009)"
+  },
+  {
+   "key": "movie:567604",
+   "signals": "title",
+   "title": "Once Upon a Deadpool (2018)"
+  },
+  {
+   "key": "movie:558144",
+   "signals": "title",
+   "title": "Deadpool: No Good Deed (2017)"
+  },
+  {
+   "key": "tv:43146",
+   "signals": "title",
+   "title": "X-Men (2011)"
+  },
+  {
+   "key": "tv:38247",
+   "signals": "title",
+   "title": "Wolverine (2011)"
+  },
+  {
+   "key": "tv:65487",
+   "signals": "title",
+   "title": "Ultimate Wolverine vs. Hulk (2013)"
+  }
+ ]
+}

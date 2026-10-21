@@ -1,0 +1,3087 @@
+{
+ "id": "community.oblivioustr.nuvio-library",
+ "version": "1.0.20261021",
+ "name": "Nuvio Library",
+ "description": "Film universes & franchises, collection folders, iconic actors and legendary directors, rebuilt weekly from TMDB.",
+ "resources": [
+  "catalog"
+ ],
+ "types": [
+  "movie",
+  "series"
+ ],
+ "idPrefixes": [
+  "tt"
+ ],
+ "catalogs": [
+  {
+   "type": "movie",
+   "id": "lib-batman-films",
+   "name": "Batman & Gotham · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-batman-series",
+   "name": "Batman & Gotham · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-batman-animated-films",
+   "name": "Batman & Gotham · Animated Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-batman-animated-series",
+   "name": "Batman & Gotham · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-spiderman-films",
+   "name": "Spider-Man Universe · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-spiderman-series",
+   "name": "Spider-Man Universe · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-spiderman-animated-films",
+   "name": "Spider-Man Universe · Animated Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-spiderman-animated-series",
+   "name": "Spider-Man Universe · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-xmen-films",
+   "name": "X-Men & Mutants · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-xmen-series",
+   "name": "X-Men & Mutants · Series"
+  },
+  {
+   "type": "series",
+   "id": "lib-xmen-animated-series",
+   "name": "X-Men & Mutants · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-mcu-films",
+   "name": "Marvel Cinematic Universe · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-mcu-series",
+   "name": "Marvel Cinematic Universe · Series"
+  },
+  {
+   "type": "series",
+   "id": "lib-mcu-animated-series",
+   "name": "Marvel Cinematic Universe · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-dc-films",
+   "name": "DC Universe · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-dc-series",
+   "name": "DC Universe · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-dc-animated-films",
+   "name": "DC Universe · Animated Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-dc-animated-series",
+   "name": "DC Universe · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-starwars-films",
+   "name": "Star Wars · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-starwars-series",
+   "name": "Star Wars · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-starwars-animated-films",
+   "name": "Star Wars · Animated Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-starwars-animated-series",
+   "name": "Star Wars · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-startrek-films",
+   "name": "Star Trek · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-startrek-series",
+   "name": "Star Trek · Series"
+  },
+  {
+   "type": "series",
+   "id": "lib-startrek-animated-series",
+   "name": "Star Trek · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-middleearth-films",
+   "name": "Middle-earth · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-middleearth-series",
+   "name": "Middle-earth · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-middleearth-animated-films",
+   "name": "Middle-earth · Animated Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-godzillakong-films",
+   "name": "Godzilla & Kong · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-godzillakong-series",
+   "name": "Godzilla & Kong · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-godzillakong-animated-films",
+   "name": "Godzilla & Kong · Animated Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-godzillakong-animated-series",
+   "name": "Godzilla & Kong · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-alienpredator-films",
+   "name": "Alien & Predator · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-alienpredator-series",
+   "name": "Alien & Predator · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-alienpredator-animated-films",
+   "name": "Alien & Predator · Animated Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-alienpredator-animated-series",
+   "name": "Alien & Predator · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-wizarding-films",
+   "name": "Wizarding World · Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-bond-films",
+   "name": "007 James Bond · Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-dune-films",
+   "name": "Dune · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-dune-series",
+   "name": "Dune · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-johnwick-films",
+   "name": "John Wick · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-johnwick-series",
+   "name": "John Wick · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-mi-films",
+   "name": "Mission: Impossible · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-mi-series",
+   "name": "Mission: Impossible · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-matrix-films",
+   "name": "The Matrix · Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-madmax-films",
+   "name": "Mad Max · Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-apes-films",
+   "name": "Planet of the Apes · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-apes-series",
+   "name": "Planet of the Apes · Series"
+  },
+  {
+   "type": "series",
+   "id": "lib-apes-animated-series",
+   "name": "Planet of the Apes · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-conjuring-the-conjuring-universe",
+   "name": "The Conjuring & Insidious · The Conjuring Universe"
+  },
+  {
+   "type": "movie",
+   "id": "lib-conjuring-insidious",
+   "name": "The Conjuring & Insidious · Insidious"
+  },
+  {
+   "type": "movie",
+   "id": "lib-fast-films",
+   "name": "Fast & Furious · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-fast-animated-series",
+   "name": "Fast & Furious · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-jurassic-films",
+   "name": "Jurassic Park · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-jurassic-animated-series",
+   "name": "Jurassic Park · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-terminator-films",
+   "name": "Terminator · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-terminator-series",
+   "name": "Terminator · Series"
+  },
+  {
+   "type": "series",
+   "id": "lib-terminator-animated-series",
+   "name": "Terminator · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-transformers-films",
+   "name": "Transformers · Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-transformers-animated-films",
+   "name": "Transformers · Animated Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-transformers-animated-series",
+   "name": "Transformers · Animated Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-indiana-films",
+   "name": "Indiana Jones · Films"
+  },
+  {
+   "type": "series",
+   "id": "lib-indiana-series",
+   "name": "Indiana Jones · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-14890",
+   "name": "Bad Boys"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1570",
+   "name": "Die Hard"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10456",
+   "name": "Dirty Harry"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9485",
+   "name": "The Fast and the Furious"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-645",
+   "name": "James Bond"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-404609",
+   "name": "John Wick"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-391860",
+   "name": "Kingsman"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-945",
+   "name": "Lethal Weapon"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-87359",
+   "name": "Mission: Impossible"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-304",
+   "name": "Ocean's"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-5039",
+   "name": "Rambo"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1575",
+   "name": "Rocky"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-496796",
+   "name": "Sicario"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-31562",
+   "name": "The Bourne"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-263",
+   "name": "The Dark Knight"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-523855",
+   "name": "The Equalizer"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-126125",
+   "name": "The Expendables"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8580",
+   "name": "The Karate Kid"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9518",
+   "name": "The Transporter"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-531330",
+   "name": "Top Gun"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-52785",
+   "name": "xXx"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-135468",
+   "name": "G.I. Joe (Live-Action)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86055",
+   "name": "Men in Black"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-376650",
+   "name": "Ride Along"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-135483",
+   "name": "Taken"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86311",
+   "name": "The Avengers"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-608101",
+   "name": "The Hitman's Bodyguard"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-257960",
+   "name": "The Raid"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-192492",
+   "name": "The Jack Ryan"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-386534",
+   "name": "Has Fallen"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-735127",
+   "name": "Extraction"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86117",
+   "name": "Johnny English"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86486",
+   "name": "Spy Kids"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-495",
+   "name": "Shaft"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-525891",
+   "name": "Escape Plan"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-14377",
+   "name": "Death Wish"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-43064",
+   "name": "Speed"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-742536",
+   "name": "The Meg"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-70068",
+   "name": "Ip Man"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-269098",
+   "name": "Police Story"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9818",
+   "name": "Mortal Kombat"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2467",
+   "name": "Tomb Raider"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-179892",
+   "name": "Kick-Ass"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-17235",
+   "name": "Hellboy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9436",
+   "name": "The Crow"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-43055",
+   "name": "Conan the Barbarian"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-94589",
+   "name": "Ong Bak"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-115762",
+   "name": "Alien vs. Predator"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2794",
+   "name": "The Chronicles of Riddick"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1582",
+   "name": "Teenage Mutant Ninja Turtles"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-3167",
+   "name": "Ace Ventura"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2806",
+   "name": "American Pie"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-93791",
+   "name": "Anchorman"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1006",
+   "name": "Austin Powers"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-44979",
+   "name": "Big Momma's House"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8936",
+   "name": "Bridget Jones"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-182813",
+   "name": "Clerks"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-473971",
+   "name": "Daddy's Home"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-212562",
+   "name": "Jump Street"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86024",
+   "name": "Legally Blonde"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-51509",
+   "name": "Meet the Parents"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-108693",
+   "name": "National Lampoon's Vacation"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-382685",
+   "name": "Now You See Me"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-306031",
+   "name": "Pitch Perfect"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-90863",
+   "name": "Rush Hour"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-4246",
+   "name": "Scary Movie"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86119",
+   "name": "The Hangover"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8979",
+   "name": "Wayne's World"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-352789",
+   "name": "Zoolander"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-430186",
+   "name": "Bring It On"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-180546",
+   "name": "Grown Ups"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-280588",
+   "name": "Horrible Bosses"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-97771",
+   "name": "Major League"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-937",
+   "name": "The Pink Panther (Original)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-96665",
+   "name": "Dumb and Dumber"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-37139",
+   "name": "The Naked Gun"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9338",
+   "name": "Police Academy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-30663",
+   "name": "Harold & Kumar"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-91746",
+   "name": "Bill & Ted"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9521",
+   "name": "Look Who's Talking"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-85861",
+   "name": "Beverly Hills Cop"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-87186",
+   "name": "The Boondock Saints"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-230",
+   "name": "The Godfather"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-553717",
+   "name": "Creed"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-328247",
+   "name": "Magic Mike"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86092",
+   "name": "Step Up"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-344830",
+   "name": "Fifty Shades"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-110177",
+   "name": "Goal!"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-403374",
+   "name": "Jack Reacher"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10709",
+   "name": "The Mighty Ducks"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-167613",
+   "name": "Alvin and the Chipmunks"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-87118",
+   "name": "Cars"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86066",
+   "name": "Despicable Me"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86110",
+   "name": "Diary of a Wimpy Kid"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-137697",
+   "name": "Finding Nemo"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1586337",
+   "name": "Home Alone"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-185103",
+   "name": "Hotel Transylvania"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-89137",
+   "name": "How to Train Your Dragon"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8354",
+   "name": "Ice Age"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-77816",
+   "name": "Kung Fu Panda"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-14740",
+   "name": "Madagascar"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-137696",
+   "name": "Monsters, Inc."
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-488924",
+   "name": "Paddington"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86860",
+   "name": "Scooby-Doo"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2150",
+   "name": "Shrek"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-544670",
+   "name": "Sing"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-573436",
+   "name": "Spider-Man: Spider-Verse"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-750822",
+   "name": "The Addams Family (Animated)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-519457",
+   "name": "The Boss Baby"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-468222",
+   "name": "The Incredibles"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-325470",
+   "name": "The Lego Movie"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-427084",
+   "name": "The Secret Life of Pets"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10194",
+   "name": "Toy Story"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1184152",
+   "name": "Trolls Holiday"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-404825",
+   "name": "Wreck-It Ralph"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-177467",
+   "name": "Cloudy with a Chance of Meatballs"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1022790",
+   "name": "Inside Out"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-544669",
+   "name": "Minions"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-94032",
+   "name": "The Lion King"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86027",
+   "name": "Aladdin"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-153010",
+   "name": "Beauty and the Beast"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-33085",
+   "name": "The Little Mermaid"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-87236",
+   "name": "Mulan"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-19163",
+   "name": "The Land Before Time"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-66761",
+   "name": "Open Season"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-435259",
+   "name": "Fantastic Beasts"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2980",
+   "name": "Ghostbusters"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1241",
+   "name": "Harry Potter"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-84",
+   "name": "Indiana Jones"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-495527",
+   "name": "Jumanji"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-119",
+   "name": "The Lord of the Rings"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-52984",
+   "name": "National Treasure"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-85943",
+   "name": "Night at the Museum"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-179919",
+   "name": "Percy Jackson"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-295",
+   "name": "Pirates of the Caribbean"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-420",
+   "name": "The Chronicles of Narnia"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-121938",
+   "name": "The Hobbit"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-295130",
+   "name": "The Maze Runner"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1733",
+   "name": "The Mummy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1394075",
+   "name": "The Twilight"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86780",
+   "name": "Clash of the Titans"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8050",
+   "name": "Highlander"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-266672",
+   "name": "Ted"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8581",
+   "name": "A Nightmare on Elm Street"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-521226",
+   "name": "A Quiet Place"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-735",
+   "name": "Blade"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10455",
+   "name": "Child's Play"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1960",
+   "name": "Evil Dead"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8864",
+   "name": "Final Destination"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9735",
+   "name": "Friday the 13th"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-91361",
+   "name": "Halloween"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9743",
+   "name": "The Hannibal Lecter"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8917",
+   "name": "Hellraiser"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-228446",
+   "name": "Insidious"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-477962",
+   "name": "It"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2366",
+   "name": "Jaws"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-41437",
+   "name": "Paranormal Activity"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10453",
+   "name": "Poltergeist"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-17255",
+   "name": "Resident Evil"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-656",
+   "name": "Saw"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2602",
+   "name": "Scream"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-313086",
+   "name": "The Conjuring"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-12263",
+   "name": "The Exorcist"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1974",
+   "name": "The Grudge"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10919",
+   "name": "The Omen"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-256322",
+   "name": "The Purge"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-14563",
+   "name": "The Ring"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-91799",
+   "name": "Tremors"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2326",
+   "name": "Underworld"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-207621",
+   "name": "V/H/S"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1565",
+   "name": "28 Days/Weeks/Years Later"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-402074",
+   "name": "Annabelle"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-94899",
+   "name": "Jeepers Creepers"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-111751",
+   "name": "Texas Chainsaw Massacre"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-968052",
+   "name": "The Nun"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-537982",
+   "name": "Zombieland"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-119674",
+   "name": "Psycho"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-123213",
+   "name": "The Fly"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-98580",
+   "name": "Candyman"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-357173",
+   "name": "Sinister"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-64748",
+   "name": "Silent Hill"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-47770",
+   "name": "Phantasm"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-397842",
+   "name": "The Amityville"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-722971",
+   "name": "Knives Out"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-115776",
+   "name": "Robert Langdon"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-102322",
+   "name": "Sherlock Holmes"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-829314",
+   "name": "Enola Holmes"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8091",
+   "name": "Alien"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-264",
+   "name": "Back to the Future"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-422837",
+   "name": "Blade Runner"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-283579",
+   "name": "Divergent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-726871",
+   "name": "Dune"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-535313",
+   "name": "Godzilla"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-284433",
+   "name": "Guardians of the Galaxy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-328",
+   "name": "Jurassic Park"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-135498",
+   "name": "King Kong (1976)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8945",
+   "name": "Mad Max"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-209131",
+   "name": "Man of Steel"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-363369",
+   "name": "Pacific Rim"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1709",
+   "name": "Planet of the Apes (Original)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-399",
+   "name": "Predator"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-5547",
+   "name": "RoboCop"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-556",
+   "name": "Spider-Man"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-115575",
+   "name": "Star Trek: Alternate Reality"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10",
+   "name": "Star Wars"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10522",
+   "name": "Starship Troopers"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-528",
+   "name": "The Terminator"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-131635",
+   "name": "The Hunger Games"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-2344",
+   "name": "The Matrix"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-8650",
+   "name": "Transformers"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-63043",
+   "name": "TRON"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-748",
+   "name": "X-Men"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-87096",
+   "name": "Avatar"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-173710",
+   "name": "Planet of the Apes (Reboot)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-769423",
+   "name": "Escape Room"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-748919",
+   "name": "Don't Breathe"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-86336",
+   "name": "Basic Instinct"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-14246",
+   "name": "Sniper"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-285564",
+   "name": "Jarhead"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-98513",
+   "name": "Behind Enemy Lines"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-46512",
+   "name": "Missing in Action"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-124492",
+   "name": "The Dirty Dozen"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-39199",
+   "name": "Detective Conan"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-386410",
+   "name": "Dragon Ball"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-96850",
+   "name": "Evangelion"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-1189668",
+   "name": "My Hero Academia"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-23616",
+   "name": "Naruto"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-23456",
+   "name": "One Piece"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-925155",
+   "name": "Demon Slayer"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-34055",
+   "name": "Pokémon"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-christian-bale-essential-films",
+   "name": "Christian Bale · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-christian-bale-top-rated",
+   "name": "Christian Bale · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-christian-bale-latest",
+   "name": "Christian Bale · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-gary-oldman-essential-films",
+   "name": "Gary Oldman · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-gary-oldman-top-rated",
+   "name": "Gary Oldman · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-gary-oldman-latest",
+   "name": "Gary Oldman · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-daniel-day-lewis-essential-films",
+   "name": "Daniel Day-Lewis · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-daniel-day-lewis-top-rated",
+   "name": "Daniel Day-Lewis · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-daniel-day-lewis-latest",
+   "name": "Daniel Day-Lewis · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-leonardo-dicaprio-essential-films",
+   "name": "Leonardo DiCaprio · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-leonardo-dicaprio-top-rated",
+   "name": "Leonardo DiCaprio · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-leonardo-dicaprio-latest",
+   "name": "Leonardo DiCaprio · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-brad-pitt-essential-films",
+   "name": "Brad Pitt · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-brad-pitt-top-rated",
+   "name": "Brad Pitt · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-brad-pitt-latest",
+   "name": "Brad Pitt · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-joaquin-phoenix-essential-films",
+   "name": "Joaquin Phoenix · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-joaquin-phoenix-top-rated",
+   "name": "Joaquin Phoenix · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-joaquin-phoenix-latest",
+   "name": "Joaquin Phoenix · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-matthew-mcconaughey-essential-films",
+   "name": "Matthew McConaughey · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-matthew-mcconaughey-top-rated",
+   "name": "Matthew McConaughey · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-matthew-mcconaughey-latest",
+   "name": "Matthew McConaughey · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-matthew-mcconaughey-series",
+   "name": "Matthew McConaughey · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jake-gyllenhaal-essential-films",
+   "name": "Jake Gyllenhaal · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jake-gyllenhaal-top-rated",
+   "name": "Jake Gyllenhaal · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jake-gyllenhaal-latest",
+   "name": "Jake Gyllenhaal · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-cillian-murphy-essential-films",
+   "name": "Cillian Murphy · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-cillian-murphy-top-rated",
+   "name": "Cillian Murphy · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-cillian-murphy-latest",
+   "name": "Cillian Murphy · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-cillian-murphy-series",
+   "name": "Cillian Murphy · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-mads-mikkelsen-essential-films",
+   "name": "Mads Mikkelsen · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-mads-mikkelsen-top-rated",
+   "name": "Mads Mikkelsen · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-mads-mikkelsen-latest",
+   "name": "Mads Mikkelsen · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-mads-mikkelsen-series",
+   "name": "Mads Mikkelsen · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-willem-dafoe-essential-films",
+   "name": "Willem Dafoe · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-willem-dafoe-top-rated",
+   "name": "Willem Dafoe · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-willem-dafoe-latest",
+   "name": "Willem Dafoe · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-christoph-waltz-essential-films",
+   "name": "Christoph Waltz · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-christoph-waltz-top-rated",
+   "name": "Christoph Waltz · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-christoph-waltz-latest",
+   "name": "Christoph Waltz · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-christoph-waltz-series",
+   "name": "Christoph Waltz · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-philip-seymour-hoffman-essential-films",
+   "name": "Philip Seymour Hoffman · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-philip-seymour-hoffman-top-rated",
+   "name": "Philip Seymour Hoffman · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-philip-seymour-hoffman-latest",
+   "name": "Philip Seymour Hoffman · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-bryan-cranston-essential-films",
+   "name": "Bryan Cranston · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-bryan-cranston-top-rated",
+   "name": "Bryan Cranston · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-bryan-cranston-latest",
+   "name": "Bryan Cranston · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-bryan-cranston-series",
+   "name": "Bryan Cranston · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-edward-norton-essential-films",
+   "name": "Edward Norton · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-edward-norton-top-rated",
+   "name": "Edward Norton · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-edward-norton-latest",
+   "name": "Edward Norton · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-al-pacino-essential-films",
+   "name": "Al Pacino · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-al-pacino-top-rated",
+   "name": "Al Pacino · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-al-pacino-latest",
+   "name": "Al Pacino · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-al-pacino-series",
+   "name": "Al Pacino · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-de-niro-essential-films",
+   "name": "Robert De Niro · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-de-niro-top-rated",
+   "name": "Robert De Niro · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-de-niro-latest",
+   "name": "Robert De Niro · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-robert-de-niro-series",
+   "name": "Robert De Niro · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-denzel-washington-essential-films",
+   "name": "Denzel Washington · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-denzel-washington-top-rated",
+   "name": "Denzel Washington · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-denzel-washington-latest",
+   "name": "Denzel Washington · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anthony-hopkins-essential-films",
+   "name": "Anthony Hopkins · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anthony-hopkins-top-rated",
+   "name": "Anthony Hopkins · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anthony-hopkins-latest",
+   "name": "Anthony Hopkins · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-anthony-hopkins-series",
+   "name": "Anthony Hopkins · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jack-nicholson-essential-films",
+   "name": "Jack Nicholson · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jack-nicholson-top-rated",
+   "name": "Jack Nicholson · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jack-nicholson-latest",
+   "name": "Jack Nicholson · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-morgan-freeman-essential-films",
+   "name": "Morgan Freeman · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-morgan-freeman-top-rated",
+   "name": "Morgan Freeman · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-morgan-freeman-latest",
+   "name": "Morgan Freeman · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-morgan-freeman-series",
+   "name": "Morgan Freeman · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-samuel-l-jackson-essential-films",
+   "name": "Samuel L. Jackson · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-samuel-l-jackson-top-rated",
+   "name": "Samuel L. Jackson · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-samuel-l-jackson-latest",
+   "name": "Samuel L. Jackson · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-samuel-l-jackson-series",
+   "name": "Samuel L. Jackson · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-emma-stone-essential-films",
+   "name": "Emma Stone · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-emma-stone-top-rated",
+   "name": "Emma Stone · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-emma-stone-latest",
+   "name": "Emma Stone · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-emma-stone-series",
+   "name": "Emma Stone · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-cate-blanchett-essential-films",
+   "name": "Cate Blanchett · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-cate-blanchett-top-rated",
+   "name": "Cate Blanchett · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-cate-blanchett-latest",
+   "name": "Cate Blanchett · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-cate-blanchett-series",
+   "name": "Cate Blanchett · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-amy-adams-essential-films",
+   "name": "Amy Adams · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-amy-adams-top-rated",
+   "name": "Amy Adams · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-amy-adams-latest",
+   "name": "Amy Adams · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-amy-adams-series",
+   "name": "Amy Adams · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-toni-collette-essential-films",
+   "name": "Toni Collette · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-toni-collette-top-rated",
+   "name": "Toni Collette · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-toni-collette-latest",
+   "name": "Toni Collette · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-toni-collette-series",
+   "name": "Toni Collette · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-margot-robbie-essential-films",
+   "name": "Margot Robbie · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-margot-robbie-top-rated",
+   "name": "Margot Robbie · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-margot-robbie-latest",
+   "name": "Margot Robbie · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anya-taylor-joy-essential-films",
+   "name": "Anya Taylor-Joy · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anya-taylor-joy-top-rated",
+   "name": "Anya Taylor-Joy · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anya-taylor-joy-latest",
+   "name": "Anya Taylor-Joy · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-anya-taylor-joy-series",
+   "name": "Anya Taylor-Joy · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-florence-pugh-essential-films",
+   "name": "Florence Pugh · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-florence-pugh-top-rated",
+   "name": "Florence Pugh · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-florence-pugh-latest",
+   "name": "Florence Pugh · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-florence-pugh-series",
+   "name": "Florence Pugh · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-natalie-portman-essential-films",
+   "name": "Natalie Portman · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-natalie-portman-top-rated",
+   "name": "Natalie Portman · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-natalie-portman-latest",
+   "name": "Natalie Portman · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-cruise-essential-films",
+   "name": "Tom Cruise · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-cruise-top-rated",
+   "name": "Tom Cruise · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-cruise-latest",
+   "name": "Tom Cruise · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-keanu-reeves-essential-films",
+   "name": "Keanu Reeves · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-keanu-reeves-top-rated",
+   "name": "Keanu Reeves · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-keanu-reeves-latest",
+   "name": "Keanu Reeves · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-hardy-essential-films",
+   "name": "Tom Hardy · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-hardy-top-rated",
+   "name": "Tom Hardy · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-hardy-latest",
+   "name": "Tom Hardy · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-tom-hardy-series",
+   "name": "Tom Hardy · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-ryan-gosling-essential-films",
+   "name": "Ryan Gosling · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-ryan-gosling-top-rated",
+   "name": "Ryan Gosling · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-ryan-gosling-latest",
+   "name": "Ryan Gosling · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jim-carrey-essential-films",
+   "name": "Jim Carrey · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jim-carrey-top-rated",
+   "name": "Jim Carrey · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jim-carrey-latest",
+   "name": "Jim Carrey · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robin-williams-essential-films",
+   "name": "Robin Williams · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robin-williams-top-rated",
+   "name": "Robin Williams · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robin-williams-latest",
+   "name": "Robin Williams · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-robin-williams-series",
+   "name": "Robin Williams · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-steve-carell-essential-films",
+   "name": "Steve Carell · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-steve-carell-top-rated",
+   "name": "Steve Carell · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-steve-carell-latest",
+   "name": "Steve Carell · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-steve-carell-series",
+   "name": "Steve Carell · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-simon-pegg-essential-films",
+   "name": "Simon Pegg · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-simon-pegg-top-rated",
+   "name": "Simon Pegg · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-simon-pegg-latest",
+   "name": "Simon Pegg · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-simon-pegg-series",
+   "name": "Simon Pegg · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jackie-chan-essential-films",
+   "name": "Jackie Chan · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jackie-chan-top-rated",
+   "name": "Jackie Chan · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-jackie-chan-latest",
+   "name": "Jackie Chan · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-song-kang-ho-essential-films",
+   "name": "Song Kang-ho · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-song-kang-ho-top-rated",
+   "name": "Song Kang-ho · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-song-kang-ho-latest",
+   "name": "Song Kang-ho · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-song-kang-ho-series",
+   "name": "Song Kang-ho · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-pattinson-essential-films",
+   "name": "Robert Pattinson · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-pattinson-top-rated",
+   "name": "Robert Pattinson · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-pattinson-latest",
+   "name": "Robert Pattinson · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-meryl-streep-essential-films",
+   "name": "Meryl Streep · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-meryl-streep-top-rated",
+   "name": "Meryl Streep · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-meryl-streep-latest",
+   "name": "Meryl Streep · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-meryl-streep-series",
+   "name": "Meryl Streep · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anne-hathaway-essential-films",
+   "name": "Anne Hathaway · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anne-hathaway-top-rated",
+   "name": "Anne Hathaway · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-anne-hathaway-latest",
+   "name": "Anne Hathaway · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tilda-swinton-essential-films",
+   "name": "Tilda Swinton · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tilda-swinton-top-rated",
+   "name": "Tilda Swinton · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tilda-swinton-latest",
+   "name": "Tilda Swinton · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-javier-bardem-essential-films",
+   "name": "Javier Bardem · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-javier-bardem-top-rated",
+   "name": "Javier Bardem · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-javier-bardem-latest",
+   "name": "Javier Bardem · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-oscar-isaac-essential-films",
+   "name": "Oscar Isaac · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-oscar-isaac-top-rated",
+   "name": "Oscar Isaac · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-oscar-isaac-latest",
+   "name": "Oscar Isaac · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-oscar-isaac-series",
+   "name": "Oscar Isaac · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-frances-mcdormand-essential-films",
+   "name": "Frances McDormand · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-frances-mcdormand-top-rated",
+   "name": "Frances McDormand · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-frances-mcdormand-latest",
+   "name": "Frances McDormand · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-frances-mcdormand-series",
+   "name": "Frances McDormand · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-sam-rockwell-essential-films",
+   "name": "Sam Rockwell · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-sam-rockwell-top-rated",
+   "name": "Sam Rockwell · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-sam-rockwell-latest",
+   "name": "Sam Rockwell · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-sam-rockwell-series",
+   "name": "Sam Rockwell · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-ethan-hawke-essential-films",
+   "name": "Ethan Hawke · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-ethan-hawke-top-rated",
+   "name": "Ethan Hawke · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-ethan-hawke-latest",
+   "name": "Ethan Hawke · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-ethan-hawke-series",
+   "name": "Ethan Hawke · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-viola-davis-essential-films",
+   "name": "Viola Davis · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-viola-davis-top-rated",
+   "name": "Viola Davis · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-viola-davis-latest",
+   "name": "Viola Davis · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-viola-davis-series",
+   "name": "Viola Davis · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-hanks-essential-films",
+   "name": "Tom Hanks · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-hanks-top-rated",
+   "name": "Tom Hanks · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-hanks-latest",
+   "name": "Tom Hanks · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-tom-hanks-series",
+   "name": "Tom Hanks · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-harrison-ford-essential-films",
+   "name": "Harrison Ford · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-harrison-ford-top-rated",
+   "name": "Harrison Ford · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-harrison-ford-latest",
+   "name": "Harrison Ford · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-harrison-ford-series",
+   "name": "Harrison Ford · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-scarlett-johansson-essential-films",
+   "name": "Scarlett Johansson · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-scarlett-johansson-top-rated",
+   "name": "Scarlett Johansson · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-scarlett-johansson-latest",
+   "name": "Scarlett Johansson · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-kate-winslet-essential-films",
+   "name": "Kate Winslet · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-kate-winslet-top-rated",
+   "name": "Kate Winslet · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-kate-winslet-latest",
+   "name": "Kate Winslet · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-kate-winslet-series",
+   "name": "Kate Winslet · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-nicole-kidman-essential-films",
+   "name": "Nicole Kidman · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-nicole-kidman-top-rated",
+   "name": "Nicole Kidman · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-nicole-kidman-latest",
+   "name": "Nicole Kidman · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-nicole-kidman-series",
+   "name": "Nicole Kidman · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-charlize-theron-essential-films",
+   "name": "Charlize Theron · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-charlize-theron-top-rated",
+   "name": "Charlize Theron · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-charlize-theron-latest",
+   "name": "Charlize Theron · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-hugh-jackman-essential-films",
+   "name": "Hugh Jackman · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-hugh-jackman-top-rated",
+   "name": "Hugh Jackman · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-hugh-jackman-latest",
+   "name": "Hugh Jackman · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-hugh-jackman-series",
+   "name": "Hugh Jackman · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-matt-damon-essential-films",
+   "name": "Matt Damon · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-matt-damon-top-rated",
+   "name": "Matt Damon · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-matt-damon-latest",
+   "name": "Matt Damon · Latest"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-downey-jr-essential-films",
+   "name": "Robert Downey Jr. · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-downey-jr-top-rated",
+   "name": "Robert Downey Jr. · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-robert-downey-jr-latest",
+   "name": "Robert Downey Jr. · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-robert-downey-jr-series",
+   "name": "Robert Downey Jr. · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-timothee-chalamet-essential-films",
+   "name": "Timothée Chalamet · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-timothee-chalamet-top-rated",
+   "name": "Timothée Chalamet · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-timothee-chalamet-latest",
+   "name": "Timothée Chalamet · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-timothee-chalamet-series",
+   "name": "Timothée Chalamet · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-zendaya-essential-films",
+   "name": "Zendaya · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-zendaya-top-rated",
+   "name": "Zendaya · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-zendaya-latest",
+   "name": "Zendaya · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-zendaya-series",
+   "name": "Zendaya · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-pedro-pascal-essential-films",
+   "name": "Pedro Pascal · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-pedro-pascal-top-rated",
+   "name": "Pedro Pascal · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-pedro-pascal-latest",
+   "name": "Pedro Pascal · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-pedro-pascal-series",
+   "name": "Pedro Pascal · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-austin-butler-essential-films",
+   "name": "Austin Butler · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-austin-butler-top-rated",
+   "name": "Austin Butler · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-austin-butler-latest",
+   "name": "Austin Butler · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-austin-butler-series",
+   "name": "Austin Butler · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-alfred-hitchcock-best-of",
+   "name": "Alfred Hitchcock · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-alfred-hitchcock-recent",
+   "name": "Alfred Hitchcock · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-alfred-hitchcock-series",
+   "name": "Alfred Hitchcock · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-stanley-kubrick-best-of",
+   "name": "Stanley Kubrick · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-stanley-kubrick-recent",
+   "name": "Stanley Kubrick · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-christopher-nolan-best-of",
+   "name": "Christopher Nolan · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-christopher-nolan-recent",
+   "name": "Christopher Nolan · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-martin-scorsese-best-of",
+   "name": "Martin Scorsese · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-martin-scorsese-recent",
+   "name": "Martin Scorsese · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-martin-scorsese-series",
+   "name": "Martin Scorsese · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-quentin-tarantino-best-of",
+   "name": "Quentin Tarantino · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-quentin-tarantino-recent",
+   "name": "Quentin Tarantino · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-quentin-tarantino-series",
+   "name": "Quentin Tarantino · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-denis-villeneuve-best-of",
+   "name": "Denis Villeneuve · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-denis-villeneuve-recent",
+   "name": "Denis Villeneuve · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-david-fincher-best-of",
+   "name": "David Fincher · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-david-fincher-recent",
+   "name": "David Fincher · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-david-fincher-series",
+   "name": "David Fincher · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-steven-spielberg-best-of",
+   "name": "Steven Spielberg · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-steven-spielberg-recent",
+   "name": "Steven Spielberg · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-steven-spielberg-series",
+   "name": "Steven Spielberg · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-akira-kurosawa-best-of",
+   "name": "Akira Kurosawa · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-akira-kurosawa-recent",
+   "name": "Akira Kurosawa · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-hayao-miyazaki-best-of",
+   "name": "Hayao Miyazaki · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-hayao-miyazaki-recent",
+   "name": "Hayao Miyazaki · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-hayao-miyazaki-series",
+   "name": "Hayao Miyazaki · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-bong-joon-ho-best-of",
+   "name": "Bong Joon-ho · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-bong-joon-ho-recent",
+   "name": "Bong Joon-ho · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-park-chan-wook-best-of",
+   "name": "Park Chan-wook · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-park-chan-wook-recent",
+   "name": "Park Chan-wook · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-park-chan-wook-series",
+   "name": "Park Chan-wook · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-francis-ford-coppola-best-of",
+   "name": "Francis Ford Coppola · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-francis-ford-coppola-recent",
+   "name": "Francis Ford Coppola · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-francis-ford-coppola-series",
+   "name": "Francis Ford Coppola · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-ridley-scott-best-of",
+   "name": "Ridley Scott · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-ridley-scott-recent",
+   "name": "Ridley Scott · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-ridley-scott-series",
+   "name": "Ridley Scott · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-james-cameron-best-of",
+   "name": "James Cameron · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-james-cameron-recent",
+   "name": "James Cameron · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-paul-thomas-anderson-best-of",
+   "name": "Paul Thomas Anderson · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-paul-thomas-anderson-recent",
+   "name": "Paul Thomas Anderson · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-joel-ethan-coen-best-of",
+   "name": "Joel & Ethan Coen · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-joel-ethan-coen-recent",
+   "name": "Joel & Ethan Coen · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-wes-anderson-best-of",
+   "name": "Wes Anderson · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-wes-anderson-recent",
+   "name": "Wes Anderson · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-guillermo-del-toro-best-of",
+   "name": "Guillermo del Toro · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-guillermo-del-toro-recent",
+   "name": "Guillermo del Toro · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-guillermo-del-toro-series",
+   "name": "Guillermo del Toro · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-yorgos-lanthimos-best-of",
+   "name": "Yorgos Lanthimos · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-yorgos-lanthimos-recent",
+   "name": "Yorgos Lanthimos · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-alfonso-cuaron-best-of",
+   "name": "Alfonso Cuarón · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-alfonso-cuaron-recent",
+   "name": "Alfonso Cuarón · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-alfonso-cuaron-series",
+   "name": "Alfonso Cuarón · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-alejandro-gonzalez-inarritu-best-of",
+   "name": "Alejandro González Iñárritu · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-alejandro-gonzalez-inarritu-recent",
+   "name": "Alejandro González Iñárritu · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-alejandro-gonzalez-inarritu-series",
+   "name": "Alejandro González Iñárritu · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-alex-garland-filmography",
+   "name": "Alex Garland · Filmography"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-jordan-peele-filmography",
+   "name": "Jordan Peele · Filmography"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-jordan-peele-series",
+   "name": "Jordan Peele · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-robert-eggers-filmography",
+   "name": "Robert Eggers · Filmography"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-ari-aster-filmography",
+   "name": "Ari Aster · Filmography"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-david-lynch-best-of",
+   "name": "David Lynch · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-david-lynch-recent",
+   "name": "David Lynch · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-david-lynch-series",
+   "name": "David Lynch · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-sergio-leone-filmography",
+   "name": "Sergio Leone · Filmography"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-edgar-wright-best-of",
+   "name": "Edgar Wright · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-edgar-wright-recent",
+   "name": "Edgar Wright · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-edgar-wright-series",
+   "name": "Edgar Wright · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-guy-ritchie-best-of",
+   "name": "Guy Ritchie · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-guy-ritchie-recent",
+   "name": "Guy Ritchie · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-guy-ritchie-series",
+   "name": "Guy Ritchie · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-greta-gerwig-filmography",
+   "name": "Greta Gerwig · Filmography"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-kathryn-bigelow-best-of",
+   "name": "Kathryn Bigelow · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-kathryn-bigelow-recent",
+   "name": "Kathryn Bigelow · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-kathryn-bigelow-series",
+   "name": "Kathryn Bigelow · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-sofia-coppola-best-of",
+   "name": "Sofia Coppola · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-sofia-coppola-recent",
+   "name": "Sofia Coppola · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-peter-jackson-best-of",
+   "name": "Peter Jackson · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-peter-jackson-recent",
+   "name": "Peter Jackson · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-george-miller-best-of",
+   "name": "George Miller · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-george-miller-recent",
+   "name": "George Miller · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-george-miller-series",
+   "name": "George Miller · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-tim-burton-best-of",
+   "name": "Tim Burton · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-tim-burton-recent",
+   "name": "Tim Burton · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-tim-burton-series",
+   "name": "Tim Burton · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-michael-mann-best-of",
+   "name": "Michael Mann · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-michael-mann-recent",
+   "name": "Michael Mann · Recent"
+  },
+  {
+   "type": "series",
+   "id": "lib-d-michael-mann-series",
+   "name": "Michael Mann · Series"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-clint-eastwood-best-of",
+   "name": "Clint Eastwood · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-clint-eastwood-recent",
+   "name": "Clint Eastwood · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-darren-aronofsky-best-of",
+   "name": "Darren Aronofsky · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-darren-aronofsky-recent",
+   "name": "Darren Aronofsky · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-billy-wilder-best-of",
+   "name": "Billy Wilder · Best Of"
+  },
+  {
+   "type": "movie",
+   "id": "lib-d-billy-wilder-recent",
+   "name": "Billy Wilder · Recent"
+  }
+ ],
+ "behaviorHints": {
+  "configurable": false,
+  "configurationRequired": false
+ }
+}

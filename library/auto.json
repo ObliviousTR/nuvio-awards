@@ -1,0 +1,754 @@
+{
+ "alienpredator": {
+  "tv:87212": {
+   "added": "2026-10-21",
+   "title": "Alien: Isolation - The Digital Series (2019)",
+   "why": "co+title"
+  }
+ },
+ "batman": {
+  "movie:1003579": {
+   "added": "2026-10-21",
+   "title": "Batman: The Doom That Came to Gotham (2023)",
+   "why": "co+title"
+  },
+  "movie:1560520": {
+   "added": "2026-10-21",
+   "title": "Batman: Knightfall Part 1: Knightfall (2026)",
+   "why": "co+title"
+  },
+  "movie:209112": {
+   "added": "2026-10-21",
+   "title": "Batman v Superman: Dawn of Justice (2016)",
+   "why": "co+title"
+  },
+  "movie:242643": {
+   "added": "2026-10-21",
+   "title": "Batman: Assault on Arkham (2014)",
+   "why": "co+title"
+  },
+  "movie:495764": {
+   "added": "2026-10-21",
+   "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn) (2020)",
+   "why": "co+title"
+  },
+  "movie:602307": {
+   "added": "2026-10-21",
+   "title": "LEGO DC Batman: Family Matters (2019)",
+   "why": "co+title"
+  }
+ },
+ "dc": {
+  "movie:1209290": {
+   "added": "2026-10-21",
+   "title": "Justice League: Crisis on Infinite Earths Part Three (2024)",
+   "why": "co+title"
+  },
+  "movie:474395": {
+   "added": "2026-10-21",
+   "title": "Teen Titans Go! To the Movies (2018)",
+   "why": "co+title"
+  },
+  "movie:487242": {
+   "added": "2026-10-21",
+   "title": "Suicide Squad: Hell to Pay (2018)",
+   "why": "co+title"
+  },
+  "movie:537055": {
+   "added": "2026-10-21",
+   "title": "Wonder Woman: Bloodlines (2019)",
+   "why": "co+title"
+  },
+  "movie:887357": {
+   "added": "2026-10-21",
+   "title": "Green Lantern: Beware My Power (2022)",
+   "why": "co+title"
+  },
+  "tv:229926": {
+   "added": "2026-10-21",
+   "title": "Suicide Squad Isekai (2024)",
+   "why": "co+title"
+  },
+  "tv:40351": {
+   "added": "2026-10-21",
+   "title": "Green Lantern: The Animated Series (2011)",
+   "why": "co+title"
+  },
+  "tv:45140": {
+   "added": "2026-10-21",
+   "title": "Teen Titans Go! (2013)",
+   "why": "co+title"
+  },
+  "tv:60743": {
+   "added": "2026-10-21",
+   "title": "Constantine (2014)",
+   "why": "co+title"
+  },
+  "tv:68837": {
+   "added": "2026-10-21",
+   "title": "Justice League Action (2016)",
+   "why": "co+title"
+  }
+ },
+ "godzillakong": {
+  "movie:10643": {
+   "added": "2026-10-21",
+   "title": "Godzilla 2000: Millennium (1999)",
+   "why": "kw+title"
+  },
+  "movie:107920": {
+   "added": "2026-10-21",
+   "title": "King of Kong Island (1968)",
+   "why": "kw+title"
+  },
+  "movie:12561": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Destoroyah (1995)",
+   "why": "kw+title"
+  },
+  "movie:12636": {
+   "added": "2026-10-21",
+   "title": "Godzilla Against MechaGodzilla (2002)",
+   "why": "kw+title"
+  },
+  "movie:15767": {
+   "added": "2026-10-21",
+   "title": "Godzilla: Final Wars (2004)",
+   "why": "kw+title"
+  },
+  "movie:1679": {
+   "added": "2026-10-21",
+   "title": "Godzilla Raids Again (1955)",
+   "why": "kw+title"
+  },
+  "movie:1682": {
+   "added": "2026-10-21",
+   "title": "Mothra vs. Godzilla (1964)",
+   "why": "kw+title"
+  },
+  "movie:18289": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Biollante (1989)",
+   "why": "kw+title"
+  },
+  "movie:18627": {
+   "added": "2026-10-21",
+   "title": "Son of Godzilla (1967)",
+   "why": "kw+title"
+  },
+  "movie:18983": {
+   "added": "2026-10-21",
+   "title": "Godzilla, King of the Monsters! (1956)",
+   "why": "kw+title"
+  },
+  "movie:19333": {
+   "added": "2026-10-21",
+   "title": "Terror of Mechagodzilla (1975)",
+   "why": "kw+title"
+  },
+  "movie:19336": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Gigan (1972)",
+   "why": "kw+title"
+  },
+  "movie:340315": {
+   "added": "2026-10-21",
+   "title": "Godzilla (1977)",
+   "why": "kw+title"
+  },
+  "movie:36243": {
+   "added": "2026-10-21",
+   "title": "Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack (2001)",
+   "why": "kw+title"
+  },
+  "movie:36679": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. King Ghidorah (1991)",
+   "why": "kw+title"
+  },
+  "movie:38582": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Mechagodzilla (1974)",
+   "why": "kw+title"
+  },
+  "movie:39256": {
+   "added": "2026-10-21",
+   "title": "Godzilla 1985 (1985)",
+   "why": "kw+title"
+  },
+  "movie:39264": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Megalon (1973)",
+   "why": "kw+title"
+  },
+  "movie:39276": {
+   "added": "2026-10-21",
+   "title": "King Kong Escapes (1967)",
+   "why": "kw+title"
+  },
+  "movie:39464": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Hedorah (1971)",
+   "why": "kw+title"
+  },
+  "movie:39465": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Mothra (1992)",
+   "why": "kw+title"
+  },
+  "movie:39466": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. SpaceGodzilla (1994)",
+   "why": "kw+title"
+  },
+  "movie:39468": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Megaguirus (2000)",
+   "why": "kw+title"
+  },
+  "movie:421467": {
+   "added": "2026-10-21",
+   "title": "The Return of Godzilla (1984)",
+   "why": "kw+title"
+  },
+  "movie:6593": {
+   "added": "2026-10-21",
+   "title": "Godzilla vs. Mechagodzilla II (1993)",
+   "why": "kw+title"
+  },
+  "movie:686487": {
+   "added": "2026-10-21",
+   "title": "King Kong vs. Godzilla (1963)",
+   "why": "kw+title"
+  },
+  "movie:699718": {
+   "added": "2026-10-21",
+   "title": "Godzilla, the Monster of the Pacific Ocean (1957)",
+   "why": "kw+title"
+  },
+  "tv:221725": {
+   "added": "2026-10-21",
+   "title": "Chibi Godzilla Raids Again (2023)",
+   "why": "co+title"
+  }
+ },
+ "mcu": {
+  "movie:100402": {
+   "added": "2026-10-21",
+   "title": "Captain America: The Winter Soldier (2014)",
+   "why": "co+kw+title"
+  },
+  "movie:10138": {
+   "added": "2026-10-21",
+   "title": "Iron Man 2 (2010)",
+   "why": "co+kw+title"
+  },
+  "movie:10195": {
+   "added": "2026-10-21",
+   "title": "Thor (2011)",
+   "why": "co+kw+title"
+  },
+  "movie:102899": {
+   "added": "2026-10-21",
+   "title": "Ant-Man (2015)",
+   "why": "co+kw+title"
+  },
+  "movie:118340": {
+   "added": "2026-10-21",
+   "title": "Guardians of the Galaxy (2014)",
+   "why": "co+kw+title"
+  },
+  "movie:1250": {
+   "added": "2026-10-21",
+   "title": "Ghost Rider (2007)",
+   "why": "co+title"
+  },
+  "movie:1439930": {
+   "added": "2026-10-21",
+   "title": "The Punisher: One Last Kill (2026)",
+   "why": "co+kw+title"
+  },
+  "movie:1724": {
+   "added": "2026-10-21",
+   "title": "The Incredible Hulk (2008)",
+   "why": "co+kw+title"
+  },
+  "movie:1726": {
+   "added": "2026-10-21",
+   "title": "Iron Man (2008)",
+   "why": "co+kw+title"
+  },
+  "movie:1771": {
+   "added": "2026-10-21",
+   "title": "Captain America: The First Avenger (2011)",
+   "why": "kw+title"
+  },
+  "movie:271110": {
+   "added": "2026-10-21",
+   "title": "Captain America: Civil War (2016)",
+   "why": "co+kw+title"
+  },
+  "movie:283995": {
+   "added": "2026-10-21",
+   "title": "Guardians of the Galaxy Vol. 2 (2017)",
+   "why": "co+kw+title"
+  },
+  "movie:284052": {
+   "added": "2026-10-21",
+   "title": "Doctor Strange (2016)",
+   "why": "co+kw+title"
+  },
+  "movie:284053": {
+   "added": "2026-10-21",
+   "title": "Thor: Ragnarok (2017)",
+   "why": "co+kw+title"
+  },
+  "movie:284054": {
+   "added": "2026-10-21",
+   "title": "Black Panther (2018)",
+   "why": "co+kw+title"
+  },
+  "movie:299537": {
+   "added": "2026-10-21",
+   "title": "Captain Marvel (2019)",
+   "why": "co+kw+title"
+  },
+  "movie:315635": {
+   "added": "2026-10-21",
+   "title": "Spider-Man: Homecoming (2017)",
+   "why": "co+kw+title"
+  },
+  "movie:363088": {
+   "added": "2026-10-21",
+   "title": "Ant-Man and the Wasp (2018)",
+   "why": "co+kw+title"
+  },
+  "movie:429617": {
+   "added": "2026-10-21",
+   "title": "Spider-Man: Far From Home (2019)",
+   "why": "co+kw+title"
+  },
+  "movie:447365": {
+   "added": "2026-10-21",
+   "title": "Guardians of the Galaxy Vol. 3 (2023)",
+   "why": "co+kw+title"
+  },
+  "movie:453395": {
+   "added": "2026-10-21",
+   "title": "Doctor Strange in the Multiverse of Madness (2022)",
+   "why": "co+kw+title"
+  },
+  "movie:497698": {
+   "added": "2026-10-21",
+   "title": "Black Widow (2021)",
+   "why": "co+kw+title"
+  },
+  "movie:505642": {
+   "added": "2026-10-21",
+   "title": "Black Panther: Wakanda Forever (2022)",
+   "why": "co+kw+title"
+  },
+  "movie:524434": {
+   "added": "2026-10-21",
+   "title": "Eternals (2021)",
+   "why": "co+kw+title"
+  },
+  "movie:533535": {
+   "added": "2026-10-21",
+   "title": "Deadpool & Wolverine (2024)",
+   "why": "co+kw+title"
+  },
+  "movie:559": {
+   "added": "2026-10-21",
+   "title": "Spider-Man 3 (2007)",
+   "why": "co+title"
+  },
+  "movie:566525": {
+   "added": "2026-10-21",
+   "title": "Shang-Chi and the Legend of the Ten Rings (2021)",
+   "why": "co+kw+title"
+  },
+  "movie:609681": {
+   "added": "2026-10-21",
+   "title": "The Marvels (2023)",
+   "why": "co+kw+title"
+  },
+  "movie:616037": {
+   "added": "2026-10-21",
+   "title": "Thor: Love and Thunder (2022)",
+   "why": "co+kw+title"
+  },
+  "movie:617126": {
+   "added": "2026-10-21",
+   "title": "The Fantastic 4: First Steps (2025)",
+   "why": "co+kw+title"
+  },
+  "movie:634649": {
+   "added": "2026-10-21",
+   "title": "Spider-Man: No Way Home (2021)",
+   "why": "co+kw+title"
+  },
+  "movie:640146": {
+   "added": "2026-10-21",
+   "title": "Ant-Man and the Wasp: Quantumania (2023)",
+   "why": "co+kw+title"
+  },
+  "movie:68721": {
+   "added": "2026-10-21",
+   "title": "Iron Man 3 (2013)",
+   "why": "co+kw+title"
+  },
+  "movie:76338": {
+   "added": "2026-10-21",
+   "title": "Thor: The Dark World (2013)",
+   "why": "co+kw+title"
+  },
+  "movie:774752": {
+   "added": "2026-10-21",
+   "title": "The Guardians of the Galaxy Holiday Special (2022)",
+   "why": "kw+title"
+  },
+  "movie:822119": {
+   "added": "2026-10-21",
+   "title": "Captain America: Brave New World (2025)",
+   "why": "co+kw+title"
+  },
+  "movie:894205": {
+   "added": "2026-10-21",
+   "title": "Werewolf by Night (2022)",
+   "why": "kw+title"
+  },
+  "movie:969681": {
+   "added": "2026-10-21",
+   "title": "Spider-Man: Brand New Day (2026)",
+   "why": "co+kw+title"
+  },
+  "movie:986056": {
+   "added": "2026-10-21",
+   "title": "Thunderbolts* (2025)",
+   "why": "co+kw+title"
+  },
+  "tv:10079": {
+   "added": "2026-10-21",
+   "title": "Spider-Man Unlimited (1999)",
+   "why": "co+title"
+  },
+  "tv:1130": {
+   "added": "2026-10-21",
+   "title": "Silver Surfer (1998)",
+   "why": "co+title"
+  },
+  "tv:114471": {
+   "added": "2026-10-21",
+   "title": "Ironheart (2025)",
+   "why": "co+kw+title"
+  },
+  "tv:114472": {
+   "added": "2026-10-21",
+   "title": "Secret Invasion (2023)",
+   "why": "co+kw+title"
+  },
+  "tv:122226": {
+   "added": "2026-10-21",
+   "title": "Echo (2024)",
+   "why": "co+kw+title"
+  },
+  "tv:127635": {
+   "added": "2026-10-21",
+   "title": "Spidey and His Amazing Friends (2021)",
+   "why": "co+title"
+  },
+  "tv:138501": {
+   "added": "2026-10-21",
+   "title": "Agatha All Along (2024)",
+   "why": "co+kw+title"
+  },
+  "tv:138502": {
+   "added": "2026-10-21",
+   "title": "X-Men '97 (2024)",
+   "why": "co+kw+title"
+  },
+  "tv:138503": {
+   "added": "2026-10-21",
+   "title": "Your Friendly Neighborhood Spider-Man (2025)",
+   "why": "co+kw+title"
+  },
+  "tv:138505": {
+   "added": "2026-10-21",
+   "title": "Marvel Zombies (2025)",
+   "why": "co+kw+title"
+  },
+  "tv:1403": {
+   "added": "2026-10-21",
+   "title": "Marvel's Agents of S.H.I.E.L.D. (2013)",
+   "why": "kw+title"
+  },
+  "tv:1449": {
+   "added": "2026-10-21",
+   "title": "Mutant X (2001)",
+   "why": "co+title"
+  },
+  "tv:198178": {
+   "added": "2026-10-21",
+   "title": "Wonder Man (2026)",
+   "why": "co+kw+title"
+  },
+  "tv:202555": {
+   "added": "2026-10-21",
+   "title": "Daredevil: Born Again (2025)",
+   "why": "co+kw+title"
+  },
+  "tv:213375": {
+   "added": "2026-10-21",
+   "title": "VisionQuest (2026)",
+   "why": "co+kw+title"
+  },
+  "tv:232125": {
+   "added": "2026-10-21",
+   "title": "I Am Groot (2022)",
+   "why": "co+kw+title"
+  },
+  "tv:241388": {
+   "added": "2026-10-21",
+   "title": "Eyes of Wakanda (2025)",
+   "why": "co+kw+title"
+  },
+  "tv:274388": {
+   "added": "2026-10-21",
+   "title": "Iron Man and His Awesome Friends (2025)",
+   "why": "co+title"
+  },
+  "tv:294895": {
+   "added": "2026-10-21",
+   "title": "Meet Iron Man and His Awesome Friends (2025)",
+   "why": "co+title"
+  },
+  "tv:305165": {
+   "added": "2026-10-21",
+   "title": "LEGO Marvel Avengers: Strange Tails (2025)",
+   "why": "co+title"
+  },
+  "tv:38472": {
+   "added": "2026-10-21",
+   "title": "Marvel's Jessica Jones (2015)",
+   "why": "kw+title"
+  },
+  "tv:61550": {
+   "added": "2026-10-21",
+   "title": "Marvel's Agent Carter (2015)",
+   "why": "kw+title"
+  },
+  "tv:61889": {
+   "added": "2026-10-21",
+   "title": "Marvel's Daredevil (2015)",
+   "why": "kw+title"
+  },
+  "tv:62126": {
+   "added": "2026-10-21",
+   "title": "Marvel's Luke Cage (2016)",
+   "why": "kw+title"
+  },
+  "tv:62127": {
+   "added": "2026-10-21",
+   "title": "Marvel's Iron Fist (2017)",
+   "why": "kw+title"
+  },
+  "tv:62285": {
+   "added": "2026-10-21",
+   "title": "Marvel's The Defenders (2017)",
+   "why": "kw+title"
+  },
+  "tv:6332": {
+   "added": "2026-10-21",
+   "title": "The Incredible Hulk (1996)",
+   "why": "co+title"
+  },
+  "tv:6549": {
+   "added": "2026-10-21",
+   "title": "Wolverine and the X-Men (2009)",
+   "why": "co+title"
+  },
+  "tv:66190": {
+   "added": "2026-10-21",
+   "title": "Marvel's Cloak & Dagger (2018)",
+   "why": "kw+title"
+  },
+  "tv:668": {
+   "added": "2026-10-21",
+   "title": "X-Men: Evolution (2000)",
+   "why": "co+title"
+  },
+  "tv:67178": {
+   "added": "2026-10-21",
+   "title": "Marvel's The Punisher (2017)",
+   "why": "kw+title"
+  },
+  "tv:67466": {
+   "added": "2026-10-21",
+   "title": "Marvel's Runaways (2017)",
+   "why": "kw+title"
+  },
+  "tv:68716": {
+   "added": "2026-10-21",
+   "title": "Marvel's Inhumans (2017)",
+   "why": "kw+title"
+  },
+  "tv:69088": {
+   "added": "2026-10-21",
+   "title": "Marvel's Agents of S.H.I.E.L.D.: Slingshot (2016)",
+   "why": "kw+title"
+  },
+  "tv:84958": {
+   "added": "2026-10-21",
+   "title": "Loki (2021)",
+   "why": "co+kw+title"
+  },
+  "tv:85271": {
+   "added": "2026-10-21",
+   "title": "WandaVision (2021)",
+   "why": "co+kw+title"
+  },
+  "tv:88329": {
+   "added": "2026-10-21",
+   "title": "Hawkeye (2021)",
+   "why": "co+kw+title"
+  },
+  "tv:88396": {
+   "added": "2026-10-21",
+   "title": "The Falcon and the Winter Soldier (2021)",
+   "why": "co+kw+title"
+  },
+  "tv:88987": {
+   "added": "2026-10-21",
+   "title": "Helstrom (2020)",
+   "why": "kw+title"
+  },
+  "tv:91363": {
+   "added": "2026-10-21",
+   "title": "What If...? (2021)",
+   "why": "co+kw+title"
+  },
+  "tv:92749": {
+   "added": "2026-10-21",
+   "title": "Moon Knight (2022)",
+   "why": "co+kw+title"
+  },
+  "tv:92782": {
+   "added": "2026-10-21",
+   "title": "Ms. Marvel (2022)",
+   "why": "co+kw+title"
+  },
+  "tv:92783": {
+   "added": "2026-10-21",
+   "title": "She-Hulk: Attorney at Law (2022)",
+   "why": "co+kw+title"
+  }
+ },
+ "starwars": {
+  "movie:1731694": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars: The Mandalorian (2026)",
+   "why": "co+title"
+  },
+  "movie:732670": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars Holiday Special (2020)",
+   "why": "co+title"
+  },
+  "movie:74849": {
+   "added": "2026-10-21",
+   "title": "The Star Wars Holiday Special (1978)",
+   "why": "co+title"
+  },
+  "movie:857702": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars Terrifying Tales (2021)",
+   "why": "co+title"
+  },
+  "movie:980804": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars Summer Vacation (2022)",
+   "why": "co+title"
+  },
+  "tv:124734": {
+   "added": "2026-10-21",
+   "title": "Star Wars Vehicle Flythroughs (2021)",
+   "why": "co+title"
+  },
+  "tv:124868": {
+   "added": "2026-10-21",
+   "title": "Star Wars Roll Out (2019)",
+   "why": "co+title"
+  },
+  "tv:135211": {
+   "added": "2026-10-21",
+   "title": "Star Wars Galaxy of Sounds (2021)",
+   "why": "co+title"
+  },
+  "tv:137128": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars: Celebrate The Season (2020)",
+   "why": "co+title"
+  },
+  "tv:197443": {
+   "added": "2026-10-21",
+   "title": "Star Wars Galactic Pals (2022)",
+   "why": "co+title"
+  },
+  "tv:202998": {
+   "added": "2026-10-21",
+   "title": "Star Wars: Young Jedi Adventures (2023)",
+   "why": "co+title"
+  },
+  "tv:25": {
+   "added": "2026-10-21",
+   "title": "Star Wars: Droids (1985)",
+   "why": "co+title"
+  },
+  "tv:253760": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars: Rebuild the Galaxy (2024)",
+   "why": "co+title"
+  },
+  "tv:288055": {
+   "added": "2026-10-21",
+   "title": "Star Wars: Tales of the Underworld (2025)",
+   "why": "co+title"
+  },
+  "tv:289219": {
+   "added": "2026-10-21",
+   "title": "Star Wars: Maul - Shadow Lord (2026)",
+   "why": "co+title"
+  },
+  "tv:289324": {
+   "added": "2026-10-21",
+   "title": "Star Wars: Visions Presents - The Ninth Jedi (2026)",
+   "why": "co+kw+title"
+  },
+  "tv:289411": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars: Rebuild the Galaxy - Pieces of the Past (2025)",
+   "why": "co+title"
+  },
+  "tv:63722": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars: Droid Tales (2015)",
+   "why": "co+title"
+  },
+  "tv:66487": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars: The Resistance Rises (2016)",
+   "why": "co+title"
+  },
+  "tv:66837": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars: The Freemaker Adventures (2016)",
+   "why": "co+title"
+  },
+  "tv:83558": {
+   "added": "2026-10-21",
+   "title": "LEGO Star Wars: All-Stars (2018)",
+   "why": "co+title"
+  }
+ }
+}
