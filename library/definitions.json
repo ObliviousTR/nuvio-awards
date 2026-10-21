@@ -1,0 +1,1367 @@
+{
+ "_comment": "Film Collections & Universes, genre collection folders, Iconic Actors and Legendary Directors. Titles are 'Name (year)' and resolved on TMDB. Discovery: keywords / companies / title pattern signals; strong_keyword = keyword alone is enough. Edit approved.json / rejected.json to accept or refuse candidates.",
+ "franchises": [
+  {
+   "id": "batman",
+   "title": "Batman & Gotham",
+   "kind": "universe",
+   "cols": [
+    120794,
+    263,
+    948485,
+    987044
+   ],
+   "movies": [
+    "Batman (1966)"
+   ],
+   "tv": [
+    "Batman (1966)",
+    "Gotham (2014)",
+    "Pennyworth (2019)",
+    "The Penguin (2024)",
+    "Batwoman (2019)"
+   ],
+   "toon_movies": [
+    "Batman: Mask of the Phantasm (1993)",
+    "Batman Beyond: Return of the Joker (2000)",
+    "Batman: Under the Red Hood (2010)",
+    "Batman: Year One (2011)",
+    "Batman: The Dark Knight Returns, Part 1 (2012)",
+    "Batman: The Dark Knight Returns, Part 2 (2013)",
+    "Batman: The Killing Joke (2016)",
+    "The Lego Batman Movie (2017)",
+    "Batman: The Long Halloween, Part One (2021)",
+    "Batman: The Long Halloween, Part Two (2021)",
+    "Batman: Gotham by Gaslight (2018)"
+   ],
+   "toon_tv": [
+    "Batman: The Animated Series (1992)",
+    "The New Batman Adventures (1997)",
+    "Batman Beyond (1999)",
+    "The Batman (2004)",
+    "Batman: The Brave and the Bold (2008)",
+    "Beware the Batman (2013)",
+    "Harley Quinn (2019)",
+    "Batman: Caped Crusader (2024)"
+   ],
+   "keywords": [
+    "batman",
+    "gotham city"
+   ],
+   "companies": [
+    9993,
+    128064,
+    429
+   ],
+   "pattern": "\\bBatman\\b|\\bGotham\\b|\\bJoker\\b|\\bPenguin\\b|Harley Quinn|Batwoman|Pennyworth",
+   "search": [
+    "Batman",
+    "Gotham",
+    "Joker"
+   ]
+  },
+  {
+   "id": "spiderman",
+   "title": "Spider-Man Universe",
+   "kind": "universe",
+   "cols": [
+    556,
+    125574,
+    531241,
+    573436,
+    558216
+   ],
+   "movies": [
+    "Morbius (2022)",
+    "Madame Web (2024)",
+    "Kraven the Hunter (2024)"
+   ],
+   "tv": [
+    "Spider-Noir (2026)",
+    "The Amazing Spider-Man (1977)"
+   ],
+   "toon_tv": [
+    "Spider-Man (1967)",
+    "Spider-Man and His Amazing Friends (1981)",
+    "Spider-Man (1994)",
+    "Spider-Man Unlimited (1999)",
+    "Spider-Man: The New Animated Series (2003)",
+    "The Spectacular Spider-Man (2008)",
+    "Ultimate Spider-Man (2012)",
+    "Marvel's Spider-Man (2017)",
+    "Your Friendly Neighborhood Spider-Man (2025)"
+   ],
+   "keywords": [
+    "spider-man"
+   ],
+   "companies": [
+    7505,
+    420,
+    34
+   ],
+   "pattern": "Spider|Venom|Morbius|Kraven|Madame Web",
+   "search": [
+    "Spider-Man",
+    "Spider-Noir",
+    "Spider-Verse",
+    "Venom"
+   ]
+  },
+  {
+   "id": "xmen",
+   "title": "X-Men & Mutants",
+   "kind": "universe",
+   "cols": [
+    748,
+    448150,
+    453993
+   ],
+   "movies": [
+    "The New Mutants (2020)"
+   ],
+   "tv": [
+    "Legion (2017)",
+    "The Gifted (2017)"
+   ],
+   "toon_tv": [
+    "X-Men (1992)",
+    "X-Men: Evolution (2000)",
+    "Wolverine and the X-Men (2009)",
+    "X-Men '97 (2024)"
+   ],
+   "keywords": [
+    "x-men"
+   ],
+   "companies": [
+    7505,
+    420
+   ],
+   "pattern": "X-Men|Wolverine|Deadpool|\\bLogan\\b|New Mutants|Legion|The Gifted|X-Men '97",
+   "search": [
+    "X-Men",
+    "Wolverine",
+    "Deadpool"
+   ]
+  },
+  {
+   "id": "mcu",
+   "title": "Marvel Cinematic Universe",
+   "kind": "universe",
+   "cols": [
+    86311
+   ],
+   "keywords": [
+    "marvel cinematic universe (mcu)"
+   ],
+   "strong_keyword": true,
+   "companies": [
+    420
+   ],
+   "pattern": ".",
+   "search": []
+  },
+  {
+   "id": "dc",
+   "title": "DC Universe",
+   "kind": "universe",
+   "cols": [
+    8537,
+    209131,
+    468552,
+    573693,
+    724848
+   ],
+   "movies": [
+    "Superman Returns (2006)",
+    "Batman v Superman: Dawn of Justice (2016)",
+    "Suicide Squad (2016)",
+    "Justice League (2017)",
+    "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn) (2020)",
+    "Zack Snyder's Justice League (2021)",
+    "The Suicide Squad (2021)",
+    "Black Adam (2022)",
+    "The Flash (2023)",
+    "Blue Beetle (2023)",
+    "Superman (2025)",
+    "Supergirl (2026)",
+    "Green Lantern (2011)",
+    "Constantine (2005)",
+    "Watchmen (2009)"
+   ],
+   "tv": [
+    "Lois & Clark: The New Adventures of Superman (1993)",
+    "Smallville (2001)",
+    "Arrow (2012)",
+    "The Flash (2014)",
+    "Supergirl (2015)",
+    "DC's Legends of Tomorrow (2016)",
+    "Titans (2018)",
+    "Doom Patrol (2019)",
+    "Stargirl (2020)",
+    "Superman & Lois (2021)",
+    "Peacemaker (2022)",
+    "Lanterns (2026)",
+    "Wonder Woman (1975)"
+   ],
+   "toon_movies": [
+    "Superman: Doomsday (2007)",
+    "Justice League: The Flashpoint Paradox (2013)",
+    "Justice League: War (2014)",
+    "Justice League Dark (2017)",
+    "Justice League: Crisis on Infinite Earths - Part One (2024)"
+   ],
+   "toon_tv": [
+    "Superman: The Animated Series (1996)",
+    "Justice League (2001)",
+    "Justice League Unlimited (2004)",
+    "Teen Titans (2003)",
+    "Young Justice (2010)",
+    "My Adventures with Superman (2023)",
+    "Creature Commandos (2024)"
+   ],
+   "keywords": [
+    "dc extended universe (dceu)",
+    "dc universe (dcu)",
+    "superman",
+    "justice league",
+    "wonder woman"
+   ],
+   "companies": [
+    9993,
+    128064,
+    429
+   ],
+   "pattern": "Superman|Justice League|Wonder Woman|Aquaman|Shazam|\\bFlash\\b|Suicide Squad|Peacemaker|Green Lantern|Lanterns|Supergirl|Black Adam|Blue Beetle|Titans|\\bArrow\\b|Doom Patrol|Constantine|Creature Commandos",
+   "search": [
+    "Superman",
+    "Justice League",
+    "Supergirl",
+    "Lanterns"
+   ]
+  },
+  {
+   "id": "starwars",
+   "title": "Star Wars",
+   "kind": "universe",
+   "cols": [
+    10
+   ],
+   "movies": [
+    "Rogue One: A Star Wars Story (2016)",
+    "Solo: A Star Wars Story (2018)",
+    "The Mandalorian and Grogu (2026)"
+   ],
+   "tv": [
+    "The Mandalorian (2019)",
+    "The Book of Boba Fett (2021)",
+    "Obi-Wan Kenobi (2022)",
+    "Andor (2022)",
+    "Ahsoka (2023)",
+    "The Acolyte (2024)",
+    "Star Wars: Skeleton Crew (2024)"
+   ],
+   "toon_movies": [
+    "Star Wars: The Clone Wars (2008)"
+   ],
+   "toon_tv": [
+    "Star Wars: Clone Wars (2003)",
+    "Star Wars: The Clone Wars (2008)",
+    "Star Wars Rebels (2014)",
+    "Star Wars Resistance (2018)",
+    "Star Wars: The Bad Batch (2021)",
+    "Star Wars: Visions (2021)",
+    "Tales of the Jedi (2022)",
+    "Tales of the Empire (2024)"
+   ],
+   "keywords": [
+    "star wars"
+   ],
+   "companies": [
+    1
+   ],
+   "pattern": "Star Wars|Mandalorian|Andor|Ahsoka|Boba Fett|Obi-Wan|Acolyte|Skeleton Crew|Clone Wars|Bad Batch|Rogue One|\\bSolo\\b|Jedi|Maul",
+   "search": [
+    "Star Wars",
+    "Mandalorian"
+   ]
+  },
+  {
+   "id": "startrek",
+   "title": "Star Trek",
+   "kind": "universe",
+   "cols": [
+    151,
+    115570,
+    115575
+   ],
+   "movies": [
+    "Star Trek: Section 31 (2025)"
+   ],
+   "tv": [
+    "Star Trek (1966)",
+    "Star Trek: The Next Generation (1987)",
+    "Star Trek: Deep Space Nine (1993)",
+    "Star Trek: Voyager (1995)",
+    "Star Trek: Enterprise (2001)",
+    "Star Trek: Discovery (2017)",
+    "Star Trek: Picard (2020)",
+    "Star Trek: Strange New Worlds (2022)",
+    "Star Trek: Starfleet Academy (2026)"
+   ],
+   "toon_tv": [
+    "Star Trek: The Animated Series (1973)",
+    "Star Trek: Lower Decks (2020)",
+    "Star Trek: Prodigy (2021)"
+   ],
+   "keywords": [
+    "star trek"
+   ],
+   "companies": [],
+   "pattern": "Star Trek",
+   "search": [
+    "Star Trek"
+   ]
+  },
+  {
+   "id": "middleearth",
+   "title": "Middle-earth",
+   "kind": "universe",
+   "cols": [
+    119,
+    121938
+   ],
+   "tv": [
+    "The Lord of the Rings: The Rings of Power (2022)"
+   ],
+   "toon_movies": [
+    "The Hobbit (1977)",
+    "The Lord of the Rings (1978)",
+    "The Return of the King (1980)",
+    "The Lord of the Rings: The War of the Rohirrim (2024)"
+   ],
+   "keywords": [
+    "middle-earth (tolkien)"
+   ],
+   "companies": [
+    12
+   ],
+   "pattern": "Lord of the Rings|Hobbit|Middle-earth|Rings of Power|Rohirrim|Gollum|Return of the King",
+   "search": [
+    "Lord of the Rings",
+    "Hobbit"
+   ]
+  },
+  {
+   "id": "godzillakong",
+   "title": "Godzilla & Kong",
+   "kind": "universe",
+   "cols": [
+    1539140
+   ],
+   "movies": [
+    "King Kong (1933)",
+    "Son of Kong (1933)",
+    "Godzilla (1954)",
+    "King Kong vs. Godzilla (1962)",
+    "King Kong (1976)",
+    "King Kong Lives (1986)",
+    "Godzilla (1998)",
+    "King Kong (2005)",
+    "Godzilla (2014)",
+    "Shin Godzilla (2016)",
+    "Kong: Skull Island (2017)",
+    "Godzilla: King of the Monsters (2019)",
+    "Godzilla vs. Kong (2021)",
+    "Godzilla Minus One (2023)",
+    "Godzilla x Kong: The New Empire (2024)"
+   ],
+   "tv": [
+    "Monarch: Legacy of Monsters (2023)"
+   ],
+   "toon_movies": [
+    "Godzilla: Planet of the Monsters (2017)",
+    "Godzilla: City on the Edge of Battle (2018)",
+    "Godzilla: The Planet Eater (2018)"
+   ],
+   "toon_tv": [
+    "Godzilla (1978)",
+    "Godzilla: The Series (1998)",
+    "Kong: King of the Apes (2016)",
+    "Godzilla Singular Point (2021)",
+    "Skull Island (2023)"
+   ],
+   "keywords": [
+    "godzilla",
+    "king kong",
+    "monsterverse"
+   ],
+   "companies": [
+    882,
+    923
+   ],
+   "pattern": "Godzilla|\\bKong\\b|Mothra|Ghidorah|Mechagodzilla|Monarch|Skull Island|Rodan",
+   "search": [
+    "Godzilla",
+    "Kong"
+   ]
+  },
+  {
+   "id": "alienpredator",
+   "title": "Alien & Predator",
+   "kind": "universe",
+   "cols": [
+    8091,
+    399,
+    115762
+   ],
+   "movies": [
+    "Prometheus (2012)",
+    "Alien: Covenant (2017)",
+    "Alien: Romulus (2024)",
+    "Prey (2022)",
+    "Predator: Badlands (2025)"
+   ],
+   "tv": [
+    "Alien: Earth (2025)"
+   ],
+   "toon_movies": [
+    "Predator: Killer of Killers (2025)"
+   ],
+   "keywords": [
+    "xenomorph"
+   ],
+   "companies": [
+    25,
+    127928
+   ],
+   "pattern": "\\bAlien\\b|Aliens|Predator|Prometheus|\\bPrey\\b|\\bAVP\\b|Covenant|Romulus",
+   "search": [
+    "Alien",
+    "Predator"
+   ]
+  },
+  {
+   "id": "wizarding",
+   "title": "Wizarding World",
+   "kind": "single",
+   "cols": [
+    1241,
+    435259
+   ],
+   "tv": [
+    "Harry Potter (2026)"
+   ],
+   "keywords": [
+    "wizarding world"
+   ],
+   "companies": [
+    437
+   ],
+   "pattern": "Harry Potter|Fantastic Beasts|Hogwarts",
+   "search": [
+    "Harry Potter"
+   ]
+  },
+  {
+   "id": "bond",
+   "title": "007 James Bond",
+   "kind": "single",
+   "cols": [
+    645
+   ],
+   "exclude_titles": [
+    "Bond Girls Are Forever",
+    "Everything or Nothing",
+    "Casino Royale (1954)"
+   ],
+   "keywords": [
+    "james bond"
+   ],
+   "companies": [
+    7576,
+    10761
+   ],
+   "pattern": "007|James Bond|\\bBond\\b",
+   "search": [
+    "James Bond",
+    "007"
+   ]
+  },
+  {
+   "id": "dune",
+   "title": "Dune",
+   "kind": "single",
+   "cols": [
+    726871
+   ],
+   "movies": [
+    "Dune (1984)"
+   ],
+   "tv": [
+    "Frank Herbert's Dune (2000)",
+    "Frank Herbert's Children of Dune (2003)",
+    "Dune: Prophecy (2024)"
+   ],
+   "keywords": [],
+   "companies": [
+    923
+   ],
+   "pattern": "\\bDune\\b",
+   "search": [
+    "Dune"
+   ]
+  },
+  {
+   "id": "johnwick",
+   "title": "John Wick",
+   "kind": "single",
+   "cols": [
+    404609
+   ],
+   "movies": [
+    "Ballerina (2025)"
+   ],
+   "tv": [
+    "The Continental: From the World of John Wick (2023)"
+   ],
+   "keywords": [],
+   "companies": [
+    3528
+   ],
+   "pattern": "John Wick|Ballerina|Continental",
+   "search": [
+    "John Wick"
+   ]
+  },
+  {
+   "id": "mi",
+   "title": "Mission: Impossible",
+   "kind": "single",
+   "cols": [
+    87359
+   ],
+   "tv": [
+    "Mission: Impossible (1966)",
+    "Mission: Impossible (1988)"
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Mission: Impossible",
+   "search": [
+    "Mission: Impossible"
+   ]
+  },
+  {
+   "id": "matrix",
+   "title": "The Matrix",
+   "kind": "single",
+   "cols": [
+    2344
+   ],
+   "movies": [
+    "The Animatrix (2003)"
+   ],
+   "toon_in_main": true,
+   "keywords": [],
+   "companies": [],
+   "pattern": "Matrix",
+   "search": [
+    "Matrix"
+   ]
+  },
+  {
+   "id": "madmax",
+   "title": "Mad Max",
+   "kind": "single",
+   "cols": [
+    8945
+   ],
+   "movies": [
+    "Furiosa: A Mad Max Saga (2024)"
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Mad Max|Furiosa",
+   "search": [
+    "Mad Max"
+   ]
+  },
+  {
+   "id": "apes",
+   "title": "Planet of the Apes",
+   "kind": "single",
+   "cols": [
+    1709,
+    173710
+   ],
+   "movies": [
+    "Planet of the Apes (2001)"
+   ],
+   "tv": [
+    "Planet of the Apes (1974)"
+   ],
+   "toon_tv": [
+    "Return to the Planet of the Apes (1975)"
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Planet of the Apes",
+   "search": [
+    "Planet of the Apes"
+   ]
+  },
+  {
+   "id": "conjuring",
+   "title": "The Conjuring & Insidious",
+   "kind": "single",
+   "groups": [
+    {
+     "title": "The Conjuring Universe",
+     "cols": [
+      313086,
+      402074,
+      968052
+     ],
+     "movies": [
+      "The Curse of La Llorona (2019)"
+     ]
+    },
+    {
+     "title": "Insidious",
+     "cols": [
+      228446
+     ]
+    }
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Conjuring|Annabelle|\\bNun\\b|Insidious",
+   "search": [
+    "Conjuring",
+    "Insidious",
+    "Annabelle"
+   ]
+  },
+  {
+   "id": "fast",
+   "title": "Fast & Furious",
+   "kind": "single",
+   "cols": [
+    9485
+   ],
+   "movies": [
+    "Fast & Furious Presents: Hobbs & Shaw (2019)"
+   ],
+   "toon_tv": [
+    "Fast & Furious Spy Racers (2019)"
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Fast|Furious",
+   "search": [
+    "Fast & Furious"
+   ]
+  },
+  {
+   "id": "jurassic",
+   "title": "Jurassic Park",
+   "kind": "single",
+   "cols": [
+    328
+   ],
+   "toon_tv": [
+    "Jurassic World: Camp Cretaceous (2020)",
+    "Jurassic World: Chaos Theory (2024)"
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Jurassic",
+   "search": [
+    "Jurassic"
+   ]
+  },
+  {
+   "id": "terminator",
+   "title": "Terminator",
+   "kind": "single",
+   "cols": [
+    528
+   ],
+   "tv": [
+    "Terminator: The Sarah Connor Chronicles (2008)"
+   ],
+   "toon_tv": [
+    "Terminator Zero (2024)"
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Terminator",
+   "search": [
+    "Terminator"
+   ]
+  },
+  {
+   "id": "transformers",
+   "title": "Transformers",
+   "kind": "single",
+   "cols": [
+    8650
+   ],
+   "toon_movies": [
+    "The Transformers: The Movie (1986)",
+    "Transformers One (2024)"
+   ],
+   "toon_tv": [
+    "The Transformers (1984)",
+    "Beast Wars: Transformers (1996)",
+    "Transformers: Prime (2010)",
+    "Transformers: EarthSpark (2022)"
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Transformers|Bumblebee",
+   "search": [
+    "Transformers"
+   ]
+  },
+  {
+   "id": "indiana",
+   "title": "Indiana Jones",
+   "kind": "single",
+   "cols": [
+    84
+   ],
+   "tv": [
+    "The Young Indiana Jones Chronicles (1992)"
+   ],
+   "keywords": [],
+   "companies": [],
+   "pattern": "Indiana Jones",
+   "search": [
+    "Indiana Jones"
+   ]
+  }
+ ],
+ "genre_folders": {
+  "Action Collections": [
+   "Bad Boys Collection",
+   "Die Hard Collection",
+   "Dirty Harry Collection",
+   "The Fast and the Furious Collection",
+   "James Bond Collection",
+   "John Wick Collection",
+   "Kingsman Collection",
+   "Lethal Weapon Collection",
+   "Mission: Impossible Collection",
+   "Ocean's Collection",
+   "Rambo Collection",
+   "Rocky Collection",
+   "Sicario Collection",
+   "The Bourne Collection",
+   "The Dark Knight Collection",
+   "The Equalizer Collection",
+   "The Expendables Collection",
+   "The Karate Kid Collection",
+   "The Transporter Collection",
+   "Top Gun Collection",
+   "xXx Collection",
+   "G.I. Joe (Live-Action) Collection",
+   "Men in Black Collection",
+   "Ride Along Collection",
+   "Taken Collection",
+   "The Avengers Collection",
+   "The Hitman's Bodyguard Collection",
+   "The Raid Collection",
+   "The Jack Ryan Collection",
+   "Has Fallen Collection",
+   "Extraction Collection",
+   "Johnny English Collection",
+   "Spy Kids Collection",
+   "Shaft Collection",
+   "Escape Plan Collection",
+   "Death Wish Collection",
+   "Speed Collection",
+   "The Meg Collection",
+   "Ip Man Collection",
+   "Police Story Collection",
+   "Mortal Kombat Collection",
+   "Tomb Raider Collection",
+   "Kick-Ass Collection",
+   "Hellboy Collection",
+   "The Crow Collection",
+   "Conan the Barbarian Collection",
+   "Ong Bak Collection",
+   "Alien vs. Predator Collection",
+   "The Chronicles of Riddick Collection",
+   "Batman Collection (1989-1997)",
+   "Superman Classic Collection",
+   "Teenage Mutant Ninja Turtles Collection"
+  ],
+  "Comedy Collections": [
+   "Ace Ventura Collection",
+   "American Pie Collection",
+   "Anchorman Collection",
+   "Austin Powers Collection",
+   "Big Momma's House Collection",
+   "Bridget Jones Collection",
+   "Clerks Collection",
+   "Daddy's Home Collection",
+   "Jump Street Collection",
+   "Legally Blonde Collection",
+   "Meet the Parents Collection",
+   "National Lampoon's Vacation Collection",
+   "Now You See Me Collection",
+   "Pitch Perfect Collection",
+   "Rush Hour Collection",
+   "Scary Movie Collection",
+   "The Hangover Collection",
+   "Wayne's World Collection",
+   "Zoolander Collection",
+   "Bring It On Collection",
+   "Grown Ups Collection",
+   "Horrible Bosses Collection",
+   "Major League Collection",
+   "Johnny English Collection",
+   "The Pink Panther (Original)",
+   "The Pink Panther (Reboot)",
+   "Police Story Collection",
+   "Kick-Ass Collection",
+   "Dumb and Dumber Collection",
+   "The Naked Gun Collection",
+   "Police Academy Collection",
+   "Harold & Kumar Collection",
+   "Bill & Ted Collection",
+   "Look Who's Talking Collection"
+  ],
+  "Crime Collections": [
+   "Ocean's Collection",
+   "Bad Boys Collection",
+   "Lethal Weapon Collection",
+   "Beverly Hills Cop Collection",
+   "The Boondock Saints Collection",
+   "Rush Hour Collection",
+   "The Pink Panther (Original)",
+   "Shaft Collection",
+   "Death Wish Collection"
+  ],
+  "Drama Collections": [
+   "The Godfather Collection",
+   "Creed Collection",
+   "Magic Mike Collection",
+   "Step Up Collection",
+   "Fifty Shades Collection",
+   "Rocky Collection",
+   "Goal! Collection",
+   "Jack Reacher Collection",
+   "The Mighty Ducks Collection",
+   "The Before Trilogy"
+  ],
+  "Family & Animation Collections": [
+   "Alvin and the Chipmunks Collection",
+   "Cars Collection",
+   "Despicable Me Collection",
+   "Diary of a Wimpy Kid Collection",
+   "Finding Nemo Collection",
+   "Home Alone Collection",
+   "Hotel Transylvania Collection",
+   "How to Train Your Dragon Collection",
+   "Ice Age Collection",
+   "Kung Fu Panda Collection",
+   "Madagascar Collection",
+   "Monsters, Inc. Collection",
+   "Paddington Collection",
+   "Scooby-Doo Collection",
+   "Shrek Collection",
+   "Sing Collection",
+   "Spider-Man: Spider-Verse Collection",
+   "The Addams Family (Animated) Collection",
+   "The Boss Baby Collection",
+   "The Incredibles Collection",
+   "The Lego Movie Collection",
+   "The Secret Life of Pets Collection",
+   "Toy Story Collection",
+   "Trolls Holiday Collection",
+   "Wreck-It Ralph Collection",
+   "Cloudy with a Chance of Meatballs Collection",
+   "Inside Out Collection",
+   "Minions Collection",
+   "Spy Kids Collection",
+   "The Lion King Collection",
+   "Aladdin Collection",
+   "Beauty and the Beast Collection",
+   "The Little Mermaid Collection",
+   "Mulan Collection",
+   "The Land Before Time Collection",
+   "Teenage Mutant Ninja Turtles Collection",
+   "Open Season Collection"
+  ],
+  "Fantasy Collections": [
+   "Fantastic Beasts Collection",
+   "Ghostbusters Collection",
+   "Harry Potter Collection",
+   "Indiana Jones Collection",
+   "Jumanji Collection",
+   "The Lord of the Rings Collection",
+   "National Treasure Collection",
+   "Night at the Museum Collection",
+   "Percy Jackson Collection",
+   "Pirates of the Caribbean Collection",
+   "The Chronicles of Narnia Collection",
+   "The Hobbit Collection",
+   "The Maze Runner Collection",
+   "The Mummy Collection",
+   "The Twilight Collection",
+   "Clash of the Titans Collection",
+   "Highlander Collection",
+   "Ted Collection",
+   "Mortal Kombat Collection",
+   "Hellboy Collection",
+   "The Crow Collection",
+   "Conan the Barbarian Collection"
+  ],
+  "Horror Collections": [
+   "A Nightmare on Elm Street Collection",
+   "A Quiet Place Collection",
+   "Blade Collection",
+   "Child's Play Collection",
+   "Evil Dead Collection",
+   "Final Destination Collection",
+   "Friday the 13th Collection",
+   "Halloween Collection",
+   "The Hannibal Lecter Collection",
+   "Hellraiser Collection",
+   "Insidious Collection",
+   "It Collection",
+   "Jaws Collection",
+   "Paranormal Activity Collection",
+   "Poltergeist Collection",
+   "Resident Evil Collection",
+   "Saw Collection",
+   "Scream Collection",
+   "The Conjuring Collection",
+   "The Exorcist Collection",
+   "The Grudge Collection",
+   "The Omen Collection",
+   "The Purge Collection",
+   "The Ring Collection",
+   "Tremors Collection",
+   "Underworld Collection",
+   "V/H/S Collection",
+   "28 Days/Weeks/Years Later Collection",
+   "Annabelle Collection",
+   "Jeepers Creepers Collection",
+   "Texas Chainsaw Massacre Collection",
+   "The Nun Collection",
+   "Zombieland Collection",
+   "Psycho Collection",
+   "The Fly Collection",
+   "Candyman Collection",
+   "Sinister Collection",
+   "Silent Hill Collection",
+   "Phantasm Collection",
+   "The Amityville Collection"
+  ],
+  "Mystery Collections": [
+   "Knives Out Collection",
+   "Robert Langdon Collection",
+   "Sherlock Holmes Collection",
+   "Enola Holmes Collection",
+   "Now You See Me Collection"
+  ],
+  "Sci-Fi Collections": [
+   "Alien Collection",
+   "Back to the Future Collection",
+   "Blade Runner Collection",
+   "Divergent Collection",
+   "Dune Collection",
+   "Godzilla Collection",
+   "Guardians of the Galaxy Collection",
+   "Jurassic Park Collection",
+   "King Kong (1976) Collection",
+   "Mad Max Collection",
+   "Man of Steel Collection",
+   "Pacific Rim Collection",
+   "Planet of the Apes (Original) Collection",
+   "Predator Collection",
+   "RoboCop Collection",
+   "Spider-Man Collection",
+   "Star Trek: Alternate Reality Collection",
+   "Star Wars Collection",
+   "Starship Troopers Collection",
+   "The Terminator Collection",
+   "The Hunger Games Collection",
+   "The Matrix Collection",
+   "Transformers Collection",
+   "TRON Collection",
+   "X-Men Collection",
+   "Avatar Collection",
+   "Planet of the Apes (Reboot) Collection",
+   "Cloverfield collection",
+   "The Meg Collection",
+   "Star Trek: The Original Series Movies",
+   "Star Trek: The Next Generation Movies",
+   "Alien vs. Predator Collection",
+   "The Chronicles of Riddick Collection",
+   "The Fly Collection",
+   "Batman Collection (1989-1997)",
+   "Superman Classic Collection",
+   "Bill & Ted Collection"
+  ],
+  "Thriller Collections": [
+   "Hannibal Lecter Collection",
+   "Escape Room Collection",
+   "Don't Breathe Collection",
+   "Sicario Collection",
+   "The Purge Collection",
+   "Final Destination Collection",
+   "A Quiet Place Collection",
+   "Eastrail 177 Trilogy",
+   "The Jack Ryan Collection",
+   "Has Fallen Collection",
+   "Extraction Collection",
+   "Basic Instinct Collection",
+   "Psycho Collection",
+   "Escape Plan Collection",
+   "Speed Collection",
+   "The Meg Collection"
+  ],
+  "War Collections": [
+   "Rambo Collection",
+   "Sniper Collection",
+   "Jarhead Collection",
+   "Behind Enemy Lines Collection",
+   "Missing in Action Collection",
+   "The Dirty Dozen Collection"
+  ]
+ },
+ "anime_collections": [
+  "Detective Conan Collection",
+  "Dragon Ball Collection",
+  "Evangelion Collection",
+  "My Hero Academia Collection",
+  "Naruto Collection",
+  "One Piece Collection",
+  "Demon Slayer Collection",
+  "Pokémon Collection"
+ ],
+ "people": {
+  "actors": [
+   {
+    "name": "Christian Bale"
+   },
+   {
+    "name": "Gary Oldman"
+   },
+   {
+    "name": "Daniel Day-Lewis"
+   },
+   {
+    "name": "Leonardo DiCaprio"
+   },
+   {
+    "name": "Brad Pitt"
+   },
+   {
+    "name": "Joaquin Phoenix"
+   },
+   {
+    "name": "Matthew McConaughey"
+   },
+   {
+    "name": "Jake Gyllenhaal"
+   },
+   {
+    "name": "Cillian Murphy"
+   },
+   {
+    "name": "Mads Mikkelsen"
+   },
+   {
+    "name": "Willem Dafoe"
+   },
+   {
+    "name": "Christoph Waltz"
+   },
+   {
+    "name": "Philip Seymour Hoffman"
+   },
+   {
+    "name": "Bryan Cranston"
+   },
+   {
+    "name": "Edward Norton"
+   },
+   {
+    "name": "Al Pacino"
+   },
+   {
+    "name": "Robert De Niro"
+   },
+   {
+    "name": "Denzel Washington"
+   },
+   {
+    "name": "Anthony Hopkins"
+   },
+   {
+    "name": "Jack Nicholson"
+   },
+   {
+    "name": "Morgan Freeman"
+   },
+   {
+    "name": "Samuel L. Jackson"
+   },
+   {
+    "name": "Emma Stone"
+   },
+   {
+    "name": "Cate Blanchett"
+   },
+   {
+    "name": "Amy Adams"
+   },
+   {
+    "name": "Toni Collette"
+   },
+   {
+    "name": "Margot Robbie"
+   },
+   {
+    "name": "Anya Taylor-Joy"
+   },
+   {
+    "name": "Florence Pugh"
+   },
+   {
+    "name": "Natalie Portman"
+   },
+   {
+    "name": "Tom Cruise"
+   },
+   {
+    "name": "Keanu Reeves"
+   },
+   {
+    "name": "Tom Hardy"
+   },
+   {
+    "name": "Ryan Gosling"
+   },
+   {
+    "name": "Jim Carrey"
+   },
+   {
+    "name": "Robin Williams"
+   },
+   {
+    "name": "Steve Carell"
+   },
+   {
+    "name": "Simon Pegg"
+   },
+   {
+    "name": "Jackie Chan"
+   },
+   {
+    "name": "Song Kang-ho"
+   },
+   {
+    "name": "Robert Pattinson"
+   },
+   {
+    "name": "Meryl Streep"
+   },
+   {
+    "name": "Anne Hathaway"
+   },
+   {
+    "name": "Tilda Swinton"
+   },
+   {
+    "name": "Javier Bardem"
+   },
+   {
+    "name": "Oscar Isaac"
+   },
+   {
+    "name": "Frances McDormand"
+   },
+   {
+    "name": "Sam Rockwell"
+   },
+   {
+    "name": "Ethan Hawke"
+   },
+   {
+    "name": "Viola Davis"
+   },
+   {
+    "name": "Tom Hanks"
+   },
+   {
+    "name": "Harrison Ford"
+   },
+   {
+    "name": "Scarlett Johansson"
+   },
+   {
+    "name": "Kate Winslet"
+   },
+   {
+    "name": "Nicole Kidman"
+   },
+   {
+    "name": "Charlize Theron"
+   },
+   {
+    "name": "Hugh Jackman"
+   },
+   {
+    "name": "Matt Damon"
+   },
+   {
+    "name": "Robert Downey Jr."
+   },
+   {
+    "name": "Timothée Chalamet"
+   },
+   {
+    "name": "Zendaya"
+   },
+   {
+    "name": "Pedro Pascal"
+   },
+   {
+    "name": "Austin Butler"
+   }
+  ],
+  "directors": [
+   {
+    "name": "Alfred Hitchcock"
+   },
+   {
+    "name": "Stanley Kubrick"
+   },
+   {
+    "name": "Christopher Nolan"
+   },
+   {
+    "name": "Martin Scorsese"
+   },
+   {
+    "name": "Quentin Tarantino"
+   },
+   {
+    "name": "Denis Villeneuve"
+   },
+   {
+    "name": "David Fincher"
+   },
+   {
+    "name": "Steven Spielberg"
+   },
+   {
+    "name": "Akira Kurosawa"
+   },
+   {
+    "name": "Hayao Miyazaki",
+    "toon_ok": true
+   },
+   {
+    "name": "Bong Joon-ho"
+   },
+   {
+    "name": "Park Chan-wook"
+   },
+   {
+    "name": "Francis Ford Coppola"
+   },
+   {
+    "name": "Ridley Scott"
+   },
+   {
+    "name": "James Cameron"
+   },
+   {
+    "name": "Paul Thomas Anderson"
+   },
+   {
+    "name": "Joel & Ethan Coen",
+    "members": [
+     "Joel Coen",
+     "Ethan Coen"
+    ]
+   },
+   {
+    "name": "Wes Anderson"
+   },
+   {
+    "name": "Guillermo del Toro"
+   },
+   {
+    "name": "Yorgos Lanthimos"
+   },
+   {
+    "name": "Alfonso Cuarón"
+   },
+   {
+    "name": "Alejandro González Iñárritu"
+   },
+   {
+    "name": "Alex Garland"
+   },
+   {
+    "name": "Jordan Peele"
+   },
+   {
+    "name": "Robert Eggers"
+   },
+   {
+    "name": "Ari Aster"
+   },
+   {
+    "name": "David Lynch"
+   },
+   {
+    "name": "Sergio Leone"
+   },
+   {
+    "name": "Edgar Wright"
+   },
+   {
+    "name": "Guy Ritchie"
+   },
+   {
+    "name": "Greta Gerwig"
+   },
+   {
+    "name": "Kathryn Bigelow"
+   },
+   {
+    "name": "Sofia Coppola"
+   },
+   {
+    "name": "Peter Jackson"
+   },
+   {
+    "name": "George Miller"
+   },
+   {
+    "name": "Tim Burton"
+   },
+   {
+    "name": "Michael Mann"
+   },
+   {
+    "name": "Clint Eastwood"
+   },
+   {
+    "name": "Darren Aronofsky"
+   },
+   {
+    "name": "Billy Wilder"
+   }
+  ]
+ }
+}

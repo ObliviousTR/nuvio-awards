@@ -109,7 +109,8 @@ def item(kind, r):
         return None
     date = r.get("release_date") or r.get("first_air_date") or ""
     return dict(imdb=imdb, tmdb=r["id"], kind=kind, name=r.get("title") or r.get("name"), year=date[:4],
-                date=date, votes=r.get("vote_count", 0), backdrop=r.get("backdrop_path"), poster=r.get("poster_path"))
+                date=date, votes=r.get("vote_count", 0), rating=r.get("vote_average", 0),
+                backdrop=r.get("backdrop_path"), poster=r.get("poster_path"))
 
 
 def rows(kind, results, limit=LIMIT):
@@ -178,7 +179,7 @@ def find_series(name):
 
 
 # ---------------------------------------------------------------- card builders: return (movies, series, art, notes)
-def person_card(entry, today, director, tr=False):
+def person_card(entry, today, director, tr=False, toon_ok=False):
     director = director or entry.get("role") == "director"
     dept = "Directing" if director else "Acting"
     p = None
@@ -192,7 +193,7 @@ def person_card(entry, today, director, tr=False):
     mv, tv = [], []
     for c in pool:
         g = set(c.get("genre_ids") or [])
-        if not released(c, today) or 16 in g:
+        if not released(c, today) or (16 in g and not toon_ok):
             continue
         if director:
             if c["media_type"] == "movie" and c.get("job") == "Director":
