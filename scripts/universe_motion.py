@@ -1103,11 +1103,11 @@ class IndianaJones(Mark2):
     def __init__(self):
         self.logo = fit(trim(commons("File:Indiana Jones logo.svg", 2000)), 820, 220)
         rnd = random.Random(4)
-        self.motes = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(1, 2.6), rnd.uniform(-1, 1)) for _ in range(120)]
+        self.motes = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(1, 2.6), rnd.uniform(-1, 1)) for _ in range(50)]
 
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        rnd = random.Random(self.i * 3)
+        rnd = random.Random(self.i // 2 * 3)
         torch = 0.75 + 0.25 * rnd.random() if h is None else 0.9  # flickers while it builds, steady after
         lightc = Image.new("L", (W, H), 0)
         ImageDraw.Draw(lightc).ellipse((W / 2 - 520, H / 2 - 330, W / 2 + 520, H / 2 + 300), fill=round(120 * torch * ease(t / 0.5)))
