@@ -13801,10 +13801,11 @@
    "poster": "/31SwN5tZuJNsWTLx6DNNyQSAXdx.jpg",
    "rails": [
     {
-     "count": 13,
+     "count": 14,
      "id": "lib-batman-films",
      "name": "Batman & Gotham · Films",
      "titles": [
+      "Batman",
       "Batman",
       "Batman",
       "Batman Returns",
@@ -13865,10 +13866,12 @@
      "type": "movie"
     },
     {
-     "count": 9,
+     "count": 11,
      "id": "lib-batman-animated-series",
      "name": "Batman & Gotham · Animated Series",
      "titles": [
+      "The Adventures of Batman",
+      "The New Adventures of Batman",
       "Batman: The Animated Series",
       "The New Batman Adventures",
       "Batman Beyond",
@@ -13890,10 +13893,12 @@
    "poster": "/bp5PqLa06QA1LsELA1SsKZ008H7.jpg",
    "rails": [
     {
-     "count": 15,
+     "count": 17,
      "id": "lib-spiderman-films",
      "name": "Spider-Man Universe · Films",
      "titles": [
+      "Spider-Man",
+      "Spider-Man Strikes Back",
       "Spider-Man",
       "Spider-Man 2",
       "Spider-Man 3",
@@ -13913,11 +13918,12 @@
      "type": "movie"
     },
     {
-     "count": 2,
+     "count": 3,
      "id": "lib-spiderman-series",
      "name": "Spider-Man Universe · Series",
      "titles": [
       "The Amazing Spider-Man",
+      "Japanese Spiderman",
       "Spider-Noir"
      ],
      "type": "series"
@@ -13933,12 +13939,13 @@
      "type": "movie"
     },
     {
-     "count": 9,
+     "count": 10,
      "id": "lib-spiderman-animated-series",
      "name": "Spider-Man Universe · Animated Series",
      "titles": [
       "Spider-Man",
       "Spider-Man and His Amazing Friends",
+      "Spider-Man",
       "Spider-Man",
       "Spider-Man Unlimited",
       "Spider-Man: The New Animated Series",
@@ -13991,13 +13998,15 @@
      "type": "series"
     },
     {
-     "count": 4,
+     "count": 6,
      "id": "lib-xmen-animated-series",
      "name": "X-Men & Mutants · Animated Series",
      "titles": [
       "X-Men",
       "X-Men: Evolution",
       "Wolverine and the X-Men",
+      "Wolverine",
+      "X-Men",
       "X-Men '97"
      ],
      "type": "series"
@@ -14116,14 +14125,17 @@
    "poster": "/k1d3n4TJAGTF90x93QhL9jKUaXv.jpg",
    "rails": [
     {
-     "count": 26,
+     "count": 29,
      "id": "lib-dc-films",
      "name": "DC Universe · Films",
      "titles": [
       "Superman",
+      "Superman",
       "Superman II",
       "Superman III",
+      "Supergirl",
       "Superman IV: The Quest for Peace",
+      "Justice League of America",
       "Constantine",
       "Superman Returns",
       "Watchmen",
@@ -14150,10 +14162,11 @@
      "type": "movie"
     },
     {
-     "count": 13,
+     "count": 14,
      "id": "lib-dc-series",
      "name": "DC Universe · Series",
      "titles": [
+      "Adventures of Superman",
       "Wonder Woman",
       "Lois & Clark: The New Adventures of Superman",
       "Smallville",
@@ -14171,10 +14184,11 @@
      "type": "series"
     },
     {
-     "count": 28,
+     "count": 29,
      "id": "lib-dc-animated-films",
      "name": "DC Universe · Animated Films",
      "titles": [
+      "Superman",
       "Justice League: Secret Origins",
       "Justice League: Paradise Lost",
       "Justice League: Starcrossed - The Movie",
@@ -14207,10 +14221,13 @@
      "type": "movie"
     },
     {
-     "count": 9,
+     "count": 12,
      "id": "lib-dc-animated-series",
      "name": "DC Universe · Animated Series",
      "titles": [
+      "The New Adventures of Superman",
+      "The Superman/Aquaman Hour of Adventure",
+      "Superman",
       "Superman: The Animated Series",
       "Justice League",
       "Teen Titans",
@@ -14281,7 +14298,7 @@
      "type": "movie"
     },
     {
-     "count": 14,
+     "count": 16,
      "id": "lib-starwars-animated-series",
      "name": "Star Wars · Animated Series",
      "titles": [
@@ -14289,8 +14306,10 @@
       "Star Wars: The Clone Wars",
       "Star Wars Rebels",
       "LEGO Star Wars: Droid Tales",
+      "Star Wars: Forces of Destiny",
       "Star Wars Resistance",
       "LEGO Star Wars: All-Stars",
+      "Star Wars Galaxy of Adventures",
       "Star Wars: The Bad Batch",
       "Star Wars: Visions",
       "Star Wars: Tales of the Jedi",
@@ -14333,7 +14352,7 @@
      "type": "movie"
     },
     {
-     "count": 9,
+     "count": 10,
      "id": "lib-startrek-series",
      "name": "Star Trek · Series",
      "titles": [
@@ -14343,6 +14362,7 @@
       "Star Trek: Voyager",
       "Star Trek: Enterprise",
       "Star Trek: Discovery",
+      "Star Trek: Short Treks",
       "Star Trek: Picard",
       "Star Trek: Strange New Worlds",
       "Star Trek: Starfleet Academy"
@@ -14461,10 +14481,11 @@
      "type": "movie"
     },
     {
-     "count": 1,
+     "count": 2,
      "id": "lib-godzillakong-series",
      "name": "Godzilla & Kong · Series",
      "titles": [
+      "Godzilla Island",
       "Monarch: Legacy of Monsters"
      ],
      "type": "series"
@@ -14481,12 +14502,14 @@
      "type": "movie"
     },
     {
-     "count": 5,
+     "count": 7,
      "id": "lib-godzillakong-animated-series",
      "name": "Godzilla & Kong · Animated Series",
      "titles": [
+      "The King Kong Show",
       "Godzilla",
       "Godzilla: The Series",
+      "Kong: The Animated Series",
       "Kong: King of the Apes",
       "Godzilla Singular Point",
       "Skull Island"
@@ -14620,6 +14643,15 @@
       "No Time to Die"
      ],
      "type": "movie"
+    },
+    {
+     "count": 1,
+     "id": "lib-bond-animated-series",
+     "name": "007 James Bond · Animated Series",
+     "titles": [
+      "James Bond Jr."
+     ],
+     "type": "series"
     }
    ],
    "title": "007 James Bond"
@@ -14959,7 +14991,7 @@
    "poster": "/nnFgBA6nR0pHorxdFaDvdY4nVHL.jpg",
    "rails": [
     {
-     "count": 5,
+     "count": 7,
      "id": "lib-transformers-films",
      "name": "Transformers · Films",
      "titles": [
@@ -14967,28 +14999,40 @@
       "Transformers: Revenge of the Fallen",
       "Transformers: Dark of the Moon",
       "Transformers: Age of Extinction",
-      "Transformers: The Last Knight"
-     ],
-     "type": "movie"
-    },
-    {
-     "count": 2,
-     "id": "lib-transformers-animated-films",
-     "name": "Transformers · Animated Films",
-     "titles": [
-      "The Transformers: The Movie",
-      "Transformers One"
+      "Transformers: The Last Knight",
+      "Bumblebee",
+      "Transformers: Rise of the Beasts"
      ],
      "type": "movie"
     },
     {
      "count": 4,
+     "id": "lib-transformers-animated-films",
+     "name": "Transformers · Animated Films",
+     "titles": [
+      "The Transformers: The Movie",
+      "Transformers Prime: Beast Hunters - Predacons Rising",
+      "Transformers: Titans Return",
+      "Transformers One"
+     ],
+     "type": "movie"
+    },
+    {
+     "count": 12,
      "id": "lib-transformers-animated-series",
      "name": "Transformers · Animated Series",
      "titles": [
       "The Transformers",
+      "Transformers: Victory",
       "Beast Wars: Transformers",
+      "Beast Machines: Transformers",
+      "Transformers: Armada",
+      "Transformers: Energon",
+      "Transformers: Cybertron",
+      "Transformers: Animated",
       "Transformers: Prime",
+      "Transformers: Robots In Disguise",
+      "Transformers: Cyberverse",
       "Transformers: EarthSpark"
      ],
      "type": "series"

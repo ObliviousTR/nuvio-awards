@@ -205,6 +205,11 @@
    "name": "007 James Bond · Films"
   },
   {
+   "type": "series",
+   "id": "lib-bond-animated-series",
+   "name": "007 James Bond · Animated Series"
+  },
+  {
    "type": "movie",
    "id": "lib-dune-films",
    "name": "Dune · Films"
