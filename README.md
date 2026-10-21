@@ -78,3 +78,21 @@ Run it by hand from the Actions tab (Spotlight → Run workflow):
 
 To keep a subject across rotations, put it in `spotlight/state.json` → `"pin"`, e.g. `{"headliner": "Pedro Pascal"}`;
 remove it to return to the rotation.
+
+## Library (third addon in this repo)
+
+```
+https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/library/manifest.json
+```
+
+Film Collections & Universes (10 universes, 14 franchises, Kaptain's genre collection folders, anime collections),
+Iconic Actors (63) and Legendary Directors (40). `.github/workflows/library.yml` rebuilds it **every Sunday** from TMDB
+(`scripts/library.py`, definitions in `library/definitions.json`):
+
+- New films TMDB adds to a collection, and new films of every actor / director, appear by themselves.
+- Discovery looks for new titles of each universe / franchise by TMDB keyword, production company and title pattern.
+  Two signals (or the MCU keyword) → added automatically (`library/auto.json`, with the reason).
+  One signal → candidate (`library/candidates.json`). New additions and new candidates are listed in a weekly issue.
+- Accept a candidate: add its key (e.g. `"tv:12345"`) under the franchise id in `library/approved.json`;
+  refuse it (or remove an automatic addition): put the key in `library/rejected.json`.
+- `library/REPORT.md` shows every rail and its titles.
