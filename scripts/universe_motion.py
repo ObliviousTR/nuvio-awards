@@ -14,7 +14,7 @@ from spotlight import tmdb
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageSequence
 
 W, H = 1280, 720
-GW, GH = 512, 288
+GW, GH = 480, 270
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/124 Safari/537.36 nuvio-awards"}
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 FONTS = {  # Google Fonts (OFL), fetched once
@@ -98,6 +98,27 @@ def key_black(im, lo=40, hi=110):
     l = im.convert("L").point(lambda v: 0 if v < lo else (255 if v > hi else round(255 * (v - lo) / (hi - lo))))
     im.putalpha(ImageChops.multiply(im.getchannel("A"), l))
     return im
+
+
+def blocks(im, gap=0.015):
+    """Vertical text blocks of a logo (rows of ink separated by empty rows): [(y0, y1), ...]."""
+    a = im.getchannel("A").resize((1, im.height), Image.BOX)
+    rows = [v > 2 for v in a.getdata()]
+    out, y, g = [], 0, max(2, int(im.height * gap))
+    while y < len(rows):
+        if rows[y]:
+            y0 = y
+            while y < len(rows) and (rows[y] or any(rows[y:y + g])):
+                y += 1
+            out.append((y0, y))
+        y += 1
+    return out
+
+
+def line_of(im, which):
+    b = blocks(im)
+    y0, y1 = b[which]
+    return trim(im.crop((0, y0, im.width, y1)))
 
 
 def fit(im, maxw, maxh):
@@ -229,42 +250,111 @@ class Mark:
     build, hold = 26, 34
 
 
-class SpiderVerse(Mark):
-    def __init__(self):
-        f = font("anton", 170)
-        self.face = text_layer("SPIDER-VERSE", f, (255, 255, 255), 3)
-        self.red = text_layer("SPIDER-VERSE", f, (230, 36, 41), 3)
-        self.blue = text_layer("SPIDER-VERSE", f, (40, 120, 255), 3)
+class Mark2(Mark):
+    """Second-batch base: self.i is the global frame index (set by render), finish() adds the sweep + tagline."""
+    i = 0
+    tag, tagcol, tag_y = "", (255, 255, 255), H / 2 + 200
 
-    def web(self, s, p):
-        im = Image.new("RGBA", (s, s), (0, 0, 0, 0))
-        d = ImageDraw.Draw(im)
-        c, n = s / 2, 12
-        for i in range(n):
-            a = i * 2 * math.pi / n - math.pi / 2
-            r = c * min(1, p * 1.6)
-            d.line((c, c, c + r * math.cos(a), c + r * math.sin(a)), fill=(255, 255, 255, 70), width=2)
-        rings = max(0, (p - 0.25) / 0.75)
-        for j in range(1, 6):
-            if rings * 5 < j - 0.999:
-                break
-            rr = c * j / 5.4
-            pts = [(c + rr * math.cos(i * 2 * math.pi / n - math.pi / 2), c + rr * math.sin(i * 2 * math.pi / n - math.pi / 2)) for i in range(n)]
-            for i in range(n):
-                p0, p1 = pts[i], pts[(i + 1) % n]
-                mx, my = c + ((p0[0] + p1[0]) / 2 - c) * 0.92, c + ((p0[1] + p1[1]) / 2 - c) * 0.92
-                d.line((p0, (mx, my), p1), fill=(255, 255, 255, 55), width=2)
-        return im
+    def finish(self, cv, t, h, sweep_strength=120):
+        if h is not None and h < 0.5:
+            sweep(cv, h * 2, strength=sweep_strength)
+        if t > 0.85 and self.tag:
+            tagline(cv, self.tag, self.tag_y, (t - 0.85) / 0.15, color=self.tagcol)
+        return cv
+
+
+def spider(size, col=(255, 255, 255, 255)):
+    """Our spider emblem (body + eight bent legs), drawn at 4x and scaled down for smooth edges."""
+    k = 4
+    S = 220 * k
+    im = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    c = S / 2
+    P = lambda x, y: (c + x * k, c + y * k)
+    legs = [[(-9, -24), (-38, -52), (-46, -96)], [(-12, -15), (-56, -26), (-76, -64)],
+            [(-12, -3), (-56, 10), (-74, 52)], [(-9, 8), (-40, 38), (-46, 92)]]
+    for leg in legs:
+        for sx in (1, -1):
+            pts = [P(x * sx, y) for x, y in leg]
+            d.line(pts[:2], fill=col, width=9 * k)
+            d.ellipse((pts[1][0] - 4.5 * k, pts[1][1] - 4.5 * k, pts[1][0] + 4.5 * k, pts[1][1] + 4.5 * k), fill=col)
+            # tapering lower leg ending in a point
+            (x0, y0), (x1, y1) = pts[1], pts[2]
+            L = math.hypot(x1 - x0, y1 - y0)
+            nx, ny = -(y1 - y0) / L, (x1 - x0) / L
+            w = 4.5 * k
+            d.polygon([(x0 + nx * w, y0 + ny * w), (x1, y1), (x0 - nx * w, y0 - ny * w)], fill=col)
+    d.ellipse((*P(-9, -46), *P(9, -30)), fill=col)                 # head
+    d.ellipse((*P(-14, -36), *P(14, 2)), fill=col)                 # thorax
+    d.polygon([P(-15, 6), P(15, 6), P(10, 46), P(0, 66), P(-10, 46)], fill=col)  # abdomen
+    d.ellipse((*P(-16, -4), *P(16, 30)), fill=col)
+    im = trim(im)
+    return fit(im.resize((im.width // k, im.height // k), Image.LANCZOS), size, size)
+
+
+def comic_word(text, size, fill, outline=(10, 10, 14), ow=7, dots=True):
+    """Comic lettering: Bangers, a heavy dark outline, halftone dots fading down the letters."""
+    f = font("bangers", size)
+    base = text_layer(text, f, (255, 255, 255), 4)
+    p = padded(base, ow + 4)
+    a = p.getchannel("A")
+    body = Image.new("RGBA", p.size, fill + (0,))
+    body.putalpha(a)
+    if dots:
+        ht = Image.new("L", p.size, 0)
+        dd = ImageDraw.Draw(ht)
+        for y in range(0, p.height, 9):
+            r = 3.2 * (y / p.height) ** 1.2
+            for x in range((y // 9) % 2 * 4, p.width, 9):
+                dd.ellipse((x - r, y - r, x + r, y + r), fill=110)
+        shade = Image.new("RGBA", p.size, (0, 0, 0, 0))
+        shade.putalpha(ImageChops.multiply(ht, a))
+        body.alpha_composite(shade)
+    edge = Image.new("RGBA", p.size, outline + (0,))
+    edge.putalpha(a.filter(ImageFilter.MaxFilter(ow * 2 + 1)))
+    edge.alpha_composite(body)
+    return edge
+
+
+class SpiderVerse(Mark2):
+    """A spider drops in on its thread from the top of the card and twitches between universes; SPIDER-VERSE slams
+    together out of red and blue misprints in comic lettering."""
+    build, hold = 34, 30
+    tag, tagcol = "EVERY SPIDER  ·  EVERY UNIVERSE", (255, 255, 255)
+
+    def __init__(self):
+        FONTS["bangers"] = "ofl/bangers/Bangers-Regular.ttf"
+        self.face = comic_word("SPIDER-VERSE", 178, (232, 30, 44))
+        self.red = comic_word("SPIDER-VERSE", 178, (255, 40, 80), outline=(255, 40, 80), dots=False)
+        self.blue = comic_word("SPIDER-VERSE", 178, (30, 140, 255), outline=(30, 140, 255), dots=False)
+        self.sp = spider(150)
+        self.sp_r = tint(self.sp, (255, 30, 60), 1.0)
+        self.sp_b = tint(self.sp, (30, 150, 255), 1.0)
 
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        wb = self.web(620, min(1, t / 0.55))
-        place(cv, wb if t < 0.85 else alpha(wb, 0.55), W / 2, H / 2 - 10)
-        cy = H / 2
-        k = max(0, min(1, (t - 0.25) / 0.6))
+        wy = H / 2 + 60
+        sy_end = wy - self.face.height / 2 - self.sp.height / 2 - 18
+        # the drop: falls fast, overshoots, settles; a slow sway afterwards
+        p = min(1, t / 0.4)
+        y = -self.sp.height + (sy_end + self.sp.height) * (1 - (1 - p) ** 3) + (math.sin(p * math.pi * 2.2) * 26 * (1 - p) if p < 1 else 0)
+        sway = math.sin(self.i * 0.35) * (6 if t < 0.6 else 3)
+        sp = self.sp.rotate(sway, resample=Image.BICUBIC, expand=True)
+        thread = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(thread).line((W / 2, 0, W / 2 + sway * 2, y - self.sp.height / 2 + 14), fill=(255, 255, 255, 190), width=2)
+        cv.alpha_composite(thread)
+        rnd = random.Random(self.i * 31)
+        twitch = (h is not None and int(h * 40) % 9 == 0) or (0.42 < t < 0.5)
+        if twitch:
+            dx = rnd.choice((-1, 1)) * rnd.uniform(6, 14)
+            place(cv, alpha(self.sp_b, 0.85), W / 2 + dx, y + 3)
+            place(cv, alpha(self.sp_r, 0.85), W / 2 - dx, y - 3)
+        place(cv, glow(padded(sp, 20), 10, (255, 255, 255), 0.5), W / 2, y)
+        place(cv, sp, W / 2, y)
+        # the word: misprints converge, then the inked face lands
+        k = max(0, min(1, (t - 0.3) / 0.5))
         e = ease(k)
         off = 7 + (1 - e) * 120
-        rnd = random.Random(int(t * 1000))
 
         def put(layer, dx, dy, a):
             if a <= 0:
@@ -272,19 +362,18 @@ class SpiderVerse(Mark):
             l = alpha(layer, a)
             if k < 1:
                 sl = Image.new("RGBA", l.size, (0, 0, 0, 0))
-                for y in range(0, l.height, 14):
-                    sl.paste(l.crop((0, y, l.width, min(l.height, y + 14))), (round(rnd.uniform(-1, 1) * 40 * (1 - e)), y))
+                for yy in range(0, l.height, 14):
+                    sl.paste(l.crop((0, yy, l.width, min(l.height, yy + 14))), (round(rnd.uniform(-1, 1) * 40 * (1 - e)), yy))
                 l = sl
-            place(cv, l, W / 2 + dx, cy + dy)
-        a = min(1, t / 0.3)
-        put(self.blue, off, -off * 0.15, a)
-        put(self.red, -off, off * 0.15, a)
-        put(self.face, 0, 0, max(0, (t - 0.45) / 0.3) if t < 0.75 else 1)
-        if h is not None and h < 0.5:
-            sweep(cv, h * 2)
-        if t > 0.8:
-            tagline(cv, "EVERY SPIDER  ·  EVERY UNIVERSE", cy + self.face.height / 2 + 46, (t - 0.8) / 0.2)
-        return cv
+            place(cv, l, W / 2 + dx, wy + dy)
+        a = min(1, max(0, (t - 0.25) / 0.2))
+        if twitch and h is not None:
+            off = 14
+        put(self.blue, off, off * 0.15, a)
+        put(self.red, -off, -off * 0.15, a)
+        put(self.face, 0, 0, max(0, (t - 0.55) / 0.2) if t < 0.75 else 1)
+        self.tag_y = wy + self.face.height / 2 + 30
+        return self.finish(cv, t, h)
 
 
 class MiddleEarth(Mark):
@@ -436,7 +525,7 @@ class WorldOfJohnWick(Mark):
     def __init__(self):
         big = font("bebas", 190)
         small = font("bebas", 54)
-        self.main = text_layer("JOHN WICK", big, (255, 255, 255), 10)
+        self.main = fit(tmdb_logo(path="/77YSn1XL3KFDcmIQGWE0Y0Tj7jB.png"), 760, 210)
         self.top = text_layer("THE WORLD OF", small, (255, 255, 255), 16)
         self.cols = ((255, 60, 170), (90, 160, 255))
 
@@ -461,7 +550,7 @@ class WorldOfJohnWick(Mark):
         on_top, on_main = flick(0.05), flick(0.35)
         if h is not None:
             on_main = 0.88 if (int(h * 34) % 17 == 9) else 1.0  # one buzz in the hold
-        place(cv, self.neon(self.top, self.cols[1], on_top), W / 2, H / 2 - 120)
+        place(cv, self.neon(self.top, self.cols[1], on_top), W / 2, H / 2 + 30 - self.main.height / 2 - 52)
         place(cv, self.neon(self.main, self.cols[0], on_main), W / 2, H / 2 + 30)
         return cv
 
@@ -568,22 +657,10 @@ def cands(uid):
     return [b[1] for b in meta[uid]["backdrops"]]
 
 
-class Mark2(Mark):
-    """Second-batch base: self.i is the global frame index (set by render), finish() adds the sweep + tagline."""
-    i = 0
-    tag, tagcol, tag_y = "", (255, 255, 255), H / 2 + 200
-
-    def finish(self, cv, t, h, sweep_strength=120):
-        if h is not None and h < 0.5:
-            sweep(cv, h * 2, strength=sweep_strength)
-        if t > 0.85 and self.tag:
-            tagline(cv, self.tag, self.tag_y, (t - 0.85) / 0.15, color=self.tagcol)
-        return cv
-
-
 class MCU(Mark2):
-    """The Marvel Studios opening: comic-fast flips through the saga's scenes washing red, then the logo lands."""
-    build, hold = 30, 30
+    """The Marvel Studios opening: flips through the saga's scenes washing red, then the logo lands."""
+    build, hold = 36, 30
+    dur_build = 85
     tag, tag_y = "THE INFINITY SAGA  ·  THE MULTIVERSE SAGA", H / 2 + 95
 
     def __init__(self):
@@ -594,8 +671,9 @@ class MCU(Mark2):
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         if t < 0.62:
-            rnd = random.Random(self.i)
-            im = art.zoomed(self.flip[self.i % len(self.flip)], rnd.uniform(0.05, 0.3))
+            step = self.i // 3  # each page held for 3 frames
+            rnd = random.Random(step)
+            im = art.zoomed(self.flip[step % len(self.flip)], rnd.uniform(0.05, 0.3))
             red = min(0.75, t / 0.62 * 0.9)
             fr = Image.blend(im, self.red, red)
             cv.paste(fr.convert("RGBA"), (0, 0))
@@ -640,28 +718,26 @@ class DCU(Mark2):
 
 
 class BatmanGotham(Mark2):
-    """The bat-signal burns through the fog, then BATMAN & GOTHAM in brushed steel."""
-    build, hold = 30, 30
-    tag, tagcol = "THE DARK KNIGHT  ·  JOKER  ·  THE PENGUIN", (210, 214, 222)
+    """THE BATMAN title card (its own animated sticker) cuts in over a red bat-signal glow; lightning once."""
+    build, hold = 34, 30
+    tag, tagcol = "BATMAN  ·  GOTHAM  ·  JOKER  ·  THE PENGUIN", (235, 200, 200)
 
     def __init__(self):
-        self.fog = clip("erg5dWNomXlY8K4sxu", maxw=420, maxh=380)
-        f = font("anton", 112)
-        self.word = stops_fill(text_layer("BATMAN & GOTHAM", f, (255, 255, 255), 10), STEEL)
+        self.fr = clip("st8Zsj32VefZ4mBlPZ", maxw=860, maxh=320)
+        self.fog = clip("erg5dWNomXlY8K4sxu", maxw=620, maxh=560)
 
     def __call__(self, t, h):
-        cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        fg = self.fog[self.i % len(self.fog)]
-        a = ease(t / 0.5)
-        place(cv, glow(padded(fg, 40), 40, (220, 225, 235), 0.5 * a), W / 2, H / 2 - 95, 1)
-        place(cv, fg, W / 2, H / 2 - 95, a)
-        p = max(0, (t - 0.45) / 0.4)
-        if p > 0:
-            yy = H / 2 + 150 + (1 - ease(p)) * 30
-            place(cv, glow(padded(self.word, 30), 16, (0, 0, 0), 1.2), W / 2, yy, ease(p))
-            place(cv, self.word, W / 2, yy, ease(p))
-        self.tag_y = H / 2 + 150 + self.word.height / 2 + 38
-        return self.finish(cv, t, h)
+        cv = Image.new("RGBA", (W, H), (0, 0, 0, round(90 * (1 - ease(t / 0.4)))))
+        fg = self.fog[0 if h is not None else self.i % len(self.fog)]
+        place(cv, tint(fg, (200, 20, 20), 0.55), W / 2, H / 2 - 30, 0.32 * ease(t / 0.5))
+        n = len(self.fr)
+        lg = self.fr[min(n - 1, int(ease(min(1, t / 0.85)) * (n - 1)))]
+        a = min(1, t / 0.12)
+        place(cv, glow(padded(lg, 40), 30, (255, 20, 20), 0.8 * a), W / 2, H / 2 - 20, 1)
+        place(cv, lg, W / 2, H / 2 - 20, a)
+        flash(cv, 0.45 if 0.5 < t < 0.54 else 0, (230, 235, 255))
+        self.tag_y = H / 2 - 20 + lg.height / 2 + 40
+        return self.finish(cv, t, h, 100)
 
 
 class XMen(Mark2):
@@ -945,9 +1021,7 @@ class FastSaga(Mark2):
     tag, tagcol = "IT'S ALL ABOUT FAMILY", (230, 235, 245)
 
     def __init__(self):
-        big, small = font("anton", 168), font("anton", 64)
-        self.main = shear(stops_fill(text_layer("FAST SAGA", big, (255, 255, 255), 6), CHROME))
-        self.the = shear(stops_fill(text_layer("THE", small, (255, 255, 255), 10), CHROME))
+        self.main = stops_fill(fit(line_of(tmdb_logo(path="/3qNMg9iQmg3V2UHpxJCRHjsMTMV.png"), -1), 960, 170), CHROME)
         rnd = random.Random(9)
         self.lines = [(rnd.uniform(0, H), rnd.uniform(200, 700), rnd.uniform(0.3, 1)) for _ in range(40)]
 
@@ -956,7 +1030,6 @@ class FastSaga(Mark2):
         e = ease(t / 0.55)
         speed = 1 - e
         lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        place(lay, self.the, W / 2 - self.main.width / 2 + self.the.width / 2 + 30, H / 2 - 92)
         place(lay, self.main, W / 2, H / 2 + 20)
         lay = hblur(lay, round(1 + speed * 26))
         dx = round(speed * W * 0.9)
@@ -978,11 +1051,8 @@ class MadMaxSaga(Mark2):
     tag, tagcol = "FURY ROAD  ·  FURIOSA  ·  THE ROAD WARRIOR", (245, 210, 160)
 
     def __init__(self):
-        big, small = font("anton", 196), font("bebas", 64)
-        word = text_layer("MAD MAX", big, (255, 255, 255), 8)
-        cracks = noise(word.size, 0, 3).point(lambda v: 0 if v < 40 else 255)
-        word.putalpha(ImageChops.multiply(word.getchannel("A"), cracks))
-        self.word = stops_fill(word, [(0, (255, 214, 120)), (0.55, (236, 120, 40)), (1, (150, 40, 15))])
+        small = font("bebas", 64)
+        self.word = fit(line_of(tmdb_logo(path="/cBAO0i9fZCux5SqJnizRECS8qfU.png"), 0), 900, 230)
         self.saga = stops_fill(text_layer("S A G A", small, (255, 255, 255), 22), [(0, (250, 230, 200)), (1, (220, 170, 120))])
         self.nz = noise((240, 80), 3, 4)
         rnd = random.Random(2)
@@ -1112,14 +1182,13 @@ class AlienPredator(Mark2):
 
 
 class GodzillaKong(Mark2):
-    """Atomic breath charging: blue light climbs up through the title, flares, and keeps a slow pulse."""
+    """Atomic breath charging: blue light climbs up through the official title, flares, and keeps a slow pulse."""
     build, hold = 30, 30
     tag, tagcol = "LONG LIVE THE KINGS", (170, 215, 255)
 
     def __init__(self):
-        f = font("anton", 150)
-        self.word = stops_fill(text_layer("GODZILLA & KONG", f, (255, 255, 255), 8), STEEL)
-        self.hot = gradient_fill(text_layer("GODZILLA & KONG", f, (255, 255, 255), 8), (210, 240, 255), (60, 160, 255))
+        self.word = fit(tmdb_logo(path="/cq6cY20MvUgips57Lj7QY2Vavu2.png"), 560, 330)
+        self.hot = gradient_fill(self.word, (210, 240, 255), (60, 160, 255))
 
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -1197,6 +1266,9 @@ PICKS = {"middleearth": (MiddleEarth, [1, 7, 0, 2, 11]), "wizarding": (Wizarding
 
 
 def render(uid, out_dir):
+    """Build over the first scene; during the hold the scenes change with short crossfades. Backgrounds stay still
+    (no push-in) so GIF frames only carry what moves, which keeps the file light: Nuvio mobile plays every visible
+    card's GIF at once."""
     if uid in MARKS:
         cls, paths = MARKS[uid]
     else:
@@ -1204,31 +1276,45 @@ def render(uid, out_dir):
         paths = scene_paths(uid, picks)
     mark = cls()
     sc = scenes(paths)
-    n = mark.build + mark.hold
+    still = [vignette(art.zoomed(x, 0.04)) for x in sc]
+    B, HD = mark.build, mark.hold
+    order = list(range(1, len(still))) + [0]
+    per = 10
+    seq = [(still[0], min(1, i / B), None, getattr(mark, "dur_build", 65)) for i in range(B)]
+    k, total = 0, per * len(order)
+    for j, s_ in enumerate(order):
+        prev = still[order[j - 1]] if j else still[0]
+        for f in range(per):
+            h = k / total
+            k += 1
+            if f < 3:
+                seq.append((Image.blend(prev, still[s_], (f + 1) / 4), 1.0, h, 70))
+            else:
+                seq.append((still[s_], 1.0, h, getattr(mark, "dur_hold", 120)))
     frames = []
-    for i in range(n):
-        t = min(1, i / mark.build)
-        h = (i - mark.build) / mark.hold if i >= mark.build else None
-        bg = background(sc, i / n).convert("RGBA")
+    for i, (bg, t, h, _) in enumerate(seq):
         mark.i = i
-        bg.alpha_composite(mark(t, h))
-        frames.append(bg.convert("RGB"))
+        f = bg.convert("RGBA")
+        f.alpha_composite(mark(t, h))
+        frames.append(f.convert("RGB"))
     d = os.path.join(out_dir, uid)
     os.makedirs(d, exist_ok=True)
-    cov = vignette(art.zoomed(sc[0], 0.04)).convert("RGBA")
-    mark.i = round(mark.build + 0.75 * mark.hold)
+    cov = still[0].convert("RGBA")
+    mark.i = round(B + 0.75 * HD)
     cov.alpha_composite(mark(1.0, 0.75))
-    cov.convert("RGB").save(os.path.join(d, "cover.jpg"), quality=90)
-    art.graded(art.fetch(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=88)
+    cov.convert("RGB").save(os.path.join(d, "cover.jpg"), quality=88)
+    art.graded(art.fetch(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=86)
     small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
-    pal = Image.new("RGB", (GW, GH * 4))
-    for j, idx in enumerate((n // 5, mark.build, mark.build + mark.hold // 2, n - 1)):
-        pal.paste(small[idx], (0, GH * j))
-    pal = pal.convert("P", palette=Image.ADAPTIVE, colors=128)
+    picks = [B // 3, B - 1] + [B + per * j + per - 1 for j in range(len(order))]
+    pal = Image.new("RGB", (GW, GH * len(picks)))
+    for j, idx in enumerate(picks):
+        pal.paste(small[min(idx, len(small) - 1)], (0, GH * j))
+    pal = pal.convert("P", palette=Image.ADAPTIVE, colors=112)
     q = [f.quantize(palette=pal, dither=Image.Dither.NONE) for f in small]
     q[0].save(os.path.join(d, "hover.gif"), save_all=True, append_images=q[1:],
-              duration=[60] * mark.build + [95] * mark.hold, loop=0, optimize=True)
+              duration=[x[3] for x in seq], loop=0, optimize=True)
     strip = Image.new("RGB", (GW * 4, GH * 2))
+    n = len(small)
     for j, idx in enumerate([round(k * (n - 1) / 7) for k in range(8)]):
         strip.paste(small[idx], ((j % 4) * GW, (j // 4) * GH))
     strip.save(os.path.join(d, "frames.jpg"), quality=80)
