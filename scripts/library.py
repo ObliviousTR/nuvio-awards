@@ -1,6 +1,6 @@
 """Build the Nuvio Library addon (library/manifest.json, library/catalog/) from TMDB, weekly.
 
-Rows it serves: Film Collections & Universes (universes, single franchises, Kaptain's genre collection folders),
+Rows it serves: Universes & Franchises (split into sub-series rails), Film Collections (Kaptain's genre folders),
 Iconic Actors, Legendary Directors. Definitions: library/definitions.json.
 
 Keeping franchises current
@@ -165,23 +165,27 @@ def build_franchise(f, auto, approved, rejected, log, cands_out):
         if r and f"{kind}:{r['id']}" not in rejected.get(fid, []):
             members.setdefault(f"{kind}:{r['id']}", dict(r, _kind=kind, _why=why))
 
-    groups = f.get("groups") or [dict(title=None, cols=f.get("cols", []), movies=f.get("movies", []))]
-    group_members = []
-    for g in groups:
-        gm = {}
-        for cid in g.get("cols", []):
-            name, parts = collection_parts(cid)
-            for p in parts:
-                gm[f"movie:{p['id']}"] = p
-        for spec in g.get("movies", []):
-            r = resolve("movie", spec)
+    explicit = {}  # rail index -> {"titles": keys, "cols": keys}: titles placed by hand win over rules
+    for spec in f.get("movies", []):
+        r = resolve("movie", spec)
+        add("movie", r) if r else log.append(f"- {f['title']}: film not found: {spec}")
+    for cid in f.get("cols", []):
+        for p in collection_parts(cid)[1]:
+            add("movie", p)
+    for i, rs in enumerate(f.get("rails", [])):
+        kind = "tv" if rs.get("type") == "series" else "movie"
+        ex = explicit.setdefault(i, {"titles": set(), "cols": set()})
+        for cid in rs.get("cols", []):
+            for p in collection_parts(cid)[1]:
+                add("movie", p)
+                ex["cols"].add(f"movie:{p['id']}")
+        for spec in rs.get("titles", []):
+            r = resolve(kind, spec)
             if r:
-                gm[f"movie:{r['id']}"] = dict(r, _kind="movie")
+                add(kind, r)
+                ex["titles"].add(f"{kind}:{r['id']}")
             else:
-                log.append(f"- {f['title']}: film not found: {spec}")
-        group_members.append((g.get("title"), gm))
-        for k, r in gm.items():
-            add("movie", r)
+                log.append(f"- {f['title']} / {rs['title']}: not found: {spec}")
     for spec in f.get("toon_movies", []):
         r = resolve("movie", spec)
         add("movie", r) if r else log.append(f"- {f['title']}: film not found: {spec}")
@@ -228,21 +232,78 @@ def build_franchise(f, auto, approved, rejected, log, cands_out):
     def toon(r):
         return 16 in genres_of(r)
 
-    live_m = [r for r in members.values() if r["_kind"] == "movie" and (not toon(r) or f.get("toon_in_main"))
-              and 99 not in genres_of(r)]
-    live_t = [r for r in members.values() if r["_kind"] == "tv" and not toon(r) and not genres_of(r) & NOISE_TV]
-    toon_m = [] if f.get("toon_in_main") else [r for r in members.values() if r["_kind"] == "movie" and toon(r)]
-    toon_t = [r for r in members.values() if r["_kind"] == "tv" and toon(r)]
-    rails = []
+    return franchise_rails(f, members, explicit)
+
+
+DEFAULT_RAILS = [("Films", "movie", False), ("Series", "series", False), ("Animated Films", "movie", True),
+                 ("Animated Series", "series", True)]
+
+
+def franchise_rails(f, members, ex):
+    """Split a franchise into its rails (definitions: "rails").
+
+    Each rail: title, type (movie|series, default movie), toon (animated rail, default false), and how titles land
+    in it, strongest first: titles ("Title (YYYY)", also added to the franchise), cols (TMDB collections), then
+    rules (pattern on the title, lang = original language, from / to = release date bounds, "YYYY" or "YYYY-MM"),
+    and catch: true takes whatever is left of its type. Each title sits in one rail only. New titles found by
+    discovery land by the rules, otherwise in the catch rail. Type/animation pairs without a catch rail get the
+    default one (Films / Series / Animated Films / Animated Series) at the end. Rails without titles are dropped.
+    """
+    specs = [dict(r) for r in f.get("rails", [])]
+    for i, rs in enumerate(specs):
+        rs.setdefault("type", "movie")
+        rs.setdefault("toon", False)
+        rs["_i"] = i
+
+    def kind_of(rs):
+        return "tv" if rs["type"] == "series" else "movie"
+
+    def toon(r):
+        return 16 in genres_of(r) and not f.get("toon_in_main")
+
+    def fits(rs, r):
+        return r["_kind"] == kind_of(rs) and toon(r) == rs["toon"]
+
+    def rule(rs, r):
+        keys = [k for k in ("pattern", "lang", "from", "to") if rs.get(k)]
+        if not keys:
+            return False
+        d = date_of(r)
+        if rs.get("pattern"):
+            pat = re.compile(rs["pattern"], re.I)
+            if not (pat.search(title_of(r)) or pat.search(r.get("original_title") or r.get("original_name") or "")):
+                return False
+        if rs.get("lang") and r.get("original_language") != rs["lang"]:
+            return False
+        if rs.get("from") and not (d and d[:len(rs["from"])] >= rs["from"]):
+            return False
+        if rs.get("to") and not (d and d[:len(rs["to"])] <= rs["to"]):
+            return False
+        return True
+
+    for t, typ, tn in DEFAULT_RAILS:
+        if not any(rs.get("catch") and rs["type"] == typ and rs["toon"] == tn for rs in specs):
+            specs.append(dict(title=t, type=typ, toon=tn, catch=True, _i=len(specs)))
+    placed, buckets = set(), {rs["_i"]: [] for rs in specs}
+    keep = {k: r for k, r in members.items()
+            if not (r["_kind"] == "movie" and 99 in genres_of(r))
+            and not (r["_kind"] == "tv" and not toon(r) and genres_of(r) & NOISE_TV)}
+    for stage in ("titles", "cols", "rules", "catch"):
+        for rs in specs:
+            for k, r in keep.items():
+                if k in placed or not fits(rs, r):
+                    continue
+                if stage in ("titles", "cols"):
+                    hit = k in ex.get(rs["_i"], {}).get(stage, ())
+                elif stage == "rules":
+                    hit = rule(rs, r)
+                else:
+                    hit = bool(rs.get("catch"))
+                if hit:
+                    placed.add(k)
+                    buckets[rs["_i"]].append(r)
     order = lambda xs: sorted([x for x in xs if released(x)], key=date_of)
-    if f.get("groups"):
-        for gtitle, gm in group_members:
-            rails.append((gtitle, "movie", order([members[k] for k in gm if k in members])))
-    else:
-        rails.append(("Films", "movie", order(live_m)))
-    rails += [("Series", "series", order(live_t)), ("Animated Films", "movie", order(toon_m)),
-              ("Animated Series", "series", order(toon_t))]
-    return rails
+    return [(rs["title"], rs["type"], order(buckets[rs["_i"]])) for rs in specs]
 
 
 # ---------------------------------------------------------------- output
@@ -286,8 +347,9 @@ def main():
         rails = build_franchise(f, auto, approved, rejected, log, cands)
         entry = {"id": f["id"], "title": f["title"], "kind": f["kind"], "rails": []}
         poster = None
-        if f.get("cols") or f.get("groups"):
-            cid = (f.get("cols") or f["groups"][0]["cols"])[0]
+        cols = f.get("cols") or [c for r in f.get("rails", []) for c in r.get("cols", [])]
+        if cols:
+            cid = cols[0]
             poster = (tmdb(f"/collection/{cid}") or {}).get("poster_path")
         entry["poster"] = poster
         for rname, typ, results in rails:

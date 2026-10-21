@@ -59,6 +59,75 @@
     "Batman",
     "Gotham",
     "Joker"
+   ],
+   "rails": [
+    {
+     "title": "Burton & Schumacher Films",
+     "pattern": "Batman",
+     "from": "1989",
+     "to": "1997"
+    },
+    {
+     "title": "The Dark Knight Trilogy",
+     "cols": [
+      263
+     ]
+    },
+    {
+     "title": "The Batman Epic Crime Saga",
+     "pattern": "^The Batman",
+     "from": "2022"
+    },
+    {
+     "title": "Joker",
+     "pattern": "^Joker"
+    },
+    {
+     "title": "Gotham in the DC Extended Universe",
+     "titles": [
+      "Batman v Superman: Dawn of Justice (2016)",
+      "Suicide Squad (2016)",
+      "Justice League (2017)",
+      "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn) (2020)",
+      "Zack Snyder's Justice League (2021)",
+      "The Flash (2023)"
+     ]
+    },
+    {
+     "title": "Classic Batman",
+     "catch": true
+    },
+    {
+     "title": "Live-Action Series",
+     "type": "series",
+     "catch": true
+    },
+    {
+     "title": "Batman: The Animated Series Films",
+     "toon": true,
+     "titles": [
+      "Batman: Mask of the Phantasm (1993)",
+      "Batman & Mr. Freeze: SubZero (1998)",
+      "Batman Beyond: Return of the Joker (2000)",
+      "Batman: Mystery of the Batwoman (2003)"
+     ]
+    },
+    {
+     "title": "DC Animated Movies",
+     "toon": true,
+     "catch": true
+    },
+    {
+     "title": "LEGO Batman",
+     "toon": true,
+     "pattern": "LEGO"
+    },
+    {
+     "title": "Animated Series",
+     "type": "series",
+     "toon": true,
+     "catch": true
+    }
    ]
   },
   {
@@ -108,6 +177,58 @@
     "Spider-Noir",
     "Spider-Verse",
     "Venom"
+   ],
+   "rails": [
+    {
+     "title": "Sam Raimi Trilogy",
+     "cols": [
+      556
+     ]
+    },
+    {
+     "title": "The Amazing Spider-Man",
+     "cols": [
+      125574
+     ]
+    },
+    {
+     "title": "MCU Spider-Man",
+     "cols": [
+      531241
+     ],
+     "pattern": "Spider-Man",
+     "from": "2017"
+    },
+    {
+     "title": "Sony's Spider-Man Universe",
+     "cols": [
+      558216
+     ],
+     "pattern": "Venom|Morbius|Madame Web|Kraven|Silk|El Muerto|Sinister Six"
+    },
+    {
+     "title": "Spider-Verse",
+     "toon": true,
+     "cols": [
+      573436
+     ],
+     "pattern": "Spider-Verse"
+    },
+    {
+     "title": "Live-Action Series",
+     "type": "series",
+     "catch": true
+    },
+    {
+     "title": "Animated Series",
+     "type": "series",
+     "toon": true,
+     "catch": true
+    },
+    {
+     "title": "Classic Spider-Man Films",
+     "catch": true
+    }
    ]
   },
   {
@@ -147,6 +268,34 @@
     "X-Men",
     "Wolverine",
     "Deadpool"
+   ],
+   "rails": [
+    {
+     "title": "X-Men Saga",
+     "cols": [
+      748
+     ]
+    },
+    {
+     "title": "Wolverine Trilogy",
+     "cols": [
+      453993
+     ]
+    },
+    {
+     "title": "Deadpool",
+     "titles": [
+      "Deadpool & Wolverine (2024)"
+     ],
+     "cols": [
+      448150
+     ],
+     "pattern": "Deadpool"
+    },
+    {
+     "title": "More Mutant Films",
+     "catch": true
+    }
    ]
   },
   {
@@ -163,7 +312,47 @@
    "companies": [],
    "pattern": ".",
    "search": [],
-   "min_year": 2008
+   "min_year": 2008,
+   "rails": [
+    {
+     "title": "Phase One",
+     "to": "2012"
+    },
+    {
+     "title": "Phase Two",
+     "from": "2013",
+     "to": "2015"
+    },
+    {
+     "title": "Phase Three",
+     "from": "2016",
+     "to": "2019"
+    },
+    {
+     "title": "Phase Four",
+     "from": "2020",
+     "to": "2022"
+    },
+    {
+     "title": "Phase Five",
+     "from": "2023",
+     "to": "2025-06"
+    },
+    {
+     "title": "Phase Six",
+     "from": "2025-07"
+    },
+    {
+     "title": "Disney+ Series",
+     "type": "series",
+     "from": "2021"
+    },
+    {
+     "title": "Marvel Television (ABC, Netflix & Hulu)",
+     "type": "series",
+     "catch": true
+    }
+   ]
   },
   {
    "id": "dc",
@@ -243,6 +432,62 @@
     "Justice League",
     "Supergirl",
     "Lanterns"
+   ],
+   "rails": [
+    {
+     "title": "Classic Superman Films",
+     "cols": [
+      8537
+     ],
+     "titles": [
+      "Supergirl (1984)",
+      "Superman Returns (2006)"
+     ]
+    },
+    {
+     "title": "DC Extended Universe",
+     "from": "2013",
+     "to": "2023"
+    },
+    {
+     "title": "The New DC Universe",
+     "from": "2025"
+    },
+    {
+     "title": "More DC Films",
+     "catch": true
+    },
+    {
+     "title": "Arrowverse",
+     "type": "series",
+     "pattern": "^(Arrow|The Flash|Supergirl|DC's Legends of Tomorrow|Superman & Lois|Black Lightning|Batwoman|DC's Stargirl|Stargirl)$",
+     "from": "2012"
+    },
+    {
+     "title": "Modern DC Series",
+     "type": "series",
+     "from": "2012"
+    },
+    {
+     "title": "Classic DC Series",
+     "type": "series",
+     "catch": true
+    },
+    {
+     "title": "Justice League Animated Films",
+     "toon": true,
+     "pattern": "Justice League"
+    },
+    {
+     "title": "Superman Animated Films",
+     "toon": true,
+     "pattern": "Superman"
+    },
+    {
+     "title": "More DC Animated Films",
+     "toon": true,
+     "catch": true
+    }
    ]
   },
   {
@@ -289,6 +534,40 @@
    "search": [
     "Star Wars",
     "Mandalorian"
+   ],
+   "rails": [
+    {
+     "title": "The Skywalker Saga",
+     "cols": [
+      10
+     ]
+    },
+    {
+     "title": "Anthology & Spin-off Films",
+     "catch": true
+    },
+    {
+     "title": "Live-Action Series",
+     "type": "series",
+     "catch": true
+    },
+    {
+     "title": "Animated Series",
+     "type": "series",
+     "toon": true,
+     "catch": true
+    },
+    {
+     "title": "LEGO & Young Audiences",
+     "type": "series",
+     "toon": true,
+     "pattern": "LEGO|Forces of Destiny|Galaxy of Adventures|Young Jedi"
+    },
+    {
+     "title": "Animated Films",
+     "toon": true,
+     "catch": true
+    }
    ]
   },
   {
@@ -326,6 +605,37 @@
    "pattern": "Star Trek",
    "search": [
     "Star Trek"
+   ],
+   "rails": [
+    {
+     "title": "The Original Series Films",
+     "from": "1979",
+     "to": "1991"
+    },
+    {
+     "title": "The Next Generation Films",
+     "from": "1994",
+     "to": "2002"
+    },
+    {
+     "title": "Kelvin Timeline",
+     "from": "2009",
+     "to": "2016"
+    },
+    {
+     "title": "More Star Trek Films",
+     "catch": true
+    },
+    {
+     "title": "Classic Era Series",
+     "type": "series",
+     "to": "2005"
+    },
+    {
+     "title": "Modern Era Series",
+     "type": "series",
+     "catch": true
+    }
    ]
   },
   {
@@ -355,6 +665,22 @@
    "search": [
     "Lord of the Rings",
     "Hobbit"
+   ],
+   "rails": [
+    {
+     "title": "The Lord of the Rings Trilogy",
+     "cols": [
+      119
+     ]
+    },
+    {
+     "title": "The Hobbit Trilogy",
+     "pattern": "Hobbit"
+    },
+    {
+     "title": "More Middle-earth Films",
+     "catch": true
+    }
    ]
   },
   {
@@ -409,6 +735,39 @@
    "search": [
     "Godzilla",
     "Kong"
+   ],
+   "rails": [
+    {
+     "title": "MonsterVerse",
+     "lang": "en",
+     "from": "2014"
+    },
+    {
+     "title": "Showa Era (1954–1975)",
+     "lang": "ja",
+     "to": "1975"
+    },
+    {
+     "title": "Heisei Era (1984–1995)",
+     "lang": "ja",
+     "from": "1984",
+     "to": "1995"
+    },
+    {
+     "title": "Millennium Era (1999–2004)",
+     "lang": "ja",
+     "from": "1999",
+     "to": "2004"
+    },
+    {
+     "title": "Reiwa Era (2016– )",
+     "lang": "ja",
+     "from": "2016"
+    },
+    {
+     "title": "Hollywood Kong & Godzilla",
+     "catch": true
+    }
    ]
   },
   {
@@ -444,6 +803,36 @@
    "search": [
     "Alien",
     "Predator"
+   ],
+   "rails": [
+    {
+     "title": "Alien",
+     "pattern": "^Aliens?\\b"
+    },
+    {
+     "title": "Prometheus Prequels",
+     "titles": [
+      "Prometheus (2012)",
+      "Alien: Covenant (2017)"
+     ]
+    },
+    {
+     "title": "Predator",
+     "pattern": "Predator|^Prey$"
+    },
+    {
+     "title": "Alien vs. Predator",
+     "cols": [
+      115762
+     ]
+    },
+    {
+     "title": "More Films",
+     "catch": true
+    }
+   ],
+   "exclude_titles": [
+    "Alien Nation"
    ]
   },
   {
@@ -466,6 +855,24 @@
    "pattern": "Harry Potter|Fantastic Beasts|Hogwarts",
    "search": [
     "Harry Potter"
+   ],
+   "rails": [
+    {
+     "title": "Harry Potter",
+     "cols": [
+      1241
+     ]
+    },
+    {
+     "title": "Fantastic Beasts",
+     "cols": [
+      435259
+     ]
+    },
+    {
+     "title": "More from the Wizarding World",
+     "catch": true
+    }
    ]
   },
   {
@@ -491,6 +898,39 @@
    "search": [
     "James Bond",
     "007"
+   ],
+   "rails": [
+    {
+     "title": "Sean Connery & George Lazenby",
+     "to": "1971",
+     "titles": [
+      "Never Say Never Again (1983)"
+     ]
+    },
+    {
+     "title": "Roger Moore",
+     "from": "1973",
+     "to": "1985"
+    },
+    {
+     "title": "Timothy Dalton",
+     "from": "1987",
+     "to": "1989"
+    },
+    {
+     "title": "Pierce Brosnan",
+     "from": "1995",
+     "to": "2002"
+    },
+    {
+     "title": "Daniel Craig",
+     "from": "2006",
+     "to": "2021"
+    },
+    {
+     "title": "More 007 Films",
+     "catch": true
+    }
    ]
   },
   {
@@ -614,13 +1054,35 @@
    "pattern": "Planet of the Apes",
    "search": [
     "Planet of the Apes"
+   ],
+   "rails": [
+    {
+     "title": "Original Saga (1968–1973)",
+     "to": "1973"
+    },
+    {
+     "title": "Reboot Saga",
+     "from": "2011"
+    },
+    {
+     "title": "More Apes Films",
+     "catch": true
+    }
    ]
   },
   {
    "id": "conjuring",
    "title": "The Conjuring & Insidious",
    "kind": "single",
-   "groups": [
+   "keywords": [],
+   "companies": [],
+   "pattern": "Conjuring|Annabelle|\\bNun\\b|Insidious",
+   "search": [
+    "Conjuring",
+    "Insidious",
+    "Annabelle"
+   ],
+   "rails": [
     {
      "title": "The Conjuring Universe",
      "cols": [
@@ -628,7 +1090,7 @@
       402074,
       968052
      ],
-     "movies": [
+     "titles": [
       "The Curse of La Llorona (2019)"
      ]
     },
@@ -637,15 +1099,11 @@
      "cols": [
       228446
      ]
+    },
+    {
+     "title": "More Films",
+     "catch": true
     }
-   ],
-   "keywords": [],
-   "companies": [],
-   "pattern": "Conjuring|Annabelle|\\bNun\\b|Insidious",
-   "search": [
-    "Conjuring",
-    "Insidious",
-    "Annabelle"
    ]
   },
   {
@@ -684,6 +1142,20 @@
    "pattern": "Jurassic",
    "search": [
     "Jurassic"
+   ],
+   "rails": [
+    {
+     "title": "Jurassic Park Trilogy",
+     "to": "2001"
+    },
+    {
+     "title": "Jurassic World",
+     "from": "2015"
+    },
+    {
+     "title": "More Films",
+     "catch": true
+    }
    ]
   },
   {
@@ -731,6 +1203,21 @@
    ],
    "movies": [
     "Bumblebee (2018)"
+   ],
+   "rails": [
+    {
+     "title": "Michael Bay Films",
+     "from": "2007",
+     "to": "2017"
+    },
+    {
+     "title": "Bumblebee & Beyond",
+     "from": "2018"
+    },
+    {
+     "title": "More Films",
+     "catch": true
+    }
    ]
   },
   {

@@ -85,7 +85,7 @@ remove it to return to the rotation.
 https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/main/library/manifest.json
 ```
 
-Film Collections & Universes (10 universes, 14 franchises, Kaptain's genre collection folders, anime collections),
+Universes & Franchises (10 universes, 14 franchises), Film Collections (Kaptain's genre collection folders, anime collections),
 Iconic Actors (63) and Legendary Directors (40). `.github/workflows/library.yml` rebuilds it **every Sunday** from TMDB
 (`scripts/library.py`, definitions in `library/definitions.json`):
 
@@ -95,4 +95,8 @@ Iconic Actors (63) and Legendary Directors (40). `.github/workflows/library.yml`
   One signal → candidate (`library/candidates.json`). New additions and new candidates are listed in a weekly issue.
 - Accept a candidate: add its key (e.g. `"tv:12345"`) under the franchise id in `library/approved.json`;
   refuse it (or remove an automatic addition): put the key in `library/rejected.json`.
+- Each universe / franchise is split into sub-series rails (`rails` in its definition: e.g. Sam Raimi Trilogy,
+  Sony's Spider-Man Universe, MCU phases, Bond by actor). A title lands by its listed titles, then its TMDB
+  collection, then the rail's rules (title pattern, original language, release-date range); what is left goes to the
+  rail marked `catch`. New titles found by discovery are placed the same way.
 - `library/REPORT.md` shows every rail and its titles.
