@@ -135,13 +135,18 @@ def find_col(name, aliases):
         d = tmdb(f"/collection/{a}") or {}
         return {"id": a, "name": d.get("name"), "poster_path": d.get("poster_path")} if d else None
     query = a or name
-    bare = lambda x: re.sub(r"\b(the|collection|trilogy|saga)\b", "", norm(x)).split()
+    bare = lambda x: " ".join(re.sub(r"\b(the|collection|trilogy|saga)\b", "", norm(x)).split())
+    want, equal, near = bare(query), {}, {}
     for q in dict.fromkeys([query, re.sub(r"\s*\(.*?\)", "", query), re.sub(r"(?i)\s*collection$", "", query)]):
         for r in (tmdb("/search/collection", query=q) or {}).get("results", []):
-            want, got = " ".join(bare(query)), " ".join(bare(r["name"]))
-            if want and (want == got or want in got or got in want):
-                return r
-    return None
+            got = bare(r["name"])
+            if want and want == got:
+                equal[r["id"]] = r
+            elif want and (want in got or got in want) and len(got.split()) - len(want.split()) <= 1:
+                near[r["id"]] = r
+    # several collections can share a name (fan-made duplicates): the oldest TMDB id is the canonical one
+    pool = equal or near
+    return pool[min(pool)] if pool else None
 
 
 def is_short(r):
