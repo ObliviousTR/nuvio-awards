@@ -88,6 +88,14 @@ def whiten_dark(im, lim=90):
     return im
 
 
+def key_black(im, lo=40, hi=110):
+    """Logos delivered on a black plate: brightness becomes transparency."""
+    im = im.convert("RGBA")
+    l = im.convert("L").point(lambda v: 0 if v < lo else (255 if v > hi else round(255 * (v - lo) / (hi - lo))))
+    im.putalpha(ImageChops.multiply(im.getchannel("A"), l))
+    return im
+
+
 def fit(im, maxw, maxh):
     k = min(maxw / im.width, maxh / im.height)
     return im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
@@ -265,7 +273,7 @@ class SpiderVerse(Mark):
 
 class MiddleEarth(Mark):
     """A gold ring glows up out of fire, then MIDDLE-EARTH burns in letter by letter like heated metal."""
-    build, hold = 30, 32
+    build, hold = 30, 26
 
     def __init__(self):
         f = font("cinzel", 112, weight=800)
@@ -277,9 +285,9 @@ class MiddleEarth(Mark):
     def ring(self, spin, heat):
         """A thick gold band seen at an angle: filled ellipse minus the hole, lit from above, glowing hot."""
         s = 420
-        squash = 0.34 + 0.12 * math.cos(spin)
+        squash = 0.42 + 0.12 * math.cos(spin)
         rx, ry = 170, 170 * squash
-        th = 30  # band thickness
+        th = 42  # band thickness
         band = Image.new("L", (s, s), 0)
         d = ImageDraw.Draw(band)
         d.ellipse((s / 2 - rx, s / 2 - ry, s / 2 + rx, s / 2 + ry + th * 0.6), fill=255)
@@ -333,7 +341,7 @@ class WizardingWorld(Mark):
 
     def __init__(self):
         fr = [f for f in sticker("L2lkyiSIYFq6f4gAqq")
-              if sum(1 for v in f.getchannel("A").resize((40, 27)).getdata() if v > 200) < 300]
+              if sum(1 for v in f.getchannel("A").resize((40, 27)).getdata() if v > 200) < 60]
         self.sig = [fit(trim(f), 330, 330) for f in fr if f.getchannel("A").getbbox()]
         self.logo = fit(trim(whiten_dark(commons("File:Wizarding World logo.svg"))), 660, 230)
         rnd = random.Random(7)
@@ -371,7 +379,7 @@ class StarWars(Mark):
     build, hold = 30, 30
 
     def __init__(self):
-        self.logo = trim(commons("File:Star Wars Logo.svg"))
+        self.logo = trim(key_black(commons("File:Star Wars Logo.svg")))
         rnd = random.Random(3)
         self.stars = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(0.4, 1.0)) for _ in range(260)]
 
