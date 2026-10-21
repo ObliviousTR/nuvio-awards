@@ -38,5 +38,21 @@ for row in data:
         if has("backdrop.jpg"):
             f["heroBackdropUrl"] = url(rel + "/backdrop.jpg")
         n += 1
+# Discover: weekly art from the discover-art branch (scripts/discover_art.py); fixed URLs, the files change in place
+DISC = "https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/discover-art/"
+DISC_IDS = {"Trending Movies": "trending-movies", "Trending Series": "trending-series", "New Movies": "new-movies",
+            "New Series": "new-series", "Box Office Champions": "box-office", "Certified Fresh & Must-See": "certified",
+            "Hidden Gems": "hidden-gems", "Awards & Prestige": "prestige", "All-Time Top Rated": "top-rated"}
+for row in data:
+    if row["title"] != "Discover":
+        continue
+    for f in row["folders"]:
+        i = DISC_IDS.get(f["title"])
+        if i:
+            f.update({"tileShape": "LANDSCAPE", "hideTitle": True, "coverEmoji": None,
+                      "coverImageUrl": DISC + i + "/cover.jpg", "focusGifUrl": DISC + i + "/hover.webp",
+                      "focusGifEnabled": True, "heroBackdropUrl": DISC + i + "/backdrop.jpg",
+                      "titleLogoUrl": DISC + i + "/logo.png"})
+            n += 1
 save(data, sys.argv[2])
 print(f"own art: {n} folders")

@@ -1,0 +1,36 @@
+name: Discover art
+on:
+  schedule:
+    - cron: "37 3 * * 1"   # every Monday 03:37 UTC (06:37 Istanbul)
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Pretend today is YYYY-MM-DD (optional, for testing)"
+        required: false
+permissions:
+  contents: write
+concurrency: discover-art
+jobs:
+  art:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q pillow
+      - name: Build
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: |
+          args=(out)
+          [ -n "${{ inputs.date }}" ] && args+=(--date "${{ inputs.date }}")
+          python3 scripts/discover_art.py "${args[@]}" | tee build.log
+          ! grep -q FAILED build.log
+      - name: Publish (one commit on the discover-art branch, no history)
+        run: |
+          cd out
+          git init -q -b discover-art
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -q -m "Discover art $(date -u +%F)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" discover-art
