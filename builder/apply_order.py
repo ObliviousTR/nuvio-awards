@@ -26,7 +26,7 @@ FOLDERS = {  # row title -> folder titles in order (unlisted folders keep their 
               "Anime Movies & Feature Films", "Anime Film Collections", "Studio Spotlight"],
     "Moods & Vibes": ["Feel-Good", "Cozy & Comforting", "Adrenaline Rush", "Epic & Sweeping", "Mind-Bending", "Slow Burn",
                       "Dark & Gritty", "Spooky & Creepy", "Tearjerkers", "80s & 90s Vibes"],
-    "Universes & Franchises": ["Marvel Cinematic Universe", "DC Universe", "Batman & Gotham", "Spider-Man Universe",
+    "Universes & Franchises": ["Marvel Cinematic Universe", "DC Universe", "Batman & Gotham", "Spider-Verse",
                                "X-Men & Mutants", "Middle-earth", "Star Wars", "Wizarding World", "Dune", "Star Trek",
                                "007 James Bond", "Mission: Impossible", "John Wick", "Fast & Furious", "Mad Max",
                                "Indiana Jones", "The Matrix", "Alien & Predator", "Godzilla & Kong", "Jurassic Park",
