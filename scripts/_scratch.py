@@ -11,21 +11,20 @@ frames, durs = [], []
 for f in ImageSequence.Iterator(g):
     frames.append(f.convert("RGBA").copy()); durs.append(f.info.get("duration", 60))
 log = [f"sticker {g.size} {len(frames)} frames, durations {sorted(set(durs))}"]
-W, H = 640, 360
+W, H = 560, 315
 def sticker_frame(fr, scale=0.62):
     bb = frames[-1].getchannel("A").getbbox() or (0, 0, *fr.size)
     s = fr.crop(bb)
     k = min(W * scale / s.width, H * 0.42 / s.height)
     return s.resize((round(s.width * k), round(s.height * k)), Image.LANCZOS)
 BG = {
- "gotham": ["/jz1eErpJSx7ToDVDgV9HKFv4hAa.jpg"],
+ "gotham": ["/9FE5eD92WfVCiivM9Pq9GVSrlWk.jpg"],
  "eras": ["/rhc7OF7tC9HPu0X8DBKQJzaGRbu.jpg", "/9FE5eD92WfVCiivM9Pq9GVSrlWk.jpg", "/rvtdN5XkWAfGX6xDuPL6yYS2seK.jpg", "/hw1CwteUFGjcWXwjGhKk8UJpWeA.jpg"],
- "rain": ["/IYUD7rAIXzBM91TT3Z5fILUS7n.jpg"],
 }
 for name, paths in BG.items():
-    bgs = [ImageEnhance.Brightness(art.graded(art.fetch(p), 0.9, 1.05)).enhance(0.55) for p in paths]
+    bgs = [ImageEnhance.Brightness(art.graded(art.fetch(p), 0.9, 1.05)).enhance(0.72) for p in paths]
     n = len(frames)
-    total = max(n, 48)
+    total = n + 36  # the logo builds, then holds while the background keeps moving
     out = []
     for i in range(total):
         t = i / total
@@ -41,9 +40,9 @@ for name, paths in BG.items():
     pal = Image.new("RGB", (W, H * 3))
     for j, k in enumerate((n - 1, total // 2, total - 1)):
         pal.paste(out[min(k, total - 1)], (0, H * j))
-    pal = pal.convert("P", palette=Image.ADAPTIVE, colors=200)
-    q = [f.quantize(palette=pal, dither=Image.Dither.FLOYDSTEINBERG) for f in out]
-    q[0].save(f"refs/sticker/{name}.gif", save_all=True, append_images=q[1:], duration=[durs[min(i, n - 1)] if i < n else 90 for i in range(total)], loop=0, optimize=True)
+    pal = pal.convert("P", palette=Image.ADAPTIVE, colors=160)
+    q = [f.quantize(palette=pal, dither=Image.Dither.NONE) for f in out]
+    q[0].save(f"refs/sticker/{name}.gif", save_all=True, append_images=q[1:], duration=[durs[min(i, n - 1)] if i < n else 70 for i in range(total)], loop=0, optimize=True)
     out[-1].resize((1280, 720), Image.LANCZOS).save(f"refs/sticker/{name}-cover.jpg", quality=90)
     log.append(f"{name}: {total} frames {os.path.getsize(f'refs/sticker/{name}.gif')//1024} KB")
 open("refs/sticker/log.txt", "w").write("\n".join(log))
