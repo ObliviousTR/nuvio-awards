@@ -1,4 +1,4 @@
-# Spotlight status — 2026-10-20
+# Spotlight status — 2026-10-21
 
 Next rotation (all rotating cards): **2026-10-26**
 Next Cultural Pulse theme starts: **2026-10-25**
@@ -16,7 +16,7 @@ Next Cultural Pulse theme starts: **2026-10-25**
 | The Cultural Pulse | Slashers & Masked Killers | 100 | 79 |  |
 | Fresh Out of Theaters | daily | 50 | 42 |  |
 | Box Office Champions | daily | 40 | 100 |  |
-| Certified Fresh & Must-See | daily | 60 | 49 |  |
+| Certified Fresh & Must-See | daily | 60 | 50 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 974169 Jenna Ortega (Acting)
