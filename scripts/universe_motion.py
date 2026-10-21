@@ -718,7 +718,7 @@ class DCU(Mark2):
 
 class BatmanGotham(Mark2):
     """THE BATMAN title card (its own animated sticker) cuts in over a red bat-signal glow; lightning once."""
-    build, hold = 34, 30
+    build, hold = 46, 30  # the title card assembles at its own slow pace (about 2.8 s)
     tag, tagcol = "BATMAN  ·  GOTHAM  ·  JOKER  ·  THE PENGUIN", (235, 200, 200)
 
     def __init__(self):
@@ -730,11 +730,11 @@ class BatmanGotham(Mark2):
         fg = self.fog[0 if h is not None else self.i % len(self.fog)]
         place(cv, tint(fg, (200, 20, 20), 0.55), W / 2, H / 2 - 30, 0.32 * ease(t / 0.5))
         n = len(self.fr)
-        lg = self.fr[min(n - 1, int(ease(min(1, t / 0.85)) * (n - 1)))]
+        lg = self.fr[min(n - 1, int(min(1, t / 0.95) * (n - 1)))]
         a = min(1, t / 0.12)
         place(cv, glow(padded(lg, 40), 30, (255, 20, 20), 0.8 * a), W / 2, H / 2 - 20, 1)
         place(cv, lg, W / 2, H / 2 - 20, a)
-        flash(cv, 0.45 if 0.5 < t < 0.54 else 0, (230, 235, 255))
+        flash(cv, 0.45 if 0.6 < t < 0.63 else 0, (230, 235, 255))
         self.tag_y = H / 2 - 20 + lg.height / 2 + 40
         return self.finish(cv, t, h, 100)
 
