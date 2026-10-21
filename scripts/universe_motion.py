@@ -317,63 +317,83 @@ def comic_word(text, size, fill, outline=(10, 10, 14), ow=7, dots=True):
 
 
 class SpiderVerse(Mark2):
-    """A spider drops in on its thread from the top of the card and twitches between universes; SPIDER-VERSE slams
-    together out of red and blue misprints in comic lettering."""
-    build, hold = 34, 30
+    """Brooklyn graffiti: Spider-Verse is sprayed on left to right in a mist of paint, the paint drips, the pink and
+    cyan misprints snap into register, and a pink spider drops in on its thread to sit on the tag."""
+    build, hold = 36, 30
     tag, tagcol = "EVERY SPIDER  ·  EVERY UNIVERSE", (255, 255, 255)
+    PINK, CYAN = (255, 40, 150), (40, 220, 255)
 
     def __init__(self):
-        FONTS["bangers"] = "ofl/bangers/Bangers-Regular.ttf"
-        self.face = comic_word("SPIDER-VERSE", 178, (232, 30, 44))
-        self.red = comic_word("SPIDER-VERSE", 178, (255, 40, 80), outline=(255, 40, 80), dots=False)
-        self.blue = comic_word("SPIDER-VERSE", 178, (30, 140, 255), outline=(30, 140, 255), dots=False)
-        self.sp = spider(150)
-        self.sp_r = tint(self.sp, (255, 30, 60), 1.0)
-        self.sp_b = tint(self.sp, (30, 150, 255), 1.0)
+        FONTS["sedgwick"] = "ofl/sedgwickavedisplay/SedgwickAveDisplay-Regular.ttf"
+        word = shear(text_layer("Spider-Verse", font("sedgwick", 190), (255, 255, 255)), 0.12)
+        w, h = word.size
+        self.word = Image.new("RGBA", (w, h + 90), (0, 0, 0, 0))
+        self.word.alpha_composite(word)
+        self.drip = Image.new("RGBA", (w, h + 90), (0, 0, 0, 0))
+        d = ImageDraw.Draw(self.drip)
+        a = word.getchannel("A")
+        rnd = random.Random(3)
+        for _ in range(18):
+            x = rnd.randint(10, w - 10)
+            ys = [y for y in range(h) if a.getpixel((x, y)) > 128]
+            if not ys:
+                continue
+            y0, L, r = ys[-1], rnd.randint(20, 80), rnd.uniform(2.5, 5)
+            d.line((x, y0 - 4, x, y0 + L), fill=(255, 255, 255, 255), width=round(r * 2))
+            d.ellipse((x - r * 1.3, y0 + L - r, x + r * 1.3, y0 + L + r * 1.6), fill=(255, 255, 255, 255))
+        self.sp = tint(spider(112), self.PINK, 1.0)
+        self.nz = noise((480, 140), 1, 7)
+
+    def solid(self, layer, col):
+        out = Image.new("RGBA", layer.size, col + (0,))
+        out.putalpha(layer.getchannel("A"))
+        return out
 
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        wy = H / 2 + 60
-        sy_end = wy - self.face.height / 2 - self.sp.height / 2 - 18
-        # the drop: falls fast, overshoots, settles; a slow sway afterwards
-        p = min(1, t / 0.4)
-        y = -self.sp.height + (sy_end + self.sp.height) * (1 - (1 - p) ** 3) + (math.sin(p * math.pi * 2.2) * 26 * (1 - p) if p < 1 else 0)
-        sway = math.sin(self.i * 0.24) * (6 if t < 0.6 else 3)
-        sp = self.sp.rotate(sway, resample=Image.BICUBIC, expand=True)
-        thread = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        ImageDraw.Draw(thread).line((W / 2, 0, W / 2 + sway * 2, y - self.sp.height / 2 + 14), fill=(255, 255, 255, 190), width=2)
-        cv.alpha_composite(thread)
-        rnd = random.Random(self.i * 31)
-        twitch = (h is not None and int(h * 40) % 9 == 0) or (0.42 < t < 0.5)
-        if twitch:
-            dx = rnd.choice((-1, 1)) * rnd.uniform(6, 14)
-            place(cv, alpha(self.sp_b, 0.85), W / 2 + dx, y + 3)
-            place(cv, alpha(self.sp_r, 0.85), W / 2 - dx, y - 3)
-        place(cv, glow(padded(sp, 20), 10, (255, 255, 255), 0.5), W / 2, y)
-        place(cv, sp, W / 2, y)
-        # the word: misprints converge, then the inked face lands
-        k = max(0, min(1, (t - 0.3) / 0.5))
-        e = ease(k)
-        off = 7 + (1 - e) * 120
-
-        def put(layer, dx, dy, a):
-            if a <= 0:
-                return
-            l = alpha(layer, a)
-            if k < 1:
-                sl = Image.new("RGBA", l.size, (0, 0, 0, 0))
-                for yy in range(0, l.height, 14):
-                    sl.paste(l.crop((0, yy, l.width, min(l.height, yy + 14))), (round(rnd.uniform(-1, 1) * 40 * (1 - e)), yy))
-                l = sl
-            place(cv, l, W / 2 + dx, wy + dy)
-        a = min(1, max(0, (t - 0.25) / 0.2))
-        if twitch and h is not None:
-            off = 14
-        put(self.blue, off, off * 0.15, a)
-        put(self.red, -off, -off * 0.15, a)
-        put(self.face, 0, 0, max(0, (t - 0.55) / 0.2) if t < 0.75 else 1)
-        self.tag_y = wy + self.face.height / 2 + 30
-        return self.finish(cv, t, h)
+        cx, cy = W / 2, H / 2 + 40
+        rnd = random.Random(self.i * 17)
+        # spray: the tag fills in left to right, rough-edged; the drips run once a stretch is painted
+        p = min(1, t / 0.62)
+        body = wipe(self.word, p, soft=90)
+        body = dissolve(body, min(1, p * 1.25), self.nz, soft=60) if p < 1 else body
+        dr = vwipe(wipe(self.drip, p, soft=90), max(0, (t - 0.35) / 0.5), soft=30, up=False)
+        lay = body.copy()
+        lay.alpha_composite(dr)
+        e = ease((t - 0.45) / 0.4)
+        off = 9 + (1 - e) * 34
+        if h is not None and int(h * 40) % 11 == 0:
+            off = 18  # a glitch beat between universes
+        k = 0.55
+        place(cv, glow(padded(lay, 40), 22, self.PINK, 0.8 * (0.9 + 0.1 * rnd.random() if h is not None else 1)), cx, cy)
+        place(cv, self.solid(lay, self.PINK), cx + off, cy + off * k)
+        place(cv, self.solid(lay, self.CYAN), cx - off, cy - off * k)
+        place(cv, lay, cx, cy)
+        if p < 1:  # paint mist at the nozzle
+            x0 = cx - self.word.width / 2 + p * self.word.width
+            d = ImageDraw.Draw(cv)
+            for _ in range(70):
+                x = x0 + rnd.gauss(0, 18)
+                y = cy - 40 + rnd.gauss(0, 55)
+                r = rnd.uniform(0.8, 2.6)
+                c = rnd.choice(((255, 255, 255), self.PINK, self.CYAN))
+                d.ellipse((x - r, y - r, x + r, y + r), fill=c + (rnd.randint(120, 230),))
+        # the spider drops in on its thread and sits on the tag
+        q = max(0, min(1, (t - 0.55) / 0.35))
+        if q > 0:
+            sx, sy_end = cx + 300, cy - 200
+            y = -60 + (sy_end + 60) * (1 - (1 - q) ** 3) + (math.sin(q * math.pi * 2.2) * 18 * (1 - q) if q < 1 else 0)
+            sway = math.sin(self.i * 0.24) * 4
+            sp = self.sp.rotate(-14 + sway, resample=Image.BICUBIC, expand=True)
+            thread = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(thread).line((sx, 0, sx + sway * 2, y - sp.height / 2 + 12), fill=(255, 255, 255, 170), width=2)
+            cv.alpha_composite(thread)
+            if off > 15:
+                place(cv, alpha(self.solid(sp, self.CYAN), 0.8), sx - 10, y - 4)
+            place(cv, glow(padded(sp, 20), 12, self.PINK, 0.8), sx, y)
+            place(cv, sp, sx, y)
+        self.tag_y = cy + self.word.height / 2 + 6
+        return self.finish(cv, t, h, 90)
 
 
 class MiddleEarth(Mark):
