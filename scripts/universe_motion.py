@@ -275,23 +275,33 @@ class MiddleEarth(Mark):
         self.tag = "THE LORD OF THE RINGS  ·  THE HOBBIT"
 
     def ring(self, spin, heat):
-        s = 360
-        im = Image.new("RGBA", (s, s), (0, 0, 0, 0))
-        d = ImageDraw.Draw(im)
-        squash = 0.28 + 0.22 * abs(math.cos(spin))  # the ring turning in space
-        rx, ry = 150, 150 * squash + 18
-        for k in range(26, 0, -1):  # band: stacked ellipses from dark rim to bright face
-            f = k / 26
-            col = (round(150 + 105 * f), round(95 + 125 * f), round(25 + 70 * f), 255)
-            d.ellipse((s / 2 - rx + k * 0.5, s / 2 - ry + k * 0.3, s / 2 + rx - k * 0.5, s / 2 + ry - k * 0.3), outline=col, width=3)
-        inner = Image.new("L", (s, s), 0)
-        ImageDraw.Draw(inner).ellipse((s / 2 - rx + 22, s / 2 - ry + 10, s / 2 + rx - 22, s / 2 + ry - 10), fill=255)
-        im.putalpha(ImageChops.subtract(im.getchannel("A"), inner))
-        g = glow(im, 22, (255, 140, 30), 1.6 * heat)
+        """A thick gold band seen at an angle: filled ellipse minus the hole, lit from above, glowing hot."""
+        s = 420
+        squash = 0.34 + 0.12 * math.cos(spin)
+        rx, ry = 170, 170 * squash
+        th = 30  # band thickness
+        band = Image.new("L", (s, s), 0)
+        d = ImageDraw.Draw(band)
+        d.ellipse((s / 2 - rx, s / 2 - ry, s / 2 + rx, s / 2 + ry + th * 0.6), fill=255)
+        d.ellipse((s / 2 - rx + th, s / 2 - ry + th * squash * 1.4, s / 2 + rx - th, s / 2 + ry - th * squash * 0.4), fill=0)
+        gold = Image.new("RGBA", (s, s))
+        for y in range(s):
+            f = (y - (s / 2 - ry)) / max(1, 2 * ry + th)
+            f = max(0, min(1, f))
+            # bright crown, deep amber belly, a second highlight near the lower rim
+            v = 0.55 + 0.45 * math.cos(f * math.pi * 1.6) ** 2
+            gold.paste((round(255 * v), round(196 * v), round(70 * v * 0.8), 255), (0, y, s, y + 1))
+        gold.putalpha(band)
+        hl = Image.new("L", (s, s), 0)
+        ImageDraw.Draw(hl).arc((s / 2 - rx + 8, s / 2 - ry + 4, s / 2 + rx - 8, s / 2 + ry - 4), 200, 330, fill=200, width=5)
+        hl = ImageChops.multiply(hl.filter(ImageFilter.GaussianBlur(2)), band)
+        shine = Image.new("RGBA", (s, s), (255, 250, 225, 0))
+        shine.putalpha(hl)
         out = Image.new("RGBA", (s, s), (0, 0, 0, 0))
-        out.alpha_composite(g)
-        out.alpha_composite(im)
-        return out
+        out.alpha_composite(glow(gold, 26, (255, 120, 20), 1.5 * heat))
+        out.alpha_composite(gold)
+        out.alpha_composite(shine)
+        return out.rotate(-8 + 6 * math.sin(spin), resample=Image.BICUBIC)
 
     def __call__(self, t, h):
         cv = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -299,7 +309,7 @@ class MiddleEarth(Mark):
         heat = 1.0 if t < 0.6 else 1.0 - 0.6 * min(1, (t - 0.6) / 0.4)
         ring = self.ring(spin, heat)
         ry = H / 2 - 120 if t > 0.45 else H / 2 - 120 + (1 - ease(t / 0.45)) * 120
-        place(cv, fit(ring, 260, 260), W / 2, ry, min(1, t / 0.2))
+        place(cv, fit(ring, 300, 300), W / 2, ry, min(1, t / 0.2))
         p = max(0, (t - 0.4) / 0.55)
         if p > 0:
             hot = wipe(self.hot, p, soft=80)
@@ -322,7 +332,9 @@ class WizardingWorld(Mark):
     build, hold = 34, 30
 
     def __init__(self):
-        self.sig = [fit(trim(f), 330, 330) for f in sticker("L2lkyiSIYFq6f4gAqq")]
+        fr = [f for f in sticker("L2lkyiSIYFq6f4gAqq")
+              if sum(1 for v in f.getchannel("A").resize((40, 27)).getdata() if v > 200) < 300]
+        self.sig = [fit(trim(f), 330, 330) for f in fr if f.getchannel("A").getbbox()]
         self.logo = fit(trim(whiten_dark(commons("File:Wizarding World logo.svg"))), 660, 230)
         rnd = random.Random(7)
         self.sparks = [(rnd.uniform(0.3, 0.7) * W, rnd.uniform(0.35, 0.8) * H, rnd.uniform(-1, 1), rnd.uniform(0.5, 1)) for _ in range(70)]
@@ -359,7 +371,7 @@ class StarWars(Mark):
     build, hold = 30, 30
 
     def __init__(self):
-        self.logo = trim(tmdb_logo(11))
+        self.logo = trim(commons("File:Star Wars Logo.svg"))
         rnd = random.Random(3)
         self.stars = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(0.4, 1.0)) for _ in range(260)]
 
