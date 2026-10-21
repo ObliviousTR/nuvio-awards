@@ -50,15 +50,21 @@ FOLDERS = [
 
 # ---------------------------------------------------------------- picking
 def textless(kind, tid):
+    """Best-voted textless backdrop that isn't too dark to fill letters with (checked on a small copy)."""
     im = tmdb(f"/{kind}/{tid}/images", include_image_language="null") or {}
     bd = [b for b in im.get("backdrops", []) if not b.get("iso_639_1") and b["width"] >= 1280]
     bd.sort(key=lambda b: (-b["vote_count"], -b["vote_average"], -b["width"]))
-    return bd[0]["file_path"] if bd else None
+    from PIL import ImageStat
+    for b in bd[:6]:
+        sm = art.fetch(b["file_path"], "w300")
+        if sm is not None and 60 <= ImageStat.Stat(sm.convert("L")).mean[0] <= 175:
+            return b["file_path"]
+    return None
 
 
 def candidates(rule, kind, today):
     ago = lambda d: (today - dt.timedelta(days=d)).isoformat()
-    common = {"with_original_language": "en", "without_genres": "16|10763|10764|10766|10767"}
+    common = {"with_original_language": "en", "without_genres": "16|10763|10764|10766|10767" + ("|10770" if kind == "movie" else "")}
     if rule == "trending":
         res = (tmdb(f"/trending/{kind}/week") or {}).get("results", [])
         return [r for r in res if r.get("original_language") == "en" and not NOISE & set(r.get("genre_ids", []))]
@@ -69,7 +75,7 @@ def candidates(rule, kind, today):
     elif rule == "boxoffice":
         p = dict(common, sort_by="revenue.desc", **{f"{date}.gte": ago(365), f"{date}.lte": today.isoformat()})
     elif rule == "certified":
-        p = dict(common, sort_by="vote_average.desc", **{f"{date}.gte": ago(730), "vote_count.gte": 1500})
+        p = dict(common, sort_by="vote_average.desc", **{f"{date}.gte": ago(730), "vote_count.gte": 2500})
     res = (tmdb(f"/discover/{kind}", **p) or {}).get("results", [])
     if rule == "certified":  # a different one of the acclaimed top five each week
         k = today.isocalendar()[1] % max(1, min(5, len(res)))
@@ -105,8 +111,8 @@ def subtitle(spec, name):
     if rule == "pool":
         return spec[3]
     n = name.upper()
-    return {"trending": f"#1 THIS WEEK  ·  {n}", "new": f"NOW STREAMING  ·  {n}" if spec[1] == "movie" else f"NEW THIS SEASON  ·  {n}",
-            "boxoffice": f"#1 OF THE YEAR  ·  {n}", "certified": f"MUST-SEE  ·  {n}"}[rule]
+    return {"trending": f"#1 THIS WEEK  ·  {n}", "new": f"NEW RELEASE  ·  {n}" if spec[1] == "movie" else f"NEW THIS SEASON  ·  {n}",
+            "boxoffice": f"#1 OF THE YEAR  ·  {n}", "certified": f"CRITICS' PICK  ·  {n}"}[rule]
 
 
 # ---------------------------------------------------------------- drawing
@@ -117,7 +123,7 @@ def fit_text(text, fnt_fn, size, maxw, tr):
 
 
 def make(img, kicker, word, split, accent, sub):
-    full, size = fit_text(word, fa.black, 250, W * 0.66, 6)
+    full, size = fit_text(word, fa.black, 300, W * 0.8, 6)
     fnt = fa.black(size)
     K = um.text_layer(kicker, fa.semi(40), accent, 14)
     S, _ = fit_text(sub, fa.semi, 44, full.width * 1.02, 8)
@@ -139,10 +145,20 @@ def make(img, kicker, word, split, accent, sub):
     full = Image.new("RGBA", (box[2] - box[0], box[3] - box[1]), (255, 255, 255, 0))
     full.putalpha(cv.crop(box))
     edges = [(a - box[0], b - box[0], True) for a, b in spans]
-    base = ImageEnhance.Brightness(art.graded(img, 1.0, 1.1, (W, H))).enhance(0.5)
-    texsrc = ImageEnhance.Color(ImageEnhance.Brightness(art.graded(img, 1.0, 1.1, (W, H))).enhance(1.35)).enhance(1.25)
+    base = ImageEnhance.Brightness(art.graded(img, 1.0, 1.08, (W, H))).enhance(0.6)
+    # the letters' fill: the same scene, contrast-stretched, lifted to a bright mean and warmed with the accent,
+    # so even a dark still reads as a solid picture inside the letters
+    from PIL import ImageOps, ImageStat
+    t = ImageOps.autocontrast(art.graded(img, 1.0, 1.0, (W, H)), cutoff=2)
+    t = ImageEnhance.Brightness(t).enhance(max(1.0, 165 / max(1, ImageStat.Stat(t.convert("L")).mean[0])))
+    grad = Image.new("RGB", (W, H))
+    gd = ImageDraw.Draw(grad)
+    for y in range(H):
+        f = y / H
+        gd.line((0, y, W, y), fill=tuple(round(accent[i] * (1 - 0.35 * f) + 255 * 0.15 * (1 - f)) for i in range(3)))
+    texsrc = ImageEnhance.Color(Image.blend(t, grad, 0.28)).enhance(1.2)
     ring = fa.outline_text(full, 3, (255, 255, 255), 235)
-    cx, cy = W / 2, H * 0.47
+    cx, cy = W / 2, H * 0.48
 
     def frame(p, z, sweep_s=None):
         bg = fa.vignette(art.zoomed(base, 0.03 + 0.05 * z), 0.9).convert("RGBA")
