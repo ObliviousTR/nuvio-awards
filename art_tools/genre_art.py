@@ -39,6 +39,76 @@ GENRES = {
 }
 
 
+# Behind each genre card: iconic films whose one picture says the genre and the film at once (Kill Bill's yellow
+# suit, the Grand Budapest's pink hotel) - not whatever is popular this month. Three of them play at a time; the
+# trio moves on every month through the list, so the card changes while always staying on-message.
+ICONIC = {
+    "Action & Adventure": [("Kill Bill: Vol. 1", 2003), ("John Wick", 2014), ("Die Hard", 1988), ("Gladiator", 2000),
+                           ("Raiders of the Lost Ark", 1981), ("Top Gun: Maverick", 2022),
+                           ("Mission: Impossible - Fallout", 2018), ("Terminator 2: Judgment Day", 1991)],
+    "Sci-Fi & Fantasy": [("Dune: Part Two", 2024), ("Blade Runner 2049", 2017), ("The Matrix", 1999),
+                         ("Star Wars", 1977), ("The Lord of the Rings: The Fellowship of the Ring", 2001),
+                         ("2001: A Space Odyssey", 1968), ("Avatar", 2009), ("Back to the Future", 1985)],
+    "Comedy": [("The Big Lebowski", 1998), ("Home Alone", 1990), ("Superbad", 2007), ("Ferris Bueller's Day Off", 1986),
+               ("The Hangover", 2009), ("Barbie", 2023), ("Dumb and Dumber", 1994), ("Anchorman: The Legend of Ron Burgundy", 2004)],
+    "Animation": [("Shrek", 2001), ("The Lion King", 1994), ("Up", 2009), ("Spider-Man: Into the Spider-Verse", 2018),
+                  ("Coco", 2017), ("WALL·E", 2008), ("Inside Out", 2015), ("Frozen", 2013)],
+    "Drama": [("Forrest Gump", 1994), ("Fight Club", 1999), ("Whiplash", 2014), ("Good Will Hunting", 1997),
+              ("Oppenheimer", 2023), ("The Green Mile", 1999), ("American Beauty", 1999), ("Moonlight", 2016)],
+    "Crime": [("Pulp Fiction", 1994), ("Goodfellas", 1990), ("Heat", 1995), ("Scarface", 1983), ("The Departed", 2006),
+              ("Reservoir Dogs", 1992), ("Joker", 2019), ("Taxi Driver", 1976)],
+    "Horror": [("It", 2017), ("The Exorcist", 1973), ("Halloween", 1978), ("Get Out", 2017), ("Scream", 1996),
+               ("Hereditary", 2018), ("A Nightmare on Elm Street", 1984), ("The Conjuring", 2013)],
+    "Mystery & Thriller": [("Se7en", 1995), ("The Silence of the Lambs", 1991), ("Psycho", 1960), ("Gone Girl", 2014),
+                           ("Shutter Island", 2010), ("Prisoners", 2013), ("Zodiac", 2007), ("Rear Window", 1954)],
+    "Romance & Rom-Com": [("Titanic", 1997), ("The Notebook", 2004), ("La La Land", 2016), ("Before Sunrise", 1995),
+                          ("Notting Hill", 1999), ("Pretty Woman", 1990), ("Dirty Dancing", 1987), ("Casablanca", 1942)],
+    "Stand-Up Comedy": [("Eddie Murphy: Delirious", 1983), ("Eddie Murphy Raw", 1987), ("Bo Burnham: Inside", 2021),
+                        ("Dave Chappelle: Sticks & Stones", 2019), ("John Mulaney: Kid Gorgeous at Radio City", 2018),
+                        ("Hannah Gadsby: Nanette", 2018), ("Chris Rock: Bring the Pain", 1996), ("George Carlin: It's Bad for Ya", 2008)],
+    "Superhero": [("Avengers: Endgame", 2019), ("Spider-Man", 2002), ("Iron Man", 2008), ("Black Panther", 2018),
+                  ("Logan", 2017), ("Superman", 1978), ("The Avengers", 2012), ("Wonder Woman", 2017)],
+    "Martial Arts": [("Enter the Dragon", 1973), ("Ip Man", 2008), ("The Raid", 2011), ("Hero", 2002),
+                     ("Kung Fu Hustle", 2004), ("Drunken Master", 1978), ("Ong-Bak", 2003), ("The Karate Kid", 1984)],
+    "History & War": [("Apocalypse Now", 1979), ("Full Metal Jacket", 1987), ("1917", 2019), ("Dunkirk", 2017),
+                      ("Hacksaw Ridge", 2016), ("Platoon", 1986), ("Inglourious Basterds", 2009), ("Black Hawk Down", 2001)],
+    "Western": [("Once Upon a Time in the West", 1968), ("Django Unchained", 2012), ("Unforgiven", 1992),
+                ("True Grit", 2010), ("The Magnificent Seven", 1960), ("Tombstone", 1993), ("The Hateful Eight", 2015),
+                ("Butch Cassidy and the Sundance Kid", 1969)],
+}
+
+
+def find_movie(title, year):
+    for y in (year, None):
+        q = {"query": title, **({"primary_release_year": y} if y else {})}
+        r = (tmdb("/search/movie", **q) or {}).get("results", [])
+        if r:
+            return r[0]["id"], r[0]["title"]
+    return None, None
+
+
+def iconic(title, n=3, avoid=(), month=None):
+    """This month's trio from the genre's iconic list, each with its best-voted textless backdrop."""
+    import datetime as dt
+    pool = ICONIC.get(title, [])
+    if not pool:
+        return []
+    m = month if month is not None else (dt.date.today().year * 12 + dt.date.today().month)
+    start = (m * n) % len(pool)
+    order = pool[start:] + pool[:start]
+    out = []
+    for name, year in order:
+        tid, real = find_movie(name, year)
+        if not tid or tid in avoid:
+            continue
+        path = textless_backdrop("movie", tid)
+        if path:
+            out.append((tid, real, path))
+        if len(out) == n:
+            break
+    return out
+
+
 # genres a film must NOT carry to stand for a genre (a comedy with explosions reads as action, not comedy)
 EXCLUDE = {"Action & Adventure": "35|27|10749", "Sci-Fi & Fantasy": "35|27", "Comedy": "28|878|27|53|80|10752|14",
            "Animation": "27", "Drama": "28|35|27|878|14", "Crime": "35|878|14", "Horror": "35|10751",
@@ -360,7 +430,7 @@ def main():
             continue
         keep = [p[0] for p in prev.get(t, [])]
         try:
-            pk = popular(t, GENRES[t][4], 3, keep, avoid=used)
+            pk = iconic(t, 3, avoid=used)
         except Exception as e:
             print("pick failed", t, e)
             pk = []
