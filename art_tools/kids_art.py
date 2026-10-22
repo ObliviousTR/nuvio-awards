@@ -21,11 +21,11 @@ CARDS = {
                             ("movie", "The Goonies", 1985), ("movie", "E.T. the Extra-Terrestrial", 1982), ("movie", "Hook", 1991),
                             ("movie", "Night at the Museum", 2006), ("movie", "Matilda", 1996)]),
     "Saturday Morning & Classic Cartoons": ("SATURDAY MORNING", "NOSTALGIC CARTOONS & CLASSICS", (16, 138, 177),
-                                            ("tv", "Looney Tunes", 0),
-                                            [("tv", "Tom and Jerry", 1965), ("tv", "Scooby-Doo, Where Are You!", 1969),
-                                             ("tv", "Batman: The Animated Series", 1992), ("tv", "Teenage Mutant Ninja Turtles", 1987),
-                                             ("tv", "DuckTales", 1987), ("tv", "Dexter's Laboratory", 1996),
-                                             ("tv", "The Powerpuff Girls", 1998), ("tv", "SpongeBob SquarePants", 1999)]),
+                                            ("tv", "Looney Tunes", 0, 2),
+                                            [("tv", "Scooby-Doo, Where Are You!", 1969), ("tv", "Batman: The Animated Series", 1992, 3),
+                                             ("tv", "Teenage Mutant Ninja Turtles", 1987), ("tv", "DuckTales", 1987),
+                                             ("tv", "Dexter's Laboratory", 1996, 3), ("tv", "The Powerpuff Girls", 1998, 1),
+                                             ("tv", "SpongeBob SquarePants", 1999)]),
     "Disney & Pixar Magic": ("DISNEY & PIXAR", "BELOVED CLASSICS & MODERN FAVOURITES", (120, 170, 255), ("movie", "Coco", 2017),
                              [("movie", "Toy Story", 1995), ("movie", "Finding Nemo", 2003), ("movie", "Moana", 2016),
                               ("movie", "Aladdin", 1992), ("movie", "Ratatouille", 2007), ("movie", "Zootopia", 2016),
@@ -41,11 +41,6 @@ CARDS = {
                           ("movie", "Kubo and the Two Strings", 2016), ("movie", "ParaNorman", 2012), ("movie", "Song of the Sea", 2014),
                           ("movie", "Wolfwalkers", 2020), ("movie", "Fantastic Mr. Fox", 2009)]),
 }
-# a cover that is a family of shows rather than one title: try these until one has key art
-COVER_ALTS = {"Looney Tunes": [("tv", "Looney Tunes Cartoons", 2020), ("tv", "The Bugs Bunny Show", 1960),
-                               ("tv", "The Looney Tunes Show", 2011), ("movie", "Looney Tunes: Back in Action", 2003)]}
-
-
 def fanart(kind, tid):
     key = os.environ.get("FANART_API_KEY")
     if not key or not tid:
@@ -121,13 +116,7 @@ def build(t, out):
     if cover is None:
         seq = popular_family(4)
     else:
-        first = None
-        for it in [cover] + COVER_ALTS.get(cover[1], []):
-            if it[2] == 0:
-                continue
-            first = art_of(it)
-            if first:
-                break
+        first = art_of(cover)
         seq = ([first] if first else []) + trio(pool, 3, avoid={first[0]} if first else set())
     imgs = [g.load_img(p) for _, _, p in seq]
     frame = g.make(title, sub, accent, imgs)
