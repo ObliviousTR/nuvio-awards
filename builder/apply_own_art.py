@@ -18,7 +18,7 @@ def url(rel):
     return RAW + rel + "?v=" + hashlib.md5(open(os.path.join(ART, rel), "rb").read()).hexdigest()[:8]
 
 
-GIF_ROWS = {"Iconic Actors"}  # rows whose every card now has our hover reel (art_tools/actor_art.py)
+GIF_ROWS = {"Iconic Actors", "Legendary Directors"}  # rows whose every card now has our hover reel (art_tools/actor_art.py)
 data = load(sys.argv[1])
 n = 0
 for row in data:
