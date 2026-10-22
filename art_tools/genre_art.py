@@ -78,7 +78,12 @@ ICONIC = {
 }
 
 
+KNOWN = {"The Raid": 94329}   # titles TMDB search gets wrong
+
+
 def find_movie(title, year):
+    if title in KNOWN:
+        return KNOWN[title], title
     for y in (year, None):
         q = {"query": title, **({"primary_release_year": y} if y else {})}
         r = (tmdb("/search/movie", **q) or {}).get("results", [])
