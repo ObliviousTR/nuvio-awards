@@ -630,7 +630,8 @@ class Searchlight(Monument):
         bx = W * 0.5 + math.tan(a1 * 0.9) * (H + 10 - cy)
         m = Image.new("L", self.l.size, 0)
         lx = bx - (W - self.l.width) / 2
-        ImageDraw.Draw(m).rectangle((0, 0, lx, self.l.height), fill=255)
+        if lx > 0:
+            ImageDraw.Draw(m).rectangle((0, 0, lx, self.l.height), fill=255)
         reveal = m.filter(ImageFilter.GaussianBlur(40))
         lit = 1.0 if t > 0.62 else None
         li = self.l.copy()
