@@ -162,10 +162,10 @@ def scene(img):
     d = ImageDraw.Draw(m)
     for y in range(H):
         f = max(0.0, (y / H - 0.42) / 0.58)
-        d.line((0, y, W, y), fill=round(225 * f ** 1.3))
+        d.line((0, y, W, y), fill=round(238 * f ** 1.15))
     side = Image.new("L", (W, 1))
     for x in range(W):
-        side.putpixel((x, 0), round(120 * max(0.0, 1 - x / (W * 0.6)) ** 1.6))
+        side.putpixel((x, 0), round(175 * max(0.0, 1 - x / (W * 0.62)) ** 1.5))
     m = ImageChops.lighter(m, ImageChops.multiply(side.resize((W, H)), Image.linear_gradient("L").resize((W, H))))
     return Image.composite(Image.new("RGB", (W, H), (6, 6, 10)), im, m)
 
