@@ -149,9 +149,17 @@ def make(title, sub, accent, imgs):
     bars = [scene(i) for i in imgs]
     S = len(bars)
     probe = ImageDraw.Draw(Image.new("L", (1, 1)))
-    title_y = round(H * 0.752) - tf.getbbox("A")[1]  # cap top at 73.8 % of the height, as on Kaptain's cards
-    sub_y = round(H * 0.866) - sf.getbbox("A")[1]
-    bar = (x0 - round(26 * k), round(H * 0.728), x0 - round(20 * k), round(H * 0.888))
+    # the type block: title caps + gap + subtitle caps; the bar runs exactly alongside it (same height, centred)
+    tb, sb = tf.getbbox("ACTION"), sf.getbbox("ACTION")
+    cap_t, cap_s = tb[3] - tb[1], sb[3] - sb[1]
+    gap = round(cap_t * 0.42)
+    block = cap_t + gap + cap_s
+    pad = round(cap_s * 0.35)
+    bottom = round(H * 0.875)
+    top = bottom - block
+    title_y = top - tb[1]
+    sub_y = top + cap_t + gap - sb[1]
+    bar = (x0 - round(28 * k), top - pad, x0 - round(21 * k), bottom + pad)
     grey = (214, 220, 232)
     L0, L1 = 5 / 120, 105 / 120
 
@@ -184,23 +192,41 @@ def make(title, sub, accent, imgs):
             lay.putalpha(lay.getchannel("A").point(lambda v: round(v * a)))
         cv.alpha_composite(lay, (round(x), round(y)))
 
+    sub_grey, sub_acc = sub_layer(grey), sub_layer(accent)
+
+    def fill_amount(t):
+        """Genre colour flows in after the type has arrived, and drains again before the loop ends."""
+        return ease((t - 0.12) / 0.16) if t < 0.9 else 1 - ease((t - 0.9) / 0.06)
+
     def type_in(cv, t, out, c):
-        """Bar grows up, letters rise in one by one, the subtitle slides in from the left; all fade at the loop end."""
+        """Bar grows up and letters rise in one by one, the subtitle slides in from the left (all neutral); then the
+        genre colour fills the bar from the bottom up and the subtitle from left to right; at the loop end it drains
+        and the type fades."""
         d = ImageDraw.Draw(cv)
-        gb = ease(t / 0.06) * out
-        if gb > 0:
-            top = bar[3] - (bar[3] - bar[1]) * ease(t / 0.06)
-            d.rectangle((bar[0], top, bar[2], bar[3]), fill=mix(accent, (255, 255, 255), c) + (round(255 * out),))
+        g = ease(t / 0.06)
+        f = fill_amount(t)
+        if g > 0 and out > 0:
+            btop = bar[3] - (bar[3] - bar[1]) * g
+            d.rectangle((bar[0], btop, bar[2], bar[3]), fill=grey + (round(255 * out),))
+            if f > 0:
+                ftop = bar[3] - (bar[3] - bar[1]) * f
+                d.rectangle((bar[0], ftop, bar[2], bar[3]), fill=accent + (round(255 * out),))
         for k_, (lx, lay) in enumerate(letters):
             p_ = ease((t - 0.02 - k_ * 0.012) / 0.07)
             put(cv, lay, lx, title_y + (1 - p_) * 26, p_ * out)
-        p_ = ease((t - 0.07) / 0.09)
-        put(cv, sub_layer(mix(grey, accent, c)), x0 + 2 - (1 - p_) * 60, sub_y, p_ * out)
+        p_ = ease((t - 0.06) / 0.09)
+        sx = x0 + 2 - (1 - p_) * 60
+        lay = sub_grey
+        if f > 0:
+            m = Image.new("L", lay.size, 0)
+            ImageDraw.Draw(m).rectangle((0, 0, round(sw * f), sub_h), fill=255)
+            lay = Image.composite(sub_acc, sub_grey, m)
+        put(cv, lay, sx, sub_y, p_ * out)
 
     def cover():
-        cv = scene(imgs[0]) if False else bars[0].copy().convert("RGBA")
+        cv = bars[0].copy().convert("RGBA")
         d = ImageDraw.Draw(cv)
-        d.rectangle(bar, fill=accent + (255,))
+        d.rectangle(bar, fill=grey + (255,))
         tracked(d, (x0, title_y), title, tf, (255, 255, 255, 255), sp_t)
         tracked(d, (x0 + 2, sub_y), sub, sf, grey + (255,), sp_s)
         return cv.convert("RGB")
