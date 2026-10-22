@@ -163,31 +163,35 @@ def build(name, cover_url, hover_url, out, idx=0):
 
     N_ = 150
     CLOSE0, CLOSE1, OPEN0, OPEN1 = 6, 20, 128, 144
-    seg = (OPEN0 - CLOSE1 + 10) / len(films)   # each film's share of the screen time
-    XF = 9                                      # dissolve length
+    FIN, FOUT = CLOSE1, OPEN0 - 6              # films on screen between these (dips to black at both ends)
+    seg = (FOUT - FIN) / len(films)            # each film's share of the screen time
+    XF = 9                                     # dissolve length
+    black = Image.new("RGB", (W, H), (0, 0, 0))
+    bblack = Image.new("RGB", (W, bh), (0, 0, 0))
+
+    def film_at(tt):
+        j = min(len(films) - 1, max(0, int(tt // seg)))
+        pic = shot(j, min(1, max(0, (tt - j * seg + XF) / (seg + XF))))
+        if j + 1 < len(films) and tt > (j + 1) * seg - XF:
+            a_ = ease((tt - ((j + 1) * seg - XF)) / XF)
+            pic = Image.blend(pic, shot(j + 1, min(1, max(0, (tt - (j + 1) * seg + XF) / (seg + XF)))), a_)
+        return pic
+
     frames = []
     for i in range(N_):
         cl = ease((i - CLOSE0) / (CLOSE1 - CLOSE0)) if i < OPEN0 else 1 - ease((i - OPEN0) / (OPEN1 - OPEN0))
+        pre = ease((i - (CLOSE1 - 6)) / 6) if i < OPEN0 else 1 - ease((i - OPEN0) / 8)   # screen dark
+        vis = 0.0 if i < FIN else (ease((i - FIN) / 7) if i < FOUT else 1 - ease((i - FOUT) / 6))  # film up
         cv = cover.copy()
         if cl > 0:
-            # what's on screen: the films, dissolving into each other; the portrait under it while the bars move
-            tt = i - (CLOSE1 - 10)
-            j = min(len(films) - 1, max(0, int(tt // seg)))
-            u = (tt - j * seg) / seg
-            pic = shot(j, min(1, max(0, (tt - j * seg + 10) / (seg + 20))))
-            if j + 1 < len(films) and tt > (j + 1) * seg - XF:
-                a = ease((tt - ((j + 1) * seg - XF)) / XF)
-                pic = Image.blend(pic, shot(j + 1, min(1, max(0, (tt - (j + 1) * seg + 10) / (seg + 20)))), a)
-            fade_in = ease((i - (CLOSE1 - 10)) / 12) if i < OPEN0 else 1 - ease((i - OPEN0) / (OPEN1 - OPEN0 - 4))
-            band = Image.blend(cover.crop((0, b0, W, b1)), pic, fade_in)
-            black = Image.new("RGB", (W, H), (0, 0, 0))
-            cv = Image.blend(cover, black, 0.85 * cl)  # the portrait sinks into the dark as the bars come in
-            top = round(b0 * cl)
-            bot = round(H - (H - b1) * cl)
+            cv = Image.blend(cover, black, 0.85 * cl)          # the portrait sinks into the dark as the bars come in
+            band = Image.blend(cv.crop((0, b0, W, b1)), bblack, pre)
+            if vis > 0:
+                band = Image.blend(band, film_at(i - FIN), vis)
             cv.paste(band, (0, b0))
             dd = ImageDraw.Draw(cv)
-            dd.rectangle((0, 0, W, top), fill=(0, 0, 0))
-            dd.rectangle((0, bot, W, H), fill=(0, 0, 0))
+            dd.rectangle((0, 0, W, round(b0 * cl)), fill=(0, 0, 0))
+            dd.rectangle((0, round(H - (H - b1) * cl), W, H), fill=(0, 0, 0))
         cv = cv.convert("RGBA")
         hv = ease((i - CLOSE1 + 2) / 8) if i < OPEN0 else 1 - ease((i - OPEN0 + 6) / 8)
         if hv > 0:
@@ -201,18 +205,15 @@ def build(name, cover_url, hover_url, out, idx=0):
             tracked(ld, (W - m - round(tw), hy), tc, hud, (235, 235, 235, 230), round(W * 0.004))
             cv.alpha_composite(A.alpha_mul(layer, hv))
         cv.alpha_composite(name_lay)
-        # subtitle: the film on screen (with a short fade at each change), the original one outside the hover
-        if cl < 0.5 or i < CLOSE1 - 4 or i >= OPEN0 + 2:
-            k, a_sub = 0, 1.0 if (i < CLOSE1 - 10 or i > OPEN1 - 4) else max(abs(1 - 2 * cl), 0.0)
-        else:
-            tt = i - (CLOSE1 - 10)
+        # subtitle: the film on screen (short fades at each change), the original one outside the hover
+        if vis > 0:
+            tt = i - FIN
             j = min(len(films) - 1, max(0, int((tt + XF / 2) // seg)))
             pos = (tt + XF / 2) - j * seg
-            k = 1 + j
-            a_sub = min(1.0, pos / 5, (seg - pos) / 5 if j + 1 < len(films) else 1.0)
-            if i > OPEN0 - 6:
-                a_sub = min(a_sub, (OPEN0 + 2 - i) / 8)
-        cv.alpha_composite(A.alpha_mul(sub_lays[k], max(0.0, a_sub)))
+            a_sub = vis * min(1.0, pos / 5 if j else 1.0, (seg - pos) / 5 if j + 1 < len(films) else 1.0)
+            cv.alpha_composite(A.alpha_mul(sub_lays[1 + j], max(0.0, a_sub)))
+        else:
+            cv.alpha_composite(A.alpha_mul(sub_lays[0], 1 - pre))
         frames.append(cv.convert("RGB").resize((OW, OH), Image.LANCZOS))
     dd_ = os.path.join(out, A.g.slug_of(name))
     os.makedirs(dd_, exist_ok=True)
