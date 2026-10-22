@@ -69,6 +69,29 @@ def fit_group(C, Hv):
     return float(s), ax * W / w, ay * H / h
 
 
+def group_core(C, Hv, s, ax, ay):
+    """Silhouette of the pop-out group in its hover pose: pixels that match the scaled cover but not the cover in
+    place (they moved), kept inside the anime-character mask, closed and hole-filled."""
+    from rembg import new_session, remove
+    from scipy import ndimage as ndi
+    eg = np.abs(Hv - warp(C, s, ax, ay)).max(2)
+    ec = np.abs(Hv - C).max(2)
+    m = np.asarray(remove(Image.fromarray(Hv.astype(np.uint8)), session=new_session("isnet-anime"), only_mask=True),
+                   dtype=np.float32) / 255
+    moved = (eg < 22) & (ec > 30) & (m > 0.5)
+    flat = (ec < 14) & (eg < 14) & (m > 0.5)          # flat colour areas: can't tell, keep if inside the group
+    core = ndi.binary_opening(moved, iterations=1)
+    core = ndi.binary_closing(core, iterations=14) & (m > 0.35)
+    core = ndi.binary_fill_holes(core)
+    core |= flat & ndi.binary_dilation(core, iterations=10)
+    core = ndi.binary_fill_holes(ndi.binary_closing(core, iterations=3))
+    lab, n = ndi.label(core)
+    if n:
+        sz = ndi.sum(core, lab, range(1, n + 1))
+        core = np.isin(lab, 1 + np.nonzero(sz > 3000)[0])
+    return core.astype(np.float32)
+
+
 def soft(mask, grow=0, feather=0):
     im = Image.fromarray((mask * 255).astype(np.uint8))
     if grow:
@@ -119,6 +142,9 @@ def build(slug, out_dir):
     word_bottom = H * 0.86
     s, ax, ay = fit_group(C, Hv)
     print(slug, "group scale %.3f anchor (%d, %d)" % (s, ax, ay))
+    coreH = soft(group_core(C, Hv, s, ax, ay), 0, 0.8)          # hover pose
+    coreC = warp(coreH[..., None].repeat(3, 2) * 255, 1 / s, ax, ay)[..., 0] / 255   # cover pose
+    glow = Gz * (1 - coreH)                                      # where the hover adds only light, not characters
 
     ed = lambda m: m[..., None]
     frames = []
@@ -140,15 +166,16 @@ def build(slug, out_dir):
         if breath > 0:
             out = out + ed(Bz * breath) * np.clip(Hv - C, 0, None)
 
-        # pop-out group: cover pose scaled up toward the hover pose, cross-faded into the hover pixels
+        # pop-out group: only the characters step forward; the background stays put and the glow fades up
         if grp > 0:
             g = max(0.0, grp)
+            a = min(1.0, g * 1.25)
+            out = out + ed(glow * min(1.0, g)) * (Hv - out)
             sc = 1 + (s - 1) * g
             cs = warp(C, sc, ax, ay)
             hs = warp(Hv, sc / s, ax, ay)
-            a = min(1.0, g * 1.25)
-            mix = cs + a * (hs - cs)
-            out = out + ed(Gz) * (mix - out)
+            mt = warp(coreC[..., None].repeat(3, 2) * 255, sc, ax, ay)[..., 0] / 255
+            out = out + ed(mt) * (cs + a * (hs - cs) - out)
         frames.append(Image.fromarray(np.clip(out, 0, 255).astype(np.uint8)).resize(OUT, Image.LANCZOS))
 
     os.makedirs(out_dir, exist_ok=True)
