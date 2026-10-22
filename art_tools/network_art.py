@@ -40,13 +40,19 @@ def accent_of(focus):
     return max(px, key=lambda p: p[3] * (max(p[:3]) - min(p[:3]) + 1))[:3]
 
 
-def shows(nets, n=3, kids=False, keep=()):
+SKIP_NAME = __import__("re").compile(r"\bWWE\b|^Raw$|SmackDown|\bNXT\b|Dragon Ball Super: Beerus")
+FACTUAL = {"Discovery Channel", "National Geographic", "History Channel", "Food Network"}
+
+
+def shows(nets, n=3, kids=False, keep=(), reality=False):
     """The channel's most popular shows right now (TMDB popularity, with a vote floor so obscure titles stay out).
     Shows picked last time stay while they are still in the channel's top 6, so the art only changes when the
     channel's line-up really moves. Picture: a textless POSTER (vertical key art, fits the portrait card) if TMDB has
     one, else a textless backdrop. Returns [(id, name, image)]."""
     r = (tmdb("/discover/tv", with_networks="|".join(map(str, nets)), sort_by="popularity.desc",
-              without_genres="10763|10767|10766" + ("" if kids else "|10762"), **{"vote_count.gte": 40}) or {}).get("results", [])
+              without_genres="10763|10767|10766" + ("" if kids else "|10762") + ("" if reality else "|10764"),
+              **{"vote_count.gte": 40}) or {}).get("results", [])
+    r = [s for s in r if not SKIP_NAME.search(s.get("name") or "")]  # wrestling broadcasts, specials
     top6 = r[:6]
     kept = [s for s in top6 if s["id"] in keep]
     order = kept + [s for s in r if s not in kept]
@@ -219,7 +225,7 @@ def build_one(job):
             mbs = [x for x in (tmdb("/network/94/images") or {}).get("logos", []) if x["file_path"].endswith(".png")]
             mbs = load("https://image.tmdb.org/t/p/original" + mbs[0]["file_path"]).convert("RGBA")
             logo = stack(white(fuji, keep=True), white(mbs))
-        picked = shows(NETS[t], 3, kids=t == "Cartoon Network", keep=keep)
+        picked = shows(NETS[t], 3, kids=t == "Cartoon Network", keep=keep, reality=t in FACTUAL)
         stills = [x[2] for x in picked]
         frame = make(logo, stills, tuple(accent))
         dd = os.path.join(out, slug_of(t))
