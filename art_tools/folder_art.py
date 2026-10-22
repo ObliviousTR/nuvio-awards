@@ -499,7 +499,7 @@ def render(job, out):
         p = min(1, i / (n * 0.55))
         small.append(frame(p, i / n).resize((512, 288) if full.width > full.height else (300, 450), Image.LANCZOS))
     small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=[55] * n, loop=0,
-                  quality=80, method=5, minimize_size=True, allow_mixed=True)
+                  quality=80, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
     return d
 
 

@@ -222,7 +222,7 @@ def build_one(job):
         n = 120  # 50 ms: 0.25 s in, 5 s lap with the films, 0.75 s breath and back
         frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
         frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
-                       loop=0, quality=80, method=5, minimize_size=True, allow_mixed=True)
+                       loop=0, quality=80, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
         frame(0, n).save(os.path.join(dd, "cover.jpg"), quality=90)
         strip = Image.new("RGB", (OW * 3, OH * 2))
         for jj, idx in enumerate([0, 20, 45, 70, 104, 119]):

@@ -1323,7 +1323,7 @@ def render(uid, out_dir):
     small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
     dur = [mark.dur(i, B) if hasattr(mark, "dur") else (40 if i < B else 70) for i in range(n)]
     small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=dur, loop=0,
-                  quality=80, method=5, minimize_size=True, allow_mixed=True)
+                  quality=80, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
     strip = Image.new("RGB", (GW * 4, GH * 2))
     for j, idx in enumerate([round(k * (n - 1) / 7) for k in range(8)]):
         strip.paste(small[idx], ((j % 4) * GW, (j // 4) * GH))

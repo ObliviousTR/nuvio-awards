@@ -225,7 +225,7 @@ def render(fid, kicker, word, split, accent, spec, out, today, used):
             dur.append(60)
         frames.append(f.resize((512, 288), Image.LANCZOS))
     frames[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=frames[1:], duration=dur, loop=0,
-                   quality=80, method=5, minimize_size=True, allow_mixed=True)
+                   quality=80, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
     return {"id": fid, "kind": kind, "tmdb": tid, "title": name, "subtitle": sub, "backdrop": path}
 
 

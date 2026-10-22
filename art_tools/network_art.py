@@ -233,7 +233,7 @@ def build_one(job):
         n = 120  # 6 s loop: 0.25 s colour in, 5 s lap with the shows, 0.75 s breath and back to the cover
         frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
         frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
-                       loop=0, quality=80, method=5, minimize_size=True, allow_mixed=True)
+                       loop=0, quality=80, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
         frame(0, n).resize((1000, 1500), Image.LANCZOS).save(os.path.join(dd, "cover.jpg"), quality=90)
         if t == "Fuji TV / MBS":  # hero + logo
             art.graded(stills[0], 0.95, 1.03, (1920, 1080)).save(os.path.join(dd, "backdrop.jpg"), quality=86)

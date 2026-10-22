@@ -22,7 +22,13 @@ def swap(obj, k):
     if not u or u.startswith(RAW) or "ObliviousTR/" in u:
         return
     if u in mp:
-        obj[k] = RAW + mp[u]; done += 1
+        rel = mp[u]
+        # animated focus images: the all-keyframe WebP next to the mirrored file (art_tools/keyframe_webp.py), which
+        # Nuvio Desktop can play at full speed
+        kf = os.path.splitext(rel)[0] + ".kf.webp"
+        if k == "focusGifUrl" and os.path.exists(os.path.join(ART, kf)):
+            rel = kf
+        obj[k] = RAW + rel; done += 1
     else:
         missing.add(u)
 

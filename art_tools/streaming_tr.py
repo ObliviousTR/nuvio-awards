@@ -286,7 +286,7 @@ def write(out, fid, frame, n, dur, cover_i, logo, hero):
     frames[cover_i].convert("RGB").save(os.path.join(d, "cover.jpg"), quality=90)
     small = [f.convert("RGB").resize((GW, GH), Image.LANCZOS) for f in frames]
     small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=dur, loop=0,
-                  quality=82, method=5, minimize_size=True, allow_mixed=True)
+                  quality=82, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
     if logo is not None:
         logo.save(os.path.join(d, "logo.png"))
     if hero is not None:
