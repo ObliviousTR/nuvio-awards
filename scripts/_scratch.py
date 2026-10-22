@@ -2,7 +2,7 @@
 import os, sys, subprocess
 os.makedirs("refs/s", exist_ok=True)
 log = ""
-for u in ("starwars", "matrix"):
+for u in ():
     r = subprocess.run([sys.executable, "scripts/universe_motion.py", "refs/s", u], capture_output=True, text=True)
     log += r.stdout + r.stderr[-1500:]
 r = subprocess.run([sys.executable, "art_tools/collection_art.py", "refs/s", "Action Collections"], capture_output=True, text=True)

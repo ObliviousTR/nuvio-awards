@@ -113,7 +113,7 @@ def build(title, out_dir):
     soft = ImageEnhance.Brightness(Image.fromarray(pile).filter(ImageFilter.GaussianBlur(16))).enhance(0.38)
     paths = [textless_poster(r) for r in refs]
     posters = []
-    pw, ph = round(W * 0.50), round(W * 0.50 * 1.5)
+    pw, ph = round(W * 0.56), round(W * 0.56 * 1.5)
     for p in paths:
         if not p:
             continue
@@ -126,7 +126,7 @@ def build(title, out_dir):
         frame_.alpha_composite(im, (4, 4))
         posters.append(frame_)
     # fanned places (left, right, then the centre one on top), each dealt in from below
-    places = [(0.30, 0.62, -10), (0.70, 0.62, 10), (0.50, 0.60, 0)][: len(posters)]
+    places = [(0.27, 0.60, -12), (0.73, 0.60, 12), (0.50, 0.575, 0)][: len(posters)]
     deal_at = [14, 24, 34]
     top_y = round(H * 0.07)
     frames = []
