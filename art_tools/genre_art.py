@@ -82,14 +82,14 @@ KNOWN = {"The Raid": 94329}   # titles TMDB search gets wrong
 
 
 def find_movie(title, year):
+    """TMDB id for a title: the result released within a year of `year` (exact title first), else the top hit."""
     if title in KNOWN:
         return KNOWN[title], title
-    for y in (year, None):
-        q = {"query": title, **({"primary_release_year": y} if y else {})}
-        r = (tmdb("/search/movie", **q) or {}).get("results", [])
-        if r:
-            return r[0]["id"], r[0]["title"]
-    return None, None
+    r = (tmdb("/search/movie", query=title) or {}).get("results", [])
+    near = [x for x in r if (x.get("release_date") or "0000")[:4].isdigit() and abs(int(x["release_date"][:4]) - year) <= 1]
+    exact = [x for x in near if x.get("title", "").lower() == title.lower()]
+    pick = (exact or near or r or [None])[0]
+    return (pick["id"], pick["title"]) if pick else (None, None)
 
 
 def fanart_backgrounds(tid):
