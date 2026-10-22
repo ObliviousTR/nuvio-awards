@@ -113,42 +113,110 @@ def find_title(title, year, kind):
     return (near or r or [{}])[0].get("id")
 
 
-def role_image(pid, kind, tid):
-    """A frame of the role: an image of that title tagged with the actor (a still or backdrop), else the title's
-    textless key art."""
-    page = 1
+_FACE = {}
+
+
+def face_models():
+    """OpenCV's YuNet face detector and SFace recogniser (opencv_zoo), fetched once."""
+    if not _FACE:
+        import cv2
+        cache = os.path.join(ROOT, "scripts", ".cache")
+        os.makedirs(cache, exist_ok=True)
+        base = "https://media.githubusercontent.com/media/opencv/opencv_zoo/main/models/"
+        paths = {}
+        for k, rel in (("det", "face_detection_yunet/face_detection_yunet_2023mar.onnx"),
+                       ("rec", "face_recognition_sface/face_recognition_sface_2021dec.onnx")):
+            p = os.path.join(cache, os.path.basename(rel))
+            if not os.path.exists(p):
+                open(p, "wb").write(urllib.request.urlopen(base + rel, timeout=120).read())
+            paths[k] = p
+        _FACE["det"] = cv2.FaceDetectorYN.create(paths["det"], "", (320, 320), 0.8)
+        _FACE["rec"] = cv2.FaceRecognizerSF.create(paths["rec"], "")
+    return _FACE["det"], _FACE["rec"]
+
+
+def faces(img):
+    """[(feature, box)] for the faces in a PIL image."""
+    import cv2
+    det, rec = face_models()
+    a = cv2.cvtColor(np.asarray(img.convert("RGB")), cv2.COLOR_RGB2BGR)
+    h, w = a.shape[:2]
+    det.setInputSize((w, h))
+    _, fs = det.detect(a)
+    out = []
+    for fc in (fs if fs is not None else []):
+        crop = rec.alignCrop(a, fc)
+        out.append((rec.feature(crop), fc[:4]))
+    return out
+
+
+def same(f1, f2):
+    import cv2
+    _, rec = face_models()
+    return rec.match(f1, f2, cv2.FaceRecognizerSF_FR_COSINE)
+
+
+def actor_faces(pid):
+    profs = (tmdb(f"/person/{pid}/images") or {}).get("profiles", [])[:6]
+    feats = []
+    for p in profs:
+        try:
+            fs = faces(g.art.fetch(p["file_path"], "w500"))
+        except Exception:
+            continue
+        if fs:
+            feats.append(max(fs, key=lambda x: x[1][2] * x[1][3])[0])
+    return feats
+
+
+def role_image(pid, kind, tid, refs):
+    """A frame of the role where the actor's face is on screen: the title's backdrops (textless first) are checked
+    against the actor's profile photos with a face recogniser; the best match with the biggest face wins. Returns
+    (image path, horizontal centre of the face 0..1) - else the title's textless key art, centred."""
+    im = tmdb(f"/{kind}/{tid}/images", include_image_language="null,en") or {}
+    bds = sorted(im.get("backdrops", []), key=lambda b: (bool(b.get("iso_639_1")), -b["vote_count"]))[:40]
     tagged = []
-    while page <= 4:
+    for page in (1, 2, 3):
         r = tmdb(f"/person/{pid}/tagged_images", page=page) or {}
-        for x in r.get("results", []):
-            m = x.get("media") or {}
-            if m.get("id") == tid and x.get("aspect_ratio", 0) > 1.3 and not x.get("iso_639_1"):
-                tagged.append(x)
+        tagged += [x for x in r.get("results", []) if (x.get("media") or {}).get("id") == tid and x.get("aspect_ratio", 0) > 1.3]
         if page >= r.get("total_pages", 1):
             break
-        page += 1
-    if tagged:
-        tagged.sort(key=lambda x: (-x.get("vote_count", 0), -x.get("width", 0)))
-        return tagged[0]["file_path"]
+    best = None
+    for b in tagged + bds:
+        try:
+            pic = g.art.fetch(b["file_path"], "w780").convert("RGB")
+        except Exception:
+            continue
+        for feat, box in faces(pic):
+            score = max((same(feat, r_) for r_ in refs), default=0)
+            if score >= 0.36:
+                area = box[2] * box[3] / (pic.width * pic.height)
+                key = (score > 0.45) * 1.0 + area * 6 - bool(b.get("iso_639_1")) * 0.3
+                if best is None or key > best[0]:
+                    best = (key, b["file_path"], (box[0] + box[2] / 2) / pic.width)
+        if best and best[0] > 1.25:
+            break
+    if best:
+        return best[1], best[2]
     if kind == "movie":
         fa = g.fanart_backgrounds(tid)
         if fa:
-            return fa[0]
-    im = tmdb(f"/{kind}/{tid}/images", include_image_language="null") or {}
-    bd = sorted([b for b in im.get("backdrops", []) if not b.get("iso_639_1")], key=lambda b: (-b["vote_count"], -b["vote_average"]))
-    return bd[0]["file_path"] if bd else None
+            return fa[0], 0.5
+    bd = [b for b in bds if not b.get("iso_639_1")]
+    return (bd[0]["file_path"], 0.5) if bd else (None, 0.5)
 
 
 def roles_of(name):
     pid = person_id(name)
+    refs = actor_faces(pid)
     out = []
     for item in ROLES.get(name, []):
         title, year = item[0], item[1]
         kind = item[2] if len(item) > 2 else "movie"
         tid = find_title(title, year, kind)
-        p = role_image(pid, kind, tid) if tid else None
+        p, cx = role_image(pid, kind, tid, refs) if tid else (None, 0.5)
         if p:
-            out.append((title, year, p))
+            out.append((title, year, p, cx))
     return out
 
 
@@ -161,8 +229,13 @@ def accent_of(hover):
     return tuple(int(v) for v in np.median(e, 0)) if len(e) > 40 else None
 
 
-def strip_frame(img, fw, fh):
-    im = g.art.cover_fit(img, fw, fh)
+def strip_frame(img, fw, fh, cx=0.5):
+    """Crop to the strip frame keeping the actor's face (at cx) inside."""
+    k = max(fw / img.width, fh / img.height)
+    im = img.resize((max(fw, round(img.width * k)), max(fh, round(img.height * k))), Image.LANCZOS)
+    x = min(max(0, round(cx * im.width - fw / 2)), im.width - fw)
+    y = (im.height - fh) // 2
+    im = im.crop((x, y, x + fw, y + fh))
     return ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.05)).enhance(1.05)
 
 
@@ -185,10 +258,17 @@ def build(name, cover_url, hover_url, out, idx=0):
     gl = Image.new("L", (W, H), 0)
     ImageDraw.Draw(gl).ellipse((-W * 0.2, -H * 0.1, W * 1.2, H * 0.8), fill=255)
     base = Image.composite(Image.new("RGB", (W, H), (40, 38, 40)), base, gl.filter(ImageFilter.GaussianBlur(200)))
-    subs = ["FEATURED FILMOGRAPHY"] + [f"{t.upper()} · {y}" for t, y, _ in roles]
+    def label(t, y):
+        t = t.upper()
+        for cut in (None, ",", ":", " ("):
+            tt = t.split(cut)[0].strip() if cut else t
+            if width(f"{tt} · {y}", font("SemiBold", round(26 * W / 1000)), round(9 * W / 1000)) <= W * 0.8:
+                return f"{tt} · {y}"
+        return f"{tt[:22].strip()} · {y}"
+    subs = ["FEATURED FILMOGRAPHY"] + [label(t, y) for t, y, _, _ in roles]
     blocks = []
     for s_ in subs:
-        b = letter(Image.new("RGB", (W, H), (0, 0, 0)), lines, s_[:44], tint=(12, 11, 12))
+        b = letter(Image.new("RGB", (W, H), (0, 0, 0)), lines, s_, tint=(12, 11, 12))
         blocks.append(b)
     # name block mask: the lettered area at the bottom
     bm = Image.new("L", (W, H), 0)
@@ -200,7 +280,7 @@ def build(name, cover_url, hover_url, out, idx=0):
     fh = round(fw * 0.62)
     gap = 30
     pitch = fh + gap
-    frames_img = [strip_frame(g.load_img(p), fw, fh) for _, _, p in roles]
+    frames_img = [strip_frame(g.load_img(p), fw, fh, cx) for _, _, p, cx in roles]
     n_r = len(frames_img)
     strip_h = pitch * n_r
     film = Image.new("RGBA", (sw, strip_h * 2), (22, 17, 14, 255))
@@ -281,7 +361,7 @@ def build(name, cover_url, hover_url, out, idx=0):
     for j, k in enumerate((0, 10, 30, 55, 80, 112)):
         strip.paste(out_frames[k], (j * OW, 0))
     strip.save(os.path.join(dd, "frames.jpg"), quality=80)
-    return [f"{t} ({y})" for t, y, _ in roles]
+    return [f"{t} ({y}){'' if cx != 0.5 else ' [no face match]'}" for t, y, _, cx in roles]
 
 
 def covers():
