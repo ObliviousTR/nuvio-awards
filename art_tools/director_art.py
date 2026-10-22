@@ -1,5 +1,5 @@
 """Legendary Directors row: the viewfinder. On hover black bars close in from top and bottom and turn the card into a
-2.39:1 cinema screen; on it three of the director's signature films play (fanart.tv's textless key art, slow push-in,
+1.85:1 cinema screen; on it three of the director's signature films play (fanart.tv's textless key art, slow push-in,
 soft dissolves) under a camera viewfinder in the card's accent colour (corner marks, blinking REC, running timecode);
 the subtitle under the name turns into "TITLE · YEAR"; then the bars open on the portrait again (endless, 7.5 s).
 The lettering is lifted off the cover and stays put, as on the Iconic Actors row.
@@ -17,6 +17,7 @@ from reletter import f as font, tracked, width
 from PIL import Image, ImageDraw, ImageFilter
 
 W, H = A.W, A.H
+RATIO = 1.85  # the screen (flat widescreen: a bigger picture than scope on a portrait card)
 OW, OH = A.OW, A.OH
 
 # director -> three signature films (title, year[, which fanart background]); the first is the one the card opens on
@@ -56,7 +57,7 @@ FILMS = {
     "Kathryn Bigelow": [("The Hurt Locker", 2008), ("Zero Dark Thirty", 2012), ("Point Break", 1991)],
     "Edgar Wright": [("Baby Driver", 2017), ("Shaun of the Dead", 2004), ("Scott Pilgrim vs. the World", 2010)],
     "Guy Ritchie": [("Snatch", 2000), ("Lock, Stock and Two Smoking Barrels", 1998), ("The Gentlemen", 2020)],
-    "Sofia Coppola": [("Lost in Translation", 2003), ("Marie Antoinette", 2006), ("The Virgin Suicides", 1999)],
+    "Sofia Coppola": [("Lost in Translation", 2003), ("Marie Antoinette", 2006, 1), ("The Virgin Suicides", 1999)],
     "Yorgos Lanthimos": [("Poor Things", 2023), ("The Favourite", 2018), ("The Lobster", 2015)],
     "Alex Garland": [("Ex Machina", 2015), ("Annihilation", 2018), ("Civil War", 2024)],
     "Jordan Peele": [("Get Out", 2017, 1), ("Us", 2019), ("Nope", 2022)],
@@ -125,7 +126,7 @@ def build(name, cover_url, hover_url, out, idx=0):
         sub_lays.append(lay)
 
     # the screen: 2.39:1, full width, above the name
-    bh = round(W / 2.39)
+    bh = round(W / RATIO)
     cy = round(H * 0.47)
     b0, b1 = cy - bh // 2, cy - bh // 2 + bh
     shots = []
@@ -157,7 +158,7 @@ def build(name, cover_url, hover_url, out, idx=0):
     hud = font("SemiBold", round(W * 0.03))
     hy = b0 - round(W * 0.06)
     tracked(d, (m + round(W * 0.04), hy), "REC", hud, (235, 235, 235, 230), round(W * 0.006))
-    tracked(d, (W // 2 - round(W * 0.06), hy), "2.39 : 1", hud, accent + (220,), round(W * 0.004))
+    tracked(d, (W // 2 - round(W * 0.06), hy), f"{RATIO:.2f} : 1", hud, accent + (220,), round(W * 0.004))
     rec_r = round(W * 0.012)
     rec_xy = (m + rec_r, hy + hud.getbbox("R")[1] + (hud.getbbox("R")[3] - hud.getbbox("R")[1]) // 2)
 
