@@ -5,6 +5,6 @@ log = ""
 for u in ():
     r = subprocess.run([sys.executable, "scripts/universe_motion.py", "refs/s", u], capture_output=True, text=True)
     log += r.stdout + r.stderr[-1500:]
-r = subprocess.run([sys.executable, "art_tools/collection_art.py", "refs/s", "Action Collections"], capture_output=True, text=True)
+r = subprocess.run([sys.executable, "art_tools/collection_art.py", "refs/s", "Action Collections", "Horror Collections"], capture_output=True, text=True)
 log += r.stdout + r.stderr[-3000:]
 open("refs/s/log.txt", "w").write(log)

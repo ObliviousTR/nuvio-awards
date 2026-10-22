@@ -1,8 +1,9 @@
-"""Film Collections row: Kaptain's cards (a table strewn with collection posters, the genre on a coloured band) deal
-three of the genre's best-known film series onto the table on hover:
-  the pile blurs and darkens, the band glides up to the top, three textless series posters are dealt one after
-  another (fanned, each with its shadow), the card edge breathes in the band colour, then the posters are swept away,
-  the band slides back and the pile comes back into focus (seamless loop).
+"""Film Collections row: Kaptain's table strewn with collection posters, the genre now in Kaptain's genre title logo
+(the Genres heroes' logos, kept in nuvio-art art/logos/genres) over a soft shadow instead of his flat band. On hover
+three of the genre's best-known series are dealt onto the table like DVD box sets:
+  the pile blurs and darkens, the logo glides up to the top, three titled series posters are dealt one after
+  another (fanned, each with its shadow), the card edge breathes in the genre colour, then the posters are swept
+  away, the logo comes back down and the pile into focus (seamless loop).
 Series that have their own card in Universes & Franchises are left out here. Picks are fixed (no monthly change).
 usage: python3 art_tools/collection_art.py OUT_DIR [titles...]
 """
@@ -20,6 +21,11 @@ W, H = 720, 1080          # work (2:3, as the app shows the card)
 OW, OH = 340, 510         # out (under 512 px for Nuvio Desktop)
 N, MS = 100, 50           # 5 s
 KAPTAIN = "https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/mirror/files/"
+LOGOS = "https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/art/logos/genres/"
+LOGO = {"Action Collections": "action", "Sci-Fi Collections": "science-fiction", "Fantasy Collections": "fantasy",
+        "Comedy Collections": "comedy", "Family & Animation Collections": "family", "Drama Collections": "drama",
+        "Crime Collections": "crime", "Horror Collections": "horror", "Mystery Collections": "mystery",
+        "Thriller Collections": "thriller", "War Collections": "war"}
 
 # title: Kaptain's cover, three TMDB collections (or ("movie", id) for a film list)
 CARDS = {
@@ -37,11 +43,11 @@ CARDS = {
 }
 
 
-def get(url):
+def get(url, mode="RGB"):
     for _ in range(3):
         try:
             return Image.open(io.BytesIO(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "nuvio-awards"}),
-                                                                timeout=60).read())).convert("RGB")
+                                                                timeout=60).read())).convert(mode)
         except Exception:
             continue
     raise RuntimeError("could not fetch " + url)
@@ -69,6 +75,26 @@ def textless_poster(ref):
     im = tmdb(f"/movie/{fid}/images", include_image_language="en") or {} if fid else {}
     ps = sorted(im.get("posters", []), key=rank)
     return ps[0]["file_path"] if ps else None
+
+
+def titled_poster(ref):
+    """A series' poster with its title on it (a box-set look): the collection's English poster, else its first film's."""
+    rank = lambda p: (-p.get("vote_count", 0), -p.get("vote_average", 0))
+    if isinstance(ref, tuple):
+        films = [ref[1]]
+    else:
+        im = tmdb(f"/collection/{ref}/images", include_image_language="en") or {}
+        ps = sorted([p for p in im.get("posters", []) if p.get("iso_639_1") == "en"], key=rank)
+        if ps:
+            return ps[0]["file_path"]
+        info = tmdb(f"/collection/{ref}") or {}
+        films = [p["id"] for p in sorted(info.get("parts", []), key=lambda p: p.get("release_date") or "9999")]
+    for fid in films[:2]:
+        im = tmdb(f"/movie/{fid}/images", include_image_language="en") or {}
+        ps = sorted([p for p in im.get("posters", []) if p.get("iso_639_1") == "en"], key=rank)
+        if ps:
+            return ps[0]["file_path"]
+    return textless_poster(ref)
 
 
 def ease(x):
@@ -100,18 +126,64 @@ def band_rows(a):
 def build(title, out_dir):
     kcov, refs = CARDS[title]
     full = get(KAPTAIN + kcov)
-    cov = art.cover_fit(full, W, H)                         # the card as the app shows it (centre crop to 2:3)
-    a = np.asarray(cov, dtype=np.int32)
+    cov0 = art.cover_fit(full, W, H)                        # Kaptain's card as the app shows it (centre crop to 2:3)
+    a = np.asarray(cov0, dtype=np.int32)
     y0, y1 = band_rows(a)
-    band = cov.crop((0, y0, W, y1)).convert("RGBA")
     col = tuple(int(v) for v in np.median(a[(y0 + y1) // 2, : W // 10], 0))
-    # the pile without the band (rows filled from just above and below), blurred and darkened for the hover
-    pile = np.asarray(cov).copy()
-    above, below = pile[max(0, y0 - (y1 - y0)):y0], pile[y1:y1 + (y1 - y0)]
-    fill = np.concatenate([above[: (y1 - y0) // 2], below[: (y1 - y0) - (y1 - y0) // 2]])
-    pile[y0:y1] = fill[: y1 - y0]
-    soft = ImageEnhance.Brightness(Image.fromarray(pile).filter(ImageFilter.GaussianBlur(16))).enhance(0.38)
-    paths = [textless_poster(r) for r in refs]
+    # the pile without the band: rows mirrored in from above and below, the patch blurred into its surroundings
+    pile = np.asarray(cov0).copy()
+    hb = y1 - y0
+    top = pile[y0 - hb // 2:y0][::-1]
+    bot = pile[y1:y1 + (hb - hb // 2)][::-1]
+    pile[y0:y1] = np.concatenate([top, bot])[:hb]
+    pile_im = Image.fromarray(pile)
+    m = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(m).rectangle((0, y0 - 20, W, y1 + 20), fill=255)
+    pile_im = Image.composite(pile_im.filter(ImageFilter.GaussianBlur(10)), pile_im, m.filter(ImageFilter.GaussianBlur(18)))
+    soft = ImageEnhance.Brightness(pile_im.filter(ImageFilter.GaussianBlur(16))).enhance(0.36)
+    # the genre logo over a soft shadow, where the band was
+    logo = get(LOGOS + LOGO[title] + ".png", "RGBA")
+    logo = logo.crop(logo.getchannel("A").getbbox())
+    lw = round(W * 0.74)
+    logo = logo.resize((lw, round(logo.height * lw / logo.width)), Image.LANCZOS)
+    if logo.height > H * 0.2:
+        logo = logo.resize((round(logo.width * H * 0.2 / logo.height), round(H * 0.2)), Image.LANCZOS)
+    cy = (y0 + y1) / 2
+    shade = Image.new("L", (1, H), 0)
+    for yy in range(H):
+        d_ = abs(yy - cy) / (hb * 1.6)
+        shade.putpixel((0, yy), round(185 * max(0.0, 1 - d_ ** 2)))
+    shade = shade.resize((W, H))
+    glow_l = Image.new("RGBA", logo.size, col + (0,))
+
+    def logo_layer(scale, glow_a):
+        L = logo if scale == 1 else logo.resize((max(1, round(logo.width * scale)), max(1, round(logo.height * scale))), Image.LANCZOS)
+        pad = 40
+        lay = Image.new("RGBA", (L.width + 2 * pad, L.height + 2 * pad), (0, 0, 0, 0))
+        g_ = Image.new("RGBA", lay.size, col + (0,))
+        am = Image.new("L", lay.size, 0)
+        am.paste(L.getchannel("A"), (pad, pad))
+        g_.putalpha(am.filter(ImageFilter.GaussianBlur(16)).point(lambda v: min(255, round(v * 1.4 * glow_a))))
+        sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
+        sh.putalpha(am.filter(ImageFilter.GaussianBlur(6)).point(lambda v: v * 170 // 255))
+        lay.alpha_composite(sh, (3, 5))
+        lay.alpha_composite(g_)
+        lay.alpha_composite(L, (pad, pad))
+        return lay
+
+    def base(blur, shade_a):
+        bg = Image.blend(pile_im, soft, blur).convert("RGBA")
+        if shade_a > 0:
+            sl = Image.new("RGBA", (W, H), (6, 4, 8, 0))
+            sl.putalpha(shade.point(lambda v: round(v * shade_a)))
+            bg.alpha_composite(sl)
+        return bg
+
+    cover = base(0.0, 1.0)
+    ll = logo_layer(1.0, 0.55)
+    cover.alpha_composite(ll, (round(W / 2 - ll.width / 2), round(cy - ll.height / 2)))
+    cover = cover.convert("RGB")
+    paths = [titled_poster(r) for r in refs]
     posters = []
     pw, ph = round(W * 0.56), round(W * 0.56 * 1.5)
     for p in paths:
@@ -128,11 +200,11 @@ def build(title, out_dir):
     # fanned places (left, right, then the centre one on top), each dealt in from below
     places = [(0.27, 0.60, -12), (0.73, 0.60, 12), (0.50, 0.575, 0)][: len(posters)]
     deal_at = [14, 24, 34]
-    top_y = round(H * 0.07)
+    top_y = H * 0.115
     frames = []
     for i in range(N):
         blur = ease(i / 6) if i < 88 else 1 - ease((i - 88) / 11)
-        bg = Image.blend(cov, soft, blur).convert("RGBA")
+        bg = base(blur, 1 - blur)
         sweep = ease((i - 78) / 9)                            # posters leave
         for k, (poster, (px, py, rot)) in enumerate(zip(posters, places)):
             p = out_back((i - deal_at[k]) / 9)
@@ -151,8 +223,9 @@ def build(title, out_dir):
             bg.alpha_composite(sh, (round(x - im.width / 2 + 10), round(y - im.height / 2 + 16)))
             bg.alpha_composite(im, (round(x - im.width / 2), round(y - im.height / 2)))
         up = ease((i - 4) / 12) if i < 80 else 1 - ease((i - 80) / 12)
-        by = round(y0 + (top_y - y0) * up)
-        bg.alpha_composite(band, (0, by))
+        ly = cy + (top_y - cy) * up
+        ll = logo_layer(1 - 0.22 * up, 0.55 + 0.45 * up)
+        bg.alpha_composite(ll, (round(W / 2 - ll.width / 2), round(ly - ll.height / 2)))
         # the card edge breathes in the band colour while the posters are on the table
         br = math.sin(math.pi * min(1.0, max(0.0, (i - 10) / 72))) ** 1.5
         if br > 0.01:
@@ -166,6 +239,7 @@ def build(title, out_dir):
             bg.alpha_composite(ln)
         frames.append(bg.convert("RGB").resize((OW, OH), Image.LANCZOS))
     os.makedirs(out_dir, exist_ok=True)
+    cover.resize((1000, 1500), Image.LANCZOS).save(os.path.join(out_dir, "cover.jpg"), quality=90)
     encode(frames, [MS] * N, os.path.join(out_dir, "hover.webp"), quality=80)
     strip = Image.new("RGB", (OW * 6, OH))
     for j, fi in enumerate((0, 10, 20, 40, 70, 90)):
