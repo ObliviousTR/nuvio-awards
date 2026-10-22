@@ -185,10 +185,11 @@ def build(slug, out_dir):
         t = i / N
         lap = np.clip((i - 4) / 80, 0, 1)                      # f4..f84, constant speed
         drain = ease((i - 91) / 8)                              # f91..f99 back to the cover
-        kan = ease((i - 8) / 10) * (1 - drain)
-        wrd = ease((i - 10) / 24) * (1 - drain)
-        ttl = ease((i - 30) / 14) * (1 - drain)
-        grp = back((i - 18) / 12) if i < 91 else 1 - ease((i - 91) / 8)
+        kan = ease((i - 2) / 8) * (1 - drain)                   # type starts filling right away
+        wrd = ease((i - 4) / 16) * (1 - drain)
+        ttl = ease((i - 12) / 12) * (1 - drain)
+        out3 = lambda x: 1 - (1 - min(1.0, max(0.0, x))) ** 3   # ease out, no overshoot: lands sharp
+        grp = out3((i - 10) / 10) if i < 91 else 1 - ease((i - 91) / 8)
         breath = np.sin(np.pi * np.clip((i - 84) / 8, 0, 1)) * 0.45
 
         # base: cover, edge light running round
@@ -200,13 +201,12 @@ def build(slug, out_dir):
         # pop-out group: only the characters step forward; the background stays put and the glow fades up
         if grp > 0:
             g = max(0.0, grp)
-            a = min(1.0, g * 1.25)
-            out = out + ed(glow * min(1.0, g)) * (Hv - out)
+            out = out + ed(glow * ease(g * 2)) * (Hv - out)     # glow (and the cover pose behind) settle first
             sc = 1 + (s - 1) * g
-            cs = warp(C, sc, ax, ay)
+            # one image only, the hover group shrunk back to the cover pose and grown out: no cross-fade, no ghost
             hs = warp(Hv, sc / s, ax, ay)
             mt = warp(coreC[..., None].repeat(3, 2) * 255, sc, ax, ay)[..., 0] / 255
-            out = out + ed(mt) * (cs + a * (hs - cs) - out)
+            out = out + ed(mt) * (hs - out)
 
         # type on top: kanji top to bottom, the word left to right, the show line after it
         fill = (kanji_z * wipe(yy, kx[0], kx[1], kan) + word_z * wipe(xx, wx[0], wx[1], wrd)
@@ -218,7 +218,7 @@ def build(slug, out_dir):
     encode(frames, [MS] * N, os.path.join(out_dir, "hover.webp"), quality=75)
     Image.fromarray(C.astype(np.uint8)).save(os.path.join(out_dir, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (OUT[0] * 4, OUT[1] * 2))
-    for j, fi in enumerate((0, 12, 20, 26, 34, 50, 86, 95)):
+    for j, fi in enumerate((0, 8, 12, 15, 20, 50, 86, 95)):
         strip.paste(frames[fi], ((j % 4) * OUT[0], (j // 4) * OUT[1]))
     strip.save(os.path.join(out_dir, "frames.jpg"), quality=82)
     return frames
