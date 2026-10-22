@@ -126,12 +126,15 @@ def gain_logo(src):
     for y in range(im.height):
         for x in range(im.width):
             r, g, b = s[x, y]
-            if r - max(g, b) > 60:
+            if r - max(g, b) > 30:
                 db[x, y] = (226, 36, 48, min(255, (r - max(g, b)) * 2))
             else:
                 a = 255 - min(r, g, b)
                 if a > 25:
                     di[x, y] = (255, 255, 255, a)
+    # the balloon's soft edge must not stay behind in the letters: clear ink around the balloon
+    bm = bal.getchannel("A").point(lambda v: 255 if v > 20 else 0).filter(ImageFilter.MaxFilter(15))
+    ink.putalpha(ImageChops.subtract(ink.getchannel("A"), bm))
     bb = ImageChops.lighter(ink.getchannel("A"), bal.getchannel("A")).getbbox()
     return ink.crop(bb), bal.crop(bb)
 
@@ -146,82 +149,58 @@ def tabii_logo(src):
 
 
 # ---------------------------------------------------------------- idents: frame(i, n) -> RGBA
+def push(layer, s):
+    return layer.resize((max(1, round(layer.width * s)), max(1, round(layer.height * s))), Image.LANCZOS)
+
+
 def exxen_ident(logo):
-    lg = fit(logo, 760, 320)
-    letters = [(s, e) for s, e in clusters(lg, 0, gap=4)]
-    pieces = [lg.crop((s, 0, e, lg.height)) for s, e in letters]
-    x0 = W / 2 - lg.width / 2
-    y0 = H / 2 - lg.height / 2
+    """As Exxen's own ident: the logo comes up out of black and the camera keeps pushing in toward it."""
+    lg = fit(logo, 1500, 640)  # drawn large, scaled down per frame so the push-in stays sharp
 
     def frame(i, n):
         t = i / n
-        cv = field((10, 10, 10), (0, 0, 0), (255, 190, 0), round(26 * ease((t - 0.35) / 0.3)))
-        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        shake = 0
-        for k, ((s, e), pc) in enumerate(zip(letters, pieces)):
-            st = 0.06 + k * 0.075
-            p = (t - st) / 0.12
-            if p <= 0:
-                continue
-            y = y0 - (1 - min(1, ease(p))) * 520
-            if 1 <= p < 1.6:
-                shake = max(shake, 10 * (1.6 - p) / 0.6)
-            comp(lay, pc, x0 + s, y)
-            if 1 <= p < 1.35:  # impact flash
-                fl = Image.new("RGBA", pc.size, (255, 255, 255, 0))
-                fl.putalpha(pc.getchannel("A").point(lambda v, a=(1.35 - p) / 0.35: round(v * a)))
-                comp(lay, fl, x0 + s, y)
-        dx = random.Random(i).uniform(-1, 1) * shake
-        dy = random.Random(i + 99).uniform(-1, 1) * shake
-        land = t > 0.06 + (len(pieces) - 1) * 0.075 + 0.12
-        if land:
-            cv.alpha_composite(glow(lay.crop((round(x0) - 10, round(y0) - 10, round(x0 + lg.width) + 10, round(y0 + lg.height) + 10)),
-                                    22, (255, 180, 0), 0.9), (round(x0) - 10 - 66 + round(dx), round(y0) - 10 - 66 + round(dy)))
-        comp(cv, lay, dx, dy)
-        if 0.62 < t < 0.85:
-            sweep(cv, lg, W / 2, H / 2, (t - 0.62) / 0.23, 170)
+        cv = field((10, 10, 10), (0, 0, 0), (255, 190, 0), round(30 * ease(t / 0.5)))
+        s = 0.34 + 0.20 * ease(t / 0.55) + 0.10 * t  # fast approach, then a slow constant drift inward
+        L = push(lg, s)
+        a = ease(t / 0.18)
+        cv.alpha_composite(glow(L, 20, (255, 180, 0), 0.8 * a), (round(W / 2 - L.width / 2 - 60), round(H / 2 - L.height / 2 - 60)))
+        place(cv, L, W / 2, H / 2, a)
+        if 0.55 < t < 0.8:
+            sweep(cv, L, W / 2, H / 2, (t - 0.55) / 0.25, 150)
         return cv
     return frame
 
 
 def gain_ident(letters, balloon):
-    k = min(620 / letters.width, 380 / letters.height)
-    L = letters.resize((round(letters.width * k), round(letters.height * k)), Image.LANCZOS)
-    B = balloon.resize(L.size, Image.LANCZOS)
-    bb = B.getchannel("A").getbbox()
-    bal = B.crop(bb)
-    bx, by = bb[0], bb[1]
-    runs = clusters(L, 0, gap=6)
-    pieces = [(s, L.crop((s, 0, e, L.height))) for s, e in runs]
-    x0, y0 = W / 2 - L.width / 2, H / 2 - L.height / 2 + 20
+    """As GAİN's own ident: a slow push-in toward the logo while the red balloon floats up into place."""
+    k = min(1240 / letters.width, 760 / letters.height)
+    L0 = letters.resize((round(letters.width * k), round(letters.height * k)), Image.LANCZOS)
+    B0 = balloon.resize(L0.size, Image.LANCZOS)
+    bb = B0.getchannel("A").getbbox()
+    bal0 = B0.crop(bb)
 
     def frame(i, n):
         t = i / n
-        cv = field((24, 22, 26), (6, 6, 8), (120, 20, 30), round(30 * ease((t - 0.45) / 0.4)))
-        for j, (s, pc) in enumerate(pieces):
-            p = ease((t - 0.05 - j * 0.07) / 0.22)
-            if p <= 0:
-                continue
-            m = Image.new("L", pc.size, 0)
-            ImageDraw.Draw(m).rectangle((0, pc.height * (1 - p), pc.width, pc.height), fill=255)
-            q = pc.copy()
-            q.putalpha(ImageChops.multiply(q.getchannel("A"), m))
-            comp(cv, q, x0 + s, y0 + (1 - p) * 40)
-        # the balloon floats up from below the frame and settles above the İ, swaying on its way
-        p = (t - 0.3) / 0.45
+        cv = field((24, 22, 26), (6, 6, 8), (120, 20, 30), round(34 * ease((t - 0.3) / 0.5)))
+        s = 0.42 + 0.12 * ease(t / 0.7) + 0.04 * t
+        L = push(L0, s)
+        x0, y0 = W / 2 - L.width / 2, H / 2 - L.height / 2 + 20
+        place(cv, L, W / 2, H / 2 + 20, ease(t / 0.25))
+        p = (t - 0.12) / 0.6
         if p > 0:
             e = ease(p)
-            ty = y0 + by
-            y = H + 40 + (ty - H - 40) * e
-            sway = math.sin(p * 7) * 28 * (1 - e) + math.sin(t * 9) * 2.5
-            rot = math.sin(p * 7 + 0.6) * 10 * (1 - e)
+            bal = push(bal0, s)
+            tx, ty = x0 + bb[0] * s, y0 + bb[1] * s
+            y = H + 30 + (ty - H - 30) * e
+            sway = math.sin(p * 6) * 26 * (1 - e) + math.sin(t * 8) * 2
+            rot = math.sin(p * 6 + 0.6) * 9 * (1 - e)
             bl = bal.rotate(rot, resample=Image.BICUBIC, expand=True)
-            if p < 1:  # its string, trailing below
+            if p < 1:
                 d = ImageDraw.Draw(cv)
-                d.line((x0 + bx + bal.width / 2 + sway, y + bal.height, x0 + bx + bal.width / 2 + sway * 0.4, y + bal.height + 90 * (1 - e) + 6),
-                       fill=(230, 230, 230, 160), width=2)
-            cv.alpha_composite(glow(bl, 14, (255, 40, 50), 0.6), (round(x0 + bx + sway - 42), round(y - 42)))
-            comp(cv, bl, x0 + bx + sway, y)
+                d.line((tx + bal.width / 2 + sway, y + bal.height, tx + bal.width / 2 + sway * 0.3, y + bal.height + 80 * (1 - e) + 4),
+                       fill=(230, 230, 230, 150), width=2)
+            cv.alpha_composite(glow(bl, 14, (255, 40, 50), 0.6), (round(tx + sway - 42), round(y - 42)))
+            comp(cv, bl, tx + sway, y)
         return cv
     return frame
 
