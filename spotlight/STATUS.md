@@ -1,4 +1,4 @@
-# Spotlight status — 2026-10-21
+# Spotlight status — 2026-10-22
 
 Next rotation (all rotating cards): **2026-10-26**
 Next Cultural Pulse theme starts: **2026-10-25**
@@ -14,7 +14,7 @@ Next Cultural Pulse theme starts: **2026-10-25**
 | Retro Rewind | Universal & Hammer Monsters | 100 | 0 |  |
 | Yerli Yıldız | Kıvanç Tatlıtuğ | 7 | 11 |  |
 | The Cultural Pulse | Slashers & Masked Killers | 100 | 79 |  |
-| Fresh Out of Theaters | daily | 50 | 42 |  |
+| Fresh Out of Theaters | daily | 50 | 40 |  |
 | Box Office Champions | daily | 40 | 100 |  |
 | Certified Fresh & Must-See | daily | 60 | 50 |  |
 
