@@ -110,7 +110,7 @@ def find_title(title, year, kind):
     if kind == "movie":
         return g.find_movie(title, year)[0]
     r = (tmdb("/search/tv", query=title) or {}).get("results", [])
-    near = [x for x in r if (x.get("first_air_date") or "0000")[:4].isdigit() and abs(int(x["first_air_date"][:4]) - year) <= 1]
+    near = [x for x in r if (x.get("first_air_date") or "0000")[:4].isdigit() and abs(int((x.get("first_air_date") or "0000")[:4]) - year) <= 1]
     return (near or r or [{}])[0].get("id")
 
 
@@ -129,7 +129,9 @@ def face_models():
                        ("rec", "face_recognition_sface/face_recognition_sface_2021dec.onnx")):
             p = os.path.join(cache, os.path.basename(rel))
             if not os.path.exists(p):
-                open(p, "wb").write(urllib.request.urlopen(base + rel, timeout=120).read())
+                tmp = f"{p}.{os.getpid()}"  # several builds may fetch at once: write aside, then move in whole
+                open(tmp, "wb").write(urllib.request.urlopen(base + rel, timeout=120).read())
+                os.replace(tmp, p)
             paths[k] = p
         _FACE["det"] = cv2.FaceDetectorYN.create(paths["det"], "", (320, 320), 0.8)
         _FACE["rec"] = cv2.FaceRecognizerSF.create(paths["rec"], "")
