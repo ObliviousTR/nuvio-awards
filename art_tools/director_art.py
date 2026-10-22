@@ -57,7 +57,7 @@ FILMS = {
     "Kathryn Bigelow": [("The Hurt Locker", 2008), ("Zero Dark Thirty", 2012), ("Point Break", 1991)],
     "Edgar Wright": [("Baby Driver", 2017), ("Shaun of the Dead", 2004), ("Scott Pilgrim vs. the World", 2010)],
     "Guy Ritchie": [("Snatch", 2000), ("Lock, Stock and Two Smoking Barrels", 1998), ("The Gentlemen", 2020)],
-    "Sofia Coppola": [("Lost in Translation", 2003), ("Marie Antoinette", 2006, 1), ("The Virgin Suicides", 1999)],
+    "Sofia Coppola": [("Lost in Translation", 2003), ("Marie Antoinette", 2006, "tmdb"), ("The Virgin Suicides", 1999)],
     "Yorgos Lanthimos": [("Poor Things", 2023), ("The Favourite", 2018), ("The Lobster", 2015)],
     "Alex Garland": [("Ex Machina", 2015), ("Annihilation", 2018), ("Civil War", 2024)],
     "Jordan Peele": [("Get Out", 2017, 1), ("Us", 2019), ("Nope", 2022)],
@@ -74,8 +74,9 @@ def films_of(name):
         tid, _ = A.g.find_movie(title, year)
         if not tid:
             continue
-        fa = A.g.fanart_backgrounds(tid)
-        p = fa[min(it[2] if len(it) > 2 else 0, len(fa) - 1)] if fa else A.g.textless_backdrop("movie", tid)
+        pick = it[2] if len(it) > 2 else 0
+        fa = [] if pick == "tmdb" else A.g.fanart_backgrounds(tid)   # "tmdb": TMDB's best textless backdrop instead
+        p = fa[min(pick, len(fa) - 1)] if fa else A.g.textless_backdrop("movie", tid)
         if p:
             out.append((title, year, p))
     return out
