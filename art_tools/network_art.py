@@ -39,11 +39,11 @@ def accent_of(focus):
     return max(px, key=lambda p: p[3] * (max(p[:3]) - min(p[:3]) + 1))[:3]
 
 
-def shows(nets, n=3):
+def shows(nets, n=3, kids=False):
     """The channel's most popular shows right now (TMDB popularity, with a vote floor so obscure titles stay out).
     Picture: a textless POSTER (vertical key art, fits the portrait card) if TMDB has one, else a textless backdrop."""
     r = (tmdb("/discover/tv", with_networks="|".join(map(str, nets)), sort_by="popularity.desc",
-              without_genres="10763|10767|10766", **{"vote_count.gte": 40}) or {}).get("results", [])
+              without_genres="10763|10767|10766" + ("" if kids else "|10762"), **{"vote_count.gte": 40}) or {}).get("results", [])
     out = []
     for s in r:
         im = tmdb(f"/tv/{s['id']}/images", include_image_language="null") or {}
@@ -212,7 +212,7 @@ def main():
                 mbs = load("https://image.tmdb.org/t/p/original" + mbs[0]["file_path"]).convert("RGBA")
                 logo = stack(white(fuji, keep=True), white(mbs))
             accent = ACCENT.get(t) or accent_of(load(f["focusGifUrl"].split("?")[0]))
-            picked = shows(NETS[t], 3)
+            picked = shows(NETS[t], 3, kids=t == "Cartoon Network")
             stills = [x[1] for x in picked]
             print('  shows:', [x[0] for x in picked])
             frame = make(logo, stills, accent)
