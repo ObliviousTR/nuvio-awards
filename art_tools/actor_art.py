@@ -384,7 +384,7 @@ def build(name, cover_url, hover_url, out, idx=0):
         v /= (1 - a)
         return min(1.0, v) * R
 
-    read_y = H * 0.38
+    read_y = H * 0.45
     grad = np.clip((np.arange(H) - H * 0.6) / (H * 0.4), 0, 1) ** 1.3 * 0.8
     frames = []
     for i in range(N_):
