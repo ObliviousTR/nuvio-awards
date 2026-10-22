@@ -94,6 +94,18 @@ for row in data:
             f.update({"coverImageUrl": u + "cover.jpg", "focusGifUrl": u + "hover.webp", "focusGifEnabled": True,
                       "coverEmoji": None, "hideTitle": True})
             n += 1
+# Moods & Vibes: monthly art from the mood-art branch (art_tools/mood_art.py). Kaptain's hero and logo stay.
+MOOD = "https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/mood-art/"
+from mood_art import MOODS
+for row in data:
+    if row["title"] != "Moods & Vibes":
+        continue
+    for f in row["folders"]:
+        if f["title"] in MOODS:
+            u = MOOD + genre_slug(f["title"]) + "/"
+            f.update({"coverImageUrl": u + "cover.jpg", "focusGifUrl": u + "hover.webp", "focusGifEnabled": True,
+                      "coverEmoji": None, "hideTitle": True})
+            n += 1
 # Nuvio Desktop keeps every hover animation it ever downloaded on disk, keyed by URL, and never checks for a newer
 # one; a fixed URL would show the first version forever there. So the branch art's URLs carry ?v=<hash of the file
 # as it is now> (raw.githubusercontent ignores the query, mobile still refreshes on its own).
@@ -117,7 +129,7 @@ for row in data:
     for f in row.get("folders", []):
         for k in ("coverImageUrl", "focusGifUrl", "heroBackdropUrl", "titleLogoUrl"):
             u = f.get(k) or ""
-            for base in (DISC, NET, GEN):
+            for base in (DISC, NET, GEN, MOOD):
                 if u.startswith(base) and "?" not in u:
                     v = branch_version(base.rstrip("/").rsplit("/", 1)[1], u[len(base):])
                     if v:
