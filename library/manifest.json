@@ -1,6 +1,6 @@
 {
  "id": "community.oblivioustr.nuvio-library",
- "version": "1.0.20261021",
+ "version": "1.0.20261022",
  "name": "Nuvio Library",
  "description": "Film universes & franchises, collection folders, iconic actors and legendary directors, rebuilt weekly from TMDB.",
  "resources": [
@@ -601,26 +601,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-10456",
-   "name": "Dirty Harry"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-9485",
-   "name": "The Fast and the Furious"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-645",
-   "name": "James Bond"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-404609",
-   "name": "John Wick"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-391860",
    "name": "Kingsman"
   },
@@ -631,38 +611,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-87359",
-   "name": "Mission: Impossible"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-304",
-   "name": "Ocean's"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-5039",
-   "name": "Rambo"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-1575",
-   "name": "Rocky"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-496796",
-   "name": "Sicario"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-31562",
    "name": "The Bourne"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-263",
-   "name": "The Dark Knight"
   },
   {
    "type": "movie",
@@ -701,11 +651,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-86055",
-   "name": "Men in Black"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-376650",
    "name": "Ride Along"
   },
@@ -713,11 +658,6 @@
    "type": "movie",
    "id": "lib-col-135483",
    "name": "Taken"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-86311",
-   "name": "The Avengers"
   },
   {
    "type": "movie",
@@ -731,11 +671,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-192492",
-   "name": "The Jack Ryan"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-386534",
    "name": "Has Fallen"
   },
@@ -743,21 +678,6 @@
    "type": "movie",
    "id": "lib-col-735127",
    "name": "Extraction"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-86117",
-   "name": "Johnny English"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-86486",
-   "name": "Spy Kids"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-495",
-   "name": "Shaft"
   },
   {
    "type": "movie",
@@ -791,11 +711,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-9818",
-   "name": "Mortal Kombat"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-2467",
    "name": "Tomb Raider"
   },
@@ -806,18 +721,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-17235",
-   "name": "Hellboy"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-9436",
    "name": "The Crow"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-43055",
-   "name": "Conan the Barbarian"
   },
   {
    "type": "movie",
@@ -826,28 +731,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-115762",
-   "name": "Alien vs. Predator"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-2794",
-   "name": "The Chronicles of Riddick"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-120794",
-   "name": "Batman Collection (1989-1997)"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-8537",
-   "name": "Superman Classic"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-1582",
-   "name": "Teenage Mutant Ninja Turtles"
+   "id": "lib-col-403374",
+   "name": "Jack Reacher"
   },
   {
    "type": "movie",
@@ -911,11 +796,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-382685",
-   "name": "Now You See Me"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-306031",
    "name": "Pitch Perfect"
   },
@@ -966,6 +846,11 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-86117",
+   "name": "Johnny English"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-937",
    "name": "The Pink Panther (Original)"
   },
@@ -1006,6 +891,16 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-266672",
+   "name": "Ted"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-304",
+   "name": "Ocean's"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-85861",
    "name": "Beverly Hills Cop"
   },
@@ -1016,8 +911,38 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-495",
+   "name": "Shaft"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-230",
    "name": "The Godfather"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-10456",
+   "name": "Dirty Harry"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-135179",
+   "name": "Sin City"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-933989",
+   "name": "Den of Thieves"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-52783",
+   "name": "Wall Street"
+  },
+  {
+   "type": "movie",
+   "id": "lib-list-get-shorty-collection",
+   "name": "Get Shorty"
   },
   {
    "type": "movie",
@@ -1041,23 +966,28 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-1575",
+   "name": "Rocky"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-110177",
    "name": "Goal!"
   },
   {
    "type": "movie",
-   "id": "lib-col-403374",
-   "name": "Jack Reacher"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-10709",
-   "name": "The Mighty Ducks"
-  },
-  {
-   "type": "movie",
    "id": "lib-list-the-before-trilogy",
    "name": "The Before"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-702624",
+   "name": "After"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-306937",
+   "name": "The Best Exotic Marigold Hotel"
   },
   {
    "type": "movie",
@@ -1141,11 +1071,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-573436",
-   "name": "Spider-Man: Spider-Verse"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-750822",
    "name": "The Addams Family (Animated)"
   },
@@ -1201,6 +1126,11 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-86486",
+   "name": "Spy Kids"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-94032",
    "name": "The Lion King"
   },
@@ -1231,13 +1161,18 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-1582",
+   "name": "Teenage Mutant Ninja Turtles"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-66761",
    "name": "Open Season"
   },
   {
    "type": "movie",
-   "id": "lib-col-435259",
-   "name": "Fantastic Beasts"
+   "id": "lib-col-10709",
+   "name": "The Mighty Ducks"
   },
   {
    "type": "movie",
@@ -1246,23 +1181,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-1241",
-   "name": "Harry Potter"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-84",
-   "name": "Indiana Jones"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-495527",
    "name": "Jumanji"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-119",
-   "name": "The Lord of the Rings"
   },
   {
    "type": "movie",
@@ -1291,16 +1211,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-121938",
-   "name": "The Hobbit"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-295130",
-   "name": "The Maze Runner"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-1733",
    "name": "The Mummy"
   },
@@ -1321,8 +1231,18 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-266672",
-   "name": "Ted"
+   "id": "lib-col-9818",
+   "name": "Mortal Kombat"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-17235",
+   "name": "Hellboy"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-43055",
+   "name": "Conan the Barbarian"
   },
   {
    "type": "movie",
@@ -1366,18 +1286,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-9743",
-   "name": "The Hannibal Lecter"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-8917",
    "name": "Hellraiser"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-228446",
-   "name": "Insidious"
   },
   {
    "type": "movie",
@@ -1413,11 +1323,6 @@
    "type": "movie",
    "id": "lib-col-2602",
    "name": "Scream"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-313086",
-   "name": "The Conjuring"
   },
   {
    "type": "movie",
@@ -1466,11 +1371,6 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-402074",
-   "name": "Annabelle"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-94899",
    "name": "Jeepers Creepers"
   },
@@ -1478,11 +1378,6 @@
    "type": "movie",
    "id": "lib-col-111751",
    "name": "Texas Chainsaw Massacre"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-968052",
-   "name": "The Nun"
   },
   {
    "type": "movie",
@@ -1546,8 +1441,18 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-8091",
-   "name": "Alien"
+   "id": "lib-col-382685",
+   "name": "Now You See Me"
+  },
+  {
+   "type": "movie",
+   "id": "lib-list-hercule-poirot-kenneth-branagh",
+   "name": "Hercule Poirot (Kenneth Branagh)"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-929336",
+   "name": "Murder Mystery"
   },
   {
    "type": "movie",
@@ -1566,53 +1471,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-726871",
-   "name": "Dune"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-535313",
-   "name": "Godzilla"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-284433",
-   "name": "Guardians of the Galaxy"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-328",
-   "name": "Jurassic Park"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-135498",
-   "name": "King Kong (1976)"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-8945",
-   "name": "Mad Max"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-209131",
-   "name": "Man of Steel"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-363369",
    "name": "Pacific Rim"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-1709",
-   "name": "Planet of the Apes (Original)"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-399",
-   "name": "Predator"
   },
   {
    "type": "movie",
@@ -1621,28 +1481,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-556",
-   "name": "Spider-Man"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-115575",
-   "name": "Star Trek: Alternate Reality"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-10",
-   "name": "Star Wars"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-10522",
    "name": "Starship Troopers"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-528",
-   "name": "The Terminator"
   },
   {
    "type": "movie",
@@ -1651,23 +1491,8 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-2344",
-   "name": "The Matrix"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-8650",
-   "name": "Transformers"
-  },
-  {
-   "type": "movie",
    "id": "lib-col-63043",
    "name": "TRON"
-  },
-  {
-   "type": "movie",
-   "id": "lib-col-748",
-   "name": "X-Men"
   },
   {
    "type": "movie",
@@ -1676,23 +1501,28 @@
   },
   {
    "type": "movie",
-   "id": "lib-col-173710",
-   "name": "Planet of the Apes (Reboot)"
-  },
-  {
-   "type": "movie",
    "id": "lib-list-cloverfield-collection",
    "name": "Cloverfield"
   },
   {
    "type": "movie",
-   "id": "lib-col-151",
-   "name": "Star Trek: The Original Series Movies"
+   "id": "lib-col-2794",
+   "name": "The Chronicles of Riddick"
   },
   {
    "type": "movie",
-   "id": "lib-col-115570",
-   "name": "Star Trek: The Next Generation Movies"
+   "id": "lib-col-86055",
+   "name": "Men in Black"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-295130",
+   "name": "The Maze Runner"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-9743",
+   "name": "Hannibal Lecter"
   },
   {
    "type": "movie",
@@ -1706,13 +1536,28 @@
   },
   {
    "type": "movie",
+   "id": "lib-col-496796",
+   "name": "Sicario"
+  },
+  {
+   "type": "movie",
    "id": "lib-list-eastrail-177-trilogy",
    "name": "Eastrail 177"
   },
   {
    "type": "movie",
+   "id": "lib-col-192492",
+   "name": "The Jack Ryan"
+  },
+  {
+   "type": "movie",
    "id": "lib-col-86336",
    "name": "Basic Instinct"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-5039",
+   "name": "Rambo"
   },
   {
    "type": "movie",
@@ -1738,6 +1583,16 @@
    "type": "movie",
    "id": "lib-col-124492",
    "name": "The Dirty Dozen"
+  },
+  {
+   "type": "movie",
+   "id": "lib-list-the-guns-of-navarone-collection",
+   "name": "The Guns of Navarone"
+  },
+  {
+   "type": "movie",
+   "id": "lib-col-123251",
+   "name": "Iron Eagle"
   },
   {
    "type": "movie",
