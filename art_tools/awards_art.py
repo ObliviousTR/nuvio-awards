@@ -56,7 +56,7 @@ CARDS = {
                  [("Spirited Away", 2001), ("A Separation", 2011), ("Magnolia", 1999), ("The Thin Red Line", 1998), ("On Body and Soul", 2017)]],
     },
     "The Emmy Awards": {
-        "marks": [("emmy-word", "EMMY AWARDS", "OUTSTANDING DRAMA SERIES")],
+        "marks": [("emmy-word", "EMMY AWARDS", "OUTSTANDING DRAMA SERIES")], "statue": "emmy-trophy.png",
         "pool": [[("Breaking Bad", 2008, "OUTSTANDING DRAMA SERIES", "tv", 2013), ("Succession", 2018, "OUTSTANDING DRAMA SERIES", "tv", 2020),
                   ("The Bear", 2022, "OUTSTANDING COMEDY SERIES", "tv", 2023), ("Game of Thrones", 2011, "OUTSTANDING DRAMA SERIES", "tv", 2015),
                   ("Shōgun", 2024, "OUTSTANDING DRAMA SERIES", "tv", 2024), ("Chernobyl", 2019, "OUTSTANDING LIMITED SERIES", "tv", 2019),
@@ -316,8 +316,8 @@ def look_a(card):
     # rest positions of the marks on the cover
     big = []
     if len(marks) == 1:
-        mk = fit(marks[0], W * 0.5, H * 0.3)
-        cx = W * 0.4 if statue else W / 2
+        mk = fit(marks[0], W * (0.46 if statue else 0.5), H * 0.3)
+        cx = W * 0.37 if statue else W / 2
         big = [(mk, cx, H * 0.5)]
     else:
         n = len(marks)
