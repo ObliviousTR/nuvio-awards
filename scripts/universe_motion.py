@@ -1322,7 +1322,7 @@ PICKS = {"middleearth": (MiddleEarth, [1, 7, 0, 2, 11]), "wizarding": (Wizarding
          "godzillakong": (GodzillaKong, [0, 3, 24, 25, 20]), "apes": (PlanetOfTheApes, [1, 16, 13, 14, 11])}
 
 
-SPLIT = os.environ.get("UM_SPLIT", "1") == "1"   # part the pictures to the sides while the mark is up
+SPLIT = os.environ.get("UM_SPLIT", "0") == "1"   # part the pictures to the sides while the mark is up
 SMOOTH = 1.5  # 1.5x the frames at 2/3 the frame time: same pacing, smoother motion (animated WebP keeps it light)
 
 
