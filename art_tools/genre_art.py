@@ -86,7 +86,8 @@ def find_movie(title, year):
     if title in KNOWN:
         return KNOWN[title], title
     r = (tmdb("/search/movie", query=title) or {}).get("results", [])
-    near = [x for x in r if (x.get("release_date") or "0000")[:4].isdigit() and abs(int(x["release_date"][:4]) - year) <= 1]
+    yr = lambda x: int((x.get("release_date") or "0")[:4] or 0) if (x.get("release_date") or "0")[:4].isdigit() else 0
+    near = [x for x in r if abs(yr(x) - year) <= 1]
     exact = [x for x in near if x.get("title", "").lower() == title.lower()]
     pick = (exact or near or r or [None])[0]
     return (pick["id"], pick["title"]) if pick else (None, None)
