@@ -18,11 +18,12 @@ def url(rel):
     return RAW + rel + "?v=" + hashlib.md5(open(os.path.join(ART, rel), "rb").read()).hexdigest()[:8]
 
 
+GIF_ROWS = {"Iconic Actors"}  # rows whose every card now has our hover reel (art_tools/actor_art.py)
 data = load(sys.argv[1])
 n = 0
 for row in data:
     fs = row.get("folders", [])
-    gif_on = sum(1 for f in fs if f.get("focusGifEnabled")) * 2 > len(fs)
+    gif_on = sum(1 for f in fs if f.get("focusGifEnabled")) * 2 > len(fs) or row["title"] in GIF_ROWS
     hide = sum(1 for f in fs if f.get("hideTitle")) * 2 > len(fs)  # our covers carry their name like the row's
     for f in fs:
         rel = f"{slug(row['title'])}/{slug(f['title'])}"
