@@ -1,17 +1,10 @@
-"""Universes: re-render every universe with its films' key art behind the mark (4 at a time)."""
+"""Samples: Universes with the parting pictures (Star Wars, Matrix), Film Collections deal (Action)."""
 import os, sys, subprocess
-from concurrent.futures import ThreadPoolExecutor
-os.makedirs("refs/um", exist_ok=True)
-ids = ["matrix", "jurassic", "dc", "batman", "spiderman", "middleearth", "wizarding", "starwars", "johnwick", "mcu",
-       "dune", "startrek", "mi", "transformers", "terminator", "conjuring", "fast", "madmax", "indiana",
-       "alienpredator", "godzillakong", "apes", "xmen"]
-
-
-def run(u):
-    r = subprocess.run([sys.executable, "scripts/universe_motion.py", "refs/um", u], capture_output=True, text=True)
-    return r.stdout + r.stderr[-1500:]
-
-
-with ThreadPoolExecutor(4) as ex:
-    logs = list(ex.map(run, ids))
-open("refs/um/log.txt", "w").write("\n".join(logs))
+os.makedirs("refs/s", exist_ok=True)
+log = ""
+for u in ("starwars", "matrix"):
+    r = subprocess.run([sys.executable, "scripts/universe_motion.py", "refs/s", u], capture_output=True, text=True)
+    log += r.stdout + r.stderr[-1500:]
+r = subprocess.run([sys.executable, "art_tools/collection_art.py", "refs/s", "Action Collections"], capture_output=True, text=True)
+log += r.stdout + r.stderr[-3000:]
+open("refs/s/log.txt", "w").write(log)

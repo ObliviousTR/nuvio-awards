@@ -253,6 +253,28 @@ def background(sc, g):
     return vignette(bg)
 
 
+def split(bg, op, gap=0.34):
+    """Doors: the picture parts down the middle and its halves slide out to the sides (op 0..1), leaving a dark,
+    softly blurred centre for the mark; inner edges carry a soft shadow."""
+    if op <= 0.001:
+        return bg
+    w, h = bg.size
+    g = round(w * gap * op / 2)
+    base = ImageEnhance.Brightness(bg.convert("RGB").filter(ImageFilter.GaussianBlur(18))).enhance(1 - 0.72 * op)
+    out = base.convert("RGBA")
+    left, right = bg.crop((0, 0, w // 2, h)), bg.crop((w // 2, 0, w, h))
+    sh = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(sh)
+    for k in range(40):
+        a = round(150 * op * (1 - k / 40) ** 2)
+        d.line((w // 2 - g + k, 0, w // 2 - g + k, h), fill=(0, 0, 0, a))
+        d.line((w // 2 + g - 1 - k, 0, w // 2 + g - 1 - k, h), fill=(0, 0, 0, a))
+    out.paste(left, (-g, 0))
+    out.paste(right, (w // 2 + g, 0))
+    out.alpha_composite(sh)
+    return out
+
+
 # ---------------------------------------------------------------- marks
 class Mark:
     """mark(t, h): t = build progress 0..1, h = hold progress 0..1 (or None while building). Returns RGBA WxH."""
@@ -1300,6 +1322,7 @@ PICKS = {"middleearth": (MiddleEarth, [1, 7, 0, 2, 11]), "wizarding": (Wizarding
          "godzillakong": (GodzillaKong, [0, 3, 24, 25, 20]), "apes": (PlanetOfTheApes, [1, 16, 13, 14, 11])}
 
 
+SPLIT = os.environ.get("UM_SPLIT", "1") == "1"   # part the pictures to the sides while the mark is up
 SMOOTH = 1.5  # 1.5x the frames at 2/3 the frame time: same pacing, smoother motion (animated WebP keeps it light)
 
 
@@ -1334,12 +1357,17 @@ def render(uid, out_dir):
         h = (i - B) / HD if i >= B else None
         iv = i if i < B else B + (i - B) / HOLD_SLOW      # the old frame clock, fractional in the hold
         bg = background(sc, iv / total).convert("RGBA")
+        if SPLIT:
+            op = ease((t - 0.45) / 0.45) if h is None else (1.0 if h < 0.86 else 1 - ease((h - 0.86) / 0.14))
+            bg = split(bg, op)
         mark.i, mark.iv = int(iv), iv
         bg.alpha_composite(mark(t, h))
         frames.append(bg.convert("RGB"))
     d = os.path.join(out_dir, uid)
     os.makedirs(d, exist_ok=True)
     cov = vignette(art.zoomed(sc[0], 0.04)).convert("RGBA")
+    if SPLIT:
+        cov = split(cov, 1.0)
     mark.i = round(B + 0.75 * HD0)
     mark.iv = mark.i
     cov.alpha_composite(mark(1.0, 0.75))
