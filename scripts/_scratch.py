@@ -1,47 +1,54 @@
-"""Awards: TMDB logos of the award shows + remaining Commons candidates (contact sheets)."""
-import io, json, os, sys, time, urllib.parse, urllib.request
+"""Awards: fetch marks + cut out statuettes (rembg) -> refs/awa (to keep in nuvio-art art/logos/awards)."""
+import io, json, os, sys, time, subprocess, urllib.parse, urllib.request
+subprocess.run([sys.executable, "-m", "pip", "install", "-q", "rembg[cpu]", "onnxruntime"], capture_output=True)
 sys.path.insert(0, "scripts")
 from spotlight import tmdb
-from PIL import Image, ImageDraw
-os.makedirs("refs/aw", exist_ok=True)
+from PIL import Image
+from rembg import remove
+os.makedirs("refs/awa", exist_ok=True)
 UA = {"User-Agent": "nuvio-awards/1.0 (github.com/ObliviousTR/nuvio-awards)"}
 def get(u):
-    return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read()
-res = {}
-def sheet(k, items):  # items: (label, thumb url)
-    sh = Image.new("RGB", (4 * 300, ((len(items) + 3) // 4 or 1) * 220), (70, 70, 74))
-    dr = ImageDraw.Draw(sh)
-    for i, (lab, u) in enumerate(items):
+    for _ in range(4):
         try:
-            im = Image.open(io.BytesIO(get(u))).convert("RGBA"); im.thumbnail((280, 180))
-            sh.paste(im, ((i % 4) * 300 + 10, (i // 4) * 220 + 8), im)
-        except Exception:
-            pass
-        dr.text(((i % 4) * 300 + 6, (i // 4) * 220 + 198), f"{i} {lab[:40]}", fill=(255, 255, 0))
-    sh.save(f"refs/aw/{k}.jpg", quality=80)
-for k, q in {"t_oscars": "The Oscars", "t_globes": "Golden Globe Awards", "t_bafta": "BAFTA Film Awards", "t_emmy": "The Emmy Awards",
-             "t_cannes": "Cannes", "t_venice": "Venice", "t_sundance": "Sundance", "t_berlin": "Berlinale"}.items():
-    r = (tmdb("/search/tv", query=q) or {}).get("results", [])[:3] + (tmdb("/search/movie", query=q) or {}).get("results", [])[:2]
-    items, lst = [], []
-    for x in r:
-        kind = "tv" if "name" in x else "movie"
-        im = tmdb(f"/{kind}/{x['id']}/images", include_image_language="en,null") or {}
-        for lg in im.get("logos", [])[:6]:
-            if lg["file_path"].endswith(".png"):
-                lab = f"{kind}{x['id']} {(x.get('name') or x.get('title'))}"
-                items.append((lab, "https://image.tmdb.org/t/p/w300" + lg["file_path"])); lst.append([len(lst), lab, lg["file_path"]])
-    res[k] = lst
-    sheet(k, items[:16])
-for k, q in {"sundance": "Sundance Film Festival logo", "bear": "Goldener Bär", "berlinale": "Berlinale logo",
-             "emmy": "Emmy statuette", "criterion": "Criterion Collection logo", "oscar3": "Oscar statuette"}.items():
-    time.sleep(6)
+            return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=90).read()
+        except Exception as e:
+            err = e; time.sleep(8)
+    raise err
+def commons(title, width=1600):
+    q = urllib.parse.urlencode({"action": "query", "titles": title, "prop": "imageinfo", "iiprop": "url", "iiurlwidth": width, "format": "json"})
+    info = next(iter(json.loads(get("https://commons.wikimedia.org/w/api.php?" + q))["query"]["pages"].values()))["imageinfo"][0]
+    time.sleep(3)
+    return Image.open(io.BytesIO(get(info.get("thumburl") or info["url"]))).convert("RGBA")
+def trim(im):
+    bb = im.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox()
+    return im.crop(bb) if bb else im
+log = ""
+def tmdb_logo(kind, tid, idx):
+    lg = [x for x in (tmdb(f"/{kind}/{tid}/images", include_image_language="en,null") or {}).get("logos", []) if x["file_path"].endswith(".png")]
+    return trim(Image.open(io.BytesIO(get("https://image.tmdb.org/t/p/original" + lg[idx]["file_path"]))).convert("RGBA"))
+jobs = {
+    "oscars-gold.png": lambda: tmdb_logo("tv", 27023, 1),
+    "oscars-white.png": lambda: tmdb_logo("tv", 27023, 3),
+    "golden-globes.png": lambda: tmdb_logo("tv", 71494, 3),
+    "bafta.png": lambda: tmdb_logo("tv", 26183, 0),
+    "palme-mark.png": lambda: trim(commons("File:Palme d'Or 2023.svg")),
+    "lion-mark.png": lambda: trim(commons("File:Leone d'Oro gold silhouette.svg")),
+    "bear-mark.png": lambda: trim(commons("File:Goldener Bär gold silhouette.svg")),
+    "sundance-mark.png": lambda: trim(commons("File:Sundance Institute logo.svg")),
+    "criterion-mark.png": lambda: trim(commons("File:The Criterion Collection Logo.svg")),
+    "palme-trophy.png": lambda: trim(remove(commons("File:Palme d'or.jpg", 2000).convert("RGB"))),
+    "lion-trophy.png": lambda: trim(remove(commons("File:Leone d'Oro miglior film, Deserto Rosso, 1964.jpg", 2000).convert("RGB"))),
+    "emmy-trophy.png": lambda: trim(remove(commons("File:Dunkwu's Emmy Statuette.jpg", 2000).convert("RGB"))),
+    "oscar-trophy.png": lambda: trim(remove(Image.open(io.BytesIO(get("https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/mirror/files/f1/f1a0400c91b86d07.png"))).convert("RGB").crop((620, 0, 1000, 562)) if False else Image.open(io.BytesIO(get("https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/mirror/files/f1/f1a0400c91b86d07.png"))).convert("RGB"))),
+    "globe-trophy.png": lambda: trim(remove(Image.open(io.BytesIO(get("https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/mirror/files/" + "PLACEHOLDER"))).convert("RGB"))),
+}
+import json as _j
+d = _j.load(open("builder/out/delivered/baseline.json"))
+gg = [f for c in d if c["title"] == "Awards & Festivals" for f in c["folders"] if f["title"].startswith("Golden Globes")][0]["coverImageUrl"]
+jobs["globe-trophy.png"] = lambda: trim(remove(Image.open(io.BytesIO(get(gg))).convert("RGB")))
+for name, fn in jobs.items():
     try:
-        p = urllib.parse.urlencode({"action": "query", "format": "json", "generator": "search", "gsrsearch": q, "gsrnamespace": 6,
-                                    "gsrlimit": 12, "prop": "imageinfo", "iiprop": "url|mime", "iiurlwidth": 240})
-        pages = sorted(json.loads(get("https://commons.wikimedia.org/w/api.php?" + p)).get("query", {}).get("pages", {}).values(), key=lambda x: x.get("index", 99))
-        res[k] = [[i, pg["title"]] for i, pg in enumerate(pages)]
-        time.sleep(3)
-        sheet(k, [(pg["title"][5:], pg["imageinfo"][0]["thumburl"]) for pg in pages if pg.get("imageinfo")])
+        im = fn(); im.save("refs/awa/" + name); log += f"ok {name} {im.size}\n"
     except Exception as e:
-        res[k] = str(e)
-json.dump(res, open("refs/aw/cands2.json", "w"), indent=1, ensure_ascii=False)
+        import traceback; log += f"FAIL {name} {e}\n" + traceback.format_exc()[-600:]
+open("refs/awa/log.txt", "w").write(log)
