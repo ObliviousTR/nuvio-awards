@@ -12,7 +12,7 @@ import spotlight_art as art
 from spotlight import tmdb
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageOps
 
-PW, PH = 600, 900           # render size (Kaptain's posters are 1000x1500; the focus WebP goes out at 400x600)
+PW, PH = 480, 720           # render size (Kaptain's posters are 1000x1500; the focus WebP goes out at 400x600)
 OW, OH = 400, 600
 NETS = {"HBO": [49], "FX": [88], "AMC": [174], "Showtime": [67], "BBC": [4, 332, 3, 100], "ITV": [9],
         "Channel 4": [26], "U&Dave": [388], "Sky Atlantic": [1063], "TV Tokyo": [98], "Fuji TV / MBS": [1, 94],
@@ -96,59 +96,65 @@ def frame_path(p):
     return pts[:n]
 
 
+def heavy_vignette():
+    v = Image.new("L", (PW, PH), 0)
+    ImageDraw.Draw(v).ellipse((-PW * 0.15, PH * 0.12, PW * 1.15, PH * 0.88), fill=255)
+    return v.filter(ImageFilter.GaussianBlur(130))
+
+
 def make(logo, stills, accent):
+    """Frame 0 is the static cover: the channel's most popular show behind a heavy vignette, the plain logo.
+    Then the channel colour spreads out from the logo (glow, wash, frame) as on Kaptain's hover image, while the
+    channel's other popular shows cross-fade behind; at the end it settles back to the cover, so the loop is seamless."""
     lg = logo.convert("RGBA")
     k = min(PW * 0.66 / lg.width, PH * 0.2 / lg.height)
     lg = lg.resize((round(lg.width * k), round(lg.height * k)), Image.LANCZOS)
-    bgs = [portrait(s, accent, 0.36) for s in stills] or [Image.new("RGB", (PW, PH), (10, 10, 12))]
+    bgs = [art.cover_fit(s, PW, PH) for s in stills] or [Image.new("RGB", (PW, PH), (10, 10, 12))]
+    bgs = [ImageEnhance.Color(b).enhance(0.85) for b in bgs]
+    vg = heavy_vignette()
+    black = Image.new("RGB", (PW, PH))
+    tint = Image.new("RGB", (PW, PH), accent)
+    wash = Image.new("L", (PW, PH), 0)
+    ImageDraw.Draw(wash).ellipse((-PW * 0.25, PH * 0.12, PW * 1.25, PH * 0.88), fill=255)
+    wash = wash.filter(ImageFilter.GaussianBlur(120))
+    lg_glow = Image.new("RGBA", (lg.width + 120, lg.height + 120), accent + (0,))
+    m = Image.new("L", lg_glow.size, 0)
+    m.paste(lg.getchannel("A"), (60, 60))
+    lg_glow_mask = m.filter(ImageFilter.GaussianBlur(20))
+    border = Image.new("L", (PW, PH), 0)
+    ImageDraw.Draw(border).rounded_rectangle((6, 6, PW - 7, PH - 7), radius=26, outline=255, width=4)
+    border_glow = border.filter(ImageFilter.GaussianBlur(8))
 
-    def glow(layer, r, a):
-        g = Image.new("RGBA", (layer.width + 6 * r, layer.height + 6 * r), accent + (0,))
-        m = Image.new("L", g.size, 0)
-        m.paste(layer.getchannel("A"), (3 * r, 3 * r))
-        g.putalpha(m.filter(ImageFilter.GaussianBlur(r)).point(lambda v: min(255, round(v * a))))
-        return g
+    def colour(t):
+        return ease(t / 0.2) if t < 0.88 else 1 - ease((t - 0.88) / 0.12)
 
     def frame(i, n):
         t = i / n
+        c = colour(t)
         seg = t * len(bgs)
         j = min(len(bgs) - 1, int(seg))
         loc = seg - j
         bg = zoomed(bgs[j], 0.03 + 0.07 * loc)
         if loc > 0.8:
             bg = Image.blend(bg, zoomed(bgs[(j + 1) % len(bgs)], 0.03), (loc - 0.8) / 0.2)
-        cv = vign(bg).convert("RGBA")
-        # accent bloom behind the logo
-        bloom = Image.new("L", (PW, PH), 0)
-        ImageDraw.Draw(bloom).ellipse((PW * 0.1, PH * 0.3, PW * 0.9, PH * 0.7), fill=round(70 * (0.75 + 0.25 * math.sin(t * math.pi * 4))))
-        bl = Image.new("RGBA", (PW, PH), accent + (0,))
-        bl.putalpha(bloom.filter(ImageFilter.GaussianBlur(90)))
-        cv.alpha_composite(bl)
-        a = ease(t / 0.2)
-        s = 0.92 + 0.08 * ease(t / 0.3)
-        L = lg.resize((round(lg.width * s), round(lg.height * s)), Image.LANCZOS)
-        g = glow(L, 14, 0.9 * a)
-        cv.alpha_composite(g, (round(PW / 2 - g.width / 2), round(PH / 2 - g.height / 2)))
-        L2 = L.copy()
-        L2.putalpha(L.getchannel("A").point(lambda v: round(v * a)))
-        cv.alpha_composite(L2, (round(PW / 2 - L.width / 2), round(PH / 2 - L.height / 2)))
-        if 0.45 < t < 0.7:  # light over the logo
-            sp = (t - 0.45) / 0.25
-            band = Image.new("L", L.size, 0)
-            bx = -80 + sp * (L.width + 160)
-            ImageDraw.Draw(band).polygon([(bx, 0), (bx + 40, 0), (bx - 30, L.height), (bx - 70, L.height)], fill=170)
-            band = ImageChops.multiply(band.filter(ImageFilter.GaussianBlur(8)), L.getchannel("A"))
-            wl = Image.new("RGBA", L.size, (255, 255, 255, 0))
-            wl.putalpha(band)
-            cv.alpha_composite(wl, (round(PW / 2 - L.width / 2), round(PH / 2 - L.height / 2)))
-        # the frame traces itself round the card, then stays
-        pts = frame_path(ease(t / 0.35))
-        fr = Image.new("RGBA", (PW, PH), (0, 0, 0, 0))
-        ImageDraw.Draw(fr).line(pts, fill=accent + (255,), width=4, joint="curve")
-        gl = Image.new("RGBA", (PW, PH), accent + (0,))
-        gl.putalpha(fr.getchannel("A").filter(ImageFilter.GaussianBlur(8)))
-        cv.alpha_composite(gl)
-        cv.alpha_composite(fr)
+        bg = ImageEnhance.Brightness(bg).enhance(0.34 + 0.12 * c)
+        bg = Image.blend(bg, tint, 0.12 * c)
+        bg = Image.composite(bg, black, vg)  # heavy vignette, as on the cover
+        cv = bg.convert("RGBA")
+        if c > 0:
+            wl = Image.new("RGBA", (PW, PH), accent + (0,))
+            wl.putalpha(wash.point(lambda v: round(v * 0.22 * c)))
+            cv.alpha_composite(wl)
+            g = Image.new("RGBA", lg_glow.size, accent + (0,))
+            g.putalpha(lg_glow_mask.point(lambda v: min(255, round(v * 1.1 * c))))
+            cv.alpha_composite(g, (round(PW / 2 - g.width / 2), round(PH / 2 - g.height / 2)))
+            bl = Image.new("RGBA", (PW, PH), accent + (0,))
+            bl.putalpha(border_glow.point(lambda v: round(v * c)))
+            cv.alpha_composite(bl)
+            bl = Image.new("RGBA", (PW, PH), accent + (0,))
+            bl.putalpha(border.point(lambda v: round(v * c)))
+            cv.alpha_composite(bl)
+        cv.alpha_composite(lg, (round(PW / 2 - lg.width / 2), round(PH / 2 - lg.height / 2)))
         return cv.convert("RGB")
     return frame
 
@@ -181,12 +187,8 @@ def main():
             frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
             frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
                            loop=0, quality=80, method=5, minimize_size=True, allow_mixed=True)
-            if t == "Fuji TV / MBS":  # cover + hero in Kaptain's look
-                cov = make(logo, [ImageEnhance.Brightness(s).enhance(0.45) for s in stills[:1]], accent)
-                c = cov(n - 1, n)
-                # Kaptain's covers have no frame: crop the frame off by repainting the edge black
-                c = ImageOps.expand(c.crop((10, 10, PW - 10, PH - 10)), 10, (0, 0, 0)).resize((1000, 1500), Image.LANCZOS)
-                c.save(os.path.join(dd, "cover.jpg"), quality=90)
+            frame(0, n).resize((1000, 1500), Image.LANCZOS).save(os.path.join(dd, "cover.jpg"), quality=90)
+            if t == "Fuji TV / MBS":  # hero + logo
                 art.graded(stills[0], 0.95, 1.03, (1920, 1080)).save(os.path.join(dd, "backdrop.jpg"), quality=86)
                 logo.save(os.path.join(dd, "logo.png"))
             strip = Image.new("RGB", (OW * 6, OH))
