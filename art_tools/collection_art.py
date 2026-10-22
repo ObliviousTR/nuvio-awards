@@ -34,11 +34,11 @@ CARDS = {
     "Fantasy Collections": ("f0/f0339cb440448d4c.jpg", [295, 420, 2980]),               # Pirates, Narnia, Ghostbusters
     "Comedy Collections": ("e2/e242a7e48e594b22.jpg", [1006, 86119, 93791]),            # Austin Powers, The Hangover, Anchorman
     "Family & Animation Collections": ("dc/dc24d05e2a6c8dda.jpg", [10194, 2150, 86066]),  # Toy Story, Shrek, Despicable Me
-    "Drama Collections": ("18/18683f8dfa1d29cd.jpg", [230, 1575, ("movie", 76)]),       # The Godfather, Rocky, Before Sunrise
-    "Crime Collections": ("19/1984f21190e0cbea.jpg", [304, 945, 85861]),                # Ocean's, Lethal Weapon, Beverly Hills Cop
+    "Drama Collections": ("18/18683f8dfa1d29cd.jpg", [1575, ("movie", 76), 306937]),    # Rocky, Before Sunrise, Best Exotic Marigold Hotel
+    "Crime Collections": ("19/1984f21190e0cbea.jpg", [230, 304, 10456]),                # The Godfather, Ocean's, Dirty Harry
     "Horror Collections": ("75/754524a1a3546541.jpg", [91361, 2602, 8581]),             # Halloween, Scream, Nightmare on Elm Street
     "Mystery Collections": ("c6/c681599d8926e49a.jpg", [722971, 102322, 115776]),       # Knives Out, Sherlock Holmes, Robert Langdon
-    "Thriller Collections": ("51/51744e5ed43d77dc.jpg", [9743, 496796, 43064]),         # Hannibal Lecter, Sicario, Speed
+    "Thriller Collections": ("51/51744e5ed43d77dc.jpg", [9743, 496796, 192492]),        # Hannibal Lecter, Sicario, Jack Ryan
     "War Collections": ("4e/4e206b38d228711c.jpg", [5039, 285564, 14246]),              # Rambo, Jarhead, Sniper
 }
 
