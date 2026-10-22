@@ -192,7 +192,7 @@ def role_image(pid, kind, tid, refs):
             score = max((same(feat, r_) for r_ in refs), default=0)
             if score >= 0.36:
                 area = box[2] * box[3] / (pic.width * pic.height)
-                key = (score > 0.45) * 1.0 + area * 6 - bool(b.get("iso_639_1")) * 0.3
+                key = (score > 0.45) * 1.0 + area * 6 - bool(b.get("iso_639_1")) * 2.0  # titled art only when no clean frame has the face
                 if best is None or key > best[0]:
                     best = (key, b["file_path"], (box[0] + box[2] / 2) / pic.width)
         if best and best[0] > 1.25:
