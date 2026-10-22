@@ -1,47 +1,45 @@
-"""Anime row: source art for the four own sheet cards (pop-out character candidates)."""
+"""Anime row: cut-out art candidates (fanart.tv characterart / clearart) for alternative pop-out characters."""
 import json, os, sys, urllib.request
 sys.path.insert(0, "scripts")
 from spotlight import tmdb
-import spotlight_art as art
 
-OUT = "refs/anime"
+OUT = "refs/alt"
 os.makedirs(OUT, exist_ok=True)
-FA = os.environ.get("FANART_API_KEY", "")
+FA = os.environ["FANART_API_KEY"]
 log = []
+CANDS = [("tv", "The Apothecary Diaries"), ("tv", "JoJo's Bizarre Adventure"), ("tv", "Kaguya-sama: Love Is War"),
+         ("tv", "Spy x Family"), ("tv", "Horimiya"), ("tv", "Your Lie in April"), ("movie", "My Neighbor Totoro"),
+         ("movie", "Princess Mononoke"), ("tv", "Attack on Titan"), ("tv", "Steins;Gate"), ("tv", "Cowboy Bebop"),
+         ("tv", "Jujutsu Kaisen"), ("tv", "One Piece"), ("tv", "Neon Genesis Evangelion"), ("tv", "Dragon Ball Z"),
+         ("tv", "Naruto Shippuden"), ("movie", "Suzume"), ("movie", "Spirited Away"), ("tv", "Chainsaw Man"),
+         ("tv", "Mob Psycho 100")]
 
 
-def grab(url, path):
+def get(url):
+    return urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "nuvio-awards"}), timeout=60).read()
+
+
+for kind, name in CANDS:
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "nuvio-awards"})
-        open(path, "wb").write(urllib.request.urlopen(req, timeout=60).read())
-        return True
-    except Exception as e:
-        log.append(f"fail {url} {e}")
-
-
-for slug, kind, tid in (("seinen", "tv", 88803), ("legends", "tv", 31911), ("films", "movie", 372058), ("sagas", "movie", 149)):
-    d = os.path.join(OUT, slug)
-    os.makedirs(d, exist_ok=True)
-    im = tmdb(f"/{kind}/{tid}/images", include_image_language="null,en,ja") or {}
-    for i, p in enumerate(sorted(im.get("posters", []), key=lambda x: -x.get("vote_average", 0))[:10]):
-        grab(art.IMG + "w780" + p["file_path"], f"{d}/poster{i:02d}_{p.get('iso_639_1')}.jpg")
-    for i, p in enumerate(sorted(im.get("backdrops", []), key=lambda x: -x.get("vote_average", 0))[:10]):
-        grab(art.IMG + "w1280" + p["file_path"], f"{d}/backdrop{i:02d}_{p.get('iso_639_1')}.jpg")
-    if FA:
+        r = (tmdb(f"/search/{kind}", query=name) or {}).get("results", [])
+        r = [x for x in r if x.get("original_language") == "ja"] or r
+        tid = r[0]["id"]
+        slug = "".join(c if c.isalnum() else "-" for c in name.lower()).strip("-")
         if kind == "tv":
             tvdb = (tmdb(f"/tv/{tid}/external_ids") or {}).get("tvdb_id")
-            url = f"https://webservice.fanart.tv/v3/tv/{tvdb}?api_key={FA}"
+            fa = json.loads(get(f"https://webservice.fanart.tv/v3/tv/{tvdb}?api_key={FA}"))
+            keys = ("characterart", "hdclearart")
         else:
-            url = f"https://webservice.fanart.tv/v3/movies/{tid}?api_key={FA}"
-        try:
-            fa = json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "nuvio-awards"}), timeout=60))
-            for key in ("characterart", "hdclearart", "clearart", "hdmovieclearart", "movieart", "movieposter", "moviebackground", "showbackground", "tvposter"):
-                for i, x in enumerate(fa.get(key, [])[:8]):
-                    ext = os.path.splitext(x["url"])[1] or ".png"
-                    grab(x["url"], f"{d}/fa_{key}{i:02d}_{x.get('lang', '')}{ext}")
-            log.append(f"{slug}: fanart keys {sorted(k for k in fa if isinstance(fa[k], list))}")
-        except Exception as e:
-            log.append(f"{slug}: fanart error {e}")
-    else:
-        log.append("no FANART_API_KEY")
+            fa = json.loads(get(f"https://webservice.fanart.tv/v3/movies/{tid}?api_key={FA}"))
+            keys = ("hdmovieclearart", "movieart")
+        n = 0
+        for k in keys:
+            for i, x in enumerate(sorted(fa.get(k, []), key=lambda y: -int(y.get("likes", 0)))[:6]):
+                if x.get("lang") not in ("en", "00", "", None, "ja"):
+                    continue
+                open(f"{OUT}/{slug}__{k}{i:02d}.png", "wb").write(get(x["url"]))
+                n += 1
+        log.append(f"{name}: tmdb {kind} {tid}, {n} files")
+    except Exception as e:
+        log.append(f"{name}: error {e}")
 open(f"{OUT}/log.txt", "w").write("\n".join(log))
