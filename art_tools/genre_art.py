@@ -167,6 +167,9 @@ def scene(img):
     for x in range(W):
         side.putpixel((x, 0), round(175 * max(0.0, 1 - x / (W * 0.62)) ** 1.5))
     m = ImageChops.lighter(m, ImageChops.multiply(side.resize((W, H)), Image.linear_gradient("L").resize((W, H))))
+    pool = Image.new("L", (W, H), 0)   # a soft dark pool under the type, so a bright poster can't wash it out
+    ImageDraw.Draw(pool).ellipse((-W * 0.25, H * 0.58, W * 0.62, H * 1.12), fill=205)
+    m = ImageChops.lighter(m, pool.filter(ImageFilter.GaussianBlur(W * 0.07)))
     return Image.composite(Image.new("RGB", (W, H), (6, 6, 10)), im, m)
 
 
