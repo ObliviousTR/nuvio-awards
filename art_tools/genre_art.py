@@ -59,8 +59,9 @@ def textless_backdrop(kind, tid):
 def popular(title, filters, n=3, keep=(), avoid=()):
     """The genre's popular films right now: TMDB popularity, English, a vote floor, released in the last 4 years."""
     import datetime as dt
-    since = (dt.date.today() - dt.timedelta(days=4 * 365)).isoformat()
-    p = dict(filters, sort_by="popularity.desc", with_original_language="en", **{"vote_count.gte": 300,
+    small = title == "Stand-Up Comedy"  # specials: a small genre, so a wider window and a lower vote floor
+    since = (dt.date.today() - dt.timedelta(days=(10 if small else 4) * 365)).isoformat()
+    p = dict(filters, sort_by="popularity.desc", with_original_language="en", **{"vote_count.gte": 25 if small else 300,
              "primary_release_date.gte": since})
     if title != "Animation":
         p["without_genres"] = "16" + ("|99" if title != "Stand-Up Comedy" else "")
@@ -277,7 +278,7 @@ def slug_of(t):
 
 
 def build_one(job):
-    t, keep, out = job
+    t, picks, out = job
     title, sub, accent, icon, filters = GENRES[t]
     try:
         first = []
@@ -285,8 +286,9 @@ def build_one(job):
             p = textless_backdrop("movie", icon)
             info = tmdb(f"/movie/{icon}") or {}
             first = [(icon, info.get("title"), p)] if p else []
-        picks = popular(t, filters, 3, keep, avoid={icon})
         seq = first + picks
+        if not seq:
+            raise RuntimeError("no films")
         imgs = [art.fetch(p).convert("RGB") for _, _, p in seq]
         frame = make(title, sub, accent, imgs)
         dd = os.path.join(out, slug_of(t))
@@ -319,7 +321,20 @@ def main():
             prev = {}
         del args[i:i + 2]
     only = set(args)
-    jobs = [(t, [p[0] for p in prev.get(t, [])], out) for t in GENRES if not only or t in only]
+    # pick first, one genre after another, so no film is on two genre cards at once (then render in parallel)
+    used = {g[3] for g in GENRES.values() if g[3]}
+    jobs = []
+    for t in GENRES:
+        if only and t not in only:
+            continue
+        keep = [p[0] for p in prev.get(t, [])]
+        try:
+            pk = popular(t, GENRES[t][4], 3, keep, avoid=used)
+        except Exception as e:
+            print("pick failed", t, e)
+            pk = []
+        used |= {x[0] for x in pk}
+        jobs.append((t, pk, out))
     from multiprocessing import Pool
     with Pool(4) as pool:
         res = pool.map(build_one, jobs)

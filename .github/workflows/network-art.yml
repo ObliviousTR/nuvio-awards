@@ -21,7 +21,7 @@ jobs:
       - name: Build
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-        run: python3 art_tools/network_art.py out --prev out/picks.json | tee build.log
+        run: set -o pipefail; python3 art_tools/network_art.py out --prev out/picks.json | tee build.log
       - name: Publish (one commit on the network-art branch, no history)
         if: always()
         run: |
