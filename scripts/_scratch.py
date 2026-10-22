@@ -1,4 +1,4 @@
-"""Universes: re-render with four pictures each (no parting); Film Collections: all 11 cards."""
+"""Universes: re-render, every picture on screen for the same time."""
 import os, sys, subprocess
 from concurrent.futures import ThreadPoolExecutor
 os.makedirs("refs/um", exist_ok=True)
@@ -19,7 +19,5 @@ def cards():
 
 
 with ThreadPoolExecutor(4) as ex:
-    fc = ex.submit(cards)
     logs = list(ex.map(run, ids))
 open("refs/um/log.txt", "w").write("\n".join(logs))
-open("refs/fc/log.txt", "w").write(fc.result())

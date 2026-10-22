@@ -1356,7 +1356,7 @@ def render(uid, out_dir):
         t = min(1, i / B)
         h = (i - B) / HD if i >= B else None
         iv = i if i < B else B + (i - B) / HOLD_SLOW      # the old frame clock, fractional in the hold
-        bg = background(sc, iv / total).convert("RGBA")
+        bg = background(sc, i / n).convert("RGBA")   # every frame is 40 ms: equal real time per picture
         if SPLIT:
             op = ease((t - 0.45) / 0.45) if h is None else (1.0 if h < 0.86 else 1 - ease((h - 0.86) / 0.14))
             bg = split(bg, op)
