@@ -103,57 +103,65 @@ def heavy_vignette():
 
 
 def make(logo, stills, accent):
-    """Frame 0 is the static cover: the channel's most popular show behind a heavy vignette, the plain logo.
-    Then the channel colour spreads out from the logo (glow, wash, frame) as on Kaptain's hover image, while the
-    channel's other popular shows cross-fade behind; at the end it settles back to the cover, so the loop is seamless."""
+    """Kaptain's Cinematic Ghost look, animated. Frame 0 = the cover: the channel's most popular show as a ghost behind
+    a heavy vignette, plain logo. Then, per show: the channel colour glows up under the logo and lights the show, a
+    glowing frame runs once round the card; when it closes, a breath (the glow swells and eases) while the next show
+    fades in, and the frame starts its next lap. The last show hands back to the cover, so the loop is seamless."""
     lg = logo.convert("RGBA")
     k = min(PW * 0.66 / lg.width, PH * 0.2 / lg.height)
     lg = lg.resize((round(lg.width * k), round(lg.height * k)), Image.LANCZOS)
-    bgs = [art.cover_fit(s, PW, PH) for s in stills] or [Image.new("RGB", (PW, PH), (10, 10, 12))]
-    bgs = [ImageEnhance.Color(b).enhance(0.85) for b in bgs]
+    bgs = [ImageEnhance.Color(art.cover_fit(s, PW, PH)).enhance(0.85) for s in stills] or [Image.new("RGB", (PW, PH), (10, 10, 12))]
     vg = heavy_vignette()
     black = Image.new("RGB", (PW, PH))
     tint = Image.new("RGB", (PW, PH), accent)
-    wash = Image.new("L", (PW, PH), 0)
-    ImageDraw.Draw(wash).ellipse((-PW * 0.25, PH * 0.12, PW * 1.25, PH * 0.88), fill=255)
-    wash = wash.filter(ImageFilter.GaussianBlur(120))
+    bloom = Image.new("L", (PW, PH), 0)
+    ImageDraw.Draw(bloom).ellipse((PW * 0.08, PH * 0.36, PW * 0.92, PH * 0.82), fill=255)
+    bloom = bloom.filter(ImageFilter.GaussianBlur(95))
     lg_glow = Image.new("RGBA", (lg.width + 120, lg.height + 120), accent + (0,))
     m = Image.new("L", lg_glow.size, 0)
     m.paste(lg.getchannel("A"), (60, 60))
     lg_glow_mask = m.filter(ImageFilter.GaussianBlur(20))
-    border = Image.new("L", (PW, PH), 0)
-    ImageDraw.Draw(border).rounded_rectangle((6, 6, PW - 7, PH - 7), radius=26, outline=255, width=4)
-    border_glow = border.filter(ImageFilter.GaussianBlur(8))
-
-    def colour(t):
-        return ease(t / 0.2) if t < 0.88 else 1 - ease((t - 0.88) / 0.12)
+    S = len(bgs)
 
     def frame(i, n):
         t = i / n
-        c = colour(t)
-        seg = t * len(bgs)
-        j = min(len(bgs) - 1, int(seg))
+        c = ease(t / 0.1) if t < 0.94 else 1 - ease((t - 0.94) / 0.06)  # colour on, and off again at the loop's end
+        seg = t * S
+        j = min(S - 1, int(seg))
         loc = seg - j
+        breath = math.sin(math.pi * (loc - 0.82) / 0.18) if loc > 0.82 else 0.0
         bg = zoomed(bgs[j], 0.03 + 0.07 * loc)
-        if loc > 0.8:
-            bg = Image.blend(bg, zoomed(bgs[(j + 1) % len(bgs)], 0.03), (loc - 0.8) / 0.2)
-        bg = ImageEnhance.Brightness(bg).enhance(0.34 + 0.12 * c)
-        bg = Image.blend(bg, tint, 0.12 * c)
-        bg = Image.composite(bg, black, vg)  # heavy vignette, as on the cover
+        if loc > 0.82:
+            bg = Image.blend(bg, zoomed(bgs[(j + 1) % S], 0.03), (loc - 0.82) / 0.18)
+        bg = ImageEnhance.Brightness(bg).enhance(0.22 + 0.16 * c)
+        bg = Image.blend(bg, tint, 0.08 * c)
+        bg = Image.composite(bg, black, vg)
         cv = bg.convert("RGBA")
         if c > 0:
             wl = Image.new("RGBA", (PW, PH), accent + (0,))
-            wl.putalpha(wash.point(lambda v: round(v * 0.22 * c)))
+            wl.putalpha(bloom.point(lambda v: round(v * (0.42 + 0.18 * breath) * c)))
             cv.alpha_composite(wl)
             g = Image.new("RGBA", lg_glow.size, accent + (0,))
-            g.putalpha(lg_glow_mask.point(lambda v: min(255, round(v * 1.1 * c))))
+            g.putalpha(lg_glow_mask.point(lambda v: min(255, round(v * (0.9 + 0.5 * breath) * c))))
             cv.alpha_composite(g, (round(PW / 2 - g.width / 2), round(PH / 2 - g.height / 2)))
-            bl = Image.new("RGBA", (PW, PH), accent + (0,))
-            bl.putalpha(border_glow.point(lambda v: round(v * c)))
-            cv.alpha_composite(bl)
-            bl = Image.new("RGBA", (PW, PH), accent + (0,))
-            bl.putalpha(border.point(lambda v: round(v * c)))
-            cv.alpha_composite(bl)
+            # the frame: one lap per show, closed before the breath, cleared as the next lap starts
+            lap = min(1.0, loc / 0.8)  # constant speed round the card
+            fa = c * (1.0 if loc < 0.97 else 1 - (loc - 0.97) / 0.03)
+            fr = Image.new("L", (PW, PH), 0)
+            pts = frame_path(lap)
+            if len(pts) > 1:
+                ImageDraw.Draw(fr).line(pts, fill=255, width=4, joint="curve")
+            head = Image.new("L", (PW, PH), 0)
+            if lap < 1 and len(pts) > 1:  # bright head of the running line
+                hx, hy = pts[-1]
+                ImageDraw.Draw(head).ellipse((hx - 9, hy - 9, hx + 9, hy + 9), fill=255)
+            glowm = ImageChops.lighter(fr, head).filter(ImageFilter.GaussianBlur(9 + 6 * breath))
+            gl = Image.new("RGBA", (PW, PH), accent + (0,))
+            gl.putalpha(glowm.point(lambda v: min(255, round(v * (1.1 + 0.8 * breath) * fa))))
+            cv.alpha_composite(gl)
+            ln = Image.new("RGBA", (PW, PH), accent + (0,))
+            ln.putalpha(fr.point(lambda v: round(v * fa)))
+            cv.alpha_composite(ln)
         cv.alpha_composite(lg, (round(PW / 2 - lg.width / 2), round(PH / 2 - lg.height / 2)))
         return cv.convert("RGB")
     return frame
@@ -176,14 +184,14 @@ def main():
                 mbs = load("https://image.tmdb.org/t/p/original" + mbs[0]["file_path"]).convert("RGBA")
                 logo = stack(white(fuji, keep=True), white(mbs))
             accent = ACCENT.get(t) or accent_of(load(f["focusGifUrl"].split("?")[0]))
-            stills = shows(NETS[t])
+            stills = shows(NETS[t], 3)
             frame = make(logo, stills, accent)
             slug = "".join(ch if ch.isalnum() else "-" for ch in t.lower()).strip("-")
             while "--" in slug:
                 slug = slug.replace("--", "-")
             dd = os.path.join(out, slug)
             os.makedirs(dd, exist_ok=True)
-            n = 96
+            n = 120  # 3 shows x 40 frames, 50 ms: 2 s per show, 6 s loop
             frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
             frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
                            loop=0, quality=80, method=5, minimize_size=True, allow_mixed=True)
@@ -192,7 +200,7 @@ def main():
                 art.graded(stills[0], 0.95, 1.03, (1920, 1080)).save(os.path.join(dd, "backdrop.jpg"), quality=86)
                 logo.save(os.path.join(dd, "logo.png"))
             strip = Image.new("RGB", (OW * 6, OH))
-            for j, idx in enumerate([0, 12, 25, 45, 70, 95]):
+            for j, idx in enumerate([0, 20, 33, 38, 60, 119]):
                 strip.paste(frames[idx], (j * OW, 0))
             strip.resize((OW * 3, OH // 2)).save(os.path.join(dd, "frames.jpg"), quality=80)
             print("built", t, dd)
