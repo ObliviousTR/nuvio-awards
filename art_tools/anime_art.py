@@ -3,10 +3,10 @@
 Kaptain ships each Anime card as two stills, a cover (outlined word, white kanji, pop-out characters) and a hover
 (card edge lit in the category colour, word / kanji / show line filled with it, pop-out group a little bigger and
 glowing). This animates the step from one to the other, in the same rhythm as the Networks and Genres rows:
-  hold the cover -> a colour line runs once round the card edge at constant speed (5 s lap)
+  from the first frame: the card edge lights up all round, the type fills, the pop-out group steps forward
   -> kanji fill top to bottom, the word fills left to right, the show line after it
   -> the pop-out group steps forward into its hover pose and its glow comes up
-  -> lap closes, one breath of the edge light -> everything drains back to the cover (seamless loop).
+  -> the edge light breathes once -> everything drains back to the cover (3.5 s, seamless loop).
 Nothing is redrawn: every pixel comes from Kaptain's two images, so the look is exactly his.
 usage: python3 art_tools/anime_art.py OUT_DIR slug [slug ...]   (slugs as in Kaptain's art/anime/<slug>/)
 """
@@ -21,7 +21,7 @@ from keyframe_webp import encode
 KAPTAIN = os.environ.get("KAPTAIN_ART", "/home/claude/imkaptain/nuvio-art/art/anime")
 W, H = 1280, 720          # working size
 OUT = (512, 288)          # hover size, as the other landscape rows
-N, MS = 100, 50           # 5 s
+N, MS = 70, 50            # 3.5 s: in 0.5 s, one slow breath, out 0.5 s
 
 
 def load(slug, kind):
@@ -183,20 +183,20 @@ def build(slug, out_dir):
     frames = []
     for i in range(N):
         t = i / N
-        lap = np.clip((i - 4) / 80, 0, 1)                      # f4..f84, constant speed
-        drain = ease((i - 91) / 8)                              # f91..f99 back to the cover
-        kan = ease((i - 2) / 8) * (1 - drain)                   # type starts filling right away
-        wrd = ease((i - 4) / 16) * (1 - drain)
-        ttl = ease((i - 12) / 12) * (1 - drain)
+        D0 = N - 9                                              # drain: the last 9 frames go back to the cover
+        drain = ease((i - D0) / 8)
         out3 = lambda x: 1 - (1 - min(1.0, max(0.0, x))) ** 3   # ease out, no overshoot: lands sharp
-        grp = out3((i - 10) / 10) if i < 91 else 1 - ease((i - 91) / 8)
-        breath = np.sin(np.pi * np.clip((i - 84) / 8, 0, 1)) * 0.45
+        grp = out3(i / 9) if i < D0 else 1 - ease((i - D0) / 8)  # characters step forward from the first frame
+        kan = ease(i / 7) * (1 - drain)
+        wrd = ease((i - 1) / 12) * (1 - drain)
+        ttl = ease((i - 6) / 10) * (1 - drain)
+        lit = ease(i / 8) * (1 - drain)                         # whole edge lights up at once (no lap: nothing cycles behind)
+        breath = np.sin(np.pi * np.clip((i - 8) / (D0 - 8), 0, 1)) ** 2 * 0.7
 
-        # base: cover, edge light running round
-        m_edge = Bz * (np.clip((lap * (1 + 0.012) - arc) / 0.012, 0, 1) * (1 - drain))
-        out = C + ed(m_edge) * (Hv - C)
+        # base: cover, the edge light filled all round and breathing once
+        out = C + ed(Bz * lit) * (Hv - C)
         if breath > 0:
-            out = out + ed(Bz * breath) * np.clip(Hv - C, 0, None)
+            out = out + ed(Bz * breath * lit) * np.clip(Hv - C, 0, None)
 
         # pop-out group: only the characters step forward; the background stays put and the glow fades up
         if grp > 0:
@@ -218,7 +218,7 @@ def build(slug, out_dir):
     encode(frames, [MS] * N, os.path.join(out_dir, "hover.webp"), quality=75)
     Image.fromarray(C.astype(np.uint8)).save(os.path.join(out_dir, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (OUT[0] * 4, OUT[1] * 2))
-    for j, fi in enumerate((0, 8, 12, 15, 20, 50, 86, 95)):
+    for j, fi in enumerate((0, 3, 6, 9, 20, 35, 60, 66)):
         strip.paste(frames[fi], ((j % 4) * OUT[0], (j // 4) * OUT[1]))
     strip.save(os.path.join(out_dir, "frames.jpg"), quality=82)
     return frames

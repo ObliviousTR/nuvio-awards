@@ -13,8 +13,8 @@ import spotlight_art as art
 from spotlight import tmdb
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageOps
 
-PW, PH = 480, 720           # render size (Kaptain's posters are 1000x1500; the focus WebP goes out at 400x600)
-OW, OH = 400, 600
+PW, PH = 480, 720           # render size (Kaptain's posters are 1000x1500; the focus WebP goes out at 340x510)
+OW, OH = 340, 510         # under 512 px: Nuvio Desktop rescales anything bigger on every frame, which made it stutter
 NETS = {"HBO": [49], "FX": [88], "AMC": [174], "Showtime": [67], "BBC": [4, 332, 3, 100], "ITV": [9],
         "Channel 4": [26], "U&Dave": [388], "Sky Atlantic": [1063], "TV Tokyo": [98], "Fuji TV / MBS": [1, 94],
         "Adult Swim": [80], "Comedy Central": [47], "Syfy": [77], "Cartoon Network": [56], "Discovery Channel": [64],
