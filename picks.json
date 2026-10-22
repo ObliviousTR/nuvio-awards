@@ -1,0 +1,337 @@
+{
+ "date": "2026-10-22",
+ "picks": {
+  "HBO": [
+   [
+    1399,
+    "Game of Thrones"
+   ],
+   [
+    94997,
+    "House of the Dragon"
+   ],
+   [
+    1398,
+    "The Sopranos"
+   ]
+  ],
+  "FX": [
+   [
+    83631,
+    "What We Do in the Shadows"
+   ],
+   [
+    1413,
+    "American Horror Story"
+   ],
+   [
+    2710,
+    "It's Always Sunny in Philadelphia"
+   ]
+  ],
+  "AMC": [
+   [
+    1396,
+    "Breaking Bad"
+   ],
+   [
+    1402,
+    "The Walking Dead"
+   ],
+   [
+    60059,
+    "Better Call Saul"
+   ]
+  ],
+  "Showtime": [
+   [
+    18053,
+    "Nurse Jackie"
+   ],
+   [
+    34307,
+    "Shameless"
+   ],
+   [
+    4629,
+    "Stargate SG-1"
+   ]
+  ],
+  "Sky Atlantic": [
+   [
+    222766,
+    "The Day of the Jackal"
+   ],
+   [
+    85021,
+    "Gangs of London"
+   ],
+   [
+    70484,
+    "Britannia"
+   ]
+  ],
+  "BBC": [
+   [
+    41956,
+    "Death in Paradise"
+   ],
+   [
+    424,
+    "Torchwood"
+   ],
+   [
+    57243,
+    "Doctor Who"
+   ]
+  ],
+  "ITV": [
+   [
+    764,
+    "Midsomer Murders"
+   ],
+   [
+    790,
+    "Agatha Christie's Poirot"
+   ],
+   [
+    39185,
+    "Vera"
+   ]
+  ],
+  "Channel 4": [
+   [
+    42009,
+    "Black Mirror"
+   ],
+   [
+    1906,
+    "Shameless"
+   ],
+   [
+    63404,
+    "Taskmaster"
+   ]
+  ],
+  "U&Dave": [
+   [
+    326,
+    "Red Dwarf"
+   ],
+   [
+    63404,
+    "Taskmaster"
+   ]
+  ],
+  "NBC": [
+   [
+    549,
+    "Law & Order"
+   ],
+   [
+    2734,
+    "Law & Order: Special Victims Unit"
+   ],
+   [
+    2316,
+    "The Office"
+   ]
+  ],
+  "ABC": [
+   [
+    1416,
+    "Grey's Anatomy"
+   ],
+   [
+    79744,
+    "The Rookie"
+   ],
+   [
+    1421,
+    "Modern Family"
+   ]
+  ],
+  "CBS": [
+   [
+    4614,
+    "NCIS"
+   ],
+   [
+    5920,
+    "The Mentalist"
+   ],
+   [
+    4057,
+    "Criminal Minds"
+   ]
+  ],
+  "FOX": [
+   [
+    1480,
+    "Ally McBeal"
+   ],
+   [
+    456,
+    "The Simpsons"
+   ],
+   [
+    1434,
+    "Family Guy"
+   ]
+  ],
+  "USA Network": [
+   [
+    37680,
+    "Suits"
+   ],
+   [
+    4601,
+    "Law & Order: Criminal Intent"
+   ],
+   [
+    1695,
+    "Monk"
+   ]
+  ],
+  "Syfy": [
+   [
+    4629,
+    "Stargate SG-1"
+   ],
+   [
+    63639,
+    "The Expanse"
+   ],
+   [
+    2290,
+    "Stargate Atlantis"
+   ]
+  ],
+  "Comedy Central": [
+   [
+    2190,
+    "South Park"
+   ],
+   [
+    615,
+    "Futurama"
+   ],
+   [
+    2187,
+    "Reno 911!"
+   ]
+  ],
+  "Adult Swim": [
+   [
+    60625,
+    "Rick and Morty"
+   ],
+   [
+    709,
+    "Robot Chicken"
+   ],
+   [
+    2723,
+    "Samurai Jack"
+   ]
+  ],
+  "Cartoon Network": [
+   [
+    31132,
+    "Regular Show"
+   ],
+   [
+    15260,
+    "Adventure Time"
+   ],
+   [
+    45140,
+    "Teen Titans Go!"
+   ]
+  ],
+  "TV Tokyo": [
+   [
+    30984,
+    "Bleach"
+   ],
+   [
+    60572,
+    "Pokémon"
+   ],
+   [
+    46260,
+    "Naruto"
+   ]
+  ],
+  "Fuji TV / MBS": [
+   [
+    95479,
+    "JUJUTSU KAISEN"
+   ],
+   [
+    12971,
+    "Dragon Ball Z"
+   ],
+   [
+    57706,
+    "Ranma ½"
+   ]
+  ],
+  "Discovery Channel": [
+   [
+    1428,
+    "MythBusters"
+   ],
+   [
+    34634,
+    "Gold Rush"
+   ],
+   [
+    17937,
+    "Ghost Adventures"
+   ]
+  ],
+  "National Geographic": [
+   [
+    70128,
+    "Genius"
+   ],
+   [
+    58474,
+    "Cosmos"
+   ],
+   [
+    61120,
+    "Running Wild with Bear Grylls"
+   ]
+  ],
+  "History Channel": [
+   [
+    32608,
+    "Ancient Aliens"
+   ],
+   [
+    21755,
+    "Pawn Stars"
+   ],
+   [
+    60603,
+    "The Curse of Oak Island"
+   ]
+  ],
+  "Food Network": [
+   [
+    17404,
+    "Chopped"
+   ],
+   [
+    4086,
+    "Diners, Drive-Ins and Dives"
+   ],
+   [
+    62595,
+    "Guy's Grocery Games"
+   ]
+  ]
+ }
+}
