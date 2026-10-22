@@ -158,6 +158,53 @@ def make(title, sub, accent, imgs):
     def mix(a, b, f):
         return tuple(round(a[i] + (b[i] - a[i]) * f) for i in range(3))
 
+    # the title as separate letter layers (each slides up and fades in on its own), the subtitle as one layer
+    letters, x = [], x0
+    for ch in title:
+        adv = probe.textlength(ch, font=tf) + sp_t
+        if ch != " ":
+            bb = tf.getbbox(ch)
+            lay = Image.new("RGBA", (bb[2] + 20, bb[3] + 20), (0, 0, 0, 0))
+            ImageDraw.Draw(lay).text((0, 0), ch, font=tf, fill=(255, 255, 255, 255))
+            letters.append((x, lay))
+        x += adv
+    sw = round(sum(probe.textlength(ch, font=sf) + sp_s for ch in sub)) + 20
+    sub_h = sf.getbbox("Ag")[3] + 10
+
+    def sub_layer(col):
+        lay = Image.new("RGBA", (sw, sub_h), (0, 0, 0, 0))
+        tracked(ImageDraw.Draw(lay), (0, 0), sub, sf, col + (255,), sp_s)
+        return lay
+
+    def put(cv, lay, x, y, a):
+        if a <= 0:
+            return
+        if a < 1:
+            lay = lay.copy()
+            lay.putalpha(lay.getchannel("A").point(lambda v: round(v * a)))
+        cv.alpha_composite(lay, (round(x), round(y)))
+
+    def type_in(cv, t, out, c):
+        """Bar grows up, letters rise in one by one, the subtitle slides in from the left; all fade at the loop end."""
+        d = ImageDraw.Draw(cv)
+        gb = ease(t / 0.06) * out
+        if gb > 0:
+            top = bar[3] - (bar[3] - bar[1]) * ease(t / 0.06)
+            d.rectangle((bar[0], top, bar[2], bar[3]), fill=mix(accent, (255, 255, 255), c) + (round(255 * out),))
+        for k_, (lx, lay) in enumerate(letters):
+            p_ = ease((t - 0.02 - k_ * 0.012) / 0.07)
+            put(cv, lay, lx, title_y + (1 - p_) * 26, p_ * out)
+        p_ = ease((t - 0.07) / 0.09)
+        put(cv, sub_layer(mix(grey, accent, c)), x0 + 2 - (1 - p_) * 60, sub_y, p_ * out)
+
+    def cover():
+        cv = scene(imgs[0]) if False else bars[0].copy().convert("RGBA")
+        d = ImageDraw.Draw(cv)
+        d.rectangle(bar, fill=accent + (255,))
+        tracked(d, (x0, title_y), title, tf, (255, 255, 255, 255), sp_t)
+        tracked(d, (x0 + 2, sub_y), sub, sf, grey + (255,), sp_s)
+        return cv.convert("RGB")
+
     def frame(i, n):
         t = i / n
         c = ease(t / L0) if t < 0.94 else 1 - ease((t - 0.94) / 0.06)
@@ -174,9 +221,7 @@ def make(title, sub, accent, imgs):
         breath = math.sin(math.pi * (t - L1) / 0.1) if L1 < t < L1 + 0.1 else 0.0
         cv = bg.convert("RGBA")
         d = ImageDraw.Draw(cv)
-        d.rectangle(bar, fill=mix(accent, (255, 255, 255), c) + (255,))
-        tracked(d, (x0, title_y), title, tf, (255, 255, 255, 255), sp_t)
-        tracked(d, (x0 + 2, sub_y), sub, sf, mix(grey, accent, c) + (255,), sp_s)
+        type_in(cv, t, 1 - ease((t - 0.95) / 0.05), c)
         if c > 0:
             fr = Image.new("L", (W, H), 0)
             pts = frame_path(q)
@@ -194,6 +239,7 @@ def make(title, sub, accent, imgs):
             ln.putalpha(fr.point(lambda v: round(v * c)))
             cv.alpha_composite(ln)
         return cv.convert("RGB")
+    frame.cover = cover
     return frame
 
 
@@ -223,7 +269,7 @@ def build_one(job):
         frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
         frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
                        loop=0, quality=80, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
-        frame(0, n).save(os.path.join(dd, "cover.jpg"), quality=90)
+        frame.cover().save(os.path.join(dd, "cover.jpg"), quality=90)
         strip = Image.new("RGB", (OW * 3, OH * 2))
         for jj, idx in enumerate([0, 20, 45, 70, 104, 119]):
             strip.paste(frames[idx], ((jj % 3) * OW, (jj // 3) * OH))
