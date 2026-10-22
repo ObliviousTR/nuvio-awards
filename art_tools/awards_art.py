@@ -1,4 +1,4 @@
-"""Awards & Festivals row. Two looks are on trial:
+"""Awards & Festivals row. Look A is the row's (C was the alternative on trial):
   A "winners"     the award's mark (statuette / logo) up front; on hover it settles in the corner and the films and
                   shows that won it play behind (textless key art), the title and the prize written under them; the
                   card's gold light runs round once; the mark comes back. Combined cards relay their marks.
@@ -6,7 +6,7 @@
                   its name under it.
 Marks and statuettes are kept in nuvio-art art/logos/awards (TMDB award-show logos, Wikimedia Commons marks, rembg
 cut-outs). Winners move on every month through each card's pool.
-usage: python3 art_tools/awards_art.py OUT_DIR LOOK CARD...      LOOK = A | C, CARD = oscars | festivals | ...
+usage: python3 art_tools/awards_art.py OUT_DIR [folder titles...]   (AWARDS_LOOK=C for the shelf look)
 """
 import datetime as dt, io, math, os, random, sys, urllib.request
 import numpy as np
@@ -25,25 +25,52 @@ RAW = "https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/art/logos/aw
 GOLD = [(0.0, (255, 240, 190)), (0.45, (232, 188, 98)), (0.75, (190, 138, 52)), (1.0, (120, 82, 30))]
 GOLD_TXT = (226, 190, 120)
 
-# card -> marks (asset, name, prize label) and the winners' pools: (title, year, prize, [kind])
+# folder -> marks (asset, name, prize) and, per mark, a pool of winners: (title, lookup year[, prize, kind, year shown]).
+# One mark: three winners a month; two marks: two each; four marks: one each (a relay).
 CARDS = {
-    "oscars": {
-        "marks": [("oscars-gold.png", "OSCARS", "BEST PICTURE")],
+    "The Oscars": {
+        "marks": [("oscars-gold.png", "OSCARS", "BEST PICTURE")], "statue": "oscar-trophy.png",
         "trophy": [("oscar-trophy.png", "THE OSCAR", "ACADEMY AWARDS")],
         "pool": [[("The Godfather", 1972), ("Parasite", 2019), ("Oppenheimer", 2023),
                   ("The Lord of the Rings: The Return of the King", 2003), ("Schindler's List", 1993),
                   ("No Country for Old Men", 2007), ("The Silence of the Lambs", 1991), ("Gladiator", 2000),
                   ("Everything Everywhere All at Once", 2022), ("One Flew Over the Cuckoo's Nest", 1975)]],
     },
-    "festivals": {
+    "Golden Globes & BAFTA": {
+        "marks": [("golden-globes.png", "GOLDEN GLOBES", "GOLDEN GLOBE · BEST DRAMA"), ("bafta.png", "BAFTA", "BAFTA · BEST FILM")],
+        "pool": [[("The Social Network", 2010), ("Boyhood", 2014), ("Brokeback Mountain", 2005), ("Avatar", 2009),
+                  ("Three Billboards Outside Ebbing, Missouri", 2017), ("The Power of the Dog", 2021),
+                  ("The Revenant", 2015), ("The Brutalist", 2024)],
+                 [("1917", 2019), ("La La Land", 2016), ("All Quiet on the Western Front", 2022), ("The King's Speech", 2010),
+                  ("Slumdog Millionaire", 2008), ("Conclave", 2024), ("12 Years a Slave", 2013)]],
+    },
+    "Cannes, Venice & Sundance": {
         "marks": [("palme-mark.png", "CANNES", "PALME D'OR"), ("lion-mark.png", "VENICE", "GOLDEN LION"),
                   ("sundance-mark.png", "SUNDANCE", "GRAND JURY PRIZE"), ("bear-mark.png", "BERLIN", "GOLDEN BEAR")],
+        "names": True,
         "trophy": [("palme-trophy.png", "PALME D'OR", "CANNES"), ("lion-mark.png", "GOLDEN LION", "VENICE"),
                    ("sundance-mark.png", "GRAND JURY PRIZE", "SUNDANCE"), ("bear-mark.png", "GOLDEN BEAR", "BERLIN")],
         "pool": [[("Parasite", 2019), ("Pulp Fiction", 1994), ("Anora", 2024), ("Taxi Driver", 1976), ("Apocalypse Now", 1979)],
                  [("Joker", 2019), ("Roma", 2018), ("Nomadland", 2020), ("The Shape of Water", 2017), ("Poor Things", 2023)],
                  [("Whiplash", 2014), ("CODA", 2021), ("Fruitvale Station", 2013), ("Minari", 2020), ("Me and Earl and the Dying Girl", 2015)],
-                 [("Spirited Away", 2001), ("A Separation", 2011), ("Magnolia", 1999), ("The Thin Red Line", 1998), ("Taxi", 2015)]],
+                 [("Spirited Away", 2001), ("A Separation", 2011), ("Magnolia", 1999), ("The Thin Red Line", 1998), ("On Body and Soul", 2017)]],
+    },
+    "The Emmy Awards": {
+        "marks": [("emmy-word", "EMMY AWARDS", "OUTSTANDING DRAMA SERIES")],
+        "pool": [[("Breaking Bad", 2008, "OUTSTANDING DRAMA SERIES", "tv", 2013), ("Succession", 2018, "OUTSTANDING DRAMA SERIES", "tv", 2020),
+                  ("The Bear", 2022, "OUTSTANDING COMEDY SERIES", "tv", 2023), ("Game of Thrones", 2011, "OUTSTANDING DRAMA SERIES", "tv", 2015),
+                  ("Shōgun", 2024, "OUTSTANDING DRAMA SERIES", "tv", 2024), ("Chernobyl", 2019, "OUTSTANDING LIMITED SERIES", "tv", 2019),
+                  ("Fleabag", 2016, "OUTSTANDING COMEDY SERIES", "tv", 2019), ("The Sopranos", 1999, "OUTSTANDING DRAMA SERIES", "tv", 2004),
+                  ("Mad Men", 2007, "OUTSTANDING DRAMA SERIES", "tv", 2008), ("Ted Lasso", 2020, "OUTSTANDING COMEDY SERIES", "tv", 2021),
+                  ("The Crown", 2016, "OUTSTANDING DRAMA SERIES", "tv", 2021), ("Hacks", 2021, "OUTSTANDING COMEDY SERIES", "tv", 2024)]],
+    },
+    "Criterion Collection & Arthouse": {
+        "marks": [("criterion-word", "THE CRITERION COLLECTION", "CRITERION")],
+        "pool": [[("Seven Samurai", 1954, "CRITERION SPINE #2"), ("The Seventh Seal", 1957, "CRITERION SPINE #11"),
+                  ("8½", 1963, "CRITERION SPINE #140"), ("In the Mood for Love", 2000, "CRITERION SPINE #147"),
+                  ("Tokyo Story", 1953, "CRITERION SPINE #217"), ("Rashomon", 1950, "CRITERION SPINE #138"),
+                  ("The 400 Blows", 1959, "CRITERION SPINE #5"), ("Grand Illusion", 1937, "CRITERION SPINE #1"),
+                  ("Wild Strawberries", 1957, "CRITERION SPINE #139"), ("Ikiru", 1952, "CRITERION SPINE #221")]],
     },
 }
 
@@ -163,7 +190,33 @@ def edge_light(cv, q, a, col=(240, 196, 110)):
     cv.alpha_composite(ln)
 
 
+def word(text, fnt, sp, fill=(255, 255, 255, 255)):
+    lay = Image.new("RGBA", (round(width(text, fnt, sp)) + 40, round(fnt.size * 1.6)), (0, 0, 0, 0))
+    tracked(ImageDraw.Draw(lay), (10, 10), text, fnt, fill, sp)
+    return lay.crop(lay.getchannel("A").getbbox())
+
+
 def mark_of(asset_name, flat_gold=True):
+    if asset_name == "emmy-word":  # the Emmy's name set in gold Cinzel, like the Oscars logotype
+        import universe_motion as um
+        big = gilded(word("EMMY", um.font("cinzel", 260, weight=600), 40), bevel=False)
+        small = gilded(word("AWARDS", um.font("cinzel", 90, weight=600), 40), bevel=False)
+        out = Image.new("RGBA", (max(big.width, small.width), big.height + 40 + small.height), (0, 0, 0, 0))
+        out.alpha_composite(big, ((out.width - big.width) // 2, 0))
+        out.alpha_composite(small, ((out.width - small.width) // 2, big.height + 40))
+        return out
+    if asset_name == "criterion-word":  # the C and the house's name, white
+        c = asset("criterion-mark.png")
+        a = c.getchannel("A")
+        c = Image.new("RGBA", c.size, (255, 255, 255, 0)); c.putalpha(a)
+        c = fit(c, 999, 300)
+        w1 = word("THE CRITERION", font("SemiBold", 70), 12)
+        w2 = word("COLLECTION", font("SemiBold", 70), 12)
+        out = Image.new("RGBA", (c.width + 50 + max(w1.width, w2.width), 300), (0, 0, 0, 0))
+        out.alpha_composite(c, (0, 0))
+        out.alpha_composite(w1, (c.width + 50, 150 - w1.height - 14))
+        out.alpha_composite(w2, (c.width + 50, 150 + 14))
+        return out
     im = asset(asset_name)
     if asset_name == "sundance-mark.png":  # the institute disc: keep the sun, set our own word under it
         a = np.asarray(im, dtype=np.float32)
@@ -174,13 +227,13 @@ def mark_of(asset_name, flat_gold=True):
         disc.putalpha(Image.fromarray(sun))
         disc = disc.crop(disc.getchannel("A").getbbox())
         disc = gilded(disc.resize((600, round(600 * disc.height / disc.width))))
-        word = Image.new("RGBA", (1400, 260), (0, 0, 0, 0))
-        tracked(ImageDraw.Draw(word), (0, 30), "SUNDANCE", font("ExtraBold", 150), (255, 255, 255, 255), 26)
-        word = gilded(word.crop(word.getchannel("A").getbbox()), bevel=False)
-        word = fit(word, disc.width * 1.5, 999)
-        out = Image.new("RGBA", (max(disc.width, word.width), disc.height + 40 + word.height), (0, 0, 0, 0))
+        wd = Image.new("RGBA", (1400, 260), (0, 0, 0, 0))
+        tracked(ImageDraw.Draw(wd), (0, 30), "SUNDANCE", font("ExtraBold", 150), (255, 255, 255, 255), 26)
+        wd = gilded(wd.crop(wd.getchannel("A").getbbox()), bevel=False)
+        wd = fit(wd, disc.width * 1.5, 999)
+        out = Image.new("RGBA", (max(disc.width, wd.width), disc.height + 40 + wd.height), (0, 0, 0, 0))
         out.alpha_composite(disc, ((out.width - disc.width) // 2, 0))
-        out.alpha_composite(word, ((out.width - word.width) // 2, disc.height + 40))
+        out.alpha_composite(wd, ((out.width - wd.width) // 2, disc.height + 40))
         return out
     if asset_name in ("lion-mark.png", "bear-mark.png"):
         return gilded(im)
@@ -191,25 +244,28 @@ def mark_of(asset_name, flat_gold=True):
 
 # ---------------------------------------------------------------- films
 def winners(card):
-    """This month's winners per mark: (image, title, year, prize)."""
+    """This month's winners per mark: (image, title, year shown, prize, mark index)."""
     import kids_art as K
     c = CARDS[card]
     m = dt.date.today().year * 12 + dt.date.today().month
-    per = 3 if len(c["marks"]) == 1 else 1
+    per = {1: 3, 2: 2}.get(len(c["marks"]), 1)
     out = []
     for mi, pool in enumerate(c["pool"]):
         start = (m * per) % len(pool)
         got = 0
-        for t, y in pool[start:] + pool[:start]:
-            if os.environ.get("AWARDS_TEST"):
-                a = (0, t, None)
-            else:
-                a = K.art_of(("movie", t, y))
+        for it in pool[start:] + pool[:start]:
+            t, y = it[:2]
+            prize = it[2] if len(it) > 2 else c["marks"][mi][2]
+            kind = it[3] if len(it) > 3 else "movie"
+            shown = it[4] if len(it) > 4 else y
+            a = (0, t, None) if os.environ.get("AWARDS_TEST") else K.art_of((kind, t, y))
             if a:
-                out.append((a[2], t, y, c["marks"][mi][2], mi))
+                out.append((a[2], t, shown, prize, mi))
                 got += 1
             if got == per:
                 break
+    if per == 2:  # alternate the marks: A1 B1 A2 B2
+        out = [x for pair in zip(out[:2], out[2:]) for x in pair]
     return out
 
 
@@ -256,9 +312,7 @@ def look_a(card):
     scenes = [scene(load(p)) for p, *_ in films]
     labels = [label(t, prize, y) for _, t, y, prize, _ in films]
     st = stage()
-    statue = None
-    if card == "oscars":
-        statue = fit(asset("oscar-trophy.png"), 999, H * 0.78)
+    statue = fit(asset(c["statue"]), 999, H * 0.78) if c.get("statue") else None
     # rest positions of the marks on the cover
     big = []
     if len(marks) == 1:
@@ -268,10 +322,10 @@ def look_a(card):
     else:
         n = len(marks)
         for k, mk in enumerate(marks):
-            m2 = fit(mk, W * 0.17, H * 0.3)
-            big.append((m2, W * (k + 0.5) / n, H * 0.46))
+            m2 = fit(mk, W * 0.17, H * 0.3) if n > 2 else fit(mk, W * 0.34, H * 0.3)
+            big.append((m2, W * (k + 0.5) / n, H * 0.46 if n > 2 else H * 0.5))
     names = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    if len(marks) > 1:
+    if c.get("names"):
         dn = ImageDraw.Draw(names)
         for k, (_, nm, _) in enumerate(c["marks"]):
             fn = font("SemiBold", 22)
@@ -292,7 +346,7 @@ def look_a(card):
         for k, (mk, x, y) in enumerate(big):
             if k != skip:
                 place(cv, mk if shine is None else sweep(mk, shine), x, y, a)
-        if len(marks) > 1:
+        if c.get("names"):
             cv.alpha_composite(alpha_mul(names, a))
         return cv
 
@@ -481,9 +535,16 @@ def look_c(card):
     return cover, frames, [s[3] for s in slots]
 
 
-def build(card, look, out):
+def slug_of(t):
+    s = "".join(ch if ch.isalnum() else "-" for ch in t.lower()).strip("-")
+    while "--" in s:
+        s = s.replace("--", "-")
+    return s
+
+
+def build(card, out, look="A"):
     cover, frames, info = (look_a if look == "A" else look_c)(card)
-    d = os.path.join(out, f"{card}-{look.lower()}")
+    d = os.path.join(out, slug_of(card) + ("" if look == "A" else "-" + look.lower()))
     os.makedirs(d, exist_ok=True)
     frames[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * len(frames),
                    loop=0, quality=80, method=4, kmin=0, kmax=1)
@@ -496,14 +557,15 @@ def build(card, look, out):
 
 
 if __name__ == "__main__":
-    out, look = sys.argv[1], sys.argv[2]
+    out = sys.argv[1]
+    look = os.environ.get("AWARDS_LOOK", "A")
     bad = False
-    for card in sys.argv[3:]:
+    for card in sys.argv[2:] or CARDS:
         try:
-            print("built", card, look, "·", ", ".join(map(str, build(card, look, out))), flush=True)
+            print("built", card, "·", ", ".join(map(str, build(card, out, look))), flush=True)
         except Exception as e:
             import traceback
             traceback.print_exc()
-            print("FAILED", card, look, e)
+            print("FAILED", card, e)
             bad = True
     sys.exit(1 if bad else 0)

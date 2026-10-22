@@ -131,6 +131,19 @@ for row in data:
             f.update({"coverImageUrl": u + "cover.jpg", "focusGifUrl": u + "hover.webp", "focusGifEnabled": True,
                       "coverEmoji": None, "hideTitle": True, "tileShape": "LANDSCAPE"})
             n += 1
+# Awards & Festivals: monthly art from the awards-art branch (art_tools/awards_art.py): the award's mark, its winners
+# playing behind it. Kaptain's hero and logo stay.
+AWARDS = "https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/awards-art/"
+from awards_art import CARDS as AWARD_CARDS, slug_of as award_slug
+for row in data:
+    if row["title"] != "Awards & Festivals":
+        continue
+    for f in row["folders"]:
+        if f["title"] in AWARD_CARDS:
+            u = AWARDS + award_slug(f["title"]) + "/"
+            f.update({"coverImageUrl": u + "cover.jpg", "focusGifUrl": u + "hover.webp", "focusGifEnabled": True,
+                      "coverEmoji": None, "hideTitle": True, "tileShape": "LANDSCAPE"})
+            n += 1
 # Nuvio Desktop keeps every hover animation it ever downloaded on disk, keyed by URL, and never checks for a newer
 # one; a fixed URL would show the first version forever there. So the branch art's URLs carry ?v=<hash of the file
 # as it is now> (raw.githubusercontent ignores the query, mobile still refreshes on its own).
@@ -154,7 +167,7 @@ for row in data:
     for f in row.get("folders", []):
         for k in ("coverImageUrl", "focusGifUrl", "heroBackdropUrl", "titleLogoUrl"):
             u = f.get(k) or ""
-            for base in (DISC, NET, GEN, MOOD, KIDS, STUDIO):
+            for base in (DISC, NET, GEN, MOOD, KIDS, STUDIO, AWARDS):
                 if u.startswith(base) and "?" not in u:
                     v = branch_version(base.rstrip("/").rsplit("/", 1)[1], u[len(base):])
                     if v:
