@@ -134,9 +134,16 @@ def build(slug, out_dir):
     acc_like = (np.abs(Hv - accent).max(2) < 62) & D & (edge_d >= 22)
 
     # pop-out group: fit on what changed outside the type, then its silhouette in the hover pose
-    s, ax, ay = fit_group(C, Hv, (D & (edge_d >= 22) & ~acc_like & (xx > W * 0.3)).astype(np.float32))
+    fit = f"{KAPTAIN}/{slug}/{slug}-fit.json"
+    if os.path.exists(fit):                      # our own sheets (anime_sheet.py) say exactly how the group moved
+        import json
+        j = json.load(open(fit))
+        s, ax, ay = j["scale"], j["anchor"][0] * W / j["size"][0], j["anchor"][1] * H / j["size"][1]
+        core = (np.asarray(Image.open(f"{KAPTAIN}/{slug}/{slug}-core.png").convert("L").resize((W, H))) > 127).astype(np.float32)
+    else:
+        s, ax, ay = fit_group(C, Hv, (D & (edge_d >= 22) & ~acc_like & (xx > W * 0.3)).astype(np.float32))
+        core = group_core(C, Hv, s, ax, ay)
     print(slug, "accent", accent.round(), "group scale %.3f anchor (%d, %d)" % (s, ax, ay))
-    core = group_core(C, Hv, s, ax, ay)
     coreH = soft(core, 0, 0.8)                                                        # hover pose
     coreC = warp(coreH[..., None].repeat(3, 2) * 255, 1 / s, ax, ay)[..., 0] / 255    # cover pose
 
