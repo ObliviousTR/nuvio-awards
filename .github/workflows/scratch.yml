@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install -q pillow yt-dlp && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - run: pip install -q pillow
       - env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           FANART_API_KEY: ${{ secrets.FANART_API_KEY }}
