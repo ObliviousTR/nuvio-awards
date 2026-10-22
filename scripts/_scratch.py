@@ -1,27 +1,35 @@
-"""Genres: sheet of every genre's iconic pool (the picture each film would show), plus Action/Comedy samples."""
-import os, subprocess, sys
+"""Genres: for every film in every iconic pool, its top fanart.tv backgrounds (previews), one sheet per genre;
+plus Action/Comedy samples with the most liked one."""
+import io, os, subprocess, sys, urllib.request
 sys.path.insert(0, "scripts"); sys.path.insert(0, "art_tools")
 import genre_art as g
-import spotlight_art as art
 from PIL import Image, ImageDraw, ImageFont
 os.makedirs("refs/gen", exist_ok=True)
-F = ImageFont.truetype("spotlight/fonts/Montserrat-SemiBold.ttf", 15)
-FB = ImageFont.truetype("spotlight/fonts/Montserrat-ExtraBold.ttf", 22)
-cw, ch = 300, 190
-rows = list(g.ICONIC)
-sheet = Image.new("RGB", (190 + cw * 8, ch * len(rows)), (18, 18, 22))
-d = ImageDraw.Draw(sheet)
-for r, t in enumerate(rows):
-    d.text((10, r * ch + 80), g.GENRES[t][0], font=FB, fill=(255, 255, 255))
-    for c, (name, year) in enumerate(g.ICONIC[t]):
-        x, y = 190 + c * cw, r * ch
+F = ImageFont.truetype("spotlight/fonts/Montserrat-SemiBold.ttf", 14)
+cw, ch, cols = 300, 190, 5
+
+
+def prev(url):
+    u = url.replace("/fanart/", "/preview/")
+    try:
+        return Image.open(io.BytesIO(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "x"}), timeout=60).read())).convert("RGB")
+    except Exception:
+        return None
+
+
+for t, pool in g.ICONIC.items():
+    sheet = Image.new("RGB", (220 + cw * cols, ch * len(pool)), (18, 18, 22))
+    d = ImageDraw.Draw(sheet)
+    for r, (name, year) in enumerate(pool):
         tid, real = g.find_movie(name, year)
-        p = g.textless_backdrop("movie", tid) if tid else None
-        if p:
-            im = art.fetch(p, "w500").convert("RGB")
-            im.thumbnail((cw - 8, ch - 30))
-            sheet.paste(im, (x + 4, y + 4))
-        d.text((x + 4, y + ch - 24), f"{real or name} ({year})"[:36], font=F, fill=(255, 214, 90) if p else (255, 80, 80))
-sheet.save("refs/gen/pools.jpg", quality=82)
+        d.text((8, r * ch + 80), (real or name)[:26], font=F, fill=(255, 255, 255))
+        urls = g.fanart_backgrounds(tid) if tid else []
+        d.text((8, r * ch + 100), f"{len(urls)} backgrounds", font=F, fill=(160, 160, 170))
+        for c, u in enumerate(urls[:cols]):
+            im = prev(u)
+            if im:
+                im.thumbnail((cw - 8, ch - 8))
+                sheet.paste(im, (220 + c * cw + 4, r * ch + 4))
+    sheet.save(f"refs/gen/fa_{g.slug_of(t)}.jpg", quality=80)
 r = subprocess.run([sys.executable, "art_tools/genre_art.py", "refs/gen", "Action & Adventure", "Comedy"], capture_output=True, text=True)
 open("refs/gen/log.txt", "w").write(r.stdout + "\n" + r.stderr[-4000:])

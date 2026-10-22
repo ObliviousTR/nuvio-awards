@@ -92,6 +92,47 @@ def find_movie(title, year):
     return None, None
 
 
+def fanart_backgrounds(tid):
+    """fanart.tv's textless movie backgrounds for a film, most liked first (hand-picked key art by its community)."""
+    import urllib.request
+    key = os.environ.get("FANART_API_KEY")
+    if not key:
+        return []
+    try:
+        req = urllib.request.Request(f"https://webservice.fanart.tv/v3/movies/{tid}?api_key={key}",
+                                     headers={"User-Agent": "nuvio-awards"})
+        d = json.loads(urllib.request.urlopen(req, timeout=60).read())
+    except Exception:
+        return []
+    bg = d.get("moviebackground", []) + d.get("movie4kbackground", [])
+    return [x["url"] for x in sorted(bg, key=lambda x: -int(x.get("likes", 0) or 0))]
+
+
+def load_img(p):
+    """A TMDB file path or a full (fanart.tv) URL -> RGB image."""
+    if not p.startswith("http"):
+        return art.fetch(p).convert("RGB")
+    import io, urllib.request
+    for _ in range(3):
+        try:
+            data = urllib.request.urlopen(urllib.request.Request(p, headers={"User-Agent": "nuvio-awards"}), timeout=60).read()
+            return Image.open(io.BytesIO(data)).convert("RGB")
+        except Exception:
+            continue
+    raise RuntimeError("could not fetch " + p)
+
+
+PICK = {}   # film id -> index into its fanart backgrounds when the most liked one isn't the best picture
+
+
+def best_art(tid):
+    """The film's picture: its most liked fanart.tv background (textless key art), else TMDB's best textless one."""
+    fa = fanart_backgrounds(tid)
+    if fa:
+        return fa[min(PICK.get(tid, 0), len(fa) - 1)]
+    return textless_backdrop("movie", tid)
+
+
 def iconic(title, n=3, avoid=(), month=None):
     """This month's trio from the genre's iconic list, each with its best-voted textless backdrop."""
     import datetime as dt
@@ -106,7 +147,7 @@ def iconic(title, n=3, avoid=(), month=None):
         tid, real = find_movie(name, year)
         if not tid or tid in avoid:
             continue
-        path = textless_backdrop("movie", tid)
+        path = best_art(tid)
         if path:
             out.append((tid, real, path))
         if len(out) == n:
@@ -395,7 +436,7 @@ def build_one(job):
         seq = first + picks
         if not seq:
             raise RuntimeError("no films")
-        imgs = [art.fetch(p).convert("RGB") for _, _, p in seq]
+        imgs = [load_img(p) for _, _, p in seq]
         frame = make(title, sub, accent, imgs)
         dd = os.path.join(out, slug_of(t))
         os.makedirs(dd, exist_ok=True)
