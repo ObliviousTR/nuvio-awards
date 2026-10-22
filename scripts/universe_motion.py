@@ -220,10 +220,18 @@ def ease(x):
 
 
 # ---------------------------------------------------------------- scenes
+def fetch_any(p):
+    """TMDB file path or a full URL (fanart.tv key art)."""
+    if p.startswith("http"):
+        import genre_art
+        return genre_art.load_img(p)
+    return art.fetch(p)
+
+
 def scenes(paths, b=0.62):
     out = []
     for p in paths:
-        im = art.fetch(p)
+        im = fetch_any(p)
         out.append(ImageEnhance.Brightness(art.graded(im, 0.92, 1.05)).enhance(b))
     return out
 
@@ -1301,6 +1309,15 @@ def render(uid, out_dir):
     else:
         cls, picks = PICKS[uid]
         paths = scene_paths(uid, picks)
+    try:  # the franchise films' own key art (fanart.tv), when it can be had
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "art_tools"))
+        import universe_keyart
+        if uid in universe_keyart.KEYART:
+            ka = universe_keyart.paths(uid)
+            if len(ka) >= 3:
+                paths = ka
+    except Exception as e:
+        print("key art unavailable for", uid, e)
     mark = cls()
     sc = scenes(paths)
     B, HD = round(mark.build * SMOOTH), round(mark.hold * SMOOTH)
@@ -1319,7 +1336,7 @@ def render(uid, out_dir):
     mark.i = round(B + 0.75 * HD)
     cov.alpha_composite(mark(1.0, 0.75))
     cov.convert("RGB").save(os.path.join(d, "cover.jpg"), quality=88)
-    art.graded(art.fetch(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=86)
+    art.graded(fetch_any(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=86)
     small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
     dur = [mark.dur(i, B) if hasattr(mark, "dur") else (40 if i < B else 70) for i in range(n)]
     small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=dur, loop=0,
