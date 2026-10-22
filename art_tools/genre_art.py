@@ -22,7 +22,7 @@ FONTS = os.path.join(ROOT, "spotlight", "fonts")
 
 # title on the card, subtitle, accent (Kaptain's frame colour), iconic film (TMDB id), filters for "popular now"
 GENRES = {
-    "Action & Adventure": ("ACTION", "HIGH-OCTANE THRILLS & BLOCKBUSTERS", (221, 109, 105), 76341, {"with_genres": "28|12"}),
+    "Action & Adventure": ("ACTION", "HIGH-OCTANE THRILLS & BLOCKBUSTERS", (221, 109, 105), 76341, {"with_genres": "28"}),
     "Sci-Fi & Fantasy": ("SCI-FI", "FUTURISTIC WORLDS & COSMIC SAGAS", (63, 180, 223), 157336, {"with_genres": "878|14"}),
     "Comedy": ("COMEDY", "LAUGH-OUT-LOUD FAVORITES & SATIRE", (244, 194, 81), 120467, {"with_genres": "35"}),
     "Animation": ("ANIMATION", "TIMELESS CLASSICS & MODERN MASTERPIECES", (59, 187, 136), 129, {"with_genres": "16"}),
