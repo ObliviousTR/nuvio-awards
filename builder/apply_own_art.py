@@ -81,5 +81,18 @@ for row in data:
             if f["title"] == "Fuji TV / MBS":
                 f.update({"heroBackdropUrl": u + "backdrop.jpg", "titleLogoUrl": u + "logo.png"})
             n += 1
+# Genres: monthly art from the genre-art branch (art_tools/genre_art.py); fixed URLs. Kaptain's hero and logo stay.
+GEN = "https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/genre-art/"
+sys.path.insert(0, "/home/claude/nuvio-awards/art_tools")
+from genre_art import GENRES, slug_of as genre_slug
+for row in data:
+    if row["title"] != "Genres":
+        continue
+    for f in row["folders"]:
+        if f["title"] in GENRES:
+            u = GEN + genre_slug(f["title"]) + "/"
+            f.update({"coverImageUrl": u + "cover.jpg", "focusGifUrl": u + "hover.webp", "focusGifEnabled": True,
+                      "coverEmoji": None, "hideTitle": True})
+            n += 1
 save(data, sys.argv[2])
 print(f"own art: {n} folders")
