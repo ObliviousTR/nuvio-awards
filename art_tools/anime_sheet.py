@@ -49,7 +49,7 @@ CARDS = {
         group=[("new/kaguya.png", 1000, ("r", 1920, 1080))]),
     "all-time-top-rated-anime": dict(word="LEGENDS", kanji="名作", tag="KEY FRAME  ·  CUT 01", show="ATTACK ON TITAN",
         accent=(238, 196, 88), inner="new/aot_bd.jpg",
-        group=[("new/aot.png", 1000, ("c", 1420, 1078))]),
+        group=[("new/aot.png", 1010, ("c", 1450, 1078))]),
     "anime-movies-feature-films": dict(word="FILMS", kanji="映画", tag="CLEAN UP  ·  CUT 22", show="YOUR NAME.",
         accent=(168, 150, 250), inner="films/backdrop00_None.jpg",
         group=[("cut/films.png", 1130, ("r", 1920, 1080))]),

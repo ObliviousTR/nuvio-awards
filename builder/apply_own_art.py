@@ -94,5 +94,34 @@ for row in data:
             f.update({"coverImageUrl": u + "cover.jpg", "focusGifUrl": u + "hover.webp", "focusGifEnabled": True,
                       "coverEmoji": None, "hideTitle": True})
             n += 1
+# Nuvio Desktop keeps every hover animation it ever downloaded on disk, keyed by URL, and never checks for a newer
+# one; a fixed URL would show the first version forever there. So the branch art's URLs carry ?v=<hash of the file
+# as it is now> (raw.githubusercontent ignores the query, mobile still refreshes on its own).
+import subprocess
+REPO = "/home/claude/nuvio-awards"
+_hash = {}
+
+
+def branch_version(branch, path):
+    key = (branch, path)
+    if key not in _hash:
+        if branch not in {b for b, _ in _hash}:
+            subprocess.run(["git", "-C", REPO, "fetch", "-q", "origin", f"+{branch}:refs/remotes/origin/{branch}"], check=False)
+        r = subprocess.run(["git", "-C", REPO, "show", f"origin/{branch}:{path}"], capture_output=True)
+        _hash[key] = hashlib.md5(r.stdout).hexdigest()[:8] if r.returncode == 0 else None
+    return _hash[key]
+
+
+vn = 0
+for row in data:
+    for f in row.get("folders", []):
+        for k in ("coverImageUrl", "focusGifUrl", "heroBackdropUrl", "titleLogoUrl"):
+            u = f.get(k) or ""
+            for base in (DISC, NET, GEN):
+                if u.startswith(base) and "?" not in u:
+                    v = branch_version(base.rstrip("/").rsplit("/", 1)[1], u[len(base):])
+                    if v:
+                        f[k] = u + "?v=" + v
+                        vn += 1
 save(data, sys.argv[2])
-print(f"own art: {n} folders")
+print(f"own art: {n} folders, {vn} branch links versioned")
