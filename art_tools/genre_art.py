@@ -34,7 +34,7 @@ GENRES = {
     "Stand-Up Comedy": ("STAND-UP", "COMICS, SPECIALS & LIVE WIRE SETS", (234, 160, 39), None, {"with_keywords": "9716"}),
     "Superhero": ("SUPERHERO", "CAPES, POWERS & COMIC-BOOK MYTH", (39, 91, 174), 155, {"with_keywords": "9715"}),
     "Martial Arts": ("MARTIAL ARTS", "DISCIPLINE, HONOR & FIGHTING GRACE", (199, 116, 100), 146, {"with_keywords": "779"}),
-    "History & War": ("WAR", "BATTLEFIELDS, BROTHERHOOD & COST", (147, 154, 121), 857, {"with_genres": "10752|36"}),
+    "History & War": ("WAR", "BATTLEFIELDS, BROTHERHOOD & COST", (147, 154, 121), 857, {"with_genres": "10752"}),
     "Western": ("WESTERN", "DUST, GUNSMOKE & FRONTIER JUSTICE", (172, 124, 75), 429, {"with_genres": "37"}),
 }
 
