@@ -362,26 +362,46 @@ def network(logos, stills, w=PW, h=PH):
     return frame
 
 
-def portrait(person_img, lines, sub, w=PW, h=PH):
-    """TMDB profile photo cut out (rembg) onto a dark studio backdrop, graded like Kaptain's actor cards."""
+def cutout(person_img):
     from rembg import remove
-    cut = remove(person_img.convert("RGB"))
-    cut = um.trim(cut)
+    return um.trim(remove(person_img.convert("RGB")))
+
+
+def portrait(person_img, lines, sub, w=PW, h=PH):
+    """TMDB profile photo cut out (rembg) and lit low-key on a near-black backdrop like Kaptain's actor cards:
+    light falls on the face and dies off towards the edges and the bottom, so the name sits on the dark clothes."""
+    return compose(cutout(person_img), lines, sub, w, h)
+
+
+def compose(cut, lines, sub, w=PW, h=PH):
+    import numpy as np
     r = max(w * 0.98 / cut.width, h * 0.86 / cut.height)
     cut = cut.resize((round(cut.width * r), round(cut.height * r)), Image.LANCZOS)
-    rgb = ImageEnhance.Contrast(ImageEnhance.Color(cut.convert("RGB")).enhance(0.8)).enhance(1.08)
-    cut = Image.merge("RGBA", (*rgb.split(), cut.getchannel("A")))
-    bg = Image.new("RGB", (w, h), (8, 8, 9))
+    ox, oy = round((w - cut.width) / 2), h - cut.height
+    a = np.asarray(cut.getchannel("A"), dtype=np.float32) / 255
+    ys, xs = np.nonzero(a[: int(cut.height * 0.45)] > 0.5)
+    fx = xs.mean() if len(xs) else cut.width / 2
+    fy = (ys.min() + cut.height * 0.16) if len(ys) else cut.height * 0.25  # roughly the eyes
+    rgb = np.asarray(cut.convert("RGB"), dtype=np.float32) / 255
+    lum = rgb @ np.array([0.299, 0.587, 0.114], dtype=np.float32)
+    rgb = lum[..., None] + (rgb - lum[..., None]) * 0.62  # muted colour
+    rgb = np.clip((rgb - 0.5) * 1.1 + 0.5, 0, 1) ** 1.35  # deeper mids
+    yy, xx = np.mgrid[0:cut.height, 0:cut.width].astype(np.float32)
+    d = np.sqrt(((xx - fx) / (cut.width * 0.42)) ** 2 + ((yy - fy) / (cut.height * 0.52)) ** 2)
+    light = np.clip(1.08 - 0.62 * np.clip(d - 0.35, 0, None) ** 1.3, 0.22, 1.05)  # key light on the face, falling off
+    rgb = np.clip(rgb * light[..., None] * 0.86, 0, 1)
+    cut = Image.merge("RGBA", (*Image.fromarray((rgb * 255).astype(np.uint8)).split(), cut.getchannel("A")))
+    bg = Image.new("RGB", (w, h), (6, 6, 7))
     g = Image.new("L", (w, h), 0)
-    ImageDraw.Draw(g).ellipse((-w * 0.1, h * 0.02, w * 1.1, h * 0.75), fill=255)
-    bg = Image.composite(Image.new("RGB", (w, h), (64, 64, 68)), bg, g.filter(ImageFilter.GaussianBlur(220))).convert("RGBA")
-    rim = um.glow(cut, 12, (255, 255, 255), 0.18)
-    um.comp(bg, rim, (w - cut.width) / 2, h - cut.height)
-    um.comp(bg, cut, (w - cut.width) / 2, h - cut.height)
-    out = vignette(bg.convert("RGB"), 0.55)
+    ImageDraw.Draw(g).ellipse((ox + fx - w * 0.5, oy + fy - h * 0.3, ox + fx + w * 0.5, oy + fy + h * 0.3), fill=255)
+    bg = Image.composite(Image.new("RGB", (w, h), (34, 34, 37)), bg, g.filter(ImageFilter.GaussianBlur(w // 5))).convert("RGBA")
+    rim = um.glow(cut, 10, (255, 255, 255), 0.07)
+    um.comp(bg, rim, ox, oy)
+    um.comp(bg, cut, ox, oy)
+    out = vignette(bg.convert("RGB"), 0.9)
     sys.path.insert(0, HERE)
     from reletter import letter
-    return letter(out, lines, sub, tint=(14, 14, 16))
+    return letter(out, lines, sub, tint=(6, 6, 7), fade=(0.5, 0.88))
 
 
 # ---------------------------------------------------------------- jobs

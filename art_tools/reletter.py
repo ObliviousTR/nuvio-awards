@@ -37,7 +37,7 @@ def width(text, fnt, sp):
     return sum(d.textlength(c, font=fnt) + sp for c in text) - sp
 
 
-def letter(im, lines, sub, focus=False, tint=None):
+def letter(im, lines, sub, focus=False, tint=None, fade=None):
     im = im.convert("RGB")
     W, H = im.size
     k = W / 1000
@@ -46,9 +46,15 @@ def letter(im, lines, sub, focus=False, tint=None):
     tint = tint or tuple(int(v * 0.55) for v in ImageStat.Stat(im.crop((inset + 20, int(H * 0.64), W - inset - 20, int(H * 0.66)))).mean)
     fade = Image.new("L", (W, H), 0)
     fd = ImageDraw.Draw(fade)
-    y0 = int(H * 0.66)
-    for y in range(y0, H - inset):
-        fd.line((inset, y, W - inset, y), fill=min(255, int(255 * ((y - y0) / (H * 0.13)) ** 1.2)))
+    if fade:  # soft: (start, max opacity) eased over the whole bottom, no solid block
+        y0 = int(H * fade[0])
+        for y in range(y0, H - inset):
+            t = (y - y0) / (H - y0)
+            fd.line((inset, y, W - inset, y), fill=int(255 * fade[1] * t * t * (3 - 2 * t)))
+    else:
+        y0 = int(H * 0.66)
+        for y in range(y0, H - inset):
+            fd.line((inset, y, W - inset, y), fill=min(255, int(255 * ((y - y0) / (H * 0.13)) ** 1.2)))
     im = Image.composite(Image.new("RGB", (W, H), tint), im, fade)
     d = ImageDraw.Draw(im)
     size = round(72 * k)
