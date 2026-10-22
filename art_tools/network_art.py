@@ -3,7 +3,8 @@ channel's flagship show faint behind its logo, a frame and glow in the channel c
 best-known shows cross-fade behind the logo with a slow push-in, the frame traces itself around the card, the logo
 glows up and a light passes over it. Shows: TMDB, the channel's most-voted series with a textless backdrop.
 Fuji TV / MBS (no Kaptain art) also gets a cover in the same look and a hero.
-usage: python3 art_tools/network_art.py BASELINE_JSON OUT_DIR [titles...]
+Rebuilt monthly by .github/workflows/network-art.yml into the network-art branch (fixed URLs).
+usage: python3 art_tools/network_art.py OUT_DIR [--prev picks.json] [titles...]
 """
 import io, json, math, os, sys, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -39,22 +40,29 @@ def accent_of(focus):
     return max(px, key=lambda p: p[3] * (max(p[:3]) - min(p[:3]) + 1))[:3]
 
 
-def shows(nets, n=3, kids=False):
+def shows(nets, n=3, kids=False, keep=()):
     """The channel's most popular shows right now (TMDB popularity, with a vote floor so obscure titles stay out).
-    Picture: a textless POSTER (vertical key art, fits the portrait card) if TMDB has one, else a textless backdrop."""
+    Shows picked last time stay while they are still in the channel's top 6, so the art only changes when the
+    channel's line-up really moves. Picture: a textless POSTER (vertical key art, fits the portrait card) if TMDB has
+    one, else a textless backdrop. Returns [(id, name, image)]."""
     r = (tmdb("/discover/tv", with_networks="|".join(map(str, nets)), sort_by="popularity.desc",
               without_genres="10763|10767|10766" + ("" if kids else "|10762"), **{"vote_count.gte": 40}) or {}).get("results", [])
+    top6 = r[:6]
+    kept = [s for s in top6 if s["id"] in keep]
+    order = kept + [s for s in r if s not in kept]
     out = []
-    for s in r:
+    for s in order:
         im = tmdb(f"/tv/{s['id']}/images", include_image_language="null") or {}
         ps = sorted([b for b in im.get("posters", []) if not b.get("iso_639_1")], key=lambda b: (-b["vote_count"], -b["vote_average"]))
         bd = sorted([b for b in im.get("backdrops", []) if not b.get("iso_639_1")], key=lambda b: -b["vote_count"])
         pick = ps[0]["file_path"] if ps else (bd[0]["file_path"] if bd else None)
         if pick:
-            out.append((s.get("name"), art.fetch(pick, "w780").convert("RGB")))
+            out.append((s["id"], s.get("name"), art.fetch(pick, "w780").convert("RGB")))
         if len(out) == n:
             break
-    return out
+    # the most popular of the picks leads (it is the cover)
+    rank = {s["id"]: i for i, s in enumerate(r)}
+    return sorted(out, key=lambda x: rank.get(x[0], 99))
 
 
 def portrait(img, accent, b):
@@ -195,49 +203,79 @@ def make(logo, stills, accent):
     return frame
 
 
+def slug_of(t):
+    s = "".join(ch if ch.isalnum() else "-" for ch in t.lower()).strip("-")
+    while "--" in s:
+        s = s.replace("--", "-")
+    return s
+
+
+def build_one(job):
+    t, logo_url, accent, keep, out = job
+    try:
+        logo = load(logo_url)
+        if t == "Fuji TV / MBS":
+            fuji = load("https://image.tmdb.org/t/p/original/4x4GsmRmSLLL0RVNKsoqAVH43tz.png").convert("RGBA")
+            mbs = [x for x in (tmdb("/network/94/images") or {}).get("logos", []) if x["file_path"].endswith(".png")]
+            mbs = load("https://image.tmdb.org/t/p/original" + mbs[0]["file_path"]).convert("RGBA")
+            logo = stack(white(fuji, keep=True), white(mbs))
+        picked = shows(NETS[t], 3, kids=t == "Cartoon Network", keep=keep)
+        stills = [x[2] for x in picked]
+        frame = make(logo, stills, tuple(accent))
+        dd = os.path.join(out, slug_of(t))
+        os.makedirs(dd, exist_ok=True)
+        n = 120  # 6 s loop: 0.25 s colour in, 5 s lap with the shows, 0.75 s breath and back to the cover
+        frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
+        frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
+                       loop=0, quality=80, method=5, minimize_size=True, allow_mixed=True)
+        frame(0, n).resize((1000, 1500), Image.LANCZOS).save(os.path.join(dd, "cover.jpg"), quality=90)
+        if t == "Fuji TV / MBS":  # hero + logo
+            art.graded(stills[0], 0.95, 1.03, (1920, 1080)).save(os.path.join(dd, "backdrop.jpg"), quality=86)
+            logo.save(os.path.join(dd, "logo.png"))
+        strip = Image.new("RGB", (OW * 6, OH))
+        for j, idx in enumerate([0, 25, 45, 70, 108, 119]):
+            strip.paste(frames[idx], (j * OW, 0))
+        strip.resize((OW * 3, OH // 2)).save(os.path.join(dd, "frames.jpg"), quality=80)
+        return t, [(x[0], x[1]) for x in picked], None
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return t, [], str(e)
+
+
 def main():
-    base, out = sys.argv[1], sys.argv[2]
-    only = set(sys.argv[3:])
-    d = json.load(open(base, encoding="utf-8"))
-    row = [c for c in d if c["title"] == "Networks"][0]
-    for f in row["folders"]:
-        t = f["title"]
-        if only and t not in only:
-            continue
+    """usage: network_art.py OUT_DIR [--prev picks.json] [titles...]"""
+    args = sys.argv[1:]
+    out = args.pop(0)
+    prev = {}
+    if "--prev" in args:
+        i = args.index("--prev")
         try:
-            logo = load(f["titleLogoUrl"].split("?")[0])
-            if t == "Fuji TV / MBS":
-                fuji = load("https://image.tmdb.org/t/p/original/4x4GsmRmSLLL0RVNKsoqAVH43tz.png").convert("RGBA")
-                mbs = [x for x in (tmdb("/network/94/images") or {}).get("logos", []) if x["file_path"].endswith(".png")]
-                mbs = load("https://image.tmdb.org/t/p/original" + mbs[0]["file_path"]).convert("RGBA")
-                logo = stack(white(fuji, keep=True), white(mbs))
-            accent = ACCENT.get(t) or accent_of(load(f["focusGifUrl"].split("?")[0]))
-            picked = shows(NETS[t], 3, kids=t == "Cartoon Network")
-            stills = [x[1] for x in picked]
-            print('  shows:', [x[0] for x in picked])
-            frame = make(logo, stills, accent)
-            slug = "".join(ch if ch.isalnum() else "-" for ch in t.lower()).strip("-")
-            while "--" in slug:
-                slug = slug.replace("--", "-")
-            dd = os.path.join(out, slug)
-            os.makedirs(dd, exist_ok=True)
-            n = 120  # 6 s loop: 0.25 s colour in, 5 s lap with the shows, 0.75 s breath and back to the cover
-            frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
-            frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
-                           loop=0, quality=80, method=5, minimize_size=True, allow_mixed=True)
-            frame(0, n).resize((1000, 1500), Image.LANCZOS).save(os.path.join(dd, "cover.jpg"), quality=90)
-            if t == "Fuji TV / MBS":  # hero + logo
-                art.graded(stills[0], 0.95, 1.03, (1920, 1080)).save(os.path.join(dd, "backdrop.jpg"), quality=86)
-                logo.save(os.path.join(dd, "logo.png"))
-            strip = Image.new("RGB", (OW * 6, OH))
-            for j, idx in enumerate([0, 25, 45, 70, 108, 119]):
-                strip.paste(frames[idx], (j * OW, 0))
-            strip.resize((OW * 3, OH // 2)).save(os.path.join(dd, "frames.jpg"), quality=80)
-            print("built", t, dd)
-        except Exception as e:
-            import traceback
-            traceback.print_exc()
-            print("FAILED", t, e)
+            prev = json.load(open(args[i + 1])).get("picks", {})
+        except Exception:
+            prev = {}
+        del args[i:i + 2]
+    only = set(args)
+    nets = json.load(open(os.path.join(HERE, "networks.json"), encoding="utf-8"))
+    jobs = [(x["title"], x["logo"], x["accent"], [p[0] for p in prev.get(x["title"], [])], out)
+            for x in nets if not only or x["title"] in only]
+    from multiprocessing import Pool
+    with Pool(4) as pool:
+        res = pool.map(build_one, jobs)
+    picks, failed = {}, []
+    for t, pk, err in res:
+        if err:
+            failed.append(t)
+            picks[t] = prev.get(t, [])
+            print("FAILED", t, err)
+        else:
+            picks[t] = pk
+            print("built", t, "·", ", ".join(x[1] for x in pk))
+    import datetime as dt
+    os.makedirs(out, exist_ok=True)
+    json.dump({"date": dt.date.today().isoformat(), "picks": picks}, open(os.path.join(out, "picks.json"), "w"),
+              indent=1, ensure_ascii=False)
+    sys.exit(1 if failed else 0)
 
 
 def white(im, keep=False):

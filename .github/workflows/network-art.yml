@@ -1,0 +1,34 @@
+name: Network art
+on:
+  schedule:
+    - cron: "41 4 1 * *"   # the 1st of every month, 04:41 UTC (07:41 Istanbul)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: network-art
+jobs:
+  art:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q pillow
+      - name: Start from last month's art (a channel that fails keeps it)
+        run: |
+          mkdir out
+          if git fetch -q origin network-art; then git archive FETCH_HEAD | tar -x -C out; fi
+      - name: Build
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: python3 art_tools/network_art.py out --prev out/picks.json | tee build.log
+      - name: Publish (one commit on the network-art branch, no history)
+        if: always()
+        run: |
+          rm -f out/*/frames.jpg
+          cd out
+          git init -q -b network-art
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -q -m "Network art $(date -u +%F)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" network-art

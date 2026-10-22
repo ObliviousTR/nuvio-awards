@@ -58,5 +58,28 @@ for row in data:
                       "focusGifEnabled": True, "heroBackdropUrl": DISC + i + "/backdrop.jpg",
                       "titleLogoUrl": DISC + i + "/logo.png"})
             n += 1
+# Networks: monthly art from the network-art branch (art_tools/network_art.py); fixed URLs
+NET = "https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/network-art/"
+NET_IDS = {x["title"]: x["title"] for x in json.load(open("/home/claude/nuvio-awards/art_tools/networks.json", encoding="utf-8"))}
+
+
+def net_slug(t):
+    s_ = "".join(ch if ch.isalnum() else "-" for ch in t.lower()).strip("-")
+    while "--" in s_:
+        s_ = s_.replace("--", "-")
+    return s_
+
+
+for row in data:
+    if row["title"] != "Networks":
+        continue
+    for f in row["folders"]:
+        if f["title"] in NET_IDS:
+            u = NET + net_slug(f["title"]) + "/"
+            f.update({"coverImageUrl": u + "cover.jpg", "focusGifUrl": u + "hover.webp", "focusGifEnabled": True,
+                      "coverEmoji": None, "hideTitle": True})
+            if f["title"] == "Fuji TV / MBS":
+                f.update({"heroBackdropUrl": u + "backdrop.jpg", "titleLogoUrl": u + "logo.png"})
+            n += 1
 save(data, sys.argv[2])
 print(f"own art: {n} folders")
