@@ -1,7 +1,8 @@
-"""Iconic Actors row: hovering a portrait lights the card up, the portrait fades away and a strip of 35 mm film runs
-upwards through the card showing three of the actor's defining roles (frames where the actor is on screen: TMDB
+"""Iconic Actors row: on hover the portrait starts to slide up like the first picture on a reel of film; behind it a
+full-width strip of 35 mm film carries three of the actor's defining roles (frames where the actor is on screen: TMDB
 images tagged with the person, else the film's textless key art); under the name, the title and year of the role in
-the middle of the strip; then the portrait comes back (seamless loop, 6 s). Roles are fixed (no monthly change).
+the middle of the card; after the last role the portrait comes up again and settles (endless reel, 7 s). Kaptain's
+own lettering is lifted off the cover and stays put; only the subtitle changes. Roles are fixed (no monthly change).
 usage: python3 art_tools/actor_art.py OUT_DIR [names...]   (reads builder/out/delivered/baseline.json for the covers)
 """
 import io, json, math, os, sys, urllib.request
@@ -239,6 +240,69 @@ def strip_frame(img, fw, fh, cx=0.5):
     return ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.05)).enhance(1.05)
 
 
+def name_layers(cover):
+    """Kaptain's lettering lifted off the cover: (name layer, original subtitle layer, subtitle box, text mask).
+    White top-hat on the dark bottom of the card finds the strokes; rows group into bands, the last band is the
+    subtitle."""
+    from scipy import ndimage as ndi
+    L = np.asarray(cover.convert("L"), dtype=np.float32)
+    y0 = int(H * 0.82)
+    sub = L[y0:]
+    th = sub - ndi.grey_opening(sub, size=(17, 17))
+    m = th > 38
+    m = ndi.binary_opening(m, iterations=1) | (th > 70)
+    rows = m.sum(1) > 2
+    bands, st = [], None
+    for y, r in enumerate(rows):
+        if r and st is None:
+            st = y
+        if not r and st is not None:
+            if y - st > 3:
+                bands.append((st, y))
+            st = None
+    if st is not None:
+        bands.append((st, len(rows)))
+    # merge bands closer than a few pixels (letters with descenders)
+    merged = []
+    for b_ in bands:
+        if merged and b_[0] - merged[-1][1] < 6:
+            merged[-1] = (merged[-1][0], b_[1])
+        else:
+            merged.append(b_)
+    bands = [b_ for b_ in merged if b_[1] - b_[0] >= 6]
+    if not bands:
+        return None
+    alpha = np.clip(th * 2.2, 0, 255) * ndi.binary_dilation(m, iterations=2)
+    full = np.zeros_like(L)
+    mask_all = np.zeros_like(L, dtype=bool)
+    name_a, sub_a = np.zeros_like(L), np.zeros_like(L)
+    for k, (a0, a1) in enumerate(bands):
+        rr = slice(max(0, a0 - 3), min(len(rows), a1 + 3))
+        band = np.zeros_like(alpha); band[rr] = alpha[rr]
+        tgt = sub_a if k == len(bands) - 1 and len(bands) > 1 else name_a
+        tgt[y0:] = np.maximum(tgt[y0:], band)
+        mask_all[y0:][rr] |= m[rr]
+    sb = bands[-1]
+    cols = np.nonzero(m[sb[0]:sb[1]].any(0))[0]
+    sub_box = (int(cols.min()) if len(cols) else round(W * 0.1), y0 + sb[0], y0 + sb[1])
+    rgb = np.asarray(cover.convert("RGB"))
+    def layer(a_):
+        lay = Image.fromarray(rgb).convert("RGBA")
+        lay.putalpha(Image.fromarray(a_.astype(np.uint8)))
+        return lay
+    return layer(name_a), layer(sub_a), sub_box, mask_all
+
+
+def clean_plate(cover, mask):
+    """The cover with its lettering painted out (the portrait as a picture in the reel)."""
+    import cv2
+    from scipy import ndimage as ndi
+    m = ndi.binary_dilation(mask, iterations=4).astype(np.uint8) * 255
+    bgr = cv2.cvtColor(np.asarray(cover.convert("RGB")), cv2.COLOR_RGB2BGR)
+    out = cv2.inpaint(bgr, m, 6, cv2.INPAINT_TELEA)
+    return Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB))
+
+
 def build(name, cover_url, hover_url, out, idx=0):
     cover = g.art.cover_fit(get(cover_url), W, H)
     accent = None
@@ -251,122 +315,118 @@ def build(name, cover_url, hover_url, out, idx=0):
     roles = roles_of(name)
     if not roles:
         raise RuntimeError("no roles")
-    parts = name.upper().split(" ")
-    lines = [" ".join(parts[:-1]), parts[-1]] if len(parts) > 1 else parts
-    # the dark card under the strip; the name block is set in Kaptain's style (reletter), one per subtitle
-    base = Image.new("RGB", (W, H), (12, 11, 12))
-    gl = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(gl).ellipse((-W * 0.2, -H * 0.1, W * 1.2, H * 0.8), fill=255)
-    base = Image.composite(Image.new("RGB", (W, H), (40, 38, 40)), base, gl.filter(ImageFilter.GaussianBlur(200)))
+    nl = name_layers(cover)
+    if nl is None:
+        raise RuntimeError("no lettering found")
+    name_lay, sub_orig, (sx0, sy0, sy1), tmask = nl
+    plate = clean_plate(cover, tmask)
+    # subtitles for the roles, set like Kaptain's (same cap height and left edge)
+    cap = max(8, sy1 - sy0)
+    fsz = max(10, round(cap / 0.72))
+    sfont = font("SemiBold", fsz)
+    sp = round(fsz * 0.34)
+
     def label(t, y):
         t = t.upper()
         for cut in (None, ",", ":", " ("):
             tt = t.split(cut)[0].strip() if cut else t
-            if width(f"{tt} · {y}", font("SemiBold", round(26 * W / 1000)), round(9 * W / 1000)) <= W * 0.8:
+            if width(f"{tt} · {y}", sfont, sp) <= W - sx0 - W * 0.06:
                 return f"{tt} · {y}"
         words = tt.split()
-        while len(words) > 1:                               # drop words from the end until it fits
+        while len(words) > 1:
             words = words[:-1]
-            if width(f"{' '.join(words)} · {y}", font("SemiBold", round(26 * W / 1000)), round(9 * W / 1000)) <= W * 0.8:
+            if width(f"{' '.join(words)} · {y}", sfont, sp) <= W - sx0 - W * 0.06:
                 break
         return f"{' '.join(words)} · {y}"
-    subs = ["FEATURED FILMOGRAPHY"] + [label(t, y) for t, y, _, _ in roles]
-    blocks = []
-    for s_ in subs:
-        b = letter(Image.new("RGB", (W, H), (0, 0, 0)), lines, s_, tint=(12, 11, 12))
-        blocks.append(b)
-    # name block mask: the lettered area at the bottom
-    bm = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(bm).rectangle((0, int(H * 0.70), W, H), fill=255)
-    bm = bm.filter(ImageFilter.GaussianBlur(30))
-    # film strip
-    sw = round(W * 0.84)
-    fw = round(sw * 0.80)
-    fh = round(fw * 0.62)
-    gap = 30
+
+    sub_lays = [sub_orig]
+    asc = sfont.getbbox("A")[1]
+    for t, y, _, _ in roles:
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        tracked(ImageDraw.Draw(lay), (sx0, sy0 - asc), label(t, y), sfont, (205, 205, 205, 255), sp)
+        sub_lays.append(lay)
+    # the reel: portrait, then the roles on a full-width strip of film, then the portrait again
+    hole_w, hole_h, hole_gap = round(W * 0.045), round(W * 0.03), round(W * 0.062)
+    margin = round(W * 0.11)
+    fw = W - 2 * margin
+    fh = round(fw * 0.66)
+    gap = 26
     pitch = fh + gap
-    frames_img = [strip_frame(g.load_img(p), fw, fh, cx) for _, _, p, cx in roles]
-    n_r = len(frames_img)
-    strip_h = pitch * n_r
-    film = Image.new("RGBA", (sw, strip_h * 2), (22, 17, 14, 255))
-    d = ImageDraw.Draw(film)
-    hole_w, hole_h, hole_gap = round(sw * 0.045), round(sw * 0.03), round(sw * 0.065)
-    for y in range(0, strip_h * 2, hole_gap):
-        for x in (round(sw * 0.035), sw - round(sw * 0.035) - hole_w):
-            d.rounded_rectangle((x, y + 6, x + hole_w, y + 6 + hole_h), 3, fill=(205, 196, 180, 255))
-    for k in range(n_r * 2):
-        fr = frames_img[k % n_r]
-        film.paste(fr, ((sw - fw) // 2, k * pitch + gap // 2))
-    view_top, view_bot = 0, int(H * 0.74)
-    center_y = (view_top + view_bot) / 2
-    sx = (W - sw) // 2
-    T_BRIGHT, T_OUT, T_STRIP1, T_BACK = 6, 16, 104, 119
-    out_frames = []
-    for i in range(N):
-        if i < T_BRIGHT:
-            cv = ImageEnhance.Brightness(cover).enhance(1 + 0.18 * g.ease(i / T_BRIGHT))
+    seg_h = pitch * len(roles) + gap
+    R = H + seg_h
+    reel = Image.new("RGB", (W, R * 2 + H), (20, 16, 13))
+    d = ImageDraw.Draw(reel)
+    for rep in range(2):
+        top = rep * R
+        reel.paste(plate, (0, top))
+        y = top + H
+        for yy in range(y, y + seg_h, hole_gap):
+            for x in (round(W * 0.03), W - round(W * 0.03) - hole_w):
+                d.rounded_rectangle((x, yy + 8, x + hole_w, yy + 8 + hole_h), 3, fill=(208, 199, 184))
+        for k, (_, _, p, cx) in enumerate(roles):
+            reel.paste(strip_frame(g.load_img(p), fw, fh, cx), (margin, y + gap + k * pitch))
+    reel.paste(plate, (0, 2 * R))
+    # timeline: hold the portrait, then one smooth pass of the reel back to the portrait
+    N_ = 140
+    HOLD = 8
+
+    def offset(i):
+        if i < HOLD:
+            return 0.0
+        u = (i - HOLD) / (N_ - HOLD)
+        a = 0.14                                            # ease in / constant / ease out
+        if u < a:
+            v = 0.5 * u * u / a
+        elif u > 1 - a:
+            v = (1 - a) - 0.5 * (1 - u) ** 2 / a
         else:
-            # strip position: constant speed upward; each role passes the middle once while it plays
-            q = (i - T_BRIGHT) / (T_STRIP1 - T_BRIGHT)
-            off = q * strip_h + pitch * 0.5 - center_y + gap / 2 + fh / 2
-            off = off % strip_h
-            sc = base.copy().convert("RGBA")
-            crop = film.crop((0, round(off), sw, round(off) + view_bot))
-            sc.alpha_composite(crop, (sx, view_top))
-            # light falls off at the top and bottom of the strip window
-            fade = Image.new("L", (W, H), 0)
-            fd = ImageDraw.Draw(fade)
-            for y in range(H):
-                dd = abs(y - center_y) / (view_bot / 2)
-                fd.line((0, y, W, y), fill=round(255 * min(1.0, max(0.0, (dd - 0.55) / 0.45)) ** 1.2) if y < view_bot else 255)
-            sc = Image.composite(Image.new("RGB", (W, H), (12, 11, 12)), sc.convert("RGB"), fade)
-            # which role sits in the middle -> its title under the name
-            mid = (off + center_y - gap / 2) / pitch
-            k = int(mid) % n_r
-            frac = mid - int(mid)
-            blk = blocks[1 + k]
-            if frac < 0.12 or frac > 0.88:                     # crossfade the titles as frames change
-                nk = (k + 1) % n_r if frac > 0.88 else (k - 1) % n_r
-                w_ = (0.12 - frac) / 0.24 if frac < 0.12 else (frac - 0.88) / 0.24
-                blk = Image.blend(blk, blocks[1 + nk], min(0.5, w_))
-            if i < T_OUT + 8:                                 # the subtitle starts as FEATURED FILMOGRAPHY
-                blk = Image.blend(blocks[0], blk, g.ease((i - T_OUT) / 8))
-            if i > T_STRIP1 - 6:
-                blk = Image.blend(blk, blocks[0], g.ease((i - (T_STRIP1 - 6)) / 6))
-            # the lettered name block (drawn on black) is laid over the scene's dark bottom
-            txt = Image.fromarray(np.maximum(np.asarray(sc), np.asarray(blk)))
-            sc = Image.composite(txt, sc, bm)
-            if i < T_OUT:                                     # the lit portrait fades out
-                lit = ImageEnhance.Brightness(cover).enhance(1.18)
-                sc = Image.blend(lit, sc, g.ease((i - T_BRIGHT) / (T_OUT - T_BRIGHT)))
-            elif i >= T_STRIP1:                               # and comes back
-                sc = Image.blend(sc, cover, g.ease((i - T_STRIP1) / (T_BACK - T_STRIP1)))
-            cv = sc
-        # the card's accent frame breathes while the roles play
-        a_ = 0.0
-        if T_BRIGHT <= i < T_STRIP1:
-            a_ = min(1.0, (i - T_BRIGHT) / 8) * min(1.0, (T_STRIP1 - i) / 8)
-        if a_ > 0:
-            cv = cv.convert("RGBA")
-            e = Image.new("L", (W, H), 0)
-            ImageDraw.Draw(e).rounded_rectangle((4, 4, W - 5, H - 5), 22, outline=255, width=5)
-            gl_ = Image.new("RGBA", (W, H), accent + (0,))
-            gl_.putalpha(e.filter(ImageFilter.GaussianBlur(10)).point(lambda v, a_=a_: min(255, round(v * 1.8 * a_))))
-            cv.alpha_composite(gl_)
-            ln = Image.new("RGBA", (W, H), accent + (0,))
-            ln.putalpha(e.point(lambda v, a_=a_: round(v * a_)))
-            cv.alpha_composite(ln)
-            cv = cv.convert("RGB")
-        out_frames.append(cv.resize((OW, OH), Image.LANCZOS))
+            v = 0.5 * a + (u - a)
+        v /= (1 - a)
+        return min(1.0, v) * R
+
+    read_y = H * 0.38
+    grad = np.clip((np.arange(H) - H * 0.6) / (H * 0.4), 0, 1) ** 1.3 * 0.8
+    frames = []
+    for i in range(N_):
+        o = offset(i)
+        cv = reel.crop((0, round(o), W, round(o) + H))
+        # soft dark fall under the name only where film (not the portrait, which has its own) is behind it
+        rows = (np.arange(H) + o) % R
+        on_film = (rows >= H).astype(np.float32)
+        a_rows = grad * on_film
+        if a_rows.max() > 0:
+            fade = Image.fromarray((np.repeat(a_rows[:, None], W, 1) * 255).astype(np.uint8))
+            cv = Image.composite(Image.new("RGB", (W, H), (10, 9, 9)), cv, fade)
+        cv = cv.convert("RGBA")
+        cv.alpha_composite(name_lay)
+        # subtitle of whatever sits on the reading line
+        p_ = (read_y + o) % R
+        if p_ < H:
+            k, edge = 0, min(p_ - 0, H - p_)
+        else:
+            q = (p_ - H - gap / 2) / pitch
+            k = 1 + min(len(roles) - 1, max(0, int(q)))
+            edge = min(q - int(q), 1 - (q - int(q))) * pitch if 0 <= q < len(roles) else 0
+        a_sub = min(1.0, max(0.0, edge / 60))
+        cv.alpha_composite(alpha_mul(sub_lays[k], a_sub))
+        frames.append(cv.convert("RGB").resize((OW, OH), Image.LANCZOS))
     dd = os.path.join(out, g.slug_of(name))
     os.makedirs(dd, exist_ok=True)
-    out_frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=out_frames[1:], duration=[50] * N,
-                       loop=0, quality=80, method=4, kmin=0, kmax=1)
+    frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * N_,
+                   loop=0, quality=80, method=4, kmin=0, kmax=1)
     strip = Image.new("RGB", (OW * 6, OH))
-    for j, k in enumerate((0, 10, 30, 55, 80, 112)):
-        strip.paste(out_frames[k], (j * OW, 0))
+    for j, k in enumerate((0, 25, 50, 75, 100, 125)):
+        strip.paste(frames[k], (j * OW, 0))
     strip.save(os.path.join(dd, "frames.jpg"), quality=80)
     return [f"{t} ({y}){'' if cx != 0.5 else ' [no face match]'}" for t, y, _, cx in roles]
+
+
+def alpha_mul(layer, a):
+    if a >= 0.999:
+        return layer
+    out = layer.copy()
+    out.putalpha(out.getchannel("A").point(lambda v: round(v * max(0.0, a))))
+    return out
 
 
 def covers():
