@@ -1,6 +1,6 @@
 """Studios row: each card opens with a short ident inspired by the studio's own logo animation, then the logo settles
 small in the corner while three of the studio's iconic films play behind it (textless key art), a light runs round
-the card, and the logo comes back to the middle (seamless loop, 6 s). Cover = the settled ident.
+the card, and the logo comes back to the middle (seamless loop, 8 s). Cover = the settled ident.
 Logos are the studios' own (TMDB company logos, kept in nuvio-art art/logos/studios); the motion is ours.
 The film trio moves on every month through each studio's pool (.github/workflows/studio-art.yml -> studio-art).
 usage: python3 art_tools/studio_art.py OUT_DIR [titles...]
@@ -15,7 +15,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 W, H = 1280, 720
 OW, OH = 512, 288
-N = 120
+N = 160
 LOGOS = "https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/art/logos/studios/"
 
 
@@ -143,6 +143,12 @@ class Paramount:
         self.R = np.median([math.hypot(s[0] - self.c0[0], s[1] - self.c0[1]) for s in self.stars])
         self.stage = starfield(gradient((6, 16, 52), (34, 92, 178), glow=(W / 2, H * 1.05, W * 0.45, (90, 150, 230), 0.55)), 160, top=0.95)
 
+    @staticmethod
+    def unwrap(a):
+        """Ring angle measured the way the stream travels: from the lower right (+) over the top (-pi/2) to the lower
+        left (below -pi)."""
+        return a if a < 1.2 else a - 2 * math.pi
+
     def logo(self, t, final=False):
         """The ident at progress t (0..1) as an RGBA layer over the stage."""
         lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -154,22 +160,33 @@ class Paramount:
             lay.alpha_composite(b, (round(self.ox), round(self.oy) + off))
             if not final and 0.55 < t < 0.9:
                 lay.alpha_composite(sweep(b, (t - 0.55) / 0.35), (round(self.ox), round(self.oy) + off))
-        n = len(self.stars)
-        for j, (fx, fy, ang, im) in enumerate(self.stars):
-            s = 1.0 if final else out3((t - 0.12 - j * 0.018) / 0.38)
-            if s <= 0:
+        # one stream of stars: every star enters low on the right, sweeps up and over the mountain in a wide curve and
+        # tightens into its slot on the ring; the far (left) slots are served first, so the ring closes towards the
+        # right while the stream keeps flowing over the stars already parked
+        phi0 = 0.95                                     # entry angle (lower right), image coordinates
+        order = sorted(range(len(self.stars)), key=lambda j: self.unwrap(self.stars[j][2]))
+        far = phi0 - self.unwrap(self.stars[order[0]][2])
+        for rank, j in enumerate(order):
+            fx, fy, ang, im = self.stars[j]
+            phf = self.unwrap(ang)
+            dist = phi0 - phf
+            start, dur = 0.10 + rank * 0.019, 0.20 + 0.24 * dist / far
+            p = 1.0 if final else (t - start) / dur
+            if p <= 0:
                 continue
-            for tr in ((0.0, 1.0),) if final or s >= 1 else ((0.0, 1.0), (0.05, 0.45), (0.10, 0.25), (0.16, 0.12)):
-                ss = max(0.0, s - tr[0])
-                a_ = ang + (1 - ss) * math.pi * 1.15
-                r = self.R * (1 + 1.1 * (1 - ss))
-                x, y = self.c0[0] + r * math.cos(a_), self.c0[1] + r * math.sin(a_)
-                sc = 0.55 + 0.45 * ss
+            p = min(1.0, p)
+            trail = ((0.0, 1.0),) if final or p >= 1 else ((0.0, 1.0), (0.035, 0.55), (0.07, 0.32), (0.11, 0.18), (0.16, 0.08))
+            for lag, alpha in trail:
+                q = max(0.0, p - lag)
+                e = 1 - (1 - q) ** 2.2                    # fast across the sky, easing into the slot
+                ph = phi0 - dist * e
+                r = self.R * (1 + 1.5 * (1 - e) ** 1.4)
+                x, y = self.c0[0] + r * math.cos(ph), self.c0[1] + r * math.sin(ph)
+                sc = (0.7 + 0.3 * e) * (1 - 0.35 * lag / 0.16)
                 st = im.resize((max(1, round(im.width * sc)), max(1, round(im.height * sc))), Image.LANCZOS)
-                st = st.rotate((1 - ss) * 220, resample=Image.BICUBIC, expand=True)
-                st = alpha_mul(st, tr[1] * min(1.0, ss * 3))
-                if tr[0] == 0 and s < 1:
-                    lay.alpha_composite(glow_of(st, 8, (190, 220, 255), 1.4), (round(x - st.width / 2), round(y - st.height / 2)))
+                st = alpha_mul(st, alpha * min(1.0, q * 6))
+                if lag == 0 and p < 1:
+                    lay.alpha_composite(glow_of(st, 9, (200, 225, 255), 1.6), (round(x - st.width / 2), round(y - st.height / 2)))
                 lay.alpha_composite(st, (round(x - st.width / 2), round(y - st.height / 2)))
         return lay
 
@@ -308,7 +325,7 @@ def build(title, out):
     cover.alpha_composite(final)
     cover = cover.convert("RGB")
     S = len(scenes)
-    T_OUT, T_IN0, T_IN1, T_MOVE, T_F1, T_BACK = 4, 10, 46, 56, 104, 120
+    T_OUT, T_IN0, T_IN1, T_MOVE, T_F1, T_BACK = 3, 7, 49, 59, 145, 160   # films ~1.6 s each
     frames = []
     for i in range(N):
         if i < T_OUT:
@@ -361,7 +378,7 @@ def build(title, out):
                    quality=80, method=4, kmin=0, kmax=1)
     cover.save(os.path.join(dd, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (OW * 4, OH * 2))
-    for j, idx in enumerate([0, 14, 22, 30, 40, 52, 75, 100]):
+    for j, idx in enumerate([0, 16, 24, 32, 44, 70, 100, 130]):
         strip.paste(frames[idx], ((j % 4) * OW, (j // 4) * OH))
     strip.save(os.path.join(dd, "frames.jpg"), quality=80)
     return [f[1] for f in films]
