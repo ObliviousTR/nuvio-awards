@@ -123,44 +123,49 @@ def make(logo, stills, accent):
     lg_glow_mask = m.filter(ImageFilter.GaussianBlur(20))
     S = len(bgs)
 
+    L0, L1 = 0.04, 0.86  # the frame's single lap; the shows play out across it
+
     def frame(i, n):
         t = i / n
-        c = ease(t / 0.1) if t < 0.94 else 1 - ease((t - 0.94) / 0.06)  # colour on, and off again at the loop's end
-        seg = t * S
+        c = ease(t / 0.08) if t < 0.93 else 1 - ease((t - 0.93) / 0.07)  # colour on, off again at the loop's end
+        q = min(1.0, max(0.0, (t - L0) / (L1 - L0)))  # progress of the lap = progress through the shows
+        seg = q * S
         j = min(S - 1, int(seg))
         loc = seg - j
-        breath = math.sin(math.pi * (loc - 0.82) / 0.18) if loc > 0.82 else 0.0
-        bg = zoomed(bgs[j], 0.03 + 0.07 * loc)
-        if loc > 0.82:
-            bg = Image.blend(bg, zoomed(bgs[(j + 1) % S], 0.03), (loc - 0.82) / 0.18)
+        nxt = (j + 1) % S
+        fade = (loc - 0.85) / 0.15 if loc > 0.85 and j < S - 1 else 0.0
+        if t > L1:  # after the lap: back to the first show for the cover-matching end
+            j, nxt, loc = S - 1, 0, 1.0
+            fade = min(1.0, (t - L1) / (1 - L1))
+        bg = zoomed(bgs[j], 0.03 + 0.07 * min(1, loc))
+        if fade > 0:
+            bg = Image.blend(bg, zoomed(bgs[nxt], 0.03), fade)
+        breath = math.sin(math.pi * (t - L1) / 0.1) if L1 < t < L1 + 0.1 else 0.0
         bg = ImageEnhance.Brightness(bg).enhance(0.22 + 0.16 * c)
         bg = Image.blend(bg, tint, 0.08 * c)
         bg = Image.composite(bg, black, vg)
         cv = bg.convert("RGBA")
         if c > 0:
             wl = Image.new("RGBA", (PW, PH), accent + (0,))
-            wl.putalpha(bloom.point(lambda v: round(v * (0.42 + 0.18 * breath) * c)))
+            wl.putalpha(bloom.point(lambda v: round(v * (0.42 + 0.2 * breath) * c)))
             cv.alpha_composite(wl)
             g = Image.new("RGBA", lg_glow.size, accent + (0,))
-            g.putalpha(lg_glow_mask.point(lambda v: min(255, round(v * (0.9 + 0.5 * breath) * c))))
+            g.putalpha(lg_glow_mask.point(lambda v: min(255, round(v * (0.9 + 0.6 * breath) * c))))
             cv.alpha_composite(g, (round(PW / 2 - g.width / 2), round(PH / 2 - g.height / 2)))
-            # the frame: one lap per show, closed before the breath, cleared as the next lap starts
-            lap = min(1.0, loc / 0.8)  # constant speed round the card
-            fa = c * (1.0 if loc < 0.97 else 1 - (loc - 0.97) / 0.03)
             fr = Image.new("L", (PW, PH), 0)
-            pts = frame_path(lap)
-            if len(pts) > 1:
+            pts = frame_path(q)
+            if len(pts) > 1 and q > 0:
                 ImageDraw.Draw(fr).line(pts, fill=255, width=4, joint="curve")
             head = Image.new("L", (PW, PH), 0)
-            if lap < 1 and len(pts) > 1:  # bright head of the running line
+            if 0 < q < 1 and len(pts) > 1:
                 hx, hy = pts[-1]
                 ImageDraw.Draw(head).ellipse((hx - 9, hy - 9, hx + 9, hy + 9), fill=255)
-            glowm = ImageChops.lighter(fr, head).filter(ImageFilter.GaussianBlur(9 + 6 * breath))
+            glowm = ImageChops.lighter(fr, head).filter(ImageFilter.GaussianBlur(9 + 7 * breath))
             gl = Image.new("RGBA", (PW, PH), accent + (0,))
-            gl.putalpha(glowm.point(lambda v: min(255, round(v * (1.1 + 0.8 * breath) * fa))))
+            gl.putalpha(glowm.point(lambda v: min(255, round(v * (1.1 + 0.9 * breath) * c))))
             cv.alpha_composite(gl)
             ln = Image.new("RGBA", (PW, PH), accent + (0,))
-            ln.putalpha(fr.point(lambda v: round(v * fa)))
+            ln.putalpha(fr.point(lambda v: round(v * c)))
             cv.alpha_composite(ln)
         cv.alpha_composite(lg, (round(PW / 2 - lg.width / 2), round(PH / 2 - lg.height / 2)))
         return cv.convert("RGB")
@@ -191,16 +196,16 @@ def main():
                 slug = slug.replace("--", "-")
             dd = os.path.join(out, slug)
             os.makedirs(dd, exist_ok=True)
-            n = 120  # 3 shows x 40 frames, 50 ms: 2 s per show, 6 s loop
+            n = 150  # 60 ms frames: a 9 s loop, the lap takes about 7 s
             frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
-            frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
+            frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[60] * n,
                            loop=0, quality=80, method=5, minimize_size=True, allow_mixed=True)
             frame(0, n).resize((1000, 1500), Image.LANCZOS).save(os.path.join(dd, "cover.jpg"), quality=90)
             if t == "Fuji TV / MBS":  # hero + logo
                 art.graded(stills[0], 0.95, 1.03, (1920, 1080)).save(os.path.join(dd, "backdrop.jpg"), quality=86)
                 logo.save(os.path.join(dd, "logo.png"))
             strip = Image.new("RGB", (OW * 6, OH))
-            for j, idx in enumerate([0, 20, 33, 38, 60, 119]):
+            for j, idx in enumerate([0, 30, 60, 100, 132, 149]):
                 strip.paste(frames[idx], (j * OW, 0))
             strip.resize((OW * 3, OH // 2)).save(os.path.join(dd, "frames.jpg"), quality=80)
             print("built", t, dd)
