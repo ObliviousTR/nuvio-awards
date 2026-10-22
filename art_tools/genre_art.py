@@ -25,7 +25,7 @@ GENRES = {
     "Action & Adventure": ("ACTION", "HIGH-OCTANE THRILLS & BLOCKBUSTERS", (221, 109, 105), 76341, {"with_genres": "28"}),
     "Sci-Fi & Fantasy": ("SCI-FI", "FUTURISTIC WORLDS & COSMIC SAGAS", (63, 180, 223), 157336, {"with_genres": "878|14"}),
     "Comedy": ("COMEDY", "LAUGH-OUT-LOUD FAVORITES & SATIRE", (244, 194, 81), 120467, {"with_genres": "35"}),
-    "Animation": ("ANIMATION", "TIMELESS CLASSICS & MODERN MASTERPIECES", (59, 187, 136), 129, {"with_genres": "16"}),
+    "Animation": ("ANIMATION", "TIMELESS CLASSICS & MODERN MASTERPIECES", (59, 187, 136), 862, {"with_genres": "16"}),
     "Drama": ("DRAMA", "POWERHOUSE PERFORMANCES & HUMAN STORIES", (155, 73, 96), 278, {"with_genres": "18"}),
     "Crime": ("CRIME", "GRITTY HEISTS, MOBSTERS & DETECTIVES", (188, 159, 125), 238, {"with_genres": "80"}),
     "Horror": ("HORROR", "CHILLING TERROR & SUPERNATURAL DREAD", (145, 39, 191), 694, {"with_genres": "27"}),
@@ -37,6 +37,13 @@ GENRES = {
     "History & War": ("WAR", "BATTLEFIELDS, BROTHERHOOD & COST", (147, 154, 121), 857, {"with_genres": "10752"}),
     "Western": ("WESTERN", "DUST, GUNSMOKE & FRONTIER JUSTICE", (172, 124, 75), 429, {"with_genres": "37"}),
 }
+
+
+# genres a film must NOT carry to stand for a genre (a comedy with explosions reads as action, not comedy)
+EXCLUDE = {"Action & Adventure": "35|27|10749", "Sci-Fi & Fantasy": "35|27", "Comedy": "28|878|27|53|80|10752|14",
+           "Animation": "27", "Drama": "28|35|27|878|14", "Crime": "35|878|14", "Horror": "35|10751",
+           "Mystery & Thriller": "35|10751|27", "Romance & Rom-Com": "28|27|878|53|80", "History & War": "35",
+           "Western": "35"}
 
 
 def font(w, s):
@@ -56,21 +63,42 @@ def textless_backdrop(kind, tid):
     return bd[0]["file_path"] if bd else None
 
 
+def key_art(tid):
+    """The film's landscape key art: the best-voted English titled backdrop (the studio's own 'cover' for the film),
+    else the best textless one."""
+    im = tmdb(f"/movie/{tid}/images", include_image_language="en,null") or {}
+    bds = [b for b in im.get("backdrops", []) if b["width"] >= 1280]
+    rank = lambda b: (-b["vote_count"], -b["vote_average"])
+    titled = sorted([b for b in bds if b.get("iso_639_1") == "en"], key=rank)
+    plain = sorted([b for b in bds if not b.get("iso_639_1")], key=rank)
+    return (titled or plain or [{}])[0].get("file_path")
+
+
 def popular(title, filters, n=3, keep=(), avoid=()):
-    """The genre's popular films right now: TMDB popularity, English, a vote floor, released in the last 4 years."""
+    """The genre's popular films right now: TMDB popularity, English, a vote floor, released in the last 4 years
+    (wider when the genre is thin). The genre has to lead the film's genre list and clashing genres are left out, so
+    every film on the card reads as that genre."""
     import datetime as dt
     small = title == "Stand-Up Comedy"  # specials: a small genre, so a wider window and a lower vote floor
-    since = (dt.date.today() - dt.timedelta(days=(10 if small else 4) * 365)).isoformat()
-    p = dict(filters, sort_by="popularity.desc", with_original_language="en", **{"vote_count.gte": 25 if small else 300,
-             "primary_release_date.gte": since})
-    if title != "Animation":
-        p["without_genres"] = "16" + ("|99" if title != "Stand-Up Comedy" else "")
-    r = [x for x in (tmdb("/discover/movie", **p) or {}).get("results", []) if x["id"] not in avoid]
+    lead = filters.get("with_genres", "").split("|") if "with_genres" in filters else None
+    r = []
+    for years in ((10,) if small else (4, 8, 15)):
+        since = (dt.date.today() - dt.timedelta(days=years * 365)).isoformat()
+        p = dict(filters, sort_by="popularity.desc", with_original_language="en",
+                 **{"vote_count.gte": 25 if small else 300, "primary_release_date.gte": since})
+        excl = ([] if title == "Animation" else ["16"]) + ([] if small else ["99"]) + EXCLUDE.get(title, "").split("|")
+        p["without_genres"] = "|".join(x for x in excl if x)
+        r = []
+        for page in (1, 2):
+            r += (tmdb("/discover/movie", page=page, **p) or {}).get("results", [])
+        r = [x for x in r if x["id"] not in avoid and (not lead or (x.get("genre_ids") and str(x["genre_ids"][0]) in lead))]
+        if len(r) >= n + 2:
+            break
     kept = [x for x in r[:6] if x["id"] in keep]
     order = kept + [x for x in r if x not in kept]
     out = []
     for x in order:
-        path = textless_backdrop("movie", x["id"])
+        path = key_art(x["id"])
         if path:
             out.append((x["id"], x.get("title"), path))
         if len(out) == n:
