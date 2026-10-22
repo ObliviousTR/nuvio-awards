@@ -138,7 +138,7 @@ def build(slug, out_dir):
 
     # type sub-zones: kanji column, the big word, the show line under it
     ys, xs = np.nonzero(D * left > 0)
-    kanji = xx < W * 0.055
+    kanji = (xx < W * 0.055) & (yy < H * 0.5)          # the kanji column only, not the start of the lines below
     word_bottom = H * 0.86
     s, ax, ay = fit_group(C, Hv)
     print(slug, "group scale %.3f anchor (%d, %d)" % (s, ax, ay))
