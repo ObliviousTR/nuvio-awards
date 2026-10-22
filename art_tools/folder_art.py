@@ -389,7 +389,9 @@ def compose(cut, lines, sub, w=PW, h=PH):
     yy, xx = np.mgrid[0:cut.height, 0:cut.width].astype(np.float32)
     d = np.sqrt(((xx - fx) / (cut.width * 0.42)) ** 2 + ((yy - fy) / (cut.height * 0.52)) ** 2)
     light = np.clip(1.08 - 0.62 * np.clip(d - 0.35, 0, None) ** 1.3, 0.22, 1.05)  # key light on the face, falling off
-    rgb = np.clip(rgb * light[..., None] * 0.86, 0, 1)
+    yb = np.clip((yy + oy - h * 0.55) / (h * 0.4), 0, 1)
+    light = light * (1 - 0.55 * yb * yb * (3 - 2 * yb))  # clothes sink into the dark under the name
+    rgb = np.clip(rgb * light[..., None] * 0.8, 0, 1)
     cut = Image.merge("RGBA", (*Image.fromarray((rgb * 255).astype(np.uint8)).split(), cut.getchannel("A")))
     bg = Image.new("RGB", (w, h), (6, 6, 7))
     g = Image.new("L", (w, h), 0)
@@ -401,7 +403,7 @@ def compose(cut, lines, sub, w=PW, h=PH):
     out = vignette(bg.convert("RGB"), 0.9)
     sys.path.insert(0, HERE)
     from reletter import letter
-    return letter(out, lines, sub, tint=(6, 6, 7), fade=(0.5, 0.88))
+    return letter(out, lines, sub, tint=(6, 6, 7), soft=(0.5, 0.88))
 
 
 # ---------------------------------------------------------------- jobs

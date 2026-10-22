@@ -37,7 +37,7 @@ def width(text, fnt, sp):
     return sum(d.textlength(c, font=fnt) + sp for c in text) - sp
 
 
-def letter(im, lines, sub, focus=False, tint=None, fade=None):
+def letter(im, lines, sub, focus=False, tint=None, soft=None):
     im = im.convert("RGB")
     W, H = im.size
     k = W / 1000
@@ -46,11 +46,11 @@ def letter(im, lines, sub, focus=False, tint=None, fade=None):
     tint = tint or tuple(int(v * 0.55) for v in ImageStat.Stat(im.crop((inset + 20, int(H * 0.64), W - inset - 20, int(H * 0.66)))).mean)
     fade = Image.new("L", (W, H), 0)
     fd = ImageDraw.Draw(fade)
-    if fade:  # soft: (start, max opacity) eased over the whole bottom, no solid block
-        y0 = int(H * fade[0])
+    if soft:  # soft: (start, max opacity) eased over the whole bottom, no solid block
+        y0 = int(H * soft[0])
         for y in range(y0, H - inset):
             t = (y - y0) / (H - y0)
-            fd.line((inset, y, W - inset, y), fill=int(255 * fade[1] * t * t * (3 - 2 * t)))
+            fd.line((inset, y, W - inset, y), fill=int(255 * soft[1] * t * t * (3 - 2 * t)))
     else:
         y0 = int(H * 0.66)
         for y in range(y0, H - inset):
@@ -69,7 +69,8 @@ def letter(im, lines, sub, focus=False, tint=None, fade=None):
     top = base - lh * len(lines) - round(10 * k)
     for i, l in enumerate(lines):
         tracked(d, (x0, top + i * lh), l, fn, (255, 255, 255), sp)
-    tracked(d, (x0 + 2, base), sub, f("SemiBold", round(26 * k)), (175, 175, 175), round(9 * k))
+    ssz, scol = (round(29 * k), (196, 196, 196)) if soft else (round(26 * k), (175, 175, 175))
+    tracked(d, (x0 + 2, base), sub, f("SemiBold", ssz), scol, round(9 * k))
     if focus:  # accent bar in the frame's colour
         edge = ImageStat.Stat(im.crop((round(6 * k), H // 2 - 50, round(12 * k), H // 2 + 50))).mean
         d.rectangle((x0 - round(26 * k), top + round(8 * k), x0 - round(22 * k), base + round(30 * k)), fill=tuple(int(v) for v in edge))

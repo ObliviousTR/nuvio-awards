@@ -385,19 +385,26 @@ def build(name, cover_url, hover_url, out, idx=0):
         return min(1.0, v) * R
 
     read_y = H * 0.45
-    grad = np.clip((np.arange(H) - H * 0.6) / (H * 0.4), 0, 1) ** 1.3 * 0.8
+    t_ = np.clip((np.arange(H) - H * 0.52) / (H * 0.48), 0, 1)
+    grad = (t_ * t_ * (3 - 2 * t_)) * 0.93
+    # soft black shadow behind the name, so it reads over bright frames too
+    sh_a = name_lay.getchannel("A").filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(W // 45))
+    shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    shadow.putalpha(sh_a.point(lambda v: min(255, round(v * 0.85))))
     frames = []
     for i in range(N_):
         o = offset(i)
         cv = reel.crop((0, round(o), W, round(o) + H))
-        # soft dark fall under the name only where film (not the portrait, which has its own) is behind it
+        # dark fall under the name wherever the portrait's own dark bottom is not sitting behind it
         rows = (np.arange(H) + o) % R
-        on_film = (rows >= H).astype(np.float32)
-        a_rows = grad * on_film
+        own = np.clip((rows - H * 0.62) / (H * 0.08), 0, 1) * (rows < H)
+        a_rows = grad * (1 - own)
         if a_rows.max() > 0:
             fade = Image.fromarray((np.repeat(a_rows[:, None], W, 1) * 255).astype(np.uint8))
             cv = Image.composite(Image.new("RGB", (W, H), (10, 9, 9)), cv, fade)
         cv = cv.convert("RGBA")
+        if a_rows.max() > 0.05:
+            cv.alpha_composite(alpha_mul(shadow, float(a_rows[int(H * 0.85)]) / 0.93))
         cv.alpha_composite(name_lay)
         # subtitle of whatever sits on the reading line
         p_ = (read_y + o) % R
@@ -436,7 +443,16 @@ def covers():
         if row["title"] == "Iconic Actors":
             for i, f in enumerate(row["folders"]):
                 out[f["title"]] = (f.get("coverImageUrl"), f.get("focusGifUrl") or None, i)
+    ref = os.environ.get("ART_REF")  # pin our own portraits to a nuvio-art commit (fresh covers, no CDN lag)
+    if ref:
+        for k, (c, h, i) in out.items():
+            if c and "/art/folders/iconic-actors/" in c:
+                out[k] = (c.split("?")[0].replace("/nuvio-art/main/", f"/nuvio-art/{ref}/"), h, i)
     return out
+
+
+def own_cover(name, ref="main"):
+    return f"https://raw.githubusercontent.com/ObliviousTR/nuvio-art/{ref}/art/folders/iconic-actors/{g.slug_of(name)}/cover.jpg"
 
 
 if __name__ == "__main__":
@@ -446,7 +462,7 @@ if __name__ == "__main__":
     bad = False
     for n in names:
         if n not in cv:
-            print("no card for", n); continue
+            cv[n] = (own_cover(n, os.environ.get("ART_REF", "main")), None, len(cv))
         try:
             c, h, i = cv[n]
             print("built", n, "·", ", ".join(build(n, c, h, outdir, i)), flush=True)
