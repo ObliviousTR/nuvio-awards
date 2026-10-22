@@ -37,31 +37,31 @@ def warp(img, s, ax, ay):
                       dtype=np.float32)
 
 
-def fit_group(C, Hv):
-    """Find how Kaptain scaled the pop-out group between cover and hover (scale + anchor), coarse to fine."""
+def fit_group(C, Hv, region):
+    """Find how Kaptain moved the pop-out group between cover and hover (scale about an anchor), coarse to fine,
+    judged on the pixels that changed (region)."""
     w, h = 320, 180
     c = np.asarray(Image.fromarray(C.astype(np.uint8)).resize((w, h)), dtype=np.float32)
     hv = np.asarray(Image.fromarray(Hv.astype(np.uint8)).resize((w, h)), dtype=np.float32)
-    reg = np.zeros((h, w), bool)
-    reg[int(h * .12):int(h * .95), int(w * .60):int(w * .93)] = True
+    reg = np.asarray(Image.fromarray((region * 255).astype(np.uint8)).resize((w, h))) > 127
+    cim = Image.fromarray(c.astype(np.uint8))
 
     def err(s, ax, ay):
         a = 1 / s
-        im = Image.fromarray(c.astype(np.uint8)).transform((w, h), Image.AFFINE, (a, 0, ax - a * ax, 0, a, ay - a * ay),
-                                                           Image.BILINEAR)
+        im = cim.transform((w, h), Image.AFFINE, (a, 0, ax - a * ax, 0, a, ay - a * ay), Image.BILINEAR)
         return np.abs(np.asarray(im, dtype=np.float32) - hv)[reg].mean()
 
     best = (err(1, 0, 0), 1.0, 0, 0)
-    for s in np.arange(1.01, 1.16, 0.01):
-        for ax in range(int(w * .4), w + 1, 8):
-            for ay in range(int(h * .2), h + 41, 8):
+    for s in np.arange(1.01, 1.21, 0.01):
+        for ax in range(-w // 2, w * 3 // 2 + 1, 10):
+            for ay in range(-h // 2, h * 3 // 2 + 1, 10):
                 e = err(s, ax, ay)
                 if e < best[0]:
                     best = (e, s, ax, ay)
     e, s, ax, ay = best
     for s2 in np.arange(s - .01, s + .0101, .0025):
-        for ax2 in range(ax - 8, ax + 9, 2):
-            for ay2 in range(ay - 8, ay + 9, 2):
+        for ax2 in range(ax - 10, ax + 11, 2):
+            for ay2 in range(ay - 10, ay + 11, 2):
                 e2 = err(s2, ax2, ay2)
                 if e2 < best[0]:
                     best = (e2, s2, ax2, ay2)
@@ -70,20 +70,20 @@ def fit_group(C, Hv):
 
 
 def group_core(C, Hv, s, ax, ay):
-    """Silhouette of the pop-out group in its hover pose: pixels that match the scaled cover but not the cover in
-    place (they moved), kept inside the anime-character mask, closed and hole-filled."""
-    from rembg import new_session, remove
+    """Silhouette of the pop-out group in its hover pose: pixels that the scaled cover explains clearly better than
+    the cover in place (they moved), closed and hole-filled; flat areas that can't tell are kept when inside."""
     from scipy import ndimage as ndi
-    eg = np.abs(Hv - warp(C, s, ax, ay)).max(2)
-    ec = np.abs(Hv - C).max(2)
-    m = np.asarray(remove(Image.fromarray(Hv.astype(np.uint8)), session=new_session("isnet-anime"), only_mask=True),
-                   dtype=np.float32) / 255
-    moved = (eg < 22) & (ec > 30) & (m > 0.5)
-    flat = (ec < 14) & (eg < 14) & (m > 0.5)          # flat colour areas: can't tell, keep if inside the group
-    core = ndi.binary_opening(moved, iterations=1)
-    core = ndi.binary_closing(core, iterations=14) & (m > 0.35)
+    bl = lambda x: np.asarray(Image.fromarray(np.clip(x, 0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(2)),
+                              dtype=np.float32)
+    hb = bl(Hv)
+    ec = np.abs(hb - bl(C)).mean(2)
+    eg = np.abs(hb - bl(warp(C, s, ax, ay))).mean(2)
+    moved = (ec - eg > 8) & (eg < 16)
+    static = eg - ec > 8
+    core = ndi.binary_opening(moved, iterations=2)
+    core = ndi.binary_closing(core, iterations=14) & ~static
     core = ndi.binary_fill_holes(core)
-    core |= flat & ndi.binary_dilation(core, iterations=10)
+    core |= (ec < 10) & (eg < 10) & ndi.binary_dilation(core, iterations=10)
     core = ndi.binary_fill_holes(ndi.binary_closing(core, iterations=3))
     lab, n = ndi.label(core)
     if n:
@@ -119,32 +119,58 @@ def wipe(coord, lo, hi, p, edge=0.06):
 
 
 def build(slug, out_dir):
+    from scipy import ndimage as ndi
     C, Hv = load(slug, "cover"), load(slug, "hover")
-    D = (np.abs(C - Hv).max(2) > 18).astype(np.float32)
+    D = np.abs(C - Hv).max(2) > 18
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
-
-    # zones: card edge, left-hand type, pop-out group
     edge_d = np.minimum.reduce([xx, W - 1 - xx, yy, H - 1 - yy])
     Bz = soft(D * (edge_d < 22), 3, 2)
-    left = (xx < W * 0.46) & (edge_d >= 22)
-    Tz = soft(D * left, 3, 1)
-    Gz = soft(D * (xx >= W * 0.40) * (edge_d >= 22), 10, 6)
-    Gz = np.maximum(Gz - Tz, 0)
+
+    # the category colour, read off the lit card edge
+    band = D & (edge_d >= 1) & (edge_d <= 6)
+    px = Hv[band]
+    px = px[px.max(1) - px.min(1) > 60]
+    accent = np.median(px, 0) if len(px) else np.array([230., 80., 110.])
+    acc_like = (np.abs(Hv - accent).max(2) < 62) & D & (edge_d >= 22)
+
+    # pop-out group: fit on what changed outside the type, then its silhouette in the hover pose
+    s, ax, ay = fit_group(C, Hv, (D & (edge_d >= 22) & ~acc_like & (xx > W * 0.3)).astype(np.float32))
+    print(slug, "accent", accent.round(), "group scale %.3f anchor (%d, %d)" % (s, ax, ay))
+    core = group_core(C, Hv, s, ax, ay)
+    coreH = soft(core, 0, 0.8)                                                        # hover pose
+    coreC = warp(coreH[..., None].repeat(3, 2) * 255, 1 / s, ax, ay)[..., 0] / 255    # cover pose
+
+    # type: solid colour shapes (kanji, word, show line) that are not part of the glow round the group
+    lab, n = ndi.label(acc_like)
+    near = ndi.binary_dilation(core > 0.5, iterations=4)
+    kanji_z, word_z, title_z = (np.zeros((H, W), bool) for _ in range(3))
+    for i, sl in enumerate(ndi.find_objects(lab), 1):
+        comp = lab[sl] == i
+        y0, y1, x0, x1 = sl[0].start, sl[0].stop, sl[1].start, sl[1].stop
+        solid = comp.sum() / comp.size
+        if comp.sum() < 12 or ((near[sl] & comp).any() and (y1 - y0 > H * 0.2 or solid < 0.35)):
+            continue                                   # glow round the group, not a letter that merely touches it
+        if x1 > W * 0.7:
+            continue
+        if x1 < W * 0.06 and y0 < H * 0.5:
+            kanji_z[sl] |= comp
+        elif y1 - y0 > H * 0.045:
+            word_z[sl] |= comp
+        else:
+            title_z[sl] |= comp
+    grow = lambda m: ndi.binary_dilation(m, iterations=3)
+    kanji_z, word_z, title_z = grow(kanji_z), grow(word_z), grow(title_z)
+    Tz = soft(kanji_z | word_z | title_z, 0, 0.8)
+    span = lambda m, ax_: (np.nonzero(m.any(0 if ax_ == "x" else 1))[0][[0, -1]] if m.any() else (0, 1))
+    kx = span(kanji_z, "y")
+    wx = span(word_z, "x")
+    tx = span(title_z, "x")
+    glow = soft(D & (edge_d >= 22) & ~(kanji_z | word_z | title_z), 6, 4) * (1 - coreH)
 
     # arc-length position of every edge pixel, clockwise from the top-left corner
     per = 2 * (W + H)
     k = np.argmin(np.stack([yy, W - 1 - xx, H - 1 - yy, xx]), 0)
     arc = np.select([k == 0, k == 1, k == 2, k == 3], [xx, W + yy, W + H + (W - xx), 2 * W + H + (H - yy)]) / per
-
-    # type sub-zones: kanji column, the big word, the show line under it
-    ys, xs = np.nonzero(D * left > 0)
-    kanji = (xx < W * 0.055) & (yy < H * 0.5)          # the kanji column only, not the start of the lines below
-    word_bottom = H * 0.86
-    s, ax, ay = fit_group(C, Hv)
-    print(slug, "group scale %.3f anchor (%d, %d)" % (s, ax, ay))
-    coreH = soft(group_core(C, Hv, s, ax, ay), 0, 0.8)          # hover pose
-    coreC = warp(coreH[..., None].repeat(3, 2) * 255, 1 / s, ax, ay)[..., 0] / 255   # cover pose
-    glow = Gz * (1 - coreH)                                      # where the hover adds only light, not characters
 
     ed = lambda m: m[..., None]
     frames = []
@@ -158,11 +184,9 @@ def build(slug, out_dir):
         grp = back((i - 18) / 12) if i < 91 else 1 - ease((i - 91) / 8)
         breath = np.sin(np.pi * np.clip((i - 84) / 8, 0, 1)) * 0.45
 
-        # base: cover, with Kaptain's hover pixels revealed per zone
+        # base: cover, edge light running round
         m_edge = Bz * (np.clip((lap * (1 + 0.012) - arc) / 0.012, 0, 1) * (1 - drain))
-        m_type = Tz * np.where(kanji, wipe(yy, H * 0.05, H * 0.36, kan),
-                      np.where(yy < word_bottom, wipe(xx, W * 0.03, W * 0.44, wrd), wipe(xx, W * 0.03, W * 0.40, ttl)))
-        out = C + ed(np.maximum(m_edge, m_type)) * (Hv - C)
+        out = C + ed(m_edge) * (Hv - C)
         if breath > 0:
             out = out + ed(Bz * breath) * np.clip(Hv - C, 0, None)
 
@@ -176,6 +200,11 @@ def build(slug, out_dir):
             hs = warp(Hv, sc / s, ax, ay)
             mt = warp(coreC[..., None].repeat(3, 2) * 255, sc, ax, ay)[..., 0] / 255
             out = out + ed(mt) * (cs + a * (hs - cs) - out)
+
+        # type on top: kanji top to bottom, the word left to right, the show line after it
+        fill = (kanji_z * wipe(yy, kx[0], kx[1], kan) + word_z * wipe(xx, wx[0], wx[1], wrd)
+                + title_z * wipe(xx, tx[0], tx[1], ttl))
+        out = out + ed(Tz) * (C + ed(fill) * (Hv - C) - out)
         frames.append(Image.fromarray(np.clip(out, 0, 255).astype(np.uint8)).resize(OUT, Image.LANCZOS))
 
     os.makedirs(out_dir, exist_ok=True)
