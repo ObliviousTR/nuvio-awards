@@ -301,7 +301,443 @@ class DisneyPixar:
         return lay
 
 
-STUDIOS = {c.title: c for c in (Paramount, DisneyPixar)}
+# ---------------------------------------------------------------- helpers for the rest of the row
+def fit_logo(name, w=None, h=None):
+    im = get_logo(name)
+    im = im.crop(im.getchannel("A").getbbox())
+    k = min((w or 1e9) / im.width, (h or 1e9) / im.height)
+    return im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
+
+
+def place(lay, im, cx, cy, a=1.0):
+    lay.alpha_composite(alpha_mul(im, a), (round(cx - im.width / 2), round(cy - im.height / 2)))
+
+
+def scaled(im, k):
+    return im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
+
+
+def beam(lay, x0, y0, ang, length, width, col, a):
+    """A searchlight beam from (x0, y0) at angle ang (radians, 0 = up), soft edged."""
+    if a <= 0:
+        return
+    b = Image.new("L", (W, H), 0)
+    dx, dy = math.sin(ang), -math.cos(ang)
+    px, py = -dy, dx
+    x1, y1 = x0 + dx * length, y0 + dy * length
+    ImageDraw.Draw(b).polygon([(x0 - px * 6, y0 - py * 6), (x0 + px * 6, y0 + py * 6),
+                               (x1 + px * width, y1 + py * width), (x1 - px * width, y1 - py * width)], fill=255)
+    fade = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(fade).ellipse((x0 - length, y0 - length, x0 + length, y0 + length), fill=255)
+    fade = fade.filter(ImageFilter.GaussianBlur(length * 0.35))
+    b = ImageChops.multiply(b.filter(ImageFilter.GaussianBlur(18)), fade)
+    l_ = Image.new("RGBA", (W, H), col + (0,))
+    l_.putalpha(b.point(lambda v: round(v * a)))
+    lay.alpha_composite(l_)
+
+
+def clouds(seed, n=26, col=(255, 255, 255)):
+    rnd = random.Random(seed)
+    m = Image.new("L", (W * 2, H * 2), 0)
+    d = ImageDraw.Draw(m)
+    for _ in range(n):
+        x, y = rnd.uniform(0, W * 2), rnd.uniform(H * 0.2, H * 1.9)
+        for _k in range(6):
+            r = rnd.uniform(60, 170)
+            ox, oy = rnd.uniform(-160, 160), rnd.uniform(-40, 40)
+            d.ellipse((x + ox - r, y + oy - r * 0.6, x + ox + r, y + oy + r * 0.6), fill=rnd.randint(70, 160))
+    m = m.filter(ImageFilter.GaussianBlur(38))
+    c = Image.new("RGBA", m.size, col + (0,))
+    c.putalpha(m)
+    return c
+
+
+def split_columns(im):
+    """Split a logo into its letters (column gaps)."""
+    a = np.asarray(im)[..., 3] > 30
+    cols = a.any(0)
+    runs, s0 = [], None
+    for x, c in enumerate(cols):
+        if c and s0 is None:
+            s0 = x
+        if not c and s0 is not None:
+            runs.append((s0, x)); s0 = None
+    if s0 is not None:
+        runs.append((s0, len(cols)))
+    return [(x0, im.crop((x0, 0, x1, im.height))) for x0, x1 in runs]
+
+
+# ---------------------------------------------------------------- A24: a white line opens into the logo
+class A24:
+    title, accent = "A24", (235, 235, 235)
+    pool = [("movie", "Midsommar", 2019), ("movie", "Uncut Gems", 2019), ("movie", "Ex Machina", 2015),
+            ("movie", "Lady Bird", 2017), ("movie", "The Green Knight", 2021), ("movie", "Past Lives", 2023),
+            ("movie", "The Zone of Interest", 2023), ("movie", "Talk to Me", 2023)]
+
+    def __init__(self):
+        self.l = tinted(fit_logo("a24.png", w=W * 0.40).getchannel("A"), (255, 255, 255), (238, 238, 238))
+        self.stage = gradient((6, 6, 7), (14, 14, 16))
+        rnd = random.Random(2)
+        self.grain = [Image.effect_noise((W // 2, H // 2), 40).resize((W, H)) for _ in range(4)]
+
+    def logo(self, t, final=False):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        cx, cy = W / 2, H / 2
+        if final:
+            place(lay, self.l, cx, cy)
+            return lay
+        lw = ease(t / 0.3) * self.l.width * 1.1
+        la = 1 - ease((t - 0.45) / 0.15)
+        if lw > 2 and la > 0:
+            ln = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            ImageDraw.Draw(ln).line((cx - lw / 2, cy, cx + lw / 2, cy), fill=(255, 255, 255, 255), width=3)
+            lay.alpha_composite(alpha_mul(glow_of(ln, 6, (255, 255, 255), 1.4), la))
+            lay.alpha_composite(alpha_mul(ln, la))
+        o = ease((t - 0.28) / 0.32)
+        if o > 0:
+            m = Image.new("L", self.l.size, 0)
+            hh = self.l.height / 2 * o
+            ImageDraw.Draw(m).rectangle((0, self.l.height / 2 - hh, self.l.width, self.l.height / 2 + hh), fill=255)
+            li = self.l.copy()
+            li.putalpha(ImageChops.multiply(li.getchannel("A"), m))
+            fr = round(10 * (1 - ease((t - 0.45) / 0.4)))                 # colour fringe settles
+            if fr > 0:
+                for col, dx in (((255, 40, 60), -fr), ((40, 220, 255), fr)):
+                    c_ = Image.new("RGBA", li.size, col + (0,))
+                    c_.putalpha(li.getchannel("A").point(lambda v: v * 120 // 255))
+                    place(lay, c_, cx + dx, cy)
+            place(lay, li, cx, cy)
+        gr = (1 - ease((t - 0.7) / 0.3)) * 0.5
+        if gr > 0:
+            gm = self.grain[int(t * 40) % 4].point(lambda v: round(max(0, v - 150) * gr))
+            g_ = Image.new("RGBA", (W, H), (255, 255, 255, 0))
+            g_.putalpha(gm)
+            lay.alpha_composite(g_)
+        return lay
+
+
+# ---------------------------------------------------------------- Blumhouse: a bare bulb flickers on in a dark room
+class Blumhouse:
+    title, accent = "Blumhouse Productions", (255, 180, 100)
+    pool = [("movie", "The Invisible Man", 2020), ("movie", "M3GAN", 2022), ("movie", "Split", 2016),
+            ("movie", "The Black Phone", 2021), ("movie", "Five Nights at Freddy's", 2023), ("movie", "Sinister", 2012),
+            ("movie", "The Purge", 2013), ("movie", "Happy Death Day", 2017)]
+    FLICK = [(0.10, 0.0), (0.14, 0.7), (0.16, 0.05), (0.22, 0.0), (0.26, 0.9), (0.28, 0.2), (0.31, 1.0), (0.36, 0.35),
+             (0.38, 1.0), (0.55, 1.0), (0.57, 0.6), (0.59, 1.0)]
+
+    def __init__(self):
+        self.l = tinted(fit_logo("blumhouse.png", w=W * 0.56).getchannel("A"), (246, 240, 228), (210, 200, 185))
+        self.stage = gradient((3, 3, 4), (10, 9, 9))
+
+    def light(self, t):
+        L = 0.0
+        for (t0, v0), (t1, v1) in zip(self.FLICK, self.FLICK[1:]):
+            if t0 <= t < t1:
+                return v0 + (v1 - v0) * (t - t0) / (t1 - t0) if t1 - t0 > 0.05 else v0
+        return 1.0 if t >= self.FLICK[-1][0] else 0.0
+
+    def logo(self, t, final=False):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        L = 1.0 if final else self.light(t)
+        bx, by = W / 2, H * 0.17
+        room = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(room).ellipse((bx - W * 0.42, by - H * 0.5, bx + W * 0.42, by + H * 0.95), fill=255)
+        rl = Image.new("RGBA", (W, H), (110, 80, 50, 0))
+        rl.putalpha(room.filter(ImageFilter.GaussianBlur(160)).point(lambda v: round(v * 0.55 * L)))
+        lay.alpha_composite(rl)
+        d = ImageDraw.Draw(lay)
+        d.line((bx, 0, bx, by - 14), fill=(40, 34, 28, 255), width=3)
+        bulb = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ImageDraw.Draw(bulb).ellipse((bx - 11, by - 14, bx + 11, by + 12), fill=(255, 220, 160, round(60 + 195 * L)))
+        lay.alpha_composite(alpha_mul(glow_of(bulb, 30, (255, 190, 110), 2.4), L))
+        lay.alpha_composite(bulb)
+        place(lay, self.l, W / 2, H * 0.58, 0.08 + 0.92 * L)
+        return lay
+
+
+# ---------------------------------------------------------------- NEON: the tubes buzz on letter by letter
+class Neon:
+    title, accent = "NEON", (255, 70, 200)
+    pool = [("movie", "Parasite", 2019), ("movie", "Anora", 2024), ("movie", "Longlegs", 2024),
+            ("movie", "Portrait of a Lady on Fire", 2019), ("movie", "I, Tonya", 2017), ("movie", "Triangle of Sadness", 2022),
+            ("movie", "Monkey Man", 2024), ("movie", "Spencer", 2021)]
+
+    def __init__(self):
+        lg = fit_logo("neon.png", w=W * 0.62)
+        self.lg = lg
+        self.letters = split_columns(lg)
+        self.x0, self.y0 = (W - lg.width) / 2, (H - lg.height) / 2
+        rnd = random.Random(7)
+        self.on_at = [0.12 + k * 0.13 + rnd.uniform(0, 0.04) for k in range(len(self.letters))]
+        self.rnd = rnd
+        st = gradient((14, 6, 20), (24, 10, 30))
+        d = ImageDraw.Draw(st)
+        for y in range(0, H, 46):                                            # a dark brick wall behind the sign
+            d.line((0, y, W, y), fill=(10, 4, 14))
+            off = 0 if (y // 46) % 2 else 60
+            for x in range(off, W, 120):
+                d.line((x, y, x, y + 46), fill=(10, 4, 14))
+        self.stage = st
+
+    def level(self, k, t):
+        t0 = self.on_at[k]
+        if t < t0:
+            return 0.0
+        dt = t - t0
+        if dt < 0.12:
+            return 1.0 if random.Random(int(t * 400) + k * 31).random() < 0.45 + dt * 4 else 0.12
+        return 1.0
+
+    def logo(self, t, final=False):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        for k, (x0, im) in enumerate(self.letters):
+            L = 1.0 if final else self.level(k, t)
+            a = im.getchannel("A")
+            off = Image.new("RGBA", im.size, (70, 50, 70, 0))
+            off.putalpha(a.point(lambda v: v * 150 // 255))                # the unlit glass
+            lay.alpha_composite(off, (round(self.x0 + x0), round(self.y0)))
+            if L > 0:
+                core = tinted(a, (255, 225, 245), (255, 190, 235))
+                lay.alpha_composite(alpha_mul(glow_of(core, 28, self.accent, 1.6), L), (round(self.x0 + x0), round(self.y0)))
+                lay.alpha_composite(alpha_mul(glow_of(core, 8, self.accent, 1.8), L), (round(self.x0 + x0), round(self.y0)))
+                lay.alpha_composite(alpha_mul(core, L), (round(self.x0 + x0), round(self.y0)))
+        return lay
+
+
+# ---------------------------------------------------------------- Studio Ghibli: the line drawing draws itself
+class Ghibli:
+    title, accent = "Studio Ghibli", (150, 215, 255)
+    pool = [("movie", "Howl's Moving Castle", 2004), ("movie", "Kiki's Delivery Service", 1989),
+            ("movie", "The Boy and the Heron", 2023), ("movie", "Castle in the Sky", 1986), ("movie", "Ponyo", 2008),
+            ("movie", "Nausicaä of the Valley of the Wind", 1984), ("movie", "Porco Rosso", 1992), ("movie", "The Wind Rises", 2013)]
+
+    def __init__(self):
+        from scipy import ndimage as ndi
+        lg = fit_logo("studio-ghibli.png", w=W * 0.72)
+        a = np.asarray(lg)[..., 3]
+        self.lg = tinted(Image.fromarray(a), (255, 255, 255), (255, 255, 255))
+        self.x0, self.y0 = (W - lg.width) / 2, (H - lg.height) / 2
+        # drawing order: geodesic distance along the strokes from the top of each stroke (Totoro: the left part)
+        m = a > 20
+        split = int(lg.width * 0.33)                                          # left: the drawing, right: the type
+        draw = m.copy(); draw[:, split:] = False
+        lab, n = ndi.label(ndi.binary_dilation(draw, iterations=2))
+        order = np.full(a.shape, np.inf)
+        objs = ndi.find_objects(lab)
+        comps = sorted(range(1, n + 1), key=lambda i: (objs[i - 1][1].start, objs[i - 1][0].start))
+        base = 0
+        for i in comps:
+            sl = objs[i - 1]
+            comp = (lab[sl] == i)
+            if comp.sum() < 15:
+                continue
+            ys, xs = np.nonzero(comp)
+            k = np.argmin(ys)
+            sub = np.full(comp.shape, np.inf)
+            front = np.zeros_like(comp); front[ys[k], xs[k]] = True
+            step = 0
+            while front.any() and step < 6000:
+                sub[front] = base + step
+                front = ndi.binary_dilation(front) & comp & np.isinf(sub)
+                step += 1
+            o = order[sl]
+            o[comp] = np.minimum(o[comp], sub[comp])
+            base += step
+        order[draw & ~np.isfinite(order)] = base
+        self.order = np.where(np.isfinite(order), order / max(1, base), 1.0)
+        self.type_mask = Image.fromarray(((m & ~draw) * 255).astype(np.uint8))
+        self.draw_alpha = a * draw
+        self.stage = gradient((40, 150, 225), (110, 195, 245))
+
+    def logo(self, t, final=False):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        if final:
+            place(lay, self.lg, W / 2, H / 2)
+            return lay
+        p = ease(t / 0.62)
+        vis = (self.order <= p) * self.draw_alpha
+        d = Image.new("RGBA", self.lg.size, (255, 255, 255, 0))
+        d.putalpha(Image.fromarray(vis.astype(np.uint8)))
+        lay.alpha_composite(d, (round(self.x0), round(self.y0)))
+        ta = ease((t - 0.55) / 0.25)
+        if ta > 0:
+            ty = Image.new("RGBA", self.lg.size, (255, 255, 255, 0))
+            ty.putalpha(ImageChops.multiply(self.type_mask, self.lg.getchannel("A")).point(lambda v: round(v * ta)))
+            lay.alpha_composite(ty, (round(self.x0), round(self.y0 + (1 - ta) * 12)))
+        return lay
+
+
+# ---------------------------------------------------------------- monuments under searchlights (20th Century, Searchlight)
+class Monument:
+    logo_file, beams_n, sky = "", 5, ((10, 18, 48), (60, 70, 110))
+
+    def __init__(self):
+        lg = fit_logo(self.logo_file, w=W * self.width, h=H * 0.62)
+        self.l = tinted(lg.getchannel("A"), (255, 226, 140), (176, 120, 40))
+        self.l_shade = glow_of(self.l, 22, (255, 200, 110), 0.5)
+        self.stage = starfield(gradient(self.sky[0], self.sky[1], glow=(W / 2, H * 1.1, W * 0.5, (255, 170, 90), 0.35)), 80, seed=11, top=0.6)
+
+    def logo(self, t, final=False):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        p = 1.0 if final else out3(t / 0.7)
+        k = 1 + 0.22 * (1 - p)
+        cy = H * 0.54 + (1 - p) * H * 0.22
+        bl = 1.0 if final else ease(t / 0.25)
+        for j in range(self.beams_n):
+            ph = (j - (self.beams_n - 1) / 2) / max(1, self.beams_n - 1)
+            sw = 0.0 if final else math.sin(t * 6.0 + j * 1.3) * 0.18
+            x0 = W / 2 + ph * W * 0.48
+            beam(lay, x0, H + 10, ph * 0.7 + sw, H * 1.4, 70, (255, 248, 225), 0.42 * bl)
+        L = scaled(self.l, k)
+        place(lay, scaled(self.l_shade, k), W / 2, cy)
+        place(lay, L, W / 2, cy, min(1.0, 0.2 + p))
+        if not final and 0.65 < t < 0.95:
+            place(lay, sweep(L, (t - 0.65) / 0.3, strength=0.6), W / 2, cy)
+        return lay
+
+
+class TwentiethCentury(Monument):
+    title, accent = "20th Century Studios", (255, 200, 100)
+    logo_file, width, beams_n = "20th-century.png", 0.46, 5
+    pool = [("movie", "The Sound of Music", 1965), ("movie", "Bohemian Rhapsody", 2018), ("movie", "The Martian", 2015),
+            ("movie", "Life of Pi", 2012), ("movie", "Free Guy", 2021), ("movie", "The Devil Wears Prada", 2006),
+            ("movie", "Cast Away", 2000), ("movie", "Edward Scissorhands", 1990)]
+
+
+class Searchlight(Monument):
+    title, accent = "Searchlight Pictures", (255, 215, 140)
+    logo_file, width, beams_n, sky = "searchlight.png", 0.62, 2, ((8, 10, 26), (40, 44, 70))
+    pool = [("movie", "Poor Things", 2023), ("movie", "The Grand Budapest Hotel", 2014), ("movie", "Birdman", 2014),
+            ("movie", "The Shape of Water", 2017), ("movie", "Jojo Rabbit", 2019), ("movie", "Nomadland", 2020),
+            ("movie", "12 Years a Slave", 2013), ("movie", "Slumdog Millionaire", 2008)]
+
+    def logo(self, t, final=False):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        cy = H * 0.52
+        if final:
+            for side in (-1, 1):
+                beam(lay, W / 2 + side * W * 0.3, H + 10, side * 0.35, H * 1.5, 80, (255, 250, 230), 0.4)
+            place(lay, self.l_shade, W / 2, cy)
+            place(lay, self.l, W / 2, cy)
+            return lay
+        # one great beam scans the sky from the left and lights the name on its way; a second joins it
+        a1 = -1.0 + 2.0 * ease(t / 0.6)
+        beam(lay, W * 0.5, H + 10, a1 * 0.9, H * 1.6, 95, (255, 250, 230), 0.55)
+        if t > 0.55:
+            k = ease((t - 0.55) / 0.3)
+            for side in (-1, 1):
+                beam(lay, W / 2 + side * W * 0.3, H + 10, side * 0.35, H * 1.5, 80, (255, 250, 230), 0.4 * k)
+        bx = W * 0.5 + math.tan(a1 * 0.9) * (H + 10 - cy)
+        m = Image.new("L", self.l.size, 0)
+        lx = bx - (W - self.l.width) / 2
+        ImageDraw.Draw(m).rectangle((0, 0, lx, self.l.height), fill=255)
+        reveal = m.filter(ImageFilter.GaussianBlur(40))
+        lit = 1.0 if t > 0.62 else None
+        li = self.l.copy()
+        if lit is None:
+            li.putalpha(ImageChops.multiply(li.getchannel("A"), reveal))
+        place(lay, alpha_mul(self.l_shade, ease(t / 0.6)), W / 2, cy)
+        place(lay, li, W / 2, cy)
+        return lay
+
+
+# ---------------------------------------------------------------- Warner Bros.: the shield flies in through the clouds
+class WarnerBros:
+    title, accent = "Warner Bros. Pictures", (255, 205, 60)
+    pool = [("movie", "Sinners", 2025), ("movie", "Gravity", 2013), ("movie", "Inception", 2010), ("movie", "Wonka", 2023),
+            ("movie", "Gran Torino", 2008), ("movie", "Beetlejuice", 1988), ("movie", "Argo", 2012), ("movie", "Weapons", 2025)]
+
+    def __init__(self):
+        self.l = fit_logo("warner-bros.png", h=H * 0.62)
+        self.stage = gradient((70, 130, 210), (190, 220, 245))
+        self.c1, self.c2 = clouds(4), clouds(8, 18)
+        st = self.stage.convert("RGBA")
+        st.alpha_composite(self.c2.resize((W, H)).crop((0, 0, W, H)) if False else self.c2.crop((W // 2, H // 2, W * 3 // 2, H * 3 // 2)))
+        self.stage = st.convert("RGB")
+
+    def cloud_layer(self, c, z, a):
+        k = 1 + z
+        w_, h_ = round(W * 2 / k), round(H * 2 / k)
+        x0, y0 = (W * 2 - w_) / 2, (H * 2 - h_) / 2
+        return alpha_mul(c.crop((round(x0), round(y0), round(x0) + w_, round(y0) + h_)).resize((W, H)), a)
+
+    def logo(self, t, final=False):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        if final:
+            place(lay, glow_of(self.l, 22, (255, 230, 150), 0.45), W / 2, H / 2)
+            place(lay, self.l, W / 2, H / 2)
+            return lay
+        p = out3(t / 0.7)
+        k = 0.12 + 0.88 * p
+        L = scaled(self.l, k)
+        place(lay, L, W / 2, H / 2 + (1 - p) * 40, min(1.0, 0.15 + p * 1.5))
+        # the camera flies through the near clouds, which part and rush past
+        lay.alpha_composite(self.cloud_layer(self.c1, 1.0 + 3.5 * ease(t / 0.75), 1 - ease((t - 0.25) / 0.45)))
+        if 0.68 < t < 0.98:
+            place(lay, sweep(self.l, (t - 0.68) / 0.3, strength=0.7), W / 2, H / 2)
+        return lay
+
+
+# ---------------------------------------------------------------- Universal: the name swings round the globe
+class Universal:
+    title, accent = "Universal Pictures", (120, 190, 255)
+    pool = [("movie", "Jaws", 1975), ("movie", "Wicked", 2024), ("movie", "Nope", 2022), ("movie", "Twisters", 2024),
+            ("movie", "The Bourne Ultimatum", 2007), ("movie", "Love Actually", 2003), ("movie", "Les Misérables", 2012),
+            ("movie", "Hot Fuzz", 2007)]
+
+    def __init__(self):
+        from scipy import ndimage as ndi
+        lg = fit_logo("universal.png", w=W * 0.74)
+        a = np.asarray(lg)[..., 3]
+        m = a > 30
+        lab, n = ndi.label(m)
+        objs = ndi.find_objects(lab)
+        h = lg.height
+        letters, globe = [], np.zeros_like(m)
+        for i, sl in enumerate(objs, 1):
+            cy = (sl[0].start + sl[0].stop) / 2
+            if 0.36 * h < cy < 0.62 * h and (sl[0].stop - sl[0].start) > 0.12 * h:
+                letters.append((sl[1].start, sl[0].start, tinted(Image.fromarray((a * (lab == i))[sl].astype(np.uint8)),
+                                                                  (255, 255, 255), (215, 225, 240))))
+            else:
+                globe |= lab == i
+        self.globe = tinted(Image.fromarray((a * globe).astype(np.uint8)), (120, 175, 245), (40, 90, 180))
+        self.letters = sorted(letters, key=lambda x: x[0])
+        self.x0, self.y0 = (W - lg.width) / 2, (H - lg.height) / 2
+        self.lw = lg.width
+        self.stage = starfield(gradient((2, 4, 14), (8, 16, 40), glow=(W / 2, H / 2, W * 0.32, (30, 70, 150), 0.5)), 220, seed=13, top=1.0)
+
+    def logo(self, t, final=False):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        ga = 1.0 if final else ease(t / 0.35)
+        gk = 1.0 if final else 1.12 - 0.12 * out3(t / 0.8)
+        G = scaled(self.globe, gk)
+        place(lay, alpha_mul(glow_of(G, 30, (90, 160, 255), 0.9), ga), W / 2, H / 2)
+        place(lay, G, W / 2, H / 2, ga)
+        n = len(self.letters)
+        for j, (lx, ly, im) in enumerate(self.letters):
+            fx, fy = self.x0 + lx + im.width / 2, self.y0 + ly + im.height / 2
+            p = 1.0 if final else out3((t - 0.18 - j * 0.045) / 0.42)
+            if p <= 0:
+                continue
+            # round the far side of the globe from the right, then forward into place
+            ang = (1 - p) * math.pi * 0.9
+            x = W / 2 + (fx - W / 2) * math.cos(ang) + self.lw * 0.55 * math.sin(ang)
+            depth = math.cos(ang)
+            sc = 0.6 + 0.4 * max(0.0, depth) if p < 1 else 1.0
+            y = fy - (1 - depth) * 12
+            L = scaled(im, sc)
+            place(lay, L, x, y, min(1.0, p * 3) * (0.35 + 0.65 * max(0.0, depth)))
+        if not final and 0.72 < t < 0.98:
+            full = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            for lx, ly, im in self.letters:
+                full.alpha_composite(im, (round(self.x0 + lx), round(self.y0 + ly)))
+            lay.alpha_composite(sweep(full, (t - 0.72) / 0.26, strength=0.6))
+        return lay
+
+
+STUDIOS = {c.title: c for c in (A24, Blumhouse, Neon, Ghibli, DisneyPixar, Searchlight, WarnerBros, Universal, Paramount,
+                                TwentiethCentury)}
 
 
 # ---------------------------------------------------------------- the loop
