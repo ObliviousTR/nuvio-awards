@@ -2,9 +2,9 @@
 import os, sys, subprocess
 from concurrent.futures import ThreadPoolExecutor
 os.makedirs("refs/um", exist_ok=True)
-ids = ["spiderman", "middleearth", "wizarding", "starwars", "johnwick", "mcu", "dc", "batman", "xmen", "dune",
-       "startrek", "mi", "jurassic", "transformers", "matrix", "terminator", "conjuring", "fast", "madmax", "indiana",
-       "alienpredator", "godzillakong", "apes"]
+ids = ["matrix", "jurassic", "dc", "batman", "spiderman", "middleearth", "wizarding", "starwars", "johnwick", "mcu",
+       "dune", "startrek", "mi", "transformers", "terminator", "conjuring", "fast", "madmax", "indiana",
+       "alienpredator", "godzillakong", "apes", "xmen"]
 
 
 def run(u):

@@ -247,8 +247,9 @@ def background(sc, g):
     seg = min(len(sc) - 1, int(g * len(sc)))
     loc = g * len(sc) - seg
     bg = art.zoomed(sc[seg], 0.02 + 0.06 * loc)
-    if loc > 0.78:
-        bg = Image.blend(bg, art.zoomed(sc[(seg + 1) % len(sc)], 0.02), (loc - 0.78) / 0.22)
+    if loc > 0.68:
+        f = (loc - 0.68) / 0.32
+        bg = Image.blend(bg, art.zoomed(sc[(seg + 1) % len(sc)], 0.02), f * f * (3 - 2 * f))
     return vignette(bg)
 
 
@@ -261,6 +262,7 @@ class Mark:
 class Mark2(Mark):
     """Second-batch base: self.i is the global frame index (set by render), finish() adds the sweep + tagline."""
     i = 0
+    iv = 0.0
     tag, tagcol, tag_y = "", (255, 255, 255), H / 2 + 200
 
     def finish(self, cv, t, h, sweep_strength=120):
@@ -943,7 +945,7 @@ class Matrix(Mark2):
 
     def rain(self, a):
         im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        fi = self.i if self.i < self.build * SMOOTH else self.i // 3 * 3  # the rain ticks slower once the logo is up
+        fi = getattr(self, "iv", self.i)  # smooth fall all through the loop
         rnd = random.Random(fi * 7)
         for c, (sp, off, L) in enumerate(self.cols):
             head = (off + sp * fi) % (H + L * 26 + 200) - 100
@@ -1320,25 +1322,31 @@ def render(uid, out_dir):
         print("key art unavailable for", uid, e)
     mark = cls()
     sc = scenes(paths)
-    B, HD = round(mark.build * SMOOTH), round(mark.hold * SMOOTH)
+    # every frame 40 ms: the hold used to run at 70 ms a frame, so scene crossfades there stepped visibly
+    HOLD_SLOW = 70 / 40
+    B, HD0 = round(mark.build * SMOOTH), round(mark.hold * SMOOTH)
+    HD = round(HD0 * HOLD_SLOW)
     n = B + HD
+    total = B + HD0 * HOLD_SLOW          # the loop's length in build-frame units (same timeline as before)
     frames = []
     for i in range(n):
         t = min(1, i / B)
         h = (i - B) / HD if i >= B else None
-        bg = background(sc, i / n).convert("RGBA")
-        mark.i = i
+        iv = i if i < B else B + (i - B) / HOLD_SLOW      # the old frame clock, fractional in the hold
+        bg = background(sc, iv / total).convert("RGBA")
+        mark.i, mark.iv = int(iv), iv
         bg.alpha_composite(mark(t, h))
         frames.append(bg.convert("RGB"))
     d = os.path.join(out_dir, uid)
     os.makedirs(d, exist_ok=True)
     cov = vignette(art.zoomed(sc[0], 0.04)).convert("RGBA")
-    mark.i = round(B + 0.75 * HD)
+    mark.i = round(B + 0.75 * HD0)
+    mark.iv = mark.i
     cov.alpha_composite(mark(1.0, 0.75))
     cov.convert("RGB").save(os.path.join(d, "cover.jpg"), quality=88)
     art.graded(fetch_any(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=86)
     small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
-    dur = [mark.dur(i, B) if hasattr(mark, "dur") else (40 if i < B else 70) for i in range(n)]
+    dur = [40] * n
     small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=dur, loop=0,
                   quality=80, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
     strip = Image.new("RGB", (GW * 4, GH * 2))
