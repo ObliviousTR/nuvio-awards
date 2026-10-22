@@ -1,17 +1,9 @@
-"""Studios: render all ten cards."""
+"""Iconic Actors samples (Al Pacino, Frances McDormand) + Tom Holland's portrait card."""
 import os, sys, subprocess
-from concurrent.futures import ThreadPoolExecutor
-sys.path.insert(0, "art_tools"); sys.path.insert(0, "scripts")
-os.makedirs("refs/studio", exist_ok=True)
-names = ["A24", "Blumhouse Productions", "NEON", "Studio Ghibli", "Disney & Pixar Animation", "Searchlight Pictures",
-         "Warner Bros. Pictures", "Universal Pictures", "Paramount Pictures", "20th Century Studios"]
-
-
-def run(n):
-    r = subprocess.run([sys.executable, "art_tools/studio_art.py", "refs/studio", n], capture_output=True, text=True)
-    return r.stdout + r.stderr[-1500:]
-
-
-with ThreadPoolExecutor(4) as ex:
-    logs = list(ex.map(run, names))
-open("refs/studio/log.txt", "w").write("\n".join(logs))
+os.makedirs("refs/act", exist_ok=True)
+log = subprocess.run([sys.executable, "-m", "pip", "install", "-q", "rembg[cpu]", "onnxruntime"], capture_output=True, text=True).stderr[-500:]
+r = subprocess.run([sys.executable, "art_tools/folder_art.py", "refs/act/cards", "Tom Holland"], capture_output=True, text=True)
+log += r.stdout + r.stderr[-2000:]
+r = subprocess.run([sys.executable, "art_tools/actor_art.py", "refs/act", "Al Pacino", "Frances McDormand"], capture_output=True, text=True)
+log += r.stdout + r.stderr[-3000:]
+open("refs/act/log.txt", "w").write(log)

@@ -430,7 +430,7 @@ def jobs():
                                                        net_stills("1|94"))),
     ] + [J("Iconic Actors", n, (lambda n=n: ("portrait", n, "FEATURED FILMOGRAPHY"))) for n in (
         "Frances McDormand", "Edward Norton", "Philip Seymour Hoffman", "Bryan Cranston", "Tilda Swinton", "Toni Collette",
-        "Ethan Hawke", "Sam Rockwell", "Simon Pegg", "Robert Pattinson")] + [J("Legendary Directors", "Sofia Coppola", lambda: ("portrait", "Sofia Coppola", "DIRECTOR"))]
+        "Ethan Hawke", "Sam Rockwell", "Simon Pegg", "Robert Pattinson", "Tom Holland")] + [J("Legendary Directors", "Sofia Coppola", lambda: ("portrait", "Sofia Coppola", "DIRECTOR"))]
 
 
 def pair(a, b, gap=90):

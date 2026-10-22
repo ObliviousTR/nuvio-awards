@@ -48,7 +48,7 @@ FOLDERS = {  # row title -> folder titles in order (unlisted folders keep their 
         "Emma Stone", "Margot Robbie", "Bryan Cranston", "Willem Dafoe", "Christoph Waltz", "Mads Mikkelsen",
         "Javier Bardem", "Tilda Swinton", "Toni Collette", "Ethan Hawke", "Sam Rockwell", "Steve Carell", "Simon Pegg",
         "Song Kang-ho", "Oscar Isaac", "Pedro Pascal", "Robert Pattinson",
-        "Florence Pugh", "Anya Taylor-Joy", "Timothée Chalamet", "Zendaya", "Austin Butler"],
+        "Florence Pugh", "Anya Taylor-Joy", "Timothée Chalamet", "Zendaya", "Tom Holland", "Austin Butler"],
     "Legendary Directors": [
         "Alfred Hitchcock", "Stanley Kubrick", "Akira Kurosawa", "Francis Ford Coppola", "Steven Spielberg",
         "Martin Scorsese", "Sergio Leone", "Billy Wilder", "David Lynch", "Hayao Miyazaki", "Ridley Scott", "James Cameron",
