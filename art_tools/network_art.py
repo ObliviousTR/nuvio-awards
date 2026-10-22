@@ -39,15 +39,19 @@ def accent_of(focus):
     return max(px, key=lambda p: p[3] * (max(p[:3]) - min(p[:3]) + 1))[:3]
 
 
-def shows(nets, n=4):
-    r = (tmdb("/discover/tv", with_networks="|".join(map(str, nets)), sort_by="vote_count.desc",
-              without_genres="10763|10767|10766") or {}).get("results", [])
+def shows(nets, n=3):
+    """The channel's most popular shows right now (TMDB popularity, with a vote floor so obscure titles stay out).
+    Picture: a textless POSTER (vertical key art, fits the portrait card) if TMDB has one, else a textless backdrop."""
+    r = (tmdb("/discover/tv", with_networks="|".join(map(str, nets)), sort_by="popularity.desc",
+              without_genres="10763|10767|10766", **{"vote_count.gte": 40}) or {}).get("results", [])
     out = []
     for s in r:
         im = tmdb(f"/tv/{s['id']}/images", include_image_language="null") or {}
+        ps = sorted([b for b in im.get("posters", []) if not b.get("iso_639_1")], key=lambda b: (-b["vote_count"], -b["vote_average"]))
         bd = sorted([b for b in im.get("backdrops", []) if not b.get("iso_639_1")], key=lambda b: -b["vote_count"])
-        if bd:
-            out.append(art.fetch(bd[0]["file_path"], "w1280").convert("RGB"))
+        pick = ps[0]["file_path"] if ps else (bd[0]["file_path"] if bd else None)
+        if pick:
+            out.append((s.get("name"), art.fetch(pick, "w780").convert("RGB")))
         if len(out) == n:
             break
     return out
@@ -72,28 +76,47 @@ def vign(im):
     return Image.composite(im, Image.new("RGB", (PW, PH)), v.filter(ImageFilter.GaussianBlur(110)))
 
 
+_PATH = None
+
+
 def frame_path(p):
-    """Points of the rounded card outline, traced from the top centre clockwise, up to fraction p."""
-    m, r = 6, 26
-    x0, y0, x1, y1 = m, m, PW - m, PH - m
-    pts = []
-    seg = [((PW / 2, y0), (x1 - r, y0)), None, ((x1, y0 + r), (x1, y1 - r)), None, ((x1 - r, y1), (x0 + r, y1)), None,
-           ((x0, y1 - r), (x0, y0 + r)), None, ((x0 + r, y0), (PW / 2, y0))]
-    corners = [(x1 - r, y0 + r, -90, 0), (x1 - r, y1 - r, 0, 90), (x0 + r, y1 - r, 90, 180), (x0 + r, y0 + r, 180, 270)]
-    ci = 0
-    for s in seg:
-        if s is None:
-            cx, cy, a0, a1 = corners[ci]
-            ci += 1
-            for k in range(9):
-                a = math.radians(a0 + (a1 - a0) * k / 8)
-                pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
+    """The rounded card outline from the top centre clockwise, cut at fraction p of its LENGTH (so the line runs at
+    one constant speed, corners included)."""
+    global _PATH
+    if _PATH is None:
+        m, r = 6, 26
+        x0, y0, x1, y1 = m, m, PW - m, PH - m
+        pts = []
+
+        def line(ax, ay, bx, by):
+            k = max(2, int(math.hypot(bx - ax, by - ay) / 2))
+            pts.extend((ax + (bx - ax) * i / k, ay + (by - ay) * i / k) for i in range(k))
+
+        def arc(cx, cy, a0, a1):
+            k = max(2, int(r * math.radians(abs(a1 - a0)) / 2))
+            pts.extend((cx + r * math.cos(math.radians(a0 + (a1 - a0) * i / k)),
+                        cy + r * math.sin(math.radians(a0 + (a1 - a0) * i / k))) for i in range(k))
+        line(PW / 2, y0, x1 - r, y0); arc(x1 - r, y0 + r, -90, 0)
+        line(x1, y0 + r, x1, y1 - r); arc(x1 - r, y1 - r, 0, 90)
+        line(x1 - r, y1, x0 + r, y1); arc(x0 + r, y1 - r, 90, 180)
+        line(x0, y1 - r, x0, y0 + r); arc(x0 + r, y0 + r, 180, 270)
+        line(x0 + r, y0, PW / 2, y0)
+        pts.append((PW / 2, y0))
+        cum = [0.0]
+        for (ax, ay), (bx, by) in zip(pts, pts[1:]):
+            cum.append(cum[-1] + math.hypot(bx - ax, by - ay))
+        _PATH = (pts, cum)
+    pts, cum = _PATH
+    target = cum[-1] * max(0.0, min(1.0, p))
+    out = [pts[0]]
+    for k in range(1, len(pts)):
+        if cum[k] <= target:
+            out.append(pts[k])
         else:
-            (ax, ay), (bx, by) = s
-            for k in range(12):
-                pts.append((ax + (bx - ax) * k / 11, ay + (by - ay) * k / 11))
-    n = max(2, round(len(pts) * p))
-    return pts[:n]
+            f = (target - cum[k - 1]) / max(1e-9, cum[k] - cum[k - 1])
+            out.append((pts[k - 1][0] + (pts[k][0] - pts[k - 1][0]) * f, pts[k - 1][1] + (pts[k][1] - pts[k - 1][1]) * f))
+            break
+    return out
 
 
 def heavy_vignette():
@@ -123,11 +146,11 @@ def make(logo, stills, accent):
     lg_glow_mask = m.filter(ImageFilter.GaussianBlur(20))
     S = len(bgs)
 
-    L0, L1 = 0.04, 0.86  # the frame's single lap; the shows play out across it
+    L0, L1 = 5 / 120, 105 / 120  # 120 frames x 50 ms: lap from 0.25 s to 5.25 s (exactly 5 s), then breath + return
 
     def frame(i, n):
         t = i / n
-        c = ease(t / 0.08) if t < 0.93 else 1 - ease((t - 0.93) / 0.07)  # colour on, off again at the loop's end
+        c = ease(t / L0) if t < 0.94 else 1 - ease((t - 0.94) / 0.06)  # colour on, off again at the loop's end
         q = min(1.0, max(0.0, (t - L0) / (L1 - L0)))  # progress of the lap = progress through the shows
         seg = q * S
         j = min(S - 1, int(seg))
@@ -189,23 +212,25 @@ def main():
                 mbs = load("https://image.tmdb.org/t/p/original" + mbs[0]["file_path"]).convert("RGBA")
                 logo = stack(white(fuji, keep=True), white(mbs))
             accent = ACCENT.get(t) or accent_of(load(f["focusGifUrl"].split("?")[0]))
-            stills = shows(NETS[t], 3)
+            picked = shows(NETS[t], 3)
+            stills = [x[1] for x in picked]
+            print('  shows:', [x[0] for x in picked])
             frame = make(logo, stills, accent)
             slug = "".join(ch if ch.isalnum() else "-" for ch in t.lower()).strip("-")
             while "--" in slug:
                 slug = slug.replace("--", "-")
             dd = os.path.join(out, slug)
             os.makedirs(dd, exist_ok=True)
-            n = 150  # 60 ms frames: a 9 s loop, the lap takes about 7 s
+            n = 120  # 6 s loop: 0.25 s colour in, 5 s lap with the shows, 0.75 s breath and back to the cover
             frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
-            frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[60] * n,
+            frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
                            loop=0, quality=80, method=5, minimize_size=True, allow_mixed=True)
             frame(0, n).resize((1000, 1500), Image.LANCZOS).save(os.path.join(dd, "cover.jpg"), quality=90)
             if t == "Fuji TV / MBS":  # hero + logo
                 art.graded(stills[0], 0.95, 1.03, (1920, 1080)).save(os.path.join(dd, "backdrop.jpg"), quality=86)
                 logo.save(os.path.join(dd, "logo.png"))
             strip = Image.new("RGB", (OW * 6, OH))
-            for j, idx in enumerate([0, 30, 60, 100, 132, 149]):
+            for j, idx in enumerate([0, 25, 45, 70, 108, 119]):
                 strip.paste(frames[idx], (j * OW, 0))
             strip.resize((OW * 3, OH // 2)).save(os.path.join(dd, "frames.jpg"), quality=80)
             print("built", t, dd)
