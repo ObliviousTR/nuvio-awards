@@ -23,6 +23,7 @@ n = 0
 for row in data:
     fs = row.get("folders", [])
     gif_on = sum(1 for f in fs if f.get("focusGifEnabled")) * 2 > len(fs)
+    hide = sum(1 for f in fs if f.get("hideTitle")) * 2 > len(fs)  # our covers carry their name like the row's
     for f in fs:
         rel = f"{slug(row['title'])}/{slug(f['title'])}"
         d = os.path.join(ART, rel)
@@ -37,6 +38,9 @@ for row in data:
                 break
         if has("backdrop.jpg"):
             f["heroBackdropUrl"] = url(rel + "/backdrop.jpg")
+        if has("logo.png"):
+            f["titleLogoUrl"] = url(rel + "/logo.png")
+        f["hideTitle"] = hide
         n += 1
 # Discover: weekly art from the discover-art branch (scripts/discover_art.py); fixed URLs, the files change in place
 DISC = "https://raw.githubusercontent.com/ObliviousTR/nuvio-awards/discover-art/"
