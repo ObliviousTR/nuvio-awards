@@ -264,7 +264,12 @@ def build(name, cover_url, hover_url, out, idx=0):
             tt = t.split(cut)[0].strip() if cut else t
             if width(f"{tt} · {y}", font("SemiBold", round(26 * W / 1000)), round(9 * W / 1000)) <= W * 0.8:
                 return f"{tt} · {y}"
-        return f"{tt[:22].strip()} · {y}"
+        words = tt.split()
+        while len(words) > 1:                               # drop words from the end until it fits
+            words = words[:-1]
+            if width(f"{' '.join(words)} · {y}", font("SemiBold", round(26 * W / 1000)), round(9 * W / 1000)) <= W * 0.8:
+                break
+        return f"{' '.join(words)} · {y}"
     subs = ["FEATURED FILMOGRAPHY"] + [label(t, y) for t, y, _, _ in roles]
     blocks = []
     for s_ in subs:
