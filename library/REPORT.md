@@ -1,6 +1,6 @@
 # Library report — 2026-10-22
 
-644 catalogs
+648 catalogs
 
 ## Batman & Gotham (universe)
 - **Burton & Schumacher Films** (4): Batman, Batman Returns, Batman Forever, Batman & Robin
@@ -172,7 +172,7 @@
 - **Drama Collections**: 9 rails — Creed (3), Magic Mike (3), Step Up (5), Fifty Shades (3), Rocky (6), Goal! (3), The Before (3), After (5), The Best Exotic Marigold Hotel (2)
 - **Family & Animation Collections**: 37 rails — Alvin and the Chipmunks (4), Cars (3), Despicable Me (4), Diary of a Wimpy Kid (4), Finding Nemo (2), Home Alone (4), Hotel Transylvania (4), How to Train Your Dragon (3), Ice Age (6), Kung Fu Panda (4), Madagascar (3), Monsters, Inc. (2), Paddington (3), Scooby-Doo (2), Shrek (4), Sing (2), The Addams Family (Animated) (2), The Boss Baby (2), The Incredibles (2), The Lego Movie (2), The Secret Life of Pets (2), Toy Story (5), Trolls Holiday (2), Wreck-It Ralph (2), Cloudy with a Chance of Meatballs (2), Inside Out (2), Minions (3), Spy Kids (4), The Lion King (3), Aladdin (3), Beauty and the Beast (3), The Little Mermaid (3), Mulan (2), The Land Before Time (14), Teenage Mutant Ninja Turtles (3), Open Season (4), The Mighty Ducks (3)
 - **Fantasy Collections**: 14 rails — Ghostbusters (4), Jumanji (3), National Treasure (2), Night at the Museum (3), Percy Jackson (2), Pirates of the Caribbean (5), The Chronicles of Narnia (3), The Mummy (3), The Twilight (5), Clash of the Titans (2), Highlander (5), Mortal Kombat (2), Hellboy (2), Conan the Barbarian (2)
-- **Horror Collections**: 35 rails — A Nightmare on Elm Street (7), A Quiet Place (2), Blade (3), Child's Play (7), Evil Dead (3), Final Destination (6), Friday the 13th (11), Halloween (11), Hellraiser (10), It (2), Jaws (4), Paranormal Activity (7), Poltergeist (3), Resident Evil (6), Saw (10), Scream (7), The Exorcist (6), The Grudge (3), The Omen (5), The Purge (5), The Ring (3), Tremors (7), Underworld (5), V/H/S (9), 28 Days/Weeks/Years Later (4), Jeepers Creepers (3), Texas Chainsaw Massacre (10), Zombieland (2), Psycho (4), The Fly (3), Candyman (4), Sinister (2), Silent Hill (3), Phantasm (5), The Amityville (10)
+- **Horror Collections**: 35 rails — A Nightmare on Elm Street (7), A Quiet Place (2), Blade (3), Child's Play (7), Evil Dead (3), Final Destination (6), Friday the 13th (11), Halloween (11), Hellraiser (10), It (2), Jaws (4), Paranormal Activity (7), Poltergeist (3), Resident Evil (6), Saw (10), Scream (7), The Exorcist (6), The Grudge (3), The Omen (5), The Purge (5), The Ring (3), Tremors (7), Underworld (5), V/H/S (9), 28 Days/Weeks/Years Later (4), Jeepers Creepers (3), Texas Chainsaw Massacre (8), Zombieland (2), Psycho (4), The Fly (3), Candyman (4), Sinister (2), Silent Hill (3), Phantasm (5), The Amityville (10)
 - **Mystery Collections**: 7 rails — Knives Out (3), Robert Langdon (3), Sherlock Holmes (2), Enola Holmes (3), Now You See Me (3), Hercule Poirot (Kenneth Branagh) (3), Murder Mystery (2)
 - **Sci-Fi Collections**: 13 rails — Back to the Future (3), Blade Runner (2), Divergent (3), Pacific Rim (2), RoboCop (3), Starship Troopers (3), The Hunger Games (4), TRON (3), Avatar (3), Cloverfield (3), The Chronicles of Riddick (3), Men in Black (3), The Maze Runner (3)
 - **Thriller Collections**: 7 rails — Hannibal Lecter (3), Escape Room (2), Don't Breathe (2), Sicario (2), Eastrail 177 (3), The Jack Ryan (3), Basic Instinct (2)
@@ -241,6 +241,7 @@
 - Robert Downey Jr.: Essential Films 64; Top Rated 43; Latest 64; Series 3
 - Timothée Chalamet: Essential Films 23; Top Rated 21; Latest 23; Series 2
 - Zendaya: Essential Films 14; Top Rated 13; Latest 14; Series 4
+- Tom Holland: Essential Films 23; Top Rated 20; Latest 23; Series 2
 - Pedro Pascal: Essential Films 23; Top Rated 20; Latest 23; Series 8
 - Austin Butler: Essential Films 13; Top Rated 12; Latest 13; Series 7
 - Alfred Hitchcock: Best Of 44; Recent 61; Series 6
@@ -287,7 +288,5 @@
 ## Candidates (one signal — approve or reject)
 - Spider-Verse → Wild Arms: Twilight Venom (1999) `tv:39026` [title]
 - The Matrix → Matrix (1993) `tv:11393` [title]
-- Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
-- Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
 
 ## Log

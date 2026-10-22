@@ -2726,6 +2726,26 @@
   },
   {
    "type": "movie",
+   "id": "lib-a-tom-holland-essential-films",
+   "name": "Tom Holland · Essential Films"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-holland-top-rated",
+   "name": "Tom Holland · Top Rated"
+  },
+  {
+   "type": "movie",
+   "id": "lib-a-tom-holland-latest",
+   "name": "Tom Holland · Latest"
+  },
+  {
+   "type": "series",
+   "id": "lib-a-tom-holland-series",
+   "name": "Tom Holland · Series"
+  },
+  {
+   "type": "movie",
    "id": "lib-a-pedro-pascal-essential-films",
    "name": "Pedro Pascal · Essential Films"
   },
