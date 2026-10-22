@@ -122,14 +122,16 @@ def load_img(p):
     raise RuntimeError("could not fetch " + p)
 
 
-PICK = {}   # film id -> index into its fanart backgrounds when the most liked one isn't the best picture
+# film -> which fanart background to use when the most liked one isn't the film's best-known picture
+PICK = {"Joker": 1, "Get Out": 1, "Gone Girl": 1, "Psycho": 2, "Full Metal Jacket": 2, "Django Unchained": 2,
+        "Unforgiven": 1, "Home Alone": 2}
 
 
-def best_art(tid):
+def best_art(tid, name=None):
     """The film's picture: its most liked fanart.tv background (textless key art), else TMDB's best textless one."""
     fa = fanart_backgrounds(tid)
     if fa:
-        return fa[min(PICK.get(tid, 0), len(fa) - 1)]
+        return fa[min(PICK.get(name, 0), len(fa) - 1)]
     return textless_backdrop("movie", tid)
 
 
@@ -147,7 +149,7 @@ def iconic(title, n=3, avoid=(), month=None):
         tid, real = find_movie(name, year)
         if not tid or tid in avoid:
             continue
-        path = best_art(tid)
+        path = best_art(tid, name)
         if path:
             out.append((tid, real, path))
         if len(out) == n:
