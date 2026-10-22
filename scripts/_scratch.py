@@ -3,7 +3,8 @@ import os, sys, subprocess
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, "art_tools"); sys.path.insert(0, "scripts")
 os.makedirs("refs/studio", exist_ok=True)
-names = ["Searchlight Pictures"]
+names = ["A24", "Blumhouse Productions", "NEON", "Studio Ghibli", "Disney & Pixar Animation", "Searchlight Pictures",
+         "Warner Bros. Pictures", "Universal Pictures", "Paramount Pictures", "20th Century Studios"]
 
 
 def run(n):

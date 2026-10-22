@@ -454,6 +454,16 @@ class Blumhouse:
         place(lay, self.l, W / 2, H * 0.58, 0.08 + 0.92 * L)
         return lay
 
+    def corner_logo(self):
+        return self.l, W / 2, H * 0.58
+
+    def extras(self):
+        lay = self.logo(1.0, final=True)
+        cut = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        place(cut, self.l, W / 2, H * 0.58)
+        lay.putalpha(ImageChops.subtract(lay.getchannel("A"), cut.getchannel("A")))
+        return lay
+
 
 # ---------------------------------------------------------------- NEON: the tubes buzz on letter by letter
 class Neon:
@@ -594,6 +604,27 @@ class Monument:
         if not final and 0.65 < t < 0.95:
             place(lay, sweep(L, (t - 0.65) / 0.3, strength=0.6), W / 2, cy)
         return lay
+
+
+def _monument_corner(self):
+    cy = H * 0.52 if isinstance(self, Searchlight) else H * 0.54
+    return self.l, W / 2, cy
+
+
+def _monument_extras(self):
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    if isinstance(self, Searchlight):
+        for side in (-1, 1):
+            beam(lay, W / 2 + side * W * 0.3, H + 10, side * 0.35, H * 1.5, 80, (255, 250, 230), 0.4)
+    else:
+        for j in range(self.beams_n):
+            ph = (j - (self.beams_n - 1) / 2) / max(1, self.beams_n - 1)
+            beam(lay, W / 2 + ph * W * 0.48, H + 10, ph * 0.7, H * 1.4, 70, (255, 248, 225), 0.42)
+    return lay
+
+
+Monument.corner_logo = _monument_corner
+Monument.extras = _monument_extras
 
 
 class TwentiethCentury(Monument):
@@ -756,8 +787,15 @@ def build(title, out):
     films = K.trio(st.pool, 3)
     scenes = [film_scene(K.g.load_img(p)) for _, _, p in films]
     final = st.logo(1.0, final=True)
-    bb = final.getchannel("A").getbbox()
-    lg = final.crop(bb)
+    if hasattr(st, "corner_logo"):                     # idents with scenery (beams, a lit room): only the mark travels
+        lg, cx0, cy0 = st.corner_logo()
+        extras = st.extras()
+    else:
+        bb = final.getchannel("A").getbbox()
+        lg = final.crop(bb)
+        cx0, cy0 = bb[0] + lg.width / 2, bb[1] + lg.height / 2
+        extras = None
+    sc_end = min(0.30 * W / lg.width, 0.20 * H / lg.height, 0.6)
     cover = st.stage.convert("RGBA")
     cover.alpha_composite(final)
     cover = cover.convert("RGB")
@@ -790,9 +828,10 @@ def build(title, out):
             if loc > 0.82 and seg < S - 1:
                 bg = Image.blend(bg, g.art.zoomed(scenes[seg + 1], 0.02), (loc - 0.82) / 0.18)
             cv = Image.blend(st.stage, bg, m).convert("RGBA")
-            sc = 1 - 0.66 * m
+            if extras is not None:
+                cv.alpha_composite(alpha_mul(extras, 1 - m))
+            sc = 1 - (1 - sc_end) * m
             L = lg.resize((max(1, round(lg.width * sc)), max(1, round(lg.height * sc))), Image.LANCZOS)
-            cx0, cy0 = bb[0] + lg.width / 2, bb[1] + lg.height / 2
             tx, ty = 40 + L.width / 2, 34 + L.height / 2
             x, y = cx0 + (tx - cx0) * m, cy0 + (ty - cy0) * m
             cv.alpha_composite(L, (round(x - L.width / 2), round(y - L.height / 2)))
