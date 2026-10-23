@@ -1358,13 +1358,13 @@ def film_label(name, year):
 
 
 def render_loop(uid, out_dir, mark, sc, paths, names):
-    """Seamless loop that starts and ends on the cover: the settled mark fades away, the mark builds again over the
+    """Seamless loop that starts and ends on the cover: the cover cross-fades into the build, the mark builds again over the
     franchise's films as before (each film's name and year lower left), and it settles exactly into the cover."""
     HOLD_SLOW = 70 / 40
     B, HD0 = round(mark.build * SMOOTH), round(mark.hold * SMOOTH)
     HD = round(HD0 * HOLD_SLOW)
     HE = round(HD * 0.75)            # the hold stops where the cover is taken
-    PRE, POST = 8, 6
+    PRE, POST = 10, 6
     n = B + HE
     S = len(sc)
     labels = [film_label(a, b) for a, b in names] if names else None
@@ -1375,11 +1375,6 @@ def render_loop(uid, out_dir, mark, sc, paths, names):
     cov.alpha_composite(settled)
     cover = cov.convert("RGB")
     frames = []
-    for k in range(PRE):             # the cover's mark fades away
-        f = cov.copy() if k == 0 else vignette(art.zoomed(sc[0], 0.02)).convert("RGBA")
-        if k:
-            f.alpha_composite(alpha(settled, 1 - ease(k / (PRE - 1))))
-        frames.append(f.convert("RGB"))
     for i in range(n):
         t = min(1, i / B)
         h = (i - B) / HD if i >= B else None
@@ -1399,7 +1394,9 @@ def render_loop(uid, out_dir, mark, sc, paths, names):
         mark.i, mark.iv = int(iv), iv
         bg.alpha_composite(mark(t, h))
         frames.append(bg.convert("RGB"))
-    frames += [cover] * POST
+    # from the cover into the first frame of the build (some marks open on black: a cross-fade, not a cut)
+    pre = [Image.blend(cover, frames[0], ease(k / (PRE - 1))) for k in range(PRE)]
+    frames = pre + frames + [cover] * POST
     d = os.path.join(out_dir, uid)
     os.makedirs(d, exist_ok=True)
     cover.save(os.path.join(d, "cover.jpg"), quality=88)
