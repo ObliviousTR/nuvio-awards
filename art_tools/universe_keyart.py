@@ -92,6 +92,11 @@ PICK = {
 
 
 def paths(uid):
+    return [p for p, _, _ in entries(uid)]
+
+
+def entries(uid):
+    """(picture, film title, year) for each key-art film found."""
     import genre_art as g
     out = []
     for entry in KEYART[uid]:   # (title, year) or (title, year, which fanart background)
@@ -103,5 +108,5 @@ def paths(uid):
         i = entry[2] if len(entry) > 2 else PICK.get((uid, name), 0)
         p = fa[min(i, len(fa) - 1)] if fa else g.textless_backdrop("movie", tid)
         if p:
-            out.append(p)
+            out.append((p, name, year))
     return out

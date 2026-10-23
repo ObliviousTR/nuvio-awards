@@ -1331,9 +1331,93 @@ SPLIT = os.environ.get("UM_SPLIT", "0") == "1"   # part the pictures to the side
 SMOOTH = 1.5  # 1.5x the frames at 2/3 the frame time: same pacing, smoother motion (animated WebP keeps it light)
 
 
+LOOP = os.environ.get("UM_LOOP", "1") == "1"
+
+
+def film_label(name, year):
+    """The film on screen, lower left: bold name, the year tracked under it (as the newer rows)."""
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    t = name.upper()
+    f = art.font("ExtraBold", 34)
+    while d.textlength(t, font=f) + 2 * len(t) > W * 0.6 and f.size > 20:
+        f = art.font("ExtraBold", f.size - 2)
+    x, y = 54, H - 96
+    for ch in t:
+        d.text((x, y), ch, font=f, fill=(255, 255, 255, 255))
+        x += d.textlength(ch, font=f) + 2
+    fy = art.font("SemiBold", 19)
+    x = 56
+    for ch in str(year):
+        d.text((x, y + f.size + 10), ch, font=fy, fill=(205, 205, 205, 255))
+        x += d.textlength(ch, font=fy) + 7
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sh.putalpha(lay.getchannel("A").filter(ImageFilter.GaussianBlur(8)).point(lambda v: round(v * 0.8)))
+    sh.alpha_composite(lay)
+    return sh
+
+
+def render_loop(uid, out_dir, mark, sc, paths, names):
+    """Seamless loop that starts and ends on the cover: the settled mark fades away, the mark builds again over the
+    franchise's films as before (each film's name and year lower left), and it settles exactly into the cover."""
+    HOLD_SLOW = 70 / 40
+    B, HD0 = round(mark.build * SMOOTH), round(mark.hold * SMOOTH)
+    HD = round(HD0 * HOLD_SLOW)
+    HE = round(HD * 0.75)            # the hold stops where the cover is taken
+    PRE, POST = 8, 6
+    n = B + HE
+    S = len(sc)
+    labels = [film_label(a, b) for a, b in names] if names else None
+    cov = vignette(art.zoomed(sc[0], 0.02)).convert("RGBA")
+    mark.i = B + round(0.75 * HD0)
+    mark.iv = mark.i
+    settled = mark(1.0, 0.75)
+    cov.alpha_composite(settled)
+    cover = cov.convert("RGB")
+    frames = []
+    for k in range(PRE):             # the cover's mark fades away
+        f = cov.copy() if k == 0 else vignette(art.zoomed(sc[0], 0.02)).convert("RGBA")
+        if k:
+            f.alpha_composite(alpha(settled, 1 - ease(k / (PRE - 1))))
+        frames.append(f.convert("RGB"))
+    for i in range(n):
+        t = min(1, i / B)
+        h = (i - B) / HD if i >= B else None
+        iv = i if i < B else B + (i - B) / HOLD_SLOW
+        g = i / n
+        bg = background(sc, g).convert("RGBA")
+        if labels:
+            seg = min(S - 1, int(g * S))
+            loc = g * S - seg
+            la = ease((loc - 0.08) / 0.12) * (1 - ease((loc - 0.6) / 0.1))
+            if seg == 0 and i < 6:
+                la = 0
+            if seg == S - 1:
+                la = ease((loc - 0.08) / 0.12) * (1 - ease((loc - 0.55) / 0.1))
+            if la > 0:
+                bg.alpha_composite(alpha(labels[seg], la))
+        mark.i, mark.iv = int(iv), iv
+        bg.alpha_composite(mark(t, h))
+        frames.append(bg.convert("RGB"))
+    frames += [cover] * POST
+    d = os.path.join(out_dir, uid)
+    os.makedirs(d, exist_ok=True)
+    cover.save(os.path.join(d, "cover.jpg"), quality=88)
+    art.graded(fetch_any(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=86)
+    small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
+    small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=[40] * len(small), loop=0,
+                  quality=80, method=4, kmin=0, kmax=1)
+    strip = Image.new("RGB", (GW * 4, GH * 2))
+    for j, idx in enumerate([round(k * (len(small) - 1) / 7) for k in range(8)]):
+        strip.paste(small[idx], ((j % 4) * GW, (j // 4) * GH))
+    strip.save(os.path.join(d, "frames.jpg"), quality=80)
+    return d, os.path.getsize(os.path.join(d, "hover.webp")) // 1024
+
+
 def render(uid, out_dir):
     """Hover animation as animated WebP (full colour, no palette banding; Nuvio's Android apps decode it with the same
     animated-image decoder as GIF). Scenes push in and crossfade across the whole loop as before."""
+    names = []
     if uid in MARKS:
         cls, paths = MARKS[uid]
     else:
@@ -1343,13 +1427,16 @@ def render(uid, out_dir):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "art_tools"))
         import universe_keyart
         if uid in universe_keyart.KEYART:
-            ka = universe_keyart.paths(uid)
+            ka = universe_keyart.entries(uid)
             if len(ka) >= 3:
-                paths = ka
+                paths = [x[0] for x in ka]
+                names = [(x[1], x[2]) for x in ka]
     except Exception as e:
         print("key art unavailable for", uid, e)
     mark = cls()
     sc = scenes(paths)
+    if LOOP:
+        return render_loop(uid, out_dir, mark, sc, paths, names if len(names) == len(sc) else None)
     # every frame 40 ms: the hold used to run at 70 ms a frame, so scene crossfades there stepped visibly
     HOLD_SLOW = 70 / 40
     B, HD0 = round(mark.build * SMOOTH), round(mark.hold * SMOOTH)
