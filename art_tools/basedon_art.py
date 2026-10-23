@@ -25,32 +25,32 @@ TEST = bool(os.environ.get("BASEDON_TEST"))
 # folder -> (big word, look, cover item, pool); items: (kind, title, year, source line[, extra])
 #   extra: books -> the book's title when it differs; true stories -> the year stamped on the print
 CARDS = {
-    "Comics & Graphic Novels": ("COMICS", "comic", ("movie", "Logan", 2017), [
+    "Comics & Graphic Novels": ("COMICS", "comic", ("movie", "Logan", 2017, "MARVEL COMICS"), [
         ("movie", "The Dark Knight", 2008, "DC COMICS"), ("movie", "Spider-Man: Into the Spider-Verse", 2018, "MARVEL COMICS"),
         ("movie", "Watchmen", 2009, "ALAN MOORE & DAVE GIBBONS"), ("movie", "Sin City", 2005, "FRANK MILLER"),
         ("movie", "V for Vendetta", 2005, "ALAN MOORE & DAVID LLOYD"), ("movie", "Joker", 2019, "DC COMICS"),
         ("tv", "The Boys", 2019, "GARTH ENNIS & DARICK ROBERTSON"), ("movie", "Scott Pilgrim vs. the World", 2010, "BRYAN LEE O'MALLEY"),
         ("movie", "Oldboy", 2003, "THE MANGA BY GARON TSUCHIYA"), ("movie", "Logan", 2017, "MARVEL COMICS")]),
-    "Video Games": ("VIDEO GAMES", "game", ("tv", "The Last of Us", 2023), [
+    "Video Games": ("VIDEO GAMES", "game", ("tv", "The Last of Us", 2023, "NAUGHTY DOG'S THE LAST OF US"), [
         ("tv", "Arcane", 2021, "LEAGUE OF LEGENDS"), ("tv", "Fallout", 2024, "THE FALLOUT GAMES"),
         ("movie", "The Super Mario Bros. Movie", 2023, "NINTENDO'S SUPER MARIO"), ("movie", "Sonic the Hedgehog", 2020, "SEGA'S SONIC"),
         ("movie", "Detective Pikachu", 2019, "POKÉMON"), ("tv", "Castlevania", 2017, "KONAMI'S CASTLEVANIA"),
         ("movie", "Uncharted", 2022, "NAUGHTY DOG'S UNCHARTED"), ("tv", "The Last of Us", 2023, "NAUGHTY DOG'S THE LAST OF US"),
         ("movie", "Silent Hill", 2006, "KONAMI'S SILENT HILL")]),
-    "Books & Literature": ("BOOKS", "book", ("movie", "The Shawshank Redemption", 1994), [
+    "Books & Literature": ("BOOKS", "book", ("movie", "The Shawshank Redemption", 1994, "STEPHEN KING", "Rita Hayworth and Shawshank Redemption"), [
         ("movie", "The Godfather", 1972, "MARIO PUZO"), ("movie", "Dune", 2021, "FRANK HERBERT"),
         ("movie", "The Lord of the Rings: The Fellowship of the Ring", 2001, "J.R.R. TOLKIEN", "The Fellowship of the Ring"),
         ("movie", "Gone Girl", 2014, "GILLIAN FLYNN"), ("movie", "The Silence of the Lambs", 1991, "THOMAS HARRIS"),
         ("movie", "Fight Club", 1999, "CHUCK PALAHNIUK"), ("movie", "No Country for Old Men", 2007, "CORMAC McCARTHY"),
         ("movie", "Pride & Prejudice", 2005, "JANE AUSTEN", "Pride and Prejudice"),
         ("movie", "The Shawshank Redemption", 1994, "STEPHEN KING", "Rita Hayworth and Shawshank Redemption")]),
-    "True Stories & Biographies": ("TRUE STORIES", "true", ("movie", "Oppenheimer", 2023), [
+    "True Stories & Biographies": ("TRUE STORIES", "true", ("movie", "Oppenheimer", 2023, "J. ROBERT OPPENHEIMER", "1945"), [
         ("movie", "Schindler's List", 1993, "OSKAR SCHINDLER"), ("movie", "Apollo 13", 1995, "THE APOLLO 13 MISSION", "1970"),
         ("movie", "The Social Network", 2010, "THE FOUNDING OF FACEBOOK", "2004"), ("movie", "Catch Me If You Can", 2002, "FRANK ABAGNALE JR."),
         ("tv", "Chernobyl", 2019, "THE CHERNOBYL DISASTER", "1986"), ("movie", "Ford v Ferrari", 2019, "LE MANS", "1966"),
         ("movie", "Rush", 2013, "HUNT & LAUDA", "1976"), ("movie", "Bohemian Rhapsody", 2018, "FREDDIE MERCURY & QUEEN", "1985"),
         ("movie", "Oppenheimer", 2023, "J. ROBERT OPPENHEIMER", "1945")]),
-    "Mythology & Folklore": ("MYTHOLOGY", "myth", ("movie", "300", 2007), [
+    "Mythology & Folklore": ("MYTHOLOGY", "myth", ("movie", "300", 2007, "THE LEGEND OF THERMOPYLAE"), [
         ("movie", "Troy", 2004, "HOMER'S ILIAD"), ("movie", "O Brother, Where Art Thou?", 2000, "HOMER'S ODYSSEY"),
         ("movie", "The Northman", 2022, "THE LEGEND OF AMLETH"), ("movie", "The Green Knight", 2021, "ARTHURIAN LEGEND"),
         ("movie", "Thor", 2011, "NORSE MYTHOLOGY"), ("movie", "Moana", 2016, "POLYNESIAN MYTHOLOGY"),
@@ -483,7 +483,8 @@ def build(folder, out):
     make, turn = LOOKS[look]
     cp = art_of(cover_item)
     cover_real = cover_fit(load(cp))
-    films = trio(pool)
+    # the cover's own film opens the reel (it goes through the same source-to-screen turn), two from the pool follow
+    films = [(cover_item, cp)] + trio(pool, 2, avoid=cover_item[1])
     reals = [cover_fit(load(p)) for _, p in films]
     srcs = []
     for (it, _), r in zip(films, reals):
@@ -496,37 +497,41 @@ def build(folder, out):
     fl, nl = fall(), name_layer(word)
     subs = [sub_layer(f"{it[1].upper()} · {it[3]}") for it, _ in films]
     # cover: the card's picture, toned down like Kaptain's, with the name
-    cv = ImageEnhance.Brightness(ImageEnhance.Color(cover_real).enhance(0.35)).enhance(0.88).convert("RGBA")
+    cover_bg = ImageEnhance.Brightness(ImageEnhance.Color(cover_real).enhance(0.35)).enhance(0.88)
+    cv = cover_bg.convert("RGBA")
     cv.alpha_composite(fl)
     cv.alpha_composite(nl)
     cover = cv.convert("RGB")
-    START, SEG = 6, 48
+    START, SEG = 10, 52
     N_ = START + SEG * len(films)
     frames = []
     for i in range(N_):
-        if i < START:
-            frames.append(cover.resize((OW, OH), Image.LANCZOS))
+        if i < START:  # the cover holds a moment, already drifting in
+            c = zoomed(cover_bg, 0.012 * i / START).convert("RGBA")
+            c.alpha_composite(fl)
+            c.alpha_composite(nl)
+            frames.append(c.convert("RGB").resize((OW, OH), Image.LANCZOS))
             continue
         k, t = divmod(i - START, SEG)
         z = 0.012 + 0.05 * t / SEG
         src, real = zoomed(srcs[k], z), zoomed(reals[k], z)
         stamp = films[k][0][4] if look == "true" and len(films[k][0]) > 4 else None
-        if t < 22:
+        if t < 24:
             pic = src
-        elif t < 38:
-            u = (t - 22) / 16
+        elif t < 40:
+            u = (t - 24) / 16
             pic = turn(src, real, u, stamp) if look == "true" else turn(src, real, u)
         else:
             pic = real
-        if t < 8:  # in from the cover / from the previous film
-            prev = cover if k == 0 else zoomed(reals[k - 1], 0.062)
-            pic = Image.blend(prev, pic, ease(t / 8))
-        if k == len(films) - 1 and t >= 42:
-            pic = Image.blend(pic, cover, ease((t - 42) / 6))
+        if t < 10:  # in from the cover / from the previous film
+            prev = zoomed(cover_bg, 0.012) if k == 0 else zoomed(reals[k - 1], 0.062)
+            pic = Image.blend(prev, pic, ease(t / 10))
+        if k == len(films) - 1 and t >= SEG - 8:
+            pic = Image.blend(pic, cover_bg, ease((t - (SEG - 8)) / 8))
         c = pic.convert("RGBA")
         c.alpha_composite(fl)
         c.alpha_composite(nl)
-        sa = ease(t / 6) if t < 8 else (1 - ease((t - 42) / 6) if t >= 42 else 1.0)
+        sa = ease((t - 2) / 6) if t < 8 else (1 - ease((t - (SEG - 6)) / 6) if t >= SEG - 6 else 1.0)
         c.alpha_composite(amul(subs[k], sa))
         frames.append(c.convert("RGB").resize((OW, OH), Image.LANCZOS))
     d = os.path.join(out, slug_of(folder))
@@ -535,7 +540,7 @@ def build(folder, out):
                    loop=0, quality=80, method=4, kmin=0, kmax=1)
     cover.save(os.path.join(d, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (OW * 4, OH * 2))
-    for j, idx in enumerate([0, 14, 30, 40, 52, 78, 100, 130]):
+    for j, idx in enumerate([0, 22, 40, 56, 80, 110, 135, 160]):
         strip.paste(frames[min(idx, len(frames) - 1)], ((j % 4) * OW, (j // 4) * OH))
     strip.save(os.path.join(d, "frames.jpg"), quality=80)
     return [it[1] for it, _ in films]
