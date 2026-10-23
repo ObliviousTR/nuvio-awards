@@ -16,6 +16,104 @@
  "catalogs": [
   {
    "type": "movie",
+   "id": "disc-comedy-movies",
+   "name": "Discover · Comedy",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Romantic Comedy",
+      "Action Comedy",
+      "Crime Comedy",
+      "Horror Comedy",
+      "Family Comedy",
+      "Dark Comedy",
+      "Satire",
+      "Parody",
+      "Buddy Comedy",
+      "Teen Comedy",
+      "Mockumentary",
+      "Stand-Up",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Romantic Comedy",
+    "Action Comedy",
+    "Crime Comedy",
+    "Horror Comedy",
+    "Family Comedy",
+    "Dark Comedy",
+    "Satire",
+    "Parody",
+    "Buddy Comedy",
+    "Teen Comedy",
+    "Mockumentary",
+    "Stand-Up",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-comedy-series",
+   "name": "Discover · Comedy",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Sitcoms",
+      "Workplace Comedy",
+      "Mockumentary",
+      "Dark Comedy",
+      "Teen Comedy",
+      "Crime Comedy",
+      "Sketch Comedy",
+      "British",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Sitcoms",
+    "Workplace Comedy",
+    "Mockumentary",
+    "Dark Comedy",
+    "Teen Comedy",
+    "Crime Comedy",
+    "Sketch Comedy",
+    "British",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
    "id": "lib-batman-burton-schumacher-films",
    "name": "Batman & Gotham · Burton & Schumacher Films"
   },
