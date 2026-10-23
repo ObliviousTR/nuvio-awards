@@ -1,66 +1,40 @@
-"""Rating-poster test: can the badge posters AIOMetadata uses come with the Turkish poster underneath?"""
-import io, json, os, re, urllib.parse, urllib.request
-from PIL import Image, ImageDraw, ImageFont
-
+"""End-to-end check of the deployed tr-proxy worker (no secrets printed)."""
+import json, os, re, urllib.parse, urllib.request
 AIO = os.environ["AIOMETADATA_URL"].strip()
-BASE = re.sub(r"/manifest\.json.*$", "", AIO)
-OUT = "refs/trposter"
-os.makedirs(OUT, exist_ok=True)
-UA = {"User-Agent": "nuvio-awards/1.0"}
-TESTS = [("series", "tt1848220", "muhtesem-yuzyil"), ("series", "tt11093718", "kurulus-osman"),
-         ("series", "tt1831164", "leyla-ile-mecnun"), ("movie", "tt0476735", "babam-ve-oglum")]
+u = urllib.parse.urlsplit(AIO)
+PATH = u.path.rsplit("/manifest.json", 1)[0]
+DIRECT = f"{u.scheme}://{u.netloc}{PATH}"
+acct, tok = os.environ["CLOUDFLARE_ACCOUNT_ID"].strip(), os.environ["CLOUDFLARE_API_TOKEN"].strip()
+H = {"Authorization": "Bearer " + tok, "User-Agent": "nuvio-awards"}
+sub = json.loads(urllib.request.urlopen(urllib.request.Request(
+    f"https://api.cloudflare.com/client/v4/accounts/{acct}/workers/subdomain", headers=H), timeout=60).read())["result"]["subdomain"]
+HOST = f"https://nuvio-tr.{sub}.workers.dev"
+OUT = "refs/trproxy"; os.makedirs(OUT, exist_ok=True)
+rep = [f"worker host: {HOST}"]
 
 
-def shape(u):
-    """the URL with anything key-like or uuid-like masked, so it can be shown"""
-    if not u:
-        return None
-    p = urllib.parse.urlsplit(u)
-    host = "<aio-host>" if u.startswith(BASE.split("/stremio")[0]) else p.netloc
-    segs = ["<key>" if (len(s) > 20 and not re.match(r"^(series|movie)-\d+(\.jpg)?$", s)) or re.match(r"^t\d-", s) else s
-            for s in p.path.split("/")]
-    q = urllib.parse.parse_qsl(p.query)
-    q = [(k, "<url>" if v.startswith("http") else v) for k, v in q]
-    return f"{p.scheme}://{host}{'/'.join(segs)}" + ("?" + urllib.parse.urlencode(q) if q else "")
+def get(url):
+    try:
+        r = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "nuvio-awards"}), timeout=90)
+        return r.status, json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        return e.code, None
 
 
-def get(u):
-    return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=90)
-
-
-def variants(u):
-    p = urllib.parse.urlsplit(u)
-    q = [(k, v) for k, v in urllib.parse.parse_qsl(p.query) if k != "lang"]
-    out = {"now": u}
-    for name, extra in (("logo_language=tr", [("logo_language", "tr")]),
-                        ("logo_priority=original", [("logo_priority", "original,native,english,neutral,text")])):
-        out[name] = urllib.parse.urlunsplit(p._replace(query=urllib.parse.urlencode(q + extra)))
-    return out
-
-
-F = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-font = ImageFont.truetype(F, 18) if os.path.exists(F) else ImageFont.load_default()
-rep = []
-for st, tt, slug in TESTS:
-    m = json.loads(get(f"{BASE}/meta/{st}/{tt}.json").read()).get("meta") or {}
-    pu = m.get("poster")
-    rep.append(f"{slug}:")
-    tiles = []
-    for name, u in variants(pu).items():
-        try:
-            r = get(u)
-            final = r.geturl()
-            im = Image.open(io.BytesIO(r.read())).convert("RGB")
-            rep.append(f"   {name}: HTTP 200 {im.size}")
-            im.thumbnail((300, 450)); tiles.append((name, im))
-        except Exception as e:
-            rep.append(f"   {name}: failed {type(e).__name__} {getattr(e, 'code', '')}")
-    cv = Image.new("RGB", (40 + 320 * len(tiles), 520), (24, 24, 28)); dr = ImageDraw.Draw(cv)
-    for i, (name, im) in enumerate(tiles):
-        cv.paste(im, (20 + 320 * i, 40)); dr.text((20 + 320 * i, 10), name, font=font, fill=(200, 200, 210))
-    cv.save(f"{OUT}/{slug}.jpg", quality=86)
-txt = "\n".join(rep)
-for s in (BASE, AIO):
-    txt = txt.replace(s, "<aio>")
-open(f"{OUT}/report.txt", "w").write(txt + "\n")
-print(txt)
+for label, p in [("manifest", "/manifest.json"), ("Muhtesem Yuzyil", "/meta/series/tt1848220.json"),
+                 ("Babam ve Oglum", "/meta/movie/tt0476735.json"), ("Kurulus Osman", "/meta/series/tt11093718.json"),
+                 ("Breaking Bad (not Turkish)", "/meta/series/tt0903747.json")]:
+    s1, a = get(HOST + PATH + p)
+    s2, b = get(DIRECT + p)
+    if label == "manifest":
+        rep.append(f"manifest via worker: HTTP {s1}, same id as direct: {(a or {}).get('id') == (b or {}).get('id')}, catalogs {len((a or {}).get('catalogs', []))}/{len((b or {}).get('catalogs', []))}")
+        continue
+    ma, mb = (a or {}).get("meta") or {}, (b or {}).get("meta") or {}
+    rep.append(f"{label}: worker HTTP {s1} name={ma.get('name')!r} (direct {mb.get('name')!r}); "
+               f"logo {'TMDB tr' if 'image.tmdb.org' in (ma.get('logo') or '') else 'unchanged' if ma.get('logo') == mb.get('logo') else 'other'}; "
+               f"poster logo_priority={'yes' if 'logo_priority' in (ma.get('poster') or '') else 'no'}; "
+               f"episodes {len(ma.get('videos') or [])}/{len(mb.get('videos') or [])}, same ids: {[v.get('id') for v in ma.get('videos') or []] == [v.get('id') for v in mb.get('videos') or []]}")
+s, _ = get(HOST + "/stremio/someone-else/manifest.json")
+rep.append(f"other paths refused: HTTP {s}")
+txt = "\n".join(rep).replace(PATH, "<path>").replace(u.netloc, "<aio-host>")
+open(f"{OUT}/report.txt", "w").write(txt + "\n"); print(txt)
