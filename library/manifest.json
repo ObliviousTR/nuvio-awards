@@ -3256,6 +3256,3339 @@
   },
   {
    "type": "movie",
+   "id": "gen-streaming-services-netflix-action-adventure-movies",
+   "name": "Netflix · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-action-adventure-series",
+   "name": "Netflix · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-animation-movies",
+   "name": "Netflix · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-animation-series",
+   "name": "Netflix · Animation Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-anime-movies",
+   "name": "Netflix · Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-anime-series",
+   "name": "Netflix · Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-comedy-movies",
+   "name": "Netflix · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-comedy-series",
+   "name": "Netflix · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-romantic-comedy-movies",
+   "name": "Netflix · Romantic Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-romantic-comedy-series",
+   "name": "Netflix · Romantic Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-crime-movies",
+   "name": "Netflix · Crime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-crime-series",
+   "name": "Netflix · Crime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-drama-movies",
+   "name": "Netflix · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-drama-series",
+   "name": "Netflix · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-family-movies",
+   "name": "Netflix · Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-family-series",
+   "name": "Netflix · Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-sci-fi-fantasy-movies",
+   "name": "Netflix · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-sci-fi-fantasy-series",
+   "name": "Netflix · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-history-war-movies",
+   "name": "Netflix · History & War Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-history-war-series",
+   "name": "Netflix · History & War Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-horror-movies",
+   "name": "Netflix · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-mystery-thriller-movies",
+   "name": "Netflix · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-mystery-thriller-series",
+   "name": "Netflix · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-romance-movies",
+   "name": "Netflix · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-documentary-movies",
+   "name": "Netflix · Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-docuseries",
+   "name": "Netflix · Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-nature-documentary-movies",
+   "name": "Netflix · Nature Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-nature-docuseries",
+   "name": "Netflix · Nature Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-reality-series",
+   "name": "Netflix · Reality Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-netflix-western-movies",
+   "name": "Netflix · Western Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-western-series",
+   "name": "Netflix · Western Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-action-adventure-movies",
+   "name": "HBO Max · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-action-adventure-series",
+   "name": "HBO Max · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-animation-movies",
+   "name": "HBO Max · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-animation-series",
+   "name": "HBO Max · Animation Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-anime-movies",
+   "name": "HBO Max · Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-anime-series",
+   "name": "HBO Max · Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-comedy-movies",
+   "name": "HBO Max · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-comedy-series",
+   "name": "HBO Max · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-romantic-comedy-movies",
+   "name": "HBO Max · Romantic Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-romantic-comedy-series",
+   "name": "HBO Max · Romantic Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-crime-movies",
+   "name": "HBO Max · Crime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-crime-series",
+   "name": "HBO Max · Crime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-drama-movies",
+   "name": "HBO Max · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-drama-series",
+   "name": "HBO Max · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-family-movies",
+   "name": "HBO Max · Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-family-series",
+   "name": "HBO Max · Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-sci-fi-fantasy-movies",
+   "name": "HBO Max · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-sci-fi-fantasy-series",
+   "name": "HBO Max · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-history-war-movies",
+   "name": "HBO Max · History & War Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-history-war-series",
+   "name": "HBO Max · History & War Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-horror-movies",
+   "name": "HBO Max · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-mystery-thriller-movies",
+   "name": "HBO Max · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-mystery-thriller-series",
+   "name": "HBO Max · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-romance-movies",
+   "name": "HBO Max · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-documentary-movies",
+   "name": "HBO Max · Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-docuseries",
+   "name": "HBO Max · Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-nature-docuseries",
+   "name": "HBO Max · Nature Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-reality-series",
+   "name": "HBO Max · Reality Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-western-movies",
+   "name": "HBO Max · Western Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-western-series",
+   "name": "HBO Max · Western Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-action-adventure-movies",
+   "name": "Apple TV+ · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-action-adventure-series",
+   "name": "Apple TV+ · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-animation-movies",
+   "name": "Apple TV+ · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-animation-series",
+   "name": "Apple TV+ · Animation Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-comedy-movies",
+   "name": "Apple TV+ · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-comedy-series",
+   "name": "Apple TV+ · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-romantic-comedy-movies",
+   "name": "Apple TV+ · Romantic Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-crime-movies",
+   "name": "Apple TV+ · Crime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-crime-series",
+   "name": "Apple TV+ · Crime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-drama-movies",
+   "name": "Apple TV+ · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-drama-series",
+   "name": "Apple TV+ · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-family-movies",
+   "name": "Apple TV+ · Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-family-series",
+   "name": "Apple TV+ · Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-sci-fi-fantasy-movies",
+   "name": "Apple TV+ · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-sci-fi-fantasy-series",
+   "name": "Apple TV+ · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-history-war-movies",
+   "name": "Apple TV+ · History & War Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-history-war-series",
+   "name": "Apple TV+ · History & War Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-mystery-thriller-movies",
+   "name": "Apple TV+ · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-mystery-thriller-series",
+   "name": "Apple TV+ · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-romance-movies",
+   "name": "Apple TV+ · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-documentary-movies",
+   "name": "Apple TV+ · Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-docuseries",
+   "name": "Apple TV+ · Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-apple-tv-nature-documentary-movies",
+   "name": "Apple TV+ · Nature Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-nature-docuseries",
+   "name": "Apple TV+ · Nature Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-apple-tv-reality-series",
+   "name": "Apple TV+ · Reality Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-action-adventure-movies",
+   "name": "Prime Video · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-action-adventure-series",
+   "name": "Prime Video · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-animation-movies",
+   "name": "Prime Video · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-animation-series",
+   "name": "Prime Video · Animation Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-anime-movies",
+   "name": "Prime Video · Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-anime-series",
+   "name": "Prime Video · Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-comedy-movies",
+   "name": "Prime Video · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-comedy-series",
+   "name": "Prime Video · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-romantic-comedy-movies",
+   "name": "Prime Video · Romantic Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-romantic-comedy-series",
+   "name": "Prime Video · Romantic Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-crime-movies",
+   "name": "Prime Video · Crime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-crime-series",
+   "name": "Prime Video · Crime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-drama-movies",
+   "name": "Prime Video · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-drama-series",
+   "name": "Prime Video · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-family-movies",
+   "name": "Prime Video · Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-family-series",
+   "name": "Prime Video · Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-sci-fi-fantasy-movies",
+   "name": "Prime Video · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-sci-fi-fantasy-series",
+   "name": "Prime Video · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-history-war-movies",
+   "name": "Prime Video · History & War Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-history-war-series",
+   "name": "Prime Video · History & War Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-horror-movies",
+   "name": "Prime Video · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-mystery-thriller-movies",
+   "name": "Prime Video · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-mystery-thriller-series",
+   "name": "Prime Video · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-romance-movies",
+   "name": "Prime Video · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-documentary-movies",
+   "name": "Prime Video · Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-docuseries",
+   "name": "Prime Video · Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-nature-documentary-movies",
+   "name": "Prime Video · Nature Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-nature-docuseries",
+   "name": "Prime Video · Nature Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-reality-series",
+   "name": "Prime Video · Reality Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-prime-video-western-movies",
+   "name": "Prime Video · Western Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-prime-video-western-series",
+   "name": "Prime Video · Western Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-action-adventure-movies",
+   "name": "Disney+ · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-action-adventure-series",
+   "name": "Disney+ · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-animation-movies",
+   "name": "Disney+ · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-animation-series",
+   "name": "Disney+ · Animation Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-anime-movies",
+   "name": "Disney+ · Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-anime-series",
+   "name": "Disney+ · Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-comedy-movies",
+   "name": "Disney+ · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-comedy-series",
+   "name": "Disney+ · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-romantic-comedy-movies",
+   "name": "Disney+ · Romantic Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-romantic-comedy-series",
+   "name": "Disney+ · Romantic Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-crime-movies",
+   "name": "Disney+ · Crime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-crime-series",
+   "name": "Disney+ · Crime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-drama-movies",
+   "name": "Disney+ · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-drama-series",
+   "name": "Disney+ · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-family-movies",
+   "name": "Disney+ · Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-family-series",
+   "name": "Disney+ · Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-sci-fi-fantasy-movies",
+   "name": "Disney+ · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-sci-fi-fantasy-series",
+   "name": "Disney+ · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-history-war-movies",
+   "name": "Disney+ · History & War Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-history-war-series",
+   "name": "Disney+ · History & War Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-horror-movies",
+   "name": "Disney+ · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-mystery-thriller-movies",
+   "name": "Disney+ · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-mystery-thriller-series",
+   "name": "Disney+ · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-romance-movies",
+   "name": "Disney+ · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-documentary-movies",
+   "name": "Disney+ · Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-docuseries",
+   "name": "Disney+ · Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-nature-documentary-movies",
+   "name": "Disney+ · Nature Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-nature-docuseries",
+   "name": "Disney+ · Nature Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-reality-series",
+   "name": "Disney+ · Reality Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-disney-western-movies",
+   "name": "Disney+ · Western Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-disney-western-series",
+   "name": "Disney+ · Western Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-action-adventure-movies",
+   "name": "Hulu · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-action-adventure-series",
+   "name": "Hulu · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-animation-movies",
+   "name": "Hulu · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-animation-series",
+   "name": "Hulu · Animation Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-anime-movies",
+   "name": "Hulu · Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-anime-series",
+   "name": "Hulu · Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-comedy-movies",
+   "name": "Hulu · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-comedy-series",
+   "name": "Hulu · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-romantic-comedy-movies",
+   "name": "Hulu · Romantic Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-romantic-comedy-series",
+   "name": "Hulu · Romantic Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-crime-movies",
+   "name": "Hulu · Crime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-crime-series",
+   "name": "Hulu · Crime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-drama-movies",
+   "name": "Hulu · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-drama-series",
+   "name": "Hulu · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-family-movies",
+   "name": "Hulu · Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-family-series",
+   "name": "Hulu · Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-sci-fi-fantasy-movies",
+   "name": "Hulu · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-sci-fi-fantasy-series",
+   "name": "Hulu · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-history-war-movies",
+   "name": "Hulu · History & War Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-history-war-series",
+   "name": "Hulu · History & War Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-horror-movies",
+   "name": "Hulu · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-mystery-thriller-movies",
+   "name": "Hulu · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-mystery-thriller-series",
+   "name": "Hulu · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-romance-movies",
+   "name": "Hulu · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-documentary-movies",
+   "name": "Hulu · Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-docuseries",
+   "name": "Hulu · Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-nature-documentary-movies",
+   "name": "Hulu · Nature Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-nature-docuseries",
+   "name": "Hulu · Nature Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-reality-series",
+   "name": "Hulu · Reality Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hulu-western-movies",
+   "name": "Hulu · Western Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hulu-western-series",
+   "name": "Hulu · Western Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-action-adventure-movies",
+   "name": "Paramount+ · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-action-adventure-series",
+   "name": "Paramount+ · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-animation-movies",
+   "name": "Paramount+ · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-animation-series",
+   "name": "Paramount+ · Animation Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-comedy-movies",
+   "name": "Paramount+ · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-comedy-series",
+   "name": "Paramount+ · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-romantic-comedy-movies",
+   "name": "Paramount+ · Romantic Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-romantic-comedy-series",
+   "name": "Paramount+ · Romantic Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-crime-movies",
+   "name": "Paramount+ · Crime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-crime-series",
+   "name": "Paramount+ · Crime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-drama-movies",
+   "name": "Paramount+ · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-drama-series",
+   "name": "Paramount+ · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-family-movies",
+   "name": "Paramount+ · Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-family-series",
+   "name": "Paramount+ · Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-sci-fi-fantasy-movies",
+   "name": "Paramount+ · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-sci-fi-fantasy-series",
+   "name": "Paramount+ · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-history-war-movies",
+   "name": "Paramount+ · History & War Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-history-war-series",
+   "name": "Paramount+ · History & War Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-horror-movies",
+   "name": "Paramount+ · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-mystery-thriller-movies",
+   "name": "Paramount+ · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-mystery-thriller-series",
+   "name": "Paramount+ · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-romance-movies",
+   "name": "Paramount+ · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-documentary-movies",
+   "name": "Paramount+ · Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-docuseries",
+   "name": "Paramount+ · Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-nature-docuseries",
+   "name": "Paramount+ · Nature Docuseries",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-reality-series",
+   "name": "Paramount+ · Reality Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-paramount-western-movies",
+   "name": "Paramount+ · Western Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-paramount-western-series",
+   "name": "Paramount+ · Western Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-action-adventure-movies",
+   "name": "Mubi · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-animation-movies",
+   "name": "Mubi · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-anime-movies",
+   "name": "Mubi · Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-comedy-movies",
+   "name": "Mubi · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-romantic-comedy-movies",
+   "name": "Mubi · Romantic Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-crime-movies",
+   "name": "Mubi · Crime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-drama-movies",
+   "name": "Mubi · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-sci-fi-fantasy-movies",
+   "name": "Mubi · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-history-war-movies",
+   "name": "Mubi · History & War Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-horror-movies",
+   "name": "Mubi · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-mystery-thriller-movies",
+   "name": "Mubi · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-romance-movies",
+   "name": "Mubi · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-documentary-movies",
+   "name": "Mubi · Documentary Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-mubi-western-movies",
+   "name": "Mubi · Western Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-crunchyroll-action-adventure-movies",
+   "name": "Crunchyroll · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-crunchyroll-action-adventure-series",
+   "name": "Crunchyroll · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-crunchyroll-animation-movies",
+   "name": "Crunchyroll · Animation Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-crunchyroll-animation-series",
+   "name": "Crunchyroll · Animation Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-crunchyroll-anime-movies",
+   "name": "Crunchyroll · Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-crunchyroll-anime-series",
+   "name": "Crunchyroll · Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-crunchyroll-sci-fi-fantasy-movies",
+   "name": "Crunchyroll · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-crunchyroll-sci-fi-fantasy-series",
+   "name": "Crunchyroll · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-shudder-sci-fi-fantasy-movies",
+   "name": "Shudder · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-shudder-sci-fi-fantasy-series",
+   "name": "Shudder · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-shudder-horror-movies",
+   "name": "Shudder · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-shudder-mystery-thriller-movies",
+   "name": "Shudder · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-shudder-mystery-thriller-series",
+   "name": "Shudder · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-exxen-comedy-series",
+   "name": "Exxen · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-gai-n-comedy-series",
+   "name": "GAİN · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-gai-n-drama-series",
+   "name": "GAİN · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-gai-n-crime-mystery-series",
+   "name": "GAİN · Crime & Mystery Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-action-adventure-new-movies",
+   "name": "Action & Adventure · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-action-adventure-new-series",
+   "name": "Action & Adventure · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-action-adventure-popular-movies",
+   "name": "Action & Adventure · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-action-adventure-popular-series",
+   "name": "Action & Adventure · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-action-adventure-top-all-time-movies",
+   "name": "Action & Adventure · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-action-adventure-top-all-time-series",
+   "name": "Action & Adventure · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-action-adventure-top-of-the-year-movies",
+   "name": "Action & Adventure · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-action-adventure-top-of-the-year-series",
+   "name": "Action & Adventure · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-action-adventure-international-hits-movies",
+   "name": "Action & Adventure · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-action-adventure-international-hits-series",
+   "name": "Action & Adventure · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-action-adventure-popular-anime-movies",
+   "name": "Action & Adventure · Popular Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-action-adventure-popular-anime-series",
+   "name": "Action & Adventure · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-action-adventure-top-rated-anime-movies",
+   "name": "Action & Adventure · Top Rated Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-action-adventure-top-rated-anime-series",
+   "name": "Action & Adventure · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-sci-fi-fantasy-new-movies",
+   "name": "Sci-Fi & Fantasy · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-sci-fi-fantasy-new-series",
+   "name": "Sci-Fi & Fantasy · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-sci-fi-fantasy-popular-movies",
+   "name": "Sci-Fi & Fantasy · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-sci-fi-fantasy-popular-series",
+   "name": "Sci-Fi & Fantasy · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-sci-fi-fantasy-top-all-time-movies",
+   "name": "Sci-Fi & Fantasy · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-sci-fi-fantasy-top-all-time-series",
+   "name": "Sci-Fi & Fantasy · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-sci-fi-fantasy-top-of-the-year-movies",
+   "name": "Sci-Fi & Fantasy · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-sci-fi-fantasy-top-of-the-year-series",
+   "name": "Sci-Fi & Fantasy · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-sci-fi-fantasy-international-hits-movies",
+   "name": "Sci-Fi & Fantasy · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-sci-fi-fantasy-international-hits-series",
+   "name": "Sci-Fi & Fantasy · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-sci-fi-fantasy-popular-anime-movies",
+   "name": "Sci-Fi & Fantasy · Popular Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-sci-fi-fantasy-popular-anime-series",
+   "name": "Sci-Fi & Fantasy · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-sci-fi-fantasy-top-rated-anime-movies",
+   "name": "Sci-Fi & Fantasy · Top Rated Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-sci-fi-fantasy-top-rated-anime-series",
+   "name": "Sci-Fi & Fantasy · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-superhero-popular-anime-series",
+   "name": "Superhero · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-superhero-top-rated-anime-series",
+   "name": "Superhero · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-horror-new-movies",
+   "name": "Horror · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-horror-popular-movies",
+   "name": "Horror · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-horror-top-all-time-movies",
+   "name": "Horror · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-horror-top-of-the-year-movies",
+   "name": "Horror · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-horror-international-hits-movies",
+   "name": "Horror · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-horror-popular-anime-movies",
+   "name": "Horror · Popular Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-horror-popular-anime-series",
+   "name": "Horror · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-horror-top-rated-anime-movies",
+   "name": "Horror · Top Rated Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-horror-top-rated-anime-series",
+   "name": "Horror · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-mystery-thriller-new-movies",
+   "name": "Mystery & Thriller · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-mystery-thriller-new-series",
+   "name": "Mystery & Thriller · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-mystery-thriller-popular-movies",
+   "name": "Mystery & Thriller · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-mystery-thriller-popular-series",
+   "name": "Mystery & Thriller · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-mystery-thriller-top-all-time-movies",
+   "name": "Mystery & Thriller · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-mystery-thriller-top-all-time-series",
+   "name": "Mystery & Thriller · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-mystery-thriller-top-of-the-year-movies",
+   "name": "Mystery & Thriller · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-mystery-thriller-top-of-the-year-series",
+   "name": "Mystery & Thriller · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-mystery-thriller-international-hits-movies",
+   "name": "Mystery & Thriller · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-mystery-thriller-international-hits-series",
+   "name": "Mystery & Thriller · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-mystery-thriller-popular-anime-movies",
+   "name": "Mystery & Thriller · Popular Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-mystery-thriller-popular-anime-series",
+   "name": "Mystery & Thriller · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-mystery-thriller-top-rated-anime-movies",
+   "name": "Mystery & Thriller · Top Rated Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-mystery-thriller-top-rated-anime-series",
+   "name": "Mystery & Thriller · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-crime-new-movies",
+   "name": "Crime · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-crime-new-series",
+   "name": "Crime · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-crime-popular-movies",
+   "name": "Crime · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-crime-popular-series",
+   "name": "Crime · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-crime-top-all-time-movies",
+   "name": "Crime · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-crime-top-all-time-series",
+   "name": "Crime · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-crime-top-of-the-year-movies",
+   "name": "Crime · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-crime-top-of-the-year-series",
+   "name": "Crime · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-crime-international-hits-movies",
+   "name": "Crime · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-crime-international-hits-series",
+   "name": "Crime · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-crime-popular-anime-series",
+   "name": "Crime · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-crime-top-rated-anime-series",
+   "name": "Crime · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
    "id": "gen-genres-comedy-new-movies",
    "name": "Comedy · New Movies",
    "extra": [
@@ -3401,6 +6734,1876 @@
    "type": "series",
    "id": "gen-genres-comedy-top-rated-anime-series",
    "name": "Comedy · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-romance-rom-com-new-movies",
+   "name": "Romance & Rom-Com · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-romance-rom-com-popular-movies",
+   "name": "Romance & Rom-Com · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-romance-rom-com-top-all-time-movies",
+   "name": "Romance & Rom-Com · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-romance-rom-com-top-of-the-year-movies",
+   "name": "Romance & Rom-Com · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-romance-rom-com-international-hits-movies",
+   "name": "Romance & Rom-Com · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-romance-rom-com-popular-anime-movies",
+   "name": "Romance & Rom-Com · Popular Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-romance-rom-com-popular-anime-series",
+   "name": "Romance & Rom-Com · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-romance-rom-com-top-rated-anime-movies",
+   "name": "Romance & Rom-Com · Top Rated Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-romance-rom-com-top-rated-anime-series",
+   "name": "Romance & Rom-Com · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-drama-new-movies",
+   "name": "Drama · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-drama-new-series",
+   "name": "Drama · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-drama-popular-movies",
+   "name": "Drama · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-drama-popular-series",
+   "name": "Drama · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-drama-top-all-time-movies",
+   "name": "Drama · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-drama-top-all-time-series",
+   "name": "Drama · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-drama-top-of-the-year-movies",
+   "name": "Drama · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-drama-top-of-the-year-series",
+   "name": "Drama · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-drama-international-hits-movies",
+   "name": "Drama · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-drama-international-hits-series",
+   "name": "Drama · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-drama-popular-anime-movies",
+   "name": "Drama · Popular Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-drama-popular-anime-series",
+   "name": "Drama · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-drama-top-rated-anime-movies",
+   "name": "Drama · Top Rated Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-drama-top-rated-anime-series",
+   "name": "Drama · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-history-war-new-movies",
+   "name": "History & War · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-history-war-new-series",
+   "name": "History & War · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-history-war-popular-movies",
+   "name": "History & War · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-history-war-popular-series",
+   "name": "History & War · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-history-war-top-all-time-movies",
+   "name": "History & War · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-history-war-top-all-time-series",
+   "name": "History & War · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-history-war-top-of-the-year-movies",
+   "name": "History & War · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-history-war-top-of-the-year-series",
+   "name": "History & War · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-history-war-international-hits-movies",
+   "name": "History & War · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-western-new-movies",
+   "name": "Western · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-western-new-series",
+   "name": "Western · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-western-popular-movies",
+   "name": "Western · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-western-popular-series",
+   "name": "Western · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-western-top-all-time-movies",
+   "name": "Western · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-western-top-all-time-series",
+   "name": "Western · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-western-top-of-the-year-movies",
+   "name": "Western · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-western-top-of-the-year-series",
+   "name": "Western · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-western-international-hits-movies",
+   "name": "Western · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-new-movies",
+   "name": "Animation · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-new-series",
+   "name": "Animation · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-popular-movies",
+   "name": "Animation · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-popular-series",
+   "name": "Animation · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-top-all-time-movies",
+   "name": "Animation · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-top-all-time-series",
+   "name": "Animation · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-top-of-the-year-movies",
+   "name": "Animation · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-top-of-the-year-series",
+   "name": "Animation · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-international-animation",
+   "name": "Animation · International Animation",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-action-adventure-movies",
+   "name": "Animation · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-action-adventure-series",
+   "name": "Animation · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-sci-fi-fantasy-movies",
+   "name": "Animation · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-sci-fi-fantasy-series",
+   "name": "Animation · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-comedy-movies",
+   "name": "Animation · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-adult-animated-comedy-series",
+   "name": "Animation · Adult Animated Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-family-movies",
+   "name": "Animation · Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-family-series",
+   "name": "Animation · Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-animation-superhero-movies",
+   "name": "Animation · Superhero Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-superhero-series",
+   "name": "Animation · Superhero Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-animation-kids-series",
+   "name": "Animation · Kids Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-new-movies",
+   "name": "Anime · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-new-series",
+   "name": "Anime · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-popular-movies",
+   "name": "Anime · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-popular-series",
+   "name": "Anime · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-top-all-time-movies",
+   "name": "Anime · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-top-all-time-series",
+   "name": "Anime · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-top-of-the-year-movies",
+   "name": "Anime · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-top-of-the-year-series",
+   "name": "Anime · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-action-adventure-movies",
+   "name": "Anime · Action & Adventure Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-action-adventure-series",
+   "name": "Anime · Action & Adventure Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-sci-fi-fantasy-movies",
+   "name": "Anime · Sci-Fi & Fantasy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-sci-fi-fantasy-series",
+   "name": "Anime · Sci-Fi & Fantasy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-isekai-series",
+   "name": "Anime · Isekai Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-mystery-thriller-movies",
+   "name": "Anime · Mystery & Thriller Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-mystery-thriller-series",
+   "name": "Anime · Mystery & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-romance-movies",
+   "name": "Anime · Romance Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-romance-series",
+   "name": "Anime · Romance Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-comedy-movies",
+   "name": "Anime · Comedy Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-comedy-series",
+   "name": "Anime · Comedy Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-drama-movies",
+   "name": "Anime · Drama Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-drama-series",
+   "name": "Anime · Drama Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-anime-horror-movies",
+   "name": "Anime · Horror Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-anime-horror-series",
+   "name": "Anime · Horror Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-cozy-comforting-live-action-romantic-comedies",
+   "name": "Cozy & Comforting · Live-Action Romantic Comedies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-cozy-comforting-heartwarming-tv-comedies-dramas",
+   "name": "Cozy & Comforting · Heartwarming TV Comedies & Dramas",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-cozy-comforting-cozy-romantic-stories",
+   "name": "Cozy & Comforting · Cozy Romantic Stories",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-cozy-comforting-cozy-animated-favorites",
+   "name": "Cozy & Comforting · Cozy Animated Favorites",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-cozy-comforting-recent-cozy-releases",
+   "name": "Cozy & Comforting · Recent Cozy Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-cozy-comforting-international-hits-movies",
+   "name": "Cozy & Comforting · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-cozy-comforting-international-hits-series",
+   "name": "Cozy & Comforting · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-mind-bending-mind-bending-sci-fi-thrillers",
+   "name": "Mind-Bending · Mind-Bending Sci-Fi Thrillers",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-mind-bending-psychological-mystery-shows",
+   "name": "Mind-Bending · Psychological Mystery Shows",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-mind-bending-top-rated-psychological-thrillers",
+   "name": "Mind-Bending · Top Rated Psychological Thrillers",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-mind-bending-international-hits-movies",
+   "name": "Mind-Bending · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-mind-bending-international-hits-series",
+   "name": "Mind-Bending · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-adrenaline-rush-high-octane-action-blockbusters",
+   "name": "Adrenaline Rush · High-Octane Action Blockbusters",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-adrenaline-rush-action-thriller-series",
+   "name": "Adrenaline Rush · Action & Thriller Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-adrenaline-rush-top-rated-action-hits",
+   "name": "Adrenaline Rush · Top Rated Action Hits",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-adrenaline-rush-recent-high-octane-releases",
+   "name": "Adrenaline Rush · Recent High-Octane Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-adrenaline-rush-international-hits-movies",
+   "name": "Adrenaline Rush · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-adrenaline-rush-international-hits-series",
+   "name": "Adrenaline Rush · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-epic-sweeping-historical-war-epics",
+   "name": "Epic & Sweeping · Historical & War Epics",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-epic-sweeping-grand-fantasy-epics",
+   "name": "Epic & Sweeping · Grand Fantasy Epics",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-epic-sweeping-epic-scale-tv-sagas",
+   "name": "Epic & Sweeping · Epic Scale TV Sagas",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-epic-sweeping-space-opera-cosmic-journeys",
+   "name": "Epic & Sweeping · Space Opera & Cosmic Journeys",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-epic-sweeping-top-rated-epic-masterpieces",
+   "name": "Epic & Sweeping · Top Rated Epic Masterpieces",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-epic-sweeping-recent-epic-releases",
+   "name": "Epic & Sweeping · Recent Epic Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-epic-sweeping-international-hits-movies",
+   "name": "Epic & Sweeping · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-epic-sweeping-international-hits-series",
+   "name": "Epic & Sweeping · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-feel-good-joyful-comedy-tv-series",
+   "name": "Feel-Good · Joyful Comedy TV Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-feel-good-top-rated-feel-good-classics",
+   "name": "Feel-Good · Top Rated Feel-Good Classics",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-feel-good-recent-feel-good-releases",
+   "name": "Feel-Good · Recent Feel-Good Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-feel-good-international-hits-movies",
+   "name": "Feel-Good · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-feel-good-international-hits-series",
+   "name": "Feel-Good · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-slow-burn-haunting-slow-burn-tv",
+   "name": "Slow Burn · Haunting Slow Burn TV",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-slow-burn-deep-character-dramas",
+   "name": "Slow Burn · Deep Character Dramas",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-slow-burn-top-rated-atmospheric-masterpieces",
+   "name": "Slow Burn · Top Rated Atmospheric Masterpieces",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-slow-burn-recent-slow-burn-releases",
+   "name": "Slow Burn · Recent Slow Burn Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-slow-burn-international-hits-movies",
+   "name": "Slow Burn · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-slow-burn-international-hits-series",
+   "name": "Slow Burn · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-tearjerkers-acclaimed-tearjerker-movies",
+   "name": "Tearjerkers · Acclaimed Tearjerker Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-tearjerkers-emotional-tv-series",
+   "name": "Tearjerkers · Emotional TV Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-tearjerkers-romantic-heartbreaks",
+   "name": "Tearjerkers · Romantic Heartbreaks",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-tearjerkers-family-loss-stories",
+   "name": "Tearjerkers · Family & Loss Stories",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-tearjerkers-top-rated-emotional-masterpieces",
+   "name": "Tearjerkers · Top Rated Emotional Masterpieces",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-tearjerkers-recent-emotional-releases",
+   "name": "Tearjerkers · Recent Emotional Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-tearjerkers-international-hits-movies",
+   "name": "Tearjerkers · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-tearjerkers-international-hits-series",
+   "name": "Tearjerkers · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-80s-90s-vibes-80s-90s-popcorn-action",
+   "name": "80s & 90s Vibes · 80s & 90s Popcorn Action",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-80s-90s-vibes-80s-90s-classic-comedies",
+   "name": "80s & 90s Vibes · 80s & 90s Classic Comedies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-80s-90s-vibes-retro-sci-fi-mystery-tv",
+   "name": "80s & 90s Vibes · Retro Sci-Fi & Mystery TV",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-dark-gritty-gritty-crime-underworld",
+   "name": "Dark & Gritty · Gritty Crime & Underworld",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-dark-gritty-intense-dark-tv-series",
+   "name": "Dark & Gritty · Intense Dark TV Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-dark-gritty-top-rated-gritty-crime",
+   "name": "Dark & Gritty · Top Rated Gritty Crime",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-dark-gritty-recent-dark-gritty-releases",
+   "name": "Dark & Gritty · Recent Dark & Gritty Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-dark-gritty-international-hits-movies",
+   "name": "Dark & Gritty · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-moods-vibes-dark-gritty-international-hits-series",
+   "name": "Dark & Gritty · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-spooky-creepy-haunted-houses-ghosts",
+   "name": "Spooky & Creepy · Haunted Houses & Ghosts",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-spooky-creepy-psychological-horror-dread",
+   "name": "Spooky & Creepy · Psychological Horror & Dread",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-spooky-creepy-monsters-creature-features",
+   "name": "Spooky & Creepy · Monsters & Creature Features",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-spooky-creepy-top-rated-horror-masterpieces",
+   "name": "Spooky & Creepy · Top Rated Horror Masterpieces",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-spooky-creepy-recent-spooky-releases",
+   "name": "Spooky & Creepy · Recent Spooky Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-moods-vibes-spooky-creepy-international-hits-movies",
+   "name": "Spooky & Creepy · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-discover-family-popular-family-movies",
+   "name": "Discover Family · Popular Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-discover-family-popular-family-series",
+   "name": "Discover Family · Popular Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-discover-family-new-family-movies",
+   "name": "Discover Family · New Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-discover-family-new-family-series",
+   "name": "Discover Family · New Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-discover-family-top-rated-family-movies",
+   "name": "Discover Family · Top Rated Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-discover-family-top-rated-family-series",
+   "name": "Discover Family · Top Rated Family Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-discover-family-popular-animated-family-movies",
+   "name": "Discover Family · Popular Animated Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-discover-family-popular-kids-shows",
+   "name": "Discover Family · Popular Kids Shows",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-discover-family-top-rated-animated-family-movies",
+   "name": "Discover Family · Top Rated Animated Family Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-discover-family-top-rated-kids-series",
+   "name": "Discover Family · Top Rated Kids Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-discover-family-wholesome-family-sitcoms",
+   "name": "Discover Family · Wholesome Family Sitcoms",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-discover-family-teen-fantasy-mystery",
+   "name": "Discover Family · Teen Fantasy & Mystery",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-family-movie-night-iconic-family-classics",
+   "name": "Family Movie Night · Iconic Family Classics",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-family-movie-night-magical-fantasy-adventures",
+   "name": "Family Movie Night · Magical Fantasy Adventures",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-family-movie-night-family-comedies",
+   "name": "Family Movie Night · Family Comedies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-family-movie-night-animal-creature-adventures",
+   "name": "Family Movie Night · Animal & Creature Adventures",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-family-movie-night-top-rated-family-adventures",
+   "name": "Family Movie Night · Top Rated Family Adventures",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-family-movie-night-new-family-movie-releases",
+   "name": "Family Movie Night · New Family Movie Releases",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-disney-pixar-magic-disney-live-action-favorites",
+   "name": "Disney & Pixar Magic · Disney Live-Action Favorites",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-disney-pixar-magic-disney-live-action-classics",
+   "name": "Disney & Pixar Magic · Disney Live-Action Classics",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-kids-family-studio-spotlight-stop-motion-treasures",
+   "name": "Studio Spotlight · Stop-Motion Treasures",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-saturday-morning-classic-cartoons-iconic-80s-cartoons",
+   "name": "Saturday Morning & Classic Cartoons · Iconic 80s Cartoons",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-saturday-morning-classic-cartoons-iconic-90s-cartoons",
+   "name": "Saturday Morning & Classic Cartoons · Iconic 90s Cartoons",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-saturday-morning-classic-cartoons-2000s-animated-hits",
+   "name": "Saturday Morning & Classic Cartoons · 2000s Animated Hits",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-saturday-morning-classic-cartoons-superhero-animated-series",
+   "name": "Saturday Morning & Classic Cartoons · Superhero Animated Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-kids-family-saturday-morning-classic-cartoons-classic-cartoons-of-the-golden-age",
+   "name": "Saturday Morning & Classic Cartoons · Classic Cartoons of the Golden Age",
    "extra": [
     {
      "name": "skip",
