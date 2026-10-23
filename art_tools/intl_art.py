@@ -403,6 +403,153 @@ def build(folder, out):
     return [f"{t} ({y})" for t, y, _ in films]
 
 
+def save_reel(frames, cover, folder, out, suffix=""):
+    d = os.path.join(out, slug_of(folder) + suffix)
+    os.makedirs(d, exist_ok=True)
+    frames[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * len(frames),
+                   loop=0, quality=80, method=4, kmin=0, kmax=1)
+    cover.save(os.path.join(d, "cover.jpg"), quality=90)
+    n = len(frames)
+    strip = Image.new("RGB", (OW * 4, OH * 2))
+    for j, idx in enumerate([0, 10, 18, 26, n // 3, n // 2, n * 3 // 4, n - 6]):
+        strip.paste(frames[min(idx, n - 1)], ((j % 4) * OW, (j // 4) * OH))
+    strip.save(os.path.join(d, "frames.jpg"), quality=80)
+
+
+def main_ring(paths):
+    p = max(paths, key=len)
+    cum = [0.0]
+    for a, b in zip(p, p[1:]):
+        cum.append(cum[-1] + math.dist(a, b))
+    return p, cum
+
+
+def runner(ring, cols, q, length=0.08, wpx=5):
+    """A light running along the border: the stretch from q - length to q, brightest at its head."""
+    p, cum = ring
+    tot = cum[-1]
+    lay = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(lay)
+    steps = 24
+    for k in range(steps):
+        a0 = (q - length + length * k / steps) % 1.0
+        a1 = (q - length + length * (k + 1) / steps) % 1.0
+        def at(fr):
+            t = fr * tot
+            i = max(0, min(len(cum) - 2, int(np.searchsorted(cum, t)) - 1))
+            seg = cum[i + 1] - cum[i] or 1
+            u = (t - cum[i]) / seg
+            return (p[i][0] + (p[i + 1][0] - p[i][0]) * u, p[i][1] + (p[i + 1][1] - p[i][1]) * u)
+        if a1 < a0:
+            continue
+        d.line([at(a0), at(a1)], fill=round(255 * (k + 1) / steps), width=wpx)
+    glow = lay.filter(ImageFilter.GaussianBlur(10)).point(lambda v: min(255, v * 3))
+    out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    g = Image.new("RGBA", (W, H), cols[1] if len(cols) > 1 and cols[1] != (255, 255, 255) else cols[0])
+    g.putalpha(glow)
+    out.alpha_composite(g)
+    wl = Image.new("RGBA", (W, H), (255, 255, 255, 0))
+    wl.putalpha(lay)
+    out.alpha_composite(wl)
+    return out
+
+
+def duotone(im, dark, light):
+    g = np.asarray(im.convert("L"), np.float32)[..., None] / 255
+    d_, l_ = np.array(dark, np.float32), np.array(light, np.float32)
+    return Image.fromarray(np.clip(d_ * (1 - g) + l_ * g, 0, 255).astype(np.uint8))
+
+
+def build_a2(folder, out):
+    """Second take: the films fill the whole card and the country stays on top as its glowing border, with a light
+    running round it; the flag spreads over the card and its colours give way to the film."""
+    name, isos, box, fiso, cols, _ = CARDS[folder]
+    films = films_of(folder)
+    reals = [cover_fit(load(p)) for _, _, p in films]
+    rings = rings_of(isos, box)
+    P0 = projector(box, W / 2, H * 0.44, W * 0.86, H * 0.78)
+    m0, paths0 = shape(rings, P0)
+    ol0 = outline(paths0, cols)
+    ring = main_ring(paths0)
+    fl = None if not fiso else flag_img(fiso)
+    bg = Image.new("RGB", (W, H), (7, 7, 9))
+    nm = name_layer(name, H * 0.72 if fiso else H * 0.8)
+    fall_ = fall()
+    labels = [film_label(t, y) for t, y, _ in films]
+    dark = tuple(int(v * 0.25) for v in cols[0])
+    light = cols[1] if len(cols) > 1 and sum(cols[1]) < 700 else tuple(min(255, int(v * 1.3) + 60) for v in cols[0])
+    first_tone = duotone(reals[0], dark, light)
+
+    def flag_at(t, amp, sc, cx, cy, a=1.0):
+        f = framed_flag(waving(fl, t, amp))
+        f = f.resize((max(1, round(f.width * sc)), max(1, round(f.height * sc))), Image.LANCZOS)
+        return f, round(cx - f.width / 2), round(cy - f.height / 2)
+
+    cv = bg.convert("RGBA")
+    cv.alpha_composite(ol0)
+    if fl is not None:
+        f, x, y = flag_at(0, 0, 1, W / 2, H * 0.37)
+        cv.alpha_composite(f, (x, y))
+    cv.alpha_composite(nm)
+    cover = cv.convert("RGB")
+    HOLD, OPEN, SEG, CLOSE = 6, 20, 44, 20
+    S = len(films)
+    F0 = HOLD + OPEN
+    N_ = F0 + SEG * S + CLOSE
+    frames = []
+    for i in range(N_):
+        if i < HOLD:
+            frames.append(cover.resize((OW, OH), Image.LANCZOS))
+            continue
+        if i < F0:
+            u = (i - HOLD) / OPEN
+            e = ease(u)
+            # the film comes up in the flag's two colours, the true colours bloom after
+            pic = Image.blend(first_tone, zoomed(reals[0], 0.01), ease((u - 0.55) / 0.45))
+            cv = Image.blend(bg, pic, e).convert("RGBA")
+            cv.alpha_composite(amul(fall_, e))
+            cv.alpha_composite(amul(ol0, 1 - 0.45 * e))
+            cv.alpha_composite(runner(ring, cols, (i - HOLD) / 60.0))
+            if fl is not None:  # the flag swells and thins out over the card, then settles small in the corner
+                if u < 0.6:
+                    v = ease(u / 0.6)
+                    f, x, y = flag_at(i, 10, 1 + 5 * v, W / 2, H * 0.37 + (H * 0.5 - H * 0.37) * v)
+                    cv.alpha_composite(amul(f, 1 - v), (x, y))
+                else:
+                    v = ease((u - 0.6) / 0.4)
+                    f, x, y = flag_at(i, 6, 0.45, 40 + 81, 34 + 52)
+                    cv.alpha_composite(amul(f, v), (x, y))
+            cv.alpha_composite(amul(nm, 1 - ease(u * 3)))
+        elif i < F0 + SEG * S:
+            kf, t = divmod(i - F0, SEG)
+            pic = zoomed(reals[kf], 0.01 + 0.05 * t / SEG)
+            if kf > 0 and t < 8:
+                pic = Image.blend(zoomed(reals[kf - 1], 0.06), pic, ease(t / 8))
+            cv = pic.convert("RGBA")
+            cv.alpha_composite(fall_)
+            cv.alpha_composite(amul(ol0, 0.55))
+            cv.alpha_composite(runner(ring, cols, (i - HOLD) / 60.0))
+            if fl is not None:
+                f, x, y = flag_at(i, 6, 0.45, 40 + 81, 34 + 52)
+                cv.alpha_composite(f, (x, y))
+            la = ease((t - 2) / 6) if t < 8 else (1 - ease((t - (SEG - 5)) / 5) if t >= SEG - 5 else 1.0)
+            cv.alpha_composite(amul(labels[kf], la))
+        else:
+            u = ease((i - (F0 + SEG * S)) / CLOSE)
+            cv = Image.blend(zoomed(reals[-1], 0.06), bg, u).convert("RGBA")
+            cv.alpha_composite(amul(fall_, 1 - u))
+            cv.alpha_composite(amul(ol0, 0.55 + 0.45 * u))
+            cv.alpha_composite(amul(runner(ring, cols, (i - HOLD) / 60.0), 1 - u))
+            if fl is not None:
+                sc = 0.45 + 0.55 * u
+                f, x, y = flag_at(i, 6 * (1 - u), sc, (40 + 81) + (W / 2 - 121) * u, (34 + 52) + (H * 0.37 - 86) * u)
+                cv.alpha_composite(f, (x, y))
+            cv.alpha_composite(amul(nm, ease((u - 0.4) / 0.6)))
+        frames.append(cv.convert("RGB").resize((OW, OH), Image.LANCZOS))
+    save_reel(frames, cover, folder, out, "-a2")
+    return [f"{t} ({y})" for t, y, _ in films]
+
+
 def slug_of(t):
     import unicodedata
     t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode()
@@ -417,7 +564,8 @@ if __name__ == "__main__":
     bad = False
     for fo in sys.argv[2:] or CARDS:
         try:
-            print("built", fo, "·", ", ".join(build(fo, out)), flush=True)
+            fn = {"A2": build_a2}.get(os.environ.get("INTL_LOOK", "A"), build)
+            print("built", fo, "·", ", ".join(fn(fo, out)), flush=True)
         except Exception as e:
             import traceback
             traceback.print_exc()
