@@ -45,11 +45,11 @@ CARDS = {
         ("movie", "Pride & Prejudice", 2005, "JANE AUSTEN", "Pride and Prejudice"),
         ("movie", "The Shawshank Redemption", 1994, "STEPHEN KING", "Rita Hayworth and Shawshank Redemption")]),
     "True Stories & Biographies": ("TRUE STORIES", "true", [
-        ("movie", "Schindler's List", 1993, "OSKAR SCHINDLER"), ("movie", "Apollo 13", 1995, "THE APOLLO 13 MISSION", "1970"),
-        ("movie", "The Social Network", 2010, "THE FOUNDING OF FACEBOOK", "2004"), ("movie", "Catch Me If You Can", 2002, "FRANK ABAGNALE JR."),
-        ("tv", "Chernobyl", 2019, "THE CHERNOBYL DISASTER", "1986"), ("movie", "Ford v Ferrari", 2019, "LE MANS", "1966"),
-        ("movie", "Rush", 2013, "HUNT & LAUDA", "1976"), ("movie", "Bohemian Rhapsody", 2018, "FREDDIE MERCURY & QUEEN", "1985"),
-        ("movie", "Oppenheimer", 2023, "J. ROBERT OPPENHEIMER", "1945")]),
+        ("movie", "Schindler's List", 1993, "THE LIFE OF OSKAR SCHINDLER"), ("movie", "Apollo 13", 1995, "THE APOLLO 13 MISSION", "1970"),
+        ("movie", "The Social Network", 2010, "THE FOUNDING OF FACEBOOK", "2004"), ("movie", "Catch Me If You Can", 2002, "THE LIFE OF FRANK ABAGNALE JR."),
+        ("tv", "Chernobyl", 2019, "THE CHERNOBYL DISASTER", "1986"), ("movie", "Ford v Ferrari", 2019, "THE 1966 LE MANS RACE", "1966"),
+        ("movie", "Rush", 2013, "THE HUNT–LAUDA RIVALRY", "1976"), ("movie", "Bohemian Rhapsody", 2018, "THE STORY OF QUEEN", "1985"),
+        ("movie", "Oppenheimer", 2023, "THE LIFE OF J. ROBERT OPPENHEIMER", "1945")]),
     "Mythology & Folklore": ("MYTHOLOGY", "myth", [
         ("movie", "Troy", 2004, "HOMER'S ILIAD"), ("movie", "O Brother, Where Art Thou?", 2000, "HOMER'S ODYSSEY"),
         ("movie", "The Northman", 2022, "THE LEGEND OF AMLETH"), ("movie", "The Green Knight", 2021, "ARTHURIAN LEGEND"),
@@ -168,11 +168,11 @@ def hud(level=1.0):
     d = ImageDraw.Draw(lay)
     f = ufont("pixel", 22)
     a = round(255 * level)
-    for (x, y, t) in ((40, 34, "1UP  004200"), (W // 2 - 110, 34, "STAGE 1-1"), (W - 300, 34, "HI 099990")):
+    for (x, y, t) in ((W // 2 - 300, 34, "1UP 004200"), (W // 2 + 20, 34, "STAGE 1-1"), (W - 300, 74, "HI 099990")):
         d.text((x + 3, y + 3), t, font=f, fill=(0, 0, 0, a))
         d.text((x, y), t, font=f, fill=(255, 255, 255, a))
     for k in range(3):  # hearts
-        x, y = W - 300 + k * 34, 72
+        x, y = W - 300 + k * 34, 112
         d.polygon([(x, y + 6), (x + 6, y), (x + 12, y + 4), (x + 18, y), (x + 24, y + 6), (x + 12, y + 20)], fill=(255, 0, 77, a))
     return lay
 
@@ -621,7 +621,7 @@ def build(folder, out):
         else:
             srcs.append(make(r))
     fl = fall()
-    subs = [sub_layer(it[1], it[3]) for it, _ in films]
+    subs = [sub_layer(it[1], ("THE BOOK BY " if look == "book" else "") + it[3]) for it, _ in films]
     em = emblem(look, word)
     big = fit(em, W * 0.62, H * 0.62)
     small = fit(em, W * 0.2, H * 0.2)
