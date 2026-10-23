@@ -24,6 +24,7 @@ KEYART = {
     'apes': [('Planet of the Apes', 1968), ('War for the Planet of the Apes', 2017), ('Dawn of the Planet of the Apes', 2014), ('Rise of the Planet of the Apes', 2011)],
     'terminator': [('The Terminator', 1984), ('Terminator 2: Judgment Day', 1991), ('Terminator Salvation', 2009), ('Terminator 3: Rise of the Machines', 2003)],
     'transformers': [('Transformers', 2007), ('Transformers: Dark of the Moon', 2011), ('Bumblebee', 2018), ('Transformers: Rise of the Beasts', 2023)],
+    'bond': [('Goldfinger', 1964), ('GoldenEye', 1995), ('Casino Royale', 2006), ('Skyfall', 2012)],
     'conjuring': [('The Conjuring', 2013), ('The Conjuring 2', 2016), ('Annabelle', 2014), ('The Nun', 2018)],
 }
 # (uid, film title) -> which fanart background when the most liked one isn't the best picture

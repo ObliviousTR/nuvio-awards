@@ -1357,6 +1357,112 @@ def film_label(name, year):
     return sh
 
 
+def pools(im, m):
+    """Dark pools top left (behind the corner mark) and lower left (behind the film's name), m 0..1."""
+    if m <= 0.01:
+        return im
+    p = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(p)
+    d.ellipse((-W * 0.25, -H * 0.55, W * 0.55, H * 0.55), fill=round(205 * m))
+    d.ellipse((-W * 0.3, H * 0.62, W * 0.62, H * 1.3), fill=round(175 * m))
+    p = p.filter(ImageFilter.GaussianBlur(W * 0.08))
+    return Image.composite(Image.new("RGB", (W, H), (4, 5, 10)), im.convert("RGB"), p)
+
+
+def render_corner(uid, out_dir, mark, sc, paths, names):
+    """The Studios row's rhythm: from the cover the mark builds again in the franchise's own idiom, settles, then
+    moves small to the top left while three of the franchise's films play (each film's name and year lower left, ~1.6 s
+    each); then it comes back to the middle and the card lands exactly on the cover. Seamless loop, ~8 s."""
+    B = round(mark.build * SMOOTH)
+    HD0 = round(mark.hold * SMOOTH)
+    PRE, SETTLE, MOVE, FILM, XF, BACK = 8, 8, 12, 40, 10, 14
+    films = sc[:3]
+    F = len(films)
+    labels = [film_label(a, b) for a, b in names[:F]] if names else None
+    base0 = lambda z: vignette(art.zoomed(sc[0], z))
+    # the settled mark (the cover's) and its small corner version
+    mark.i = B + round(0.75 * HD0)
+    mark.iv = mark.i
+    settled = mark(1.0, 0.75)
+    cover_rgba = base0(0.02).convert("RGBA")
+    cover_rgba.alpha_composite(settled)
+    cover = cover_rgba.convert("RGB")
+    bb = settled.getchannel("A").point(lambda v: 255 if v > 90 else 0).getbbox() or (0, 0, W, H)
+    P = 50   # keep the mark's glow round it
+    bb = (max(0, bb[0] - P), max(0, bb[1] - P), min(W, bb[2] + P), min(H, bb[3] + P))
+    emb = settled.crop(bb)
+    cx0, cy0 = bb[0] + emb.width / 2, bb[1] + emb.height / 2
+    k_end = min(0.26 * W / emb.width, 0.2 * H / emb.height, 0.6)
+
+    def emblem(cv, m):
+        if m <= 0:
+            cv.alpha_composite(settled)
+            return
+        k = 1 - (1 - k_end) * m
+        e = emb if m <= 0 else emb.resize((max(1, round(emb.width * k)), max(1, round(emb.height * k))), Image.LANCZOS)
+        tx, ty = 40 + emb.width * k_end / 2, 34 + emb.height * k_end / 2
+        x, y = cx0 + (tx - cx0) * m, cy0 + (ty - cy0) * m
+        cv.alpha_composite(e, (round(x - e.width / 2), round(y - e.height / 2)))
+
+    frames = []
+    # 1. the build, over the first film
+    for i in range(B + SETTLE):
+        t = min(1, i / B)
+        h = (i - B) / (SETTLE * 4) if i >= B else None
+        bg = base0(0.02 + 0.02 * i / (B + SETTLE)).convert("RGBA")
+        mark.i, mark.iv = i, float(i)
+        live = mark(t, h)
+        if i >= B:   # hand over from the live mark to the settled one
+            u = ease((i - B) / (SETTLE - 1))
+            bg.alpha_composite(alpha(live, 1 - u))
+            bg.alpha_composite(alpha(settled, u))
+        else:
+            bg.alpha_composite(live)
+        frames.append(bg.convert("RGB"))
+    z_end = 0.04
+    # 2. the films, the mark small in the corner
+    total = MOVE + FILM * F
+    for i in range(total):
+        q = i / total
+        seg = min(F - 1, int(q * F))
+        loc = q * F - seg
+        bg = art.zoomed(films[seg], (z_end if seg == 0 else 0.02) + 0.05 * loc)
+        if loc > 1 - XF / FILM and seg < F - 1:
+            bg = Image.blend(bg, art.zoomed(films[seg + 1], 0.02), ease((loc - (1 - XF / FILM)) / (XF / FILM)))
+        m = ease(i / MOVE) if i < MOVE else 1.0
+        cv = pools(vignette(bg), m).convert("RGBA")
+        if labels:
+            la = ease((loc - 0.08) / 0.1) * (1 - ease((loc - 0.8) / 0.12))
+            if seg == 0:
+                la = ease((i - MOVE * 0.6) / 8) * (1 - ease((loc - 0.8) / 0.12))
+            if la > 0:
+                cv.alpha_composite(alpha(labels[seg], la * m))
+        emblem(cv, m)
+        frames.append(cv.convert("RGB"))
+    # 3. back to the middle; the last film gives way to the cover's picture
+    last = art.zoomed(films[-1], 0.07)
+    for i in range(BACK):
+        u = ease(i / (BACK - 1))
+        bg = Image.blend(vignette(last), base0(0.02), u)
+        cv = pools(bg, 1 - u).convert("RGBA")
+        emblem(cv, 1 - u)
+        frames.append(cv.convert("RGB"))
+    pre = [Image.blend(cover, frames[0], ease(k / (PRE - 1))) for k in range(PRE)]
+    frames = pre + frames
+    d = os.path.join(out_dir, uid)
+    os.makedirs(d, exist_ok=True)
+    cover.save(os.path.join(d, "cover.jpg"), quality=88)
+    art.graded(fetch_any(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=86)
+    small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
+    small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=[40] * len(small), loop=0,
+                  quality=78, method=4, kmin=0, kmax=1)
+    strip = Image.new("RGB", (GW * 4, GH * 2))
+    for j, idx in enumerate([round(k * (len(small) - 1) / 7) for k in range(8)]):
+        strip.paste(small[idx], ((j % 4) * GW, (j // 4) * GH))
+    strip.save(os.path.join(d, "frames.jpg"), quality=80)
+    return d, os.path.getsize(os.path.join(d, "hover.webp")) // 1024
+
+
 def render_loop(uid, out_dir, mark, sc, paths, names):
     """Seamless loop that starts and ends on the cover: the cover cross-fades into the build, the mark builds again over the
     franchise's films as before (each film's name and year lower left), and it settles exactly into the cover."""
@@ -1433,7 +1539,7 @@ def render(uid, out_dir):
     mark = cls()
     sc = scenes(paths)
     if LOOP:
-        return render_loop(uid, out_dir, mark, sc, paths, names if len(names) == len(sc) else None)
+        return render_corner(uid, out_dir, mark, sc, paths, names if len(names) == len(sc) else None)
     # every frame 40 ms: the hold used to run at 70 ms a frame, so scene crossfades there stepped visibly
     HOLD_SLOW = 70 / 40
     B, HD0 = round(mark.build * SMOOTH), round(mark.hold * SMOOTH)
