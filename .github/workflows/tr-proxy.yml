@@ -1,0 +1,33 @@
+name: TR proxy (Cloudflare Worker)
+# Deploys worker/ to Cloudflare. The AIOMetadata address is split into origin and path and handed to the Worker as
+# secrets; neither is printed.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Split the AIOMetadata address
+        env:
+          AIO: ${{ secrets.AIOMETADATA_URL }}
+        run: |
+          python3 - <<'PY'
+          import os, urllib.parse
+          u = urllib.parse.urlsplit(os.environ["AIO"].strip())
+          path = u.path.rsplit("/manifest.json", 1)[0]
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write(f"AIO_ORIGIN={u.scheme}://{u.netloc}\nAIO_PATH={path}\n")
+          print("::add-mask::" + u.netloc); print("::add-mask::" + path)
+          PY
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: worker
+          secrets: |
+            AIO_ORIGIN
+            AIO_PATH
