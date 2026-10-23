@@ -1,0 +1,11 @@
+dw_5.jpg	https://image.tmdb.org/t/p/w1280/vcFW09U4834DyFOeRZpsx9x1D3S.jpg
+dw23_2.jpg	https://image.tmdb.org/t/p/w1280/gDtZQmfzvErZpeXOVeCBQE9WkSF.jpg
+dw23_5.jpg	https://image.tmdb.org/t/p/w1280/oT81JufYbkP9BkFZm32VwvXRBOc.jpg
+op_1.jpg	https://image.tmdb.org/t/p/w1280/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg
+op_3.jpg	https://image.tmdb.org/t/p/w1280/6fRwRD7GdCfg6owzmCT3VgQtowl.jpg
+op_7.jpg	https://image.tmdb.org/t/p/w1280/6Su5JDbS0cDVJ7R8XugKYVq2ifU.jpg
+sport_fb_0.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Mecz_pi%C5%82karski_Wis%C5%82a_Krak%C3%B3w_-_Zag%C5%82%C4%99bie_Sosnwoiec%2C_28_pa%C5%BAdziernika_2022%2C_Po%C5%BCegnanie_Stadionu_Ludowego%2C_KP.jpg/1920px-Mecz_pi%C5%82karski_Wis%C5%82a_Krak%C3%B3w_-_Zag%C5%82%C4%99bie_Sosnwoiec%2C_28_pa%C5%BAdziernika_2022%2C_Po%C5%BCegnanie_Stadionu_Ludowego%2C_KP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+sport_fb_0	File:Mecz piłkarski Wisła Kraków - Zagłębie Sosnwoiec, 28 października 2022, Pożegnanie Stadionu Ludowego, KP.jpg	CC BY 4.0
+sport_bb_0.jpg	https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/NBA_basketball%2C_Raptors_in_Phoenix.jpg/1920px-NBA_basketball%2C_Raptors_in_Phoenix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail
+sport_bb_0	File:NBA basketball, Raptors in Phoenix.jpg	CC0
+sport_cover.jpg	spotlight/art/favourites/_sources/livesport-art.jpg

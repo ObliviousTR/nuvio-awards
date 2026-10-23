@@ -1,0 +1,51 @@
+name: Favourites art
+# My Simkl card: pictures of what Ozzy is watching / plans to watch on Simkl, refreshed weekly (the Simkl tokens are
+# refreshed and re-saved encrypted on every run). With "all" it re-renders all four Favourites cards.
+on:
+  schedule:
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+    inputs:
+      cards:
+        description: "cards to render (space separated, or all)"
+        default: "mysimkl"
+permissions:
+  contents: write
+concurrency: repo-writes
+jobs:
+  art:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q pillow numpy
+      - name: Pictures and render
+        env:
+          SIMKL_CLIENT_ID: ${{ secrets.SIMKL_CLIENT_ID }}
+          SIMKL_CLIENT_SECRET: ${{ secrets.SIMKL_CLIENT_SECRET }}
+          MDBLIST_API_KEY: ${{ secrets.MDBLIST_API_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: |
+          CARDS="${{ github.event.inputs.cards || 'mysimkl' }}"
+          [ "$CARDS" = all ] && CARDS="doctorwho onepace livesport mysimkl"
+          P=$RUNNER_TEMP/pics; mkdir -p $P; cp spotlight/art/favourites/_sources/pics/* $P/
+          python3 scripts/simkl_favs.py $P
+          python3 art_tools/favourites_v2.py $P $RUNNER_TEMP/out A $CARDS
+          for c in $CARDS; do
+            cp $RUNNER_TEMP/out/$c/hover.webp $RUNNER_TEMP/out/$c/cover.jpg spotlight/art/favourites/$c/
+          done
+          python3 - <<'PY'
+          import os
+          from PIL import Image, ImageOps
+          p = os.path.join(os.environ["RUNNER_TEMP"], "pics", "simkl_1.jpg")
+          ImageOps.fit(Image.open(p).convert("RGB"), (1280, 720)).save("spotlight/art/favourites/mysimkl/backdrop.jpg", quality=88)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add simkl/token.enc spotlight/art/favourites
+          git diff --cached --quiet || git commit -q -m "Favourites art $(date -u +%F)"
+          git pull --rebase -q && git push -q
