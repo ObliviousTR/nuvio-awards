@@ -1,4 +1,4 @@
-"""Reality TV 'on air' samples: Cooking (kitchen countdown) and Makeover (before / after slider)."""
+"""Reality TV: all six cards."""
 import os, sys, subprocess
 os.makedirs("refs/rt", exist_ok=True)
 r = subprocess.run([sys.executable, "art_tools/reality_art.py", "refs/rt"], capture_output=True, text=True)

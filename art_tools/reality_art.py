@@ -22,6 +22,19 @@ TEST = bool(os.environ.get("REALITY_TEST"))
 
 # folder -> (title, subtitle, accent, game, pool of (show, first-air year))
 CARDS = {
+    "Trending & New Reality": ("TRENDING REALITY", "THE SHOWS EVERYONE IS WATCHING", (255, 170, 40), "rank", None),
+    "Strategy, Mind Games & Survival": ("STRATEGY & SURVIVAL", "ISLANDS, MIND GAMES & BETRAYAL", (240, 196, 60), "eliminated", [
+        ("Survivor", 2000), ("The Traitors", 2022), ("Squid Game: The Challenge", 2023), ("Alone", 2015),
+        ("The Amazing Race", 2001), ("Physical: 100", 2023), ("The Devil's Plan", 2023), ("Big Brother", 2000),
+        ("Outlast", 2023)]),
+    "British Panel, Quiz & Comedy Shows": ("PANEL & QUIZ SHOWS", "BRITISH PANEL GAMES, QUIZZES & COMEDY", (60, 170, 255), "score", [
+        ("Taskmaster", 2015), ("QI", 2003), ("Would I Lie to You?", 2007), ("8 Out of 10 Cats Does Countdown", 2012),
+        ("Have I Got News for You", 1990), ("The Chase", 2009), ("Pointless", 2009), ("Only Connect", 2008),
+        ("Never Mind the Buzzcocks", 1996)]),
+    "Dating, Social Experiment & Drama": ("DATING & DRAMA", "LOVE, LIES & SOCIAL EXPERIMENTS", (255, 80, 150), "heart", [
+        ("Love Is Blind", 2020), ("Love Island", 2015), ("Too Hot to Handle", 2020), ("Single's Inferno", 2021),
+        ("The Bachelor", 2002), ("Married at First Sight", 2015), ("The Ultimatum: Marry or Move On", 2022),
+        ("Selling Sunset", 2019), ("The Real Housewives of Beverly Hills", 2010)]),
     "Culinary & Cooking Battles": ("COOKING BATTLES", "CHEFS, BAKERS & KITCHEN HEAT", (235, 70, 50), "timer", [
         ("Hell's Kitchen", 2005), ("The Great British Bake Off", 2010), ("MasterChef", 2010), ("Nailed It!", 2018),
         ("Top Chef", 2006), ("Kitchen Nightmares", 2007), ("Culinary Class Wars", 2024), ("Chopped", 2009),
@@ -63,6 +76,7 @@ def zoomed(im, z):
 def shows_of(folder, n=3):
     pool = CARDS[folder][4]
     if TEST:
+        pool = pool or [("Show A", 0), ("Show B", 0), ("Show C", 0)]
         import glob
         fs = [f for f in sorted(glob.glob("/home/claude/nuvio-art/mirror/files/*/*.jpg")) if os.path.getsize(f) > 150000]
         rnd = random.Random(folder)
@@ -74,8 +88,14 @@ def shows_of(folder, n=3):
                 out.append((pool[len(out)][0], "NETWORK", p))
         return out
     import kids_art as K
-    m = dt.date.today().year * 12 + dt.date.today().month
-    start = (m * n) % len(pool)
+    if pool is None:  # this month's most popular reality shows (counted down #3, #2, #1)
+        r = (K.tmdb("/discover/tv", with_genres="10764", sort_by="popularity.desc", with_original_language="en",
+                    **{"vote_count.gte": 30, "first_air_date.gte": f"{dt.date.today().year - 8}-01-01"}) or {}).get("results", [])
+        pool = [(x["name"], int((x.get("first_air_date") or "0")[:4] or 0)) for x in r]
+        start = 0
+    else:
+        m = dt.date.today().year * 12 + dt.date.today().month
+        start = (m * n) % len(pool)
     out = []
     for t, y in pool[start:] + pool[:start]:
         a = K.art_of(("tv", t, y))
@@ -189,6 +209,129 @@ def timer(sec, accent, flash=0.0):
     return lay
 
 
+def rank_panel(names, k, accent, p=1.0):
+    """The trending chart, right: three rows #1..#3; the show on screen lit (shows run #3, #2, #1)."""
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    x1, y0, rw, rh = W - 44, 44, 400, 58
+    x0 = x1 - rw
+    d.rounded_rectangle((x0 - 14, y0 - 46, x1 + 2, y0 + 3 * (rh + 8) + 6), radius=14, fill=(10, 10, 12, round(205 * p)))
+    tracked(d, (x0 + 4, y0 - 36), "TRENDING NOW", font("ExtraBold", 20), accent + (round(255 * p),), 5)
+    order = list(reversed(names))  # names come #3, #2, #1
+    cur = len(names) - 1 - k       # row index (0 = #1) of the show on screen
+    for r, nm in enumerate(order):
+        y = y0 + r * (rh + 8)
+        on = r == cur
+        d.rounded_rectangle((x0, y, x1 - 10, y + rh), radius=8, fill=(accent + (round(235 * p),)) if on else (255, 255, 255, round(30 * p)))
+        fn = font("ExtraBold", 30)
+        tracked(d, (x0 + 16, y + 11), f"#{r + 1}", fn, ((18, 18, 20) if on else (255, 255, 255)) + (round(255 * p),), 1)
+        t = nm.upper()
+        f2 = font("SemiBold", 20)
+        while width(t, f2, 2) > rw - 110 and len(t) > 4:
+            t = t[:-2].rstrip() + "…"
+        tracked(d, (x0 + 84, y + 18), t, f2, ((18, 18, 20) if on else (235, 235, 240)) + (round(255 * p),), 2)
+    return lay
+
+
+def stamp(p, a=1.0):
+    """ELIMINATED, slammed onto the screen (p 0..1: from big and faint to its place)."""
+    if p <= 0:
+        return Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    fn = font("ExtraBold", 92)
+    t = "ELIMINATED"
+    tw = width(t, fn, 6)
+    st = Image.new("RGBA", (round(tw) + 90, 170), (0, 0, 0, 0))
+    d = ImageDraw.Draw(st)
+    red = (226, 30, 40)
+    d.rectangle((6, 6, st.width - 7, st.height - 7), outline=red + (255,), width=10)
+    tracked(d, (45, 30), t, fn, red + (255,), 6)
+    arr_ = np.asarray(st, np.float32)
+    arr_[..., 3] *= np.clip(np.random.default_rng(4).random(arr_.shape[:2]) * 1.5, 0.45, 1)   # worn ink
+    st = Image.fromarray(arr_.astype(np.uint8)).rotate(-11, expand=True, resample=Image.BICUBIC)
+    e = ease(p)
+    sc = 1.6 - 0.6 * e
+    st = st.resize((round(st.width * sc * 0.8), round(st.height * sc * 0.8)), Image.LANCZOS)
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    lay.alpha_composite(amul(st, min(1.0, e * 1.5) * a), (round(W / 2 - st.width / 2), round(H * 0.42 - st.height / 2)))
+    return lay
+
+
+def vote_timer(sec, accent):
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    x1, y0 = W - 48, 44
+    box = (x1 - 300, y0, x1, y0 + 110)
+    d.rounded_rectangle(box, radius=16, fill=(10, 10, 12, 220), outline=accent + (255,), width=3)
+    tracked(d, (box[0] + 22, y0 + 12), "VOTE CLOSES IN", font("ExtraBold", 18), accent + (255,), 4)
+    s_ = f"00:{max(0, int(math.ceil(sec))):02d}"
+    col = (255, 70, 60) if sec <= 5 else (255, 255, 255)
+    tracked(d, (box[0] + 22, y0 + 38), s_, font("ExtraBold", 56), col + (255,), 3)
+    return lay
+
+
+def scoreboard(score, buzz, accent):
+    """A quiz scoreboard top right; the buzzer ring flashes as a show hands over."""
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    x1, y0 = W - 48, 44
+    box = (x1 - 330, y0, x1, y0 + 110)
+    d.rounded_rectangle(box, radius=16, fill=(8, 14, 30, 225), outline=accent + (255,), width=3)
+    tracked(d, (box[0] + 22, y0 + 12), "SCORE", font("ExtraBold", 18), accent + (255,), 6)
+    tracked(d, (box[0] + 22, y0 + 38), f"{int(score):03d}", font("ExtraBold", 56), (255, 255, 255, 255), 6)
+    cx, cy = box[2] - 58, y0 + 55
+    d.ellipse((cx - 34, cy - 34, cx + 34, cy + 34), fill=(200, 20, 30, 255), outline=(255, 255, 255, 255), width=4)
+    if buzz > 0:
+        for r in (60, 110, 170):
+            rr = r * (0.6 + 0.4 * (1 - buzz))
+            d.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), outline=(255, 60, 60, round(200 * buzz)), width=6)
+        tracked(d, (box[0] - 10, y0 + 130), "BZZT!", font("ExtraBold", 40), (255, 60, 60, round(255 * buzz)), 4)
+    return lay
+
+
+def heart_meter(fill, accent, pop=0.0):
+    """A heart that fills from the bottom; at full IT'S A MATCH! pops."""
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    S_ = 120
+    hm = Image.new("L", (S_ * 2, S_ * 2), 0)
+    pts = []
+    for k in range(200):
+        t = 2 * math.pi * k / 200
+        x = 16 * math.sin(t) ** 3
+        y = 13 * math.cos(t) - 5 * math.cos(2 * t) - 2 * math.cos(3 * t) - math.cos(4 * t)
+        pts.append((S_ + x * S_ / 18, S_ - y * S_ / 18))
+    ImageDraw.Draw(hm).polygon(pts, fill=255)
+    sc = 1 + 0.25 * math.sin(math.pi * pop)
+    hm = hm.resize((round(hm.width * sc * 0.6), round(hm.height * sc * 0.6)), Image.LANCZOS)
+    w_, h_ = hm.size
+    level = Image.new("L", (w_, h_), 0)
+    top = round(h_ * (1 - fill))
+    ImageDraw.Draw(level).rectangle((0, top, w_, h_), fill=255)
+    from PIL import ImageChops
+    filled = ImageChops.multiply(hm, level)
+    ring = ImageChops.subtract(hm.filter(ImageFilter.MaxFilter(7)), hm)
+    cx, cy = W - 140, 130
+    x0, y0 = round(cx - w_ / 2), round(cy - h_ / 2)
+    back = Image.new("RGBA", (w_, h_), (10, 10, 12, 0))
+    back.putalpha(hm.point(lambda v: round(v * 0.6)))
+    lay.alpha_composite(back, (x0, y0))
+    f = Image.new("RGBA", (w_, h_), accent + (0,))
+    f.putalpha(filled)
+    lay.alpha_composite(f, (x0, y0))
+    r_ = Image.new("RGBA", (w_, h_), (255, 255, 255, 0))
+    r_.putalpha(ring)
+    lay.alpha_composite(r_, (x0, y0))
+    if pop > 0:
+        d = ImageDraw.Draw(lay)
+        fn = font("ExtraBold", 46)
+        t = "IT'S A MATCH!"
+        tw = width(t, fn, 3)
+        cx = min(cx, W - 40 - tw / 2)
+        a = round(255 * min(1, pop * 2))
+        tracked(d, (cx - tw / 2 + 3, cy + h_ / 2 + 14 + 3), t, fn, (0, 0, 0, a // 2), 3)
+        tracked(d, (cx - tw / 2, cy + h_ / 2 + 14), t, fn, accent + (a,), 3)
+    return lay
+
+
 def whip(a, b, u):
     """A whip pan: a slides out left, b comes in from the right, both smeared."""
     e = ease(u)
@@ -238,6 +381,8 @@ def slug_of(t):
 def build(folder, out):
     title, sub, accent, game, _ = CARDS[folder]
     shows = shows_of(folder)
+    if game == "rank":  # count down: #3, #2, then #1
+        shows = shows[::-1]
     pics = [cover_fit(load(p)) for _, _, p in shows]
     fl = fall()
     tb = title_block(title, sub, accent)
@@ -283,6 +428,50 @@ def build(folder, out):
                         pic = whip(pic, zoomed(pics[k + 1], 0.01), (t - (SEG - TR) - 2) / (TR - 2)) if t - (SEG - TR) >= 2 else pic
                 game_lay = timer(sec, accent, flash)
                 lt = 1 - ease((t - (SEG - TR)) / 3) if t >= SEG - TR else ease(t / 6) if k > 0 else 1.0
+            elif game == "rank":
+                if t >= SEG - TR and not last:
+                    u = (t - (SEG - TR)) / TR
+                    pic = Image.blend(pic, zoomed(pics[k + 1], 0.01), ease(u))
+                    lt = 1 - ease(u * 2)
+                elif k > 0:
+                    lt = ease(t / 6)
+                game_lay = rank_panel([x[0] for x in shows], k if t < SEG - TR // 2 or last else k + 1, accent)
+            elif game == "eliminated":
+                sec = 15 * (1 - t / (SEG - 12))
+                game_lay = vote_timer(sec, accent)
+                if t >= SEG - 12 and not last:
+                    u = (t - (SEG - 12)) / 12
+                    game_lay.alpha_composite(stamp(min(1, u * 3), 1 - ease((u - 0.6) / 0.4)))
+                    if u > 0.55:
+                        pic = whip(pic, zoomed(pics[k + 1], 0.01), (u - 0.55) / 0.45)
+                    lt = 1 - ease(u * 2)
+                elif k > 0:
+                    lt = ease(t / 6)
+            elif game == "score":
+                score = 10 * (k * 5 + int(t / SEG * 5))
+                buzz = 0.0
+                if t >= SEG - TR and not last:
+                    u = (t - (SEG - TR)) / TR
+                    buzz = 1 - u
+                    pic = Image.blend(pic, zoomed(pics[k + 1], 0.01), ease((u - 0.3) / 0.7))
+                    lt = 1 - ease(u * 2)
+                elif k > 0:
+                    lt = ease(t / 6)
+                game_lay = scoreboard(score, buzz, accent)
+            elif game == "heart":
+                fill_ = min(1.0, t / (SEG - 14))
+                pop = 0.0
+                if t >= SEG - 14:
+                    pop = min(1.0, (t - (SEG - 14)) / 6)
+                    if t >= SEG - 8 and not last:
+                        u = (t - (SEG - 8)) / 8
+                        pic = Image.blend(pic, zoomed(pics[k + 1], 0.01), ease(u))
+                        lt = 1 - ease(u * 2)
+                        fill_ = 1 - ease(u)
+                        pop = 1 - ease(u)
+                elif k > 0:
+                    lt = ease(t / 6)
+                game_lay = heart_meter(fill_, accent, pop)
             elif game == "slider":
                 if t >= SEG - 14 and not last:
                     u = (t - (SEG - 14)) / 14
