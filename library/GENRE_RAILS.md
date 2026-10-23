@@ -11916,6 +11916,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Comedy (movie) / Popular: 300
 - Discover · Comedy (movie) / Top Rated: 300
 - Discover · Comedy (movie) / New Releases: 300
+- Discover · Comedy (movie) / Hidden Gems: 300
 - Discover · Comedy (movie) / Romantic Comedy: 300
 - Discover · Comedy (movie) / Action Comedy: 300
 - Discover · Comedy (movie) / Crime Comedy: 300
@@ -11933,6 +11934,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Comedy (series) / Popular: 300
 - Discover · Comedy (series) / Top Rated: 245
 - Discover · Comedy (series) / New Releases: 300
+- Discover · Comedy (series) / Hidden Gems: 236
 - Discover · Comedy (series) / Sitcoms: 300
 - Discover · Comedy (series) / Workplace Comedy: 80
 - Discover · Comedy (series) / Mockumentary: 24
@@ -11946,6 +11948,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Action (movie) / Popular: 300
 - Discover · Action (movie) / Top Rated: 300
 - Discover · Action (movie) / New Releases: 300
+- Discover · Action (movie) / Hidden Gems: 80
 - Discover · Action (movie) / Action Comedy: 300
 - Discover · Action (movie) / Sci-Fi Action: 300
 - Discover · Action (movie) / War Action: 109
@@ -11963,6 +11966,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Action (series) / Popular: 300
 - Discover · Action (series) / Top Rated: 231
 - Discover · Action (series) / New Releases: 300
+- Discover · Action (series) / Hidden Gems: 73
 - Discover · Action (series) / Superhero: 52
 - Discover · Action (series) / Spy: 26
 - Discover · Action (series) / Martial Arts: 26
@@ -11974,6 +11978,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Sci-Fi & Fantasy (movie) / Popular: 300
 - Discover · Sci-Fi & Fantasy (movie) / Top Rated: 300
 - Discover · Sci-Fi & Fantasy (movie) / New Releases: 300
+- Discover · Sci-Fi & Fantasy (movie) / Hidden Gems: 103
 - Discover · Sci-Fi & Fantasy (movie) / Science Fiction: 300
 - Discover · Sci-Fi & Fantasy (movie) / Fantasy: 300
 - Discover · Sci-Fi & Fantasy (movie) / Space: 99
@@ -11991,6 +11996,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Sci-Fi & Fantasy (series) / Popular: 300
 - Discover · Sci-Fi & Fantasy (series) / Top Rated: 300
 - Discover · Sci-Fi & Fantasy (series) / New Releases: 300
+- Discover · Sci-Fi & Fantasy (series) / Hidden Gems: 87
 - Discover · Sci-Fi & Fantasy (series) / Space: 43
 - Discover · Sci-Fi & Fantasy (series) / Time Travel: 55
 - Discover · Sci-Fi & Fantasy (series) / Dystopia: 22
@@ -12003,6 +12009,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Horror (movie) / Popular: 300
 - Discover · Horror (movie) / Top Rated: 300
 - Discover · Horror (movie) / New Releases: 300
+- Discover · Horror (movie) / Hidden Gems: 56
 - Discover · Horror (movie) / Slasher: 241
 - Discover · Horror (movie) / Supernatural: 184
 - Discover · Horror (movie) / Possession: 74
@@ -12020,6 +12027,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Mystery & Thriller (movie) / Popular: 300
 - Discover · Mystery & Thriller (movie) / Top Rated: 300
 - Discover · Mystery & Thriller (movie) / New Releases: 300
+- Discover · Mystery & Thriller (movie) / Hidden Gems: 199
 - Discover · Mystery & Thriller (movie) / Mystery: 300
 - Discover · Mystery & Thriller (movie) / Thriller: 300
 - Discover · Mystery & Thriller (movie) / Psychological: 115
@@ -12036,6 +12044,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Mystery & Thriller (series) / Popular: 300
 - Discover · Mystery & Thriller (series) / Top Rated: 228
 - Discover · Mystery & Thriller (series) / New Releases: 300
+- Discover · Mystery & Thriller (series) / Hidden Gems: 104
 - Discover · Mystery & Thriller (series) / Detective: 60
 - Discover · Mystery & Thriller (series) / Whodunit: 10
 - Discover · Mystery & Thriller (series) / Psychological: 28
@@ -12047,6 +12056,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Drama (movie) / Popular: 300
 - Discover · Drama (movie) / Top Rated: 300
 - Discover · Drama (movie) / New Releases: 300
+- Discover · Drama (movie) / Hidden Gems: 300
 - Discover · Drama (movie) / Biography: 300
 - Discover · Drama (movie) / Sports: 184
 - Discover · Drama (movie) / Coming of Age: 142
@@ -12063,6 +12073,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Drama (series) / Popular: 300
 - Discover · Drama (series) / Top Rated: 300
 - Discover · Drama (series) / New Releases: 300
+- Discover · Drama (series) / Hidden Gems: 300
 - Discover · Drama (series) / Period: 142
 - Discover · Drama (series) / Medical: 40
 - Discover · Drama (series) / Legal: 54
@@ -12075,6 +12086,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Crime (movie) / Popular: 300
 - Discover · Crime (movie) / Top Rated: 300
 - Discover · Crime (movie) / New Releases: 300
+- Discover · Crime (movie) / Hidden Gems: 186
 - Discover · Crime (movie) / Heist: 95
 - Discover · Crime (movie) / Gangster: 143
 - Discover · Crime (movie) / Mafia: 59
@@ -12090,6 +12102,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Crime (series) / Popular: 300
 - Discover · Crime (series) / Top Rated: 225
 - Discover · Crime (series) / New Releases: 300
+- Discover · Crime (series) / Hidden Gems: 139
 - Discover · Crime (series) / Police Procedural: 46
 - Discover · Crime (series) / Detective: 79
 - Discover · Crime (series) / Mafia: 9
@@ -12101,6 +12114,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Romance (movie) / Popular: 300
 - Discover · Romance (movie) / Top Rated: 300
 - Discover · Romance (movie) / New Releases: 300
+- Discover · Romance (movie) / Hidden Gems: 280
 - Discover · Romance (movie) / Romantic Comedy: 300
 - Discover · Romance (movie) / Romantic Drama: 300
 - Discover · Romance (movie) / Period Romance: 26
@@ -12114,6 +12128,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Animation (movie) / Popular: 300
 - Discover · Animation (movie) / Top Rated: 300
 - Discover · Animation (movie) / New Releases: 300
+- Discover · Animation (movie) / Hidden Gems: 300
 - Discover · Animation (movie) / Family: 300
 - Discover · Animation (movie) / Anime: 300
 - Discover · Animation (movie) / Stop Motion: 66
@@ -12127,6 +12142,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Animation (series) / Popular: 300
 - Discover · Animation (series) / Top Rated: 300
 - Discover · Animation (series) / New Releases: 300
+- Discover · Animation (series) / Hidden Gems: 300
 - Discover · Animation (series) / Anime: 300
 - Discover · Animation (series) / Adult Animation: 84
 - Discover · Animation (series) / Animated Comedy: 300
@@ -12137,6 +12153,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · History & War (movie) / Popular: 300
 - Discover · History & War (movie) / Top Rated: 242
 - Discover · History & War (movie) / New Releases: 300
+- Discover · History & War (movie) / Hidden Gems: 153
 - Discover · History & War (movie) / War: 300
 - Discover · History & War (movie) / History: 300
 - Discover · History & War (movie) / World War II: 147
@@ -12151,6 +12168,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · History & War (series) / Popular: 83
 - Discover · History & War (series) / Top Rated: 25
 - Discover · History & War (series) / New Releases: 149
+- Discover · History & War (series) / Hidden Gems: 22
 - Discover · History & War (series) / World War II: 18
 - Discover · History & War (series) / Period: 24
 - Discover · History & War (series) / Political: 16
@@ -12159,6 +12177,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Western (movie) / Popular: 300
 - Discover · Western (movie) / Top Rated: 130
 - Discover · Western (movie) / New Releases: 300
+- Discover · Western (movie) / Hidden Gems: 52
 - Discover · Western (movie) / Spaghetti Western: 1
 - Discover · Western (movie) / Revisionist: 4
 - Discover · Western (movie) / Neo-Western: 9
@@ -12168,6 +12187,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Documentary (movie) / Popular: 300
 - Discover · Documentary (movie) / Top Rated: 143
 - Discover · Documentary (movie) / New Releases: 300
+- Discover · Documentary (movie) / Hidden Gems: 247
 - Discover · Documentary (movie) / Nature: 34
 - Discover · Documentary (movie) / True Crime: 31
 - Discover · Documentary (movie) / Music: 193
@@ -12183,6 +12203,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Documentary (series) / Popular: 300
 - Discover · Documentary (series) / Top Rated: 147
 - Discover · Documentary (series) / New Releases: 300
+- Discover · Documentary (series) / Hidden Gems: 173
 - Discover · Documentary (series) / Nature: 57
 - Discover · Documentary (series) / True Crime: 113
 - Discover · Documentary (series) / History: 12
@@ -12194,6 +12215,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Family (movie) / Popular: 300
 - Discover · Family (movie) / Top Rated: 300
 - Discover · Family (movie) / New Releases: 300
+- Discover · Family (movie) / Hidden Gems: 277
 - Discover · Family (movie) / Animated: 300
 - Discover · Family (movie) / Fantasy & Adventure: 300
 - Discover · Family (movie) / Family Comedy: 300
