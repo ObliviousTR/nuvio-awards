@@ -1,7 +1,5 @@
-"""Based On drafts: all five cards, real pictures."""
+"""By Decade samples: the 1980s (VHS) and the 1950s (black and white)."""
 import os, sys, subprocess
-os.makedirs("refs/bo", exist_ok=True)
-log = subprocess.run([sys.executable, "-m", "pip", "install", "-q", "opencv-python-headless"], capture_output=True, text=True).stderr[-300:]
-r = subprocess.run([sys.executable, "art_tools/basedon_art.py", "refs/bo"], capture_output=True, text=True)
-log += r.stdout + r.stderr[-4000:]
-open("refs/bo/log.txt", "w").write(log)
+os.makedirs("refs/dec", exist_ok=True)
+r = subprocess.run([sys.executable, "art_tools/decade_art.py", "refs/dec", "1980s", "1950s & Golden Age"], capture_output=True, text=True)
+open("refs/dec/log.txt", "w").write(r.stdout + r.stderr[-4000:])
