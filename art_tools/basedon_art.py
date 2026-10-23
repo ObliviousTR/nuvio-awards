@@ -22,40 +22,40 @@ W, H = 1280, 720
 OW, OH = 512, 288
 TEST = bool(os.environ.get("BASEDON_TEST"))
 
-# folder -> (big word, look, cover item, pool); items: (kind, title, year, source line[, extra])
+# folder -> (word on the emblem, look, pool); items: (kind, title, year, source line[, extra])
 #   extra: books -> the book's title when it differs; true stories -> the year stamped on the print
 CARDS = {
-    "Comics & Graphic Novels": ("COMICS", "comic", ("movie", "Logan", 2017, "MARVEL COMICS"), [
+    "Comics & Graphic Novels": ("COMICS", "comic", [
         ("movie", "The Dark Knight", 2008, "DC COMICS"), ("movie", "Spider-Man: Into the Spider-Verse", 2018, "MARVEL COMICS"),
         ("movie", "Watchmen", 2009, "ALAN MOORE & DAVE GIBBONS"), ("movie", "Sin City", 2005, "FRANK MILLER"),
         ("movie", "V for Vendetta", 2005, "ALAN MOORE & DAVID LLOYD"), ("movie", "Joker", 2019, "DC COMICS"),
         ("tv", "The Boys", 2019, "GARTH ENNIS & DARICK ROBERTSON"), ("movie", "Scott Pilgrim vs. the World", 2010, "BRYAN LEE O'MALLEY"),
         ("movie", "Oldboy", 2003, "THE MANGA BY GARON TSUCHIYA"), ("movie", "Logan", 2017, "MARVEL COMICS")]),
-    "Video Games": ("VIDEO GAMES", "game", ("tv", "The Last of Us", 2023, "NAUGHTY DOG'S THE LAST OF US"), [
+    "Video Games": ("VIDEO GAMES", "game", [
         ("tv", "Arcane", 2021, "LEAGUE OF LEGENDS"), ("tv", "Fallout", 2024, "THE FALLOUT GAMES"),
         ("movie", "The Super Mario Bros. Movie", 2023, "NINTENDO'S SUPER MARIO"), ("movie", "Sonic the Hedgehog", 2020, "SEGA'S SONIC"),
         ("movie", "Detective Pikachu", 2019, "POKÉMON"), ("tv", "Castlevania", 2017, "KONAMI'S CASTLEVANIA"),
         ("movie", "Uncharted", 2022, "NAUGHTY DOG'S UNCHARTED"), ("tv", "The Last of Us", 2023, "NAUGHTY DOG'S THE LAST OF US"),
         ("movie", "Silent Hill", 2006, "KONAMI'S SILENT HILL")]),
-    "Books & Literature": ("BOOKS", "book", ("movie", "The Shawshank Redemption", 1994, "STEPHEN KING", "Rita Hayworth and Shawshank Redemption"), [
+    "Books & Literature": ("BOOKS", "book", [
         ("movie", "The Godfather", 1972, "MARIO PUZO"), ("movie", "Dune", 2021, "FRANK HERBERT"),
         ("movie", "The Lord of the Rings: The Fellowship of the Ring", 2001, "J.R.R. TOLKIEN", "The Fellowship of the Ring"),
         ("movie", "Gone Girl", 2014, "GILLIAN FLYNN"), ("movie", "The Silence of the Lambs", 1991, "THOMAS HARRIS"),
         ("movie", "Fight Club", 1999, "CHUCK PALAHNIUK"), ("movie", "No Country for Old Men", 2007, "CORMAC McCARTHY"),
         ("movie", "Pride & Prejudice", 2005, "JANE AUSTEN", "Pride and Prejudice"),
         ("movie", "The Shawshank Redemption", 1994, "STEPHEN KING", "Rita Hayworth and Shawshank Redemption")]),
-    "True Stories & Biographies": ("TRUE STORIES", "true", ("movie", "Oppenheimer", 2023, "J. ROBERT OPPENHEIMER", "1945"), [
+    "True Stories & Biographies": ("TRUE STORIES", "true", [
         ("movie", "Schindler's List", 1993, "OSKAR SCHINDLER"), ("movie", "Apollo 13", 1995, "THE APOLLO 13 MISSION", "1970"),
         ("movie", "The Social Network", 2010, "THE FOUNDING OF FACEBOOK", "2004"), ("movie", "Catch Me If You Can", 2002, "FRANK ABAGNALE JR."),
         ("tv", "Chernobyl", 2019, "THE CHERNOBYL DISASTER", "1986"), ("movie", "Ford v Ferrari", 2019, "LE MANS", "1966"),
         ("movie", "Rush", 2013, "HUNT & LAUDA", "1976"), ("movie", "Bohemian Rhapsody", 2018, "FREDDIE MERCURY & QUEEN", "1985"),
         ("movie", "Oppenheimer", 2023, "J. ROBERT OPPENHEIMER", "1945")]),
-    "Mythology & Folklore": ("MYTHOLOGY", "myth", ("movie", "300", 2007, "THE LEGEND OF THERMOPYLAE"), [
+    "Mythology & Folklore": ("MYTHOLOGY", "myth", [
         ("movie", "Troy", 2004, "HOMER'S ILIAD"), ("movie", "O Brother, Where Art Thou?", 2000, "HOMER'S ODYSSEY"),
         ("movie", "The Northman", 2022, "THE LEGEND OF AMLETH"), ("movie", "The Green Knight", 2021, "ARTHURIAN LEGEND"),
         ("movie", "Thor", 2011, "NORSE MYTHOLOGY"), ("movie", "Moana", 2016, "POLYNESIAN MYTHOLOGY"),
         ("movie", "Clash of the Titans", 1981, "GREEK MYTHOLOGY"), ("movie", "Jason and the Argonauts", 1963, "GREEK MYTHOLOGY"),
-        ("movie", "Beowulf", 2007, "THE OLD ENGLISH EPIC")]),
+        ("movie", "Beowulf", 2007, "THE OLD ENGLISH EPIC"), ("movie", "300", 2007, "THE LEGEND OF THERMOPYLAE")]),
 }
 
 
@@ -342,6 +342,7 @@ TERRA = np.array([196, 102, 52], np.float32)
 
 def meander(lay, y0, h, col=(18, 12, 8)):
     """A Greek key band between two rules."""
+    W = lay.width
     d = ImageDraw.Draw(lay)
     d.rectangle((0, y0, W, y0 + 5), fill=col)
     d.rectangle((0, y0 + h - 5, W, y0 + h), fill=col)
@@ -445,27 +446,27 @@ def trio(pool, n=3, avoid=None):
 # ---------------------------------------------------------------- lettering
 def fall():
     yy = np.linspace(0, 1, H, dtype=np.float32)
-    f = np.clip((yy - 0.5) / 0.5, 0, 1) ** 1.3 * 0.86
+    f = np.clip((yy - 0.55) / 0.45, 0, 1) ** 1.3 * 0.86
     m = Image.fromarray((np.repeat(f[:, None], W, 1) * 255).astype(np.uint8))
     lay = Image.new("RGBA", (W, H), (6, 5, 5, 0))
     lay.putalpha(m)
     return lay
 
 
-def name_layer(word):
+def sub_layer(title, source):
+    """Under the films: the title, and what it was adapted from."""
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
-    tracked(d, (62, H - 178), "BASED ON", font("SemiBold", 20), (190, 190, 190, 255), 6)
-    tracked(d, (58, H - 150), word, font("ExtraBold", 66), (255, 255, 255, 255), 2)
-    return lay
-
-
-def sub_layer(text):
-    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    t = title.upper()
+    fz = 46
+    while width(t, font("ExtraBold", fz), 3) > W - 140 and fz > 26:
+        fz -= 2
+    tracked(d, (58, H - 118), t, font("ExtraBold", fz), (255, 255, 255, 255), 3)
+    src = "BASED ON " + source
     fn = font("SemiBold", 21)
-    while width(text, fn, 6) > W - 140 and fn.size > 14:
+    while width(src, fn, 6) > W - 140 and fn.size > 14:
         fn = font("SemiBold", fn.size - 1)
-    tracked(ImageDraw.Draw(lay), (62, H - 66), text, fn, (226, 196, 140, 255), 6)
+    tracked(d, (61, H - 118 + fz + 12), src, fn, (226, 196, 140, 255), 6)
     return lay
 
 
@@ -477,14 +478,139 @@ def amul(layer, a):
     return out
 
 
+# ---------------------------------------------------------------- emblems: the card's name in its source's own language
+def trim(im):
+    bb = im.getchannel("A").getbbox()
+    return im.crop(bb) if bb else im
+
+
+def text_img(text, fnt, fill, stroke=0, stroke_fill=(0, 0, 0, 255), sp=0, shadow=None):
+    w_ = round(width(text, fnt, sp)) + 4 * stroke + 60
+    h_ = round(fnt.size * 1.6) + 4 * stroke + 60
+    lay = Image.new("RGBA", (w_, h_), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    x, y = 2 * stroke + 20, 2 * stroke + 10
+    if shadow:
+        dx, dy, col = shadow
+        xx = x + dx
+        for ch in text:
+            d.text((xx, y + dy), ch, font=fnt, fill=col, stroke_width=stroke, stroke_fill=col)
+            xx += d.textlength(ch, font=fnt) + sp
+    xx = x
+    for ch in text:
+        d.text((xx, y), ch, font=fnt, fill=fill, stroke_width=stroke, stroke_fill=stroke_fill)
+        xx += d.textlength(ch, font=fnt) + sp
+    return trim(lay)
+
+
+def stack(parts, gap=18):
+    w_ = max(p.width for p in parts)
+    h_ = sum(p.height for p in parts) + gap * (len(parts) - 1)
+    out = Image.new("RGBA", (w_, h_), (0, 0, 0, 0))
+    y = 0
+    for p in parts:
+        out.alpha_composite(p, ((w_ - p.width) // 2, y))
+        y += p.height + gap
+    return out
+
+
+def emblem(look, word):
+    if look == "comic":
+        big = text_img(word, ufont("bangers", 190), (255, 214, 10, 255), stroke=9, sp=6, shadow=(12, 12, (0, 0, 0, 255)))
+        top = text_img("BASED ON", ufont("bangers", 60), (255, 255, 255, 255), stroke=5, sp=4)
+        inner = stack([top, big], 6)
+        bw, bh = inner.width * 1.5, inner.height * 1.75
+        burst = Image.new("RGBA", (round(bw) + 40, round(bh) + 40), (0, 0, 0, 0))
+        cx, cy = burst.width / 2, burst.height / 2
+        pts = []
+        n = 22
+        rnd = random.Random(4)
+        for k in range(n * 2):
+            ang = math.pi * k / n
+            r = (1.0 if k % 2 == 0 else 0.74 + rnd.uniform(-0.04, 0.04))
+            pts.append((cx + math.cos(ang) * bw / 2 * r, cy + math.sin(ang) * bh / 2 * r))
+        d = ImageDraw.Draw(burst)
+        d.polygon([(x + 10, y + 12) for x, y in pts], fill=(0, 0, 0, 255))
+        d.polygon(pts, fill=(228, 36, 44, 255), outline=(0, 0, 0, 255), width=10)
+        burst.alpha_composite(inner, (round(cx - inner.width / 2), round(cy - inner.height / 2)))
+        return trim(burst)
+    if look == "game":
+        f = ufont("pixel", 84)
+        words = word.split()
+        rows = [text_img(w_, f, (255, 255, 255, 255), sp=6, shadow=(8, 8, (255, 0, 77, 255))) for w_ in words]
+        top = text_img("BASED ON", ufont("pixel", 30), (0, 228, 54, 255), sp=6, shadow=(4, 4, (0, 0, 0, 255)))
+        ps = text_img("PRESS START", ufont("pixel", 30), (255, 236, 39, 255), sp=6, shadow=(4, 4, (0, 0, 0, 255)))
+        return stack([top] + rows + [ps], 28)
+    if look == "book":
+        ink = (48, 36, 24, 255)
+        top = text_img("BASED ON THE", ufont("garamond", 34, 500), ink, sp=10)
+        big = text_img(word, ufont("garamond", 150, 500), ink, sp=18)
+        it = text_img("a novel, a play, a poem", ufont("garamond-italic", 36, 400), (90, 70, 50, 255))
+        rule = Image.new("RGBA", (round(big.width * 0.5), 3), ink)
+        inner = stack([top, rule, big, rule, it], 26)
+        card = paper(9).resize((inner.width + 180, inner.height + 150)).convert("RGBA")
+        d = ImageDraw.Draw(card)
+        d.rectangle((24, 24, card.width - 25, card.height - 25), outline=ink, width=3)
+        d.rectangle((36, 36, card.width - 37, card.height - 37), outline=ink, width=1)
+        card.alpha_composite(inner, ((card.width - inner.width) // 2, (card.height - inner.height) // 2))
+        return card
+    if look == "true":
+        tf = ufont("typewriter", 64)
+        ink = (40, 34, 30, 255)
+        l1 = text_img("BASED ON A", ufont("typewriter", 44), ink, sp=8)
+        l2 = text_img("TRUE STORY", ufont("typewriter", 112), ink, sp=10)
+        inner = stack([l1, l2], 20)
+        card = Image.new("RGBA", (inner.width + 160, inner.height + 170), (226, 205, 160, 255))
+        noise = np.random.default_rng(2).normal(0, 6, (card.height, card.width, 1)).astype(np.float32)
+        card = Image.fromarray(np.clip(np.asarray(card, np.float32) + np.concatenate([noise] * 3 + [np.zeros_like(noise)], 2), 0, 255).astype(np.uint8))
+        d = ImageDraw.Draw(card)
+        d.line((60, card.height - 62, card.width - 60, card.height - 62), fill=(150, 120, 90, 255), width=2)
+        card.alpha_composite(inner, ((card.width - inner.width) // 2, 52))
+        # the archive stamp
+        st = text_img("BIOGRAPHIES", ufont("typewriter", 50), (200, 40, 40, 255), sp=8)
+        box = Image.new("RGBA", (st.width + 60, st.height + 44), (0, 0, 0, 0))
+        bd = ImageDraw.Draw(box)
+        bd.rectangle((2, 2, box.width - 3, box.height - 3), outline=(200, 40, 40, 255), width=6)
+        bd.rectangle((12, 12, box.width - 13, box.height - 13), outline=(200, 40, 40, 255), width=2)
+        box.alpha_composite(st, (30, 22))
+        a_ = np.asarray(box, np.float32)
+        a_[..., 3] *= np.clip(np.random.default_rng(3).random(a_.shape[:2]) * 1.6, 0.35, 1)  # worn ink
+        box = Image.fromarray(a_.astype(np.uint8)).rotate(-9, expand=True, resample=Image.BICUBIC)
+        out = Image.new("RGBA", (card.width + 60, card.height + box.height // 2 + 20), (0, 0, 0, 0))
+        out.alpha_composite(card, (0, 0))
+        out.alpha_composite(box, (card.width - box.width + 50, card.height - box.height // 2 - 10))
+        return out
+    if look == "myth":  # a terracotta plaque between two Greek key bands, the name painted in black
+        blk = (22, 14, 10, 255)
+        top = text_img("BASED ON", ufont("cinzel", 40, 600), blk, sp=12)
+        big = text_img(word, ufont("cinzel", 150, 700), blk, sp=8)
+        inner = stack([top, big], 18)
+        pw, ph = inner.width + 160, inner.height + 2 * 90 + 70
+        rnd = np.random.default_rng(8)
+        clay = np.ones((ph, pw, 3), np.float32) * TERRA * (1 + rnd.normal(0, 0.03, (ph, pw, 1)).astype(np.float32))
+        plaque = img(clay).convert("RGBA")
+        meander(plaque, 14, 62, col=blk)
+        meander(plaque, ph - 76, 62, col=blk)
+        plaque.alpha_composite(inner, ((pw - inner.width) // 2, (ph - inner.height) // 2))
+        ImageDraw.Draw(plaque).rectangle((0, 0, pw - 1, ph - 1), outline=blk, width=6)
+        return plaque
+    raise KeyError(look)
+
+
+def fit(im, w, h):
+    k = min(w / im.width, h / im.height)
+    return im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
+
+
+def place(cv, im, cx, cy, a=1.0):
+    cv.alpha_composite(amul(im, a), (round(cx - im.width / 2), round(cy - im.height / 2)))
+
+
 # ---------------------------------------------------------------- the card
 def build(folder, out):
-    word, look, cover_item, pool = CARDS[folder]
+    word, look, pool = CARDS[folder]
     make, turn = LOOKS[look]
-    cp = art_of(cover_item)
-    cover_real = cover_fit(load(cp))
-    # the cover's own film opens the reel (it goes through the same source-to-screen turn), two from the pool follow
-    films = [(cover_item, cp)] + trio(pool, 2, avoid=cover_item[1])
+    films = trio(pool, 3)
     reals = [cover_fit(load(p)) for _, p in films]
     srcs = []
     for (it, _), r in zip(films, reals):
@@ -494,45 +620,63 @@ def build(folder, out):
             srcs.append(make(r, it[4] if len(it) > 4 else None))
         else:
             srcs.append(make(r))
-    fl, nl = fall(), name_layer(word)
-    subs = [sub_layer(f"{it[1].upper()} · {it[3]}") for it, _ in films]
-    # cover: the card's picture, toned down like Kaptain's, with the name
-    cover_bg = ImageEnhance.Brightness(ImageEnhance.Color(cover_real).enhance(0.35)).enhance(0.88)
-    cv = cover_bg.convert("RGBA")
-    cv.alpha_composite(fl)
-    cv.alpha_composite(nl)
+    fl = fall()
+    subs = [sub_layer(it[1], it[3]) for it, _ in films]
+    em = emblem(look, word)
+    big = fit(em, W * 0.62, H * 0.62)
+    small = fit(em, W * 0.2, H * 0.2)
+    corner = (44 + small.width / 2, 36 + small.height / 2)
+    # cover: the emblem on the first film's source look, held down in the dark
+    back = ImageEnhance.Brightness(srcs[0].filter(ImageFilter.GaussianBlur(3))).enhance(0.32)
+    cv = back.convert("RGBA")
+    place(cv, big, W / 2, H / 2)
     cover = cv.convert("RGB")
-    START, SEG = 10, 52
-    N_ = START + SEG * len(films)
+
+    def emb(cv, m, a=1.0):  # m 0 = centre, 1 = corner
+        sc = 1 + (small.width / big.width - 1) * m
+        L = big.resize((max(1, round(big.width * sc)), max(1, round(big.height * sc))), Image.LANCZOS) if 0 < m < 1 else (big if m <= 0 else small)
+        place(cv, L, W / 2 + (corner[0] - W / 2) * m, H / 2 + (corner[1] - H / 2) * m, a)
+
+    HOLD, MOVE, SEG, BACK = 6, 14, 46, 14
+    F0 = HOLD
+    N_ = HOLD + SEG * len(films) + BACK
     frames = []
     for i in range(N_):
-        if i < START:  # the cover holds a moment, already drifting in
-            c = zoomed(cover_bg, 0.012 * i / START).convert("RGBA")
-            c.alpha_composite(fl)
-            c.alpha_composite(nl)
-            frames.append(c.convert("RGB").resize((OW, OH), Image.LANCZOS))
+        if i < HOLD:
+            frames.append(cover.resize((OW, OH), Image.LANCZOS))
             continue
-        k, t = divmod(i - START, SEG)
-        z = 0.012 + 0.05 * t / SEG
-        src, real = zoomed(srcs[k], z), zoomed(reals[k], z)
-        stamp = films[k][0][4] if look == "true" and len(films[k][0]) > 4 else None
-        if t < 24:
-            pic = src
-        elif t < 40:
-            u = (t - 24) / 16
-            pic = turn(src, real, u, stamp) if look == "true" else turn(src, real, u)
+        c = None
+        if i < F0 + SEG * len(films):
+            k, t = divmod(i - F0, SEG)
+            z = 0.01 + 0.05 * t / SEG
+            src, real = zoomed(srcs[k], z), zoomed(reals[k], z)
+            stamp = films[k][0][4] if look == "true" and len(films[k][0]) > 4 else None
+            if t < 18:
+                pic = src
+            elif t < 34:
+                u = (t - 18) / 16
+                pic = turn(src, real, u, stamp) if look == "true" else turn(src, real, u)
+            else:
+                pic = real
+            if k == 0 and t < MOVE:   # the dimmed backdrop lights up while the emblem leaves
+                pic = Image.blend(zoomed(back, z), pic, ease(t / MOVE))
+            elif k > 0 and t < 8:     # in from the previous film
+                pic = Image.blend(zoomed(reals[k - 1], 0.06), pic, ease(t / 8))
+            c = pic.convert("RGBA")
+            c.alpha_composite(fl)
+            m = ease(t / MOVE) if k == 0 and t < MOVE else 1.0
+            emb(c, m)
+            sa = ease((t - 4) / 6) if t < 10 else (1 - ease((t - (SEG - 6)) / 6) if (t >= SEG - 6 and k == len(films) - 1) else 1.0)
+            if k > 0 and t < 8:
+                c.alpha_composite(amul(subs[k - 1], 1 - ease(t / 6)))
+            c.alpha_composite(amul(subs[k], sa))
         else:
-            pic = real
-        if t < 10:  # in from the cover / from the previous film
-            prev = zoomed(cover_bg, 0.012) if k == 0 else zoomed(reals[k - 1], 0.062)
-            pic = Image.blend(prev, pic, ease(t / 10))
-        if k == len(films) - 1 and t >= SEG - 8:
-            pic = Image.blend(pic, cover_bg, ease((t - (SEG - 8)) / 8))
-        c = pic.convert("RGBA")
-        c.alpha_composite(fl)
-        c.alpha_composite(nl)
-        sa = ease((t - 2) / 6) if t < 8 else (1 - ease((t - (SEG - 6)) / 6) if t >= SEG - 6 else 1.0)
-        c.alpha_composite(amul(subs[k], sa))
+            # back to the cover: the last film sinks into the dark backdrop, the emblem returns to the middle
+            u = ease((i - (F0 + SEG * len(films))) / BACK)
+            pic = Image.blend(zoomed(reals[-1], 0.06), back, u)
+            c = pic.convert("RGBA")
+            c.alpha_composite(amul(fl, 1 - u))
+            emb(c, 1 - u)
         frames.append(c.convert("RGB").resize((OW, OH), Image.LANCZOS))
     d = os.path.join(out, slug_of(folder))
     os.makedirs(d, exist_ok=True)
@@ -540,7 +684,7 @@ def build(folder, out):
                    loop=0, quality=80, method=4, kmin=0, kmax=1)
     cover.save(os.path.join(d, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (OW * 4, OH * 2))
-    for j, idx in enumerate([0, 22, 40, 56, 80, 110, 135, 160]):
+    for j, idx in enumerate([0, 12, 30, 44, 70, 100, 140, 152]):
         strip.paste(frames[min(idx, len(frames) - 1)], ((j % 4) * OW, (j // 4) * OH))
     strip.save(os.path.join(d, "frames.jpg"), quality=80)
     return [it[1] for it, _ in films]
