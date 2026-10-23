@@ -309,6 +309,10 @@ def franchise_rails(f, members, ex):
 # ---------------------------------------------------------------- output
 CATALOGS = []
 WRITTEN = {}
+# These catalogs live in folders only. A required "search" keeps them out of Nuvio's Discover menu and Home, and a
+# second required extra ("folder") keeps them out of search (Nuvio searches a catalog only when search is all it
+# needs). Folders still open them (no extras sent).
+HIDDEN = [{"name": "search", "isRequired": True}, {"name": "folder", "isRequired": True}]
 
 
 def write(cid, typ, name, results):
@@ -321,7 +325,7 @@ def write(cid, typ, name, results):
     os.makedirs(L("catalog", typ), exist_ok=True)
     json.dump({"metas": [S.meta(x, typ) for x in items]}, open(L("catalog", typ, f"{cid}.json"), "w", encoding="utf-8"),
               ensure_ascii=False)
-    CATALOGS.append({"type": typ, "id": cid, "name": name})
+    CATALOGS.append({"type": typ, "id": cid, "name": name, "extra": HIDDEN})
     WRITTEN[cid] = {"id": cid, "type": typ, "name": name, "count": len(items), "titles": [x["name"] for x in items]}
     return WRITTEN[cid]
 

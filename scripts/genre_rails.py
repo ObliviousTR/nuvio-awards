@@ -274,7 +274,9 @@ def main():
                       ensure_ascii=False)
             if k == 0:
                 json.dump(page, open(os.path.join(base, "skip=0.json"), "w", encoding="utf-8"), ensure_ascii=False)
-        cats.append({"type": typ, "id": r["id"], "name": r["name"], "extra": [{"name": "skip", "isRequired": False}]})
+        cats.append({"type": typ, "id": r["id"], "name": r["name"],   # folder-only: kept out of Discover, Home, search
+                     "extra": [{"name": "search", "isRequired": True}, {"name": "folder", "isRequired": True},
+                               {"name": "skip", "isRequired": False}]})
         report.append(f"\n## {r['name']} ({typ}) - {len(items)} kept of {seen} looked at")
         top = sorted(dropped, key=lambda x: -(x.get("vote_count") or 0))[:25]
         lead = set(int(t) for t in re.split(r"[|,]", r["filters"]["withGenres"]))
