@@ -1054,6 +1054,109 @@
   },
   {
    "type": "movie",
+   "id": "disc-hidden-gems-movies",
+   "name": "Discover · Hidden Gems",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Comedies",
+      "Sci-Fi"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-hidden-gems-series",
+   "name": "Discover · Hidden Gems",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Series",
+      "Anime"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-best-of-movies",
+   "name": "Discover · Best Of",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "IMDb Top 250",
+      "Letterboxd Top 500",
+      "Sight and Sound Greatest Films"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-awards-movies",
+   "name": "Discover · Awards & Criterion",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Cannes Winners",
+      "Venice Winners",
+      "Sundance Winners",
+      "Golden Globe Winners",
+      "Golden Globe Nominees",
+      "BAFTA Nominees",
+      "Criterion Essentials",
+      "Criterion Popular",
+      "Criterion New Additions"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-awards-series",
+   "name": "Discover · Awards",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Emmy Winners",
+      "Emmy Nominees"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
    "id": "lib-batman-burton-schumacher-films",
    "name": "Batman & Gotham · Burton & Schumacher Films",
    "extra": [
@@ -20010,6 +20113,348 @@
    "type": "series",
    "id": "gen-kids-family-saturday-morning-classic-cartoons-classic-cartoons-of-the-golden-age",
    "name": "Saturday Morning & Classic Cartoons · Classic Cartoons of the Golden Age",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-164980",
+   "name": "Comedies",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-164919",
+   "name": "Sci-Fi",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "mdb-198591",
+   "name": "Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "mdb-230335",
+   "name": "Anime",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-205811",
+   "name": "IMDb Top 250",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-205902",
+   "name": "Letterboxd Top 500",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-207869",
+   "name": "Sight and Sound Greatest Films",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-146624",
+   "name": "Cannes Winners",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-146622",
+   "name": "Venice Winners",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-146625",
+   "name": "Sundance Winners",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-146627",
+   "name": "Golden Globe Winners",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-32972",
+   "name": "Golden Globe Nominees",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-32970",
+   "name": "BAFTA Nominees",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-13676",
+   "name": "Criterion Essentials",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-13675",
+   "name": "Criterion Popular",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-13674",
+   "name": "Criterion New Additions",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "mdb-122821",
+   "name": "Emmy Winners",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "mdb-34134",
+   "name": "Emmy Nominees",
    "extra": [
     {
      "name": "search",

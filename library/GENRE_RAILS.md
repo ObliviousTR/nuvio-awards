@@ -5319,7 +5319,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Sweet Home (2020) - Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Descendants of the Sun (2016) - Drama, Action & Adventure
 
-## Action & Adventure · Popular Anime Movies (movie) - 498 kept of 513 looked at
+## Action & Adventure · Popular Anime Movies (movie) - 496 kept of 513 looked at
 - kept (not its first genre): Castle in the Sky (1986) - Adventure, Fantasy, Animation, Action, Family
 - kept (not its first genre): Pokémon the Movie: Hoopa and the Clash of Ages (2015) - Family, Adventure, Animation, Action, Fantasy
 - kept (not its first genre): Naruto Shippuden the Movie: Bonds (2008) - Fantasy, Animation, Action
@@ -8448,12 +8448,12 @@ EMPTY gen-genres-western-international-hits-series
 ## Animation · Popular Movies (movie) - 500 kept of 640 looked at
 - kept (not its first genre): The Nightmare Before Christmas (1993) - Fantasy, Animation, Family
 - kept (not its first genre): Minions & Monsters (2026) - Adventure, Animation, Comedy, Family, Fantasy
-- kept (not its first genre): Coco (2017) - Family, Animation, Music, Adventure
 - kept (not its first genre): Trolls World Tour (2020) - Family, Animation, Comedy, Fantasy, Adventure, Music
+- kept (not its first genre): Coco (2017) - Family, Animation, Music, Adventure
+- kept (not its first genre): The Super Mario Galaxy Movie (2026) - Family, Comedy, Adventure, Fantasy, Animation
+- kept (not its first genre): Corpse Bride (2005) - Romance, Fantasy, Animation
 - kept (not its first genre): The Wild Robot (2024) - Family, Animation, Sci-Fi, Adventure
 - kept (not its first genre): The Super Mario Bros. Movie (2023) - Family, Comedy, Adventure, Fantasy, Animation
-- kept (not its first genre): Corpse Bride (2005) - Romance, Fantasy, Animation
-- kept (not its first genre): The Super Mario Galaxy Movie (2026) - Family, Comedy, Adventure, Fantasy, Animation
 - kept (not its first genre): Swapped (2026) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): Toy Story (1995) - Family, Comedy, Animation, Adventure
 - kept (not its first genre): KPop Demon Hunters (2025) - Fantasy, Music, Comedy, Animation
@@ -8491,8 +8491,8 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Scooby-Doo! and KISS: Rock and Roll Mystery (2015) - Family, Animation, Comedy, Mystery
 - kept (not its first genre): Batman: The Dark Knight Returns, Part 2 (2013) - Sci-Fi, Action, Animation, Mystery
 - kept (not its first genre): How to Train Your Dragon (2010) - Fantasy, Adventure, Animation, Family
-- kept (not its first genre): Isle of Dogs (2018) - Adventure, Comedy, Animation
 - kept (not its first genre): The Nightmare Before Christmas (1993) - Fantasy, Animation, Family
+- kept (not its first genre): Isle of Dogs (2018) - Adventure, Comedy, Animation
 - kept (not its first genre): Fantastic Mr. Fox (2009) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): The Plague Dogs (1982) - Adventure, Animation, Drama
 
@@ -8961,15 +8961,15 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): My Neighbor Totoro (1988) - Fantasy, Animation, Family
 - kept (not its first genre): Warriors of the Wind (1984) - Adventure, Animation, Fantasy
 - kept (not its first genre): Castle in the Sky (1986) - Adventure, Fantasy, Animation, Action, Family
-- kept (not its first genre): Resident Evil: Death Island (2023) - Action, Animation, Sci-Fi, Horror
 - kept (not its first genre): Arrietty (2010) - Fantasy, Animation, Family
 - kept (not its first genre): Dragon Ball Z: Resurrection 'F' (2015) - Action, Animation, Sci-Fi
+- kept (not its first genre): Resident Evil: Death Island (2023) - Action, Animation, Sci-Fi, Horror
 - kept (not its first genre): Pom Poko (1994) - Adventure, Animation, Fantasy
-- kept (not its first genre): Resident Evil: Vendetta (2017) - Action, Animation, Adventure, Sci-Fi, Horror
-- kept (not its first genre): The Last: Naruto the Movie (2014) - Action, Romance, Animation
 - kept (not its first genre): The Cat Returns (2002) - Adventure, Fantasy, Animation, Drama, Family
+- kept (not its first genre): The Last: Naruto the Movie (2014) - Action, Romance, Animation
 - kept (not its first genre): Doraemon: Nobita's New Great Adventure Into the Underworld - The Seven Magic Users (2007) - Family, Adventure, Animation, Sci-Fi, Fantasy
 - kept (not its first genre): Dragon Ball Z: Bojack Unbound (1993) - Action, Animation, Sci-Fi
+- kept (not its first genre): Dragon Ball Z: The Return of Cooler (1992) - Action, Animation, Sci-Fi
 
 ## Anime · Popular Series (series) - 500 kept of 640 looked at
 - kept (not its first genre): Doraemon (2005) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Kids, Family
@@ -9032,7 +9032,7 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Frontier Lord Begins with Zero Subjects (2026) - Comedy, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): The World's Strongest Rearguard (2026) - Action & Adventure, Sci-Fi & Fantasy, Animation
 
-## Anime · Action & Adventure Movies (movie) - 421 kept of 435 looked at
+## Anime · Action & Adventure Movies (movie) - 418 kept of 435 looked at
 - kept (not its first genre): Castle in the Sky (1986) - Adventure, Fantasy, Animation, Action, Family
 - kept (not its first genre): Pokémon the Movie: Hoopa and the Clash of Ages (2015) - Family, Adventure, Animation, Action, Fantasy
 - kept (not its first genre): Naruto Shippuden the Movie: Bonds (2008) - Fantasy, Animation, Action
@@ -11810,22 +11810,22 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): White Fang (1991) - Action, Adventure, Drama, Family
 - left out: Frankenweenie (1984) [movie:33914] - Horror, Family, Sci-Fi, Comedy
 
-## Studio Spotlight · Stop-Motion Treasures (movie) - 66 kept of 66 looked at
+## Studio Spotlight · Stop-Motion Treasures (movie) - 65 kept of 66 looked at
 - kept (not its first genre): The Nightmare Before Christmas (1993) - Fantasy, Animation, Family
 - kept (not its first genre): Corpse Bride (2005) - Romance, Fantasy, Animation
-- kept (not its first genre): The Little Prince (2015) - Adventure, Animation, Fantasy, Family
 - kept (not its first genre): Fantastic Mr. Fox (2009) - Adventure, Animation, Comedy, Family
-- kept (not its first genre): Isle of Dogs (2018) - Adventure, Comedy, Animation
+- kept (not its first genre): The Little Prince (2015) - Adventure, Animation, Fantasy, Family
 - kept (not its first genre): Wallace & Gromit: The Curse of the Were-Rabbit (2005) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): Chicken Run: Dawn of the Nugget (2023) - Family, Animation, Adventure, Comedy
 - kept (not its first genre): ParaNorman (2012) - Family, Animation, Adventure, Comedy
+- kept (not its first genre): Isle of Dogs (2018) - Adventure, Comedy, Animation
 - kept (not its first genre): Shaun the Sheep Movie (2015) - Family, Animation, Comedy, Adventure
-- kept (not its first genre): Missing Link (2019) - Family, Animation, Comedy, Adventure, Action
 - kept (not its first genre): James and the Giant Peach (1996) - Family, Animation, Adventure, Fantasy
 - kept (not its first genre): Early Man (2018) - Family, Comedy, Animation, Adventure
 - kept (not its first genre): A Shaun the Sheep Movie: Farmageddon (2019) - Family, Comedy, Adventure, Animation, Sci-Fi
 - kept (not its first genre): Monkeybone (2001) - Adventure, Fantasy, Animation, Comedy, Sci-Fi
 - kept (not its first genre): A Grand Day Out (1990) - Family, Animation, Comedy, Sci-Fi, Adventure
+- kept (not its first genre): A Close Shave (1996) - Family, Animation, Comedy
 
 ## Saturday Morning & Classic Cartoons · Iconic 80s Cartoons (series) - 88 kept of 91 looked at
 - kept (not its first genre): Teenage Mutant Ninja Turtles (1987) - Action & Adventure, Animation, Comedy, Kids
@@ -12224,3 +12224,29 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Family (movie) / Animals: 136
 - Discover · Family (movie) / Classics: 58
 - Discover · Family (movie) / International: 146
+
+## MDBList lists
+- mdb-228941: not read today, 0 kept from before
+- mdb-228941: empty
+- mdb-164980 (Comedies): 131
+- mdb-164919 (Sci-Fi): 22
+- mdb-198591 (Series): 264
+- mdb-148283: not read today, 0 kept from before
+- mdb-148283: empty
+- mdb-230335 (Anime): 44
+- mdb-205811 (IMDb Top 250): 250
+- mdb-205902 (Letterboxd Top 500): 499
+- mdb-207869 (Sight and Sound Greatest Films): 263
+- mdb-146624 (Cannes Winners): 1471
+- mdb-146622 (Venice Winners): 1371
+- mdb-146625 (Sundance Winners): 897
+- mdb-146627 (Golden Globe Winners): 923
+- mdb-32972 (Golden Globe Nominees): 1787
+- mdb-32970 (BAFTA Nominees): 1676
+- mdb-13676 (Criterion Essentials): 376
+- mdb-13675 (Criterion Popular): 1500
+- mdb-13674 (Criterion New Additions): 1502
+- mdb-132014: not read today, 0 kept from before
+- mdb-132014: empty
+- mdb-122821 (Emmy Winners): 360
+- mdb-34134 (Emmy Nominees): 1635
