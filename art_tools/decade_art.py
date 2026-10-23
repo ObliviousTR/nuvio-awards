@@ -355,9 +355,14 @@ def films_of(folder, n=3):
         start = (m * n) % len(pool)
     out = []
     for t, y in pool[start:] + pool[:start]:
-        a = K.art_of(("movie", t, y))
-        if a:
-            out.append((t, y, a[2]))
+        # a real scene suits a film "on its own format" better than designed key art: TMDB's best textless still
+        tid, _ = K.g.find_movie(t, y)
+        p = K.g.textless_backdrop("movie", tid) if tid else None
+        if not p:
+            a = K.art_of(("movie", t, y))
+            p = a[2] if a else None
+        if p:
+            out.append((t, y, p))
         if len(out) == n:
             break
     return out
