@@ -259,11 +259,19 @@ def mdb_items(lid, kind):
     out, offset = [], 0
     for _ in range(20):
         u = f"https://api.mdblist.com/lists/{lid}/items?limit=1000&offset={offset}&apikey={key}"
-        try:
-            import urllib.request
-            d = json.loads(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "nuvio-awards"}), timeout=60).read())
-        except Exception as e:
-            print(f"mdblist {lid}: {str(e).replace(key, '<key>')}")
+        d = None
+        for attempt in range(4):   # dynamic lists are built on request and can be slow: wait longer each time
+            try:
+                import urllib.request, time
+                d = json.loads(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "nuvio-awards"}),
+                                                      timeout=60 + 60 * attempt).read())
+                break
+            except Exception as e:
+                print(f"mdblist {lid} (try {attempt + 1}): {str(e).replace(key, '<key>')}")
+                if "404" in str(e):
+                    return None
+                time.sleep(10 * (attempt + 1))
+        if d is None:
             return None
         batch = d.get("movies" if kind == "movie" else "shows") or []
         out += batch
