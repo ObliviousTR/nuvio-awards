@@ -238,11 +238,12 @@ def build(video, out, films_dir=None):
         rows = [l.split("\t") for l in open(os.path.join(films_dir, "list.txt"), encoding="utf-8").read().splitlines()]
         for r in rows[:3]:
             films.append((film_scene(Image.open(os.path.join(films_dir, f"{r[0]}.jpg"))), film_label(r[1], r[2])))
-    MOVE, FILM, XF, BACK = 12, 28, 8, 14
+    MOVE, FILM, XF, BACK = 12, 28, 8, 22
     F = len(films)
     if F:
         seq += [("films", i) for i in range(MOVE + FILM * F)]
         seq += [("back", i / (BACK - 1)) for i in range(BACK)]
+        seq += [("cover", None)] * 6
     emb = cover_frame().copy()
     emb_t = Image.new("RGBA", (W, H), (0, 0, 0, 0))   # the cover's composition on clear, for the corner
     place_disc(emb_t, spr, half, END_C, END_R, 1.0, glow=0.55)
@@ -307,7 +308,7 @@ def build(video, out, films_dir=None):
             emblem(base, m)
             cv = base.convert("RGB")
         elif kind == "back":
-            u = ease(v)
+            u = 1 - (1 - v) ** 3      # eases out: comes to rest on the cover
             base = Image.blend(zoomed(films[-1][0], 0.07), Image.new("RGB", (W, H), (0, 0, 0)), u).convert("RGBA")
             if u < 1:
                 emblem(base, 1 - u)

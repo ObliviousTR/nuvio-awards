@@ -15,7 +15,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 W, H = 1280, 720
 OW, OH = 512, 288
-N = 160
+N = 180
 LOGOS = "https://raw.githubusercontent.com/ObliviousTR/nuvio-art/main/art/logos/studios/"
 
 
@@ -821,7 +821,7 @@ def build(title, out):
     cover.alpha_composite(final)
     cover = cover.convert("RGB")
     S = len(scenes)
-    T_OUT, T_IN0, T_IN1, T_MOVE, T_F1, T_BACK = 3, 7, 49, 59, 145, 160   # films ~1.6 s each
+    T_OUT, T_IN0, T_IN1, T_MOVE, T_F1, T_BACK = 6, 11, 53, 63, 149, 172   # films ~1.4 s each; 8 frames' rest at the end
     frames = []
     for i in range(N):
         if i < T_OUT:
@@ -841,7 +841,7 @@ def build(title, out):
             elif i < T_F1:
                 m = 1.0
             else:
-                m = 1 - ease((i - T_F1) / (T_BACK - 1 - T_F1))
+                m = (1 - min(1.0, (i - T_F1) / (T_BACK - 1 - T_F1))) ** 3   # eases out into the cover
             q = min(1.0, max(0.0, (i - T_IN1) / (T_F1 - T_IN1)))
             seg = min(S - 1, int(q * S))
             loc = q * S - seg
@@ -870,7 +870,7 @@ def build(title, out):
                    quality=80, method=4, kmin=0, kmax=1)
     cover.save(os.path.join(dd, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (OW * 4, OH * 2))
-    for j, idx in enumerate([0, 16, 24, 32, 44, 70, 100, 130]):
+    for j, idx in enumerate([0, 16, 24, 32, 44, 70, 100, 140]):
         strip.paste(frames[idx], ((j % 4) * OW, (j // 4) * OH))
     strip.save(os.path.join(dd, "frames.jpg"), quality=80)
     return [f[1] for f in films]

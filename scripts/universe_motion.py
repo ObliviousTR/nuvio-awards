@@ -1375,7 +1375,7 @@ def render_corner(uid, out_dir, mark, sc, paths, names):
     each); then it comes back to the middle and the card lands exactly on the cover. Seamless loop, ~8 s."""
     B = round(mark.build * SMOOTH)
     HD0 = round(mark.hold * SMOOTH)
-    PRE, SETTLE, MOVE, FILM, XF, BACK = 8, 8, 12, 40, 10, 14
+    PRE, SETTLE, MOVE, FILM, XF, BACK, REST = 12, 8, 12, 40, 10, 22, 12
     films = sc[:3]
     F = len(films)
     labels = [film_label(a, b) for a, b in names[:F]] if names else None
@@ -1442,20 +1442,21 @@ def render_corner(uid, out_dir, mark, sc, paths, names):
     # 3. back to the middle; the last film gives way to the cover's picture
     last = art.zoomed(films[-1], 0.07)
     for i in range(BACK):
-        u = ease(i / (BACK - 1))
+        x = i / (BACK - 1)
+        u = 1 - (1 - x) ** 3       # eases out: the mark glides in and comes to rest, no sudden stop
         bg = Image.blend(vignette(last), base0(0.02), u)
         cv = pools(bg, 1 - u).convert("RGBA")
         emblem(cv, 1 - u)
         frames.append(cv.convert("RGB"))
     pre = [Image.blend(cover, frames[0], ease(k / (PRE - 1))) for k in range(PRE)]
-    frames = pre + frames
+    frames = pre + frames + [cover] * REST    # a moment on the cover before the loop starts again
     d = os.path.join(out_dir, uid)
     os.makedirs(d, exist_ok=True)
     cover.save(os.path.join(d, "cover.jpg"), quality=88)
     art.graded(fetch_any(paths[0]), 0.95, 1.03, (1920, 1080)).save(os.path.join(d, "backdrop.jpg"), quality=86)
     small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
     small[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=small[1:], duration=[40] * len(small), loop=0,
-                  quality=78, method=4, kmin=0, kmax=1)
+                  quality=72, method=4, kmin=0, kmax=1)
     strip = Image.new("RGB", (GW * 4, GH * 2))
     for j, idx in enumerate([round(k * (len(small) - 1) / 7) for k in range(8)]):
         strip.paste(small[idx], ((j % 4) * GW, (j // 4) * GH))
