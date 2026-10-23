@@ -1,4 +1,4 @@
-# Spotlight status — 2026-10-22
+# Spotlight status — 2026-10-23
 
 Next rotation (all rotating cards): **2026-10-26**
 Next Cultural Pulse theme starts: **2026-10-25**
@@ -14,9 +14,9 @@ Next Cultural Pulse theme starts: **2026-10-25**
 | Retro Rewind | Universal & Hammer Monsters | 100 | 0 |  |
 | Yerli Yıldız | Kıvanç Tatlıtuğ | 7 | 11 |  |
 | The Cultural Pulse | Slashers & Masked Killers | 100 | 79 |  |
-| Fresh Out of Theaters | daily | 50 | 40 |  |
+| Fresh Out of Theaters | daily | 50 | 42 |  |
 | Box Office Champions | daily | 40 | 100 |  |
-| Certified Fresh & Must-See | daily | 60 | 50 |  |
+| Certified Fresh & Must-See | daily | 60 | 51 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 974169 Jenna Ortega (Acting)
