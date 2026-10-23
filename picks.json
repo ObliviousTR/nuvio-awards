@@ -1,0 +1,145 @@
+{
+ "date": "2026-10-23",
+ "picks": {
+  "Feel-Good": [
+   [
+    369557,
+    "Sing Street"
+   ],
+   [
+    212778,
+    "Chef"
+   ],
+   [
+    116745,
+    "The Secret Life of Walter Mitty"
+   ]
+  ],
+  "Cozy & Comforting": [
+   [
+    639,
+    "When Harry Met Sally..."
+   ],
+   [
+    9489,
+    "You've Got Mail"
+   ],
+   [
+    1581,
+    "The Holiday"
+   ]
+  ],
+  "Adrenaline Rush": [
+   [
+    1948,
+    "Crank"
+   ],
+   [
+    9799,
+    "The Fast and the Furious"
+   ],
+   [
+    1637,
+    "Speed"
+   ]
+  ],
+  "Epic & Sweeping": [
+   [
+    281957,
+    "The Revenant"
+   ],
+   [
+    9361,
+    "The Last of the Mohicans"
+   ],
+   [
+    197,
+    "Braveheart"
+   ]
+  ],
+  "Mind-Bending": [
+   [
+    545611,
+    "Everything Everywhere All at Once"
+   ],
+   [
+    492,
+    "Being John Malkovich"
+   ],
+   [
+    77,
+    "Memento"
+   ]
+  ],
+  "Slow Burn": [
+   [
+    310131,
+    "The Witch"
+   ],
+   [
+    97370,
+    "Under the Skin"
+   ],
+   [
+    64690,
+    "Drive"
+   ]
+  ],
+  "Dark & Gritty": [
+   [
+    4771,
+    "Gone Baby Gone"
+   ],
+   [
+    187,
+    "Sin City"
+   ],
+   [
+    2034,
+    "Training Day"
+   ]
+  ],
+  "Spooky & Creepy": [
+   [
+    49018,
+    "Insidious"
+   ],
+   [
+    1091,
+    "The Thing"
+   ],
+   [
+    242224,
+    "The Babadook"
+   ]
+  ],
+  "Tearjerkers": [
+   [
+    28178,
+    "Hachi: A Dog's Tale"
+   ],
+   [
+    142,
+    "Brokeback Mountain"
+   ],
+   [
+    424,
+    "Schindler's List"
+   ]
+  ],
+  "80s & 90s Vibes": [
+   [
+    2108,
+    "The Breakfast Club"
+   ],
+   [
+    601,
+    "E.T. the Extra-Terrestrial"
+   ],
+   [
+    620,
+    "Ghostbusters"
+   ]
+  ]
+ }
+}
