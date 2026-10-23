@@ -17,7 +17,7 @@ def get(url, raw=False):
 
 
 man = get(D + "/manifest.json")
-cats = [(c["type"], c["id"]) for c in man["catalogs"] if not any(e.get("isRequired") for e in c.get("extra", []))]
+cats = [(c["type"], c["id"]) for c in man["catalogs"] if not any(e.get("name") == "search" and e.get("isRequired") for e in c.get("extra", []))]
 items = {}
 def cat(tc):
     t, c = tc
