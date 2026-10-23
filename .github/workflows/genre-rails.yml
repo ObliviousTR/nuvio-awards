@@ -1,0 +1,29 @@
+name: Genre rails
+on:
+  schedule:
+    - cron: "23 3 * * *"   # every day 03:23 UTC (06:23 Istanbul)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: repo-writes
+jobs:
+  rails:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q pillow
+      - name: Build
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: python3 scripts/genre_rails.py
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A library spotlight/cache
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -q -m "Genre rails $(date -u +%Y-%m-%d)"
+          git pull --rebase -q && git push

@@ -1,0 +1,172 @@
+[
+ {
+  "id": "gen-genres-comedy-new-movies",
+  "name": "Comedy · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "35",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-new-series",
+  "name": "Comedy · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-popular-movies",
+  "name": "Comedy · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "35",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-popular-series",
+  "name": "Comedy · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "35",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-top-all-time-movies",
+  "name": "Comedy · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "35",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-top-all-time-series",
+  "name": "Comedy · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "35",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-top-of-the-year-movies",
+  "name": "Comedy · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "35",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-top-of-the-year-series",
+  "name": "Comedy · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 25,
+   "withGenres": "35",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-international-hits-movies",
+  "name": "Comedy · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "35",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-international-hits-series",
+  "name": "Comedy · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "35",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-popular-anime-movies",
+  "name": "Comedy · Popular Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,35",
+   "withOriginalLanguage": "ja"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-popular-anime-series",
+  "name": "Comedy · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,35",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-top-rated-anime-movies",
+  "name": "Comedy · Top Rated Anime Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "16,35",
+   "withOriginalLanguage": "ja"
+  }
+ },
+ {
+  "id": "gen-genres-comedy-top-rated-anime-series",
+  "name": "Comedy · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16,35",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  }
+ }
+]
