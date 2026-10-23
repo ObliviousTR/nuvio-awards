@@ -1,0 +1,1902 @@
+{
+  "version": 1,
+  "exportedAt": "2026-10-23T13:52:43.544Z",
+  "catalogs": [
+    {
+      "id": "tmdb.trending",
+      "name": "Trending Movies",
+      "type": "movie",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.trending",
+      "name": "Trending Series",
+      "type": "series",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.trending.movies",
+      "name": "Trakt Trending Movies",
+      "type": "movie",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.trending.shows",
+      "name": "Trakt Trending Shows",
+      "type": "series",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.anticipated.movies",
+      "name": "Trakt Most Anticipated Movies",
+      "type": "movie",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.anticipated.shows",
+      "name": "Trakt Most Anticipated Shows",
+      "type": "series",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "simkl.upnext",
+      "name": "Simkl Up Next",
+      "type": "series",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false,
+      "metadata": {
+        "useShowPosterForUpNext": false
+      }
+    },
+    {
+      "id": "simkl.watchlist.shows.watching",
+      "name": "Simkl Watching Shows",
+      "type": "series",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false,
+      "metadata": {
+        "status": "watching"
+      }
+    },
+    {
+      "id": "simkl.watchlist.movies.plantowatch",
+      "name": "Simkl Plan to Watch Movies",
+      "type": "movie",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false,
+      "metadata": {
+        "status": "plantowatch"
+      }
+    },
+    {
+      "id": "simkl.watchlist.shows.plantowatch",
+      "name": "Simkl Plan to Watch Shows",
+      "type": "series",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false,
+      "metadata": {
+        "status": "plantowatch"
+      }
+    },
+    {
+      "id": "simkl.watchlist.anime.watching",
+      "name": "Simkl Watching Anime",
+      "type": "anime",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false,
+      "metadata": {
+        "status": "watching"
+      }
+    },
+    {
+      "id": "simkl.watchlist.anime.plantowatch",
+      "name": "Simkl Plan to Watch Anime",
+      "type": "anime",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false,
+      "metadata": {
+        "status": "plantowatch"
+      }
+    },
+    {
+      "id": "mal.airing",
+      "name": "MAL Currently Airing Anime",
+      "type": "anime",
+      "source": "mal",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mal.season_top",
+      "name": "MAL Top Rated This Week",
+      "type": "anime",
+      "source": "mal",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mal.upcoming",
+      "name": "MAL Upcoming Season",
+      "type": "anime",
+      "source": "mal",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mal.top_anime",
+      "name": "MAL Top Anime",
+      "type": "anime",
+      "source": "mal",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mal.most_favorites",
+      "name": "MAL Most Favorites",
+      "type": "anime",
+      "source": "mal",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mal.most_popular",
+      "name": "MAL Most Popular",
+      "type": "anime",
+      "source": "mal",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "simkl.trending.anime",
+      "name": "Simkl Trending Anime",
+      "type": "anime",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false,
+      "metadata": {
+        "interval": "week"
+      }
+    },
+    {
+      "id": "mdblist.228941",
+      "listId": 228941,
+      "type": "movie",
+      "name": "Underrated & Cult Films",
+      "enabled": true,
+      "showInHome": false,
+      "source": "mdblist",
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "silentorbit95"
+      }
+    },
+    {
+      "id": "mdblist.164980",
+      "listId": 164980,
+      "type": "movie",
+      "name": "Underrated Comedies",
+      "enabled": true,
+      "showInHome": false,
+      "source": "mdblist",
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "amything"
+      }
+    },
+    {
+      "id": "mdblist.164919",
+      "listId": 164919,
+      "type": "movie",
+      "name": "Underrated Sci-Fi",
+      "enabled": true,
+      "showInHome": false,
+      "source": "mdblist",
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "amything"
+      }
+    },
+    {
+      "id": "mdblist.198591",
+      "listId": 198591,
+      "type": "series",
+      "name": "Hidden Gem Series",
+      "enabled": true,
+      "showInHome": false,
+      "source": "mdblist",
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "thomas.gobin"
+      }
+    },
+    {
+      "id": "mdblist.148283",
+      "listId": 148283,
+      "type": "series",
+      "name": "Under-the-Radar Series",
+      "enabled": true,
+      "showInHome": false,
+      "source": "mdblist",
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "samcutty"
+      }
+    },
+    {
+      "id": "flixpatrol.hbo-max.us.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on HBO Max (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.hbo-max.us.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on HBO Max (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.amazon-prime.us.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Prime Video (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.amazon-prime.us.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Prime Video (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.disney.us.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Disney+ (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.disney.us.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Disney+ (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.hulu.us.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Hulu (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.hulu.us.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Hulu (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.paramount.us.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Paramount+ (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.paramount.us.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Paramount+ (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.crunchyroll.us.all",
+      "type": "all",
+      "name": "Top 10 on Crunchyroll (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.discovery-plus.us.all",
+      "type": "all",
+      "name": "Top 10 on Discovery+ (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.shudder.us.all",
+      "type": "all",
+      "name": "Top 10 on Shudder (United States)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.netflix.global.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Netflix (Global)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.netflix.global.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Netflix (Global)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.apple-tv.global.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Apple TV+ (Global)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.apple-tv.global.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Apple TV+ (Global)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.netflix.tr.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Netflix (Turkey)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.netflix.tr.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Netflix (Turkey)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.hbo-max.tr.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on HBO Max (Turkey)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.amazon-prime.tr.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Prime Video (Turkey)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.amazon-prime.tr.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Prime Video (Turkey)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.disney.tr.movie",
+      "type": "movie",
+      "name": "Top 10 Movies on Disney+ (Turkey)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "flixpatrol.disney.tr.series",
+      "type": "series",
+      "name": "Top 10 TV Shows on Disney+ (Turkey)",
+      "enabled": true,
+      "showInHome": false,
+      "source": "flixpatrol",
+      "enableRatingPosters": true
+    },
+    {
+      "id": "mdblist.230335",
+      "type": "series",
+      "name": "Anime Hidden Gems",
+      "enabled": true,
+      "showInHome": false,
+      "source": "mdblist",
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "itemCount": 44,
+        "url": "https://mdblist.com/lists/mr.psmst/anime-hidden-gems",
+        "author": "mr.psmst"
+      },
+      "displayType": "series"
+    },
+    {
+      "id": "mdblist.122821",
+      "listId": 122821,
+      "name": "Emmy-Winning Series",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "danypolonio33"
+      }
+    },
+    {
+      "id": "mdblist.34134",
+      "listId": 34134,
+      "name": "Emmy Nominees",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "cookies6996"
+      }
+    },
+    {
+      "id": "mdblist.146624",
+      "listId": 146624,
+      "name": "All Cannes Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "atalante421"
+      }
+    },
+    {
+      "id": "mdblist.146622",
+      "listId": 146622,
+      "name": "All Venice Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "atalante421"
+      }
+    },
+    {
+      "id": "mdblist.146625",
+      "listId": 146625,
+      "name": "All Sundance Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "atalante421"
+      }
+    },
+    {
+      "id": "mdblist.146627",
+      "listId": 146627,
+      "name": "All Golden Globe-Winning Films",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "atalante421"
+      }
+    },
+    {
+      "id": "mdblist.32972",
+      "listId": 32972,
+      "name": "Golden Globe Nominees",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "premisrepresentation2"
+      }
+    },
+    {
+      "id": "mdblist.32970",
+      "listId": 32970,
+      "name": "BAFTA Nominees",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "internationalization22"
+      }
+    },
+    {
+      "id": "mdblist.13676",
+      "listId": 13676,
+      "name": "Criterion Collection · Essentials",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "linvo"
+      }
+    },
+    {
+      "id": "mdblist.13675",
+      "listId": 13675,
+      "name": "Criterion Collection · Popular",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "linvo"
+      }
+    },
+    {
+      "id": "mdblist.13674",
+      "listId": 13674,
+      "name": "Criterion Collection · New Additions",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "linvo"
+      }
+    },
+    {
+      "id": "mdblist.205902",
+      "listId": 205902,
+      "name": "Letterboxd Top 500",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "pgibbens"
+      }
+    },
+    {
+      "id": "mdblist.207869",
+      "listId": 207869,
+      "name": "Sight and Sound · Greatest Films of All Time",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "pgibbens"
+      }
+    },
+    {
+      "id": "mdblist.205811",
+      "listId": 205811,
+      "name": "IMDb Top 250",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "pgibbens"
+      }
+    },
+    {
+      "id": "mdblist.132014",
+      "listId": 132014,
+      "name": "Arthouse & Independent Cinema",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "default",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "atalante421"
+      }
+    },
+    {
+      "id": "mdblist.130556",
+      "listId": 130556,
+      "name": "Best Picture Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "kvlkh"
+      }
+    },
+    {
+      "id": "mdblist.105612",
+      "listId": 105612,
+      "name": "Best Picture Nominees",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "gatornylon"
+      }
+    },
+    {
+      "id": "mdblist.207588",
+      "listId": 207588,
+      "name": "Best Director Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "pgibbens"
+      }
+    },
+    {
+      "id": "mdblist.176179",
+      "listId": 176179,
+      "name": "Best Actor Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "mhstein"
+      }
+    },
+    {
+      "id": "mdblist.176180",
+      "listId": 176180,
+      "name": "Best Actress Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "mhstein"
+      }
+    },
+    {
+      "id": "mdblist.120905",
+      "listId": 120905,
+      "name": "Best Original Screenplay Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "kvlkh"
+      }
+    },
+    {
+      "id": "mdblist.120906",
+      "listId": 120906,
+      "name": "Best Adapted Screenplay Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "kvlkh"
+      }
+    },
+    {
+      "id": "mdblist.165893",
+      "listId": 165893,
+      "name": "Best International Feature Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "bjocampos"
+      }
+    },
+    {
+      "id": "mdblist.162642",
+      "listId": 162642,
+      "name": "Best Animated Feature Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "streamm1"
+      }
+    },
+    {
+      "id": "mdblist.119777",
+      "listId": 119777,
+      "name": "Best Cinematography Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "kvlkh"
+      }
+    },
+    {
+      "id": "mdblist.146630",
+      "listId": 146630,
+      "name": "All Oscar-Winning Films",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "atalante421"
+      }
+    },
+    {
+      "id": "mdblist.202235",
+      "listId": 202235,
+      "name": "Outstanding Drama Series",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "johberg"
+      }
+    },
+    {
+      "id": "mdblist.202234",
+      "listId": 202234,
+      "name": "Outstanding Comedy Series",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "johberg"
+      }
+    },
+    {
+      "id": "mdblist.210147",
+      "listId": 210147,
+      "name": "Outstanding Limited Series",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "johberg"
+      }
+    },
+    {
+      "id": "mdblist.165918",
+      "listId": 165918,
+      "name": "Sundance Grand Jury Prize · Dramatic",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "bjocampos"
+      }
+    },
+    {
+      "id": "mdblist.165916",
+      "listId": 165916,
+      "name": "Berlinale Golden Bear Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "bjocampos"
+      }
+    },
+    {
+      "id": "mdblist.209961",
+      "listId": 209961,
+      "name": "Golden Globes · Best Picture – Drama",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "johberg"
+      }
+    },
+    {
+      "id": "mdblist.209964",
+      "listId": 209964,
+      "name": "Golden Globes · Best Drama Series",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "johberg"
+      }
+    },
+    {
+      "id": "mdblist.209963",
+      "listId": 209963,
+      "name": "Golden Globes · Best Picture – Musical or Comedy",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "johberg"
+      }
+    },
+    {
+      "id": "mdblist.209965",
+      "listId": 209965,
+      "name": "Golden Globes · Best Musical or Comedy Series",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "johberg"
+      }
+    },
+    {
+      "id": "mdblist.209966",
+      "listId": 209966,
+      "name": "Golden Globes · Best Limited Series",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "johberg"
+      }
+    },
+    {
+      "id": "mdblist.170815",
+      "listId": 170815,
+      "name": "BAFTA · Best Film",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "imkaptain"
+      }
+    },
+    {
+      "id": "mdblist.34455",
+      "listId": 34455,
+      "name": "Best Supporting Actor Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34457",
+      "listId": 34457,
+      "name": "Best Supporting Actress Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34451",
+      "listId": 34451,
+      "name": "Best Documentary Feature Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34446",
+      "listId": 34446,
+      "name": "Best Visual Effects Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34445",
+      "listId": 34445,
+      "name": "Best Original Score Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34450",
+      "listId": 34450,
+      "name": "Best Film Editing Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34444",
+      "listId": 34444,
+      "name": "Best Production Design Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34443",
+      "listId": 34443,
+      "name": "Best Costume Design Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34442",
+      "listId": 34442,
+      "name": "Best Makeup & Hairstyling Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34461",
+      "listId": 34461,
+      "name": "Best Sound Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34448",
+      "listId": 34448,
+      "name": "Best Original Song Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.99248",
+      "listId": 99248,
+      "name": "Palme d'Or Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "kackebob"
+      }
+    },
+    {
+      "id": "mdblist.165900",
+      "listId": 165900,
+      "name": "Cannes Grand Prix Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "bjocampos"
+      }
+    },
+    {
+      "id": "mdblist.100355",
+      "listId": 100355,
+      "name": "Cannes Jury Prize Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "kackebob"
+      }
+    },
+    {
+      "id": "mdblist.165915",
+      "listId": 165915,
+      "name": "Venice Golden Lion Winners",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "bjocampos"
+      }
+    },
+    {
+      "id": "mdblist.165917",
+      "listId": 165917,
+      "name": "TIFF People's Choice Award",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "bjocampos"
+      }
+    },
+    {
+      "id": "mdblist.34489",
+      "listId": 34489,
+      "name": "Golden Globes · Best Non-English Language Film",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.34479",
+      "listId": 34479,
+      "name": "Golden Globes · Best Director",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false,
+      "sort": "released",
+      "order": "asc",
+      "genreSelection": "standard",
+      "enableRatingPosters": true,
+      "metadata": {
+        "author": "qjao"
+      }
+    },
+    {
+      "id": "mdblist.14949",
+      "listId": 14949,
+      "name": "Fresh Out of Theaters (Latest Digital Releases)",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mdblist.16535",
+      "listId": 16535,
+      "name": "Certified Fresh & Must-See (Movies)",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mdblist.25849",
+      "listId": 25849,
+      "name": "Certified Fresh & Must-See (Series)",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mdblist.28412",
+      "listId": 28412,
+      "name": "Emmy Award Winners (Series)",
+      "type": "series",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mdblist.28415",
+      "listId": 28415,
+      "name": "Golden Globe & BAFTA Highlights",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mdblist.1371",
+      "listId": 1371,
+      "name": "IMDb Top 250 Movies",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.boxoffice",
+      "name": "Box Office Champions (Trakt)",
+      "type": "movie",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.now_playing",
+      "name": "In Theaters Now (Box Office TMDB)",
+      "type": "movie",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mdblist.3865",
+      "listId": 3865,
+      "name": "Oscar Best Picture Winners & Nominees",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mdblist.34110",
+      "listId": 34110,
+      "name": "Cannes, Venice & Sundance Festival Darlings",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mdblist.3842",
+      "listId": 3842,
+      "name": "Letterboxd Top 250 Films",
+      "type": "movie",
+      "source": "mdblist",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.new",
+      "name": "New Movies",
+      "type": "movie",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.new",
+      "name": "New Series",
+      "type": "series",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.top",
+      "name": "All-Time Top Rated Movies",
+      "type": "movie",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.top",
+      "name": "All-Time Top Rated Series",
+      "type": "series",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.popular",
+      "name": "Popular Movies",
+      "type": "movie",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.popular",
+      "name": "Popular Series",
+      "type": "series",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.year",
+      "name": "By Decade & Best of 2026 (Movies)",
+      "type": "movie",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.year",
+      "name": "By Decade & Best of 2026 (Series)",
+      "type": "series",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.language",
+      "name": "International Cinema (Movies)",
+      "type": "movie",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "tmdb.language",
+      "name": "International Series (TV)",
+      "type": "series",
+      "source": "tmdb",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.trending",
+      "name": "Trakt Trending Movies",
+      "type": "movie",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.trending",
+      "name": "Trakt Trending Series",
+      "type": "series",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.anticipated",
+      "name": "Most Anticipated Movies",
+      "type": "movie",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "trakt.anticipated",
+      "name": "Most Anticipated Series",
+      "type": "series",
+      "source": "trakt",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "simkl.watchlist.movies",
+      "name": "Simkl Watchlist (Movies)",
+      "type": "movie",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "simkl.watchlist.series",
+      "name": "Simkl Watchlist (Series)",
+      "type": "series",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "simkl.watchlist.anime",
+      "name": "Simkl Watchlist (Anime)",
+      "type": "anime",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "simkl.trending",
+      "name": "Simkl Trending Anime",
+      "type": "anime",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "simkl.best",
+      "name": "Simkl All-Time Best Anime",
+      "type": "anime",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "simkl.airing",
+      "name": "Simkl Seasonal Airing Anime",
+      "type": "anime",
+      "source": "simkl",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mal.top",
+      "name": "MAL Top Rated Anime",
+      "type": "anime",
+      "source": "mal",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "mal.popular",
+      "name": "MAL Most Popular Anime",
+      "type": "anime",
+      "source": "mal",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.nfx",
+      "name": "Netflix (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.nfx",
+      "name": "Netflix (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.hbm",
+      "name": "HBO Max (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.hbm",
+      "name": "HBO Max (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.atp",
+      "name": "Apple TV+ (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.atp",
+      "name": "Apple TV+ (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.amp",
+      "name": "Prime Video (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.amp",
+      "name": "Prime Video (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.dnp",
+      "name": "Disney+ (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.dnp",
+      "name": "Disney+ (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.hlu",
+      "name": "Hulu (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.hlu",
+      "name": "Hulu (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.pmp",
+      "name": "Paramount+ (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.pmp",
+      "name": "Paramount+ (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.mub",
+      "name": "Mubi (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.mub",
+      "name": "Mubi (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.cru",
+      "name": "Crunchyroll (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.cru",
+      "name": "Crunchyroll (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.shd",
+      "name": "Shudder (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.shd",
+      "name": "Shudder (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.dpe",
+      "name": "Discovery+ (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.dpe",
+      "name": "Discovery+ (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.crc",
+      "name": "Criterion Channel (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.crc",
+      "name": "Criterion Channel (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.cts",
+      "name": "Curiosity Stream Docs (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.cts",
+      "name": "Curiosity Stream Docs (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.mgl",
+      "name": "MagellanTV Docs (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.mgl",
+      "name": "MagellanTV Docs (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.hay",
+      "name": "Hayu Reality (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.nfk",
+      "name": "Netflix Kids (Movies)",
+      "type": "movie",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.nfk",
+      "name": "Netflix Kids (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    },
+    {
+      "id": "streaming.hid",
+      "name": "HIDIVE Anime (Series)",
+      "type": "series",
+      "source": "streaming",
+      "enabled": true,
+      "showInHome": false
+    }
+  ]
+}
