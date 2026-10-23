@@ -24,6 +24,16 @@ def items(tok, kind, status):
     return sorted(out, key=lambda x: x["when"], reverse=True)
 
 
+def title_of(kind, tid, fallback):
+    """Turkish productions keep their original (Turkish) name, everything else its English name - from TMDB"""
+    try:
+        d = json.loads(urllib.request.urlopen(f"https://api.themoviedb.org/3/{kind}/{tid}?api_key={TMDB}&language=en-US", timeout=60).read())
+    except Exception:
+        return fallback
+    t, o = (d.get("title"), d.get("original_title")) if kind == "movie" else (d.get("name"), d.get("original_name"))
+    return (o if d.get("original_language") == "tr" else t) or fallback
+
+
 def backdrop(kind, tid):
     u = f"https://api.themoviedb.org/3/{kind}/{tid}/images?api_key={TMDB}&include_image_language=null,en"
     d = json.loads(urllib.request.urlopen(u, timeout=60).read())
@@ -60,6 +70,7 @@ def main(out):
     keep = [l for l in keep if not l.startswith("simkl_")]
     for i, (it, img) in enumerate(picks, 1):
         img.save(os.path.join(out, f"simkl_{i}.jpg"), quality=92)
+        it["title"] = title_of(it["kind"], it["tmdb"], it["title"])
         keep.append(f"simkl_{i}\t{it['title']}\t{it['year']}\n")
     open(lst, "w", encoding="utf-8").writelines(keep)
     print("My Simkl:", " | ".join(f"{it['title']} ({it['year']})" for it, _ in picks))
