@@ -453,8 +453,8 @@ def fall():
     return lay
 
 
-def sub_layer(title, source):
-    """Under the films: the title, and what it was adapted from."""
+def sub_layer(title, source, year=None):
+    """Under the films: the title, then its year and what it was adapted from."""
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
     t = title.upper()
@@ -462,7 +462,7 @@ def sub_layer(title, source):
     while width(t, font("ExtraBold", fz), 3) > W - 140 and fz > 26:
         fz -= 2
     tracked(d, (58, H - 118), t, font("ExtraBold", fz), (255, 255, 255, 255), 3)
-    src = "BASED ON " + source
+    src = (f"{year}  ·  " if year else "") + "BASED ON " + source
     fn = font("SemiBold", 21)
     while width(src, fn, 6) > W - 140 and fn.size > 14:
         fn = font("SemiBold", fn.size - 1)
@@ -646,7 +646,7 @@ def build(folder, out):
         else:
             srcs.append(make(r))
     fl = fall()
-    subs = [sub_layer(it[1], ("THE BOOK BY " if look == "book" else "") + it[3]) for it, _ in films]
+    subs = [sub_layer(it[1], ("THE BOOK BY " if look == "book" else "") + it[3], it[2]) for it, _ in films]
     em = emblem(look, word)
     big = fit(em, W * 0.62, H * (0.8 if look == "book" else 0.62))
     small = fit(em, W * 0.2, H * 0.2)
@@ -698,7 +698,7 @@ def build(folder, out):
             c.alpha_composite(amul(subs[k], sa))
         else:
             # back to the cover: the last film sinks into the dark backdrop, the emblem returns to the middle
-            u = ease((i - (F0 + SEG * len(films))) / BACK)
+            u = ease((i - (F0 + SEG * len(films))) / (BACK - 1))   # lands exactly on the cover
             pic = Image.blend(zoomed(reals[-1], 0.06), back, u)
             c = pic.convert("RGBA")
             c.alpha_composite(amul(fl, 1 - u))

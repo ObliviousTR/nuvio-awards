@@ -1,6 +1,6 @@
 """Studios row: each card opens with a short ident inspired by the studio's own logo animation, then the logo settles
-small in the corner while three of the studio's iconic films play behind it (textless key art), a light runs round
-the card, and the logo comes back to the middle (seamless loop, 8 s). Cover = the settled ident.
+small in the corner while three of the studio's iconic films play behind it (textless key art, each film's name and
+year lower left), and the logo comes back to the middle (seamless loop, 8 s). Cover = the settled ident.
 Logos are the studios' own (TMDB company logos, kept in nuvio-art art/logos/studios); the motion is ours.
 The film trio moves on every month through each studio's pool (.github/workflows/studio-art.yml -> studio-art).
 usage: python3 art_tools/studio_art.py OUT_DIR [titles...]
@@ -778,14 +778,35 @@ def film_scene(img):
     m = Image.new("L", (W, H), 0)
     d = ImageDraw.Draw(m)
     d.ellipse((-W * 0.25, -H * 0.55, W * 0.55, H * 0.55), fill=215)       # a dark pool behind the corner logo
+    d.ellipse((-W * 0.3, H * 0.62, W * 0.62, H * 1.3), fill=175)          # and one behind the film's name
     m = m.filter(ImageFilter.GaussianBlur(W * 0.08))
     return Image.composite(Image.new("RGB", (W, H), (4, 5, 10)), im, m)
+
+
+def film_label(name, year):
+    """Lower left, the newer rows' film label: bold name, the year tracked under it, a soft shadow."""
+    from reletter import f as font, tracked, width
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    t = name.upper()
+    fn = font("ExtraBold", 40)
+    while width(t, fn, 3) > W - 140 and fn.size > 24:
+        fn = font("ExtraBold", fn.size - 2)
+    y = H - 120
+    tracked(d, (54, y), t, fn, (255, 255, 255, 255), 3)
+    tracked(d, (56, y + fn.size + 12), str(year), font("SemiBold", 20), (210, 210, 210, 255), 8)
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sh.putalpha(lay.getchannel("A").filter(ImageFilter.GaussianBlur(9)).point(lambda v: round(v * 0.85)))
+    sh.alpha_composite(lay)
+    return sh
 
 
 def build(title, out):
     st = STUDIOS[title]()
     films = K.trio(st.pool, 3)
     scenes = [film_scene(K.g.load_img(p)) for _, _, p in films]
+    labels = [film_label(*(K.LABEL.get((x[0], x[1])) or g.labels_of([x], K.KIND.get((x[0], x[1]), "movie"))[0]))
+              for x in films]
     final = st.logo(1.0, final=True)
     if hasattr(st, "corner_logo"):                     # idents with scenery (beams, a lit room): only the mark travels
         lg, cx0, cy0 = st.corner_logo()
@@ -835,17 +856,12 @@ def build(title, out):
             tx, ty = 40 + L.width / 2, 34 + L.height / 2
             x, y = cx0 + (tx - cx0) * m, cy0 + (ty - cy0) * m
             cv.alpha_composite(L, (round(x - L.width / 2), round(y - L.height / 2)))
-            if m > 0.02:                                   # the card's light runs round once while the films play
-                fr = Image.new("L", (W, H), 0)
-                pts = g.frame_path(q)
-                if len(pts) > 1 and q > 0:
-                    ImageDraw.Draw(fr).line(pts, fill=255, width=4, joint="curve")
-                gl = Image.new("RGBA", (W, H), st.accent + (0,))
-                gl.putalpha(fr.filter(ImageFilter.GaussianBlur(9)).point(lambda v: min(255, round(v * 1.6 * m))))
-                cv.alpha_composite(gl)
-                ln = Image.new("RGBA", (W, H), st.accent + (0,))
-                ln.putalpha(fr.point(lambda v: round(v * m)))
-                cv.alpha_composite(ln)
+            if m > 0.02 and labels:                        # the film's name and year, lower left
+                la = ease((loc - 0.06) / 0.1) * (1 - ease((loc - 0.84) / 0.12)) if seg < S - 1 else \
+                    ease((loc - 0.06) / 0.1) * (1 - ease((loc - 0.8) / 0.12))
+                la *= m
+                if la > 0:
+                    cv.alpha_composite(alpha_mul(labels[seg], la))
             cv = cv.convert("RGB")
         frames.append(cv.resize((OW, OH), Image.LANCZOS))
     dd = os.path.join(out, g.slug_of(title))
