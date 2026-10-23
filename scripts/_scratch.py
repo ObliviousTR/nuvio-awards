@@ -1,7 +1,7 @@
 """Survey before the TR proxy v2: (1) how often AIOMetadata metas lack poster/background/logo (what TMDB Artwork
 enrichment used to cover), (2) Turkish titles in the catalogs and their Turkish logo coverage, (3) Posters+ text
 fallback for Turkish titles without a Turkish logo."""
-import concurrent.futures as cf, io, json, os, re, urllib.parse, urllib.request
+import concurrent.futures as cf, io, json, urllib.error, os, re, urllib.parse, urllib.request
 from PIL import Image, ImageDraw, ImageFont
 AIO = os.environ["AIOMETADATA_URL"].strip()
 u = urllib.parse.urlsplit(AIO)
@@ -30,13 +30,20 @@ with cf.ThreadPoolExecutor(8) as ex:
         for t, i in lst:
             items[(t, i)] = 1
 ids = [k for k in items if k[0] in ("movie", "series")]
+import time
 def meta(k):
     t, i = k
-    try:
-        return k, get(f"{D}/meta/{t}/{urllib.parse.quote(i)}.json").get("meta") or {}
-    except Exception as e:
-        return k, {"_err": str(e)}
-with cf.ThreadPoolExecutor(8) as ex:
+    err = None
+    for attempt in range(4):
+        try:
+            return k, get(f"{D}/meta/{t}/{i}.json").get("meta") or {}
+        except urllib.error.HTTPError as e:
+            err = f"HTTP {e.code}"
+        except Exception as e:
+            err = type(e).__name__ + " " + str(e)[:60]
+        time.sleep(2 + 3 * attempt)
+    return k, {"_err": err}
+with cf.ThreadPoolExecutor(3) as ex:
     metas = dict(ex.map(meta, ids))
 def bad(v):
     return not v or "missing_" in str(v)
@@ -44,7 +51,11 @@ rep = [f"catalogs {len(cats)}, items {len(ids)}"]
 miss = {f: [k for k, m in metas.items() if bad(m.get(f))] for f in ("poster", "background", "logo")}
 for f, ks in miss.items():
     rep.append(f"missing {f}: {len(ks)}  e.g. {[metas[k].get('name') for k in ks[:8]]}")
-rep.append(f"errors: {sum(1 for m in metas.values() if '_err' in m)}")
+import collections
+rep.append(f"errors: {collections.Counter(m['_err'] for m in metas.values() if '_err' in m).most_common(5)}")
+miss = {f: [k for k, m in metas.items() if '_err' not in m and bad(m.get(f))] for f in ("poster", "background", "logo")}
+for f, ks in miss.items():
+    rep.append(f"(ok metas) missing {f}: {len(ks)}  e.g. {[metas[k].get('name') for k in ks[:10]]}")
 tr = [(k, m) for k, m in metas.items() if f"{k[0]}|{k[1]}" in MAP]
 rep.append(f"Turkish in catalogs: {len(tr)}; with a Turkish logo in our map: {sum(1 for k, m in tr if MAP[f'{k[0]}|{k[1]}'][1])}")
 for k, m in tr[:40]:
