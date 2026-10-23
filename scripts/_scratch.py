@@ -29,7 +29,7 @@ with cf.ThreadPoolExecutor(8) as ex:
     for lst in ex.map(cat, cats):
         for t, i in lst:
             items[(t, i)] = 1
-ids = [k for k in items if k[0] in ("movie", "series")]
+ids = [k for k in items if k[0] in ("movie", "series") and f"{k[0]}|{k[1]}" in MAP]
 import time
 def meta(k):
     t, i = k
@@ -62,20 +62,21 @@ for k, m in tr[:40]:
     e = MAP[f"{k[0]}|{k[1]}"]
     rep.append(f"   {k[1]} {m.get('name')!r} -> {e[0]!r} trlogo={'yes' if e[1] else 'NO'} poster={'P+' if 'postersplus' in str(m.get('poster')) else 'other' if m.get('poster') else 'none'}")
 # Posters+ text fallback test on Turkish titles without a Turkish logo
-nolog = [(k, m) for k, m in tr if not MAP[f"{k[0]}|{k[1]}"][1] and "postersplus" in str(m.get("poster"))][:4]
+nolog = [(k, m) for k, m in tr if not MAP[f"{k[0]}|{k[1]}"][1] and "postersplus" in str(m.get("poster"))][:5]
 tiles = []
 for k, m in nolog:
     p = urllib.parse.urlsplit(m["poster"]); q = [(a, b) for a, b in urllib.parse.parse_qsl(p.query) if a != "logo_priority"]
-    for lab, lp in (("now", None), ("original,text", "original,text")):
-        url = urllib.parse.urlunsplit(p._replace(query=urllib.parse.urlencode(q + ([("logo_priority", lp)] if lp else []))))
+    for lab, extra in (("now", []), ("original art", [("use_original_art", "true")]),
+                       ("orig art top", [("use_original_art", "true"), ("original_art_source", "top_rated")])):
+        url = urllib.parse.urlunsplit(p._replace(query=urllib.parse.urlencode(q + extra)))
         try:
             im = Image.open(io.BytesIO(get(url, raw=True))).convert("RGB"); im.thumbnail((260, 390)); tiles.append((f"{MAP[f'{k[0]}|{k[1]}'][0][:22]} {lab}", im))
         except Exception as e:
             rep.append(f"poster fetch failed {e}")
 if tiles:
-    cv = Image.new("RGB", (20 + 280 * len(tiles), 440), (24, 24, 28)); dr = ImageDraw.Draw(cv)
+    cv = Image.new("RGB", (20 + 280 * 6, 440 * ((len(tiles) + 5) // 6)), (24, 24, 28)); dr = ImageDraw.Draw(cv)
     for n, (lab, im) in enumerate(tiles):
-        cv.paste(im, (20 + 280 * n, 40)); dr.text((20 + 280 * n, 12), lab, fill=(220, 220, 220))
+        x, y = 20 + 280 * (n % 6), 440 * (n // 6); cv.paste(im, (x, y + 40)); dr.text((x, y + 12), lab, fill=(220, 220, 220))
     cv.save(f"{OUT}/text_fallback.jpg", quality=85)
 txt = "\n".join(rep)
 for s in (PATH, u.netloc, urllib.parse.quote(PATH, safe=""), PATH.split("/")[-1]):
