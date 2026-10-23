@@ -1,0 +1,27 @@
+name: Simkl link
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: repo-writes
+jobs:
+  link:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Link (shows a PIN, waits for it)
+        env:
+          SIMKL_CLIENT_ID: ${{ secrets.SIMKL_CLIENT_ID }}
+          MDBLIST_API_KEY: ${{ secrets.MDBLIST_API_KEY }}
+        run: python3 scripts/simkl_link.py
+      - name: Save the encrypted token
+        run: |
+          git add simkl/token.enc
+          git commit -q -m "Simkl linked (token encrypted)"
+          git pull --rebase -q && git push -q
