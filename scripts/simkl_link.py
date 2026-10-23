@@ -6,14 +6,23 @@
    key = the SIMKL_CLIENT_ID and MDBLIST_API_KEY secrets, which only GitHub has). The token is never printed.
 usage (CI): python3 scripts/simkl_link.py
 """
-import json, os, subprocess, sys, time, urllib.request
+import json, os, subprocess, sys, time, urllib.error, urllib.request
 
-CID = os.environ["SIMKL_CLIENT_ID"].strip()
-UA = {"User-Agent": "nuvio-awards", "Content-Type": "application/json"}
+CID = os.environ.get("SIMKL_CLIENT_ID", "").strip()
+UA = {"User-Agent": "nuvio-awards/1.0", "Content-Type": "application/json", "simkl-api-key": CID}
+APP = "&app-name=nuvio-awards&app-version=1.0"
 
 
 def get(u):
-    return json.loads(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read())
+    try:
+        return json.loads(urllib.request.urlopen(urllib.request.Request(u + APP, headers=UA), timeout=60).read())
+    except urllib.error.HTTPError as e:
+        body = e.read()[:300].decode("utf-8", "replace")
+        for k in (CID, os.environ.get("MDBLIST_API_KEY", "")):
+            if k:
+                body = body.replace(k, "***")
+        publish_code(f"error: HTTP {e.code} from Simkl\n{body}\n")
+        sys.exit(1)
 
 
 def publish_code(text):
@@ -23,6 +32,9 @@ def publish_code(text):
                    "git push -q -f origin design-refs && git checkout -q -", shell=True, check=True)
 
 
+if not CID:
+    publish_code("error: the SIMKL_CLIENT_ID secret is empty or missing\n")
+    sys.exit(1)
 pin = get(f"https://api.simkl.com/oauth/pin?client_id={CID}")
 code = pin["user_code"]
 publish_code(f"code: {code}\nenter at: {pin.get('verification_url', 'https://simkl.com/pin')}\nexpires in: {pin.get('expires_in')} s\n")
