@@ -1339,14 +1339,14 @@ def film_label(name, year):
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
     t = name.upper()
-    f = art.font("ExtraBold", 34)
+    f = art.font("ExtraBold", 40)
     while d.textlength(t, font=f) + 2 * len(t) > W * 0.6 and f.size > 20:
         f = art.font("ExtraBold", f.size - 2)
-    x, y = 54, H - 96
+    x, y = 54, H - 120
     for ch in t:
         d.text((x, y), ch, font=f, fill=(255, 255, 255, 255))
         x += d.textlength(ch, font=f) + 2
-    fy = art.font("SemiBold", 19)
+    fy = art.font("SemiBold", 20)
     x = 56
     for ch in str(year):
         d.text((x, y + f.size + 10), ch, font=fy, fill=(205, 205, 205, 255))
