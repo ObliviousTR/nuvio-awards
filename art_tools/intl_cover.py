@@ -84,11 +84,11 @@ def cloth(im, mask, seed=0):
     a = np.asarray(im, np.float32)
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     wave = np.sin(xx / 95.0 + yy / 160.0 + seed) * 0.5 + np.sin(xx / 41.0 - yy / 70.0 + 2 * seed) * 0.25
-    light = 1 + 0.11 * wave
+    light = 1 + 0.07 * wave
     m = np.asarray(mask, np.float32) / 255
     inner = np.asarray(mask.filter(ImageFilter.GaussianBlur(14)), np.float32) / 255
     edge = np.clip(1 - (inner - 0.5) * 2, 0, 1) * m
-    a = a * light[..., None] * (1 - 0.35 * edge[..., None])
+    a = a * light[..., None] * (1 - 0.22 * edge[..., None])
     return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
 
 
@@ -104,11 +104,29 @@ def flag_map(per, P, seed=0):
             continue
         fl = flag_svg(iso)
         bw, bh = bb[2] - bb[0], bb[3] - bb[1]
-        k = max(bw / fl.width, bh / fl.height) * 1.04
-        f = fl.resize((max(1, round(fl.width * k)), max(1, round(fl.height * k))), Image.LANCZOS)
-        cx, cy = (bb[0] + bb[2]) / 2, (bb[1] + bb[3]) / 2
-        layer = Image.new("RGB", (W, H), (0, 0, 0))
-        layer.paste(f, (round(cx - f.width / 2), round(cy - f.height / 2)))
+        # the whole flag inside the country (nothing of it cropped away), its edges carried on to the borders:
+        # stripes run on, a plain field (Korea's white, Türkiye's red) simply continues
+        a_ = np.asarray(fl.resize((60, 45)), np.float32)
+        stripes = a_.std(0).mean() < 6 or a_.std(1).mean() < 6   # plain bands (Italy, Germany, France...)
+        if stripes:  # bands simply stretch across the whole country
+            f = np.asarray(fl.resize((bw, bh), Image.LANCZOS))
+            layer = Image.new("RGB", (W, H), (0, 0, 0))
+            layer.paste(Image.fromarray(f), (bb[0], bb[1]))
+            fill.paste(layer, (0, 0), m)
+            allm = ImageChops.lighter(allm, m)
+            tints.append(tuple(int(v) for v in np.asarray(fl.resize((8, 8))).reshape(-1, 3).mean(0)))
+            continue
+        # emblems and crosses: centred on the country's heartland (the point deepest inside it), sized to fit
+        from scipy import ndimage as ndi
+        dist = ndi.distance_transform_edt(np.asarray(m) > 128)
+        cy, cx = np.unravel_index(np.argmax(dist), dist.shape)
+        r = float(dist[cy, cx])
+        k = min(bw / fl.width, bh / fl.height, 2.6 * r / max(fl.width, fl.height) * 1.25) * 0.95
+        f = np.asarray(fl.resize((max(1, round(fl.width * k)), max(1, round(fl.height * k))), Image.LANCZOS))
+        x0, y0 = round(cx - f.shape[1] / 2), round(cy - f.shape[0] / 2)
+        pad = ((max(0, y0), max(0, H - y0 - f.shape[0])), (max(0, x0), max(0, W - x0 - f.shape[1])), (0, 0))
+        f = np.pad(f, pad, mode="edge")[max(0, -y0):max(0, -y0) + H, max(0, -x0):max(0, -x0) + W]
+        layer = Image.fromarray(f)
         fill.paste(layer, (0, 0), m)
         allm = ImageChops.lighter(allm, m)
         tints.append(tuple(int(v) for v in np.asarray(fl.resize((8, 8))).reshape(-1, 3).mean(0)))
