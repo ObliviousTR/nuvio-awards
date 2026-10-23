@@ -20,7 +20,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIB = os.path.join(ROOT, "library")
 L = lambda *p: os.path.join(LIB, *p)
 TODAY = dt.date.today()
-LIMIT, PAGES = 100, 15
+LIMIT, PAGES, PAGE = 500, 60, 100   # up to 500 titles a rail, served 100 at a time (Nuvio asks for skip=100, 200...)
 
 # genre -> genres that may come before it (movie / tv ids). A genre not listed must lead (or be second at most).
 BEFORE = {
@@ -31,6 +31,12 @@ BEFORE = {
         35: {10759, 10751, 16, 10765, 10762},                    # Comedy
     },
 }
+MOVIE_G = {28: "Action", 12: "Adventure", 16: "Animation", 35: "Comedy", 80: "Crime", 99: "Documentary", 18: "Drama",
+           10751: "Family", 14: "Fantasy", 36: "History", 27: "Horror", 10402: "Music", 9648: "Mystery",
+           10749: "Romance", 878: "Sci-Fi", 10770: "TV Movie", 53: "Thriller", 10752: "War", 37: "Western"}
+TV_G = {10759: "Action & Adventure", 16: "Animation", 35: "Comedy", 80: "Crime", 99: "Documentary", 18: "Drama",
+        10751: "Family", 10762: "Kids", 9648: "Mystery", 10763: "News", 10764: "Reality", 10765: "Sci-Fi & Fantasy",
+        10766: "Soap", 10767: "Talk", 10768: "War & Politics", 37: "Western"}
 KEYMAP = {"voteCountGte": "vote_count.gte", "withGenres": "with_genres", "withoutGenres": "without_genres",
           "withOriginalLanguage": "with_original_language", "withKeywords": "with_keywords",
           "withOriginCountry": "with_origin_country", "withWatchProviders": "with_watch_providers",
@@ -62,10 +68,19 @@ class GenreCache:
         json.dump(self.d, open(self.path, "w"), sort_keys=True, separators=(",", ":"))
 
 
-def fits(kind, genres, want):
+OVR = {}   # library/genre_overrides.json: {"movie:35": {"include": [ids], "exclude": [ids]}} - hand decisions per genre
+
+
+def fits(kind, genres, want, tid=None):
     """want: the rail's with_genres ("35", "28|12" = any of, "16,35" = all of)."""
     allof = "," in want
     targets = [int(x) for x in re.split(r"[|,]", want) if x]
+    for t in targets:
+        o = OVR.get(f"{kind}:{t}", {})
+        if tid in o.get("exclude", []):
+            return False
+        if tid in o.get("include", []) and (t in genres or not allof):
+            return True
     ok = []
     for t in targets:
         if t not in genres:
@@ -96,36 +111,50 @@ def params_of(r):
 
 def build(r, G):
     kind, q = params_of(r)
-    res, kept = [], []
+    res, kept, dropped = [], [], []
     for page in range(1, PAGES + 1):
         d = tmdb(f"/discover/{kind}", page=page, include_adult="false", **q) or {}
         batch = d.get("results", [])
         G.prefetch(kind, [x["id"] for x in batch])
         for x in batch:
-            if fits(kind, G.get(kind, x["id"]), r["filters"]["withGenres"]):
+            if fits(kind, G.get(kind, x["id"]), r["filters"]["withGenres"], x["id"]):
                 kept.append(x)
+            else:
+                dropped.append(x)
         res += batch
         if page >= d.get("total_pages", 0) or len(kept) >= LIMIT * 1.25:
             break
-    return kind, S.rows(kind, kept, limit=LIMIT), len(res)
+    return kind, S.rows(kind, kept, limit=LIMIT), len(res), dropped
 
 
 def main():
     rails = json.load(open(L("genre_rails.json"), encoding="utf-8"))
+    OVR.update(json.load(open(L("genre_overrides.json"), encoding="utf-8")) if os.path.exists(L("genre_overrides.json")) else {})
     S.IMDB = S.ImdbCache()
     G = GenreCache()
     cats, report = [], []
+    names = lambda kind, gs: ", ".join((MOVIE_G if kind == "movie" else TV_G).get(g, str(g)) for g in gs)
     for r in rails:
-        kind, items, seen = build(r, G)
+        kind, items, seen, dropped = build(r, G)
         typ = "series" if kind == "tv" else "movie"
         if not items:
             report.append(f"EMPTY {r['id']}")
             continue
-        os.makedirs(L("catalog", typ), exist_ok=True)
-        json.dump({"metas": [S.meta(x, typ) for x in items]}, open(L("catalog", typ, f"{r['id']}.json"), "w", encoding="utf-8"),
-                  ensure_ascii=False)
-        cats.append({"type": typ, "id": r["id"], "name": r["name"]})
-        report.append(f"{r['id']}: {len(items)} kept of {seen} looked at")
+        base = L("catalog", typ, r["id"])
+        os.makedirs(base, exist_ok=True)
+        for old in os.listdir(base):
+            os.remove(os.path.join(base, old))
+        for k in range(0, len(items), PAGE):
+            page = {"metas": [S.meta(x, typ) for x in items[k:k + PAGE]]}
+            json.dump(page, open(base + ".json" if k == 0 else os.path.join(base, f"skip={k}.json"), "w", encoding="utf-8"),
+                      ensure_ascii=False)
+            if k == 0:
+                json.dump(page, open(os.path.join(base, "skip=0.json"), "w", encoding="utf-8"), ensure_ascii=False)
+        cats.append({"type": typ, "id": r["id"], "name": r["name"], "extra": [{"name": "skip", "isRequired": False}]})
+        report.append(f"\n## {r['name']} ({typ}) - {len(items)} kept of {seen} looked at")
+        top = sorted(dropped, key=lambda x: -(x.get("vote_count") or 0))[:25]
+        report += [f"- left out: {x.get('title') or x.get('name')} ({(x.get('release_date') or x.get('first_air_date') or '')[:4]})"
+                   f" [{kind}:{x['id']}] - {names(kind, G.get(kind, x['id']))}" for x in top]
     # the Library's manifest: its own catalogs stay, ours (gen-*) are replaced
     man = json.load(open(L("manifest.json"), encoding="utf-8"))
     man["catalogs"] = [c for c in man["catalogs"] if not c["id"].startswith("gen-")] + cats
@@ -133,7 +162,10 @@ def main():
     json.dump(man, open(L("manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     S.IMDB.save()
     G.save()
-    print("\n".join(report))
+    open(L("GENRE_RAILS.md"), "w", encoding="utf-8").write(
+        "# Genre-true rails\n\nThe best-known titles each rail leaves out (by vote count). To keep one, add its id under the "
+        "rail's genre in library/genre_overrides.json, e.g. {\"movie:35\": {\"include\": [1832]}}.\n" + "\n".join(report))
+    print("\n".join(x for x in report if x.startswith("\n##") or x.startswith("EMPTY")))
 
 
 if __name__ == "__main__":
