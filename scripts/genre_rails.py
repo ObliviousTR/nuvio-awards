@@ -251,6 +251,92 @@ def build_discover(G, report):
     return cats
 
 
+def mdb_items(lid, kind):
+    """A MDBList list through the API (MDBLIST_API_KEY), as rows with IMDb ids; None if it can't be read."""
+    key = os.environ.get("MDBLIST_API_KEY")
+    if not key:
+        return None
+    out, offset = [], 0
+    for _ in range(20):
+        u = f"https://api.mdblist.com/lists/{lid}/items?limit=1000&offset={offset}&apikey={key}"
+        try:
+            import urllib.request
+            d = json.loads(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "nuvio-awards"}), timeout=60).read())
+        except Exception as e:
+            print(f"mdblist {lid}: {str(e).replace(key, '<key>')}")
+            return None
+        batch = d.get("movies" if kind == "movie" else "shows") or []
+        out += batch
+        if not batch or not (d.get("pagination") or {}).get("has_more"):
+            break
+        offset += len(d.get("movies") or []) + len(d.get("shows") or [])
+    rows = []
+    for x in out:
+        imdb = x.get("imdb_id")
+        if imdb:
+            rows.append({"imdb": imdb, "name": x.get("title"), "year": str(x.get("release_year") or ""), "rank": x.get("rank") or 0})
+    return rows
+
+
+def old_rows(typ, cid):
+    """The rows of a catalog as last published (all its pages)."""
+    base = L("catalog", typ, cid)
+    files = [base + ".json"] + ([os.path.join(base, f) for f in sorted(os.listdir(base), key=lambda f: int(re.sub(r"\D", "", f) or 0))
+                                 if f.startswith("skip=") and f != "skip=0.json"] if os.path.isdir(base) else [])
+    rows = []
+    for f in files:
+        if os.path.exists(f):
+            rows += [{"imdb": m["id"], "name": m["name"], "year": m.get("releaseInfo", ""), "rank": len(rows)}
+                     for m in json.load(open(f, encoding="utf-8"))["metas"]]
+    return rows
+
+
+def build_mdb(report):
+    """MDBList lists we serve ourselves: folder-only mdb-<id> catalogs + Discover catalogs with one choice per list."""
+    if not os.path.exists(L("mdb_lists.json")):
+        return [], []
+    spec = json.load(open(L("mdb_lists.json"), encoding="utf-8"))
+    hidden, opts = [], {cid: [] for cid in spec["discover"]}
+    for e in spec["lists"]:
+        typ = e["type"]
+        cid = f"mdb-{e['id']}"
+        rows = mdb_items(e["id"], typ)
+        if rows is None:   # the API can't be reached today: serve yesterday's list again
+            rows = old_rows(typ, cid)
+            report.append(f"- {cid}: not read today, {len(rows)} kept from before")
+        rows.sort(key=(lambda x: -int(x["year"] or 0)) if e.get("sort") == "newest" else (lambda x: x["rank"]))
+        if not rows:
+            report.append(f"- {cid}: empty")
+            continue
+        if os.path.isdir(L("catalog", typ, cid)):
+            for old in os.listdir(L("catalog", typ, cid)):
+                os.remove(os.path.join(L("catalog", typ, cid), old))
+        write_pages(typ, cid, rows)
+        hidden.append({"type": typ, "id": cid, "name": e["discover"][1], "extra": HIDE_EXTRA})
+        opts[e["discover"][0]].append((e["discover"][1], rows))
+        report.append(f"- {cid} ({e['discover'][1]}): {len(rows)}")
+    disc = []
+    for dcid, d in spec["discover"].items():
+        typ = d["type"]
+        labels = []
+        base = L("catalog", typ, dcid)
+        if os.path.isdir(base):
+            for old in os.listdir(base):
+                os.remove(os.path.join(base, old))
+        for i, (label, rows) in enumerate(opts[dcid]):
+            if i == 0:
+                write_pages(typ, dcid, rows)
+            write_pages(typ, dcid, rows, label)
+            labels.append(label)
+        if labels:
+            disc.append({"type": typ, "id": dcid, "name": d["name"],
+                         "extra": [{"name": "genre", "options": labels, "isRequired": False}, {"name": "skip", "isRequired": False}]})
+    return disc, hidden
+
+
+HIDE_EXTRA = [{"name": "search", "isRequired": True}, {"name": "folder", "isRequired": True}, {"name": "skip", "isRequired": False}]
+
+
 def main():
     rails = json.load(open(L("genre_rails.json"), encoding="utf-8"))
     OVR.update({k: v for k, v in (json.load(open(L("genre_overrides.json"), encoding="utf-8")) if os.path.exists(L("genre_overrides.json")) else {}).items() if not k.startswith("_")})
@@ -286,9 +372,11 @@ def main():
                    f" [{kind}:{x['id']}] - {names(kind, G.get(kind, x['id']))}" for x in top]
     report.append("\n## Discover catalogs")
     disc = build_discover(G, report)
+    report.append("\n## MDBList lists")
+    mdisc, mhidden = build_mdb(report)
     # the Library's manifest: Discover catalogs first (they head Nuvio's Discover menu), its own catalogs, ours (gen-*)
     man = json.load(open(L("manifest.json"), encoding="utf-8"))
-    man["catalogs"] = disc + [c for c in man["catalogs"] if not c["id"].startswith(("gen-", "disc-"))] + cats
+    man["catalogs"] = disc + mdisc + [c for c in man["catalogs"] if not c["id"].startswith(("gen-", "disc-", "mdb-"))] + cats + mhidden
     man["version"] = f"1.0.{TODAY.strftime('%Y%m%d')}"
     json.dump(man, open(L("manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     S.IMDB.save()

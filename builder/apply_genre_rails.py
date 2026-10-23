@@ -22,10 +22,10 @@ def slug(s):
 
 
 def published():
-    """gen-* catalogs the Library serves now (a rail the daily run found empty is not there: keep it live)."""
+    """gen-* / mdb-* catalogs the Library serves now (a rail the daily run found empty is not there: keep it live)."""
     try:
         return {c["id"] for c in json.load(open(os.path.join(os.path.dirname(DEFS), "manifest.json"), encoding="utf-8"))["catalogs"]
-                if c["id"].startswith("gen-")}
+                if c["id"].startswith(("gen-", "mdb-"))}
     except Exception:
         return set()
 
@@ -56,6 +56,18 @@ def main(src, dst):
                 else:
                     new.append(s)
             f["sources"] = new
+    # MDBList lists: our own copies (library mdb-<id>) instead of AIOMetadata's, wherever a folder uses one
+    m = 0
+    for row in data:
+        for f in row.get("folders", []):
+            for i, s in enumerate(f["sources"]):
+                cid = s.get("catalogId") or ""
+                if s.get("addonId") == "aio-metadata" and cid.startswith("mdblist.") and f"mdb-{cid.split('.')[1]}" in live:
+                    a = addon_src(s["title"], "MOVIE" if s["type"] == "movie" else "TV", f"mdb-{cid.split('.')[1]}", addon_id=LIB)
+                    a["genre"] = None
+                    f["sources"][i] = a
+                    m += 1
+    print(f"mdblist: {m} rails now from the Library's own copies")
     json.dump(defs, open(DEFS, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     save(data, dst)
     print(f"genre rails: {n} rails now genre-true ({', '.join(sorted(ROWS))})")

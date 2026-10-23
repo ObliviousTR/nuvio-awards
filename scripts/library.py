@@ -440,7 +440,7 @@ def main():
     # genre-true rails (gen-*) are written by scripts/genre_rails.py every day: keep them
     try:
         old = json.load(open(L("manifest.json"), encoding="utf-8"))["catalogs"]
-        kept = [c for c in old if c["id"].startswith("gen-")]
+        kept = [c for c in old if c["id"].startswith(("gen-", "mdb-"))]
         head = [c for c in old if c["id"].startswith("disc-")]
     except Exception:
         kept, head = [], []

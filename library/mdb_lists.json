@@ -1,0 +1,33 @@
+{
+ "_how": "MDBList lists we serve ourselves (scripts/genre_rails.py, daily, with the MDBLIST_API_KEY secret). Each becomes a folder-only catalog mdb-<id> and a choice in a Discover catalog (discover: catalog id, label). sort: rank (the list's own order) or newest.",
+ "discover": {
+  "disc-hidden-gems-movies": {"type": "movie", "name": "Discover · Hidden Gems"},
+  "disc-hidden-gems-series": {"type": "series", "name": "Discover · Hidden Gems"},
+  "disc-best-of-movies": {"type": "movie", "name": "Discover · Best Of"},
+  "disc-awards-movies": {"type": "movie", "name": "Discover · Awards & Criterion"},
+  "disc-awards-series": {"type": "series", "name": "Discover · Awards"}
+ },
+ "lists": [
+  {"id": 228941, "type": "movie", "discover": ["disc-hidden-gems-movies", "Underrated & Cult Films"], "sort": "rank"},
+  {"id": 164980, "type": "movie", "discover": ["disc-hidden-gems-movies", "Comedies"], "sort": "rank"},
+  {"id": 164919, "type": "movie", "discover": ["disc-hidden-gems-movies", "Sci-Fi"], "sort": "rank"},
+  {"id": 198591, "type": "series", "discover": ["disc-hidden-gems-series", "Series"], "sort": "rank"},
+  {"id": 148283, "type": "series", "discover": ["disc-hidden-gems-series", "Under-the-Radar Series"], "sort": "rank"},
+  {"id": 230335, "type": "series", "discover": ["disc-hidden-gems-series", "Anime"], "sort": "rank"},
+  {"id": 205811, "type": "movie", "discover": ["disc-best-of-movies", "IMDb Top 250"], "sort": "rank"},
+  {"id": 205902, "type": "movie", "discover": ["disc-best-of-movies", "Letterboxd Top 500"], "sort": "rank"},
+  {"id": 207869, "type": "movie", "discover": ["disc-best-of-movies", "Sight and Sound Greatest Films"], "sort": "rank"},
+  {"id": 146624, "type": "movie", "discover": ["disc-awards-movies", "Cannes Winners"], "sort": "newest"},
+  {"id": 146622, "type": "movie", "discover": ["disc-awards-movies", "Venice Winners"], "sort": "newest"},
+  {"id": 146625, "type": "movie", "discover": ["disc-awards-movies", "Sundance Winners"], "sort": "newest"},
+  {"id": 146627, "type": "movie", "discover": ["disc-awards-movies", "Golden Globe Winners"], "sort": "newest"},
+  {"id": 32972, "type": "movie", "discover": ["disc-awards-movies", "Golden Globe Nominees"], "sort": "newest"},
+  {"id": 32970, "type": "movie", "discover": ["disc-awards-movies", "BAFTA Nominees"], "sort": "newest"},
+  {"id": 13676, "type": "movie", "discover": ["disc-awards-movies", "Criterion Essentials"], "sort": "rank"},
+  {"id": 13675, "type": "movie", "discover": ["disc-awards-movies", "Criterion Popular"], "sort": "rank"},
+  {"id": 13674, "type": "movie", "discover": ["disc-awards-movies", "Criterion New Additions"], "sort": "rank"},
+  {"id": 132014, "type": "movie", "discover": ["disc-awards-movies", "Arthouse & Independent"], "sort": "rank"},
+  {"id": 122821, "type": "series", "discover": ["disc-awards-series", "Emmy Winners"], "sort": "newest"},
+  {"id": 34134, "type": "series", "discover": ["disc-awards-series", "Emmy Nominees"], "sort": "newest"}
+ ]
+}
