@@ -3,17 +3,16 @@ Publishes only the short user code (and the simkl.com/pin link) to design-refs r
 15 minutes for the approval, then stores the tokens ENCRYPTED in simkl/token.enc. Nothing secret is printed.
 needs: SIMKL_CLIENT_ID, SIMKL_CLIENT_SECRET (if Simkl asks for it), MDBLIST_API_KEY
 """
-import os, subprocess, sys, time
+import os, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import simkl_auth as S
 
 
 def publish(text):
-    os.makedirs("refs/simkl", exist_ok=True)
-    open("refs/simkl/code.txt", "w").write(text)
-    subprocess.run("git checkout -q -B design-refs && git add -f refs/simkl && git commit -q -m 'Simkl link' && "
-                   "git push -q -f origin design-refs && git checkout -q -", shell=True, check=True)
+    err = S.gh_put("refs/simkl/code.txt", text.encode(), "design-refs", "Simkl link")
+    if err:
+        print("could not publish the status:", err)
 
 
 if not S.CID:
@@ -47,5 +46,9 @@ if not tok:
     publish("not approved in time - run the Simkl link workflow again\n")
     sys.exit(1)
 S.save(S.keep(tok))
+err = S.gh_put("simkl/token.enc", open(S.FILE, "rb").read(), "main", "Simkl linked (tokens encrypted)")
+if err:
+    publish(f"approved, but saving the encrypted tokens failed: {err}\n")
+    sys.exit(1)
 publish(f"linked (scope: {tok.get('scope', '?')}) - tokens stored encrypted in simkl/token.enc\n")
 print("linked")

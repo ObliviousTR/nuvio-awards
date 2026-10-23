@@ -22,6 +22,28 @@ def _key():
     return CID + os.environ["MDBLIST_API_KEY"].strip()
 
 
+def gh_put(path, data, branch, msg):
+    """write one file straight through the GitHub contents API (no local git juggling); returns an error or None"""
+    import base64
+    repo, tok = os.environ["GITHUB_REPOSITORY"], os.environ["GITHUB_TOKEN"]
+    h = {"Authorization": "Bearer " + tok, "Accept": "application/vnd.github+json", "User-Agent": UA}
+    u = f"https://api.github.com/repos/{repo}/contents/{path}"
+    sha = None
+    try:
+        sha = json.loads(urllib.request.urlopen(urllib.request.Request(u + "?ref=" + branch, headers=h), timeout=60).read())["sha"]
+    except urllib.error.HTTPError as e:
+        if e.code != 404:
+            return f"read {path}: HTTP {e.code}"
+    body = {"message": msg, "content": base64.b64encode(data).decode(), "branch": branch}
+    if sha:
+        body["sha"] = sha
+    try:
+        urllib.request.urlopen(urllib.request.Request(u, data=json.dumps(body).encode(), headers=h, method="PUT"), timeout=60)
+    except urllib.error.HTTPError as e:
+        return f"write {path}: HTTP {e.code} {e.read()[:200].decode('utf-8', 'replace')}"
+    return None
+
+
 def save(tok):
     os.makedirs(os.path.dirname(FILE), exist_ok=True)
     enc = subprocess.run(["openssl", "enc", "-aes-256-cbc", "-pbkdf2", "-salt", "-a", "-pass", "env:K"],
