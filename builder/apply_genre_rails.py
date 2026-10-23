@@ -11,8 +11,10 @@ from common import addon_src, load, save
 
 LIB = "community.oblivioustr.nuvio-library"
 DEFS = "/home/claude/nuvio-awards/library/genre_rails.json"
-# (row, folder) -> on. Trial: Comedy first; then Genres, Moods & Vibes, Kids & Family.
-SCOPE = {("Genres", "Comedy")}
+# rows whose genre rails are made genre-true (every folder). Streaming Services: its platform genre rails too - a title
+# left out of one genre there still sits in the rail of its own (first) genre, and the platform's Popular / New / Top
+# Rated rails (no genre filter) stay live TMDB rails.
+ROWS = {"Genres", "Moods & Vibes", "Kids & Family", "Streaming Services"}
 
 
 def slug(s):
@@ -24,7 +26,7 @@ def main(src, dst):
     defs, n = [], 0
     for row in data:
         for f in row.get("folders", []):
-            if (row["title"], f["title"]) not in SCOPE:
+            if row["title"] not in ROWS:
                 continue
             new = []
             for s in f["sources"]:
@@ -32,7 +34,8 @@ def main(src, dst):
                 if s.get("provider") == "tmdb" and s.get("tmdbSourceType") == "DISCOVER" and fl.get("withGenres"):
                     cid = f"gen-{slug(row['title'])}-{slug(f['title'])}-{slug(s['title'])}"
                     defs.append({"id": cid, "name": f"{f['title']} · {s['title']}", "media": s["mediaType"],
-                                 "sort": s.get("sortBy"), "filters": fl})
+                                 "sort": s.get("sortBy"), "filters": fl,
+                                 "limit": 300 if row["title"] == "Streaming Services" else 500})
                     a = addon_src(s["title"], s["mediaType"], cid, addon_id=LIB)
                     a["genre"] = None   # static catalogs take no extras
                     new.append(a)
@@ -42,7 +45,7 @@ def main(src, dst):
             f["sources"] = new
     json.dump(defs, open(DEFS, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     save(data, dst)
-    print(f"genre rails: {n} rails now genre-true ({len(SCOPE)} folders)")
+    print(f"genre rails: {n} rails now genre-true ({', '.join(sorted(ROWS))})")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,4361 @@
 [
  {
+  "id": "gen-streaming-services-netflix-action-adventure-movies",
+  "name": "Netflix · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "28|12",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-action-adventure-series",
+  "name": "Netflix · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10759",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-animation-movies",
+  "name": "Netflix · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-animation-series",
+  "name": "Netflix · Animation Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-anime-movies",
+  "name": "Netflix · Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-anime-series",
+  "name": "Netflix · Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-comedy-movies",
+  "name": "Netflix · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-comedy-series",
+  "name": "Netflix · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-romantic-comedy-movies",
+  "name": "Netflix · Romantic Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749,35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-romantic-comedy-series",
+  "name": "Netflix · Romantic Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withKeywords": "9840",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-crime-movies",
+  "name": "Netflix · Crime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "80",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-crime-series",
+  "name": "Netflix · Crime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-drama-movies",
+  "name": "Netflix · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "18",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-drama-series",
+  "name": "Netflix · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-family-movies",
+  "name": "Netflix · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-family-series",
+  "name": "Netflix · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-sci-fi-fantasy-movies",
+  "name": "Netflix · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-sci-fi-fantasy-series",
+  "name": "Netflix · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-history-war-movies",
+  "name": "Netflix · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-history-war-series",
+  "name": "Netflix · History & War Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10768",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-horror-movies",
+  "name": "Netflix · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "27",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-mystery-thriller-movies",
+  "name": "Netflix · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-mystery-thriller-series",
+  "name": "Netflix · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-romance-movies",
+  "name": "Netflix · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-documentary-movies",
+  "name": "Netflix · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-docuseries",
+  "name": "Netflix · Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-nature-documentary-movies",
+  "name": "Netflix · Nature Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-nature-docuseries",
+  "name": "Netflix · Nature Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-reality-series",
+  "name": "Netflix · Reality Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10764",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-western-movies",
+  "name": "Netflix · Western Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "37",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-netflix-western-series",
+  "name": "Netflix · Western Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-action-adventure-movies",
+  "name": "HBO Max · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "28|12",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-action-adventure-series",
+  "name": "HBO Max · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10759",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-animation-movies",
+  "name": "HBO Max · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-animation-series",
+  "name": "HBO Max · Animation Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-anime-movies",
+  "name": "HBO Max · Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-anime-series",
+  "name": "HBO Max · Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-comedy-movies",
+  "name": "HBO Max · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-comedy-series",
+  "name": "HBO Max · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-romantic-comedy-movies",
+  "name": "HBO Max · Romantic Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749,35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-romantic-comedy-series",
+  "name": "HBO Max · Romantic Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withKeywords": "9840",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-crime-movies",
+  "name": "HBO Max · Crime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "80",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-crime-series",
+  "name": "HBO Max · Crime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-drama-movies",
+  "name": "HBO Max · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "18",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-drama-series",
+  "name": "HBO Max · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-family-movies",
+  "name": "HBO Max · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-family-series",
+  "name": "HBO Max · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-sci-fi-fantasy-movies",
+  "name": "HBO Max · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-sci-fi-fantasy-series",
+  "name": "HBO Max · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-history-war-movies",
+  "name": "HBO Max · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-history-war-series",
+  "name": "HBO Max · History & War Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10768",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-horror-movies",
+  "name": "HBO Max · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "27",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-mystery-thriller-movies",
+  "name": "HBO Max · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-mystery-thriller-series",
+  "name": "HBO Max · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-romance-movies",
+  "name": "HBO Max · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-documentary-movies",
+  "name": "HBO Max · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-docuseries",
+  "name": "HBO Max · Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-nature-docuseries",
+  "name": "HBO Max · Nature Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-reality-series",
+  "name": "HBO Max · Reality Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10764",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-western-movies",
+  "name": "HBO Max · Western Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "37",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-western-series",
+  "name": "HBO Max · Western Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-action-adventure-movies",
+  "name": "Apple TV+ · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "28|12",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-action-adventure-series",
+  "name": "Apple TV+ · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10759",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-animation-movies",
+  "name": "Apple TV+ · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-animation-series",
+  "name": "Apple TV+ · Animation Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-comedy-movies",
+  "name": "Apple TV+ · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-comedy-series",
+  "name": "Apple TV+ · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-romantic-comedy-movies",
+  "name": "Apple TV+ · Romantic Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749,35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-romantic-comedy-series",
+  "name": "Apple TV+ · Romantic Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withKeywords": "9840",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-crime-movies",
+  "name": "Apple TV+ · Crime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "80",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-crime-series",
+  "name": "Apple TV+ · Crime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-drama-movies",
+  "name": "Apple TV+ · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "18",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-drama-series",
+  "name": "Apple TV+ · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-family-movies",
+  "name": "Apple TV+ · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-family-series",
+  "name": "Apple TV+ · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-sci-fi-fantasy-movies",
+  "name": "Apple TV+ · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-sci-fi-fantasy-series",
+  "name": "Apple TV+ · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-history-war-movies",
+  "name": "Apple TV+ · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-history-war-series",
+  "name": "Apple TV+ · History & War Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10768",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-mystery-thriller-movies",
+  "name": "Apple TV+ · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-mystery-thriller-series",
+  "name": "Apple TV+ · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-romance-movies",
+  "name": "Apple TV+ · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-documentary-movies",
+  "name": "Apple TV+ · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-docuseries",
+  "name": "Apple TV+ · Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-nature-documentary-movies",
+  "name": "Apple TV+ · Nature Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-nature-docuseries",
+  "name": "Apple TV+ · Nature Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-apple-tv-reality-series",
+  "name": "Apple TV+ · Reality Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "350",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10764",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-action-adventure-movies",
+  "name": "Prime Video · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "28|12",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-action-adventure-series",
+  "name": "Prime Video · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10759",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-animation-movies",
+  "name": "Prime Video · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-animation-series",
+  "name": "Prime Video · Animation Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-anime-movies",
+  "name": "Prime Video · Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-anime-series",
+  "name": "Prime Video · Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-comedy-movies",
+  "name": "Prime Video · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-comedy-series",
+  "name": "Prime Video · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-romantic-comedy-movies",
+  "name": "Prime Video · Romantic Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749,35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-romantic-comedy-series",
+  "name": "Prime Video · Romantic Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withKeywords": "9840",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-crime-movies",
+  "name": "Prime Video · Crime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "80",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-crime-series",
+  "name": "Prime Video · Crime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-drama-movies",
+  "name": "Prime Video · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "18",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-drama-series",
+  "name": "Prime Video · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-family-movies",
+  "name": "Prime Video · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-family-series",
+  "name": "Prime Video · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-sci-fi-fantasy-movies",
+  "name": "Prime Video · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-sci-fi-fantasy-series",
+  "name": "Prime Video · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-history-war-movies",
+  "name": "Prime Video · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-history-war-series",
+  "name": "Prime Video · History & War Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10768",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-horror-movies",
+  "name": "Prime Video · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "27",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-mystery-thriller-movies",
+  "name": "Prime Video · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-mystery-thriller-series",
+  "name": "Prime Video · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-romance-movies",
+  "name": "Prime Video · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-documentary-movies",
+  "name": "Prime Video · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-docuseries",
+  "name": "Prime Video · Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-nature-documentary-movies",
+  "name": "Prime Video · Nature Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-nature-docuseries",
+  "name": "Prime Video · Nature Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-reality-series",
+  "name": "Prime Video · Reality Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10764",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-western-movies",
+  "name": "Prime Video · Western Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "37",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-prime-video-western-series",
+  "name": "Prime Video · Western Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "9|2100",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-action-adventure-movies",
+  "name": "Disney+ · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "28|12",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-action-adventure-series",
+  "name": "Disney+ · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10759",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-animation-movies",
+  "name": "Disney+ · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-animation-series",
+  "name": "Disney+ · Animation Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-anime-movies",
+  "name": "Disney+ · Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-anime-series",
+  "name": "Disney+ · Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-comedy-movies",
+  "name": "Disney+ · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-comedy-series",
+  "name": "Disney+ · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-romantic-comedy-movies",
+  "name": "Disney+ · Romantic Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749,35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-romantic-comedy-series",
+  "name": "Disney+ · Romantic Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withKeywords": "9840",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-crime-movies",
+  "name": "Disney+ · Crime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "80",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-crime-series",
+  "name": "Disney+ · Crime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-drama-movies",
+  "name": "Disney+ · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "18",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-drama-series",
+  "name": "Disney+ · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-family-movies",
+  "name": "Disney+ · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-family-series",
+  "name": "Disney+ · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-sci-fi-fantasy-movies",
+  "name": "Disney+ · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-sci-fi-fantasy-series",
+  "name": "Disney+ · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-history-war-movies",
+  "name": "Disney+ · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-history-war-series",
+  "name": "Disney+ · History & War Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10768",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-horror-movies",
+  "name": "Disney+ · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "27",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-mystery-thriller-movies",
+  "name": "Disney+ · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-mystery-thriller-series",
+  "name": "Disney+ · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-romance-movies",
+  "name": "Disney+ · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-documentary-movies",
+  "name": "Disney+ · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-docuseries",
+  "name": "Disney+ · Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-nature-documentary-movies",
+  "name": "Disney+ · Nature Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-nature-docuseries",
+  "name": "Disney+ · Nature Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-reality-series",
+  "name": "Disney+ · Reality Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10764",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-western-movies",
+  "name": "Disney+ · Western Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "37",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-disney-western-series",
+  "name": "Disney+ · Western Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "337",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-action-adventure-movies",
+  "name": "Hulu · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "28|12",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-action-adventure-series",
+  "name": "Hulu · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10759",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-animation-movies",
+  "name": "Hulu · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-animation-series",
+  "name": "Hulu · Animation Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-anime-movies",
+  "name": "Hulu · Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-anime-series",
+  "name": "Hulu · Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-comedy-movies",
+  "name": "Hulu · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-comedy-series",
+  "name": "Hulu · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-romantic-comedy-movies",
+  "name": "Hulu · Romantic Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749,35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-romantic-comedy-series",
+  "name": "Hulu · Romantic Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withKeywords": "9840",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-crime-movies",
+  "name": "Hulu · Crime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "80",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-crime-series",
+  "name": "Hulu · Crime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-drama-movies",
+  "name": "Hulu · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "18",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-drama-series",
+  "name": "Hulu · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-family-movies",
+  "name": "Hulu · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-family-series",
+  "name": "Hulu · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-sci-fi-fantasy-movies",
+  "name": "Hulu · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-sci-fi-fantasy-series",
+  "name": "Hulu · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-history-war-movies",
+  "name": "Hulu · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-history-war-series",
+  "name": "Hulu · History & War Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10768",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-horror-movies",
+  "name": "Hulu · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "27",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-mystery-thriller-movies",
+  "name": "Hulu · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-mystery-thriller-series",
+  "name": "Hulu · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-romance-movies",
+  "name": "Hulu · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-documentary-movies",
+  "name": "Hulu · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-docuseries",
+  "name": "Hulu · Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-nature-documentary-movies",
+  "name": "Hulu · Nature Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-nature-docuseries",
+  "name": "Hulu · Nature Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-reality-series",
+  "name": "Hulu · Reality Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10764",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-western-movies",
+  "name": "Hulu · Western Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "37",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hulu-western-series",
+  "name": "Hulu · Western Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "15",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-action-adventure-movies",
+  "name": "Paramount+ · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "28|12",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-action-adventure-series",
+  "name": "Paramount+ · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10759",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-animation-movies",
+  "name": "Paramount+ · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-animation-series",
+  "name": "Paramount+ · Animation Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-comedy-movies",
+  "name": "Paramount+ · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-comedy-series",
+  "name": "Paramount+ · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-romantic-comedy-movies",
+  "name": "Paramount+ · Romantic Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749,35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-romantic-comedy-series",
+  "name": "Paramount+ · Romantic Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withKeywords": "9840",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-crime-movies",
+  "name": "Paramount+ · Crime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "80",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-crime-series",
+  "name": "Paramount+ · Crime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-drama-movies",
+  "name": "Paramount+ · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "18",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-drama-series",
+  "name": "Paramount+ · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-family-movies",
+  "name": "Paramount+ · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-family-series",
+  "name": "Paramount+ · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-sci-fi-fantasy-movies",
+  "name": "Paramount+ · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-sci-fi-fantasy-series",
+  "name": "Paramount+ · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-history-war-movies",
+  "name": "Paramount+ · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-history-war-series",
+  "name": "Paramount+ · History & War Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10768",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-horror-movies",
+  "name": "Paramount+ · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "27",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-mystery-thriller-movies",
+  "name": "Paramount+ · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-mystery-thriller-series",
+  "name": "Paramount+ · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-romance-movies",
+  "name": "Paramount+ · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "10749",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-documentary-movies",
+  "name": "Paramount+ · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-docuseries",
+  "name": "Paramount+ · Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-nature-docuseries",
+  "name": "Paramount+ · Nature Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-reality-series",
+  "name": "Paramount+ · Reality Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10764",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-western-movies",
+  "name": "Paramount+ · Western Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 20,
+   "withGenres": "37",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-paramount-western-series",
+  "name": "Paramount+ · Western Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "2303|2616|531|1770",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-action-adventure-movies",
+  "name": "Mubi · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "28|12",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-animation-movies",
+  "name": "Mubi · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-anime-movies",
+  "name": "Mubi · Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-comedy-movies",
+  "name": "Mubi · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-romantic-comedy-movies",
+  "name": "Mubi · Romantic Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10749,35",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-crime-movies",
+  "name": "Mubi · Crime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-drama-movies",
+  "name": "Mubi · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-family-movies",
+  "name": "Mubi · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-sci-fi-fantasy-movies",
+  "name": "Mubi · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-history-war-movies",
+  "name": "Mubi · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-horror-movies",
+  "name": "Mubi · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "27",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-mystery-thriller-movies",
+  "name": "Mubi · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-romance-movies",
+  "name": "Mubi · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10749",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-documentary-movies",
+  "name": "Mubi · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-mubi-western-movies",
+  "name": "Mubi · Western Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "11",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-crunchyroll-action-adventure-movies",
+  "name": "Crunchyroll · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "283",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "28|12"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-crunchyroll-action-adventure-series",
+  "name": "Crunchyroll · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "283",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "10759",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-crunchyroll-animation-movies",
+  "name": "Crunchyroll · Animation Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "283",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-crunchyroll-animation-series",
+  "name": "Crunchyroll · Animation Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "283",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "16",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-crunchyroll-anime-movies",
+  "name": "Crunchyroll · Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "283",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-crunchyroll-anime-series",
+  "name": "Crunchyroll · Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "283",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-crunchyroll-sci-fi-fantasy-movies",
+  "name": "Crunchyroll · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "283",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "878|14"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-crunchyroll-sci-fi-fantasy-series",
+  "name": "Crunchyroll · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "283",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-shudder-sci-fi-fantasy-movies",
+  "name": "Shudder · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "99",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "878|14",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-shudder-sci-fi-fantasy-series",
+  "name": "Shudder · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "99",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "10765",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-shudder-horror-movies",
+  "name": "Shudder · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "99",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "27",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-shudder-mystery-thriller-movies",
+  "name": "Shudder · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "99",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "9648|53",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-shudder-mystery-thriller-series",
+  "name": "Shudder · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "99",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "9648",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-discovery-family-movies",
+  "name": "Discovery+ · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "510",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-discovery-family-series",
+  "name": "Discovery+ · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "510",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "10751",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-discovery-history-war-movies",
+  "name": "Discovery+ · History & War Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "510",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "36|10752",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-discovery-documentary-movies",
+  "name": "Discovery+ · Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "510",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-discovery-docuseries",
+  "name": "Discovery+ · Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "510",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "99",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-discovery-nature-documentary-movies",
+  "name": "Discovery+ · Nature Documentary Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "510",
+   "watchRegion": "US",
+   "voteCountGte": 10,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-discovery-nature-docuseries",
+  "name": "Discovery+ · Nature Docuseries",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "510",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "99",
+   "withKeywords": "221355|9902",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-discovery-reality-series",
+  "name": "Discovery+ · Reality Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "510",
+   "watchRegion": "US",
+   "voteCountGte": 5,
+   "withGenres": "10764",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-exxen-comedy-series",
+  "name": "Exxen · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "35",
+   "withNetworks": "4405",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-gai-n-comedy-series",
+  "name": "GAİN · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "35",
+   "withNetworks": "4409",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-gai-n-drama-series",
+  "name": "GAİN · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "18",
+   "withNetworks": "4409",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-gai-n-crime-mystery-series",
+  "name": "GAİN · Crime & Mystery Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "80|9648",
+   "withNetworks": "4409",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300
+ },
+ {
+  "id": "gen-genres-action-adventure-new-movies",
+  "name": "Action & Adventure · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "28|12",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-new-series",
+  "name": "Action & Adventure · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "10759",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-popular-movies",
+  "name": "Action & Adventure · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "28|12",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-popular-series",
+  "name": "Action & Adventure · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "10759",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-top-all-time-movies",
+  "name": "Action & Adventure · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "28|12",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-top-all-time-series",
+  "name": "Action & Adventure · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "10759",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-top-of-the-year-movies",
+  "name": "Action & Adventure · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "28|12",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-top-of-the-year-series",
+  "name": "Action & Adventure · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 25,
+   "withGenres": "10759",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-international-hits-movies",
+  "name": "Action & Adventure · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "28|12",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-international-hits-series",
+  "name": "Action & Adventure · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "10759",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-popular-anime-movies",
+  "name": "Action & Adventure · Popular Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,28",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-popular-anime-series",
+  "name": "Action & Adventure · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10759",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-top-rated-anime-movies",
+  "name": "Action & Adventure · Top Rated Anime Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "16,28",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-action-adventure-top-rated-anime-series",
+  "name": "Action & Adventure · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16,10759",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-new-movies",
+  "name": "Sci-Fi & Fantasy · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "878|14",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-new-series",
+  "name": "Sci-Fi & Fantasy · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "10765",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-popular-movies",
+  "name": "Sci-Fi & Fantasy · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "878|14",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-popular-series",
+  "name": "Sci-Fi & Fantasy · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "10765",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-top-all-time-movies",
+  "name": "Sci-Fi & Fantasy · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "878|14",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-top-all-time-series",
+  "name": "Sci-Fi & Fantasy · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "10765",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-top-of-the-year-movies",
+  "name": "Sci-Fi & Fantasy · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "878|14",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-top-of-the-year-series",
+  "name": "Sci-Fi & Fantasy · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 25,
+   "withGenres": "10765",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-international-hits-movies",
+  "name": "Sci-Fi & Fantasy · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "878|14",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-international-hits-series",
+  "name": "Sci-Fi & Fantasy · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "10765",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-popular-anime-movies",
+  "name": "Sci-Fi & Fantasy · Popular Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,14",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-popular-anime-series",
+  "name": "Sci-Fi & Fantasy · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10765",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-top-rated-anime-movies",
+  "name": "Sci-Fi & Fantasy · Top Rated Anime Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "16,14",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-sci-fi-fantasy-top-rated-anime-series",
+  "name": "Sci-Fi & Fantasy · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16,10765",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-superhero-popular-anime-series",
+  "name": "Superhero · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withKeywords": "9715",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-superhero-top-rated-anime-series",
+  "name": "Superhero · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16",
+   "withKeywords": "9715",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-new-movies",
+  "name": "Horror · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "27",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-popular-movies",
+  "name": "Horror · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "27",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-top-all-time-movies",
+  "name": "Horror · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "27",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-top-of-the-year-movies",
+  "name": "Horror · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "27",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-international-hits-movies",
+  "name": "Horror · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "27",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-popular-anime-movies",
+  "name": "Horror · Popular Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,27",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-popular-anime-series",
+  "name": "Horror · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withKeywords": "315058|9853|162846|3358|295907",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-top-rated-anime-movies",
+  "name": "Horror · Top Rated Anime Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "16,27",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-horror-top-rated-anime-series",
+  "name": "Horror · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16",
+   "withKeywords": "315058|9853|162846|3358|295907",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-new-movies",
+  "name": "Mystery & Thriller · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "9648|53",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-new-series",
+  "name": "Mystery & Thriller · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "9648",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-popular-movies",
+  "name": "Mystery & Thriller · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "9648|53",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-popular-series",
+  "name": "Mystery & Thriller · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "9648",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-top-all-time-movies",
+  "name": "Mystery & Thriller · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "9648|53",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-top-all-time-series",
+  "name": "Mystery & Thriller · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "9648",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-top-of-the-year-movies",
+  "name": "Mystery & Thriller · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "9648|53",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-top-of-the-year-series",
+  "name": "Mystery & Thriller · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 25,
+   "withGenres": "9648",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-international-hits-movies",
+  "name": "Mystery & Thriller · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "9648|53",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-international-hits-series",
+  "name": "Mystery & Thriller · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "9648",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-popular-anime-movies",
+  "name": "Mystery & Thriller · Popular Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,9648",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-popular-anime-series",
+  "name": "Mystery & Thriller · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,9648",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-top-rated-anime-movies",
+  "name": "Mystery & Thriller · Top Rated Anime Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "16,9648",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-mystery-thriller-top-rated-anime-series",
+  "name": "Mystery & Thriller · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16,9648",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-new-movies",
+  "name": "Crime · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "80",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-new-series",
+  "name": "Crime · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "80",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-popular-movies",
+  "name": "Crime · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "80",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-popular-series",
+  "name": "Crime · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "80",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-top-all-time-movies",
+  "name": "Crime · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "80",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-top-all-time-series",
+  "name": "Crime · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "80",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-top-of-the-year-movies",
+  "name": "Crime · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "80",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-top-of-the-year-series",
+  "name": "Crime · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 25,
+   "withGenres": "80",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-international-hits-movies",
+  "name": "Crime · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "80",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-international-hits-series",
+  "name": "Crime · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "80",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-popular-anime-series",
+  "name": "Crime · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,80",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-crime-top-rated-anime-series",
+  "name": "Crime · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16,80",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
   "id": "gen-genres-comedy-new-movies",
   "name": "Comedy · New Movies",
   "media": "MOVIE",
@@ -9,7 +4365,8 @@
    "withGenres": "35",
    "withoutGenres": "16",
    "withOriginalLanguage": "en"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-new-series",
@@ -21,7 +4378,8 @@
    "withGenres": "35",
    "withoutGenres": "16|10763|10767|10766",
    "withOriginalLanguage": "en"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-popular-movies",
@@ -33,7 +4391,8 @@
    "withGenres": "35",
    "withoutGenres": "16",
    "withOriginalLanguage": "en"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-popular-series",
@@ -45,7 +4404,8 @@
    "withGenres": "35",
    "withoutGenres": "16|10763|10767|10766",
    "withOriginalLanguage": "en"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-top-all-time-movies",
@@ -57,7 +4417,8 @@
    "withGenres": "35",
    "withoutGenres": "16",
    "withOriginalLanguage": "en"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-top-all-time-series",
@@ -69,7 +4430,8 @@
    "withGenres": "35",
    "withoutGenres": "16|10763|10767|10766",
    "withOriginalLanguage": "en"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-top-of-the-year-movies",
@@ -83,7 +4445,8 @@
    "releaseDateGte": "2026-01-01",
    "releaseDateLte": "2026-12-31",
    "withOriginalLanguage": "en"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-top-of-the-year-series",
@@ -97,7 +4460,8 @@
    "releaseDateGte": "2026-01-01",
    "releaseDateLte": "2026-12-31",
    "withOriginalLanguage": "en"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-international-hits-movies",
@@ -109,7 +4473,8 @@
    "withGenres": "35",
    "withoutGenres": "16",
    "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-international-hits-series",
@@ -121,7 +4486,8 @@
    "withGenres": "35",
    "withoutGenres": "16|10763|10767|10766",
    "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-popular-anime-movies",
@@ -132,7 +4498,8 @@
    "voteCountGte": 20,
    "withGenres": "16,35",
    "withOriginalLanguage": "ja"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-popular-anime-series",
@@ -144,7 +4511,8 @@
    "withGenres": "16,35",
    "withOriginalLanguage": "ja",
    "withoutGenres": "10763|10767|10766"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-top-rated-anime-movies",
@@ -155,7 +4523,8 @@
    "voteCountGte": 200,
    "withGenres": "16,35",
    "withOriginalLanguage": "ja"
-  }
+  },
+  "limit": 500
  },
  {
   "id": "gen-genres-comedy-top-rated-anime-series",
@@ -167,6 +4536,2271 @@
    "withGenres": "16,35",
    "withOriginalLanguage": "ja",
    "withoutGenres": "10763|10767|10766"
-  }
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-new-movies",
+  "name": "Romance & Rom-Com · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "10749",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-popular-movies",
+  "name": "Romance & Rom-Com · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "10749",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-top-all-time-movies",
+  "name": "Romance & Rom-Com · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "10749",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-top-of-the-year-movies",
+  "name": "Romance & Rom-Com · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "10749",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-international-hits-movies",
+  "name": "Romance & Rom-Com · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "10749",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-popular-anime-movies",
+  "name": "Romance & Rom-Com · Popular Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10749",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-popular-anime-series",
+  "name": "Romance & Rom-Com · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withKeywords": "9840",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-top-rated-anime-movies",
+  "name": "Romance & Rom-Com · Top Rated Anime Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "16,10749",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-romance-rom-com-top-rated-anime-series",
+  "name": "Romance & Rom-Com · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16",
+   "withKeywords": "9840",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-new-movies",
+  "name": "Drama · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "18",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-new-series",
+  "name": "Drama · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-popular-movies",
+  "name": "Drama · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "18",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-popular-series",
+  "name": "Drama · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-top-all-time-movies",
+  "name": "Drama · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "18",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-top-all-time-series",
+  "name": "Drama · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-top-of-the-year-movies",
+  "name": "Drama · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "18",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-top-of-the-year-series",
+  "name": "Drama · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 25,
+   "withGenres": "18",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-international-hits-movies",
+  "name": "Drama · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "18",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-international-hits-series",
+  "name": "Drama · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-popular-anime-movies",
+  "name": "Drama · Popular Anime Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,18",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-popular-anime-series",
+  "name": "Drama · Popular Anime Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,18",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-top-rated-anime-movies",
+  "name": "Drama · Top Rated Anime Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "16,18",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-drama-top-rated-anime-series",
+  "name": "Drama · Top Rated Anime Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "16,18",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-new-movies",
+  "name": "History & War · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "36|10752",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-new-series",
+  "name": "History & War · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "10768",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-popular-movies",
+  "name": "History & War · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "36|10752",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-popular-series",
+  "name": "History & War · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "10768",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-top-all-time-movies",
+  "name": "History & War · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "36|10752",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-top-all-time-series",
+  "name": "History & War · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "10768",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-top-of-the-year-movies",
+  "name": "History & War · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 60,
+   "withGenres": "36|10752",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-top-of-the-year-series",
+  "name": "History & War · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 25,
+   "withGenres": "10768",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-international-hits-movies",
+  "name": "History & War · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1500,
+   "withGenres": "36|10752",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-history-war-international-hits-series",
+  "name": "History & War · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "10768",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-new-movies",
+  "name": "Western · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-new-series",
+  "name": "Western · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 5,
+   "withGenres": "37",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-popular-movies",
+  "name": "Western · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "37",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-popular-series",
+  "name": "Western · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "37",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-top-all-time-movies",
+  "name": "Western · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "37",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-top-all-time-series",
+  "name": "Western · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "37",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-top-of-the-year-movies",
+  "name": "Western · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 15,
+   "withGenres": "37",
+   "withoutGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-top-of-the-year-series",
+  "name": "Western · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 8,
+   "withGenres": "37",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-international-hits-movies",
+  "name": "Western · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 400,
+   "withGenres": "37",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-western-international-hits-series",
+  "name": "Western · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 150,
+   "withGenres": "37",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-new-movies",
+  "name": "Animation · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-new-series",
+  "name": "Animation · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 5,
+   "withGenres": "16",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-popular-movies",
+  "name": "Animation · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-popular-series",
+  "name": "Animation · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-top-all-time-movies",
+  "name": "Animation · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-top-all-time-series",
+  "name": "Animation · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 150,
+   "withGenres": "16",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-top-of-the-year-movies",
+  "name": "Animation · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 15,
+   "withGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-top-of-the-year-series",
+  "name": "Animation · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 8,
+   "withGenres": "16",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-international-animation",
+  "name": "Animation · International Animation",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 500,
+   "withGenres": "16",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-action-adventure-movies",
+  "name": "Animation · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,28",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-action-adventure-series",
+  "name": "Animation · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10759",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-sci-fi-fantasy-movies",
+  "name": "Animation · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,14",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-sci-fi-fantasy-series",
+  "name": "Animation · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10765",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-comedy-movies",
+  "name": "Animation · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,35",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-adult-animated-comedy-series",
+  "name": "Animation · Adult Animated Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,35",
+   "withoutGenres": "10751|10762|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-family-movies",
+  "name": "Animation · Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,10751",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-family-series",
+  "name": "Animation · Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10751",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-superhero-movies",
+  "name": "Animation · Superhero Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16",
+   "withKeywords": "9715",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-superhero-series",
+  "name": "Animation · Superhero Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withKeywords": "9715",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-animation-kids-series",
+  "name": "Animation · Kids Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10762",
+   "withoutGenres": "10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-new-movies",
+  "name": "Anime · New Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-new-series",
+  "name": "Anime · New Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 5,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-popular-movies",
+  "name": "Anime · Popular Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-popular-series",
+  "name": "Anime · Popular Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-top-all-time-movies",
+  "name": "Anime · Top All Time Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-top-all-time-series",
+  "name": "Anime · Top All Time Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 150,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-top-of-the-year-movies",
+  "name": "Anime · Top of the Year Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 15,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-top-of-the-year-series",
+  "name": "Anime · Top of the Year Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 8,
+   "withGenres": "16",
+   "withOriginalLanguage": "ja",
+   "releaseDateGte": "2026-01-01",
+   "releaseDateLte": "2026-12-31",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-action-adventure-movies",
+  "name": "Anime · Action & Adventure Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,28",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-action-adventure-series",
+  "name": "Anime · Action & Adventure Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10759",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-sci-fi-fantasy-movies",
+  "name": "Anime · Sci-Fi & Fantasy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,14",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-sci-fi-fantasy-series",
+  "name": "Anime · Sci-Fi & Fantasy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,10765",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-isekai-series",
+  "name": "Anime · Isekai Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withKeywords": "237451",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-mystery-thriller-movies",
+  "name": "Anime · Mystery & Thriller Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,9648",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-mystery-thriller-series",
+  "name": "Anime · Mystery & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,9648",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-romance-movies",
+  "name": "Anime · Romance Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,10749",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-romance-series",
+  "name": "Anime · Romance Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withKeywords": "9840",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-comedy-movies",
+  "name": "Anime · Comedy Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,35",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-comedy-series",
+  "name": "Anime · Comedy Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,35",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-drama-movies",
+  "name": "Anime · Drama Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,18",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-drama-series",
+  "name": "Anime · Drama Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16,18",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-horror-movies",
+  "name": "Anime · Horror Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withGenres": "16,27",
+   "withOriginalLanguage": "ja"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-genres-anime-horror-series",
+  "name": "Anime · Horror Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 20,
+   "withGenres": "16",
+   "withKeywords": "315058|9853|162846|3358|295907",
+   "withOriginalLanguage": "ja",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-cozy-comforting-live-action-romantic-comedies",
+  "name": "Cozy & Comforting · Live-Action Romantic Comedies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "10749,35",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-cozy-comforting-heartwarming-tv-comedies-dramas",
+  "name": "Cozy & Comforting · Heartwarming TV Comedies & Dramas",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "35,18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-cozy-comforting-cozy-romantic-stories",
+  "name": "Cozy & Comforting · Cozy Romantic Stories",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "10749,18",
+   "withoutGenres": "16|27|53|80",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-cozy-comforting-cozy-animated-favorites",
+  "name": "Cozy & Comforting · Cozy Animated Favorites",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "16,10751",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-cozy-comforting-recent-cozy-releases",
+  "name": "Cozy & Comforting · Recent Cozy Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 40,
+   "withGenres": "10751,35",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-cozy-comforting-international-hits-movies",
+  "name": "Cozy & Comforting · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "10751,35",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-cozy-comforting-international-hits-series",
+  "name": "Cozy & Comforting · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "35,10751",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-mind-bending-mind-bending-sci-fi-thrillers",
+  "name": "Mind-Bending · Mind-Bending Sci-Fi Thrillers",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "878,53",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-mind-bending-psychological-mystery-shows",
+  "name": "Mind-Bending · Psychological Mystery Shows",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 150,
+   "withGenres": "9648,18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-mind-bending-top-rated-psychological-thrillers",
+  "name": "Mind-Bending · Top Rated Psychological Thrillers",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 2000,
+   "withGenres": "53,18,9648",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-mind-bending-international-hits-movies",
+  "name": "Mind-Bending · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "878,53",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-mind-bending-international-hits-series",
+  "name": "Mind-Bending · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "9648,18",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-adrenaline-rush-high-octane-action-blockbusters",
+  "name": "Adrenaline Rush · High-Octane Action Blockbusters",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 3000,
+   "withGenres": "28",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-adrenaline-rush-action-thriller-series",
+  "name": "Adrenaline Rush · Action & Thriller Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 150,
+   "withGenres": "10759",
+   "withoutGenres": "16|10765|10751|10762|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-adrenaline-rush-top-rated-action-hits",
+  "name": "Adrenaline Rush · Top Rated Action Hits",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 3000,
+   "withGenres": "28",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-adrenaline-rush-recent-high-octane-releases",
+  "name": "Adrenaline Rush · Recent High-Octane Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "28",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-adrenaline-rush-international-hits-movies",
+  "name": "Adrenaline Rush · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "28",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-adrenaline-rush-international-hits-series",
+  "name": "Adrenaline Rush · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "10759",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-epic-sweeping-historical-war-epics",
+  "name": "Epic & Sweeping · Historical & War Epics",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 2000,
+   "withGenres": "36|10752",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-epic-sweeping-grand-fantasy-epics",
+  "name": "Epic & Sweeping · Grand Fantasy Epics",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 2000,
+   "withGenres": "14,12",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-epic-sweeping-epic-scale-tv-sagas",
+  "name": "Epic & Sweeping · Epic Scale TV Sagas",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "10765,10759,18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-epic-sweeping-space-opera-cosmic-journeys",
+  "name": "Epic & Sweeping · Space Opera & Cosmic Journeys",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 500,
+   "withGenres": "878",
+   "withKeywords": "161176|9882",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-epic-sweeping-top-rated-epic-masterpieces",
+  "name": "Epic & Sweeping · Top Rated Epic Masterpieces",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 5000,
+   "withGenres": "12|36|10752",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-epic-sweeping-recent-epic-releases",
+  "name": "Epic & Sweeping · Recent Epic Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 80,
+   "withGenres": "12|36|10752",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-epic-sweeping-international-hits-movies",
+  "name": "Epic & Sweeping · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "36|10752|12",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-epic-sweeping-international-hits-series",
+  "name": "Epic & Sweeping · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "10765,18",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-feel-good-joyful-comedy-tv-series",
+  "name": "Feel-Good · Joyful Comedy TV Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "35",
+   "withoutGenres": "16|18|80|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-feel-good-top-rated-feel-good-classics",
+  "name": "Feel-Good · Top Rated Feel-Good Classics",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 3000,
+   "withGenres": "35",
+   "withoutGenres": "16|27|80|53|18",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-feel-good-recent-feel-good-releases",
+  "name": "Feel-Good · Recent Feel-Good Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 40,
+   "withGenres": "35",
+   "withoutGenres": "16|27|80|53",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-feel-good-international-hits-movies",
+  "name": "Feel-Good · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "35",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-feel-good-international-hits-series",
+  "name": "Feel-Good · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "35",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-slow-burn-haunting-slow-burn-tv",
+  "name": "Slow Burn · Haunting Slow Burn TV",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "9648,18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-slow-burn-deep-character-dramas",
+  "name": "Slow Burn · Deep Character Dramas",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 500,
+   "withGenres": "18",
+   "withKeywords": "164186",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-slow-burn-top-rated-atmospheric-masterpieces",
+  "name": "Slow Burn · Top Rated Atmospheric Masterpieces",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 2000,
+   "withGenres": "9648,18",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-slow-burn-recent-slow-burn-releases",
+  "name": "Slow Burn · Recent Slow Burn Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 40,
+   "withGenres": "9648,18",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-slow-burn-international-hits-movies",
+  "name": "Slow Burn · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "9648,18",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-slow-burn-international-hits-series",
+  "name": "Slow Burn · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "9648,18",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-tearjerkers-acclaimed-tearjerker-movies",
+  "name": "Tearjerkers · Acclaimed Tearjerker Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 500,
+   "withGenres": "18",
+   "withKeywords": "156924|346048|9872",
+   "withoutGenres": "16|27|53",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-tearjerkers-emotional-tv-series",
+  "name": "Tearjerkers · Emotional TV Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "18",
+   "withoutGenres": "16|80|10765|10759|9648|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-tearjerkers-romantic-heartbreaks",
+  "name": "Tearjerkers · Romantic Heartbreaks",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "10749,18",
+   "withoutGenres": "16|35|27",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-tearjerkers-family-loss-stories",
+  "name": "Tearjerkers · Family & Loss Stories",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withGenres": "18,10751",
+   "withoutGenres": "16|27",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-tearjerkers-top-rated-emotional-masterpieces",
+  "name": "Tearjerkers · Top Rated Emotional Masterpieces",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 5000,
+   "withGenres": "18",
+   "withoutGenres": "16|80|10752|28|27|53",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-tearjerkers-recent-emotional-releases",
+  "name": "Tearjerkers · Recent Emotional Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 40,
+   "withGenres": "18,10749",
+   "withoutGenres": "16|27|53",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-tearjerkers-international-hits-movies",
+  "name": "Tearjerkers · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "18",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-tearjerkers-international-hits-series",
+  "name": "Tearjerkers · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "18",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-80s-90s-vibes-80s-90s-popcorn-action",
+  "name": "80s & 90s Vibes · 80s & 90s Popcorn Action",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "28",
+   "releaseDateGte": "1980-01-01",
+   "releaseDateLte": "1999-12-31",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-80s-90s-vibes-80s-90s-classic-comedies",
+  "name": "80s & 90s Vibes · 80s & 90s Classic Comedies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 600,
+   "withGenres": "35",
+   "withoutGenres": "16",
+   "releaseDateGte": "1980-01-01",
+   "releaseDateLte": "1999-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-80s-90s-vibes-retro-sci-fi-mystery-tv",
+  "name": "80s & 90s Vibes · Retro Sci-Fi & Mystery TV",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 50,
+   "withGenres": "10765|9648",
+   "withoutGenres": "16|10763|10767|10766",
+   "releaseDateGte": "1980-01-01",
+   "releaseDateLte": "1999-12-31",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-dark-gritty-gritty-crime-underworld",
+  "name": "Dark & Gritty · Gritty Crime & Underworld",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 1000,
+   "withGenres": "80,18",
+   "withoutGenres": "35|16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-dark-gritty-intense-dark-tv-series",
+  "name": "Dark & Gritty · Intense Dark TV Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 500,
+   "withGenres": "80,18",
+   "withoutGenres": "16|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-dark-gritty-top-rated-gritty-crime",
+  "name": "Dark & Gritty · Top Rated Gritty Crime",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 3000,
+   "withGenres": "80",
+   "withoutGenres": "35|16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-dark-gritty-recent-dark-gritty-releases",
+  "name": "Dark & Gritty · Recent Dark & Gritty Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 40,
+   "withGenres": "80,53",
+   "withoutGenres": "35|16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-dark-gritty-international-hits-movies",
+  "name": "Dark & Gritty · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "80",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-dark-gritty-international-hits-series",
+  "name": "Dark & Gritty · International Hits Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "80,18",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16|10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-spooky-creepy-haunted-houses-ghosts",
+  "name": "Spooky & Creepy · Haunted Houses & Ghosts",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 200,
+   "withGenres": "27",
+   "withKeywords": "3358|162846|9853",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-spooky-creepy-psychological-horror-dread",
+  "name": "Spooky & Creepy · Psychological Horror & Dread",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 150,
+   "withGenres": "27",
+   "withKeywords": "295907",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-spooky-creepy-monsters-creature-features",
+  "name": "Spooky & Creepy · Monsters & Creature Features",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 300,
+   "withGenres": "27|878",
+   "withKeywords": "1299|11100|161791|289108",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-spooky-creepy-top-rated-horror-masterpieces",
+  "name": "Spooky & Creepy · Top Rated Horror Masterpieces",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 2000,
+   "withGenres": "27",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-spooky-creepy-recent-spooky-releases",
+  "name": "Spooky & Creepy · Recent Spooky Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 40,
+   "withGenres": "27",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-moods-vibes-spooky-creepy-international-hits-movies",
+  "name": "Spooky & Creepy · International Hits Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 800,
+   "withGenres": "27",
+   "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-popular-family-movies",
+  "name": "Discover Family · Popular Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "10751",
+   "voteCountGte": 100,
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-popular-family-series",
+  "name": "Discover Family · Popular Family Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "10751",
+   "voteCountGte": 30,
+   "withoutGenres": "16|10764|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-new-family-movies",
+  "name": "Discover Family · New Family Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "withGenres": "10751",
+   "voteCountGte": 10,
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-new-family-series",
+  "name": "Discover Family · New Family Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "withGenres": "10751",
+   "voteCountGte": 5,
+   "withoutGenres": "16|10764|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-top-rated-family-movies",
+  "name": "Discover Family · Top Rated Family Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "withGenres": "10751",
+   "voteCountGte": 1000,
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-top-rated-family-series",
+  "name": "Discover Family · Top Rated Family Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "withGenres": "10751",
+   "voteCountGte": 200,
+   "withoutGenres": "16|10764|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-popular-animated-family-movies",
+  "name": "Discover Family · Popular Animated Family Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "16,10751",
+   "voteCountGte": 100,
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-popular-kids-shows",
+  "name": "Discover Family · Popular Kids Shows",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "16,10762",
+   "voteCountGte": 20,
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-top-rated-animated-family-movies",
+  "name": "Discover Family · Top Rated Animated Family Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "withGenres": "16,10751",
+   "voteCountGte": 1000,
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-top-rated-kids-series",
+  "name": "Discover Family · Top Rated Kids Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "withGenres": "16,10762",
+   "voteCountGte": 100,
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-wholesome-family-sitcoms",
+  "name": "Discover Family · Wholesome Family Sitcoms",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "10751,35",
+   "voteCountGte": 30,
+   "withoutGenres": "16|10764|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-discover-family-teen-fantasy-mystery",
+  "name": "Discover Family · Teen Fantasy & Mystery",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "10751,10765",
+   "voteCountGte": 20,
+   "withoutGenres": "16|10764|10763|10767|10766",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-family-movie-night-iconic-family-classics",
+  "name": "Family Movie Night · Iconic Family Classics",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "10751",
+   "voteCountGte": 3000,
+   "releaseDateLte": "2005-12-31",
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-family-movie-night-magical-fantasy-adventures",
+  "name": "Family Movie Night · Magical Fantasy Adventures",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "10751,14",
+   "voteCountGte": 300,
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-family-movie-night-family-comedies",
+  "name": "Family Movie Night · Family Comedies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "10751,35",
+   "voteCountGte": 300,
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-family-movie-night-animal-creature-adventures",
+  "name": "Family Movie Night · Animal & Creature Adventures",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "10751",
+   "withKeywords": "15162|2673|267848|18165",
+   "voteCountGte": 100,
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-family-movie-night-top-rated-family-adventures",
+  "name": "Family Movie Night · Top Rated Family Adventures",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "withGenres": "10751,12",
+   "voteCountGte": 1000,
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-family-movie-night-new-family-movie-releases",
+  "name": "Family Movie Night · New Family Movie Releases",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "withGenres": "10751",
+   "voteCountGte": 10,
+   "withoutGenres": "16",
+   "withOriginalLanguage": "en"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-disney-pixar-magic-disney-live-action-favorites",
+  "name": "Disney & Pixar Magic · Disney Live-Action Favorites",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withCompanies": "2",
+   "voteCountGte": 500,
+   "withGenres": "10751",
+   "withoutGenres": "16"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-disney-pixar-magic-disney-live-action-classics",
+  "name": "Disney & Pixar Magic · Disney Live-Action Classics",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withCompanies": "2",
+   "voteCountGte": 200,
+   "withGenres": "10751",
+   "withoutGenres": "16",
+   "releaseDateLte": "1999-12-31"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-studio-spotlight-stop-motion-treasures",
+  "name": "Studio Spotlight · Stop-Motion Treasures",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "16",
+   "withKeywords": "10121",
+   "voteCountGte": 100
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-saturday-morning-classic-cartoons-iconic-80s-cartoons",
+  "name": "Saturday Morning & Classic Cartoons · Iconic 80s Cartoons",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "16",
+   "withoutKeywords": "161919",
+   "voteCountGte": 20,
+   "releaseDateGte": "1980-01-01",
+   "releaseDateLte": "1989-12-31",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-saturday-morning-classic-cartoons-iconic-90s-cartoons",
+  "name": "Saturday Morning & Classic Cartoons · Iconic 90s Cartoons",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "16",
+   "withoutKeywords": "161919",
+   "voteCountGte": 30,
+   "releaseDateGte": "1990-01-01",
+   "releaseDateLte": "1999-12-31",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-saturday-morning-classic-cartoons-2000s-animated-hits",
+  "name": "Saturday Morning & Classic Cartoons · 2000s Animated Hits",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "16",
+   "withoutKeywords": "161919",
+   "voteCountGte": 50,
+   "releaseDateGte": "2000-01-01",
+   "releaseDateLte": "2009-12-31",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-saturday-morning-classic-cartoons-superhero-animated-series",
+  "name": "Saturday Morning & Classic Cartoons · Superhero Animated Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "16",
+   "withoutKeywords": "161919",
+   "withKeywords": "9715",
+   "voteCountGte": 30,
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
+ },
+ {
+  "id": "gen-kids-family-saturday-morning-classic-cartoons-classic-cartoons-of-the-golden-age",
+  "name": "Saturday Morning & Classic Cartoons · Classic Cartoons of the Golden Age",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withGenres": "16",
+   "withoutKeywords": "161919",
+   "voteCountGte": 10,
+   "releaseDateLte": "1979-12-31",
+   "withOriginalLanguage": "en",
+   "withoutGenres": "10763|10767|10766"
+  },
+  "limit": 500
  }
 ]
