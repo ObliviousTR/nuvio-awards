@@ -1,7 +1,7 @@
 """Moods & Vibes row: Kaptain's mood cards (one film still graded in the mood's colour, bold title, tracked subtitle,
 accent bar), rebuilt so they move like the Genres row:
   cover   Kaptain's own still (the textless source of his card, found by matching) in his grade, with the type
-  hover   the type rises in, bar and subtitle fill with the mood colour, a light runs once round the card while three
+  hover   the type rises in, bar and subtitle fill with the mood colour, the bar counts the pictures (a segment each, name and year top right) while three
           iconic films for the mood play behind it - every one graded exactly like Kaptain graded his card, so the
           card keeps one look whatever plays; breath, back to the cover.
 Kaptain's grade is learnt per card: a least-squares colour transform from the source still to his finished cover.
@@ -108,6 +108,25 @@ def apply_grade(im, M):
     return Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8))
 
 
+# the film of each mood's cover picture (Kaptain's), for its label
+COVER_FILM = {"Feel-Good": ("Midnight in Paris", 2011), "Cozy & Comforting": ("Amélie", 2001),
+              "Adrenaline Rush": ("Top Gun: Maverick", 2022), "Epic & Sweeping": ("Lawrence of Arabia", 1962),
+              "Mind-Bending": ("Inception", 2010), "Slow Burn": ("There Will Be Blood", 2007),
+              "Dark & Gritty": ("The Batman", 2022), "Spooky & Creepy": ("Alien", 1979),
+              "Tearjerkers": ("Manchester by the Sea", 2016), "80s & 90s Vibes": ("Pulp Fiction", 1994)}
+
+
+def cover_label(t, src_path):
+    name, year = COVER_FILM[t]
+    tid, _ = g.find_movie(name, year)
+    if tid:
+        bd = (g.tmdb(f"/movie/{tid}/images") or {}).get("backdrops", [])
+        if src_path not in [b["file_path"] for b in bd]:
+            print(f"note: {t}: cover picture not among {name}'s backdrops - check COVER_FILM", flush=True)
+        return g.labels_of([(tid, name, None)])[0]
+    return (name, year)
+
+
 def build_one(job):
     t, picks, out = job
     title, sub, accent, kcov, src_path, _ = MOODS[t]
@@ -117,16 +136,17 @@ def build_one(job):
         imgs = [apply_grade(g.art.cover_fit(src, 1600, 900), M)]
         for _, _, p in picks:
             imgs.append(apply_grade(g.art.cover_fit(g.load_img(p), 1600, 900), M))
-        frame = g.make(title, sub, accent, imgs)
+        labels = [cover_label(t, src_path)] + g.labels_of(picks)
+        frame = g.make(title, sub, accent, imgs, labels=labels)
         dd = os.path.join(out, g.slug_of(t))
         os.makedirs(dd, exist_ok=True)
-        n = 120
+        n = frame.n
         frames = [frame(i, n).resize((g.OW, g.OH), Image.LANCZOS) for i in range(n)]
         frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
                        loop=0, quality=80, method=4, kmin=0, kmax=1)
         frame.cover().save(os.path.join(dd, "cover.jpg"), quality=90)
         strip = Image.new("RGB", (g.OW * 3, g.OH * 2))
-        for jj, idx in enumerate([0, 20, 45, 70, 104, 119]):
+        for jj, idx in enumerate([0, n // 6, n // 3, n // 2, 2 * n // 3, n - 1]):
             strip.paste(frames[idx], ((jj % 3) * g.OW, (jj // 3) * g.OH))
         strip.save(os.path.join(dd, "frames.jpg"), quality=80)
         return t, [(x[0], x[1]) for x in picks], None

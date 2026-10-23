@@ -1,9 +1,9 @@
 """Genres row: Kaptain's genre cards (photo, accent bar, bold title, tracked subtitle; on hover the subtitle turns to
 the genre colour, the bar to white and a coloured frame lights up), rebuilt by us so they can move:
   cover   the genre's iconic film (the one on Kaptain's card), plain state
-  hover   starts as the cover, eases into the hover state; a glowing frame runs once round the card at one speed
-          (5 s) while the genre's currently popular films play behind the title; the lap closes with a breath and
-          the card settles back to the cover, so the loop is seamless.
+  hover   starts and ends exactly on the cover (seamless loop). The genre's films play behind the title, 1.7 s each,
+          their name and year top right; the accent bar splits into one segment per film and each fills with the
+          genre colour while its film plays (the subtitle fills too); then everything drains back to the cover.
 Popular films are refreshed monthly (.github/workflows/genre-art.yml -> genre-art branch, fixed URLs); a film stays
 while it is still in the genre's top 6, so the art only changes when the genre's line-up really moves.
 usage: python3 art_tools/genre_art.py OUT_DIR [--prev picks.json] [titles...]
@@ -296,7 +296,7 @@ def make(title, sub, accent, imgs, labels=None, style=None):
     """labels: (name, year) per picture, written top right while it plays. style (or env GENRE_STYLE) of what
     marks time now the lap round the card is gone: A nothing (the colour fill only), B the bar split into one segment
     per film that fills as it plays, C a light sweeping over the title at every change of film."""
-    style = style or os.environ.get("GENRE_STYLE", "A")
+    style = style or os.environ.get("GENRE_STYLE", "B")
     k = W / 1920
     tf, sf = font("ExtraBold", round(124 * k)), font("SemiBold", round(42 * k))
     sp_t, sp_s = round(3 * k), round(5 * k)

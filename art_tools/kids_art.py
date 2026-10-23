@@ -1,6 +1,6 @@
 """Kids & Family row: Kaptain's cards (one picture, accent bar, bold title, tracked subtitle) rebuilt so they move
-like the Genres and Moods rows: the type rises in, bar and subtitle fill with the card colour, a light runs once round
-the card while three iconic pictures for the card play behind it; breath, back to the cover.
+like the Genres and Moods rows: the type rises in, bar and subtitle fill with the card colour, the bar counts the
+pictures (one segment each) while three iconic pictures for the card play behind it, name and year top right.
 Pictures are the films' / shows' own textless key art (fanart.tv backgrounds, TMDB textless backdrop as fallback).
 Each card has a fixed cover and a pool; the trio moves on every month (.github/workflows/kids-art.yml -> kids-art).
 Discover Family is the exception: its cover and trio are this month's most popular family films.
@@ -71,9 +71,13 @@ def find(kind, title, year):
     return (pick["id"], pick["name"]) if pick else (None, None)
 
 
+KIND = {}   # tmdb id -> "movie" / "tv" of the pictures picked, for the labels
+
+
 def art_of(item):
     kind, title, year = item[:3]
     tid, real = find(kind, title, year)
+    KIND[(tid, real)] = kind
     if not tid:
         return None
     fa = fanart(kind, tid)
@@ -119,16 +123,17 @@ def build(t, out):
         first = art_of(cover)
         seq = ([first] if first else []) + trio(pool, 3, avoid={first[0]} if first else set())
     imgs = [g.load_img(p) for _, _, p in seq]
-    frame = g.make(title, sub, accent, imgs)
+    labels = [g.labels_of([x], KIND.get((x[0], x[1]), "movie"))[0] for x in seq]
+    frame = g.make(title, sub, accent, imgs, labels=labels)
     dd = os.path.join(out, g.slug_of(t))
     os.makedirs(dd, exist_ok=True)
-    n = 120
+    n = frame.n
     frames = [frame(i, n).resize((g.OW, g.OH), Image.LANCZOS) for i in range(n)]
     frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n, loop=0,
                    quality=80, method=4, kmin=0, kmax=1)
     frame.cover().save(os.path.join(dd, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (g.OW * 3, g.OH * 2))
-    for jj, idx in enumerate([0, 20, 45, 70, 104, 119]):
+    for jj, idx in enumerate([0, n // 6, n // 3, n // 2, 2 * n // 3, n - 1]):
         strip.paste(frames[idx], ((jj % 3) * g.OW, (jj // 3) * g.OH))
     strip.save(os.path.join(dd, "frames.jpg"), quality=80)
     return [x[1] for x in seq]
