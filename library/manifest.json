@@ -3257,72 +3257,156 @@
   {
    "type": "movie",
    "id": "gen-genres-comedy-new-movies",
-   "name": "Comedy · New Movies"
+   "name": "Comedy · New Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "series",
    "id": "gen-genres-comedy-new-series",
-   "name": "Comedy · New Series"
+   "name": "Comedy · New Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "movie",
    "id": "gen-genres-comedy-popular-movies",
-   "name": "Comedy · Popular Movies"
+   "name": "Comedy · Popular Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "series",
    "id": "gen-genres-comedy-popular-series",
-   "name": "Comedy · Popular Series"
+   "name": "Comedy · Popular Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "movie",
    "id": "gen-genres-comedy-top-all-time-movies",
-   "name": "Comedy · Top All Time Movies"
+   "name": "Comedy · Top All Time Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "series",
    "id": "gen-genres-comedy-top-all-time-series",
-   "name": "Comedy · Top All Time Series"
+   "name": "Comedy · Top All Time Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "movie",
    "id": "gen-genres-comedy-top-of-the-year-movies",
-   "name": "Comedy · Top of the Year Movies"
+   "name": "Comedy · Top of the Year Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "series",
    "id": "gen-genres-comedy-top-of-the-year-series",
-   "name": "Comedy · Top of the Year Series"
+   "name": "Comedy · Top of the Year Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "movie",
    "id": "gen-genres-comedy-international-hits-movies",
-   "name": "Comedy · International Hits Movies"
+   "name": "Comedy · International Hits Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "series",
    "id": "gen-genres-comedy-international-hits-series",
-   "name": "Comedy · International Hits Series"
+   "name": "Comedy · International Hits Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "movie",
    "id": "gen-genres-comedy-popular-anime-movies",
-   "name": "Comedy · Popular Anime Movies"
+   "name": "Comedy · Popular Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "series",
    "id": "gen-genres-comedy-popular-anime-series",
-   "name": "Comedy · Popular Anime Series"
+   "name": "Comedy · Popular Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "movie",
    "id": "gen-genres-comedy-top-rated-anime-movies",
-   "name": "Comedy · Top Rated Anime Movies"
+   "name": "Comedy · Top Rated Anime Movies",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   },
   {
    "type": "series",
    "id": "gen-genres-comedy-top-rated-anime-series",
-   "name": "Comedy · Top Rated Anime Series"
+   "name": "Comedy · Top Rated Anime Series",
+   "extra": [
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
   }
  ],
  "behaviorHints": {
