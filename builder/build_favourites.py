@@ -4,17 +4,30 @@ Covers are the show's key art with its logo (no vignette); hovering plays the pi
 our repo (github.com/ObliviousTR/nuvio-awards → spotlight/art/favourites/), mirrored there so nothing depends on
 Pinterest or Giphy. The logo carries the name, so folder titles are hidden.
 """
-import sys
+import hashlib, os, sys
 from common import load, save, row, addon_src, SPOT_ART
 
 SRC, OUT = sys.argv[1], sys.argv[2]
 FAV = f"{SPOT_ART}/favourites"
 
 
+LOCAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "spotlight", "art", "favourites")
+
+
+def url(slot, name):
+    """repo URL plus a short content hash, so the app fetches new art after a delivery. My Simkl changes weekly
+    between deliveries, so it keeps a plain URL (raw.githubusercontent serves it with a 5-minute cache)."""
+    if slot == "mysimkl":
+        return f"{FAV}/{slot}/{name}"
+    p = os.path.join(LOCAL, slot, name)
+    v = hashlib.sha1(open(p, "rb").read()).hexdigest()[:8] if os.path.exists(p) else "0"
+    return f"{FAV}/{slot}/{name}?v={v}"
+
+
 def style(f, slot, backdrop=True):
     f.update(tileShape="LANDSCAPE", hideTitle=True, coverEmoji=None, titleLogoUrl=None,
-             coverImageUrl=f"{FAV}/{slot}/cover.jpg", focusGifUrl=f"{FAV}/{slot}/hover.webp", focusGifEnabled=True,
-             heroBackdropUrl=f"{FAV}/{slot}/backdrop.jpg" if backdrop else None)
+             coverImageUrl=url(slot, "cover.jpg"), focusGifUrl=url(slot, "hover.webp"), focusGifEnabled=True,
+             heroBackdropUrl=url(slot, "backdrop.jpg") if backdrop else None)
     return f
 
 
