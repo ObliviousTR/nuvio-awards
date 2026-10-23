@@ -1,4 +1,4 @@
-"""Documentaries samples: True Crime (evidence board) and History (archive colourised)."""
+"""Documentaries: all eight cards."""
 import os, sys, subprocess
 os.makedirs("refs/docs", exist_ok=True)
 r = subprocess.run([sys.executable, "art_tools/docs_art.py", "refs/docs"], capture_output=True, text=True)
