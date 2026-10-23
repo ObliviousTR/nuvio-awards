@@ -462,7 +462,8 @@ def duotone(im, dark, light):
 
 def build_a2(folder, out):
     """Second take: the films fill the whole card and the country stays on top as its glowing border, with a light
-    running round it; the flag spreads over the card and its colours give way to the film."""
+    running round it. Flag and name are one title block: on the card they sit in the middle, on hover they glide
+    together to the lower left and the film's title is set right under them."""
     name, isos, box, fiso, cols, _ = CARDS[folder]
     films = films_of(folder)
     reals = [cover_fit(load(p)) for _, _, p in films]
@@ -473,24 +474,70 @@ def build_a2(folder, out):
     ring = main_ring(paths0)
     fl = None if not fiso else flag_img(fiso)
     bg = Image.new("RGB", (W, H), (7, 7, 9))
-    nm = name_layer(name, H * 0.72 if fiso else H * 0.8)
     fall_ = fall()
-    labels = [film_label(t, y) for t, y, _ in films]
     dark = tuple(int(v * 0.25) for v in cols[0])
     light = cols[1] if len(cols) > 1 and sum(cols[1]) < 700 else tuple(min(255, int(v * 1.3) + 60) for v in cols[0])
     first_tone = duotone(reals[0], dark, light)
 
-    def flag_at(t, amp, sc, cx, cy, a=1.0):
-        f = framed_flag(waving(fl, t, amp))
-        f = f.resize((max(1, round(f.width * sc)), max(1, round(f.height * sc))), Image.LANCZOS)
-        return f, round(cx - f.width / 2), round(cy - f.height / 2)
+    # the title block, at rest (centre) and docked (lower left, over the film's title)
+    big = 46
+    while width(name, font("ExtraBold", big), 5) > W * 0.86 and big > 24:
+        big -= 2
+    small = 24
+    FLAG_H0 = 150
+    FLAG_H1 = 38
+    X0 = 60
+    LOCK_Y = H - 178                    # centre line of the docked flag and name
+    rest_flag = (W / 2, H * 0.37)
+    rest_name_y = H * 0.72 if fl is not None else H * 0.8
+    fw1 = (fl.width * FLAG_H1 / fl.height) if fl is not None else 0
+    lock_flag = (X0 + fw1 / 2, LOCK_Y)
+    lock_name_x = X0 + (fw1 + 18 if fl is not None else 0)
 
+    def title_block(cv, m, t=0):
+        """m: 0 = card, 1 = docked."""
+        e = ease(m)
+        if fl is not None:
+            fh = math.exp(math.log(FLAG_H0) + (math.log(FLAG_H1) - math.log(FLAG_H0)) * e)
+            sc = fh / FLAG_H0
+            f = framed_flag(waving(fl, t, 8 * math.sin(math.pi * e) + 3 * e))
+            f = f.resize((max(1, round(f.width * sc)), max(1, round(f.height * sc))), Image.LANCZOS)
+            cx = rest_flag[0] + (lock_flag[0] - rest_flag[0]) * e
+            cy = rest_flag[1] + (lock_flag[1] - rest_flag[1]) * e
+            cv.alpha_composite(f, (round(cx - f.width / 2), round(cy - f.height / 2)))
+        size = round(big + (small - big) * e)
+        fn = font("ExtraBold", size)
+        sp = 5
+        tw = width(name, fn, sp)
+        x = (W - tw) / 2 + (lock_name_x - (W - tw) / 2) * e
+        asc = fn.getbbox("A")[1]
+        cap = fn.getbbox("A")[3] - asc
+        y_rest = rest_name_y
+        y_lock = LOCK_Y - cap / 2 - asc
+        y = y_rest + (y_lock - y_rest) * e
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        tracked(d, (x + 2, y + 2), name, fn, (0, 0, 0, 170), sp)
+        col = tuple(round(205 + (240 - 205) * e) for _ in range(3))
+        tracked(d, (x, y), name, fn, col + (255,), sp)
+        cv.alpha_composite(lay)
+
+    def film_title(title, year):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        t = title.upper()
+        fn = font("ExtraBold", 46)
+        while width(t, fn, 3) > W - 140 and fn.size > 24:
+            fn = font("ExtraBold", fn.size - 2)
+        y = LOCK_Y + FLAG_H1 / 2 + 16
+        tracked(d, (X0 - 2, y), t, fn, (255, 255, 255, 255), 3)
+        tracked(d, (X0, y + fn.size + 12), str(year), font("SemiBold", 21), light + (255,), 8)
+        return lay
+
+    labels = [film_title(t, y) for t, y, _ in films]
     cv = bg.convert("RGBA")
     cv.alpha_composite(ol0)
-    if fl is not None:
-        f, x, y = flag_at(0, 0, 1, W / 2, H * 0.37)
-        cv.alpha_composite(f, (x, y))
-    cv.alpha_composite(nm)
+    title_block(cv, 0)
     cover = cv.convert("RGB")
     HOLD, OPEN, SEG, CLOSE = 6, 20, 44, 20
     S = len(films)
@@ -505,21 +552,13 @@ def build_a2(folder, out):
             u = (i - HOLD) / OPEN
             e = ease(u)
             # the film comes up in the flag's two colours, the true colours bloom after
-            pic = Image.blend(first_tone, zoomed(reals[0], 0.01), ease((u - 0.55) / 0.45))
+            pic = Image.blend(first_tone, zoomed(reals[0], 0.01), ease((u - 0.5) / 0.5))
             cv = Image.blend(bg, pic, e).convert("RGBA")
             cv.alpha_composite(amul(fall_, e))
             cv.alpha_composite(amul(ol0, 1 - 0.45 * e))
-            cv.alpha_composite(runner(ring, cols, (i - HOLD) / 60.0))
-            if fl is not None:  # the flag swells and thins out over the card, then settles small in the corner
-                if u < 0.6:
-                    v = ease(u / 0.6)
-                    f, x, y = flag_at(i, 10, 1 + 5 * v, W / 2, H * 0.37 + (H * 0.5 - H * 0.37) * v)
-                    cv.alpha_composite(amul(f, 1 - v), (x, y))
-                else:
-                    v = ease((u - 0.6) / 0.4)
-                    f, x, y = flag_at(i, 6, 0.45, 40 + 81, 34 + 52)
-                    cv.alpha_composite(amul(f, v), (x, y))
-            cv.alpha_composite(amul(nm, 1 - ease(u * 3)))
+            cv.alpha_composite(amul(runner(ring, cols, (i - HOLD) / 60.0), e))
+            title_block(cv, (u - 0.1) / 0.9, i)
+            cv.alpha_composite(amul(labels[0], ease((u - 0.7) / 0.3)))
         elif i < F0 + SEG * S:
             kf, t = divmod(i - F0, SEG)
             pic = zoomed(reals[kf], 0.01 + 0.05 * t / SEG)
@@ -529,22 +568,22 @@ def build_a2(folder, out):
             cv.alpha_composite(fall_)
             cv.alpha_composite(amul(ol0, 0.55))
             cv.alpha_composite(runner(ring, cols, (i - HOLD) / 60.0))
-            if fl is not None:
-                f, x, y = flag_at(i, 6, 0.45, 40 + 81, 34 + 52)
-                cv.alpha_composite(f, (x, y))
-            la = ease((t - 2) / 6) if t < 8 else (1 - ease((t - (SEG - 5)) / 5) if t >= SEG - 5 else 1.0)
+            title_block(cv, 1, i)
+            if kf == 0:
+                la = 1.0 if t < SEG - 5 else 1 - ease((t - (SEG - 5)) / 5)
+            elif kf == S - 1:
+                la = ease(t / 6) if t < 6 else (1 - ease((t - (SEG - 4)) / 4) if t >= SEG - 4 else 1.0)
+            else:
+                la = ease(t / 6) if t < 6 else (1 - ease((t - (SEG - 5)) / 5) if t >= SEG - 5 else 1.0)
             cv.alpha_composite(amul(labels[kf], la))
         else:
-            u = ease((i - (F0 + SEG * S)) / CLOSE)
-            cv = Image.blend(zoomed(reals[-1], 0.06), bg, u).convert("RGBA")
-            cv.alpha_composite(amul(fall_, 1 - u))
-            cv.alpha_composite(amul(ol0, 0.55 + 0.45 * u))
-            cv.alpha_composite(amul(runner(ring, cols, (i - HOLD) / 60.0), 1 - u))
-            if fl is not None:
-                sc = 0.45 + 0.55 * u
-                f, x, y = flag_at(i, 6 * (1 - u), sc, (40 + 81) + (W / 2 - 121) * u, (34 + 52) + (H * 0.37 - 86) * u)
-                cv.alpha_composite(f, (x, y))
-            cv.alpha_composite(amul(nm, ease((u - 0.4) / 0.6)))
+            u = (i - (F0 + SEG * S)) / CLOSE
+            e = ease(u)
+            cv = Image.blend(zoomed(reals[-1], 0.06), bg, e).convert("RGBA")
+            cv.alpha_composite(amul(fall_, 1 - e))
+            cv.alpha_composite(amul(ol0, 0.55 + 0.45 * e))
+            cv.alpha_composite(amul(runner(ring, cols, (i - HOLD) / 60.0), 1 - e))
+            title_block(cv, 1 - u, i)
         frames.append(cv.convert("RGB").resize((OW, OH), Image.LANCZOS))
     save_reel(frames, cover, folder, out, "-a2")
     return [f"{t} ({y})" for t, y, _ in films]
