@@ -185,12 +185,12 @@ def scanlines(im, k=0.82):
 
 
 def game(real):
-    out = scanlines(pixels(real, 22)).convert("RGBA")
+    out = scanlines(pixels(real, 16)).convert("RGBA")
     out.alpha_composite(hud())
     return out.convert("RGB")
 
 
-STEPS = [22, 16, 12, 9, 6, 4, 3, 2, 1]
+STEPS = [16, 12, 9, 6, 4, 3, 2, 1]
 
 
 def game_to_real(src, real, u):
