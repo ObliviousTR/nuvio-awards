@@ -1,4 +1,4 @@
-"""International Cinema: 9 single countries + 6 regional groups (agreed 2026-10-20), native TMDB rails.
+"""International Cinema: 9 single countries + 4 regional groups + World Cinema Gems (agreed 2026-10-23), native TMDB rails.
 
 Every folder starts with Kaptain's six-rail country line-up turned into movie / series pairs:
   Popular, Top Rated & Acclaimed, Recent & New, Action/Crime/Thrillers, Drama/Romance/Comedy Hits.
@@ -23,7 +23,7 @@ FLOORS = {  # vote-count floors (movie, series)
 }
 # Groups where popularity alone surfaces filler (direct-to-streaming erotica, sitcoms, soaps) get a
 # vote-average floor on every rail that isn't already sorted by rating.
-AVG = {"Southeast Asia": 6.5, "Middle East": 6.0, "Latin America": 6.0, "Central & Eastern Europe": 6.5}
+AVG = {"Latin America": 6.0, "Central & Eastern Europe": 6.5}
 ACTION = ({"withGenres": "28|80|53"}, {"withGenres": "10759|80|9648"})
 DRAMA = ({"withGenres": "18|10749|35"}, {"withGenres": "18|35"})
 
@@ -85,16 +85,7 @@ FOLDERS = [
      members([("Mainland Chinese", L("zh", "CN"), True), ("Hong Kong", L("cn|zh", "HK"), False),
               ("Taiwanese", L("zh", "TW"), True)])
      + toons("Chinese Animation", L("zh", "CN"), top_vc=(50, 20))),
-    ("Southeast Asia", "Southeast Asian", "Southeast Asian Cinema",
-     L("th|id|tl|vi|ms", "TH|ID|PH|VN|MY"), "small",
-     members([("Thai", L("th", "TH"), True), ("Indonesian", L("id", "ID"), True),
-              ("Filipino", L(None, "PH"), True), ("Vietnamese", L("vi", "VN"), False),
-              ("Malaysian", L(None, "MY"), False)], avg=AVG["Southeast Asia"])),
     ("India", "Indian", "Indian Cinema", L("hi|te"), "mid", []),
-    ("Middle East", "Middle Eastern", "Middle Eastern Cinema",
-     L("fa|he|ar", "IR|IL|LB|PS|EG|SA|AE|JO|IQ|SY|TN|MA"), "small",
-     members([("Iranian", L("fa", "IR"), False), ("Israeli", L("he", "IL"), True),
-              ("Arab", L("ar"), True)], avg=AVG["Middle East"])),
     ("UK & Ireland", "British & Irish", "British Cinema", L("en", "GB|IE"), "big",
      members([("Irish", L("en|ga", "IE"), True)])
      + toons("British & Irish Animation", L("en", "GB|IE"), series=False, top_vc=(100, 0))),
@@ -108,11 +99,11 @@ FOLDERS = [
               ("Norwegian", L("no", "NO"), True), ("Finnish", L("fi", "FI"), True),
               ("Icelandic", L("is", "IS"), True)])),
     ("Central & Eastern Europe", "Eastern European", "🏰",
-     L("pl|cs|hu|ro|el|sr|hr|bs|sl|sk|bg|ru|uk",
-       "PL|CZ|HU|RO|GR|RS|HR|BA|SI|SK|BG|RU|UA"), "thin",
+     L("pl|cs|hu|ro|el|sr|hr|bs|sl|sk|bg",
+       "PL|CZ|HU|RO|GR|RS|HR|BA|SI|SK|BG"), "thin",
      members([("Polish", L("pl", "PL"), True), ("Czech", L("cs", "CZ"), True),
               ("Hungarian", L("hu", "HU"), False), ("Romanian", L("ro", "RO"), False),
-              ("Greek", L("el", "GR"), False), ("Russian & Soviet", L("ru"), True),
+              ("Greek", L("el", "GR"), False),
               ("Balkan", L("sr|hr|bs|sl", "RS|HR|BA|SI"), False)], avg=AVG["Central & Eastern Europe"])),
     ("Latin America", "Latin American", "Latin American Cinema",
      L("es|pt", "MX|AR|BR|CO|CL|PE|UY"), "mid",
@@ -121,6 +112,33 @@ FOLDERS = [
               ("Chilean", L("es", "CL"), False)], avg=AVG["Latin America"])),
 ]
 
+
+# Rails without enough worth watching (agreed 2026-10-23): fewer than 20 titles with 100+ votes and a 6.5+ average
+# on TMDB (audit of 2026-10-23). Türkiye keeps all its rails.
+DROP = {
+    "Popular Irish Series", "French Action, Crime & Thrillers · Series", "Italian Action, Crime & Thrillers · Series",
+    "Popular Danish Series", "Popular Swedish Series", "Popular Norwegian Series", "Popular Finnish Series",
+    "Popular Icelandic Movies", "Popular Icelandic Series",
+    "Popular Eastern European Series & Dramas", "Top Rated & Acclaimed Eastern European Series", "Recent & New Eastern European Series",
+    "Eastern European Action, Crime & Thrillers · Series", "Eastern European Drama, Romance & Comedy Hits · Series",
+    "Popular Polish Series", "Popular Czech Movies", "Popular Czech Series", "Popular Hungarian Movies",
+    "Popular Romanian Movies", "Popular Greek Movies", "Popular Balkan Movies",
+    "Japanese Action, Crime & Thrillers · Series", "Japanese Drama, Romance & Comedy Hits · Series",
+    "Chinese Action, Crime & Thrillers · Series", "Chinese Drama, Romance & Comedy Hits · Series",
+    "Popular Mainland Chinese Series", "Popular Taiwanese Series", "Popular Chinese Animation Movies",
+    "Popular Chinese Animation Series", "Top Rated Chinese Animation Movies", "Top Rated Chinese Animation Series",
+    "Popular Indian Series & Dramas", "Top Rated & Acclaimed Indian Series", "Recent & New Indian Series",
+    "Indian Action, Crime & Thrillers · Series", "Indian Drama, Romance & Comedy Hits · Series",
+    "Popular Argentine Series", "Popular Brazilian Series", "Popular Colombian Movies", "Popular Chilean Movies",
+}
+# Regions without a folder of their own (Russia, the Arab world, Iran, Southeast Asia): only their best films,
+# in one mixed folder.
+GEMS = ("World Cinema Gems", "🌍", [
+    src("Russian & Soviet Classics", "MOVIE", TOP, voteCountGte=300, voteAverageGte=7.0, withoutGenres=NO_M, withOriginalLanguage="ru"),
+    src("Iranian & Arab Cinema", "MOVIE", TOP, voteCountGte=200, voteAverageGte=7.0, withoutGenres=NO_M, withOriginalLanguage="fa|ar"),
+    src("Southeast Asian Gems", "MOVIE", TOP, voteCountGte=200, voteAverageGte=6.8, withoutGenres=NO_M,
+        withOriginalLanguage="th|id|tl|vi|ms"),
+])
 
 data = load(SRC)
 intl = row(data, "International Cinema")
@@ -132,10 +150,16 @@ for title, adj, art, region, size, extra in FOLDERS:
         f["title"] = title
     else:
         f = placeholder_folder(title, art)
-    f["sources"], f["catalogSources"] = core(adj, region, size, AVG.get(title)) + extra, []
+    f["sources"], f["catalogSources"] = [x for x in core(adj, region, size, AVG.get(title)) + extra
+                                         if title == "Türkiye" or x["title"] not in DROP], []
     folders.append(f)
     report.append(f"## {title} ({len(f['sources'])} rails)")
     report += [f"   {i+1:2}. {s['title']}" for i, s in enumerate(f["sources"])]
+g = placeholder_folder(GEMS[0], GEMS[1])
+g["sources"], g["catalogSources"] = GEMS[2], []
+folders.append(g)
+report.append(f"## {GEMS[0]} ({len(GEMS[2])} rails)")
+report += [f"   {i+1:2}. {s['title']}" for i, s in enumerate(GEMS[2])]
 intl["folders"] = folders
 save(data, OUT)
 open(REPORT, "w").write("\n".join(report) + "\n")

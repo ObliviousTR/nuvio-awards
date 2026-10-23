@@ -62,7 +62,7 @@ FOLDERS = {  # row title -> folder titles in order (unlisted folders keep their 
                            "Criterion Collection & Arthouse"],
     "International Cinema": ["Türkiye", "UK & Ireland", "Spain", "France", "Italy", "Germany", "Nordic Noir",
                              "Central & Eastern Europe", "South Korea", "Japan", "Greater China", "India",
-                             "Southeast Asia", "Latin America", "Middle East"],
+                             "Latin America", "World Cinema Gems"],
     "Reality TV": ["Trending & New Reality", "Strategy, Mind Games & Survival", "British Panel, Quiz & Comedy Shows",
                    "Culinary & Cooking Battles", "Dating, Social Experiment & Drama", "Makeover, Motors & Craft Battles"],
     "Documentaries": ["Trending & Award-Winning Docs", "True Crime & Serial Killers", "Investigative & Scandals",
