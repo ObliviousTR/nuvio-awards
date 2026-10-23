@@ -1,44 +1,232 @@
 {
  "_how": "Catalogs for Nuvio's Discover screen (Search > Discover): pick the catalog (e.g. Comedy), then a choice from the Genre menu. Each choice is a TMDB discover query run through the genre rule (scripts/genre_rails.py). kw: TMDB keyword names (resolved to ids each run). The first choice is what the catalog shows before anything is picked.",
  "catalogs": [
-  {"id": "disc-comedy-movies", "type": "movie", "name": "Discover · Comedy", "genre": "35",
-   "base": {"voteCountGte": 100, "withoutGenres": "16|99"},
+  {
+   "id": "disc-comedy-movies",
+   "type": "movie",
+   "name": "Discover · Comedy",
+   "genre": "35",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
    "options": [
-    {"label": "Popular", "sort": "popularity.desc"},
-    {"label": "Top Rated", "sort": "vote_average.desc", "filters": {"voteCountGte": 1000}},
-    {"label": "New Releases", "sort": "primary_release_date.desc", "filters": {"voteCountGte": 20}, "released": true},
-    {"label": "Romantic Comedy", "filters": {"withGenres": "35,10749"}},
-    {"label": "Action Comedy", "filters": {"withGenres": "35,28"}},
-    {"label": "Crime Comedy", "filters": {"withGenres": "35,80"}},
-    {"label": "Horror Comedy", "filters": {"withGenres": "35,27"}},
-    {"label": "Family Comedy", "filters": {"withGenres": "35,10751"}},
-    {"label": "Dark Comedy", "kw": ["dark comedy", "black comedy"]},
-    {"label": "Satire", "kw": ["satire", "political satire"]},
-    {"label": "Parody", "kw": ["parody", "spoof"]},
-    {"label": "Buddy Comedy", "kw": ["buddy comedy"]},
-    {"label": "Teen Comedy", "kw": ["teen comedy", "high school"]},
-    {"label": "Mockumentary", "kw": ["mockumentary"]},
-    {"label": "Stand-Up", "kw": ["stand-up comedy"], "rule": false, "filters": {"voteCountGte": 20}},
-    {"label": "Classics", "sort": "vote_average.desc", "filters": {"voteCountGte": 300, "releaseDateLte": "1979-12-31"}},
-    {"label": "International", "sort": "popularity.desc", "filters": {"voteCountGte": 300, "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"}}
-   ]},
-  {"id": "disc-comedy-series", "type": "series", "name": "Discover · Comedy", "genre": "35",
-   "base": {"voteCountGte": 50, "withoutGenres": "16|99|10763|10767|10766|10764"},
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Romantic Comedy",
+     "filters": {
+      "withGenres": "35,10749"
+     }
+    },
+    {
+     "label": "Action Comedy",
+     "filters": {
+      "withGenres": "35,28"
+     }
+    },
+    {
+     "label": "Crime Comedy",
+     "filters": {
+      "withGenres": "35,80"
+     }
+    },
+    {
+     "label": "Horror Comedy",
+     "filters": {
+      "withGenres": "35,27"
+     }
+    },
+    {
+     "label": "Family Comedy",
+     "filters": {
+      "withGenres": "35,10751"
+     }
+    },
+    {
+     "label": "Dark Comedy",
+     "kw": [
+      "dark comedy",
+      "black comedy"
+     ]
+    },
+    {
+     "label": "Satire",
+     "kw": [
+      "satire",
+      "political satire"
+     ]
+    },
+    {
+     "label": "Parody",
+     "kw": [
+      "parody",
+      "spoof"
+     ]
+    },
+    {
+     "label": "Buddy Comedy",
+     "kw": [
+      "buddy comedy"
+     ]
+    },
+    {
+     "label": "Teen Comedy",
+     "kw": [
+      "teen comedy",
+      "high school"
+     ]
+    },
+    {
+     "label": "Mockumentary",
+     "kw": [
+      "mockumentary"
+     ]
+    },
+    {
+     "label": "Stand-Up",
+     "kw": [
+      "stand-up comedy"
+     ],
+     "rule": false,
+     "filters": {
+      "voteCountGte": 20
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-comedy-series",
+   "type": "series",
+   "name": "Discover · Comedy",
+   "genre": "35",
+   "base": {
+    "voteCountGte": 50,
+    "withoutGenres": "16|99|10763|10767|10766|10764",
+    "withOriginalLanguage": "en"
+   },
    "options": [
-    {"label": "Popular", "sort": "popularity.desc"},
-    {"label": "Top Rated", "sort": "vote_average.desc", "filters": {"voteCountGte": 300}},
-    {"label": "New Releases", "sort": "first_air_date.desc", "filters": {"voteCountGte": 10}, "released": true},
-    {"label": "Sitcoms", "kw": ["sitcom"]},
-    {"label": "Workplace Comedy", "kw": ["workplace comedy", "workplace"]},
-    {"label": "Mockumentary", "kw": ["mockumentary"]},
-    {"label": "Romantic Comedy", "kw": ["romantic comedy"]},
-    {"label": "Dark Comedy", "kw": ["dark comedy", "black comedy"]},
-    {"label": "Teen Comedy", "kw": ["teen comedy", "high school"]},
-    {"label": "Crime Comedy", "filters": {"withGenres": "35,80"}},
-    {"label": "Sketch Comedy", "kw": ["sketch comedy"]},
-    {"label": "British", "filters": {"withOriginCountry": "GB"}},
-    {"label": "Classics", "sort": "vote_average.desc", "filters": {"voteCountGte": 100, "releaseDateLte": "1999-12-31"}},
-    {"label": "International", "sort": "popularity.desc", "filters": {"voteCountGte": 100, "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"}}
-   ]}
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "Sitcoms",
+     "kw": [
+      "sitcom"
+     ]
+    },
+    {
+     "label": "Workplace Comedy",
+     "kw": [
+      "workplace comedy",
+      "workplace"
+     ]
+    },
+    {
+     "label": "Mockumentary",
+     "kw": [
+      "mockumentary"
+     ]
+    },
+    {
+     "label": "Dark Comedy",
+     "kw": [
+      "dark comedy",
+      "black comedy"
+     ]
+    },
+    {
+     "label": "Teen Comedy",
+     "kw": [
+      "teen comedy",
+      "high school"
+     ]
+    },
+    {
+     "label": "Crime Comedy",
+     "filters": {
+      "withGenres": "35,80"
+     }
+    },
+    {
+     "label": "Sketch Comedy",
+     "kw": [
+      "sketch comedy"
+     ]
+    },
+    {
+     "label": "British",
+     "filters": {
+      "withOriginCountry": "GB"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  }
  ]
 }
