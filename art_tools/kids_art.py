@@ -71,13 +71,16 @@ def find(kind, title, year):
     return (pick["id"], pick["name"]) if pick else (None, None)
 
 
-KIND = {}   # tmdb id -> "movie" / "tv" of the pictures picked, for the labels
+KIND = {}   # (tmdb id, name) -> "movie" / "tv" of the pictures picked, for the labels
+LABEL = {}  # (tmdb id, name) -> (name, year) as the pool writes it (TMDB may file a classic under a later reboot)
+SINCE = {"Looney Tunes": 1930}   # pool items searched without a year
 
 
 def art_of(item):
     kind, title, year = item[:3]
     tid, real = find(kind, title, year)
     KIND[(tid, real)] = kind
+    LABEL[(tid, real)] = (title, year or SINCE.get(title, ""))
     if not tid:
         return None
     fa = fanart(kind, tid)
@@ -123,7 +126,7 @@ def build(t, out):
         first = art_of(cover)
         seq = ([first] if first else []) + trio(pool, 3, avoid={first[0]} if first else set())
     imgs = [g.load_img(p) for _, _, p in seq]
-    labels = [g.labels_of([x], KIND.get((x[0], x[1]), "movie"))[0] for x in seq]
+    labels = [LABEL.get((x[0], x[1])) or g.labels_of([x], KIND.get((x[0], x[1]), "movie"))[0] for x in seq]
     frame = g.make(title, sub, accent, imgs, labels=labels)
     dd = os.path.join(out, g.slug_of(t))
     os.makedirs(dd, exist_ok=True)
