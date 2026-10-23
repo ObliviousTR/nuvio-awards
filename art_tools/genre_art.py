@@ -292,7 +292,11 @@ def scene(img):
     return Image.composite(Image.new("RGB", (W, H), (6, 6, 10)), im, m)
 
 
-def make(title, sub, accent, imgs):
+def make(title, sub, accent, imgs, labels=None, style=None):
+    """labels: (name, year) per picture, written top right while it plays. style (or env GENRE_STYLE) of what
+    marks time now the lap round the card is gone: A nothing (the colour fill only), B the bar split into one segment
+    per film that fills as it plays, C a light sweeping over the title at every change of film."""
+    style = style or os.environ.get("GENRE_STYLE", "A")
     k = W / 1920
     tf, sf = font("ExtraBold", round(124 * k)), font("SemiBold", round(42 * k))
     sp_t, sp_s = round(3 * k), round(5 * k)
@@ -382,40 +386,110 @@ def make(title, sub, accent, imgs):
         tracked(d, (x0 + 2, sub_y), sub, sf, grey + (255,), sp_s)
         return cv.convert("RGB")
 
+    # the title as one layer (it stays put now: the hover starts and ends exactly on the cover)
+    title_lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    tracked(ImageDraw.Draw(title_lay), (x0, title_y), title, tf, (255, 255, 255, 255), sp_t)
+    title_a = title_lay.getchannel("A")
+    tx0, tx1 = x0, x0 + round(sum(probe.textlength(ch, font=tf) + sp_t for ch in title))
+
+    lab_f = font("ExtraBold", 30)
+    yr_f = font("SemiBold", 19)
+    yr_col = tuple(min(255, round(v * 0.55 + 115)) for v in accent)
+
+    def label_layer(name, year):
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        tt = name.upper()
+        f_ = lab_f
+        while probe.textlength(tt, font=f_) + 2 * len(tt) > W * 0.5 and f_.size > 20:
+            f_ = font("ExtraBold", f_.size - 2)
+        tw = sum(probe.textlength(ch, font=f_) + 2 for ch in tt) - 2
+        xr = W - 54
+        tracked(d, (xr - tw, 44), tt, f_, (255, 255, 255, 255), 2)
+        ys = str(year)
+        yw = sum(probe.textlength(ch, font=yr_f) + 7 for ch in ys) - 7
+        tracked(d, (xr - yw, 44 + f_.size + 10), ys, yr_f, yr_col + (255,), 7)
+        return lay
+
+    labs = [label_layer(n_, y_) for n_, y_ in labels] if labels else []
+    shade = Image.new("L", (W, H), 0)   # a soft dark corner behind the label, only while one is up
+    ImageDraw.Draw(shade).ellipse((W * 0.52, -H * 0.42, W * 1.25, H * 0.42), fill=170)
+    shade = shade.filter(ImageFilter.GaussianBlur(70))
+
+    def seg_bar(cv, t, q, out):
+        """B: the bar as one segment per film, bottom up; each fills while its film plays."""
+        d = ImageDraw.Draw(cv)
+        gap = round(6 * ease(t / 0.05) * out)
+        h_ = (bar[3] - bar[1] - gap * (S - 1)) / S
+        for s_ in range(S):
+            y1 = bar[3] - s_ * (h_ + gap)
+            y0 = y1 - h_
+            d.rectangle((bar[0], round(y0), bar[2], round(y1)), fill=grey + (255,))
+            p_ = min(1.0, max(0.0, q * S - s_)) * out
+            if p_ > 0:
+                d.rectangle((bar[0], round(y1 - h_ * p_), bar[2], round(y1)), fill=accent + (255,))
+
     def frame(i, n):
         t = i / n
-        c = ease(t / L0) if t < 0.94 else 1 - ease((t - 0.94) / 0.06)
+        L0, L1 = 4 / n, (n - 16) / n
         q = min(1.0, max(0.0, (t - L0) / (L1 - L0)))
         seg = q * S
         j = min(S - 1, int(seg))
         loc = seg - j
-        nxt, fade = (j + 1) % S, ((loc - 0.85) / 0.15 if loc > 0.85 and j < S - 1 else 0.0)
+        nxt, fade = (j + 1) % S, ((loc - 0.86) / 0.14 if loc > 0.86 and j < S - 1 else 0.0)
         if t > L1:
-            j, nxt, loc, fade = S - 1, 0, 1.0, min(1.0, (t - L1) / (1 - L1))
-        bg = art.zoomed(bars[j], 0.02 + 0.06 * min(1, loc))
+            j, nxt, loc, fade = S - 1, 0, 1.0, ease((t - L1) / (1 - L1 - 2 / n))
+        bg = art.zoomed(bars[j], 0.06 * min(1, loc))
         if fade > 0:
-            bg = Image.blend(bg, art.zoomed(bars[nxt], 0.02), fade)
-        breath = math.sin(math.pi * (t - L1) / 0.1) if L1 < t < L1 + 0.1 else 0.0
+            bg = Image.blend(bg, art.zoomed(bars[nxt], 0.0), min(1.0, fade))
         cv = bg.convert("RGBA")
+        f = ease((t - L0) / 0.1) if t < L1 else 1 - ease((t - L1) / ((1 - L1) * 0.8))
+        # the label of the film on screen, top right
+        if labs and t <= L1:
+            la = ease((loc - 0.06) / 0.1) * (1 - ease((loc - 0.84) / 0.12)) if j < S - 1 else ease((loc - 0.06) / 0.1) * (1 - ease((loc - 0.9) / 0.1))
+            if la > 0:
+                dark = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+                dark.putalpha(shade.point(lambda v: round(v * la)))
+                cv.alpha_composite(dark)
+                lay = labs[j].copy()
+                lay.putalpha(lay.getchannel("A").point(lambda v: round(v * la)))
+                cv.alpha_composite(lay, (0, round((1 - la) * -8)))
         d = ImageDraw.Draw(cv)
-        type_in(cv, t, 1 - ease((t - 0.95) / 0.05), c)
-        if c > 0:
-            fr = Image.new("L", (W, H), 0)
-            pts = frame_path(q)
-            if len(pts) > 1 and q > 0:
-                ImageDraw.Draw(fr).line(pts, fill=255, width=4, joint="curve")
-            head = Image.new("L", (W, H), 0)
-            if 0 < q < 1 and len(pts) > 1:
-                hx, hy = pts[-1]
-                ImageDraw.Draw(head).ellipse((hx - 9, hy - 9, hx + 9, hy + 9), fill=255)
-            gm = ImageChops.lighter(fr, head).filter(ImageFilter.GaussianBlur(9 + 7 * breath))
-            gl = Image.new("RGBA", (W, H), accent + (0,))
-            gl.putalpha(gm.point(lambda v: min(255, round(v * (1.1 + 0.9 * breath) * c))))
-            cv.alpha_composite(gl)
-            ln = Image.new("RGBA", (W, H), accent + (0,))
-            ln.putalpha(fr.point(lambda v: round(v * c)))
-            cv.alpha_composite(ln)
+        # bar
+        if style == "B":
+            seg_bar(cv, t, q if t <= L1 else 1.0, f if t > L1 else 1.0)
+        else:
+            d.rectangle(bar, fill=grey + (255,))
+            if f > 0:
+                d.rectangle((bar[0], bar[3] - (bar[3] - bar[1]) * f, bar[2], bar[3]), fill=accent + (255,))
+        # title
+        cv.alpha_composite(title_lay)
+        if style == "C" and t <= L1:   # a light sweeps over the title as each film comes in
+            u = (loc - 0.02) / 0.35 if not (j == 0 and seg < 0.05) else -1
+            if 0 < u < 1:
+                cx = tx0 - 160 + (tx1 - tx0 + 320) * ease(u)
+                xs = Image.linear_gradient("L").rotate(90).resize((W, H))
+                import numpy as _np
+                xx = _np.arange(W, dtype=_np.float32)[None, :] + (_np.arange(H, dtype=_np.float32)[:, None] - title_y) * 0.35
+                band = _np.clip(1 - _np.abs(xx - cx) / 90, 0, 1) ** 1.5
+                m = (_np.asarray(title_a, _np.float32) * band).astype(_np.uint8)
+                mi = Image.fromarray(m)
+                glow = Image.new("RGBA", (W, H), accent + (0,))
+                glow.putalpha(mi.filter(ImageFilter.GaussianBlur(10)).point(lambda v: min(255, v * 2)))
+                cv.alpha_composite(glow)
+                tint = Image.new("RGBA", (W, H), tuple(min(255, round(v * 0.6 + 100)) for v in accent) + (0,))
+                tint.putalpha(mi)
+                cv.alpha_composite(tint)
+        # subtitle, filling with the colour left to right
+        lay = sub_grey
+        if f > 0:
+            m = Image.new("L", lay.size, 0)
+            ImageDraw.Draw(m).rectangle((0, 0, round(sw * f), sub_h), fill=255)
+            lay = Image.composite(sub_acc, sub_grey, m)
+        cv.alpha_composite(lay, (x0 + 2, sub_y))
         return cv.convert("RGB")
+
+    frame.n = 26 + 34 * S   # 4 frames on the cover, 1.7 s a film, 0.8 s back to the cover
     frame.cover = cover
     return frame
 
@@ -425,6 +499,16 @@ def slug_of(t):
     while "--" in s:
         s = s.replace("--", "-")
     return s
+
+
+def labels_of(seq, kind="movie"):
+    """(name, year) for each (tmdb id, name, path) - the card writes them while the picture plays."""
+    out = []
+    for tid, name, _ in seq:
+        info = tmdb(f"/{kind}/{tid}") or {}
+        d = info.get("release_date") or info.get("first_air_date") or ""
+        out.append((info.get("title") or info.get("name") or name or "", d[:4]))
+    return out
 
 
 def build_one(job):
@@ -440,16 +524,16 @@ def build_one(job):
         if not seq:
             raise RuntimeError("no films")
         imgs = [load_img(p) for _, _, p in seq]
-        frame = make(title, sub, accent, imgs)
+        frame = make(title, sub, accent, imgs, labels=labels_of(seq))
         dd = os.path.join(out, slug_of(t))
         os.makedirs(dd, exist_ok=True)
-        n = 120  # 50 ms: 0.25 s in, 5 s lap with the films, 0.75 s breath and back
+        n = frame.n
         frames = [frame(i, n).resize((OW, OH), Image.LANCZOS) for i in range(n)]
         frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n,
                        loop=0, quality=80, method=4, kmin=0, kmax=1)  # every frame a keyframe: desktop Nuvio decodes frames one by one
         frame.cover().save(os.path.join(dd, "cover.jpg"), quality=90)
         strip = Image.new("RGB", (OW * 3, OH * 2))
-        for jj, idx in enumerate([0, 20, 45, 70, 104, 119]):
+        for jj, idx in enumerate([0, n // 6, n // 3, n // 2, 2 * n // 3, n - 1]):
             strip.paste(frames[idx], ((jj % 3) * OW, (jj // 3) * OH))
         strip.save(os.path.join(dd, "frames.jpg"), quality=80)
         return t, [(x[0], x[1]) for x in picks], None
