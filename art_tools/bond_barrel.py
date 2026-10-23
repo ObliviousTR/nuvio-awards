@@ -6,7 +6,9 @@ film's title, built as a loop.
           the red dot -> a streak of light writes the 007 mark under it -> the cover again (so it loops seamlessly)
 Footage: the Craig-era gun-barrel compilation Ozzy sent (QoS part, 6.9s-15.4s); its burned-in caption is cut away.
 Mark: Wikimedia Commons "007 Logo.svg" (public domain), white, in nuvio-art art/logos/bond/007.png.
-usage: python3 art_tools/bond_barrel.py VIDEO OUT_DIR
+Then, as the Studios and Universes rows do: the 007 emblem moves small to the top left while three Bond films play
+(one per era, each film's name and year lower left), and comes back to the middle on the cover.
+usage: python3 art_tools/bond_barrel.py VIDEO OUT_DIR [FILMS_DIR (0.jpg.. + list.txt: i, name, year)]
 """
 import math, os, subprocess, sys
 import numpy as np
@@ -163,7 +165,43 @@ def mark_reveal(cv, mk, pos, p):
         cv.alpha_composite(glow_lines(fn, tail))
 
 
-def build(video, out):
+def film_label(name, year):
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    t = name.upper()
+    fn = font("ExtraBold", 40)
+    while width(t, fn, 3) > W - 140 and fn.size > 24:
+        fn = font("ExtraBold", fn.size - 2)
+    y = H - 120
+    tracked(d, (54, y), t, fn, (255, 255, 255, 255), 3)
+    tracked(d, (56, y + fn.size + 12), str(year), font("SemiBold", 20), (210, 210, 210, 255), 8)
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sh.putalpha(lay.getchannel("A").filter(ImageFilter.GaussianBlur(9)).point(lambda v: round(v * 0.85)))
+    sh.alpha_composite(lay)
+    return sh
+
+
+def film_scene(im):
+    """The film's key art, cover-cropped, with dark pools behind the corner mark and the film's name."""
+    from PIL import ImageOps
+    im = ImageOps.fit(im.convert("RGB"), (W, H), Image.LANCZOS)
+    m = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(m)
+    d.ellipse((-W * 0.25, -H * 0.62, W * 0.5, H * 0.72), fill=215)
+    d.ellipse((-W * 0.3, H * 0.62, W * 0.62, H * 1.3), fill=175)
+    m = m.filter(ImageFilter.GaussianBlur(W * 0.08))
+    return Image.composite(Image.new("RGB", (W, H), (4, 5, 10)), im, m)
+
+
+def zoomed(im, z):
+    if z <= 0:
+        return im
+    w, h = im.size
+    dx, dy = w * z / 2, h * z / 2
+    return im.crop((dx, dy, w - dx, h - dy)).resize((w, h), Image.BILINEAR)
+
+
+def build(video, out, films_dir=None):
     os.makedirs(out, exist_ok=True)
     frames = clip(video)
     spr, half = disc_sprite(frames)
@@ -181,19 +219,48 @@ def build(video, out):
     cover = cover_frame().convert("RGB")
     # timeline: (output frames, what)
     seq = []
-    seq += [("cover", None)] * 8
-    seq += [("out", i / 10) for i in range(10)]
+    seq += [("cover", None)] * 4
+    seq += [("out", i / 8) for i in range(8)]
     # footage, each part at its own pace (source seconds per output frame)
     t = T0
-    for t_end, step in ((9.6, 0.1), (13.0, 0.065), (15.1, 0.05)):
+    for t_end, step in ((9.6, 0.22), (13.0, 0.13), (15.1, 0.08)):
         while t < t_end - 1e-6:
             seq.append(("clip", t))
             t += step
-    CONV = 20
+    CONV = 14
     seq += [("conv", i / CONV) for i in range(CONV)]
-    REV = 18
+    REV = 14
     seq += [("rev", i / REV) for i in range(REV)]
-    seq += [("cover", None)] * 6
+    seq += [("cover", None)] * 4
+    # then the Studios rhythm: the emblem small in the top left while three Bond films play, and back
+    films = []
+    if films_dir:
+        rows = [l.split("\t") for l in open(os.path.join(films_dir, "list.txt"), encoding="utf-8").read().splitlines()]
+        for r in rows[:3]:
+            films.append((film_scene(Image.open(os.path.join(films_dir, f"{r[0]}.jpg"))), film_label(r[1], r[2])))
+    MOVE, FILM, XF, BACK = 12, 28, 8, 14
+    F = len(films)
+    if F:
+        seq += [("films", i) for i in range(MOVE + FILM * F)]
+        seq += [("back", i / (BACK - 1)) for i in range(BACK)]
+    emb = cover_frame().copy()
+    emb_t = Image.new("RGBA", (W, H), (0, 0, 0, 0))   # the cover's composition on clear, for the corner
+    place_disc(emb_t, spr, half, END_C, END_R, 1.0, glow=0.55)
+    emb_t.alpha_composite(ring(END_C, END_R + RING, 0.9))
+    emb_t.alpha_composite(mk, pos)
+    emb_t.alpha_composite(txt)
+    bb = emb_t.getchannel("A").point(lambda v: 255 if v > 60 else 0).getbbox()
+    bb = (max(0, bb[0] - 30), max(0, bb[1] - 30), min(W, bb[2] + 30), min(H, bb[3] + 30))
+    ecrop = emb_t.crop(bb)
+    ecx, ecy = bb[0] + ecrop.width / 2, bb[1] + ecrop.height / 2
+    k_end = min(0.26 * W / ecrop.width, 0.3 * H / ecrop.height)
+
+    def emblem(cv, m):
+        k = 1 - (1 - k_end) * m
+        e = ecrop.resize((max(1, round(ecrop.width * k)), max(1, round(ecrop.height * k))), Image.LANCZOS)
+        tx, ty = 40 + ecrop.width * k_end / 2, 30 + ecrop.height * k_end / 2
+        x, y = ecx + (tx - ecx) * m, ecy + (ty - ecy) * m
+        cv.alpha_composite(e, (round(x - e.width / 2), round(y - e.height / 2)))
     # the dot and streaks at the hand-over (from the measurements of the clip): r 124 at (649, 336)
     C0, R0 = (649, 336), 124
     out_frames = []
@@ -222,6 +289,31 @@ def build(video, out):
             mark_reveal(base, mk, pos, v / 0.8)
             base.alpha_composite(amul(txt, ease((v - 0.55) / 0.45)))
             cv = base.convert("RGB")
+        elif kind == "films":
+            i = v
+            q = i / (MOVE + FILM * F)
+            seg = min(F - 1, int(q * F))
+            loc = q * F - seg
+            m = ease(i / MOVE) if i < MOVE else 1.0
+            bg = zoomed(films[seg][0], 0.02 + 0.05 * loc)
+            if loc > 1 - XF / FILM and seg < F - 1:
+                bg = Image.blend(bg, zoomed(films[seg + 1][0], 0.02), ease((loc - (1 - XF / FILM)) / (XF / FILM)))
+            base = Image.blend(Image.new("RGB", (W, H), (0, 0, 0)), bg, m).convert("RGBA")
+            la = ease((loc - 0.1) / 0.1) * (1 - ease((loc - 0.82) / 0.12))
+            if seg == 0:
+                la = ease((i - MOVE * 0.6) / 8) * (1 - ease((loc - 0.82) / 0.12))
+            if la > 0:
+                base.alpha_composite(amul(films[seg][1], la * m))
+            emblem(base, m)
+            cv = base.convert("RGB")
+        elif kind == "back":
+            u = ease(v)
+            base = Image.blend(zoomed(films[-1][0], 0.07), Image.new("RGB", (W, H), (0, 0, 0)), u).convert("RGBA")
+            if u < 1:
+                emblem(base, 1 - u)
+                cv = base.convert("RGB")
+            else:
+                cv = cover.copy()
         out_frames.append(cv.resize((OW, OH), Image.LANCZOS))
     out_frames[0].save(os.path.join(out, "hover.webp"), save_all=True, append_images=out_frames[1:],
                        duration=[1000 // FPS] * len(out_frames), loop=0, quality=82, method=6, kmin=0, kmax=1)
@@ -234,4 +326,4 @@ def build(video, out):
 
 
 if __name__ == "__main__":
-    print("frames", build(sys.argv[1], sys.argv[2]))
+    print("frames", build(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None))
