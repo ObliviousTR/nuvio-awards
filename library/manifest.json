@@ -1,6 +1,6 @@
 {
  "id": "community.oblivioustr.nuvio-library",
- "version": "1.0.20261022",
+ "version": "1.0.20261023",
  "name": "Nuvio Library",
  "description": "Film universes & franchises, collection folders, iconic actors and legendary directors, rebuilt weekly from TMDB.",
  "resources": [
@@ -3253,6 +3253,76 @@
    "type": "movie",
    "id": "lib-d-billy-wilder-recent",
    "name": "Billy Wilder · Recent"
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-comedy-new-movies",
+   "name": "Comedy · New Movies"
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-comedy-new-series",
+   "name": "Comedy · New Series"
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-comedy-popular-movies",
+   "name": "Comedy · Popular Movies"
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-comedy-popular-series",
+   "name": "Comedy · Popular Series"
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-comedy-top-all-time-movies",
+   "name": "Comedy · Top All Time Movies"
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-comedy-top-all-time-series",
+   "name": "Comedy · Top All Time Series"
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-comedy-top-of-the-year-movies",
+   "name": "Comedy · Top of the Year Movies"
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-comedy-top-of-the-year-series",
+   "name": "Comedy · Top of the Year Series"
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-comedy-international-hits-movies",
+   "name": "Comedy · International Hits Movies"
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-comedy-international-hits-series",
+   "name": "Comedy · International Hits Series"
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-comedy-popular-anime-movies",
+   "name": "Comedy · Popular Anime Movies"
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-comedy-popular-anime-series",
+   "name": "Comedy · Popular Anime Series"
+  },
+  {
+   "type": "movie",
+   "id": "gen-genres-comedy-top-rated-anime-movies",
+   "name": "Comedy · Top Rated Anime Movies"
+  },
+  {
+   "type": "series",
+   "id": "gen-genres-comedy-top-rated-anime-series",
+   "name": "Comedy · Top Rated Anime Series"
   }
  ],
  "behaviorHints": {
