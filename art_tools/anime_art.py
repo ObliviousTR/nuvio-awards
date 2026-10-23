@@ -22,7 +22,7 @@ KAPTAIN = os.environ.get("KAPTAIN_ART", "/home/claude/imkaptain/nuvio-art/art/an
 W, H = 1280, 720          # working size
 OUT = (512, 288)          # hover size, as the other landscape rows
 N, MS = 40, 50            # 2 s: in 0.5 s, a short hold with one breath, out 0.45 s
-PRE = 6                   # 0.3 s on the plain cover first, so the hover doesn't jump the moment it starts
+PRE = 2                   # 0.1 s on the plain cover first, so the hover doesn't jump the moment it starts
 
 
 def load(slug, kind):

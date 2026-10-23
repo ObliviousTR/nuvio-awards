@@ -136,8 +136,21 @@ def best_art(tid, name=None):
     return textless_backdrop("movie", tid)
 
 
-def iconic(title, n=3, avoid=(), month=None):
-    """This month's trio from the genre's iconic list, each with its best-voted textless backdrop."""
+_COLL = {}
+
+
+def collection_of(tid):
+    """TMDB collection (franchise) id of a film, or None."""
+    if tid not in _COLL:
+        c = (tmdb(f"/movie/{tid}") or {}).get("belongs_to_collection") or {}
+        _COLL[tid] = c.get("id")
+    return _COLL[tid]
+
+
+def iconic(title, n=3, avoid=(), month=None, avoid_coll=None):
+    """This month's trio from the genre's iconic list, each with its best-voted textless backdrop.
+    avoid_coll: franchises already showing on another card; a film from one is skipped, and the films picked here add
+    theirs (so two films of one series never play at the same time, on one card or two)."""
     import datetime as dt
     pool = ICONIC.get(title, [])
     if not pool:
@@ -150,9 +163,14 @@ def iconic(title, n=3, avoid=(), month=None):
         tid, real = find_movie(name, year)
         if not tid or tid in avoid:
             continue
+        coll = collection_of(tid) if avoid_coll is not None else None
+        if coll and coll in avoid_coll:
+            continue
         path = best_art(tid, name)
         if path:
             out.append((tid, real, path))
+            if coll:
+                avoid_coll.add(coll)
         if len(out) == n:
             break
     return out
@@ -559,13 +577,14 @@ def main():
     only = set(args)
     # pick first, one genre after another, so no film is on two genre cards at once (then render in parallel)
     used = {g[3] for g in GENRES.values() if g[3]}
+    used_coll = {c for c in (collection_of(i) for i in used) if c}
     jobs = []
     for t in GENRES:
         if only and t not in only:
             continue
         keep = [p[0] for p in prev.get(t, [])]
         try:
-            pk = iconic(t, 3, avoid=used)
+            pk = iconic(t, 3, avoid=used, avoid_coll=used_coll)
         except Exception as e:
             print("pick failed", t, e)
             pk = []

@@ -91,13 +91,28 @@ def art_of(item):
     return (tid, real, bd[0]["file_path"]) if bd else None
 
 
+USED_COLL = set()   # film series already on a card this month: no two films of one series play at once
+
+
+def series_free(it, a):
+    """True if a (picked from pool item it) is not from a series already showing; claims its series if so."""
+    if it[0] != "movie":
+        return True
+    c = g.collection_of(a[0])
+    if c and c in USED_COLL:
+        return False
+    if c:
+        USED_COLL.add(c)
+    return True
+
+
 def trio(pool, n=3, avoid=()):
     m = dt.date.today().year * 12 + dt.date.today().month
     start = (m * n) % len(pool)
     out = []
     for it in pool[start:] + pool[:start]:
         a = art_of(it)
-        if a and a[0] not in avoid:
+        if a and a[0] not in avoid and series_free(it, a):
             out.append(a)
         if len(out) == n:
             break
@@ -124,6 +139,8 @@ def build(t, out):
         seq = popular_family(4)
     else:
         first = art_of(cover)
+        if first:
+            series_free(cover, first)
         seq = ([first] if first else []) + trio(pool, 3, avoid={first[0]} if first else set())
     imgs = [g.load_img(p) for _, _, p in seq]
     labels = [LABEL.get((x[0], x[1])) or g.labels_of([x], KIND.get((x[0], x[1]), "movie"))[0] for x in seq]

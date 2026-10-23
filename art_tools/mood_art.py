@@ -167,6 +167,24 @@ def main():
         if tid:
             used.add(tid)
     used |= {v[3] for v in g.GENRES.values() if v[3]}
+    # ...and no film of a series already on another card (Genres, Kids, the mood covers, the moods picked before)
+    used_coll = {c for c in (g.collection_of(i) for i in used) if c}
+    try:
+        import kids_art
+        for v in kids_art.CARDS.values():
+            for it in ([v[3]] if v[3] else []) + list(v[4] or []):
+                if it[0] == "movie":
+                    tid, _ = g.find_movie(it[1], it[2])
+                    c = g.collection_of(tid) if tid else None
+                    if c:
+                        used_coll.add(c)
+    except Exception as e:
+        print("kids pools not read:", e)
+    for t, (name, year) in COVER_FILM.items():
+        tid, _ = g.find_movie(name, year)
+        c = g.collection_of(tid) if tid else None
+        if c:
+            used_coll.add(c)
     for t, v in MOODS.items():
         g.ICONIC[t] = v[5]
     jobs = []
@@ -174,7 +192,7 @@ def main():
         if only and t not in only:
             continue
         try:
-            pk = g.iconic(t, 3, avoid=used)
+            pk = g.iconic(t, 3, avoid=used, avoid_coll=used_coll)
         except Exception as e:
             print("pick failed", t, e)
             pk = []
