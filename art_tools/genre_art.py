@@ -577,6 +577,14 @@ def main():
     only = set(args)
     # pick first, one genre after another, so no film is on two genre cards at once (then render in parallel)
     used = {g[3] for g in GENRES.values() if g[3]}
+    try:   # the Moods row's cover films are on screen too
+        from mood_art import COVER_FILM
+        for name, year in COVER_FILM.values():
+            tid, _ = find_movie(name, year)
+            if tid:
+                used.add(tid)
+    except Exception as e:
+        print("mood covers not read:", e)
     used_coll = {c for c in (collection_of(i) for i in used) if c}
     jobs = []
     for t in GENRES:
