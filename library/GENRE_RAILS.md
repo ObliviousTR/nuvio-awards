@@ -6964,9 +6964,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The Goldbergs (2013) - Family, Comedy
 - kept (not its first genre): Orange Is the New Black (2013) - Drama, Comedy, Crime
 - kept (not its first genre): Sex and the City (1998) - Drama, Comedy
-- kept (not its first genre): Bewitched (1964) - Sci-Fi & Fantasy, Comedy, Family, Drama
-- kept (not its first genre): Wednesday (2022) - Sci-Fi & Fantasy, Mystery, Comedy
 - kept (not its first genre): The A-Team (1983) - Action & Adventure, Comedy, Crime
+- kept (not its first genre): Wednesday (2022) - Sci-Fi & Fantasy, Mystery, Comedy
+- kept (not its first genre): Batman (1966) - Sci-Fi & Fantasy, Comedy, Action & Adventure
 - left out: Cobra Kai (2018) [tv:77169] - Action & Adventure, Drama, Comedy
 - left out: Teen Wolf (2011) [tv:34524] - Sci-Fi & Fantasy, Drama, Comedy
 - left out: Hawkeye (2021) [tv:88329] - Drama, Comedy, Action & Adventure
@@ -6976,22 +6976,22 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: The Orville (2017) [tv:71738] - Drama, Comedy, Sci-Fi & Fantasy
 - left out: Skins (2007) [tv:900] - Drama, Comedy
 - left out: Misfits (2009) [tv:31295] - Sci-Fi & Fantasy, Drama, Comedy
+- left out: Misfits (2009) [tv:31295] - Sci-Fi & Fantasy, Drama, Comedy
 - left out: Limitless (2015) [tv:62687] - Drama, Comedy, Action & Adventure
 - left out: Freaks and Geeks (1999) [tv:2382] - Drama, Comedy
 - left out: Ballers (2015) [tv:62704] - Drama, Comedy
-- left out: Lethal Weapon (2016) [tv:67116] - Action & Adventure, Crime, Drama, Comedy
 - left out: M*A*S*H (1972) [tv:918] - War & Politics, Drama, Comedy
 - left out: Veronica Mars (2004) [tv:1432] - Mystery, Drama, Comedy
 - left out: Shrinking (2023) [tv:136311] - Drama, Comedy
-- left out: Utopia (2013) [tv:46511] - Mystery, Drama, Comedy, Sci-Fi & Fantasy, Action & Adventure
 - left out: Dead to Me (2019) [tv:81357] - Drama, Comedy, Crime
 - left out: The Flight Attendant (2020) [tv:93287] - Drama, Mystery, Comedy
 - left out: Heartland (2007) [tv:14929] - Family, Drama, Comedy
+- left out: Heartland (2007) [tv:14929] - Family, Drama, Comedy
 - left out: Wayne (2019) [tv:84231] - Drama, Action & Adventure, Comedy
 - left out: FUBAR (2023) [tv:221300] - Action & Adventure, Drama, Comedy
+- left out: FUBAR (2023) [tv:221300] - Action & Adventure, Drama, Comedy
 - left out: Widow's Bay (2026) [tv:270476] - Drama, Comedy, Mystery
-- left out: The Librarians (2014) [tv:61599] - Action & Adventure, Drama, Comedy
-- left out: Lois & Clark: The New Adventures of Superman (1993) [tv:4515] - Action & Adventure, Drama, Sci-Fi & Fantasy, Comedy
+- left out: Widow's Bay (2026) [tv:270476] - Drama, Comedy, Mystery
 
 ## Comedy · Top All Time Movies (movie) - 500 kept of 760 looked at
 - kept (not its first genre): Back to the Future (1985) - Adventure, Comedy, Sci-Fi
@@ -7217,6 +7217,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Tokyo Mew Mew (2002) [tv:46345] - Animation, Kids, Sci-Fi & Fantasy, Action & Adventure, Comedy, Family
 - left out: Shakugan no Shana (2005) [tv:22634] - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, Comedy
 - left out: Moomin (1990) [tv:67575] - Animation, Family, Kids, Sci-Fi & Fantasy, Comedy
+- left out: ASSASSINS PRIDE (2019) [tv:91299] - Animation, Action & Adventure, Crime, Drama, Mystery, Comedy, Sci-Fi & Fantasy
 - left out: ASSASSINS PRIDE (2019) [tv:91299] - Animation, Action & Adventure, Crime, Drama, Mystery, Comedy, Sci-Fi & Fantasy
 - left out: Fate/kaleid liner Prisma Illya (2013) [tv:63576] - Animation, Drama, Action & Adventure, Sci-Fi & Fantasy, Comedy
 - left out: Mobile Suit Gundam ZZ (1986) [tv:5660] - Animation, War & Politics, Action & Adventure, Drama, Comedy, Sci-Fi & Fantasy
@@ -9322,6 +9323,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Tokyo Mew Mew (2002) [tv:46345] - Animation, Kids, Sci-Fi & Fantasy, Action & Adventure, Comedy, Family
 - left out: Shakugan no Shana (2005) [tv:22634] - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, Comedy
 - left out: Moomin (1990) [tv:67575] - Animation, Family, Kids, Sci-Fi & Fantasy, Comedy
+- left out: ASSASSINS PRIDE (2019) [tv:91299] - Animation, Action & Adventure, Crime, Drama, Mystery, Comedy, Sci-Fi & Fantasy
 - left out: ASSASSINS PRIDE (2019) [tv:91299] - Animation, Action & Adventure, Crime, Drama, Mystery, Comedy, Sci-Fi & Fantasy
 - left out: Fate/kaleid liner Prisma Illya (2013) [tv:63576] - Animation, Drama, Action & Adventure, Sci-Fi & Fantasy, Comedy
 - left out: Mobile Suit Gundam ZZ (1986) [tv:5660] - Animation, War & Politics, Action & Adventure, Drama, Comedy, Sci-Fi & Fantasy
@@ -11919,26 +11921,284 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Comedy (movie) / Crime Comedy: 300
 - Discover · Comedy (movie) / Horror Comedy: 300
 - Discover · Comedy (movie) / Family Comedy: 300
-- Discover · Comedy (movie) / Dark Comedy: 203
-- Discover · Comedy (movie) / Satire: 166
-- Discover · Comedy (movie) / Parody: 170
-- Discover · Comedy (movie) / Buddy Comedy: 47
-- Discover · Comedy (movie) / Teen Comedy: 215
-- Discover · Comedy (movie) / Mockumentary: 41
-- Discover · Comedy (movie) / Stand-Up: 237
-- Discover · Comedy (movie) / Classics: 256
+- Discover · Comedy (movie) / Dark Comedy: 167
+- Discover · Comedy (movie) / Satire: 139
+- Discover · Comedy (movie) / Parody: 143
+- Discover · Comedy (movie) / Buddy Comedy: 43
+- Discover · Comedy (movie) / Teen Comedy: 195
+- Discover · Comedy (movie) / Mockumentary: 39
+- Discover · Comedy (movie) / Stand-Up: 218
+- Discover · Comedy (movie) / Classics: 157
 - Discover · Comedy (movie) / International: 300
 - Discover · Comedy (series) / Popular: 300
-- Discover · Comedy (series) / Top Rated: 298
+- Discover · Comedy (series) / Top Rated: 245
 - Discover · Comedy (series) / New Releases: 300
 - Discover · Comedy (series) / Sitcoms: 300
-- Discover · Comedy (series) / Workplace Comedy: 92
-- Discover · Comedy (series) / Mockumentary: 28
-- disc-comedy-series / Romantic Comedy: empty
-- Discover · Comedy (series) / Dark Comedy: 80
-- Discover · Comedy (series) / Teen Comedy: 67
-- Discover · Comedy (series) / Crime Comedy: 77
+- Discover · Comedy (series) / Workplace Comedy: 80
+- Discover · Comedy (series) / Mockumentary: 24
+- Discover · Comedy (series) / Dark Comedy: 73
+- Discover · Comedy (series) / Teen Comedy: 48
+- Discover · Comedy (series) / Crime Comedy: 59
 - Discover · Comedy (series) / Sketch Comedy: 30
 - Discover · Comedy (series) / British: 172
-- Discover · Comedy (series) / Classics: 128
+- Discover · Comedy (series) / Classics: 121
 - Discover · Comedy (series) / International: 167
+- Discover · Action (movie) / Popular: 300
+- Discover · Action (movie) / Top Rated: 300
+- Discover · Action (movie) / New Releases: 300
+- Discover · Action (movie) / Action Comedy: 300
+- Discover · Action (movie) / Sci-Fi Action: 300
+- Discover · Action (movie) / War Action: 109
+- Discover · Action (movie) / Crime Action: 300
+- Discover · Action (movie) / Martial Arts: 226
+- Discover · Action (movie) / Spy: 112
+- Discover · Action (movie) / Heist: 56
+- Discover · Action (movie) / Superhero: 191
+- Discover · Action (movie) / Disaster: 37
+- disc-action-movies / Car Chase: empty
+- Discover · Action (movie) / Revenge: 229
+- Discover · Action (movie) / Military: 59
+- Discover · Action (movie) / Classics: 78
+- Discover · Action (movie) / International: 300
+- Discover · Action (series) / Popular: 300
+- Discover · Action (series) / Top Rated: 231
+- Discover · Action (series) / New Releases: 300
+- Discover · Action (series) / Superhero: 52
+- Discover · Action (series) / Spy: 26
+- Discover · Action (series) / Martial Arts: 26
+- Discover · Action (series) / Military: 15
+- Discover · Action (series) / Sci-Fi Action: 248
+- Discover · Action (series) / Crime Action: 106
+- Discover · Action (series) / Classics: 78
+- Discover · Action (series) / International: 126
+- Discover · Sci-Fi & Fantasy (movie) / Popular: 300
+- Discover · Sci-Fi & Fantasy (movie) / Top Rated: 300
+- Discover · Sci-Fi & Fantasy (movie) / New Releases: 300
+- Discover · Sci-Fi & Fantasy (movie) / Science Fiction: 300
+- Discover · Sci-Fi & Fantasy (movie) / Fantasy: 300
+- Discover · Sci-Fi & Fantasy (movie) / Space: 99
+- Discover · Sci-Fi & Fantasy (movie) / Time Travel: 139
+- Discover · Sci-Fi & Fantasy (movie) / Dystopia: 216
+- Discover · Sci-Fi & Fantasy (movie) / Cyberpunk: 47
+- Discover · Sci-Fi & Fantasy (movie) / Aliens: 225
+- Discover · Sci-Fi & Fantasy (movie) / Artificial Intelligence: 163
+- Discover · Sci-Fi & Fantasy (movie) / Post-Apocalyptic: 88
+- Discover · Sci-Fi & Fantasy (movie) / Epic Fantasy: 46
+- Discover · Sci-Fi & Fantasy (movie) / Fairy Tale: 36
+- Discover · Sci-Fi & Fantasy (movie) / Superhero: 164
+- Discover · Sci-Fi & Fantasy (movie) / Classics: 96
+- Discover · Sci-Fi & Fantasy (movie) / International: 227
+- Discover · Sci-Fi & Fantasy (series) / Popular: 300
+- Discover · Sci-Fi & Fantasy (series) / Top Rated: 300
+- Discover · Sci-Fi & Fantasy (series) / New Releases: 300
+- Discover · Sci-Fi & Fantasy (series) / Space: 43
+- Discover · Sci-Fi & Fantasy (series) / Time Travel: 55
+- Discover · Sci-Fi & Fantasy (series) / Dystopia: 22
+- Discover · Sci-Fi & Fantasy (series) / Superhero: 64
+- Discover · Sci-Fi & Fantasy (series) / Vampires: 29
+- Discover · Sci-Fi & Fantasy (series) / Magic: 66
+- Discover · Sci-Fi & Fantasy (series) / Aliens: 60
+- Discover · Sci-Fi & Fantasy (series) / Classics: 95
+- Discover · Sci-Fi & Fantasy (series) / International: 128
+- Discover · Horror (movie) / Popular: 300
+- Discover · Horror (movie) / Top Rated: 300
+- Discover · Horror (movie) / New Releases: 300
+- Discover · Horror (movie) / Slasher: 241
+- Discover · Horror (movie) / Supernatural: 184
+- Discover · Horror (movie) / Possession: 74
+- Discover · Horror (movie) / Zombies: 124
+- Discover · Horror (movie) / Found Footage: 133
+- Discover · Horror (movie) / Haunted House: 100
+- Discover · Horror (movie) / Folk Horror: 83
+- Discover · Horror (movie) / Creatures: 198
+- Discover · Horror (movie) / Vampires: 106
+- Discover · Horror (movie) / Psychological: 63
+- Discover · Horror (movie) / Horror Comedy: 300
+- Discover · Horror (movie) / Sci-Fi Horror: 300
+- Discover · Horror (movie) / Classics: 94
+- Discover · Horror (movie) / International: 196
+- Discover · Mystery & Thriller (movie) / Popular: 300
+- Discover · Mystery & Thriller (movie) / Top Rated: 300
+- Discover · Mystery & Thriller (movie) / New Releases: 300
+- Discover · Mystery & Thriller (movie) / Mystery: 300
+- Discover · Mystery & Thriller (movie) / Thriller: 300
+- Discover · Mystery & Thriller (movie) / Psychological: 115
+- Discover · Mystery & Thriller (movie) / Whodunit: 47
+- Discover · Mystery & Thriller (movie) / Neo-Noir: 252
+- Discover · Mystery & Thriller (movie) / Conspiracy: 93
+- Discover · Mystery & Thriller (movie) / Serial Killer: 277
+- Discover · Mystery & Thriller (movie) / Political: 27
+- Discover · Mystery & Thriller (movie) / Courtroom: 24
+- Discover · Mystery & Thriller (movie) / Spy: 97
+- Discover · Mystery & Thriller (movie) / Crime Thriller: 300
+- Discover · Mystery & Thriller (movie) / Classics: 190
+- Discover · Mystery & Thriller (movie) / International: 300
+- Discover · Mystery & Thriller (series) / Popular: 300
+- Discover · Mystery & Thriller (series) / Top Rated: 228
+- Discover · Mystery & Thriller (series) / New Releases: 300
+- Discover · Mystery & Thriller (series) / Detective: 60
+- Discover · Mystery & Thriller (series) / Whodunit: 10
+- Discover · Mystery & Thriller (series) / Psychological: 28
+- Discover · Mystery & Thriller (series) / Serial Killer: 32
+- Discover · Mystery & Thriller (series) / Conspiracy: 30
+- Discover · Mystery & Thriller (series) / Crime Mystery: 238
+- Discover · Mystery & Thriller (series) / Classics: 44
+- Discover · Mystery & Thriller (series) / International: 165
+- Discover · Drama (movie) / Popular: 300
+- Discover · Drama (movie) / Top Rated: 300
+- Discover · Drama (movie) / New Releases: 300
+- Discover · Drama (movie) / Biography: 300
+- Discover · Drama (movie) / Sports: 184
+- Discover · Drama (movie) / Coming of Age: 142
+- Discover · Drama (movie) / Period: 106
+- Discover · Drama (movie) / Courtroom: 97
+- Discover · Drama (movie) / Family Drama: 161
+- Discover · Drama (movie) / Romantic Drama: 300
+- Discover · Drama (movie) / Political: 55
+- Discover · Drama (movie) / Medical: 111
+- Discover · Drama (movie) / Music: 180
+- Discover · Drama (movie) / Based on a True Story: 300
+- Discover · Drama (movie) / Classics: 296
+- Discover · Drama (movie) / International: 300
+- Discover · Drama (series) / Popular: 300
+- Discover · Drama (series) / Top Rated: 300
+- Discover · Drama (series) / New Releases: 300
+- Discover · Drama (series) / Period: 142
+- Discover · Drama (series) / Medical: 40
+- Discover · Drama (series) / Legal: 54
+- Discover · Drama (series) / Teen: 69
+- Discover · Drama (series) / Family: 16
+- Discover · Drama (series) / Political: 37
+- Discover · Drama (series) / Crime Drama: 300
+- Discover · Drama (series) / Classics: 146
+- Discover · Drama (series) / International: 300
+- Discover · Crime (movie) / Popular: 300
+- Discover · Crime (movie) / Top Rated: 300
+- Discover · Crime (movie) / New Releases: 300
+- Discover · Crime (movie) / Heist: 95
+- Discover · Crime (movie) / Gangster: 143
+- Discover · Crime (movie) / Mafia: 59
+- Discover · Crime (movie) / Police: 202
+- Discover · Crime (movie) / Serial Killer: 128
+- Discover · Crime (movie) / Neo-Noir: 236
+- Discover · Crime (movie) / Drug Cartel: 44
+- Discover · Crime (movie) / Crime Comedy: 300
+- Discover · Crime (movie) / Prison: 102
+- Discover · Crime (movie) / Crime Thriller: 300
+- Discover · Crime (movie) / Classics: 131
+- Discover · Crime (movie) / International: 300
+- Discover · Crime (series) / Popular: 300
+- Discover · Crime (series) / Top Rated: 225
+- Discover · Crime (series) / New Releases: 300
+- Discover · Crime (series) / Police Procedural: 46
+- Discover · Crime (series) / Detective: 79
+- Discover · Crime (series) / Mafia: 9
+- Discover · Crime (series) / Drug Cartel: 11
+- Discover · Crime (series) / Serial Killer: 48
+- Discover · Crime (series) / Crime Comedy: 59
+- Discover · Crime (series) / Classics: 48
+- Discover · Crime (series) / International: 184
+- Discover · Romance (movie) / Popular: 300
+- Discover · Romance (movie) / Top Rated: 300
+- Discover · Romance (movie) / New Releases: 300
+- Discover · Romance (movie) / Romantic Comedy: 300
+- Discover · Romance (movie) / Romantic Drama: 300
+- Discover · Romance (movie) / Period Romance: 26
+- Discover · Romance (movie) / Holiday: 121
+- Discover · Romance (movie) / Teen Romance: 87
+- Discover · Romance (movie) / LGBTQ+: 128
+- Discover · Romance (movie) / Musical: 110
+- Discover · Romance (movie) / Second Chances: 9
+- Discover · Romance (movie) / Classics: 116
+- Discover · Romance (movie) / International: 300
+- Discover · Animation (movie) / Popular: 300
+- Discover · Animation (movie) / Top Rated: 300
+- Discover · Animation (movie) / New Releases: 300
+- Discover · Animation (movie) / Family: 300
+- Discover · Animation (movie) / Anime: 300
+- Discover · Animation (movie) / Stop Motion: 66
+- Discover · Animation (movie) / Pixar: 88
+- Discover · Animation (movie) / Studio Ghibli: 26
+- Discover · Animation (movie) / DreamWorks: 79
+- Discover · Animation (movie) / Disney: 85
+- Discover · Animation (movie) / Adult Animation: 186
+- Discover · Animation (movie) / Classics: 48
+- Discover · Animation (movie) / International: 284
+- Discover · Animation (series) / Popular: 300
+- Discover · Animation (series) / Top Rated: 300
+- Discover · Animation (series) / New Releases: 300
+- Discover · Animation (series) / Anime: 300
+- Discover · Animation (series) / Adult Animation: 84
+- Discover · Animation (series) / Animated Comedy: 300
+- Discover · Animation (series) / Kids: 300
+- Discover · Animation (series) / Action: 300
+- Discover · Animation (series) / Classics: 199
+- Discover · Animation (series) / International: 300
+- Discover · History & War (movie) / Popular: 300
+- Discover · History & War (movie) / Top Rated: 242
+- Discover · History & War (movie) / New Releases: 300
+- Discover · History & War (movie) / War: 300
+- Discover · History & War (movie) / History: 300
+- Discover · History & War (movie) / World War II: 147
+- Discover · History & War (movie) / World War I: 28
+- Discover · History & War (movie) / Vietnam War: 27
+- Discover · History & War (movie) / Cold War: 11
+- Discover · History & War (movie) / Ancient World: 22
+- Discover · History & War (movie) / Medieval: 11
+- Discover · History & War (movie) / Biography: 161
+- Discover · History & War (movie) / Classics: 58
+- Discover · History & War (movie) / International: 147
+- Discover · History & War (series) / Popular: 83
+- Discover · History & War (series) / Top Rated: 25
+- Discover · History & War (series) / New Releases: 149
+- Discover · History & War (series) / World War II: 18
+- Discover · History & War (series) / Period: 24
+- Discover · History & War (series) / Political: 16
+- Discover · History & War (series) / Classics: 14
+- Discover · History & War (series) / International: 20
+- Discover · Western (movie) / Popular: 300
+- Discover · Western (movie) / Top Rated: 130
+- Discover · Western (movie) / New Releases: 300
+- Discover · Western (movie) / Spaghetti Western: 1
+- Discover · Western (movie) / Revisionist: 4
+- Discover · Western (movie) / Neo-Western: 9
+- Discover · Western (movie) / Western Action: 37
+- Discover · Western (movie) / Classics: 46
+- Discover · Western (movie) / International: 19
+- Discover · Documentary (movie) / Popular: 300
+- Discover · Documentary (movie) / Top Rated: 143
+- Discover · Documentary (movie) / New Releases: 300
+- Discover · Documentary (movie) / Nature: 34
+- Discover · Documentary (movie) / True Crime: 31
+- Discover · Documentary (movie) / Music: 193
+- Discover · Documentary (movie) / Sports: 42
+- Discover · Documentary (movie) / History: 79
+- Discover · Documentary (movie) / Science: 3
+- Discover · Documentary (movie) / Biography: 138
+- Discover · Documentary (movie) / Food: 9
+- Discover · Documentary (movie) / Politics: 27
+- Discover · Documentary (movie) / Space: 15
+- Discover · Documentary (movie) / Classics: 4
+- Discover · Documentary (movie) / International: 29
+- Discover · Documentary (series) / Popular: 300
+- Discover · Documentary (series) / Top Rated: 147
+- Discover · Documentary (series) / New Releases: 300
+- Discover · Documentary (series) / Nature: 57
+- Discover · Documentary (series) / True Crime: 113
+- Discover · Documentary (series) / History: 12
+- Discover · Documentary (series) / Sports: 22
+- Discover · Documentary (series) / Science: 12
+- Discover · Documentary (series) / Food: 22
+- Discover · Documentary (series) / Classics: 7
+- Discover · Documentary (series) / International: 18
+- Discover · Family (movie) / Popular: 300
+- Discover · Family (movie) / Top Rated: 300
+- Discover · Family (movie) / New Releases: 300
+- Discover · Family (movie) / Animated: 300
+- Discover · Family (movie) / Fantasy & Adventure: 300
+- Discover · Family (movie) / Family Comedy: 300
+- Discover · Family (movie) / Holiday: 179
+- Discover · Family (movie) / Musicals: 41
+- Discover · Family (movie) / Animals: 136
+- Discover · Family (movie) / Classics: 58
+- Discover · Family (movie) / International: 146

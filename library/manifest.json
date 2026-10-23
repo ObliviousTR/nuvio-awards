@@ -114,6 +114,902 @@
   },
   {
    "type": "movie",
+   "id": "disc-action-movies",
+   "name": "Discover · Action",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Action Comedy",
+      "Sci-Fi Action",
+      "War Action",
+      "Crime Action",
+      "Martial Arts",
+      "Spy",
+      "Heist",
+      "Superhero",
+      "Disaster",
+      "Revenge",
+      "Military",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Action Comedy",
+    "Sci-Fi Action",
+    "War Action",
+    "Crime Action",
+    "Martial Arts",
+    "Spy",
+    "Heist",
+    "Superhero",
+    "Disaster",
+    "Revenge",
+    "Military",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-action-series",
+   "name": "Discover · Action",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Superhero",
+      "Spy",
+      "Martial Arts",
+      "Military",
+      "Sci-Fi Action",
+      "Crime Action",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Superhero",
+    "Spy",
+    "Martial Arts",
+    "Military",
+    "Sci-Fi Action",
+    "Crime Action",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-scifi-movies",
+   "name": "Discover · Sci-Fi & Fantasy",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Science Fiction",
+      "Fantasy",
+      "Space",
+      "Time Travel",
+      "Dystopia",
+      "Cyberpunk",
+      "Aliens",
+      "Artificial Intelligence",
+      "Post-Apocalyptic",
+      "Epic Fantasy",
+      "Fairy Tale",
+      "Superhero",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Science Fiction",
+    "Fantasy",
+    "Space",
+    "Time Travel",
+    "Dystopia",
+    "Cyberpunk",
+    "Aliens",
+    "Artificial Intelligence",
+    "Post-Apocalyptic",
+    "Epic Fantasy",
+    "Fairy Tale",
+    "Superhero",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-scifi-series",
+   "name": "Discover · Sci-Fi & Fantasy",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Space",
+      "Time Travel",
+      "Dystopia",
+      "Superhero",
+      "Vampires",
+      "Magic",
+      "Aliens",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Space",
+    "Time Travel",
+    "Dystopia",
+    "Superhero",
+    "Vampires",
+    "Magic",
+    "Aliens",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-horror-movies",
+   "name": "Discover · Horror",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Slasher",
+      "Supernatural",
+      "Possession",
+      "Zombies",
+      "Found Footage",
+      "Haunted House",
+      "Folk Horror",
+      "Creatures",
+      "Vampires",
+      "Psychological",
+      "Horror Comedy",
+      "Sci-Fi Horror",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Slasher",
+    "Supernatural",
+    "Possession",
+    "Zombies",
+    "Found Footage",
+    "Haunted House",
+    "Folk Horror",
+    "Creatures",
+    "Vampires",
+    "Psychological",
+    "Horror Comedy",
+    "Sci-Fi Horror",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-thriller-movies",
+   "name": "Discover · Mystery & Thriller",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Mystery",
+      "Thriller",
+      "Psychological",
+      "Whodunit",
+      "Neo-Noir",
+      "Conspiracy",
+      "Serial Killer",
+      "Political",
+      "Courtroom",
+      "Spy",
+      "Crime Thriller",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Mystery",
+    "Thriller",
+    "Psychological",
+    "Whodunit",
+    "Neo-Noir",
+    "Conspiracy",
+    "Serial Killer",
+    "Political",
+    "Courtroom",
+    "Spy",
+    "Crime Thriller",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-thriller-series",
+   "name": "Discover · Mystery & Thriller",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Detective",
+      "Whodunit",
+      "Psychological",
+      "Serial Killer",
+      "Conspiracy",
+      "Crime Mystery",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Detective",
+    "Whodunit",
+    "Psychological",
+    "Serial Killer",
+    "Conspiracy",
+    "Crime Mystery",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-drama-movies",
+   "name": "Discover · Drama",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Biography",
+      "Sports",
+      "Coming of Age",
+      "Period",
+      "Courtroom",
+      "Family Drama",
+      "Romantic Drama",
+      "Political",
+      "Medical",
+      "Music",
+      "Based on a True Story",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Biography",
+    "Sports",
+    "Coming of Age",
+    "Period",
+    "Courtroom",
+    "Family Drama",
+    "Romantic Drama",
+    "Political",
+    "Medical",
+    "Music",
+    "Based on a True Story",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-drama-series",
+   "name": "Discover · Drama",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Period",
+      "Medical",
+      "Legal",
+      "Teen",
+      "Family",
+      "Political",
+      "Crime Drama",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Period",
+    "Medical",
+    "Legal",
+    "Teen",
+    "Family",
+    "Political",
+    "Crime Drama",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-crime-movies",
+   "name": "Discover · Crime",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Heist",
+      "Gangster",
+      "Mafia",
+      "Police",
+      "Serial Killer",
+      "Neo-Noir",
+      "Drug Cartel",
+      "Crime Comedy",
+      "Prison",
+      "Crime Thriller",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Heist",
+    "Gangster",
+    "Mafia",
+    "Police",
+    "Serial Killer",
+    "Neo-Noir",
+    "Drug Cartel",
+    "Crime Comedy",
+    "Prison",
+    "Crime Thriller",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-crime-series",
+   "name": "Discover · Crime",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Police Procedural",
+      "Detective",
+      "Mafia",
+      "Drug Cartel",
+      "Serial Killer",
+      "Crime Comedy",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Police Procedural",
+    "Detective",
+    "Mafia",
+    "Drug Cartel",
+    "Serial Killer",
+    "Crime Comedy",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-romance-movies",
+   "name": "Discover · Romance",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Romantic Comedy",
+      "Romantic Drama",
+      "Period Romance",
+      "Holiday",
+      "Teen Romance",
+      "LGBTQ+",
+      "Musical",
+      "Second Chances",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Romantic Comedy",
+    "Romantic Drama",
+    "Period Romance",
+    "Holiday",
+    "Teen Romance",
+    "LGBTQ+",
+    "Musical",
+    "Second Chances",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-animation-movies",
+   "name": "Discover · Animation",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Family",
+      "Anime",
+      "Stop Motion",
+      "Pixar",
+      "Studio Ghibli",
+      "DreamWorks",
+      "Disney",
+      "Adult Animation",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Family",
+    "Anime",
+    "Stop Motion",
+    "Pixar",
+    "Studio Ghibli",
+    "DreamWorks",
+    "Disney",
+    "Adult Animation",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-animation-series",
+   "name": "Discover · Animation",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Anime",
+      "Adult Animation",
+      "Animated Comedy",
+      "Kids",
+      "Action",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Anime",
+    "Adult Animation",
+    "Animated Comedy",
+    "Kids",
+    "Action",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-war-movies",
+   "name": "Discover · History & War",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "War",
+      "History",
+      "World War II",
+      "World War I",
+      "Vietnam War",
+      "Cold War",
+      "Ancient World",
+      "Medieval",
+      "Biography",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "War",
+    "History",
+    "World War II",
+    "World War I",
+    "Vietnam War",
+    "Cold War",
+    "Ancient World",
+    "Medieval",
+    "Biography",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-war-series",
+   "name": "Discover · History & War",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "World War II",
+      "Period",
+      "Political",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "World War II",
+    "Period",
+    "Political",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-western-movies",
+   "name": "Discover · Western",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Spaghetti Western",
+      "Revisionist",
+      "Neo-Western",
+      "Western Action",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Spaghetti Western",
+    "Revisionist",
+    "Neo-Western",
+    "Western Action",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-docs-movies",
+   "name": "Discover · Documentary",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Nature",
+      "True Crime",
+      "Music",
+      "Sports",
+      "History",
+      "Science",
+      "Biography",
+      "Food",
+      "Politics",
+      "Space",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Nature",
+    "True Crime",
+    "Music",
+    "Sports",
+    "History",
+    "Science",
+    "Biography",
+    "Food",
+    "Politics",
+    "Space",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "series",
+   "id": "disc-docs-series",
+   "name": "Discover · Documentary",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Nature",
+      "True Crime",
+      "History",
+      "Sports",
+      "Science",
+      "Food",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Nature",
+    "True Crime",
+    "History",
+    "Sports",
+    "Science",
+    "Food",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "disc-family-movies",
+   "name": "Discover · Family",
+   "extra": [
+    {
+     "name": "genre",
+     "options": [
+      "Popular",
+      "Top Rated",
+      "New Releases",
+      "Animated",
+      "Fantasy & Adventure",
+      "Family Comedy",
+      "Holiday",
+      "Musicals",
+      "Animals",
+      "Classics",
+      "International"
+     ],
+     "isRequired": false
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ],
+   "genres": [
+    "Popular",
+    "Top Rated",
+    "New Releases",
+    "Animated",
+    "Fantasy & Adventure",
+    "Family Comedy",
+    "Holiday",
+    "Musicals",
+    "Animals",
+    "Classics",
+    "International"
+   ]
+  },
+  {
+   "type": "movie",
    "id": "lib-batman-burton-schumacher-films",
    "name": "Batman & Gotham · Burton & Schumacher Films",
    "extra": [
