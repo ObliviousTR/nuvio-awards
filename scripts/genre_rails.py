@@ -159,7 +159,7 @@ def build(r, G):
         batch = d.get("results", [])
         G.prefetch(kind, [x["id"] for x in batch])
         for x in batch:
-            if fits(kind, G.get(kind, x["id"]), r["filters"]["withGenres"], x["id"], G.runtime(kind, x["id"])):
+            if r.get("rule") is False or fits(kind, G.get(kind, x["id"]), r["filters"]["withGenres"], x["id"], G.runtime(kind, x["id"])):
                 kept.append(x)
             else:
                 dropped.append(x)
@@ -167,6 +167,77 @@ def build(r, G):
         if page >= d.get("total_pages", 0) or len(kept) >= lim * 1.25:
             break
     return kind, S.rows(kind, kept, limit=lim), len(res), dropped
+
+
+KW = {}
+
+
+def keyword_ids(names):
+    """TMDB keyword ids for keyword names (exact name match)."""
+    out = []
+    for n in names:
+        if n not in KW:
+            res = (tmdb("/search/keyword", query=n) or {}).get("results", [])
+            KW[n] = next((str(k["id"]) for k in res if k["name"].lower() == n.lower()), None)
+        if KW[n]:
+            out.append(KW[n])
+    return "|".join(out)
+
+
+def write_pages(typ, cid, items, name=None):
+    """Static catalog pages: <cid>.json + <cid>/skip=N.json, or for a Genre choice <cid>/genre=<name>[&skip=N].json."""
+    base = L("catalog", typ, cid)
+    os.makedirs(base, exist_ok=True)
+    for k in range(0, max(len(items), 1), PAGE):
+        page = {"metas": [S.meta(x, typ) for x in items[k:k + PAGE]]}
+        if name is None:
+            paths = [base + ".json", os.path.join(base, "skip=0.json")] if k == 0 else [os.path.join(base, f"skip={k}.json")]
+        else:
+            paths = [os.path.join(base, f"genre={name}.json")] + ([os.path.join(base, f"genre={name}&skip={k}.json")] if k else [])
+            if k:
+                paths = [os.path.join(base, f"genre={name}&skip={k}.json")]
+        for p in paths:
+            json.dump(page, open(p, "w", encoding="utf-8"), ensure_ascii=False)
+
+
+def build_discover(G, report):
+    """Catalogs for Nuvio's Discover screen with a Genre menu of sub-genres and orders (library/discover.json)."""
+    if not os.path.exists(L("discover.json")):
+        return []
+    spec = json.load(open(L("discover.json"), encoding="utf-8"))
+    cats = []
+    for c in spec["catalogs"]:
+        typ = c["type"]
+        base = L("catalog", typ, c["id"])
+        if os.path.isdir(base):
+            for old in os.listdir(base):
+                os.remove(os.path.join(base, old))
+        labels = []
+        for i, o in enumerate(c["options"]):
+            f = {**c["base"], "withGenres": c["genre"], **o.get("filters", {})}
+            if o.get("kw"):
+                ids = keyword_ids(o["kw"])
+                if not ids:
+                    report.append(f"- {c['id']} / {o['label']}: no keyword found for {o['kw']}")
+                    continue
+                f["withKeywords"] = ids
+            if o.get("released"):
+                f["releaseDateLte"] = TODAY.isoformat()
+            r = {"media": "MOVIE" if typ == "movie" else "TV", "sort": o.get("sort", "popularity.desc"), "filters": f,
+                 "limit": 300, "rule": o.get("rule", True)}
+            kind, items, seen, _ = build(r, G)
+            if not items:
+                report.append(f"- {c['id']} / {o['label']}: empty")
+                continue
+            if i == 0:
+                write_pages(typ, c["id"], items)
+            write_pages(typ, c["id"], items, o["label"])
+            labels.append(o["label"])
+            report.append(f"- {c['name']} ({typ}) / {o['label']}: {len(items)}")
+        cats.append({"type": typ, "id": c["id"], "name": c["name"],
+                     "extra": [{"name": "genre", "options": labels, "isRequired": False}, {"name": "skip", "isRequired": False}],
+                     "genres": labels})
+    return cats
 
 
 def main():
@@ -200,9 +271,11 @@ def main():
         report += [f"- kept (not its first genre): {x['name']} ({x['year']}) - {names(kind, G.get(kind, x['tmdb']))}" for x in doubt]
         report += [f"- left out: {x.get('title') or x.get('name')} ({(x.get('release_date') or x.get('first_air_date') or '')[:4]})"
                    f" [{kind}:{x['id']}] - {names(kind, G.get(kind, x['id']))}" for x in top]
-    # the Library's manifest: its own catalogs stay, ours (gen-*) are replaced
+    report.append("\n## Discover catalogs")
+    disc = build_discover(G, report)
+    # the Library's manifest: Discover catalogs first (they head Nuvio's Discover menu), its own catalogs, ours (gen-*)
     man = json.load(open(L("manifest.json"), encoding="utf-8"))
-    man["catalogs"] = [c for c in man["catalogs"] if not c["id"].startswith("gen-")] + cats
+    man["catalogs"] = disc + [c for c in man["catalogs"] if not c["id"].startswith(("gen-", "disc-"))] + cats
     man["version"] = f"1.0.{TODAY.strftime('%Y%m%d')}"
     json.dump(man, open(L("manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     S.IMDB.save()

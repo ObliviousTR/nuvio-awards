@@ -435,13 +435,15 @@ def main():
 
     # genre-true rails (gen-*) are written by scripts/genre_rails.py every day: keep them
     try:
-        kept = [c for c in json.load(open(L("manifest.json"), encoding="utf-8"))["catalogs"] if c["id"].startswith("gen-")]
+        old = json.load(open(L("manifest.json"), encoding="utf-8"))["catalogs"]
+        kept = [c for c in old if c["id"].startswith("gen-")]
+        head = [c for c in old if c["id"].startswith("disc-")]
     except Exception:
-        kept = []
+        kept, head = [], []
     manifest = {"id": "community.oblivioustr.nuvio-library", "version": f"1.0.{TODAY.strftime('%Y%m%d')}",
                 "name": "Nuvio Library",
                 "description": "Film universes & franchises, collection folders, iconic actors and legendary directors, rebuilt weekly from TMDB.",
-                "resources": ["catalog"], "types": ["movie", "series"], "idPrefixes": ["tt"], "catalogs": CATALOGS + kept,
+                "resources": ["catalog"], "types": ["movie", "series"], "idPrefixes": ["tt"], "catalogs": head + CATALOGS + kept,
                 "behaviorHints": {"configurable": False, "configurationRequired": False}}
     json.dump(manifest, open(L("manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     jsave("index.json", index)
