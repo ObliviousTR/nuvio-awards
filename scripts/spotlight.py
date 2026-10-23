@@ -660,6 +660,8 @@ def main():
         sid, styp = (f"spotlight-{slot}-alltime", "movie") if slot == "boxoffice" else (f"spotlight-{slot}-series", "series")
         catalogs.append({"type": "movie", "id": mid, "name": names[slot][0]})
         catalogs.append({"type": styp, "id": sid, "name": names[slot][1]})
+    for c in catalogs:   # folder-only: kept out of Nuvio's Discover menu, Home and search
+        c["extra"] = [{"name": "search", "isRequired": True}, {"name": "folder", "isRequired": True}]
     manifest = {
         "id": "community.oblivioustr.nuvio-spotlight",
         "version": f"1.{period}.{today.strftime('%Y%m%d')}",

@@ -17,122 +17,362 @@
     {
       "type": "movie",
       "id": "spotlight-headliner-movies",
-      "name": "The Headliner: Jenna Ortega"
+      "name": "The Headliner: Jenna Ortega",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-headliner-series",
-      "name": "The Headliner: Jenna Ortega · Series"
+      "name": "The Headliner: Jenna Ortega · Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-visionary-movies",
-      "name": "The Visionary: Jordan Peele"
+      "name": "The Visionary: Jordan Peele",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-visionary-series",
-      "name": "The Visionary: Jordan Peele · Series"
+      "name": "The Visionary: Jordan Peele · Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-powerhouse-movies",
-      "name": "The Powerhouse: Blumhouse Productions"
+      "name": "The Powerhouse: Blumhouse Productions",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-powerhouse-series",
-      "name": "The Powerhouse: Blumhouse Productions · Series"
+      "name": "The Powerhouse: Blumhouse Productions · Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-saga-movies",
-      "name": "The Saga: Alien Saga"
+      "name": "The Saga: Alien Saga",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-saga-series",
-      "name": "The Saga: Alien Saga · Series"
+      "name": "The Saga: Alien Saga · Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-prestige-movies",
-      "name": "The Prestige Darling: Meryl Streep"
+      "name": "The Prestige Darling: Meryl Streep",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-prestige-series",
-      "name": "The Prestige Darling: Meryl Streep · Series"
+      "name": "The Prestige Darling: Meryl Streep · Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-legend-movies",
-      "name": "The Living Legend: Vincent Price"
+      "name": "The Living Legend: Vincent Price",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-legend-series",
-      "name": "The Living Legend: Vincent Price · Series"
+      "name": "The Living Legend: Vincent Price · Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-retro-movies",
-      "name": "Retro Rewind: Universal & Hammer Monsters"
+      "name": "Retro Rewind: Universal & Hammer Monsters",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-retro-series",
-      "name": "Retro Rewind: Universal & Hammer Monsters · Series"
+      "name": "Retro Rewind: Universal & Hammer Monsters · Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-yerli-movies",
-      "name": "Yerli Yıldız: Kıvanç Tatlıtuğ · Filmler"
+      "name": "Yerli Yıldız: Kıvanç Tatlıtuğ · Filmler",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-yerli-series",
-      "name": "Yerli Yıldız: Kıvanç Tatlıtuğ · Diziler"
+      "name": "Yerli Yıldız: Kıvanç Tatlıtuğ · Diziler",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-pulse-movies",
-      "name": "Slashers & Masked Killers · Movies"
+      "name": "Slashers & Masked Killers · Movies",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-pulse-series",
-      "name": "Slashers & Masked Killers · Series"
+      "name": "Slashers & Masked Killers · Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-fresh-movies",
-      "name": "Fresh Out of Theaters · New on Digital"
+      "name": "Fresh Out of Theaters · New on Digital",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-fresh-series",
-      "name": "Fresh Out of Theaters · New Series"
+      "name": "Fresh Out of Theaters · New Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-boxoffice-movies",
-      "name": "Box Office · Last 12 Months"
+      "name": "Box Office · Last 12 Months",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-boxoffice-alltime",
-      "name": "Box Office · All-Time Champions"
+      "name": "Box Office · All-Time Champions",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "spotlight-certified-movies",
-      "name": "Certified Fresh · Must-See Movies"
+      "name": "Certified Fresh · Must-See Movies",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "spotlight-certified-series",
-      "name": "Certified Fresh · Must-See Series"
+      "name": "Certified Fresh · Must-See Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     }
   ],
   "behaviorHints": {

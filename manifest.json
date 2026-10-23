@@ -17,242 +17,722 @@
     {
       "type": "movie",
       "id": "oscar-latest-nominees",
-      "name": "Oscars 2026 · All Nominees"
+      "name": "Oscars 2026 · All Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-best-picture",
-      "name": "Oscars · Best Picture"
+      "name": "Oscars · Best Picture",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-best-picture-nominees",
-      "name": "Oscars · Best Picture Nominees"
+      "name": "Oscars · Best Picture Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-director",
-      "name": "Oscars · Best Director"
+      "name": "Oscars · Best Director",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-director-nominees",
-      "name": "Oscars · Best Director Nominees"
+      "name": "Oscars · Best Director Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-actor",
-      "name": "Oscars · Best Actor"
+      "name": "Oscars · Best Actor",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-actor-nominees",
-      "name": "Oscars · Best Actor Nominees"
+      "name": "Oscars · Best Actor Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-actress",
-      "name": "Oscars · Best Actress"
+      "name": "Oscars · Best Actress",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-actress-nominees",
-      "name": "Oscars · Best Actress Nominees"
+      "name": "Oscars · Best Actress Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-supporting-actor",
-      "name": "Oscars · Best Supporting Actor"
+      "name": "Oscars · Best Supporting Actor",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-supporting-actor-nominees",
-      "name": "Oscars · Best Supporting Actor Nominees"
+      "name": "Oscars · Best Supporting Actor Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-supporting-actress",
-      "name": "Oscars · Best Supporting Actress"
+      "name": "Oscars · Best Supporting Actress",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-supporting-actress-nominees",
-      "name": "Oscars · Best Supporting Actress Nominees"
+      "name": "Oscars · Best Supporting Actress Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-original-screenplay",
-      "name": "Oscars · Best Original Screenplay"
+      "name": "Oscars · Best Original Screenplay",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-adapted-screenplay",
-      "name": "Oscars · Best Adapted Screenplay"
+      "name": "Oscars · Best Adapted Screenplay",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-international",
-      "name": "Oscars · Best International Feature"
+      "name": "Oscars · Best International Feature",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-international-nominees",
-      "name": "Oscars · Best International Feature Nominees"
+      "name": "Oscars · Best International Feature Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-animated",
-      "name": "Oscars · Best Animated Feature"
+      "name": "Oscars · Best Animated Feature",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-animated-nominees",
-      "name": "Oscars · Best Animated Feature Nominees"
+      "name": "Oscars · Best Animated Feature Nominees",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-documentary",
-      "name": "Oscars · Best Documentary Feature"
+      "name": "Oscars · Best Documentary Feature",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-cinematography",
-      "name": "Oscars · Best Cinematography"
+      "name": "Oscars · Best Cinematography",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-visual-effects",
-      "name": "Oscars · Best Visual Effects"
+      "name": "Oscars · Best Visual Effects",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-score",
-      "name": "Oscars · Best Original Score"
+      "name": "Oscars · Best Original Score",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-editing",
-      "name": "Oscars · Best Film Editing"
+      "name": "Oscars · Best Film Editing",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-production-design",
-      "name": "Oscars · Best Production Design"
+      "name": "Oscars · Best Production Design",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-costume",
-      "name": "Oscars · Best Costume Design"
+      "name": "Oscars · Best Costume Design",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-makeup",
-      "name": "Oscars · Best Makeup & Hairstyling"
+      "name": "Oscars · Best Makeup & Hairstyling",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-sound",
-      "name": "Oscars · Best Sound"
+      "name": "Oscars · Best Sound",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-song",
-      "name": "Oscars · Best Original Song"
+      "name": "Oscars · Best Original Song",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "oscar-all-winners",
-      "name": "Oscars · All Winning Films"
+      "name": "Oscars · All Winning Films",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "gg-drama-picture",
-      "name": "Golden Globes · Best Picture – Drama"
+      "name": "Golden Globes · Best Picture – Drama",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "gg-drama-series",
-      "name": "Golden Globes · Best Drama Series"
+      "name": "Golden Globes · Best Drama Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "gg-comedy-picture",
-      "name": "Golden Globes · Best Picture – Musical or Comedy"
+      "name": "Golden Globes · Best Picture – Musical or Comedy",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "gg-comedy-series",
-      "name": "Golden Globes · Best Musical or Comedy Series"
+      "name": "Golden Globes · Best Musical or Comedy Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "gg-limited-series",
-      "name": "Golden Globes · Best Limited Series"
+      "name": "Golden Globes · Best Limited Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "gg-director",
-      "name": "Golden Globes · Best Director"
+      "name": "Golden Globes · Best Director",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "gg-non-english",
-      "name": "Golden Globes · Best Non-English Language Film"
+      "name": "Golden Globes · Best Non-English Language Film",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "bafta-best-film",
-      "name": "BAFTA · Best Film"
+      "name": "BAFTA · Best Film",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "emmy-drama-series",
-      "name": "Emmys · Outstanding Drama Series"
+      "name": "Emmys · Outstanding Drama Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "emmy-comedy-series",
-      "name": "Emmys · Outstanding Comedy Series"
+      "name": "Emmys · Outstanding Comedy Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "series",
       "id": "emmy-limited-series",
-      "name": "Emmys · Outstanding Limited Series"
+      "name": "Emmys · Outstanding Limited Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "cannes-palme",
-      "name": "Cannes · Palme d'Or"
+      "name": "Cannes · Palme d'Or",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "cannes-grand-prix",
-      "name": "Cannes · Grand Prix"
+      "name": "Cannes · Grand Prix",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "cannes-jury-prize",
-      "name": "Cannes · Jury Prize"
+      "name": "Cannes · Jury Prize",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "venice-golden-lion",
-      "name": "Venice · Golden Lion"
+      "name": "Venice · Golden Lion",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "sundance-grand-jury",
-      "name": "Sundance · Grand Jury Prize (Dramatic)"
+      "name": "Sundance · Grand Jury Prize (Dramatic)",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "berlinale-golden-bear",
-      "name": "Berlinale · Golden Bear"
+      "name": "Berlinale · Golden Bear",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     },
     {
       "type": "movie",
       "id": "tiff-peoples-choice",
-      "name": "TIFF · People's Choice Award"
+      "name": "TIFF · People's Choice Award",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": true
+        },
+        {
+          "name": "folder",
+          "isRequired": true
+        }
+      ]
     }
   ],
   "behaviorHints": {

@@ -106,7 +106,8 @@ def main():
         os.makedirs(D("catalog", c["type"]), exist_ok=True)
         write_pages(c["type"], c["id"], [meta(r, c["type"]) for r in uniq])
         name = c["name"].format(ceremony_year=ceremony_year)
-        manifest_catalogs.append({"type": c["type"], "id": c["id"], "name": name})
+        # folder-only: a required search + folder extra keeps it out of Nuvio's Discover menu, Home and search
+        manifest_catalogs.append({"type": c["type"], "id": c["id"], "name": name, "extra": [{"name": "search", "isRequired": True}, {"name": "folder", "isRequired": True}]})
         print(f"{c['id']:34} {len(uniq):5}  newest: {uniq[0]['year']} {uniq[0]['title']}")
     manifest = {
         "id": "community.oblivioustr.nuvio-awards",
