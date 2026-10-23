@@ -241,16 +241,22 @@ def films_of(folder, n=3):
     pool = []
     for page in (1, 2):
         r = (K.tmdb("/discover/movie", sort_by="vote_count.desc", without_genres="16|99", page=page,
-                    **{"vote_average.gte": 7.0, "vote_count.gte": 300}, **flt) or {}).get("results", [])
+                    **{"vote_average.gte": 7.2, "vote_count.gte": 300}, **flt) or {}).get("results", [])
         pool += r
     pool = pool[:24]
     m = dt.date.today().year * 12 + dt.date.today().month
     start = (m * n) % max(1, len(pool))
-    out = []
+    out, series = [], set()
     for x in pool[start:] + pool[:start]:
+        # one film per series a month (no three Harry Potters, no two Ip Mans)
+        col = ((K.tmdb(f"/movie/{x['id']}") or {}).get("belongs_to_collection") or {}).get("id")
+        if col and col in series:
+            continue
         p = K.g.textless_backdrop("movie", x["id"])
         if p:
             out.append((x["title"], int((x.get("release_date") or "0")[:4] or 0), p))
+            if col:
+                series.add(col)
         if len(out) == n:
             break
     return out
