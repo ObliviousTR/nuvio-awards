@@ -34,7 +34,7 @@ CARDS = {
     "Dating, Social Experiment & Drama": ("DATING & DRAMA", "LOVE, LIES & SOCIAL EXPERIMENTS", (255, 80, 150), "heart", [
         ("Love Is Blind", 2020), ("Love Island", 2015), ("Too Hot to Handle", 2020), ("Single's Inferno", 2021),
         ("The Bachelor", 2002), ("Married at First Sight", 2015), ("The Ultimatum: Marry or Move On", 2022),
-        ("Selling Sunset", 2019), ("The Real Housewives of Beverly Hills", 2010)]),
+        ("Temptation Island", 2019), ("The Real Housewives of Beverly Hills", 2010)]),
     "Culinary & Cooking Battles": ("COOKING BATTLES", "CHEFS, BAKERS & KITCHEN HEAT", (235, 70, 50), "timer", [
         ("Hell's Kitchen", 2005), ("The Great British Bake Off", 2010), ("MasterChef", 2010), ("Nailed It!", 2018),
         ("Top Chef", 2006), ("Kitchen Nightmares", 2007), ("Culinary Class Wars", 2024), ("Chopped", 2009),
