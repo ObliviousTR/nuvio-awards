@@ -1,7 +1,9 @@
 """Turkish productions keep their own name and logo: builds trmeta/map.json for the tr-proxy worker.
 
-Every Turkish-original film and series on TMDB (at least one vote) -> original title, best Turkish logo (png) and
-Turkish poster. Keys are "<stremio type>|<id>" for every id form AIOMetadata uses: tt..., tmdb:N, tvdb:N.
+Every Turkish-original film and series on TMDB (at least one vote) -> original title, Turkish overview, best Turkish
+logo (png) and Turkish poster. Keys are "<stremio type>|<id>" for every id form AIOMetadata uses: tt..., tmdb:N, tvdb:N.
+Published for the worker as trmeta/keys.txt (one key per line, to tell quickly whether a title is Turkish) and
+trmeta/s/<xx>.json (the data, in 256 shards by FNV-1a hash of the key, so the worker only reads what it needs).
 External ids and images are cached (trmeta/cache.json) and refreshed after 30 days, so a daily run is quick.
 usage: python3 scripts/tr_titles.py   (TMDB_API_KEY)
 """
@@ -62,14 +64,16 @@ def main():
         for tid, orig in found.items():
             ck = f"{kind}:{tid}"
             c = cache.get(ck)
-            if not c or (TODAY - datetime.date.fromisoformat(c["d"])).days > STALE:
-                ext = tmdb(f"{kind}/{tid}/external_ids") or {}
-                im = tmdb(f"{kind}/{tid}/images", include_image_language="tr") or {}
+            if not c or "o" not in c or (TODAY - datetime.date.fromisoformat(c["d"])).days > STALE:
+                d = tmdb(f"{kind}/{tid}", language="tr-TR", append_to_response="external_ids,images",
+                         include_image_language="tr") or {}
+                ext, im = d.get("external_ids") or {}, d.get("images") or {}
                 c = {"d": TODAY.isoformat(), "tt": ext.get("imdb_id") or None, "tvdb": ext.get("tvdb_id") or None,
-                     "l": best(im.get("logos"), "tr", png=True), "p": best(im.get("posters"), "tr")}
+                     "l": best(im.get("logos"), "tr", png=True), "p": best(im.get("posters"), "tr"),
+                     "o": (d.get("overview") or "").strip()}
                 cache[ck] = c
                 n_new += 1
-            entry = [orig, c["l"], c["p"]]
+            entry = [orig, c["l"], c["p"], c["o"]]
             out[f"{st}|tmdb:{tid}"] = entry
             if c["tt"]:
                 out[f"{st}|{c['tt']}"] = entry
@@ -77,9 +81,27 @@ def main():
                 out[f"{st}|tvdb:{c['tvdb']}"] = entry
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(cache, open(CACHE, "w"), ensure_ascii=False, separators=(",", ":"))
-    json.dump({"v": 1, "date": TODAY.isoformat(), "img": "https://image.tmdb.org/t/p/", "items": out},
+    json.dump({"v": 2, "date": TODAY.isoformat(), "img": "https://image.tmdb.org/t/p/", "items": out},
               open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
-    print(f"map: {len(out)} keys, {n_new} titles looked up today")
+    d = os.path.join(ROOT, "trmeta")
+    open(os.path.join(d, "keys.txt"), "w").write("\n".join(sorted(out)) + "\n")
+    shards = {}
+    for k, v in out.items():
+        shards.setdefault(f"{fnv(k) % 256:02x}", {})[k] = v
+    os.makedirs(os.path.join(d, "s"), exist_ok=True)
+    for f in os.listdir(os.path.join(d, "s")):
+        os.remove(os.path.join(d, "s", f))
+    for h, v in shards.items():
+        json.dump(v, open(os.path.join(d, "s", h + ".json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    print(f"map: {len(out)} keys in {len(shards)} shards, {n_new} titles looked up today")
+
+
+def fnv(key):
+    """FNV-1a 32-bit over the UTF-8 key - the worker computes the same"""
+    h = 0x811C9DC5
+    for b in key.encode("utf-8"):
+        h = ((h ^ b) * 0x01000193) & 0xFFFFFFFF
+    return h
 
 
 if __name__ == "__main__":
