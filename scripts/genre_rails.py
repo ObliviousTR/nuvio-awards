@@ -22,39 +22,41 @@ L = lambda *p: os.path.join(LIB, *p)
 TODAY = dt.date.today()
 LIMIT, PAGES, PAGE = 500, 60, 100   # up to 500 titles a rail, served 100 at a time (Nuvio asks for skip=100, 200...)
 
-# genre -> the genres that may come before it in a title's list and still leave it a title of that genre.
-# ANY: a format / audience more than a genre (animation, documentary, reality, kids) - tagged is enough.
-# A genre without an entry must lead or be second.
-ANY = None
-BEFORE = {
+# How a title earns a genre rail, from its ordered TMDB genre list (the first is its main genre). Per genre:
+#   deny  - genres that, coming before it, mean the title is something else (Comedy after Drama/Horror/Thriller:
+#           Green Book, Evil Dead II, Pulp Fiction)
+#   allow - genres that may come before it at any depth (an action comedy, a crime comedy is still a comedy)
+#   ANY   - a setting / format / audience more than a mood: tagged within the first `top` genres is enough
+# First or second, with nothing from `deny` before it: in. Further down: everything before it must be in `allow`.
+ANY = "any"
+R = lambda deny=(), allow=(), top=None: {"deny": set(deny), "allow": allow if allow == ANY else set(allow), "top": top}
+RULES = {
     "movie": {
-        35: {10749, 10751, 12, 28, 14, 16, 10402, 878, 80, 9648},       # Comedy: rom-com, action / crime comedy - not after drama, thriller, horror, war
-        28: {12, 80, 53, 878, 14, 10752, 37, 35, 9648},                  # Action
-        12: {28, 14, 878, 10751, 35, 37, 10752, 36},                     # Adventure
-        16: ANY, 99: ANY,                                                # Animation, Documentary
-        10751: {16, 35, 12, 14, 10402, 10749, 878, 28, 18},              # Family
-        18: {36, 10752, 10749, 10402, 80, 99},                           # Drama
-        80: {18, 53, 28, 9648},                                          # Crime
-        27: {53, 9648, 14, 878},                                         # Horror: not after comedy (Scary Movie)
-        53: {28, 80, 9648, 18, 27, 878},                                 # Thriller
-        9648: {53, 80, 18, 27, 14},                                      # Mystery
-        10749: {35, 18, 10402, 14, 10751},                               # Romance
-        878: {28, 12, 14, 53, 27, 9648},                                 # Sci-Fi
-        14: {12, 28, 10751, 878, 10749},                                 # Fantasy
-        36: {18, 28, 12, 10752}, 10752: {18, 28, 12, 36},                # History, War
-        37: {28, 12, 18, 80},                                            # Western
-        10402: {99, 18, 35, 10749},                                      # Music
+        35: R(deny={18, 53, 27, 10752, 36}, allow={10749, 10751, 12, 28, 14, 16, 10402, 878, 80, 9648}),      # Comedy
+        28: R(deny={27}, allow={12, 80, 53, 878, 14, 10752, 37, 35, 9648, 18}),                               # Action
+        12: R(deny={27}, allow={28, 14, 878, 10751, 35, 37, 10752, 36, 18}),                                  # Adventure
+        18: R(deny={35, 27, 10751, 16}, allow={36, 10752, 10749, 10402, 80, 99, 53, 9648, 12, 28, 878, 14, 37}),  # Drama
+        80: R(deny={27}, allow={18, 53, 28, 9648, 35, 12}),                                                   # Crime
+        27: R(deny={35, 10751}, allow={53, 9648, 14, 878, 80, 18, 28}),                                       # Horror
+        53: R(deny={35, 10751}, allow={28, 80, 9648, 18, 27, 878, 12, 14}),                                   # Thriller
+        9648: R(deny={35, 10751}, allow={53, 80, 18, 27, 14, 878, 12}),                                       # Mystery
+        10749: R(deny={27}, allow={35, 18, 10402, 14, 10751, 12, 878}),                                       # Romance
+        10751: R(deny={27, 53}, allow={16, 35, 12, 14, 10402, 10749, 878, 28, 18}),                            # Family
+        36: R(deny={35}, allow={18, 28, 12, 10752, 53, 80}), 10752: R(deny={35}, allow={18, 28, 12, 36, 53, 80}),  # History, War
+        10402: R(allow={99, 18, 35, 10749}),                                                                  # Music
+        878: R(allow=ANY, top=3), 14: R(allow=ANY, top=3), 37: R(allow=ANY, top=3),                           # Sci-Fi, Fantasy, Western
+        16: R(allow=ANY), 99: R(allow=ANY),                                                                   # Animation, Documentary
     },
     "tv": {
-        35: {10759, 10751, 16, 10765, 10762, 80, 9648},                  # Comedy (+ Drama for half-hour shows, see fits)
-        18: {80, 9648, 10768, 10765, 10759, 37},                         # Drama
-        10759: {10765, 80, 10768, 37},                                   # Action & Adventure
-        10765: {10759, 18, 9648},                                        # Sci-Fi & Fantasy
-        9648: {80, 18, 10765},                                           # Mystery
-        80: {18, 9648, 10759},                                           # Crime
-        10768: {18, 10759}, 37: {18, 10759},                             # War & Politics, Western
-        10751: {16, 35, 10762, 10765, 10759, 18},                        # Family
-        16: ANY, 99: ANY, 10764: ANY, 10762: ANY,                        # Animation, Documentary, Reality, Kids
+        35: R(deny={18}, allow={10759, 10751, 16, 10765, 10762, 80, 9648}),   # Comedy (Drama allowed for half-hour shows)
+        18: R(deny={35}, allow={80, 9648, 10768, 10765, 10759, 37}),          # Drama
+        10759: R(allow={10765, 80, 10768, 37, 18, 9648}),                     # Action & Adventure
+        9648: R(allow={80, 18, 10765, 10759, 35}),                            # Mystery
+        80: R(deny={35}, allow={18, 9648, 10759, 10765}),                     # Crime
+        10768: R(allow={18, 10759, 80}), 37: R(allow={18, 10759}),            # War & Politics, Western
+        10751: R(allow={16, 35, 10762, 10765, 10759, 18}),                    # Family
+        10765: R(allow=ANY, top=3),                                           # Sci-Fi & Fantasy
+        16: R(allow=ANY), 99: R(allow=ANY), 10764: R(allow=ANY), 10762: R(allow=ANY),
     },
 }
 HALF_HOUR = 40   # a series tagged Drama, Comedy whose episodes run up to this long is a comedy (Ted Lasso, The Bear)
@@ -114,6 +116,8 @@ def fits(kind, genres, want, tid=None, runtime=0):
             return False
         if tid in o.get("include", []) and (t in genres or not allof):
             return True
+    if allof and 16 in targets:   # anime / animation with a genre: animation is the format, the genre just has to be there
+        return all(t in genres[:4] for t in targets if t != 16) and 16 in genres
     ok = []
     for t in targets:
         if t not in genres:
@@ -121,16 +125,23 @@ def fits(kind, genres, want, tid=None, runtime=0):
             continue
         pos = genres.index(t)
         before = set(genres[:pos]) - set(targets)
-        if t not in BEFORE[kind]:
+        rule = RULES[kind].get(t)
+        if rule is None:
             ok.append(pos <= 1)
             continue
-        allowed = BEFORE[kind][t]
-        if allowed is ANY:
-            ok.append(True)
+        if rule["allow"] == ANY:
+            ok.append(rule["top"] is None or pos < rule["top"])
             continue
+        deny, allow = set(rule["deny"]), set(rule["allow"])
         if kind == "tv" and t == 35 and 0 < runtime <= HALF_HOUR:
-            allowed = allowed | {18}
-        ok.append(before <= allowed)
+            deny.discard(18)
+            allow.add(18)
+        if before & deny:
+            ok.append(False)
+        elif pos <= 1:
+            ok.append(True)
+        else:
+            ok.append(before <= allow)
     return all(ok) if allof else any(ok)
 
 

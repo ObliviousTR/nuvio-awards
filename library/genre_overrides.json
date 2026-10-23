@@ -1,5 +1,31 @@
 {
  "_how": "Hand decisions the genre rule can't make from TMDB tags. Key: kind:genre id (movie:35 = Comedy films, tv:35 = comedy series). include: TMDB ids kept in that genre's rails; exclude: ids kept out. See library/GENRE_RAILS.md for what each rail leaves out.",
- "movie:35": {"include": [350, 10625, 747], "exclude": []},
- "tv:35": {"include": [1447, 1695, 97546, 136315, 105, 34307, 82596, 93812, 71578, 61888, 693, 1424, 80743, 62046], "exclude": []}
+ "movie:35": {
+  "include": [
+   350,
+   747,
+   2280,
+   10625
+  ],
+  "exclude": []
+ },
+ "tv:35": {
+  "include": [
+   1447,
+   1695,
+   97546,
+   136315,
+   105,
+   34307,
+   82596,
+   93812,
+   71578,
+   61888,
+   693,
+   1424,
+   80743,
+   62046
+  ],
+  "exclude": []
+ }
 }

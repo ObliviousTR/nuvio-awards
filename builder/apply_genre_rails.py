@@ -21,8 +21,18 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
+def published():
+    """gen-* catalogs the Library serves now (a rail the daily run found empty is not there: keep it live)."""
+    try:
+        return {c["id"] for c in json.load(open(os.path.join(os.path.dirname(DEFS), "manifest.json"), encoding="utf-8"))["catalogs"]
+                if c["id"].startswith("gen-")}
+    except Exception:
+        return set()
+
+
 def main(src, dst):
     data = load(src)
+    live = published()
     defs, n = [], 0
     for row in data:
         for f in row.get("folders", []):
@@ -36,6 +46,9 @@ def main(src, dst):
                     defs.append({"id": cid, "name": f"{f['title']} · {s['title']}", "media": s["mediaType"],
                                  "sort": s.get("sortBy"), "filters": fl,
                                  "limit": 300 if row["title"] == "Streaming Services" else 500})
+                    if live and cid not in live:   # empty or not built yet: the live TMDB rail stays
+                        new.append(s)
+                        continue
                     a = addon_src(s["title"], s["mediaType"], cid, addon_id=LIB)
                     a["genre"] = None   # static catalogs take no extras
                     new.append(a)
