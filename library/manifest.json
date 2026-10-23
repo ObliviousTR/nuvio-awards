@@ -1080,6 +1080,7 @@
      "name": "genre",
      "options": [
       "Series",
+      "Under-the-Radar Series",
       "Anime"
      ],
      "isRequired": false
@@ -1126,7 +1127,8 @@
       "BAFTA Nominees",
       "Criterion Essentials",
       "Criterion Popular",
-      "Criterion New Additions"
+      "Criterion New Additions",
+      "Arthouse & Independent"
      ],
      "isRequired": false
     },
@@ -20187,6 +20189,25 @@
   },
   {
    "type": "series",
+   "id": "mdb-148283",
+   "name": "Under-the-Radar Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
    "id": "mdb-230335",
    "name": "Anime",
    "extra": [
@@ -20417,6 +20438,25 @@
    "type": "movie",
    "id": "mdb-13674",
    "name": "Criterion New Additions",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "mdb-132014",
+   "name": "Arthouse & Independent",
    "extra": [
     {
      "name": "search",
