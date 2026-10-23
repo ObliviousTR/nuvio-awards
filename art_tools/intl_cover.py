@@ -21,14 +21,27 @@ FONTS = {"blackhan": "ofl/blackhansans/BlackHanSans-Regular.ttf", "bodoni": "ofl
          "yuji": "ofl/yujisyuku/YujiSyuku-Regular.ttf", "mashan": "ofl/mashanzheng/MaShanZheng-Regular.ttf",
          "yatra": "ofl/yatraone/YatraOne-Regular.ttf", "playfair": "ofl/playfairdisplay/PlayfairDisplay%5Bwght%5D.ttf",
          "abril": "ofl/abrilfatface/AbrilFatface-Regular.ttf", "caslon": "ofl/librecaslondisplay/LibreCaslonDisplay-Regular.ttf",
-         "montserrat": "ofl/montserrat/Montserrat%5Bwght%5D.ttf"}
+         "montserrat": "ofl/montserrat/Montserrat%5Bwght%5D.ttf", "bungee": "ofl/bungee/Bungee-Regular.ttf",
+         "cinzel": "ofl/cinzel/Cinzel%5Bwght%5D.ttf"}
 # folder -> (native title lines, font, weight, English line)
 TITLES = {
     "South Korea": (["한국 영화"], "blackhan", None, "KOREAN CINEMA"),
     "Italy": (["CINEMA", "ITALIANO"], "bodoni", 800, "ITALIAN CINEMA"),
     "Türkiye": (["TÜRK SİNEMASI"], "shrikhand", None, "TURKISH CINEMA"),
     "Nordic Noir": (["NORDEN"], "jost", 300, "NORDIC CINEMA"),
+    "Japan": (["日本映画"], "yuji", None, "JAPANESE CINEMA"),
+    "Greater China": (["华语电影"], "mashan", None, "CHINESE CINEMA"),
+    "India": (["भारतीय सिनेमा"], "yatra", None, "INDIAN CINEMA"),
+    "UK & Ireland": (["BRITISH", "CINEMA"], "caslon", None, "UK & IRELAND"),
+    "France": (["CINÉMA", "FRANÇAIS"], "playfair", 800, "FRENCH CINEMA"),
+    "Spain": (["CINE", "ESPAÑOL"], "abril", None, "SPANISH CINEMA"),
+    "Germany": (["DEUTSCHES", "KINO"], "jost", 700, "GERMAN CINEMA"),
+    "Central & Eastern Europe": (["CENTRAL &", "EASTERN", "EUROPE"], "jost", 600, "CINEMA"),
+    "Latin America": (["CINE", "LATINO-", "AMERICANO"], "bungee", None, "LATIN AMERICAN CINEMA"),
+    "World Cinema Gems": (["WORLD", "CINEMA GEMS"], "cinzel", 700, "RUSSIA · IRAN · ARAB WORLD · SOUTHEAST ASIA"),
 }
+GEMS = "World Cinema Gems"
+MAXSIZE = {GEMS: 80}
 
 
 def ufont(name, size, weight=None):
@@ -44,6 +57,8 @@ def flag_svg(iso, w=1600):
     png = cairosvg.svg2png(bytestring=svg, output_width=w)
     return Image.open(io.BytesIO(png)).convert("RGB")
 
+
+ANCHOR = {"JP": (138.4, 36.3)}   # the flag's centre (lon, lat): Honshu, not Hokkaido
 
 # far-off members brought closer, like a map inset (lon, lat shift) - and the card's box to go with it
 INSETS = {"Nordic Noir": ({"IS": (14.0, -7.5)}, (-10.8, 54.5, 31.8, 71.3))}
@@ -65,15 +80,17 @@ def per_country(folder, isos, box):
     return out, newbox
 
 
-def layout(rings_all, box):
+def layout(rings_all, box, force=None):
     """The map takes the right of the card (name on the left) or the top (name under it), whichever lets it be bigger.
     Returns (projector, map area box in px, 'side' | 'top')."""
     w, s, e, n = box
     k = math.cos(math.radians((s + n) / 2))
     mw, mh = (e - w) * k, (n - s)
-    areas = {"side": (W * 0.40, H * 0.05, W * 0.97, H * 0.95), "top": (W * 0.06, H * 0.05, W * 0.94, H * 0.6)}
+    areas = {"side": (W * 0.45, H * 0.05, W * 0.97, H * 0.95), "top": (W * 0.06, H * 0.05, W * 0.94, H * 0.6)}
     sc = {m: min((a[2] - a[0]) / mw, (a[3] - a[1]) / mh) for m, a in areas.items()}
     mode = "side" if sc["side"] >= sc["top"] * 0.95 else "top"
+    if force:
+        mode = force
     ax0, ay0, ax1, ay1 = areas[mode]
     P = I.projector(box, (ax0 + ax1) / 2, (ay0 + ay1) / 2, ax1 - ax0, ay1 - ay0)
     return P, areas[mode], mode
@@ -120,6 +137,9 @@ def flag_map(per, P, seed=0):
         from scipy import ndimage as ndi
         dist = ndi.distance_transform_edt(np.asarray(m) > 128)
         cy, cx = np.unravel_index(np.argmax(dist), dist.shape)
+        if iso in ANCHOR:
+            ax_, ay_ = P(*ANCHOR[iso])
+            cx, cy = int(ax_), int(ay_)
         r = float(dist[cy, cx])
         k = min(bw / fl.width, bh / fl.height, 2.6 * r / max(fl.width, fl.height) * 1.25) * 0.95
         f = np.asarray(fl.resize((max(1, round(fl.width * k)), max(1, round(fl.height * k))), Image.LANCZOS))
@@ -156,7 +176,7 @@ def title_layer(folder, mode, area):
     else:
         maxw = W * 0.8
         x0 = None
-    size = 150
+    size = MAXSIZE.get(folder, 150)
     while size > 40:
         fn = ufont(fname, size, wght)
         if max(d.textlength(l, font=fn) for l in lines) <= maxw:
@@ -187,19 +207,49 @@ def title_layer(folder, mode, area):
     return lay
 
 
+def gold_map(per, P):
+    """The gems card: its regions in gold leaf, lit like the flags."""
+    allm = Image.new("L", (W, H), 0)
+    for rings in per.values():
+        m, _ = I.shape(rings, P)
+        allm = ImageChops.lighter(allm, m)
+    ramp = np.linspace(0, 1, H, dtype=np.float32)[:, None, None]
+    top, bot = np.array([255, 226, 150], np.float32), np.array([176, 120, 44], np.float32)
+    fill = Image.fromarray(np.repeat(top * (1 - ramp) + bot * ramp, W, 1).astype(np.uint8))
+    return cloth(fill, allm, 1.3), allm, [(214, 168, 80)]
+
+
+def world_under(P, box):
+    """Every other country, faint, under the gems' regions."""
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    I.rings_of(["TR"], box)
+    m = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(m)
+    for f in I.GEO["features"]:
+        g = f["geometry"]
+        for poly in (g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]):
+            d.polygon([P(x, y) for x, y in poly[0]], fill=255)
+    lay.paste((34, 36, 44, 255), (0, 0), m)
+    return lay
+
+
 def parts(folder):
     """The card's layers: background, flag fill + mask, border, shadow, title - for the cover and the hover."""
     name, isos, box, fiso, cols, _ = I.CARDS[folder]
     per, box = per_country(folder, isos, box)
     rings_all = [r for rs in per.values() for r in rs]
-    P, area, mode = layout(rings_all, box)
-    fill, mask, tints = flag_map(per, P)
+    P, area, mode = layout(rings_all, box, "top" if folder == GEMS else None)
+    fill, mask, tints = (gold_map if folder == GEMS else flag_map)(per, P)
     tint = tuple(int(np.mean([t[c] for t in tints])) for c in range(3)) if tints else (120, 120, 140)
     # background: near black, a faint glow of the flag's colour behind the map
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     cx, cy = (area[0] + area[2]) / 2, (area[1] + area[3]) / 2
     g = np.clip(1 - np.sqrt(((xx - cx) / (W * 0.45)) ** 2 + ((yy - cy) / (H * 0.6)) ** 2), 0, 1) ** 2
     bg = Image.fromarray((np.array([8, 8, 10], np.float32) + g[..., None] * np.array(tint, np.float32) * 0.18).astype(np.uint8))
+    if folder == GEMS:
+        bg = bg.convert("RGBA")
+        bg.alpha_composite(world_under(P, box))
+        bg = bg.convert("RGB")
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     sh.putalpha(mask.filter(ImageFilter.GaussianBlur(18)).point(lambda v: round(v * 0.85)))
     return {"bg": bg, "fill": fill, "mask": mask, "shadow": sh, "border": border(mask, tint), "tint": tint,

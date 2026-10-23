@@ -52,6 +52,11 @@ CARDS = {
                                                 "BR", "BO", "PY", "CL", "AR", "UY", "CU", "DO", "HT", "PR", "JM"],
                       (-118.0, -56.0, -34.0, 33.0), None, [(0, 156, 59), (255, 223, 0)],
                       {"with_original_language": "es|pt", "with_origin_country": "MX|AR|BR|CO|CL|PE|UY"}),
+    # the regions without a folder of their own: only their best films
+    "World Cinema Gems": ("WORLD CINEMA GEMS", ["RU", "IR", "SA", "EG", "AE", "JO", "LB", "SY", "IQ", "MA", "DZ", "TN", "LY", "OM",
+                                                "YE", "KW", "QA", "BH", "PS", "SD", "TH", "ID", "PH", "VN", "MY", "KH", "LA", "MM"],
+                          (-20.0, -11.0, 180.0, 78.0), None, [(255, 214, 120), (190, 130, 50)],
+                          {"with_original_language": "ru|fa|ar|th|id|tl|vi|ms"}),
 }
 
 
