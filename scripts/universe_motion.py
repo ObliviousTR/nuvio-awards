@@ -22,6 +22,11 @@ FONTS = {  # Google Fonts (OFL), fetched once
     "cinzel": "ofl/cinzel/Cinzel%5Bwght%5D.ttf",
     "bebas": "ofl/bebasneue/BebasNeue-Regular.ttf",
     "orbitron": "ofl/orbitron/Orbitron%5Bwght%5D.ttf",
+    "garamond": "ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf",
+    "garamond-italic": "ofl/ebgaramond/EBGaramond-Italic%5Bwght%5D.ttf",
+    "pixel": "ofl/pressstart2p/PressStart2P-Regular.ttf",
+    "bangers": "ofl/bangers/Bangers-Regular.ttf",
+    "typewriter": "apache/specialelite/SpecialElite-Regular.ttf",
 }
 
 
