@@ -1,90 +1,65 @@
-"""Turkish titles test: what AIOMetadata shows now vs the Turkish original title / poster / logo (TMDB)."""
+"""Rating-poster test: can the badge posters AIOMetadata uses come with the Turkish poster underneath?"""
 import io, json, os, re, urllib.parse, urllib.request
 from PIL import Image, ImageDraw, ImageFont
 
-TMDB = os.environ["TMDB_API_KEY"].strip()
 AIO = os.environ["AIOMETADATA_URL"].strip()
 BASE = re.sub(r"/manifest\.json.*$", "", AIO)
-OUT = "refs/trtest"
+OUT = "refs/trposter"
 os.makedirs(OUT, exist_ok=True)
 UA = {"User-Agent": "nuvio-awards/1.0"}
-TESTS = [("tv", "Kuruluş: Osman"), ("tv", "Muhteşem Yüzyıl"), ("tv", "Ezel"), ("tv", "Leyla ile Mecnun"),
-         ("movie", "G.O.R.A."), ("movie", "Babam ve Oğlum")]
+TESTS = [("series", "tt1848220", "muhtesem-yuzyil"), ("series", "tt11093718", "kurulus-osman"),
+         ("series", "tt1831164", "leyla-ile-mecnun"), ("movie", "tt0476735", "babam-ve-oglum")]
 
 
-def scrub(s):
-    s = str(s).replace(BASE, "<aio>")
-    for k in (TMDB,):
-        s = s.replace(k, "***")
-    return re.sub(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", "<uuid>", s)
-
-
-def js(u):
-    return json.loads(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read())
-
-
-def img(u, size):
-    try:
-        im = Image.open(io.BytesIO(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read())).convert("RGBA")
-        im.thumbnail(size)
-        return im
-    except Exception:
+def shape(u):
+    """the URL with anything key-like or uuid-like masked, so it can be shown"""
+    if not u:
         return None
+    p = urllib.parse.urlsplit(u)
+    host = "<aio-host>" if u.startswith(BASE.split("/stremio")[0]) else p.netloc
+    segs = ["<key>" if (len(s) > 20 and not re.match(r"^(series|movie)-\d+(\.jpg)?$", s)) or re.match(r"^t\d-", s) else s
+            for s in p.path.split("/")]
+    q = urllib.parse.parse_qsl(p.query)
+    q = [(k, "<url>" if v.startswith("http") else v) for k, v in q]
+    return f"{p.scheme}://{host}{'/'.join(segs)}" + ("?" + urllib.parse.urlencode(q) if q else "")
 
 
-def tmdb(path, **q):
-    q["api_key"] = TMDB
-    return js(f"https://api.themoviedb.org/3/{path}?" + urllib.parse.urlencode(q))
+def get(u):
+    return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=90)
 
 
-def pick(arr, lang):
-    a = [x for x in arr if x.get("iso_639_1") == lang]
-    return max(a, key=lambda x: (x.get("vote_average", 0), x.get("width", 0)))["file_path"] if a else None
+def variants(u):
+    p = urllib.parse.urlsplit(u)
+    q = [(k, v) for k, v in urllib.parse.parse_qsl(p.query) if k != "lang"]
+    out = {"now": u}
+    for lang in ("tr",):
+        out["lang=" + lang] = urllib.parse.urlunsplit(p._replace(query=urllib.parse.urlencode(q + [("lang", lang)])))
+    return out
 
 
-F = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-font = ImageFont.truetype(F, 22) if os.path.exists(F) else ImageFont.load_default()
-small = ImageFont.truetype(F.replace("-Bold", ""), 17) if os.path.exists(F) else ImageFont.load_default()
+F = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+font = ImageFont.truetype(F, 18) if os.path.exists(F) else ImageFont.load_default()
 rep = []
-for kind, q in TESTS:
-    r = [x for x in tmdb(f"search/{kind}", query=q, language="tr-TR")["results"] if x.get("original_language") == "tr"]
-    if not r:
-        rep.append(f"{q}: not found on TMDB"); continue
-    tid = r[0]["id"]
-    ext = tmdb(f"{kind}/{tid}/external_ids")
-    tt = ext.get("imdb_id")
-    d = tmdb(f"{kind}/{tid}", language="en-US")
-    ims = tmdb(f"{kind}/{tid}/images", include_image_language="tr,en,null")
-    orig = d.get("original_name") or d.get("original_title")
-    trp, trl = pick(ims.get("posters", []), "tr"), pick(ims.get("logos", []), "tr")
-    st = "series" if kind == "tv" else "movie"
-    try:
-        m = js(f"{BASE}/meta/{st}/{tt}.json").get("meta") or {}
-    except Exception as e:
-        m = {"error": scrub(e)}
-    vids = m.get("videos") or []
-    seasons = sorted({v.get("season") for v in vids if v.get("season") is not None})
-    rep.append(f"{q} ({tt}, tmdb {tid})\n  AIOMetadata now: name={m.get('name')!r} logo={'yes' if m.get('logo') else 'no'} "
-               f"episodes={len(vids)} seasons={seasons[:12]}{' ...' if len(seasons) > 12 else ''} first ids={[v.get('id') for v in vids[:2]]}\n"
-               f"  Turkish: name={orig!r} tr poster={'yes' if trp else 'NO'} tr logo={'yes' if trl else 'NO'} (TMDB English name {d.get('name') or d.get('title')!r})"
-               + (f"\n  error: {m['error']}" if "error" in m else ""))
-    # side by side: now | Turkish
-    W, H = 1000, 520
-    cv = Image.new("RGB", (W, H), (24, 24, 28)); dr = ImageDraw.Draw(cv)
-    for col, (label, name, pu, lu) in enumerate([
-        ("AIOMetadata (now)", m.get("name", "?"), m.get("poster"), m.get("logo")),
-        ("Turkish original", orig, trp and "https://image.tmdb.org/t/p/w500" + trp, trl and "https://image.tmdb.org/t/p/w500" + trl)]):
-        x0 = col * 500 + 20
-        dr.text((x0, 12), label, font=small, fill=(170, 170, 180))
-        p = pu and img(pu, (240, 360))
-        if p: cv.paste(p, (x0, 44), p)
-        lg = lu and img(lu, (210, 120))
-        if lg:
-            bg = Image.new("RGBA", lg.size, (90, 90, 100, 255)); bg.alpha_composite(lg)
-            cv.paste(bg.convert("RGB"), (x0 + 255, 60))
-        else:
-            dr.text((x0 + 255, 60), "(no logo)", font=small, fill=(140, 140, 150))
-        dr.text((x0, 420), name or "?", font=font, fill=(240, 240, 240))
-    cv.save(f"{OUT}/{re.sub(r'[^a-z0-9]+', '-', q.lower())}.jpg", quality=86)
-open(f"{OUT}/report.txt", "w").write(scrub("\n".join(rep)) + "\n")
-print(scrub("\n".join(rep)))
+for st, tt, slug in TESTS:
+    m = json.loads(get(f"{BASE}/meta/{st}/{tt}.json").read()).get("meta") or {}
+    pu = m.get("poster")
+    rep.append(f"{slug}: poster url shape = {shape(pu)}")
+    tiles = []
+    for name, u in variants(pu).items():
+        try:
+            r = get(u)
+            final = r.geturl()
+            im = Image.open(io.BytesIO(r.read())).convert("RGB")
+            rep.append(f"   {name}: HTTP 200 {im.size} final={shape(final)}")
+            im.thumbnail((300, 450)); tiles.append((name, im))
+        except Exception as e:
+            rep.append(f"   {name}: failed {type(e).__name__} {getattr(e, 'code', '')}")
+    cv = Image.new("RGB", (40 + 320 * len(tiles), 520), (24, 24, 28)); dr = ImageDraw.Draw(cv)
+    for i, (name, im) in enumerate(tiles):
+        cv.paste(im, (20 + 320 * i, 40)); dr.text((20 + 320 * i, 10), name, font=font, fill=(200, 200, 210))
+    cv.save(f"{OUT}/{slug}.jpg", quality=86)
+txt = "\n".join(rep)
+for s in (BASE, AIO):
+    txt = txt.replace(s, "<aio>")
+open(f"{OUT}/report.txt", "w").write(txt + "\n")
+print(txt)
