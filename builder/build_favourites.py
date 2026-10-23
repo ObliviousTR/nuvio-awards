@@ -15,10 +15,9 @@ LOCAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "spotligh
 
 
 def url(slot, name):
-    """repo URL plus a short content hash, so the app fetches new art after a delivery. My Simkl changes weekly
-    between deliveries, so it keeps a plain URL (raw.githubusercontent serves it with a 5-minute cache)."""
-    if slot == "mysimkl":
-        return f"{FAV}/{slot}/{name}"
+    """repo URL plus a short content hash, so the app drops any older art it cached under the same path. My Simkl
+    also changes weekly between deliveries; the app re-checks cached images in the background (stale-while-revalidate),
+    so those weekly updates still arrive under the same URL."""
     p = os.path.join(LOCAL, slot, name)
     v = hashlib.sha1(open(p, "rb").read()).hexdigest()[:8] if os.path.exists(p) else "0"
     return f"{FAV}/{slot}/{name}?v={v}"
