@@ -1,34 +1,21 @@
 """Pictures for the My Simkl Favourites card, from Ozzy's own Simkl lists (needs simkl/token.enc from the Simkl link
-workflow, plus SIMKL_CLIENT_ID, MDBLIST_API_KEY and TMDB_API_KEY). Writes simkl_1..3.jpg and their names to list.txt:
+workflow, plus SIMKL_CLIENT_ID, SIMKL_CLIENT_SECRET, MDBLIST_API_KEY and TMDB_API_KEY; refreshes and re-saves the tokens). Writes simkl_1..3.jpg and their names to list.txt:
 simkl_1 / simkl_2 = the two shows he watched most recently, simkl_3 = the newest plan-to-watch title.
 usage: python3 scripts/simkl_favs.py OUT_DIR
 """
-import io, json, os, subprocess, sys, urllib.request
+import io, json, os, sys, urllib.request
 
 from PIL import Image
 
-CID = os.environ["SIMKL_CLIENT_ID"].strip()
 TMDB = os.environ["TMDB_API_KEY"].strip()
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-def token():
-    return subprocess.run(["openssl", "enc", "-d", "-aes-256-cbc", "-pbkdf2", "-a", "-pass", "env:K",
-                           "-in", os.path.join(ROOT, "simkl", "token.enc")], capture_output=True, check=True,
-                          env={**os.environ, "K": CID + os.environ["MDBLIST_API_KEY"].strip()}).stdout.decode().strip()
-
-
-def simkl(path, tok):
-    u = f"https://api.simkl.com{path}{'&' if '?' in path else '?'}client_id={CID}&app-name=nuvio-awards&app-version=1.0"
-    r = urllib.request.Request(u, headers={"simkl-api-key": CID, "Authorization": "Bearer " + tok,
-                                           "User-Agent": "nuvio-awards/1.0", "Content-Type": "application/json"})
-    return json.loads(urllib.request.urlopen(r, timeout=60).read() or b"{}") or {}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import simkl_auth as S
 
 
 def items(tok, kind, status):
-    d = simkl(f"/sync/all-items/{kind}/{status}", tok)
+    d = S.get(f"/sync/all-items/{kind}/{status}", tok)
     out = []
-    for it in d.get(kind, []) or []:
+    for it in (d.get(kind) if isinstance(d, dict) else None) or []:
         m = it.get("show") or it.get("movie") or {}
         tid = (m.get("ids") or {}).get("tmdb")
         if tid:
@@ -50,7 +37,7 @@ def backdrop(kind, tid):
 
 def main(out):
     os.makedirs(out, exist_ok=True)
-    tok = token()
+    tok = S.access_token()
     watching = items(tok, "shows", "watching") + items(tok, "anime", "watching")
     watching.sort(key=lambda x: x["when"], reverse=True)
     plan = items(tok, "shows", "plantowatch") + items(tok, "movies", "plantowatch") + items(tok, "anime", "plantowatch")

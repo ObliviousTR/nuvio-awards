@@ -18,6 +18,7 @@ jobs:
       - name: Link (shows a PIN, waits for it)
         env:
           SIMKL_CLIENT_ID: ${{ secrets.SIMKL_CLIENT_ID }}
+          SIMKL_CLIENT_SECRET: ${{ secrets.SIMKL_CLIENT_SECRET }}
           MDBLIST_API_KEY: ${{ secrets.MDBLIST_API_KEY }}
         run: python3 scripts/simkl_link.py
       - name: Save the encrypted token
