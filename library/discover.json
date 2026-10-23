@@ -227,6 +227,1966 @@
      }
     }
    ]
+  },
+  {
+   "id": "disc-action-movies",
+   "type": "movie",
+   "name": "Discover · Action",
+   "genre": "28",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Action Comedy",
+     "filters": {
+      "withGenres": "28,35"
+     }
+    },
+    {
+     "label": "Sci-Fi Action",
+     "filters": {
+      "withGenres": "28,878"
+     }
+    },
+    {
+     "label": "War Action",
+     "filters": {
+      "withGenres": "28,10752"
+     }
+    },
+    {
+     "label": "Crime Action",
+     "filters": {
+      "withGenres": "28,80"
+     }
+    },
+    {
+     "label": "Martial Arts",
+     "kw": [
+      "martial arts",
+      "kung fu"
+     ]
+    },
+    {
+     "label": "Spy",
+     "kw": [
+      "spy",
+      "espionage"
+     ]
+    },
+    {
+     "label": "Heist",
+     "kw": [
+      "heist"
+     ]
+    },
+    {
+     "label": "Superhero",
+     "kw": [
+      "superhero"
+     ]
+    },
+    {
+     "label": "Disaster",
+     "kw": [
+      "disaster",
+      "natural disaster"
+     ]
+    },
+    {
+     "label": "Car Chase",
+     "kw": [
+      "car chase",
+      "street racing"
+     ]
+    },
+    {
+     "label": "Revenge",
+     "kw": [
+      "revenge"
+     ]
+    },
+    {
+     "label": "Military",
+     "kw": [
+      "military",
+      "special forces"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-action-series",
+   "type": "series",
+   "name": "Discover · Action",
+   "genre": "10759",
+   "base": {
+    "voteCountGte": 50,
+    "withoutGenres": "16|99|10763|10767|10766|10764",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "Superhero",
+     "kw": [
+      "superhero"
+     ]
+    },
+    {
+     "label": "Spy",
+     "kw": [
+      "spy",
+      "espionage"
+     ]
+    },
+    {
+     "label": "Martial Arts",
+     "kw": [
+      "martial arts"
+     ]
+    },
+    {
+     "label": "Military",
+     "kw": [
+      "military"
+     ]
+    },
+    {
+     "label": "Sci-Fi Action",
+     "filters": {
+      "withGenres": "10759,10765"
+     }
+    },
+    {
+     "label": "Crime Action",
+     "filters": {
+      "withGenres": "10759,80"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-scifi-movies",
+   "type": "movie",
+   "name": "Discover · Sci-Fi & Fantasy",
+   "genre": "878|14",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Science Fiction",
+     "filters": {
+      "withGenres": "878"
+     }
+    },
+    {
+     "label": "Fantasy",
+     "filters": {
+      "withGenres": "14"
+     }
+    },
+    {
+     "label": "Space",
+     "kw": [
+      "space",
+      "outer space"
+     ]
+    },
+    {
+     "label": "Time Travel",
+     "kw": [
+      "time travel"
+     ]
+    },
+    {
+     "label": "Dystopia",
+     "kw": [
+      "dystopia"
+     ]
+    },
+    {
+     "label": "Cyberpunk",
+     "kw": [
+      "cyberpunk"
+     ]
+    },
+    {
+     "label": "Aliens",
+     "kw": [
+      "alien",
+      "alien invasion"
+     ]
+    },
+    {
+     "label": "Artificial Intelligence",
+     "kw": [
+      "artificial intelligence (a.i.)",
+      "android",
+      "robot"
+     ]
+    },
+    {
+     "label": "Post-Apocalyptic",
+     "kw": [
+      "post-apocalyptic future"
+     ]
+    },
+    {
+     "label": "Epic Fantasy",
+     "kw": [
+      "sword and sorcery",
+      "high fantasy"
+     ]
+    },
+    {
+     "label": "Fairy Tale",
+     "kw": [
+      "fairy tale"
+     ]
+    },
+    {
+     "label": "Superhero",
+     "kw": [
+      "superhero"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-scifi-series",
+   "type": "series",
+   "name": "Discover · Sci-Fi & Fantasy",
+   "genre": "10765",
+   "base": {
+    "voteCountGte": 50,
+    "withoutGenres": "16|99|10763|10767|10766|10764",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "Space",
+     "kw": [
+      "space",
+      "outer space"
+     ]
+    },
+    {
+     "label": "Time Travel",
+     "kw": [
+      "time travel"
+     ]
+    },
+    {
+     "label": "Dystopia",
+     "kw": [
+      "dystopia"
+     ]
+    },
+    {
+     "label": "Superhero",
+     "kw": [
+      "superhero"
+     ]
+    },
+    {
+     "label": "Vampires",
+     "kw": [
+      "vampire"
+     ]
+    },
+    {
+     "label": "Magic",
+     "kw": [
+      "magic",
+      "witch"
+     ]
+    },
+    {
+     "label": "Aliens",
+     "kw": [
+      "alien"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-horror-movies",
+   "type": "movie",
+   "name": "Discover · Horror",
+   "genre": "27",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Slasher",
+     "kw": [
+      "slasher"
+     ]
+    },
+    {
+     "label": "Supernatural",
+     "kw": [
+      "supernatural"
+     ]
+    },
+    {
+     "label": "Possession",
+     "kw": [
+      "demonic possession",
+      "exorcism"
+     ]
+    },
+    {
+     "label": "Zombies",
+     "kw": [
+      "zombie"
+     ]
+    },
+    {
+     "label": "Found Footage",
+     "kw": [
+      "found footage"
+     ]
+    },
+    {
+     "label": "Haunted House",
+     "kw": [
+      "haunted house"
+     ]
+    },
+    {
+     "label": "Folk Horror",
+     "kw": [
+      "folk horror",
+      "cult"
+     ]
+    },
+    {
+     "label": "Creatures",
+     "kw": [
+      "creature",
+      "monster"
+     ]
+    },
+    {
+     "label": "Vampires",
+     "kw": [
+      "vampire"
+     ]
+    },
+    {
+     "label": "Psychological",
+     "kw": [
+      "psychological horror"
+     ]
+    },
+    {
+     "label": "Horror Comedy",
+     "filters": {
+      "withGenres": "27,35"
+     }
+    },
+    {
+     "label": "Sci-Fi Horror",
+     "filters": {
+      "withGenres": "27,878"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-thriller-movies",
+   "type": "movie",
+   "name": "Discover · Mystery & Thriller",
+   "genre": "9648|53",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Mystery",
+     "filters": {
+      "withGenres": "9648"
+     }
+    },
+    {
+     "label": "Thriller",
+     "filters": {
+      "withGenres": "53"
+     }
+    },
+    {
+     "label": "Psychological",
+     "kw": [
+      "psychological thriller"
+     ]
+    },
+    {
+     "label": "Whodunit",
+     "kw": [
+      "whodunit"
+     ]
+    },
+    {
+     "label": "Neo-Noir",
+     "kw": [
+      "neo-noir",
+      "film noir"
+     ]
+    },
+    {
+     "label": "Conspiracy",
+     "kw": [
+      "conspiracy"
+     ]
+    },
+    {
+     "label": "Serial Killer",
+     "kw": [
+      "serial killer"
+     ]
+    },
+    {
+     "label": "Political",
+     "kw": [
+      "political thriller"
+     ]
+    },
+    {
+     "label": "Courtroom",
+     "kw": [
+      "courtroom",
+      "trial"
+     ]
+    },
+    {
+     "label": "Spy",
+     "kw": [
+      "spy",
+      "espionage"
+     ]
+    },
+    {
+     "label": "Crime Thriller",
+     "filters": {
+      "withGenres": "53,80"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-thriller-series",
+   "type": "series",
+   "name": "Discover · Mystery & Thriller",
+   "genre": "9648",
+   "base": {
+    "voteCountGte": 50,
+    "withoutGenres": "16|99|10763|10767|10766|10764",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "Detective",
+     "kw": [
+      "detective"
+     ]
+    },
+    {
+     "label": "Whodunit",
+     "kw": [
+      "whodunit"
+     ]
+    },
+    {
+     "label": "Psychological",
+     "kw": [
+      "psychological thriller"
+     ]
+    },
+    {
+     "label": "Serial Killer",
+     "kw": [
+      "serial killer"
+     ]
+    },
+    {
+     "label": "Conspiracy",
+     "kw": [
+      "conspiracy"
+     ]
+    },
+    {
+     "label": "Crime Mystery",
+     "filters": {
+      "withGenres": "9648,80"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-drama-movies",
+   "type": "movie",
+   "name": "Discover · Drama",
+   "genre": "18",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Biography",
+     "kw": [
+      "biography"
+     ]
+    },
+    {
+     "label": "Sports",
+     "kw": [
+      "sports",
+      "boxing"
+     ]
+    },
+    {
+     "label": "Coming of Age",
+     "kw": [
+      "coming of age"
+     ]
+    },
+    {
+     "label": "Period",
+     "kw": [
+      "period drama",
+      "historical drama"
+     ]
+    },
+    {
+     "label": "Courtroom",
+     "kw": [
+      "courtroom",
+      "lawyer"
+     ]
+    },
+    {
+     "label": "Family Drama",
+     "filters": {
+      "withGenres": "18,10751"
+     }
+    },
+    {
+     "label": "Romantic Drama",
+     "filters": {
+      "withGenres": "18,10749"
+     }
+    },
+    {
+     "label": "Political",
+     "kw": [
+      "politics",
+      "political"
+     ]
+    },
+    {
+     "label": "Medical",
+     "kw": [
+      "hospital",
+      "doctor"
+     ]
+    },
+    {
+     "label": "Music",
+     "filters": {
+      "withGenres": "18,10402"
+     }
+    },
+    {
+     "label": "Based on a True Story",
+     "kw": [
+      "based on true story"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-drama-series",
+   "type": "series",
+   "name": "Discover · Drama",
+   "genre": "18",
+   "base": {
+    "voteCountGte": 50,
+    "withoutGenres": "16|99|10763|10767|10766|10764",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "Period",
+     "kw": [
+      "period drama",
+      "historical drama"
+     ]
+    },
+    {
+     "label": "Medical",
+     "kw": [
+      "medical drama",
+      "hospital"
+     ]
+    },
+    {
+     "label": "Legal",
+     "kw": [
+      "legal drama",
+      "lawyer"
+     ]
+    },
+    {
+     "label": "Teen",
+     "kw": [
+      "teen drama",
+      "high school"
+     ]
+    },
+    {
+     "label": "Family",
+     "kw": [
+      "family drama"
+     ]
+    },
+    {
+     "label": "Political",
+     "kw": [
+      "politics",
+      "political"
+     ]
+    },
+    {
+     "label": "Crime Drama",
+     "filters": {
+      "withGenres": "18,80"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-crime-movies",
+   "type": "movie",
+   "name": "Discover · Crime",
+   "genre": "80",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Heist",
+     "kw": [
+      "heist"
+     ]
+    },
+    {
+     "label": "Gangster",
+     "kw": [
+      "gangster"
+     ]
+    },
+    {
+     "label": "Mafia",
+     "kw": [
+      "mafia"
+     ]
+    },
+    {
+     "label": "Police",
+     "kw": [
+      "police",
+      "cop"
+     ]
+    },
+    {
+     "label": "Serial Killer",
+     "kw": [
+      "serial killer"
+     ]
+    },
+    {
+     "label": "Neo-Noir",
+     "kw": [
+      "neo-noir",
+      "film noir"
+     ]
+    },
+    {
+     "label": "Drug Cartel",
+     "kw": [
+      "drug cartel",
+      "drug trafficking"
+     ]
+    },
+    {
+     "label": "Crime Comedy",
+     "filters": {
+      "withGenres": "80,35"
+     }
+    },
+    {
+     "label": "Prison",
+     "kw": [
+      "prison"
+     ]
+    },
+    {
+     "label": "Crime Thriller",
+     "filters": {
+      "withGenres": "80,53"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-crime-series",
+   "type": "series",
+   "name": "Discover · Crime",
+   "genre": "80",
+   "base": {
+    "voteCountGte": 50,
+    "withoutGenres": "16|99|10763|10767|10766|10764",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "Police Procedural",
+     "kw": [
+      "police procedural"
+     ]
+    },
+    {
+     "label": "Detective",
+     "kw": [
+      "detective"
+     ]
+    },
+    {
+     "label": "Mafia",
+     "kw": [
+      "mafia"
+     ]
+    },
+    {
+     "label": "Drug Cartel",
+     "kw": [
+      "drug cartel",
+      "drug trafficking"
+     ]
+    },
+    {
+     "label": "Serial Killer",
+     "kw": [
+      "serial killer"
+     ]
+    },
+    {
+     "label": "Crime Comedy",
+     "filters": {
+      "withGenres": "80,35"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-romance-movies",
+   "type": "movie",
+   "name": "Discover · Romance",
+   "genre": "10749",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Romantic Comedy",
+     "filters": {
+      "withGenres": "10749,35"
+     }
+    },
+    {
+     "label": "Romantic Drama",
+     "filters": {
+      "withGenres": "10749,18"
+     }
+    },
+    {
+     "label": "Period Romance",
+     "kw": [
+      "period drama",
+      "costume drama"
+     ]
+    },
+    {
+     "label": "Holiday",
+     "kw": [
+      "christmas",
+      "holiday"
+     ]
+    },
+    {
+     "label": "Teen Romance",
+     "kw": [
+      "teen romance",
+      "high school"
+     ]
+    },
+    {
+     "label": "LGBTQ+",
+     "kw": [
+      "lgbt",
+      "gay theme"
+     ]
+    },
+    {
+     "label": "Musical",
+     "filters": {
+      "withGenres": "10749,10402"
+     }
+    },
+    {
+     "label": "Second Chances",
+     "kw": [
+      "second chance"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-animation-movies",
+   "type": "movie",
+   "name": "Discover · Animation",
+   "genre": "16",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "99"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Family",
+     "filters": {
+      "withGenres": "16,10751"
+     }
+    },
+    {
+     "label": "Anime",
+     "filters": {
+      "withOriginalLanguage": "ja"
+     }
+    },
+    {
+     "label": "Stop Motion",
+     "kw": [
+      "stop motion"
+     ]
+    },
+    {
+     "label": "Pixar",
+     "filters": {
+      "withCompanies": "3"
+     }
+    },
+    {
+     "label": "Studio Ghibli",
+     "filters": {
+      "withCompanies": "10342"
+     },
+     "rule": false
+    },
+    {
+     "label": "DreamWorks",
+     "filters": {
+      "withCompanies": "521"
+     }
+    },
+    {
+     "label": "Disney",
+     "filters": {
+      "withCompanies": "2|6125"
+     }
+    },
+    {
+     "label": "Adult Animation",
+     "kw": [
+      "adult animation"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-animation-series",
+   "type": "series",
+   "name": "Discover · Animation",
+   "genre": "16",
+   "base": {
+    "voteCountGte": 50,
+    "withoutGenres": "99|10763|10767|10766|10764"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "Anime",
+     "filters": {
+      "withOriginalLanguage": "ja"
+     }
+    },
+    {
+     "label": "Adult Animation",
+     "kw": [
+      "adult animation"
+     ]
+    },
+    {
+     "label": "Animated Comedy",
+     "filters": {
+      "withGenres": "16,35"
+     }
+    },
+    {
+     "label": "Kids",
+     "filters": {
+      "withGenres": "16,10762"
+     }
+    },
+    {
+     "label": "Action",
+     "filters": {
+      "withGenres": "16,10759"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-war-movies",
+   "type": "movie",
+   "name": "Discover · History & War",
+   "genre": "36|10752",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "War",
+     "filters": {
+      "withGenres": "10752"
+     }
+    },
+    {
+     "label": "History",
+     "filters": {
+      "withGenres": "36"
+     }
+    },
+    {
+     "label": "World War II",
+     "kw": [
+      "world war ii"
+     ]
+    },
+    {
+     "label": "World War I",
+     "kw": [
+      "world war i"
+     ]
+    },
+    {
+     "label": "Vietnam War",
+     "kw": [
+      "vietnam war"
+     ]
+    },
+    {
+     "label": "Cold War",
+     "kw": [
+      "cold war"
+     ]
+    },
+    {
+     "label": "Ancient World",
+     "kw": [
+      "ancient rome",
+      "ancient greece",
+      "ancient egypt"
+     ]
+    },
+    {
+     "label": "Medieval",
+     "kw": [
+      "medieval"
+     ]
+    },
+    {
+     "label": "Biography",
+     "kw": [
+      "biography"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-war-series",
+   "type": "series",
+   "name": "Discover · History & War",
+   "genre": "10768",
+   "base": {
+    "voteCountGte": 50,
+    "withoutGenres": "16|99|10763|10767|10766|10764",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "World War II",
+     "kw": [
+      "world war ii"
+     ]
+    },
+    {
+     "label": "Period",
+     "kw": [
+      "period drama",
+      "historical drama"
+     ]
+    },
+    {
+     "label": "Political",
+     "kw": [
+      "politics"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-western-movies",
+   "type": "movie",
+   "name": "Discover · Western",
+   "genre": "37",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "16|99",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Spaghetti Western",
+     "kw": [
+      "spaghetti western"
+     ]
+    },
+    {
+     "label": "Revisionist",
+     "kw": [
+      "revisionist western"
+     ]
+    },
+    {
+     "label": "Neo-Western",
+     "kw": [
+      "neo-western"
+     ]
+    },
+    {
+     "label": "Western Action",
+     "filters": {
+      "withGenres": "37,28"
+     }
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-docs-movies",
+   "type": "movie",
+   "name": "Discover · Documentary",
+   "genre": "99",
+   "base": {
+    "voteCountGte": 50,
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Nature",
+     "kw": [
+      "nature",
+      "wildlife"
+     ]
+    },
+    {
+     "label": "True Crime",
+     "kw": [
+      "true crime"
+     ]
+    },
+    {
+     "label": "Music",
+     "filters": {
+      "withGenres": "99,10402"
+     }
+    },
+    {
+     "label": "Sports",
+     "kw": [
+      "sport",
+      "sports"
+     ]
+    },
+    {
+     "label": "History",
+     "filters": {
+      "withGenres": "99,36"
+     }
+    },
+    {
+     "label": "Science",
+     "kw": [
+      "science"
+     ]
+    },
+    {
+     "label": "Biography",
+     "kw": [
+      "biography"
+     ]
+    },
+    {
+     "label": "Food",
+     "kw": [
+      "food",
+      "cooking"
+     ]
+    },
+    {
+     "label": "Politics",
+     "kw": [
+      "politics"
+     ]
+    },
+    {
+     "label": "Space",
+     "kw": [
+      "space",
+      "nasa"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-docs-series",
+   "type": "series",
+   "name": "Discover · Documentary",
+   "genre": "99",
+   "base": {
+    "voteCountGte": 20,
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "first_air_date.desc",
+     "filters": {
+      "voteCountGte": 10
+     },
+     "released": true
+    },
+    {
+     "label": "Nature",
+     "kw": [
+      "nature",
+      "wildlife"
+     ]
+    },
+    {
+     "label": "True Crime",
+     "kw": [
+      "true crime"
+     ]
+    },
+    {
+     "label": "History",
+     "kw": [
+      "history"
+     ]
+    },
+    {
+     "label": "Sports",
+     "kw": [
+      "sport",
+      "sports"
+     ]
+    },
+    {
+     "label": "Science",
+     "kw": [
+      "science"
+     ]
+    },
+    {
+     "label": "Food",
+     "kw": [
+      "food",
+      "cooking"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "releaseDateLte": "1999-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 100,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disc-family-movies",
+   "type": "movie",
+   "name": "Discover · Family",
+   "genre": "10751",
+   "base": {
+    "voteCountGte": 100,
+    "withoutGenres": "99|27",
+    "withOriginalLanguage": "en"
+   },
+   "options": [
+    {
+     "label": "Popular",
+     "sort": "popularity.desc"
+    },
+    {
+     "label": "Top Rated",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 1000
+     }
+    },
+    {
+     "label": "New Releases",
+     "sort": "primary_release_date.desc",
+     "filters": {
+      "voteCountGte": 20
+     },
+     "released": true
+    },
+    {
+     "label": "Animated",
+     "filters": {
+      "withGenres": "10751,16"
+     }
+    },
+    {
+     "label": "Fantasy & Adventure",
+     "filters": {
+      "withGenres": "10751,14"
+     }
+    },
+    {
+     "label": "Family Comedy",
+     "filters": {
+      "withGenres": "10751,35"
+     }
+    },
+    {
+     "label": "Holiday",
+     "kw": [
+      "christmas",
+      "holiday"
+     ]
+    },
+    {
+     "label": "Musicals",
+     "filters": {
+      "withGenres": "10751,10402"
+     }
+    },
+    {
+     "label": "Animals",
+     "kw": [
+      "animal",
+      "dog"
+     ]
+    },
+    {
+     "label": "Classics",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "releaseDateLte": "1979-12-31"
+     }
+    },
+    {
+     "label": "International",
+     "sort": "popularity.desc",
+     "filters": {
+      "voteCountGte": 300,
+      "withOriginalLanguage": "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th"
+     }
+    }
+   ]
   }
  ]
 }
