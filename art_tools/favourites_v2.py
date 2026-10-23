@@ -22,9 +22,9 @@ HAND = "ofl/caveat/Caveat%5Bwght%5D.ttf"
 
 # card -> logo, pictures (file stems in PICS_DIR), polaroid captions, label names for C (name, sub)
 CARDS = {
-    "doctorwho": {"logo": "whoniverse-gold.png", "title": "Doctor Who", "pics": ["dw23_2", "dw_5", "dw23_1"],
+    "doctorwho": {"logo": "whoniverse-gold.png", "title": "Doctor Who", "pics": ["dw23_2", "dw_5", "dw23_5"],
                   "notes": ["Doctor Who", "all the Doctors", "allons-y!"],
-                  "labels": [("The TARDIS", "Bigger on the inside"), ("The Doctors", "Since 1963"), ("Doctor Who", "2023 -")],
+                  "labels": [("The TARDIS", "Bigger on the inside"), ("The Doctors", "Since 1963"), ("The Tenth Doctor", "Allons-y!")],
                   "accent": (70, 140, 255)},
     "onepace": {"logo": "onepace.png", "title": "One Pace", "pics": ["op_3", "op_1", "op_7"],
                 "notes": ["One Pace", "Egghead", "Luffy!"],
