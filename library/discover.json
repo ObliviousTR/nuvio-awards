@@ -1,5 +1,5 @@
 {
- "_how": "Catalogs for Nuvio's Discover screen (Search > Discover): pick the catalog (e.g. Comedy), then a choice from the Genre menu. Each choice is a TMDB discover query run through the genre rule (scripts/genre_rails.py). kw: TMDB keyword names (resolved to ids each run). The first choice is what the catalog shows before anything is picked.",
+ "_how": "Catalogs for Nuvio's Discover screen (Search > Discover): pick the catalog (e.g. Comedy), then a choice from the Genre menu. Each choice is a TMDB discover query run through the genre rule (scripts/genre_rails.py). kw: TMDB keyword names (resolved to ids each run). The first choice is what the catalog shows before anything is picked. Hidden Gems: well rated (7.0+ films, 7.5+ series) but little known (150-1,500 votes for films, 40-600 for series).",
  "catalogs": [
   {
    "id": "disc-comedy-movies",
@@ -30,6 +30,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Romantic Comedy",
@@ -160,6 +169,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "Sitcoms",
      "kw": [
       "sitcom"
@@ -257,6 +275,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Action Comedy",
@@ -384,6 +411,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "Superhero",
      "kw": [
       "superhero"
@@ -467,6 +503,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Science Fiction",
@@ -594,6 +639,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "Space",
      "kw": [
       "space",
@@ -684,6 +738,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Slasher",
@@ -809,6 +872,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
+    },
+    {
      "label": "Mystery",
      "filters": {
       "withGenres": "9648"
@@ -926,6 +998,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "Detective",
      "kw": [
       "detective"
@@ -1008,6 +1089,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Biography",
@@ -1129,6 +1219,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "Period",
      "kw": [
       "period drama",
@@ -1222,6 +1321,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Heist",
@@ -1335,6 +1443,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "Police Procedural",
      "kw": [
       "police procedural"
@@ -1418,6 +1535,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Romantic Comedy",
@@ -1519,6 +1645,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
+    },
+    {
      "label": "Family",
      "filters": {
       "withGenres": "16,10751"
@@ -1615,6 +1750,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "Anime",
      "filters": {
       "withOriginalLanguage": "ja"
@@ -1691,6 +1835,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "War",
@@ -1797,6 +1950,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "World War II",
      "kw": [
       "world war ii"
@@ -1862,6 +2024,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Spaghetti Western",
@@ -1933,6 +2104,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Nature",
@@ -2046,6 +2226,15 @@
      "released": true
     },
     {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 40,
+      "voteCountLte": 600,
+      "voteAverageGte": 7.5
+     }
+    },
+    {
      "label": "Nature",
      "kw": [
       "nature",
@@ -2131,6 +2320,15 @@
       "voteCountGte": 20
      },
      "released": true
+    },
+    {
+     "label": "Hidden Gems",
+     "sort": "vote_average.desc",
+     "filters": {
+      "voteCountGte": 150,
+      "voteCountLte": 1500,
+      "voteAverageGte": 7.0
+     }
     },
     {
      "label": "Animated",

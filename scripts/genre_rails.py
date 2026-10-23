@@ -71,7 +71,7 @@ KEYMAP = {"voteCountGte": "vote_count.gte", "withGenres": "with_genres", "withou
           "withOriginCountry": "with_origin_country", "withWatchProviders": "with_watch_providers",
           "watchRegion": "watch_region", "withCompanies": "with_companies", "withNetworks": "with_networks",
           "voteAverageGte": "vote_average.gte", "withRuntimeGte": "with_runtime.gte",
-          "withoutKeywords": "without_keywords"}
+          "withoutKeywords": "without_keywords", "voteCountLte": "vote_count.lte"}
 
 
 class GenreCache:
