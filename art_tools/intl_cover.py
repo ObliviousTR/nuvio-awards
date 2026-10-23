@@ -187,7 +187,8 @@ def title_layer(folder, mode, area):
     return lay
 
 
-def build_cover(folder):
+def parts(folder):
+    """The card's layers: background, flag fill + mask, border, shadow, title - for the cover and the hover."""
     name, isos, box, fiso, cols, _ = I.CARDS[folder]
     per, box = per_country(folder, isos, box)
     rings_all = [r for rs in per.values() for r in rs]
@@ -198,17 +199,31 @@ def build_cover(folder):
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     cx, cy = (area[0] + area[2]) / 2, (area[1] + area[3]) / 2
     g = np.clip(1 - np.sqrt(((xx - cx) / (W * 0.45)) ** 2 + ((yy - cy) / (H * 0.6)) ** 2), 0, 1) ** 2
-    bg = np.array([8, 8, 10], np.float32) + g[..., None] * np.array(tint, np.float32) * 0.18
-    cv = Image.fromarray(bg.astype(np.uint8)).convert("RGBA")
+    bg = Image.fromarray((np.array([8, 8, 10], np.float32) + g[..., None] * np.array(tint, np.float32) * 0.18).astype(np.uint8))
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     sh.putalpha(mask.filter(ImageFilter.GaussianBlur(18)).point(lambda v: round(v * 0.85)))
-    cv.alpha_composite(sh, (8, 14))
-    fl = fill.convert("RGBA")
-    fl.putalpha(mask)
-    cv.alpha_composite(fl)
-    cv.alpha_composite(border(mask, tint))
-    cv.alpha_composite(title_layer(folder, mode, area))
-    return cv.convert("RGB")
+    return {"bg": bg, "fill": fill, "mask": mask, "shadow": sh, "border": border(mask, tint), "tint": tint,
+            "title": title_layer(folder, mode, area), "mode": mode, "area": area}
+
+
+def compose(p, content=None, mask=None, shadow_a=1.0, border_a=1.0, title_a=1.0):
+    """The card from its parts; content (RGB, card-sized) shown through the (possibly scaled) mask instead of the flag."""
+    cv = p["bg"].convert("RGBA")
+    m = mask or p["mask"]
+    if shadow_a > 0:
+        cv.alpha_composite(I.amul(p["shadow"], shadow_a), (8, 14))
+    c = (content or p["fill"]).convert("RGBA")
+    c.putalpha(m)
+    cv.alpha_composite(c)
+    if border_a > 0:
+        cv.alpha_composite(I.amul(p["border"], border_a))
+    if title_a > 0:
+        cv.alpha_composite(I.amul(p["title"], title_a))
+    return cv
+
+
+def build_cover(folder):
+    return compose(parts(folder)).convert("RGB")
 
 
 if __name__ == "__main__":
