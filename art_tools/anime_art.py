@@ -21,7 +21,7 @@ from keyframe_webp import encode
 KAPTAIN = os.environ.get("KAPTAIN_ART", "/home/claude/imkaptain/nuvio-art/art/anime")
 W, H = 1280, 720          # working size
 OUT = (512, 288)          # hover size, as the other landscape rows
-N, MS = 70, 50            # 3.5 s: in 0.5 s, one slow breath, out 0.5 s
+N, MS = 40, 50            # 2 s: in 0.5 s, a short hold with one breath, out 0.45 s
 
 
 def load(slug, kind):
@@ -218,7 +218,7 @@ def build(slug, out_dir):
     encode(frames, [MS] * N, os.path.join(out_dir, "hover.webp"), quality=75)
     Image.fromarray(C.astype(np.uint8)).save(os.path.join(out_dir, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (OUT[0] * 4, OUT[1] * 2))
-    for j, fi in enumerate((0, 3, 6, 9, 20, 35, 60, 66)):
+    for j, fi in enumerate((0, 3, 6, 9, 16, N - 12, N - 6, N - 3)):
         strip.paste(frames[fi], ((j % 4) * OUT[0], (j // 4) * OUT[1]))
     strip.save(os.path.join(out_dir, "frames.jpg"), quality=82)
     return frames
