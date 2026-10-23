@@ -22,7 +22,7 @@ W, H, OW, OH = R.W, R.H, R.OW, R.OH
 ease, amul, zoomed, cover_fit = R.ease, R.amul, R.zoomed, R.cover_fit
 TEST = bool(os.environ.get("DOCS_TEST"))
 
-# folder -> (title, subtitle, (dark, light) two tones, device, pool of (kind, title, year))
+# folder -> (title, subtitle, (dark, light) two tones, device, pool of (kind, title, year[, era of the footage]))
 CARDS = {
     "True Crime & Serial Killers": ("TRUE CRIME", "FORENSIC INVESTIGATIONS & SERIAL KILLERS", ((52, 8, 18), (255, 150, 150)), "evidence", [
         ("tv", "Making a Murderer", 2015), ("tv", "The Jinx: The Life and Deaths of Robert Durst", 2015),
@@ -31,10 +31,11 @@ CARDS = {
         ("tv", "I'll Be Gone in the Dark", 2020), ("tv", "The Keepers", 2017), ("tv", "Evil Genius", 2018),
         ("movie", "Abducted in Plain Sight", 2017)]),
     "History, War & Civilizations": ("HISTORY & CIVILIZATIONS", "EMPIRES, ARCHIVES & WAR CHRONICLES", ((28, 20, 10), (236, 206, 156)), "archive", [
-        ("movie", "They Shall Not Grow Old", 2018), ("tv", "The Vietnam War", 2017), ("tv", "World War II in Colour", 2009),
-        ("movie", "Apollo 11", 2019), ("tv", "The World at War", 1973), ("tv", "The Civil War", 1990),
-        ("tv", "Apocalypse: The Second World War", 2009), ("tv", "Turning Point: The Bomb and the Cold War", 2024),
-        ("tv", "Cold War", 1998)]),
+        ("movie", "They Shall Not Grow Old", 2018, "1914–1918"), ("tv", "The Vietnam War", 2017, "1955–1975"),
+        ("tv", "World War II in Colour", 2009, "1939–1945"), ("movie", "Apollo 11", 2019, "1969"),
+        ("tv", "The World at War", 1973, "1939–1945"), ("tv", "The Civil War", 1990, "1861–1865"),
+        ("tv", "Apocalypse: The Second World War", 2009, "1939–1945"),
+        ("tv", "Turning Point: The Bomb and the Cold War", 2024, "1945–1991"), ("tv", "Cold War", 1998, "1945–1991")]),
 }
 
 
@@ -50,21 +51,23 @@ def docs_of(folder, n=3):
             p = rnd.choice(fs)
             im = Image.open(p)
             if im.width >= 1200 and 1.6 < im.width / im.height < 1.9:
-                k, t, y = pool[len(out)]
-                out.append((t, "DOCUSERIES" if k == "tv" else "DOCUMENTARY", "NETFLIX", y, p))
+                k, t, y = pool[len(out)][:3]
+                out.append((t, "DOCUSERIES" if k == "tv" else "DOCUMENTARY", "NETFLIX", y, p, pool[len(out)][3] if len(pool[len(out)]) > 3 else str(y)))
         return out
     import kids_art as K
     m = dt.date.today().year * 12 + dt.date.today().month
     start = (m * n) % len(pool)
     out = []
-    for kind, t, y in pool[start:] + pool[:start]:
+    for it in pool[start:] + pool[:start]:
+        kind, t, y = it[:3]
+        era = it[3] if len(it) > 3 else str(y)
         a = K.art_of((kind, t, y))
         if not a:
             continue
         det = K.tmdb(f"/{kind}/{a[0]}") or {}
         nets = [x["name"] for x in det.get("networks", [])] if kind == "tv" else []
         name = det.get("name") or det.get("title") or t
-        out.append((name, "DOCUSERIES" if kind == "tv" else "DOCUMENTARY", (nets[0] if nets else "").upper(), y, a[2]))
+        out.append((name, "DOCUSERIES" if kind == "tv" else "DOCUMENTARY", (nets[0] if nets else "").upper(), y, a[2], era))
         if len(out) == n:
             break
     return out
@@ -203,12 +206,12 @@ def build(folder, out):
     title, sub, (dark, light), device, _ = CARDS[folder]
     accent = tuple(min(255, int(v)) for v in light)
     docs = docs_of(folder)
-    pics = [cover_fit(load(p)) for *_, p in docs]
+    pics = [cover_fit(load(d_[4])) for d_ in docs]
     tones = [duotone(p, dark, light) for p in pics]
     fl = R.fall()
     tb = R.title_block(title, sub, accent)
     tg = R.tag(title, accent)
-    labels = [label(t, k, nw, y, accent) for t, k, nw, y, _ in docs]
+    labels = [label(t, k, nw, y, accent) for t, k, nw, y, _, _ in docs]
     cv = tones[0].convert("RGBA")
     cv.alpha_composite(fl)
     cv.alpha_composite(tb)
@@ -238,7 +241,7 @@ def build(folder, out):
             if device == "evidence":
                 c.alpha_composite(case_stamp(ease((u - 0.4) / 0.6), 1047))
             if device == "archive":
-                c.alpha_composite(archive_tag(docs[0][3], ease((u - 0.4) / 0.6)))
+                c.alpha_composite(archive_tag(docs[0][5], ease((u - 0.4) / 0.6)))
             c.alpha_composite(amul(labels[0], ease((u - 0.5) / 0.5)))
         elif i < T2:
             k, t = divmod(i - T1, SEG)
@@ -284,7 +287,7 @@ def build(folder, out):
                 else:
                     c.alpha_composite(board(cur, accent))
             if device == "archive":
-                c.alpha_composite(archive_tag(docs[k][3], 1 - bloom))
+                c.alpha_composite(archive_tag(docs[k][5], 1 - bloom))
             if not (device == "evidence" and t >= OUT0 and not last):
                 if t >= SEG - 6 and not last:
                     la = 1 - ease((t - (SEG - 6)) / 6)
@@ -310,7 +313,7 @@ def build(folder, out):
     for j, idx in enumerate([0, 16, 30, 45, 58, 80, 110, n - 6]):
         strip.paste(frames[min(idx, n - 1)], ((j % 4) * OW, (j // 4) * OH))
     strip.save(os.path.join(d, "frames.jpg"), quality=80)
-    return [f"{t} ({y})" for t, _, _, y, _ in docs]
+    return [f"{t} ({y})" for t, _, _, y, _, _ in docs]
 
 
 if __name__ == "__main__":
