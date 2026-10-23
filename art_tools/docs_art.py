@@ -112,12 +112,12 @@ def duotone(im, dark, light):
     return Image.fromarray(np.clip(np.array(dark, np.float32) * (1 - g) + np.array(light, np.float32) * g, 0, 255).astype(np.uint8))
 
 
-def label(title, kind, net, year, accent):
+def label(title, kind, net, year, accent, maxw=W - 140):
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
-    t = title.upper()
+    t = title.upper().replace(" | ", ": ")
     fn = font("ExtraBold", 44)
-    while width(t, fn, 3) > W - 140 and fn.size > 24:
+    while width(t, fn, 3) > maxw and fn.size > 24:
         fn = font("ExtraBold", fn.size - 2)
     y = H - 132
     d.rectangle((46, y + 6, 52, y + fn.size + 42), fill=accent + (255,))
@@ -225,7 +225,7 @@ def archive_tag(year, a):
 
 
 def laurels(text, accent, p):
-    """A pair of festival laurels with the honour between them, top right."""
+    """A pair of festival laurels with the honour between them, bottom right."""
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     if p <= 0:
         return lay
@@ -278,7 +278,7 @@ def laurels(text, accent, p):
     im = im.resize((round(S_ * sc), round(210 * sc)), Image.LANCZOS)
     sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
     sh.putalpha(im.getchannel("A").filter(ImageFilter.GaussianBlur(6)).point(lambda v: round(v * 0.7)))
-    x0, y0 = round(W - 260 - im.width / 2), round(120 - im.height / 2)
+    x0, y0 = round(W - 250 - im.width / 2), round(H - 118 - im.height / 2)   # bottom right, clear of faces
     lay.alpha_composite(amul(sh, e), (x0 + 2, y0 + 3))
     lay.alpha_composite(amul(im, e), (x0, y0))
     return lay
@@ -408,7 +408,7 @@ def build(folder, out):
     fl = R.fall()
     tb = R.title_block(title, sub, accent)
     tg = R.tag(title, accent)
-    labels = [label(t, k, nw, y, accent) for t, k, nw, y, _, _ in docs]
+    labels = [label(t, k, nw, y, accent, W - 580 if device == "laurels" else W - 140) for t, k, nw, y, _, _ in docs]
     cv = tones[0].convert("RGBA")
     cv.alpha_composite(fl)
     cv.alpha_composite(tb)
