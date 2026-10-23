@@ -22,6 +22,7 @@ KAPTAIN = os.environ.get("KAPTAIN_ART", "/home/claude/imkaptain/nuvio-art/art/an
 W, H = 1280, 720          # working size
 OUT = (512, 288)          # hover size, as the other landscape rows
 N, MS = 40, 50            # 2 s: in 0.5 s, a short hold with one breath, out 0.45 s
+PRE = 6                   # 0.3 s on the plain cover first, so the hover doesn't jump the moment it starts
 
 
 def load(slug, kind):
@@ -214,11 +215,13 @@ def build(slug, out_dir):
         out = out + ed(Tz) * (C + ed(fill) * (Hv - C) - out)
         frames.append(Image.fromarray(np.clip(out, 0, 255).astype(np.uint8)).resize(OUT, Image.LANCZOS))
 
+    first = Image.fromarray(np.clip(C, 0, 255).astype(np.uint8)).resize(OUT, Image.LANCZOS)
+    frames = [first] * PRE + frames
     os.makedirs(out_dir, exist_ok=True)
-    encode(frames, [MS] * N, os.path.join(out_dir, "hover.webp"), quality=75)
+    encode(frames, [MS] * len(frames), os.path.join(out_dir, "hover.webp"), quality=75)
     Image.fromarray(C.astype(np.uint8)).save(os.path.join(out_dir, "cover.jpg"), quality=90)
     strip = Image.new("RGB", (OUT[0] * 4, OUT[1] * 2))
-    for j, fi in enumerate((0, 3, 6, 9, 16, N - 12, N - 6, N - 3)):
+    for j, fi in enumerate((0, PRE + 3, PRE + 6, PRE + 9, PRE + 16, PRE + N - 12, PRE + N - 6, PRE + N - 3)):
         strip.paste(frames[fi], ((j % 4) * OUT[0], (j // 4) * OUT[1]))
     strip.save(os.path.join(out_dir, "frames.jpg"), quality=82)
     return frames
