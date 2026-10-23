@@ -392,8 +392,8 @@ def make(title, sub, accent, imgs, labels=None, style=None):
     title_a = title_lay.getchannel("A")
     tx0, tx1 = x0, x0 + round(sum(probe.textlength(ch, font=tf) + sp_t for ch in title))
 
-    lab_f = font("ExtraBold", 30)
-    yr_f = font("SemiBold", 19)
+    lab_f = font("ExtraBold", 38)
+    yr_f = font("SemiBold", 23)
     yr_col = tuple(min(255, round(v * 0.55 + 115)) for v in accent)
 
     def label_layer(name, year):
@@ -408,7 +408,7 @@ def make(title, sub, accent, imgs, labels=None, style=None):
         tracked(d, (xr - tw, 44), tt, f_, (255, 255, 255, 255), 2)
         ys = str(year)
         yw = sum(probe.textlength(ch, font=yr_f) + 7 for ch in ys) - 7
-        tracked(d, (xr - yw, 44 + f_.size + 10), ys, yr_f, yr_col + (255,), 7)
+        tracked(d, (xr - yw, 44 + f_.size + 12), ys, yr_f, yr_col + (255,), 7)
         return lay
 
     labs = [label_layer(n_, y_) for n_, y_ in labels] if labels else []
@@ -419,15 +419,17 @@ def make(title, sub, accent, imgs, labels=None, style=None):
     def seg_bar(cv, t, q, out):
         """B: the bar as one segment per film, bottom up; each fills while its film plays."""
         d = ImageDraw.Draw(cv)
-        gap = round(6 * ease(t / 0.05) * out)
+        e_ = ease(t / 0.05) * out
+        gap = round(12 * e_)
+        x2 = bar[2] + round(5 * e_)       # a little wider while it counts, so the segments read at card size
         h_ = (bar[3] - bar[1] - gap * (S - 1)) / S
         for s_ in range(S):
             y1 = bar[3] - s_ * (h_ + gap)
             y0 = y1 - h_
-            d.rectangle((bar[0], round(y0), bar[2], round(y1)), fill=grey + (255,))
+            d.rectangle((bar[0], round(y0), x2, round(y1)), fill=grey + (255,))
             p_ = min(1.0, max(0.0, q * S - s_)) * out
             if p_ > 0:
-                d.rectangle((bar[0], round(y1 - h_ * p_), bar[2], round(y1)), fill=accent + (255,))
+                d.rectangle((bar[0], round(y1 - h_ * p_), x2, round(y1)), fill=accent + (255,))
 
     def frame(i, n):
         t = i / n
@@ -465,7 +467,7 @@ def make(title, sub, accent, imgs, labels=None, style=None):
         # title
         cv.alpha_composite(title_lay)
         if style == "C" and t <= L1:   # a light sweeps over the title as each film comes in
-            u = (loc - 0.02) / 0.35 if not (j == 0 and seg < 0.05) else -1
+            u = (loc - 0.02) / 0.55 if not (j == 0 and seg < 0.05) else -1
             if 0 < u < 1:
                 cx = tx0 - 160 + (tx1 - tx0 + 320) * ease(u)
                 xs = Image.linear_gradient("L").rotate(90).resize((W, H))
