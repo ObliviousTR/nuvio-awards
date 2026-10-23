@@ -14,6 +14,7 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           FANART_API_KEY: ${{ secrets.FANART_API_KEY }}
           MDBLIST_API_KEY: ${{ secrets.MDBLIST_API_KEY }}
+          AIOMETADATA_URL: ${{ secrets.AIOMETADATA_URL }}
         run: python3 scripts/_scratch.py
       - run: |
           git config user.name "github-actions[bot]"
