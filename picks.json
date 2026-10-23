@@ -1,0 +1,201 @@
+{
+ "date": "2026-10-23",
+ "picks": {
+  "Action & Adventure": [
+   [
+    353081,
+    "Mission: Impossible - Fallout"
+   ],
+   [
+    280,
+    "Terminator 2: Judgment Day"
+   ],
+   [
+    24,
+    "Kill Bill: Vol. 1"
+   ]
+  ],
+  "Sci-Fi & Fantasy": [
+   [
+    19995,
+    "Avatar"
+   ],
+   [
+    105,
+    "Back to the Future"
+   ],
+   [
+    693134,
+    "Dune: Part Two"
+   ]
+  ],
+  "Comedy": [
+   [
+    8467,
+    "Dumb and Dumber"
+   ],
+   [
+    8699,
+    "Anchorman: The Legend of Ron Burgundy"
+   ],
+   [
+    115,
+    "The Big Lebowski"
+   ]
+  ],
+  "Animation": [
+   [
+    150540,
+    "Inside Out"
+   ],
+   [
+    109445,
+    "Frozen"
+   ],
+   [
+    808,
+    "Shrek"
+   ]
+  ],
+  "Drama": [
+   [
+    14,
+    "American Beauty"
+   ],
+   [
+    376867,
+    "Moonlight"
+   ],
+   [
+    13,
+    "Forrest Gump"
+   ]
+  ],
+  "Crime": [
+   [
+    475557,
+    "Joker"
+   ],
+   [
+    103,
+    "Taxi Driver"
+   ],
+   [
+    680,
+    "Pulp Fiction"
+   ]
+  ],
+  "Horror": [
+   [
+    377,
+    "A Nightmare on Elm Street"
+   ],
+   [
+    138843,
+    "The Conjuring"
+   ],
+   [
+    346364,
+    "It"
+   ]
+  ],
+  "Mystery & Thriller": [
+   [
+    1949,
+    "Zodiac"
+   ],
+   [
+    567,
+    "Rear Window"
+   ],
+   [
+    807,
+    "Se7en"
+   ]
+  ],
+  "Romance & Rom-Com": [
+   [
+    88,
+    "Dirty Dancing"
+   ],
+   [
+    289,
+    "Casablanca"
+   ],
+   [
+    597,
+    "Titanic"
+   ]
+  ],
+  "Superhero": [
+   [
+    24428,
+    "The Avengers"
+   ],
+   [
+    297762,
+    "Wonder Woman"
+   ],
+   [
+    557,
+    "Spider-Man"
+   ]
+  ],
+  "Martial Arts": [
+   [
+    9316,
+    "Ong-Bak"
+   ],
+   [
+    1885,
+    "The Karate Kid"
+   ],
+   [
+    9461,
+    "Enter the Dragon"
+   ]
+  ],
+  "History & War": [
+   [
+    16869,
+    "Inglourious Basterds"
+   ],
+   [
+    855,
+    "Black Hawk Down"
+   ],
+   [
+    28,
+    "Apocalypse Now"
+   ]
+  ],
+  "Western": [
+   [
+    273248,
+    "The Hateful Eight"
+   ],
+   [
+    642,
+    "Butch Cassidy and the Sundance Kid"
+   ],
+   [
+    335,
+    "Once Upon a Time in the West"
+   ]
+  ],
+  "Stand-Up Comedy": [
+   [
+    18128,
+    "Chris Rock: Bring the Pain"
+   ],
+   [
+    13643,
+    "George Carlin: It's Bad for Ya!"
+   ],
+   [
+    15251,
+    "Eddie Murphy: Delirious"
+   ]
+  ]
+ }
+}
