@@ -5,10 +5,10 @@ away from the delta, faster and faster, into warp streaks; a flash as the ship j
 a light sweep runs over the chrome; then the streaks slow and shrink back into stars, the flare goes down and the card
 is the cover again. The logo never leaves the screen. First frame = last frame = cover: the starfield travels a whole
 number of depth cycles over the loop.
-The letters are the TOS wordmark on TMDB (Star Trek, 1966) set upright; the delta is drawn here; both get the same
-chrome (a bevel from the shape's distance field, lit, with a horizon band reflected in it).
+The letters are cut from the Star Trek 50 logo (trekcore.com, 2015), the delta's outline too (made symmetric); the
+delta is rendered here as the blue glass delta with the gold star of the 2016 franchise logo.
 usage: python3 art_tools/startrek_delta.py SRC_DIR OUT_DIR [--frames a,b] [--scale s] [--mp4 path]
-  SRC_DIR: wordmark.png, Antonio.ttf
+  SRC_DIR: letters.png (RGBA), delta_mask.png (same frame), Antonio.ttf
 """
 import math, os, sys
 import numpy as np
@@ -82,38 +82,39 @@ class Scene:
     def __init__(self, src, sc=1.0):
         self.sc = sc
         W, H = self.W, self.H = round(1280 * sc), round(720 * sc)
-        # the wordmark, set upright, split into STAR and TREK
-        wm = np.asarray(Image.open(os.path.join(src, "wordmark.png")).convert("RGBA"), np.float32)[..., 3] / 255
-        pad = 80; wm = np.pad(wm, ((0, 0), (pad, pad)))
-        hh, ww = wm.shape
-        wm = cv2.warpAffine(wm, np.array([[1, 0.22, -0.22 * hh], [0, 1, 0]], np.float32), (ww, hh), flags=cv2.INTER_CUBIC)
-        cols = np.nonzero(wm.max(0) > 0.5)[0]
-        gaps = [(cols[i], cols[i + 1]) for i in range(len(cols) - 1) if cols[i + 1] - cols[i] > 15]
-        g0, g1 = max(gaps, key=lambda g: g[1] - g[0])
-        star = wm[:, cols[0]:g0 + 1]; trek = wm[:, g1:cols[-1] + 1]
-        LH = round(128 * sc)
-        rs = lambda m: cv2.resize(m, (max(1, round(m.shape[1] * LH / m.shape[0])), LH), interpolation=cv2.INTER_AREA)
-        star, trek = rs(star), rs(trek)
-        DH = round(236 * sc)
-        delta = delta_mask(DH)
-        gap = round(16 * sc)
-        total = star.shape[1] + gap + delta.shape[1] + gap + trek.shape[1]
-        x0 = (W - total) // 2; cy = round(300 * sc)
-        self.mask = np.zeros((H, W), np.float32); self.lum = np.zeros((H, W), np.float32)
-
-        def put(m, x, y, bevel):
-            h, w = m.shape; y = int(y); x = int(x)
-            self.mask[y:y + h, x:x + w] = np.maximum(self.mask[y:y + h, x:x + w], m)
-            self.lum[y:y + h, x:x + w] = np.where(m > 0.01, chrome(m, bevel), self.lum[y:y + h, x:x + w])
-        put(star, x0, cy - LH / 2, 5 * sc)
-        dx = x0 + star.shape[1] + gap
-        put(delta, dx, cy - DH / 2 + 8 * sc, 6 * sc)
-        put(trek, dx + delta.shape[1] + gap, cy - LH / 2, 5 * sc)
-        self.dcx, self.dcy = dx + delta.shape[1] / 2, cy + 8 * sc
-        self.dmask = np.zeros((H, W), np.float32)
-        self.dmask[int(cy - DH / 2 + 8 * sc):int(cy - DH / 2 + 8 * sc) + DH, int(dx):int(dx) + delta.shape[1]] = delta
-        self.l0, self.l1 = x0, x0 + total
-        self.bot = cy + DH / 2 + 8 * sc
+        # the franchise logo: the STAR TREK letters of the Trek 50 logo (brushed white, outlined) and its delta's outline,
+        # which is drawn here as the blue glass delta with the gold star of the 2016 franchise logo
+        let = np.asarray(Image.open(os.path.join(src, "letters.png")).convert("RGBA"), np.float32) / 255
+        dm = np.asarray(Image.open(os.path.join(src, "delta_mask.png")).convert("L"), np.float32) / 255
+        k = 900 * sc / let.shape[1]
+        lw, lh = round(let.shape[1] * k), round(let.shape[0] * k)
+        let = cv2.resize(let, (lw, lh), interpolation=cv2.INTER_AREA); dm = cv2.resize(dm, (lw, lh), interpolation=cv2.INTER_AREA)
+        x0 = (W - lw) // 2; y0 = round(300 * sc) - lh // 2
+        self.let_rgb = np.zeros((H, W, 3), np.float32); self.let_a = np.zeros((H, W), np.float32); self.dmask = np.zeros((H, W), np.float32)
+        g = let[..., :3] @ np.array([0.3, 0.5, 0.2], np.float32)                   # desaturate (no sky in the fringes)
+        self.let_rgb[y0:y0 + lh, x0:x0 + lw] = (g[..., None] * np.array([0.97, 0.99, 1.03], np.float32)) * 255
+        self.let_a[y0:y0 + lh, x0:x0 + lw] = let[..., 3]
+        self.dmask[y0:y0 + lh, x0:x0 + lw] = dm
+        ys, xs = np.nonzero(self.dmask > 0.5)
+        top, bot = ys.min(), ys.max()
+        self.dcx = float(xs[ys < top + 4].mean()); self.dtop, self.dbot = top, bot
+        self.dcy = top + (bot - top) * 0.42
+        self.l0, self.l1 = x0, x0 + lw
+        self.bot = max(bot, y0 + lh * 0.75)
+        # inside the glass: distance from its edge, and the gold star
+        dmb = (self.dmask > 0.5).astype(np.uint8)
+        self.ddist = cv2.distanceTransform(dmb, cv2.DIST_L2, 5)
+        dh = bot - top
+        star = Image.new("L", (W * 4, H * 4), 0); d = ImageDraw.Draw(star)
+        c0 = np.array([self.dcx, top + dh * 0.44])
+        tips = [c0 + (0, -dh * 0.13), c0 + (dh * 0.085, 0), c0 + (0, dh * 0.21), c0 + (-dh * 0.085, 0)]
+        pts = []
+        for i in range(4):
+            p0, p1 = tips[i], tips[(i + 1) % 4]
+            pts.append(bez(p0, c0 + (p0 + p1 - 2 * c0) * 0.06, p1, 30))
+        d.polygon([(x * 4, y * 4) for x, y in np.vstack(pts)], fill=255)
+        self.star = np.asarray(star.resize((W, H), Image.LANCZOS), np.float32) / 255
+        self.star_lum = chrome(self.star, 3 * sc)
         # THE COLLECTION
         f = ImageFont.truetype(os.path.join(src, "Antonio.ttf"), round(24 * sc) * 2)
         try:
@@ -126,7 +127,7 @@ class Scene:
         for c in txt:
             d.text((x, round(24 * sc) * 3), c, font=f, fill=255, anchor="ls"); x += f.getlength(c) + tr
         m = m.crop(m.getbbox()); m = m.resize((m.width // 2, m.height // 2), Image.LANCZOS)
-        self.sub = m; self.suby = round(self.bot + 26 * sc)
+        self.sub = m; self.suby = round(self.bot + 22 * sc)
         # stars: a 3-D field flying out of the delta
         r = np.random.default_rng(7)
         n = 900
@@ -179,23 +180,30 @@ class Scene:
         glow = np.exp(-(dx * dx + dy * dy) / (2 * (90 * sc) ** 2))
         line = np.exp(-(dy / (2.2 * sc)) ** 2) * np.exp(-np.abs(dx) / (520 * sc))
         halo = np.exp(-(dy / (18 * sc)) ** 2) * np.exp(-np.abs(dx) / (300 * sc))
-        fl = flare * (0.75 + 0.25 * math.sin(k * 0.5) * math.sin(k * 0.17)) + 1.4 * jump
+        fl = 0.18 + flare * (0.75 + 0.25 * math.sin(k * 0.5) * math.sin(k * 0.17)) + 1.2 * jump
         img += (glow * fl)[..., None] * np.array([70, 120, 210], np.float32)
         img += (halo * fl * 0.6)[..., None] * np.array([90, 150, 255], np.float32)
         img += (line * fl)[..., None] * np.array([210, 235, 255], np.float32)
-        img += (jump * 70 * np.exp(-(dx * dx + dy * dy) / (2 * (420 * sc) ** 2)))[..., None]
-        # the logo in chrome, lit by the flare from behind and swept by a light
-        lum = self.lum.copy()
+        img += (jump * 40 * np.exp(-(dx * dx + dy * dy) / (2 * (300 * sc) ** 2)))[..., None]
+        # the delta: blue glass, lit from behind by the flare, a bright rim and a second line just inside it
+        dd = self.ddist; dm = self.dmask[..., None]
+        yrel = np.clip((self.yy - self.dtop) / max(1, self.dbot - self.dtop), 0, 1)
+        body = (np.array([18, 52, 120], np.float32) * (1.25 - 0.6 * yrel)[..., None]) * (1 + 1.6 * glow[..., None] * fl)
+        rim = np.exp(-dd / (2.2 * sc)) + 0.45 * np.exp(-((dd - 11 * sc) / (1.4 * sc)) ** 2)
+        body += (rim * (0.55 + 0.6 * flare + jump))[..., None] * np.array([120, 200, 255], np.float32)
+        img = img * (1 - dm * 0.82) + body * dm * 0.82 + (rim * dm[..., 0])[..., None] * 0
+        # the gold star
+        st_ = self.star[..., None]
+        gold = (self.star_lum * (1 + 0.4 * flare + 0.6 * jump))[..., None] * np.array([250, 196, 105], np.float32)
+        img = img * (1 - st_) + gold * st_
+        # the letters, brushed white; the flare warms their inner edges, a light sweeps over them
+        lit = 1 + 0.2 * flare * np.exp(-np.abs(dx) / (360 * sc)) + 0.15 * jump
+        col = self.let_rgb * lit[..., None]
         sw = seg(k, T_SWEEP)
         if 0 < sw < 1:
             sx = self.l0 - 120 * sc + (self.l1 - self.l0 + 240 * sc) * sw
-            lum += 0.6 * np.exp(-(((self.xx - sx) + (self.yy - self.dcy) * 0.35) / (26 * sc)) ** 2)
-        lit = 1 + 0.35 * flare * np.exp(-np.abs(dx) / (400 * sc)) + 0.6 * jump
-        tint = np.clip((self.yy - (self.dcy - 10 * sc)) / (80 * sc), 0, 1)[..., None]          # the lower half reflects the blue of space
-        col = (lum * lit)[..., None] * (np.array([0.97, 0.99, 1.03], np.float32) * (1 - tint) + np.array([0.78, 0.88, 1.05], np.float32) * tint) * 245
-        rim = cv2.GaussianBlur(self.dmask, (0, 0), 2 * sc) - self.dmask
-        img += (np.clip(rim, 0, 1) * (flare * 0.8 + jump))[..., None] * np.array([150, 200, 255], np.float32) * 2.5
-        a = self.mask[..., None]
+            col = col + (80 * np.exp(-(((self.xx - sx) + (self.yy - self.dcy) * 0.35) / (24 * sc)) ** 2))[..., None]
+        a = self.let_a[..., None]
         img = img * (1 - a) + col * a
         # a thin line of the flare also crosses in front, faintly
         img += (line * fl * 0.25)[..., None] * np.array([210, 235, 255], np.float32)
