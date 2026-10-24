@@ -95,7 +95,7 @@ class Scene:
             put(self.white, t2 * 0.82, (W - t2.shape[1]) / 2, y1 + t1.shape[0] + round(24 * sc))
             self.sweep_mask = np.maximum(self.red, self.white * 0.4)
         else:
-            big = text_mask("CINEMATIC UNIVERSE", osw, 600, round(118 * sc), round(1 * sc))
+            big = text_mask("CINEMATIC UNIVERSE", osw, 700, round(116 * sc), round(1 * sc))
             bw, bh = big.shape[1], big.shape[0]
             bx, by = (W - bw) / 2, round(330 * sc) - bh / 2
             put(self.fill, big, bx, by)
@@ -142,7 +142,9 @@ class Scene:
     def page(self, i):
         if i < 0 or i >= len(self.stills):
             return None
-        return self.stills[i].astype(np.float32) * 0.92
+        x = self.stills[i].astype(np.float32) / 255
+        x = np.clip((x - 0.45) * 1.22 + 0.52, 0, 1) ** 0.9            # a little lift and contrast so they read in thin letters
+        return x * 255
 
     def frame(self, k):
         W, H, sc = self.W, self.H, self.sc
