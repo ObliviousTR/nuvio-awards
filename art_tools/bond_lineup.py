@@ -150,7 +150,7 @@ def camera_path(lu):
     for i, f in enumerate(lu.figs):
         t += 20 if i == 0 else 16                        # move in / across
         keys.append((t, Z, f["x"] / S, cy, i))
-        t += 26                                          # stay with him
+        t += 15                                          # stay with him
         keys.append((t, Z, f["x"] / S, cy, i))
     t += 26                                              # pull back out
     keys.append((t, 1.0, W / 2, H / 2, None))
