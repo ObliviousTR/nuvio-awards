@@ -1,35 +1,19 @@
-import os, json, urllib.request, io, zipfile
-OUT = "refs/me"; os.makedirs(OUT + "/fonts", exist_ok=True); os.makedirs(OUT + "/img", exist_ok=True)
-UA = {"User-Agent": "Mozilla/5.0"}
-def get(u):
-    return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=120).read()
-log = []
-for name, u in {"alcarin": "https://codeload.github.com/Tosche/Alcarin-Tengwar/zip/refs/heads/main",
-                "alcarin_master": "https://codeload.github.com/Tosche/Alcarin-Tengwar/zip/refs/heads/master",
-                "ringbearer": "https://dl.dafont.com/dl/?f=ringbearer", "aniron": "https://dl.dafont.com/dl/?f=aniron",
-                "annatar": "https://dl.dafont.com/dl/?f=tengwar_annatar"}.items():
-    try:
-        z = zipfile.ZipFile(io.BytesIO(get(u)))
-        for n in z.namelist():
-            if n.lower().endswith((".ttf", ".otf")) or "licen" in n.lower() or "ofl" in n.lower() or n.lower().endswith(".txt"):
-                if "/sources/" in n.lower(): continue
-                open(f"{OUT}/fonts/{name}__{os.path.basename(n)}", "wb").write(z.read(n))
-        log.append(f"{name}: ok {len(z.namelist())}")
-    except Exception as e:
-        log.append(f"{name}: {e}")
+import os, json, urllib.request
+OUT = "refs/mcu"; os.makedirs(OUT, exist_ok=True)
 K = os.environ["TMDB_API_KEY"]
-def tm(p):
-    return json.loads(get(f"https://api.themoviedb.org/3{p}{'&' if '?' in p else '?'}api_key={K}"))
-for kind, i in [("movie", 120), ("movie", 121), ("movie", 122), ("movie", 49051), ("movie", 57158), ("movie", 122917), ("tv", 84773), ("movie", 839033)]:
+def get(u):
+    return urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=120).read()
+IDS = [1726, 1724, 10138, 10195, 1771, 24428, 68721, 76338, 100402, 118340, 99861, 102899, 271110, 284052, 283995, 315635,
+       284053, 284054, 299536, 363088, 299537, 299534, 429617, 497698, 566525, 524434, 634649, 453395, 616037, 505642,
+       640146, 447365, 609681, 533535, 822119, 986056, 617126]
+log = []
+for i in IDS:
     try:
-        im = tm(f"/{kind}/{i}/images?include_image_language=en,null")
-        for j, b in enumerate(sorted(im["backdrops"], key=lambda x: -x["vote_count"])[:8]):
-            if b.get("iso_639_1"): continue
-            open(f"{OUT}/img/{kind}{i}_bd{j}.jpg", "wb").write(get("https://image.tmdb.org/t/p/w1280" + b["file_path"]))
-        for j, b in enumerate([l for l in im["logos"] if l.get("iso_639_1") == "en"][:3]):
-            open(f"{OUT}/img/{kind}{i}_logo{j}.png", "wb").write(get("https://image.tmdb.org/t/p/original" + b["file_path"]))
-        log.append(f"{kind}{i}: ok")
+        im = json.loads(get(f"https://api.themoviedb.org/3/movie/{i}/images?include_image_language=null&api_key={K}"))
+        bds = sorted([b for b in im["backdrops"] if not b.get("iso_639_1")], key=lambda x: -x["vote_average"] * 10 - x["vote_count"])[:3]
+        for j, b in enumerate(bds):
+            open(f"{OUT}/{i}_{j}.jpg", "wb").write(get("https://image.tmdb.org/t/p/w1280" + b["file_path"]))
+        log.append(f"{i}: {len(bds)}")
     except Exception as e:
-        log.append(f"{kind}{i}: {e}")
-open(OUT + "/log.txt", "w").write("\n".join(log))
-print("\n".join(log))
+        log.append(f"{i}: {e}")
+open(OUT + "/log.txt", "w").write("\n".join(log)); print("\n".join(log))
