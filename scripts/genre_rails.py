@@ -71,7 +71,8 @@ KEYMAP = {"voteCountGte": "vote_count.gte", "withGenres": "with_genres", "withou
           "withOriginCountry": "with_origin_country", "withWatchProviders": "with_watch_providers",
           "watchRegion": "watch_region", "withCompanies": "with_companies", "withNetworks": "with_networks",
           "voteAverageGte": "vote_average.gte", "withRuntimeGte": "with_runtime.gte",
-          "withoutKeywords": "without_keywords", "voteCountLte": "vote_count.lte"}
+          "withoutKeywords": "without_keywords", "voteCountLte": "vote_count.lte", "withStatus": "with_status",
+          "withWatchMonetizationTypes": "with_watch_monetization_types"}
 
 
 class GenreCache:
@@ -155,6 +156,9 @@ def params_of(r):
         q["primary_release_date.lte" if kind == "movie" else "first_air_date.lte"] = f["releaseDateLte"]
     if r.get("sort"):
         q["sort_by"] = r["sort"]
+    today = dt.date.today().isoformat()
+    if f.get("airedByToday") or (r.get("rule") is False and str(r.get("sort") or "").endswith("date.desc")):
+        q.setdefault("primary_release_date.lte" if kind == "movie" else "first_air_date.lte", today)   # nothing unreleased
     if q.get("with_genres") and q.get("without_genres"):
         want = set(re.split(r"[|,]", q["with_genres"]))
         q["without_genres"] = "|".join(g for g in q["without_genres"].split("|") if g not in want)
@@ -373,6 +377,8 @@ def main():
                                {"name": "skip", "isRequired": False}]})
         report.append(f"\n## {r['name']} ({typ}) - {len(items)} kept of {seen} looked at")
         top = sorted(dropped, key=lambda x: -(x.get("vote_count") or 0))[:25]
+        if not r["filters"].get("withGenres"):     # a Turkish rail served as is (no genre rule)
+            continue
         lead = set(int(t) for t in re.split(r"[|,]", r["filters"]["withGenres"]))
         doubt = [x for x in items if (G.get(kind, x["tmdb"]) or [0])[0] not in lead][:15] if items and "tmdb" in items[0] else []
         report += [f"- kept (not its first genre): {x['name']} ({x['year']}) - {names(kind, G.get(kind, x['tmdb']))}" for x in doubt]

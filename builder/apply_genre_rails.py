@@ -15,6 +15,16 @@ DEFS = "/home/claude/nuvio-awards/library/genre_rails.json"
 # left out of one genre there still sits in the rail of its own (first) genre, and the platform's Popular / New / Top
 # Rated rails (no genre filter) stay live TMDB rails.
 ROWS = {"Genres", "Moods & Vibes", "Kids & Family", "Streaming Services"}
+# Turkish rails, in any row, are served by the Library too - same TMDB query, no genre rule - so that Turkish titles show
+# their own names (Nuvio's own TMDB rails always use the app language, English): rails filtered to Turkish productions
+# and every TMDB rail of the Turkish platforms.
+TR_FOLDERS = {"Exxen", "GAİN", "tabii"}
+
+
+def turkish(f, s):
+    fl = s.get("filters") or {}
+    return s.get("provider") == "tmdb" and s.get("tmdbSourceType") in ("DISCOVER", "NETWORK") and (
+        f["title"] in TR_FOLDERS or str(fl.get("withOriginCountry", "")).upper() == "TR" or fl.get("withOriginalLanguage") == "tr")
 
 
 def slug(s):
@@ -33,15 +43,31 @@ def published():
 def main(src, dst):
     data = load(src)
     live = published()
-    defs, n = [], 0
+    defs, n, t = [], 0, 0
     for row in data:
         for f in row.get("folders", []):
-            if row["title"] not in ROWS:
-                continue
             new = []
             for s in f["sources"]:
                 fl = s.get("filters") or {}
-                if s.get("provider") == "tmdb" and s.get("tmdbSourceType") == "DISCOVER" and fl.get("withGenres"):
+                tr = turkish(f, s) and not (row["title"] in ROWS and s.get("tmdbSourceType") == "DISCOVER" and fl.get("withGenres"))
+                if tr:
+                    cid = f"gen-{slug(row['title'])}-{slug(f['title'])}-{slug(s['title'])}"
+                    q = dict(fl)   # the same query Nuvio itself sends for the rail
+                    if s.get("tmdbSourceType") == "NETWORK" and s.get("tmdbId"):
+                        q.update(withNetworks=str(s["tmdbId"]), withStatus="0|3|4", airedByToday=True)
+                    if q.get("withWatchProviders"):
+                        q.setdefault("watchRegion", "US")
+                        q["withWatchMonetizationTypes"] = "flatrate|free|ads|rent|buy"
+                    defs.append({"id": cid, "name": f"{f['title']} · {s['title']}", "media": s["mediaType"],
+                                 "sort": s.get("sortBy"), "filters": q, "limit": 300, "rule": False})
+                    if cid not in live:
+                        new.append(s)
+                        continue
+                    a = addon_src(s["title"], s["mediaType"], cid, addon_id=LIB)
+                    a["genre"] = None
+                    new.append(a)
+                    t += 1
+                elif row["title"] in ROWS and s.get("provider") == "tmdb" and s.get("tmdbSourceType") == "DISCOVER" and fl.get("withGenres"):
                     cid = f"gen-{slug(row['title'])}-{slug(f['title'])}-{slug(s['title'])}"
                     defs.append({"id": cid, "name": f"{f['title']} · {s['title']}", "media": s["mediaType"],
                                  "sort": s.get("sortBy"), "filters": fl,
@@ -70,7 +96,8 @@ def main(src, dst):
     print(f"mdblist: {m} rails now from the Library's own copies")
     json.dump(defs, open(DEFS, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     save(data, dst)
-    print(f"genre rails: {n} rails now genre-true ({', '.join(sorted(ROWS))})")
+    print(f"genre rails: {n} rails now genre-true ({', '.join(sorted(ROWS))}); Turkish rails from the Library: {t} "
+          f"of {sum(1 for d in defs if d.get('rule') is False)}")
 
 
 if __name__ == "__main__":

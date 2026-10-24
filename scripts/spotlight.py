@@ -532,8 +532,23 @@ def build_rotating(slot, pool, state, today, period, log, force_next=False, forc
 
 
 # ---------------------------------------------------------------- output
+_TR = None
+
+
+def tr_name(typ, imdb):
+    """Turkish productions keep their own name (trmeta/map.json, built daily by scripts/tr_titles.py)."""
+    global _TR
+    if _TR is None:
+        try:
+            _TR = json.load(open(os.path.join(ROOT, "trmeta", "map.json"), encoding="utf-8"))["items"]
+        except Exception:
+            _TR = {}
+    e = _TR.get(f"{typ}|{imdb}")
+    return e[0] if e and e[0] else None
+
+
 def meta(x, typ):
-    return {"id": x["imdb"], "type": typ, "name": x["name"], "releaseInfo": x["year"],
+    return {"id": x["imdb"], "type": typ, "name": tr_name(typ, x["imdb"]) or x["name"], "releaseInfo": x["year"],
             "poster": f"https://images.metahub.space/poster/medium/{x['imdb']}/img", "posterShape": "poster"}
 
 

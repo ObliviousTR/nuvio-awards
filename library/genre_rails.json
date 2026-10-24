@@ -1,5 +1,36 @@
 [
  {
+  "id": "gen-streaming-services-netflix-t-rk-filmleri-netflix-tr",
+  "name": "Netflix · Türk Filmleri · Netflix TR",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "8|1796",
+   "watchRegion": "TR",
+   "withOriginCountry": "TR",
+   "voteCountGte": 5,
+   "withoutGenres": "16",
+   "withWatchMonetizationTypes": "flatrate|free|ads|rent|buy"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-netflix-t-rk-dizileri-netflix-original",
+  "name": "Netflix · Türk Dizileri · Netflix Original",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withOriginCountry": "TR",
+   "withoutGenres": "10763|10767|10766|16",
+   "withNetworks": "213",
+   "withStatus": "0|3|4",
+   "airedByToday": true
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
   "id": "gen-streaming-services-netflix-action-adventure-movies",
   "name": "Netflix · Action & Adventure Movies",
   "media": "MOVIE",
@@ -437,6 +468,35 @@
    "withoutGenres": "10763|10767|10766|16"
   },
   "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-t-rk-dizileri-hbo-max-blutv",
+  "name": "HBO Max · Türk Dizileri · HBO Max & BluTV",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withNetworks": "1747|6783|8304",
+   "withOriginCountry": "TR",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-hbo-max-t-rk-filmleri-hbo-max-tr",
+  "name": "HBO Max · Türk Filmleri · HBO Max TR",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "withWatchProviders": "1899",
+   "watchRegion": "TR",
+   "withOriginCountry": "TR",
+   "voteCountGte": 5,
+   "withoutGenres": "16",
+   "withWatchMonetizationTypes": "flatrate|free|ads|rent|buy"
+  },
+  "limit": 300,
+  "rule": false
  },
  {
   "id": "gen-streaming-services-hbo-max-action-adventure-movies",
@@ -3449,6 +3509,43 @@
   "limit": 300
  },
  {
+  "id": "gen-streaming-services-exxen-popular-exxen-originals",
+  "name": "Exxen · Popular Exxen Originals",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withNetworks": "4405",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-exxen-new-on-exxen",
+  "name": "Exxen · New on Exxen",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "withNetworks": "4405",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-exxen-top-rated-exxen-originals",
+  "name": "Exxen · Top Rated Exxen Originals",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 3,
+   "withNetworks": "4405",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
   "id": "gen-streaming-services-exxen-comedy-series",
   "name": "Exxen · Comedy Series",
   "media": "TV",
@@ -3459,6 +3556,43 @@
    "withoutGenres": "10763|10767|10766|16"
   },
   "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-gai-n-popular-gai-n-originals",
+  "name": "GAİN · Popular GAİN Originals",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withNetworks": "4409",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-gai-n-new-on-gai-n",
+  "name": "GAİN · New on GAİN",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "withNetworks": "4409",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-gai-n-top-rated-gai-n-originals",
+  "name": "GAİN · Top Rated GAİN Originals",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 3,
+   "withNetworks": "4409",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
  },
  {
   "id": "gen-streaming-services-gai-n-comedy-series",
@@ -3495,6 +3629,68 @@
    "withoutGenres": "10763|10767|10766|16"
   },
   "limit": 300
+ },
+ {
+  "id": "gen-streaming-services-tabii-popular-tabii-originals",
+  "name": "tabii · Popular tabii Originals",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withNetworks": "6854",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-tabii-new-on-tabii",
+  "name": "tabii · New on tabii",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "withNetworks": "6854",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-tabii-top-rated-tabii-originals",
+  "name": "tabii · Top Rated tabii Originals",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 3,
+   "withNetworks": "6854",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-tabii-popular-trt-series",
+  "name": "tabii · Popular TRT Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "withNetworks": "869",
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-streaming-services-tabii-top-rated-trt-series",
+  "name": "tabii · Top Rated TRT Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "withNetworks": "869",
+   "voteCountGte": 5,
+   "withoutGenres": "10763|10767|10766|16"
+  },
+  "limit": 300,
+  "rule": false
  },
  {
   "id": "gen-genres-action-adventure-new-movies",
@@ -6451,6 +6647,140 @@
    "withoutGenres": "16"
   },
   "limit": 500
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-popular-turkish-movies",
+  "name": "Türkiye · Popular Turkish Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 15,
+   "withoutGenres": "16|99",
+   "withOriginalLanguage": "tr"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-popular-turkish-series-dramas",
+  "name": "Türkiye · Popular Turkish Series & Dramas",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 10,
+   "withoutGenres": "16|99|10764|10763|10767|10766",
+   "withOriginalLanguage": "tr"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-top-rated-acclaimed-turkish-movies",
+  "name": "Türkiye · Top Rated & Acclaimed Turkish Movies",
+  "media": "MOVIE",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 100,
+   "withoutGenres": "16|99",
+   "withOriginalLanguage": "tr"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-top-rated-acclaimed-turkish-series",
+  "name": "Türkiye · Top Rated & Acclaimed Turkish Series",
+  "media": "TV",
+  "sort": "vote_average.desc",
+  "filters": {
+   "voteCountGte": 30,
+   "withoutGenres": "16|99|10764|10763|10767|10766",
+   "withOriginalLanguage": "tr"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-recent-new-turkish-movies",
+  "name": "Türkiye · Recent & New Turkish Movies",
+  "media": "MOVIE",
+  "sort": "primary_release_date.desc",
+  "filters": {
+   "voteCountGte": 3,
+   "withoutGenres": "16|99",
+   "withOriginalLanguage": "tr"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-recent-new-turkish-series",
+  "name": "Türkiye · Recent & New Turkish Series",
+  "media": "TV",
+  "sort": "first_air_date.desc",
+  "filters": {
+   "voteCountGte": 2,
+   "withoutGenres": "16|99|10764|10763|10767|10766",
+   "withOriginalLanguage": "tr"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-turkish-action-crime-thrillers-movies",
+  "name": "Türkiye · Turkish Action, Crime & Thrillers · Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 15,
+   "withoutGenres": "16|99",
+   "withOriginalLanguage": "tr",
+   "withGenres": "28|80|53"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-turkish-action-crime-thrillers-series",
+  "name": "Türkiye · Turkish Action, Crime & Thrillers · Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 5,
+   "withoutGenres": "16|99|10764|10763|10767|10766",
+   "withOriginalLanguage": "tr",
+   "withGenres": "10759|80|9648"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-turkish-drama-romance-comedy-hits-movies",
+  "name": "Türkiye · Turkish Drama, Romance & Comedy Hits · Movies",
+  "media": "MOVIE",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 15,
+   "withoutGenres": "16|99",
+   "withOriginalLanguage": "tr",
+   "withGenres": "18|10749|35"
+  },
+  "limit": 300,
+  "rule": false
+ },
+ {
+  "id": "gen-international-cinema-t-rkiye-turkish-drama-romance-comedy-hits-series",
+  "name": "Türkiye · Turkish Drama, Romance & Comedy Hits · Series",
+  "media": "TV",
+  "sort": "popularity.desc",
+  "filters": {
+   "voteCountGte": 5,
+   "withoutGenres": "16|99|10764|10763|10767|10766",
+   "withOriginalLanguage": "tr",
+   "withGenres": "18|35"
+  },
+  "limit": 300,
+  "rule": false
  },
  {
   "id": "gen-kids-family-discover-family-popular-family-movies",
