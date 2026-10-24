@@ -1,6 +1,6 @@
 {
  "id": "community.oblivioustr.nuvio-library",
- "version": "1.0.20261023",
+ "version": "1.0.20261024",
  "name": "Nuvio Library",
  "description": "Film universes & franchises, collection folders, iconic actors and legendary directors, rebuilt weekly from TMDB.",
  "resources": [
@@ -10879,6 +10879,44 @@
   },
   {
    "type": "movie",
+   "id": "gen-streaming-services-netflix-t-rk-filmleri-netflix-tr",
+   "name": "Netflix · Türk Filmleri · Netflix TR",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-netflix-t-rk-dizileri-netflix-original",
+   "name": "Netflix · Türk Dizileri · Netflix Original",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
    "id": "gen-streaming-services-netflix-action-adventure-movies",
    "name": "Netflix · Action & Adventure Movies",
    "extra": [
@@ -11451,6 +11489,44 @@
    "type": "series",
    "id": "gen-streaming-services-netflix-western-series",
    "name": "Netflix · Western Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-hbo-max-t-rk-dizileri-hbo-max-blutv",
+   "name": "HBO Max · Türk Dizileri · HBO Max & BluTV",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-streaming-services-hbo-max-t-rk-filmleri-hbo-max-tr",
+   "name": "HBO Max · Türk Filmleri · HBO Max TR",
    "extra": [
     {
      "name": "search",
@@ -15325,8 +15401,122 @@
   },
   {
    "type": "series",
+   "id": "gen-streaming-services-exxen-popular-exxen-originals",
+   "name": "Exxen · Popular Exxen Originals",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-exxen-new-on-exxen",
+   "name": "Exxen · New on Exxen",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-exxen-top-rated-exxen-originals",
+   "name": "Exxen · Top Rated Exxen Originals",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
    "id": "gen-streaming-services-exxen-comedy-series",
    "name": "Exxen · Comedy Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-gai-n-popular-gai-n-originals",
+   "name": "GAİN · Popular GAİN Originals",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-gai-n-new-on-gai-n",
+   "name": "GAİN · New on GAİN",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-gai-n-top-rated-gai-n-originals",
+   "name": "GAİN · Top Rated GAİN Originals",
    "extra": [
     {
      "name": "search",
@@ -15384,6 +15574,101 @@
    "type": "series",
    "id": "gen-streaming-services-gai-n-crime-mystery-series",
    "name": "GAİN · Crime & Mystery Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-tabii-popular-tabii-originals",
+   "name": "tabii · Popular tabii Originals",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-tabii-new-on-tabii",
+   "name": "tabii · New on tabii",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-tabii-top-rated-tabii-originals",
+   "name": "tabii · Top Rated tabii Originals",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-tabii-popular-trt-series",
+   "name": "tabii · Popular TRT Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-streaming-services-tabii-top-rated-trt-series",
+   "name": "tabii · Top Rated TRT Series",
    "extra": [
     {
      "name": "search",
@@ -19621,6 +19906,196 @@
    "type": "movie",
    "id": "gen-moods-vibes-spooky-creepy-international-hits-movies",
    "name": "Spooky & Creepy · International Hits Movies",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-international-cinema-t-rkiye-popular-turkish-movies",
+   "name": "Türkiye · Popular Turkish Movies",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-international-cinema-t-rkiye-popular-turkish-series-dramas",
+   "name": "Türkiye · Popular Turkish Series & Dramas",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-international-cinema-t-rkiye-top-rated-acclaimed-turkish-movies",
+   "name": "Türkiye · Top Rated & Acclaimed Turkish Movies",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-international-cinema-t-rkiye-top-rated-acclaimed-turkish-series",
+   "name": "Türkiye · Top Rated & Acclaimed Turkish Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-international-cinema-t-rkiye-recent-new-turkish-movies",
+   "name": "Türkiye · Recent & New Turkish Movies",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-international-cinema-t-rkiye-recent-new-turkish-series",
+   "name": "Türkiye · Recent & New Turkish Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-international-cinema-t-rkiye-turkish-action-crime-thrillers-movies",
+   "name": "Türkiye · Turkish Action, Crime & Thrillers · Movies",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-international-cinema-t-rkiye-turkish-action-crime-thrillers-series",
+   "name": "Türkiye · Turkish Action, Crime & Thrillers · Series",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "movie",
+   "id": "gen-international-cinema-t-rkiye-turkish-drama-romance-comedy-hits-movies",
+   "name": "Türkiye · Turkish Drama, Romance & Comedy Hits · Movies",
+   "extra": [
+    {
+     "name": "search",
+     "isRequired": true
+    },
+    {
+     "name": "folder",
+     "isRequired": true
+    },
+    {
+     "name": "skip",
+     "isRequired": false
+    }
+   ]
+  },
+  {
+   "type": "series",
+   "id": "gen-international-cinema-t-rkiye-turkish-drama-romance-comedy-hits-series",
+   "name": "Türkiye · Turkish Drama, Romance & Comedy Hits · Series",
    "extra": [
     {
      "name": "search",
