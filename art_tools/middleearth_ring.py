@@ -14,7 +14,7 @@ from keyframe_webp import encode
 from me_wordmark import wordmark, gold_ramp, chisel, grit_field
 
 W, H, GW, GH, MS = 1280, 720, 512, 288, 40
-N = 250
+N = 270
 R, A, B = 1.0, 0.075, 0.13          # ring radius, radial half-thickness, axial half-width
 SS = 2                              # supersampling for the ring
 JOURNEY = ["movie49051_bd3.jpg", "movie57158_bd4.jpg", "movie120_bd7.jpg", "movie120_bd5.jpg", "movie122_bd2.jpg",
@@ -179,12 +179,12 @@ class Scene:
 
     def frame(self, k):
         # ---- timeline
-        heat = seg(k, 14, 66) * (1 - seg(k, 200, 238))
-        z = seg(k, 66, 108) * (1 - seg(k, 188, 226))                     # 0 = cover pose, 1 = through the ring
+        heat = seg(k, 14, 66) * (1 - seg(k, 220, 258))
+        z = seg(k, 66, 108) * (1 - seg(k, 208, 246))                     # 0 = cover pose, 1 = through the ring
         tilt = math.radians(22 + 62 * z)
-        scale = 205 * (1 + 0.12 * seg(k, 14, 66) * (1 - seg(k, 200, 238))) * (1 + 5.2 * z ** 2.2)
+        scale = 205 * (1 + 0.12 * seg(k, 14, 66) * (1 - seg(k, 220, 258))) * (1 + 5.2 * z ** 2.2)
         cy = 252 + (360 - 252) * z
-        title_a = (1 - seg(k, 34, 64)) + seg(k, 206, 240)
+        title_a = (1 - seg(k, 34, 64)) + seg(k, 226, 260)
         title_a = min(1.0, title_a)
         spin = 0.05 * math.sin(2 * math.pi * k / N)
         # ---- background + embers
@@ -194,17 +194,17 @@ class Scene:
         g = self.ring.march(W * SS, H * SS, tilt, scale * SS, W * SS / 2, cy * SS)
         hole = g["hole"].reshape(H * SS, W * SS)
         hole = hole.reshape(H, SS, W, SS).mean((1, 3))
-        jt = np.clip((k - 70) / (182 - 70), 0, 1)                        # 0..1 across the journey
-        if 66 <= k <= 226:
+        jt = np.clip((k - 92) / (202 - 92), 0, 1)                        # 0..1 across the journey
+        if 66 <= k <= 246:
             n = len(self.stills); pos = jt * (n - 1)
             i0 = min(int(pos), n - 1); f = pos - i0
             fade = smooth((f - 0.62) / 0.38)
             kk = k - k % 2                                              # the drift moves on every other frame (smaller file)
-            pos2 = np.clip((kk - 70) / (182 - 70), 0, 1) * (n - 1); f2 = pos2 - min(int(pos2), n - 1)
-            st = self.still_frame(i0, f2 * 0.5 + 0.25) if i0 < n - 1 else self.still_frame(i0, 0.25 + 0.5 * seg(kk, 182, 226))
+            pos2 = np.clip((kk - 92) / (202 - 92), 0, 1) * (n - 1); f2 = pos2 - min(int(pos2), n - 1)
+            st = self.still_frame(i0, f2 * 0.5 + 0.25) if i0 < n - 1 else self.still_frame(i0, 0.25 + 0.5 * seg(kk, 202, 246))
             if fade > 0 and i0 + 1 < n:
                 st = st * (1 - fade) + self.still_frame(i0 + 1, 0.25 * fade) * fade
-            vis = seg(k, 66, 84) * (1 - seg(k, 206, 224))
+            vis = seg(k, 66, 84) * (1 - seg(k, 226, 244))
             img = img * (1 - hole[..., None] * vis) + st * hole[..., None] * vis
         # embers (periodic: whole number of trips per loop)
         lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dl = ImageDraw.Draw(lay)
