@@ -25,6 +25,10 @@ NAVY = np.array([3, 5, 12], np.float32)
 ICE = np.array([150, 200, 255], np.float32)
 
 
+def smooth_arr(x):
+    x = np.clip(x, 0, 1); return x * x * (3 - 2 * x)
+
+
 def smooth(x):
     x = min(1.0, max(0.0, x)); return x * x * (3 - 2 * x)
 
@@ -87,15 +91,31 @@ class Scene:
         k = 960 * sc / pl.shape[1]
         pw, ph = round(pl.shape[1] * k), round(pl.shape[0] * k)
         pl = cv2.resize(pl, (pw, ph), interpolation=cv2.INTER_AREA if k < 1 else cv2.INTER_CUBIC)
-        fx_ = np.minimum(np.arange(pw) / (90 * sc), (pw - 1 - np.arange(pw)) / (90 * sc)).clip(0, 1)
-        fy_ = np.minimum(np.arange(ph) / (34 * sc), (ph - 1 - np.arange(ph)) / (22 * sc)).clip(0, 1)
-        fade = (np.sqrt(fy_)[:, None] * np.sqrt(fx_)[None, :]).astype(np.float32)
-        lum = pl.max(2) / 255
-        al = np.clip((lum - 0.03) / 0.35, 0, 1) * fade
+        # its soft light is taken out and only the logo kept: the picture = soft glow + sharp logo. The glow is found by
+        # painting the sharp parts out and blurring; the logo is what is left above it. The glow is put back faded out
+        # towards the picture's edges, and the card's own flare carries the light on over the whole screen, so no box.
         x0 = (W - pw) // 2; y0 = round(296 * sc) - ph // 2
-        self.plate = np.zeros((H, W, 3), np.float32); self.pa = np.zeros((H, W), np.float32)
-        self.plate[y0:y0 + ph, x0:x0 + pw] = pl * fade[..., None]
-        self.pa[y0:y0 + ph, x0:x0 + pw] = al
+        u8 = np.clip(pl, 0, 255).astype(np.uint8)
+        lumv = pl.max(2)
+        hf = lumv - cv2.GaussianBlur(lumv, (0, 0), 6 * sc)
+        sharp = ((hf > 18) | (lumv > 150)).astype(np.uint8)
+        sharp = cv2.dilate(sharp, np.ones((5, 5), np.uint8))
+        g0 = cv2.inpaint(u8, sharp, 7, cv2.INPAINT_TELEA).astype(np.float32)
+        g0 = cv2.GaussianBlur(g0, (0, 0), 5 * sc)
+        res = np.clip(pl - g0, 0, 255)
+        fx_ = np.minimum(np.arange(pw) / (110 * sc), (pw - 1 - np.arange(pw)) / (110 * sc)).clip(0, 1)
+        fy_ = np.minimum(np.arange(ph) / (60 * sc), (ph - 1 - np.arange(ph)) / (40 * sc)).clip(0, 1)
+        fade = (smooth_arr(fy_)[:, None] * smooth_arr(fx_)[None, :]).astype(np.float32)
+        self.glow_img = np.zeros((H, W, 3), np.float32); self.glow_img[y0:y0 + ph, x0:x0 + pw] = g0 * fade[..., None]
+        self.res = np.zeros((H, W, 3), np.float32); self.res[y0:y0 + ph, x0:x0 + pw] = res * fade[..., None] ** 0.25
+        let = np.clip((res.max(2) - 25) / 60, 0, 1)                         # only what is solid: the letters, the delta's lines, the star
+        # the light line under the letters loses its glow with the picture's lower edge: give it its glow back
+        ly = y0 + 375 / 402 * ph; lx0, lx1 = x0 + 30 / 942 * pw, x0 + 886 / 942 * pw
+        yy_, xx_ = np.mgrid[0:H, 0:W].astype(np.float32)
+        ends = smooth_arr((xx_ - lx0) / (60 * sc)) * smooth_arr((lx1 - xx_) / (60 * sc))
+        lg = (np.exp(-((yy_ - ly) / (9 * sc)) ** 2) * 0.55 + np.exp(-((yy_ - ly) / (26 * sc)) ** 2) * 0.25) * ends
+        self.glow_img += lg[..., None] * np.array([50, 160, 225], np.float32)
+        self.pa = np.zeros((H, W), np.float32); self.pa[y0:y0 + ph, x0:x0 + pw] = cv2.GaussianBlur(let, (0, 0), 0.8)
         # where the letters are (bright and grey), for the light sweep
         mx, mn = pl.max(2), pl.min(2)
         lm = ((mx > 150) & (mx - mn < 40)).astype(np.float32) * fade
@@ -177,13 +197,13 @@ class Scene:
         img += (jump * 40 * np.exp(-(dx * dx + dy * dy) / (2 * (300 * sc) ** 2)))[..., None]
         # the logo, as light over the sky; brighter with the flare, and a light sweep over the letters
         gain = 1 + 0.1 * flare + 0.15 * jump
-        pl = self.plate * gain
+        res = self.res * gain
         sw = seg(k, T_SWEEP)
         if 0 < sw < 1:
             sx = self.l0 + 40 * sc + (self.l1 - self.l0 - 80 * sc) * sw
             band = np.exp(-(((self.xx - sx) + (self.yy - self.dcy) * 0.35) / (26 * sc)) ** 2) * self.lm
-            pl = pl + band[..., None] * 70
-        img = pl + img * (1 - self.pa[..., None])
+            res = res + band[..., None] * 70
+        img = img * (1 - self.pa[..., None]) + self.glow_img * (1 + 0.5 * flare + jump) + res
         # a thin line of the flare also crosses in front, faintly
         img += (line * (fl - 0.2) * 0.3)[..., None] * np.array([210, 235, 255], np.float32)
         img *= self.vig[..., None]
