@@ -127,7 +127,8 @@ def find_coeffs(dst, src):
 
 
 class StarWars:
-    n = 300            # 12 s
+    n = 274            # 11 s: recede + crawl, the cover rises from below, a short hold
+    RISE0, RISE1 = 222, 262
     YELLOW = (229, 177, 58)
 
     def __init__(self):
@@ -195,11 +196,11 @@ class StarWars:
         lay.putalpha(plane)
         cv.alpha_composite(lay)
 
-    def logo_at(self, cv, s, a=1.0):
+    def logo_at(self, cv, s, a=1.0, dy=0.0):
         if s < 0.004 or a <= 0:
             return
         lg = fit(self.logo, max(2, 620 * s), max(2, 330 * s))
-        place(cv, lg, W / 2, H / 2 - 20, a)
+        place(cv, lg, W / 2, H / 2 - 20 + dy, a)
 
     def scene(self, k):
         cv = self.field.copy()
@@ -209,17 +210,20 @@ class StarWars:
             p = seg(k, 0, 95)
             s = 0.965 ** k * (1 - smooth(seg(k, 70, 95)))
             self.logo_at(cv, s, 1.0)
-        elif k >= 235:
-            p = seg(k, 235, n - 1)
-            s = 1 - (1 - p) ** 3
-            self.logo_at(cv, s, clamp(p * 4))
+        dy = None
+        if k >= self.RISE0:                          # the cover comes up from below the screen and settles
+            p = seg(k, self.RISE0, self.RISE1)
+            dy = (H * 0.95) * (1 - p) ** 3
+            self.logo_at(cv, 1.0, 1.0, dy)
         # the crawl: rises from below and drifts into the distance
         TH = self.tex.size[1]
-        if 30 <= k < 250:
+        if 30 <= k < 250 and not (dy is not None and dy < 1):
             q = seg(k, 30, 250)
             self.crawl(cv, -60 + q * (TH + 1310))
-        tg = 1 - smooth(seg(k, 0, 14)) if k < 120 else smooth(seg(k, n - 30, n - 4))
-        U.tagline(cv, "A GALAXY FAR, FAR AWAY", H / 2 - 20 + 330 / 2 + 40, tg, color=(255, 232, 31))
+        if dy is None:
+            U.tagline(cv, "A GALAXY FAR, FAR AWAY", H / 2 - 20 + 330 / 2 + 40, 1 - smooth(seg(k, 0, 14)), color=(255, 232, 31))
+        elif H / 2 - 20 + 330 / 2 + 40 + dy < H + 20:
+            U.tagline(cv, "A GALAXY FAR, FAR AWAY", H / 2 - 20 + 330 / 2 + 40 + dy, 1, color=(255, 232, 31))
         return cv.convert("RGB")
 
     def frame(self, k):
