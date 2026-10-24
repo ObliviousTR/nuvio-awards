@@ -2352,6 +2352,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Twice Born (2012) [movie:121642] - Drama, Romance, War
 - left out: Elvis & Nixon (2016) [movie:301348] - Drama, Comedy, History
 - left out: Heaven's Gate (1980) [movie:10935] - Drama, Western, History
+- left out: Heaven's Gate (1980) [movie:10935] - Drama, Western, History
 - left out: Ennio (2022) [movie:396194] - Documentary, Music, History
 - left out: Slaughterhouse-Five (1972) [movie:24559] - Drama, Sci-Fi, War
 - left out: Toast (2010) [movie:52850] - Drama, Comedy, History, Family
@@ -2361,7 +2362,6 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: The Lucky Ones (2008) [movie:16005] - Comedy, Drama, History
 - left out: The Flying Deuces (1939) [movie:22999] - Comedy, War
 - left out: A Farewell to Arms (1932) [movie:22649] - Drama, Romance, War
-- left out: The Russians Are Coming! The Russians Are Coming! (1966) [movie:31918] - Comedy, War
 
 ## Prime Video · History & War Series (series) - 41 kept of 44 looked at
 - kept (not its first genre): The Sandbaggers (1978) - Drama, War & Politics
@@ -2633,7 +2633,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Wynonna Earp (2016) [tv:65988] - Action & Adventure, Sci-Fi & Fantasy, Western
 - left out: Outer Range (2022) [tv:113985] - Drama, Mystery, Sci-Fi & Fantasy, Western
 
-## Disney+ · Action & Adventure Movies (movie) - 254 kept of 265 looked at
+## Disney+ · Action & Adventure Movies (movie) - 252 kept of 265 looked at
 - kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Avatar: Fire and Ash (2025) - Sci-Fi, Adventure, Fantasy
 - kept (not its first genre): The Avengers (2012) - Sci-Fi, Action, Adventure
@@ -2905,7 +2905,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Geek Charming (2011) [movie:81250] - Comedy, Drama, Romance, Family, TV Movie
 - left out: D2: The Mighty Ducks (1994) [movie:11164] - Comedy, Action, Family, Drama
 
-## Disney+ · Drama Series (series) - 113 kept of 148 looked at
+## Disney+ · Drama Series (series) - 112 kept of 148 looked at
 - kept (not its first genre): VisionQuest (2026) - Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Marvel's The Punisher (2017) - Action & Adventure, Crime, Drama
 - kept (not its first genre): Marvel's Daredevil (2015) - Crime, Drama, Action & Adventure
@@ -2915,8 +2915,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Marvel's Jessica Jones (2015) - Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Doctor Who (2024) - Action & Adventure, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Coven Academy (2026) - Mystery, Drama, Sci-Fi & Fantasy
-- kept (not its first genre): The Lowdown (2025) - Crime, Drama
 - kept (not its first genre): Moving (2023) - Mystery, Drama, Action & Adventure
+- kept (not its first genre): The Lowdown (2025) - Crime, Drama
 - kept (not its first genre): Alien: Earth (2025) - Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Sister Wives (2010) - Reality, Drama, Family
 - kept (not its first genre): The First 48 (2004) - Documentary, Drama, Crime
@@ -3637,7 +3637,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: In Your Radiant Season (2026) [tv:233833] - Mystery, Drama, Family
 - left out: Homestead Rescue (2016) [tv:68975] - Reality, Drama, Family
 
-## Hulu · Sci-Fi & Fantasy Movies (movie) - 126 kept of 139 looked at
+## Hulu · Sci-Fi & Fantasy Movies (movie) - 125 kept of 139 looked at
 - kept (not its first genre): Resident Evil: Welcome to Raccoon City (2021) - Action, Horror, Sci-Fi
 - kept (not its first genre): The Substance (2024) - Horror, Sci-Fi
 - kept (not its first genre): Predator: Badlands (2025) - Action, Sci-Fi, Adventure
@@ -4537,7 +4537,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Plainclothes (2025) [movie:1255718] - Drama, Romance, Crime
 - left out: I, the Executioner (1968) [movie:125270] - Thriller, Horror, Drama, Crime
 
-## Mubi · Drama Movies (movie) - 261 kept of 303 looked at
+## Mubi · Drama Movies (movie) - 260 kept of 303 looked at
 - kept (not its first genre): Monster (2023) - Mystery, Thriller, Drama
 - kept (not its first genre): Dogville (2003) - Crime, Drama, Thriller
 - kept (not its first genre): Undine (2020) - Fantasy, Drama, Romance
@@ -4640,7 +4640,7 @@ EMPTY gen-streaming-services-mubi-family-movies
 - left out: House on Bare Mountain (1962) [movie:67795] - Comedy, Horror
 - left out: Dracula (2025) [movie:1323409] - Sci-Fi, Comedy, Horror
 
-## Mubi · Mystery & Thriller Movies (movie) - 58 kept of 65 looked at
+## Mubi · Mystery & Thriller Movies (movie) - 57 kept of 65 looked at
 - kept (not its first genre): Amores Perros (2000) - Drama, Thriller
 - kept (not its first genre): Dogville (2003) - Crime, Drama, Thriller
 - kept (not its first genre): Wasteman (2026) - Crime, Drama, Thriller
@@ -8340,25 +8340,25 @@ EMPTY gen-genres-history-war-international-hits-series
 - left out: Outland (1981) [movie:10540] - Sci-Fi, Action, Thriller, Crime, Western
 - left out: The Warrior's Way (2010) [movie:46528] - Adventure, Fantasy, Action, Western, Thriller
 - left out: Prisoners of the Ghostland (2021) [movie:523638] - Action, Fantasy, Thriller, Western, Horror
+- left out: Prisoners of the Ghostland (2021) [movie:523638] - Action, Fantasy, Thriller, Western, Horror
 - left out: The Three Burials of Melquiades Estrada (2005) [movie:8053] - Adventure, Crime, Drama, Mystery, Western
 - left out: Tremors 4: The Legend Begins (2004) [movie:10891] - Comedy, Horror, Sci-Fi, Western
+- left out: Tremors 4: The Legend Begins (2004) [movie:10891] - Comedy, Horror, Sci-Fi, Western
 - left out: Ain't Them Bodies Saints (2013) [movie:152748] - Crime, Drama, Romance, Western
-- left out: The Alamo (1960) [movie:11209] - War, Adventure, History, Western
 - left out: Old Yeller (1957) [movie:22660] - Adventure, Drama, Family, Western
 - left out: Down in the Valley (2005) [movie:7870] - Drama, Romance, Thriller, Western
-- left out: Ride with the Devil (1999) [movie:22267] - Drama, War, Romance, Western
 - left out: The Hollow Point (2016) [movie:262982] - Action, Drama, Thriller, Crime, Western, Adventure, Mystery
 - left out: Renegade (1987) [movie:11496] - Action, Adventure, Comedy, Western
 - left out: Mystery Road (2013) [movie:199818] - Thriller, Crime, Drama, Western
 - left out: Diablo (2016) [movie:362703] - Action, Adventure, Thriller, Western
 - left out: The Electric Horseman (1979) [movie:11145] - Drama, Romance, Comedy, Western
 - left out: The Man from Snowy River (1982) [movie:24266] - Drama, Romance, Adventure, Western, Family
-- left out: The Cowboy Way (1994) [movie:19176] - Action, Comedy, Crime, Drama, Thriller, Western
 - left out: Even Cowgirls Get the Blues (1994) [movie:34444] - Comedy, Drama, Romance, Western
 - left out: Sunset (1988) [movie:38560] - Crime, Mystery, Thriller, Western
 - left out: The Way West (1967) [movie:42703] - Action, Adventure, Drama, Western
 - left out: Last of the Dogmen (1995) [movie:30718] - Adventure, Mystery, Thriller, Western
 - left out: And Starring Pancho Villa as Himself (2003) [movie:24241] - Drama, History, War, Western, TV Movie
+- left out: Emperor (2020) [movie:666219] - History, War, Drama, Western
 
 ## Western · Popular Series (series) - 102 kept of 108 looked at
 - kept (not its first genre): Westworld (2016) - Sci-Fi & Fantasy, Western
@@ -8628,7 +8628,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Monster Truck Mater (2010) [movie:148605] - Animation, Comedy, Family, Adventure, Action
 - left out: The Flintstones and WWE: Stone Age SmackDown! (2015) [movie:308447] - Animation, Comedy, Family, Adventure, Action
 
-## Animation · Action & Adventure Series (series) - 398 kept of 424 looked at
+## Animation · Action & Adventure Series (series) - 396 kept of 424 looked at
 - kept (not its first genre): Archer (2009) - Comedy, Action & Adventure, Animation
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2012) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Dragons: Race to the Edge (2015) - Family, Animation, Action & Adventure, Sci-Fi & Fantasy
@@ -8706,7 +8706,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: All Dogs Go to Heaven (1989) [movie:11497] - Drama, Animation, Family, Comedy, Fantasy
 - left out: The House (2022) [movie:926899] - Animation, Drama, Comedy, Horror, Fantasy
 
-## Animation · Sci-Fi & Fantasy Series (series) - 384 kept of 432 looked at
+## Animation · Sci-Fi & Fantasy Series (series) - 383 kept of 432 looked at
 - kept (not its first genre): Star Wars: The Clone Wars (2008) - Action & Adventure, Sci-Fi & Fantasy, Animation
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2012) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Fantastic Four (1994) - Action & Adventure, Animation, Kids, Sci-Fi & Fantasy
@@ -9077,7 +9077,7 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Frontier Lord Begins with Zero Subjects (2026) - Comedy, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): The World's Strongest Rearguard (2026) - Action & Adventure, Sci-Fi & Fantasy, Animation
 
-## Anime · Action & Adventure Movies (movie) - 421 kept of 435 looked at
+## Anime · Action & Adventure Movies (movie) - 420 kept of 435 looked at
 - kept (not its first genre): Castle in the Sky (1986) - Adventure, Fantasy, Animation, Action, Family
 - kept (not its first genre): Pokémon the Movie: Hoopa and the Clash of Ages (2015) - Family, Adventure, Animation, Action, Fantasy
 - kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
@@ -9168,8 +9168,8 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Fairy Tail: Phoenix Priestess (2012) [movie:135531] - Animation, Action, Adventure, Comedy, Fantasy
 - left out: Pokémon Ranger and the Temple of the Sea (2006) [movie:16808] - Family, Animation, Action, Adventure, Fantasy, Sci-Fi
 - left out: One Piece: Adventure of Nebulandia (2015) [movie:373879] - Action, Animation, Adventure, Comedy, Fantasy, TV Movie
-- left out: Pokémon the Movie: White - Victini and Zekrom (2011) [movie:88557] - Animation, Family, Adventure, Drama, Fantasy
 - left out: Death Note Relight 2: L's Successors (2009) [movie:68555] - TV Movie, Thriller, Animation, Crime, Drama, Fantasy
+- left out: Pokémon the Movie: White - Victini and Zekrom (2011) [movie:88557] - Animation, Family, Adventure, Drama, Fantasy
 - left out: One Piece: Giant Mecha Soldier of Karakuri Castle (2006) [movie:44730] - Animation, Adventure, Action, Comedy, Sci-Fi, Fantasy
 
 ## Anime · Sci-Fi & Fantasy Series (series) - 500 kept of 660 looked at
