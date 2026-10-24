@@ -298,11 +298,11 @@ class Wizarding3(V.Wizarding):
         U.tagline(st, self.tag, ty + self.text.height / 2 + 42, 1, size=22, color=(214, 196, 150))
         scaled_onto(cv, st, cam, W / 2, H / 2 + 20)
         d = ImageDraw.Draw(cv)
-        t = (0 if cover else k) / 25
+        u = 2 * math.pi * ((0 if cover else k) / self.n)     # periodic over the loop: dust is where it began
         for (x, y, s, ph) in self.dust:
-            yy = (y + 12 * s * t) % H
-            xx = x + 14 * math.sin(t * 0.7 + ph)
-            al = round(130 * s * (0.55 + 0.45 * math.sin(ph + t * 1.7)))
+            yy = y + 22 * s * math.sin(u + ph * 1.3)
+            xx = x + 16 * math.sin(u + ph)
+            al = round(130 * s * (0.55 + 0.45 * math.sin(ph + 2 * u)))
             d.ellipse((xx - s, yy - s, xx + s, yy + s), fill=(200, 225, 235, al))
         if not cover and 122 <= k < 146:
             U.sweep(cv, seg(k, 122, 146), strength=80)
