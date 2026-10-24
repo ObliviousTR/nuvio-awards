@@ -36,6 +36,7 @@ T_PULL = (198, 222)                            # camera back out, nothing in the
 T_TITLE_IN = (208, 228)
 PITCH = 0.64                                   # one still of the strip, as a share of the bat's width
 GAP = 5.0                                      # dark frame line between stills (cover px)
+FACE_SHARE, FACE_V = 0.34, 0.44                 # a face fills this share of a tile's height, centred this far down
 WIN_RX, WIN_RY, WIN_SOFT = 0.36, 0.62, 0.45      # where the stills show inside the bat (share of its size), feather
 
 
@@ -135,15 +136,24 @@ class Scene:
             if os.path.exists(jp):
                 fr.update(json.load(open(jp)))
             fr = dict(fr, **fr.get("v3", {}))
+            if "fx" in fr:                                            # framed by the face: fx, fy = its centre, fh = its height
+                fr["h"] = h = fr["fh"] / FACE_SHARE                       # (shares of the still) -> the face sits in the
+                fr["cx"], fr["cy"] = fr["fx"], fr["fy"] + (0.5 - FACE_V) * h   # open middle of the bat, a set size
             h = fr.get("h", 1.0 / fr["zoom"])                       # share of the still's height shown in a tile
             im = Image.open(fp).convert("RGB")
-            kk = max(th_max / (h * im.height), tw_max / im.width) * 1.02
+            kk = th_max / (h * im.height) if "fx" in fr else max(th_max / (h * im.height), tw_max / im.width) * 1.02
             im = im.resize((math.ceil(im.width * kk), math.ceil(im.height * kk)), Image.LANCZOS)
             arr = grade(np.asarray(im, np.float32) * fr.get("gain", 1.0))
             ah, aw = arr.shape[:2]
             ch, cw = th_max * 1.0, tw_max * 1.0                        # the crop the tile shows, in these pixels
-            cx = min(max(fr["cx"] * aw, cw / 2), aw - cw / 2); cy = min(max(fr["cy"] * ah, ch / 2), ah - ch / 2)
-            x0, y0 = int(cx - cw / 2), int(cy - ch / 2)
+            if "fx" in fr:                       # face-framed: the crop may run past the still; repeat its edge there
+                x0, y0 = int(round(fr["cx"] * aw - cw / 2)), int(round(fr["cy"] * ah - ch / 2))
+                x1, y1 = x0 + math.ceil(cw), y0 + math.ceil(ch)
+                pad = ((max(0, -y0), max(0, y1 - ah)), (max(0, -x0), max(0, x1 - aw)), (0, 0))
+                arr = np.pad(arr, pad, mode="edge"); x0 += pad[1][0]; y0 += pad[0][0]
+            else:
+                cx = min(max(fr["cx"] * aw, cw / 2), aw - cw / 2); cy = min(max(fr["cy"] * ah, ch / 2), ah - ch / 2)
+                x0, y0 = int(cx - cw / 2), int(cy - ch / 2)
             tile = np.ascontiguousarray(arr[y0:y0 + math.ceil(ch), x0:x0 + math.ceil(cw)])
             self.stills.append(tile)
         self.n = len(self.stills)
