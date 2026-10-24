@@ -112,7 +112,9 @@ class Scene:
         self.emb = {}
         for n in EMBLEMS:
             im = Image.open(os.path.join(self.src, f"emb_{n}.png")).convert("RGBA")
-            f = min(bw * 4 / im.width, bh * 4 / im.height) * {"flash": 1.3, "wonderwoman": 1.05}.get(n, 1.0)
+            # the round / tall ones are held to the height of the wide ones (Superman's shield, the bat), so all five read the same size
+            hmax = {"lantern": fw * 0.47, "flash": fw * 0.53}.get(n, bh)
+            f = min(bw * 4 / im.width, hmax * 4 / im.height) * {"wonderwoman": 1.05}.get(n, 1.0)
             im = im.resize((max(1, round(im.width * f)), max(1, round(im.height * f))), Image.LANCZOS)
             a = np.asarray(im, np.float32) / 255
             lum = a[..., :3] @ np.array([0.35, 0.45, 0.2], np.float32)
