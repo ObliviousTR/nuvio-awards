@@ -265,3 +265,64 @@ if __name__ == "__main__":
             import traceback
             traceback.print_exc()
             print(uid, "FAILED", e, flush=True)
+
+
+# ---------------------------------------------------------------- Wizarding World, v3 (no reverse opening)
+class Wizarding3(V.Wizarding):
+    """Cover: the name and its line, centred, under the beam. Hover: they glide down, the bar appears, the wands rise
+    and fan out, a moment's hold with a glint, the fan closes, the wands sink, the name glides back to the centre."""
+    n = 220
+    TY0, TY1 = H / 2 - 18, H / 2 + 95
+
+    def timeline(self, k):
+        down = inout(seg(k, 0, 32)) * (1 - inout(seg(k, 186, 216)))
+        bar = smooth(seg(k, 18, 36)) * (1 - smooth(seg(k, 180, 198)))
+        rise = smooth(seg(k, 30, 62)) * (1 - smooth(seg(k, 168, 192)))
+        fan = smooth(seg(k, 52, 118)) * (1 - smooth(seg(k, 146, 178)))
+        cam = 1 + 0.05 * math.sin(math.pi * seg(k, 0, self.n))
+        return down, bar, rise, fan, cam
+
+    def scene(self, k, cover=False):
+        down, bar, rise, fan, cam = (0, 0, 0, 0, 1) if cover else self.timeline(k)
+        ty = self.TY0 + (self.TY1 - self.TY0) * down
+        self.ty = ty
+        self.pivot = (W / 2, ty - self.text.height / 2 - 18)
+        cv = self.bg.copy().convert("RGBA")
+        cv.alpha_composite(self.beam)
+        st = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        px, py = self.pivot
+        if rise > 0.001:
+            for i in sorted(range(len(self.wands)), key=lambda i: -abs(i - 8)):
+                wd = self.wands[i]
+                a = self.angle(i, fan)
+                L = wd.height
+                canvas = Image.new("RGBA", (L * 2, L * 2), (0, 0, 0, 0))
+                canvas.alpha_composite(wd, (L - wd.width // 2, L - wd.height + round(L * (1 - rise))))
+                full = Image.new("RGBA", (L * 2, L * 2), (0, 0, 0, 0))
+                full.alpha_composite(canvas.crop((0, 0, L * 2, L + 2)))
+                st.alpha_composite(full.rotate(-a, resample=Image.BICUBIC, center=(L, L)), (round(px - L), round(py - L)))
+        if bar > 0:
+            b = self.bar.resize((max(1, round(self.bar.width * (0.2 + 0.8 * bar))), self.bar.height))
+            st.alpha_composite(U.alpha(b, bar), (round(px - b.width / 2), round(py - 2)))
+        place(st, self.text, W / 2, ty, 1)
+        U.tagline(st, self.tag, ty + self.text.height / 2 + 42, 1, size=22, color=(214, 196, 150))
+        scaled_onto(cv, st, cam, W / 2, H / 2 + 20)
+        d = ImageDraw.Draw(cv)
+        t = (0 if cover else k) / 25
+        for (x, y, s, ph) in self.dust:
+            yy = (y + 12 * s * t) % H
+            xx = x + 14 * math.sin(t * 0.7 + ph)
+            al = round(130 * s * (0.55 + 0.45 * math.sin(ph + t * 1.7)))
+            d.ellipse((xx - s, yy - s, xx + s, yy + s), fill=(200, 225, 235, al))
+        if not cover and 122 <= k < 146:
+            U.sweep(cv, seg(k, 122, 146), strength=80)
+        return cv.convert("RGB")
+
+    def frame(self, k):
+        return self.scene(k)
+
+    def cover(self):
+        return self.scene(0, cover=True)
+
+
+IDENTS["wizarding"] = Wizarding3
