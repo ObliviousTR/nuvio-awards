@@ -256,16 +256,6 @@ def render(uid, out_dir):
     return len(seq), os.path.getsize(os.path.join(d, "hover.webp")) // 1024, "seam", seam
 
 
-if __name__ == "__main__":
-    out = sys.argv[1]
-    for uid in sys.argv[2:] or IDENTS:
-        try:
-            print(uid, render(uid, out), flush=True)
-        except Exception as e:
-            import traceback
-            traceback.print_exc()
-            print(uid, "FAILED", e, flush=True)
-
 
 # ---------------------------------------------------------------- Wizarding World, v3 (no reverse opening)
 class Wizarding3(V.Wizarding):
@@ -326,3 +316,15 @@ class Wizarding3(V.Wizarding):
 
 
 IDENTS["wizarding"] = Wizarding3
+
+
+if __name__ == "__main__":
+    out = sys.argv[1]
+    for uid in sys.argv[2:] or IDENTS:
+        try:
+            print(uid, render(uid, out), flush=True)
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            print(uid, "FAILED", e, flush=True)
+
