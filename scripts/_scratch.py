@@ -1,6 +1,20 @@
-import os, urllib.request
-OUT = "refs/xmen_hi"; os.makedirs(OUT, exist_ok=True)
-W = {'127585_20': '/6UoNcuwbgBk6Hb52FXw2OnDvifB.jpg', '127585_21': '/i8qpnuvh0uRPWPsgWzgyrxhD2p9.jpg', '127585_22': '/euOrb1KOPNI0NmZZFCOnenTjxtL.jpg', '127585_23': '/hEYwKNSl8v2f4Xwe3teTGwrZ4jN.jpg', '127585_24': '/t2c0fWPx1FYBLBdvktWEpH5onWG.jpg', '127585_25': '/wzI0expzsVGgYyYKPpbdkxbIYBs.jpg', '127585_26': '/kIzZBtqi9HZyfCinfhELQbCSyOb.jpg', '127585_34': '/bAvo7XwJ3y3kLCBkeVSdjFTKLID.jpg', '127585_35': '/lPct1XqiJepfdgXJYeGlQ2C3M2Z.jpg', '127585_36': '/lwUh8oW8gQfQwh8pt5nuesHpfPS.jpg', '36668_8': '/7klqeHzrukZTFVgB4xEOIzqKcZ3.jpg', '36668_38': '/gn4GWWjIoSsnVpRkvZZ7Vznwj1e.jpg', '293660_4': '/pcZT1Ouq99dY6J2iGXjMxw16x6o.jpg', '293660_30': '/nMKpconh6JTJ86eCQoGOH6ypDMN.jpg', '293660_35': '/99p0n6EhX6PebGIScQ0uRZ8aUv8.jpg', '36657_6': '/ypiv2HEiNftzrg9ovDCFv16Q6Ti.jpg'}
-for k, p in W.items():
-    open(f"{OUT}/{k}.jpg", "wb").write(urllib.request.urlopen("https://image.tmdb.org/t/p/original" + p, timeout=120).read())
-print("ok", len(W))
+import os, json, urllib.request
+OUT = "refs/matrix"; os.makedirs(OUT + "/st", exist_ok=True); os.makedirs(OUT + "/logo", exist_ok=True)
+K = os.environ["TMDB_API_KEY"]
+def get(u):
+    return urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=120).read()
+log = []
+for kind, i in [("movie", 603), ("movie", 604), ("movie", 605), ("movie", 624860), ("movie", 55931)]:
+    try:
+        im = json.loads(get(f"https://api.themoviedb.org/3/{kind}/{i}/images?api_key={K}"))
+        bds = sorted([b for b in im["backdrops"] if not b.get("iso_639_1")], key=lambda x: -x["vote_count"])[:10]
+        for j, b in enumerate(bds):
+            open(f"{OUT}/st/{i}_{j}.jpg", "wb").write(get("https://image.tmdb.org/t/p/w1280" + b["file_path"]))
+        for j, l in enumerate([l for l in im["logos"] if l.get("iso_639_1") in ("en", None)][:5]):
+            open(f"{OUT}/logo/{i}_{j}.png", "wb").write(get("https://image.tmdb.org/t/p/original" + l["file_path"]))
+            if l.get("file_type") == ".svg":
+                open(f"{OUT}/logo/{i}_{j}.svg", "wb").write(get("https://image.tmdb.org/t/p/original" + os.path.splitext(l["file_path"])[0] + ".svg"))
+        log.append(f"{i}: {len(bds)}")
+    except Exception as e:
+        log.append(f"{i}: {e}")
+open(OUT + "/log.txt", "w").write("\n".join(log)); print("\n".join(log))
