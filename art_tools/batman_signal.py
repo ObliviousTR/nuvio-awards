@@ -1,11 +1,11 @@
-"""Batman card: a cloudy Gotham night, the Bat-Signal (the 1989 emblem's bat, from the title logo on TMDB) thrown on the
-clouds by a searchlight beam, the skyline below, BATMAN and THE COLLECTION between them.
-Hover: the title fades and the searchlight loses its mark - the beam swings off across the clouds as a plain, unfocused
-pool of light and searches the sky for a while, then finds its place again and the bat snaps into focus. The camera
-moves in on the signal (no dive: clouds stay around it) and the bat becomes a window: the Batmen of every era slide by
-inside it, one after another, unhurried - West, Keaton, the Phantasm, Kilmer, Clooney, Bale, Affleck, Pattinson. The
-last one fades back into the dark bat before the camera pulls out, and the title returns. Seamless loop (first frame =
-cover).
+"""Batman card (v3): a cloudy Gotham night, the Bat-Signal (the 1989 emblem's bat, from the title logo on TMDB) thrown on
+the clouds by a searchlight beam, the skyline below, BATMAN and THE COLLECTION under it. On the cover the bat is a window
+onto the last Batman of the strip (Pattinson against the signal).
+Hover (10 s): the title fades and the searchlight loses its mark - the bat melts into a soft pool of light that swings
+off in one arc, as if someone turned the lamp, and comes straight back; on its mark the bat snaps into focus, dark and
+empty. The camera moves in a little (the whole oval and the clouds round it stay in frame) and a film strip of the
+Batmen of every era runs through the bat at a steady speed, no holds, no cuts. The last one eases to the centre and from
+then on nothing inside the bat changes: the camera pulls back and the title returns. First frame = last frame = cover.
 Everything but the stills and the title is drawn analytically in cover coordinates.
 usage: python3 art_tools/batman_signal.py SRC_DIR OUT_DIR [--frames a,b]
   SRC_DIR: bat.json (bat outline + emblem ellipse in logo pixels), title.png, Oswald-VF.ttf,
@@ -19,20 +19,24 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from keyframe_webp import encode
 
 W, H, GW, GH, MS = 1280, 720, 512, 288, 40
-SIG_C, SIG_W = (640.0, 222.0), 370.0          # signal centre and width on the cover
-ZOOM = 2.75                                    # camera scale once it has moved in on the signal
+SIG_C, SIG_W = (640.0, 206.0), 440.0          # signal centre and width on the cover
+ZOOM = 1.75                                    # camera scale while the strip runs (the oval stays well inside the frame)
+TITLE_Y = 366
 
-# timeline (frames of 40 ms)
-T_TITLE_OUT = (8, 26)
-T_UNLOCK = (12, 34)                            # the bat blurs away as the light starts to move
-T_SEARCH = (22, 112)                           # the pool of light wanders over the clouds
-T_FOCUS = (108, 130)                           # back on its mark, the bat comes into focus
-T_PUSH = (134, 168)
-T_IN = (166, 184)                              # first still fades into the bat
-HOLD, SLIDE = 22, 16                           # per still: rest, then slide to the next
-T_OUT_LEN = 18                                 # last still fades back to the dark bat
-PULL_LEN = 36
-TITLE_IN_LEN = 22
+# timeline (frames of 40 ms, 250 frames = 10.0 s)
+N_FRAMES = 250
+T_TITLE_OUT = (5, 18)
+T_UNLOCK = (6, 20)                             # the bat (and the still in it) melts into a soft pool of light
+T_SEARCH = (9, 48)                             # one arc away from the mark and straight back
+T_FOCUS = (40, 55)                             # back on its mark, the bat comes into focus
+T_PUSH = (48, 72)                              # camera moves in a little
+T_STRIP = (48, 206)                            # strip runs at a steady speed, the last still eases to the centre
+EASE = 26                                      # frames of that final ease
+T_PULL = (198, 222)                            # camera back out, nothing in the bat changes
+T_TITLE_IN = (208, 228)
+PITCH = 0.64                                   # one still of the strip, as a share of the bat's width
+GAP = 5.0                                      # dark frame line between stills (cover px)
+WIN_RX, WIN_RY, WIN_SOFT = 0.36, 0.62, 0.45      # where the stills show inside the bat (share of its size), feather
 
 
 def smooth(x):
@@ -68,9 +72,27 @@ def fbm(x, y, octaves=5):
     return t / norm
 
 
+GRADE = os.environ.get("BAT_GRADE", "cool")
+
+
+def grade(a):
+    """One look for every era: cold, dark, low saturation, so the stills read as the dark of the bat against the warm
+    light of the signal round it."""
+    if GRADE == "none":
+        return a
+    a = np.clip(a, 0, 255)
+    lum = (a @ np.array([0.299, 0.587, 0.114], np.float32))[..., None] / 255
+    lum = np.clip((lum - 0.04) / 0.9, 0, 1) ** 1.12
+    if GRADE == "warm":
+        lo, hi = np.array([14, 10, 6], np.float32), np.array([255, 226, 170], np.float32)
+    else:
+        lo, hi = np.array([6, 8, 14], np.float32), np.array([196, 210, 228], np.float32)
+    duo = lo + (hi - lo) * lum
+    return duo * 0.8 + a * 0.2 * (0.55 + 0.45 * lum)
+
+
 # where the light goes while it searches (cover coords); the ends are the signal's own place
-PATH = [SIG_C, (560, 200), (380, 168), (300, 214), (352, 250), (520, 150), (760, 126), (930, 176), (968, 236),
-        (880, 262), (760, 238), SIG_C]
+PATH = [SIG_C, (560, 236), (420, 230), (352, 176), (420, 120), (548, 128), SIG_C]
 
 
 def catmull(pts, t):
@@ -99,24 +121,39 @@ class Scene:
         for c in txt:
             dd.text((x, 60), c, font=f, fill=255, anchor="ls"); x += f.getlength(c) + tr
         m = m.crop(m.getbbox()); self.sub = m.resize((m.width // 2, m.height // 2), Image.LANCZOS)
-        # stills, framed for the window the bat makes once the camera has moved in
-        self.iw = round(2 * self.erx * ZOOM * 1.04); self.ih = round(2 * self.ery * ZOOM * 1.08)
+        # stills: one tile of the strip each, graded so the bat stays the dark part of the signal
+        bx0, bx1 = self.bat[:, 0].min(), self.bat[:, 0].max(); by0, by1 = self.bat[:, 1].min(), self.bat[:, 1].max()
+        self.bw, self.bh = bx1 - bx0, by1 - by0
+        self.bcy = (by0 + by1) / 2 - SIG_C[1]                        # bat centre below the oval centre (cover px)
+        self.pc = PITCH * self.bw                                     # tile pitch (cover px)
+        self.th = self.bh * 1.04                                      # tile height (cover px)
+        tw_max, th_max = self.pc * ZOOM, self.th * ZOOM               # largest a tile ever gets on screen
         self.stills = []
         for fp in sorted(glob.glob(os.path.join(src, "stills", "*.jpg"))):
             fr = {"cx": 0.5, "cy": 0.45, "zoom": 1.0}
             jp = os.path.splitext(fp)[0] + ".json"
             if os.path.exists(jp):
                 fr.update(json.load(open(jp)))
+            fr = dict(fr, **fr.get("v3", {}))
+            h = fr.get("h", 1.0 / fr["zoom"])                       # share of the still's height shown in a tile
             im = Image.open(fp).convert("RGB")
-            kk = max(self.iw / im.width, self.ih / im.height) * fr["zoom"] * 1.06     # 6% spare for the slow push
+            kk = max(th_max / (h * im.height), tw_max / im.width) * 1.02
             im = im.resize((math.ceil(im.width * kk), math.ceil(im.height * kk)), Image.LANCZOS)
-            self.stills.append((np.asarray(im, np.float32), fr))
+            arr = grade(np.asarray(im, np.float32) * fr.get("gain", 1.0))
+            ah, aw = arr.shape[:2]
+            ch, cw = th_max * 1.0, tw_max * 1.0                        # the crop the tile shows, in these pixels
+            cx = min(max(fr["cx"] * aw, cw / 2), aw - cw / 2); cy = min(max(fr["cy"] * ah, ch / 2), ah - ch / 2)
+            x0, y0 = int(cx - cw / 2), int(cy - ch / 2)
+            tile = np.ascontiguousarray(arr[y0:y0 + math.ceil(ch), x0:x0 + math.ceil(cw)])
+            self.stills.append(tile)
         self.n = len(self.stills)
-        self.t_slides = T_IN[1] + HOLD
-        self.t_out = self.t_slides + (self.n - 1) * (HOLD + SLIDE) + HOLD
-        self.t_pull = (self.t_out + T_OUT_LEN, self.t_out + T_OUT_LEN + PULL_LEN)
-        self.t_title_in = (self.t_pull[1] - 12, self.t_pull[1] - 12 + TITLE_IN_LEN)
-        self.N = self.t_title_in[1] + 10
+        # strip travel (cover px): the first still starts just outside the window in the bat, the last ends centred
+        self.x0 = WIN_RX * self.bw + self.pc / 2
+        D = self.x0 + (self.n - 1) * self.pc
+        lin = T_STRIP[1] - T_STRIP[0] - EASE
+        self.v = D / (lin + EASE / 2)
+        self.D = D
+        self.N = N_FRAMES
         # skyline: a hazy far row and a dark near row of buildings, and lit windows on the near row (cover pixels)
         rng = np.random.default_rng(12)
         self.far, self.buildings, self.windows = [], [], []
@@ -150,36 +187,35 @@ class Scene:
         cv2.fillPoly(m, pts, 255, lineType=cv2.LINE_AA, shift=4)
         return cv2.resize(m, (W, H), interpolation=cv2.INTER_AREA).astype(np.float32) / 255
 
-    # ---- the stills strip, in screen pixels, centred on the signal
-    def strip(self, k, ecx, ecy):
-        img = np.zeros((H, W, 3), np.float32) + np.array([10, 12, 18], np.float32)
-        gap = 40
-        pitch = self.iw + gap
-        t = k - self.t_slides
-        if t < 0:
-            pos = 0.0
-        else:
-            j = int(t // (HOLD + SLIDE)); r = t - j * (HOLD + SLIDE)
-            pos = j + smooth((r - HOLD) / SLIDE) if r > HOLD else float(j)
-            pos = min(pos, self.n - 1)
+    # ---- the strip, in screen pixels
+    def travel(self, k):
+        """How far the strip has moved (cover px). Before the strip starts it sits at its end (last still centred:
+        the cover), from T_STRIP it runs from its start at a steady speed and eases into the end."""
+        if k < T_STRIP[0]:
+            return self.D if k < T_UNLOCK[1] + 4 else 0.0
+        t = k - T_STRIP[0]; lin = T_STRIP[1] - T_STRIP[0] - EASE
+        if t <= lin:
+            return self.v * t
+        u = min(t - lin, EASE)
+        return self.v * lin + self.v * (u - u * u / (2 * EASE))
+
+    def strip(self, k, ecx, ecy, s, base):
+        img = base.copy()
+        pos = self.travel(k)
+        tw, th = self.pc * s, self.th * s
+        cyy = ecy + self.bcy * s
         for j in range(self.n):
-            off = (j - pos) * pitch
-            if abs(off) > W:
+            off = (self.x0 + j * self.pc - pos) * s                 # tile centre, from the signal centre
+            if abs(off) > W / 2 + tw:
                 continue
-            arr, fr = self.stills[j]
-            # slow push on each still while it is on screen
-            life = (k - (self.t_slides + (j - 1) * (HOLD + SLIDE))) / (2 * (HOLD + SLIDE) + HOLD)
-            z = 1.0 + 0.045 * min(1.0, max(0.0, life))
-            ah, aw = arr.shape[:2]
-            cw, ch = self.iw / z, self.ih / z                     # crop size in the pre-sized still
-            cx = min(max(fr["cx"] * aw, cw / 2), aw - cw / 2); cy = min(max(fr["cy"] * ah, ch / 2), ah - ch / 2)
-            x0, y0 = int(cx - cw / 2), int(cy - ch / 2)                 # only the crop, so a still never spills
-            sub = np.ascontiguousarray(arr[y0:min(ah, y0 + math.ceil(ch) + 2), x0:min(aw, x0 + math.ceil(cw) + 2)])
-            M = np.float32([[z, 0, ecx + off - self.iw / 2 - (cx - cw / 2 - x0) * z],
-                            [0, z, ecy - self.ih / 2 - (cy - ch / 2 - y0) * z]])
-            lay = cv2.warpAffine(sub, M, (W, H), flags=cv2.INTER_LINEAR, borderValue=(-1, -1, -1))
+            tile = self.stills[j]
+            z = th / tile.shape[0]
+            M = np.float32([[z, 0, ecx + off - tw / 2], [0, z, cyy - th / 2]])
+            lay = cv2.warpAffine(tile, M, (W, H), flags=cv2.INTER_AREA if z < 0.8 else cv2.INTER_LINEAR,
+                                 borderValue=(-1, -1, -1))
             ok = lay[..., 0] >= 0
-            xl, xr = ecx + off - self.iw / 2, ecx + off + self.iw / 2
+            g = GAP * s / 2
+            xl, xr = ecx + off - tw / 2 + g, ecx + off + tw / 2 - g
             ok[:, :max(0, math.ceil(xl))] = False; ok[:, max(0, int(xr)):] = False
             img[ok] = lay[ok]
         return img
@@ -192,7 +228,7 @@ class Scene:
         blur = seg(k, T_UNLOCK) * (1 - seg(k, T_FOCUS))
         flare = math.exp(-((k - T_FOCUS[1]) / 9.0) ** 2)
         # camera
-        push = seg(k, T_PUSH) * (1 - seg(k, self.t_pull))
+        push = seg(k, T_PUSH) * (1 - seg(k, T_PULL))
         s = math.exp(math.log(ZOOM) * push)
         A = np.array(SIG_C)
         c = (A[0] + (W / 2 - A[0]) * push, A[1] + (H / 2 - A[1]) * push)
@@ -222,8 +258,12 @@ class Scene:
         edge = (0.06 + 0.22 * blur) * self.erx * s
         oval = np.clip((1 - e) * self.erx * s / max(edge, 1) + 0.5, 0, 1)
         halo = np.exp(-np.clip(e - 1, 0, None) / (0.35 + 0.3 * blur)) * (e > 0.98 - 0.2 * blur)
-        lit = (0.55 + 0.6 * cloud) * (0.92 + 0.22 * flare) * (1 - 0.18 * blur)
-        sigcol = np.array([255, 238, 186], np.float32)
+        # the light is uneven the way light on cloud is: brighter in the middle, mottled by the cloud it lands on
+        lt = fbm((px + sway * 0.4) / 46 + 11.3, py / 34 + 5.7, 4)
+        mott = np.clip((lt - 0.32) / 0.4, 0, 1)
+        lit = (0.68 + 0.3 * cloud + 0.24 * mott) * (1.1 - 0.24 * np.clip(e, 0, 1) ** 2)
+        lit = lit * (0.92 + 0.22 * flare) * (1 - 0.18 * blur)
+        sigcol = np.array([255, 228, 150], np.float32)
         img = img * (1 - oval[..., None]) + (sigcol * lit[..., None]) * oval[..., None]
         img += halo[..., None] * np.array([90, 80, 60], np.float32) * (0.5 + 0.5 * cloud[..., None]) * (0.8 + 0.5 * flare)
         # the bat: sharp on its mark, a faint smudge while the light searches; a window onto the films later on
@@ -234,16 +274,29 @@ class Scene:
             bb = cv2.GaussianBlur(bm, (0, 0), sig)
             bm = bm * (1 - blur) + bb * blur * (1 - 0.75 * blur)
         dark = np.array([12, 14, 22], np.float32) * (0.9 + 0.2 * cloud[..., None])
-        f_in = seg(k, T_IN) * (1 - seg(k, (self.t_out, self.t_out + T_OUT_LEN)))
+        # what shows in the bat: the cover's still until the light lets go of its mark, nothing while it searches,
+        # then the strip
+        f_in = (1 - seg(k, (T_UNLOCK[0], T_UNLOCK[0] + 10))) if k < T_STRIP[0] else 1.0
         if f_in > 0.001:
             ecx, ecy = tf(np.array([SIG_C]))[0]
-            films = self.strip(k, ecx, ecy)
-            inner = cv2.GaussianBlur(bm, (0, 0), 16)                   # a soft shadow just inside the bat's edge
-            films = films * (0.45 + 0.55 * np.clip(inner * 1.6 - 0.3, 0, 1))[..., None]
+            films = self.strip(k, ecx, ecy, s, np.broadcast_to(dark, (H, W, 3)).astype(np.float32) * 0.85)
+            if blur > 0.001:
+                films = cv2.GaussianBlur(films, (0, 0), 1 + 22 * blur * s)
+            # the stills only show in the bat's body: towards the wings they sink into the bat's own dark, so the bat
+            # keeps its silhouette and the light round it stays plainly light
+            wy = ecy + self.bcy * s
+            r = np.sqrt(((xs - ecx) / (WIN_RX * self.bw * s)) ** 2 + ((ys - wy) / (WIN_RY * self.bh * s)) ** 2)
+            wm = np.clip((1 - r) / (1 - WIN_SOFT), 0, 1); wm = wm * wm * (3 - 2 * wm)
+            films = dark * (1 - wm[..., None]) + films * wm[..., None]
             inside = dark * (1 - f_in) + films * f_in
         else:
             inside = dark
+        if blur <= 0.001:
+            bm = cv2.GaussianBlur(bm, (0, 0), 0.6 * s)                 # a projected edge, not a cut-out one
         img = img * (1 - bm[..., None]) + inside * bm[..., None]
+        # the light spills a little over the edges of the bat and the oval
+        spill = cv2.GaussianBlur(oval * (1 - bm), (0, 0), 7 * s)
+        img += spill[..., None] * sigcol * 0.13 * (1 - 0.5 * blur)
         # skyline and windows
         if s < 6:
             fk = self.poly_mask(self.far, tf)
@@ -260,9 +313,9 @@ class Scene:
             wl = np.asarray(lay, np.float32)[..., None] / 255
             img = img * (1 - wl * 0.9) + wl * 0.9 * np.array([255, 196, 110], np.float32)
         out = Image.fromarray(np.clip(img, 0, 255).astype("uint8"), "RGB").convert("RGBA")
-        ta = min(1.0, (1 - seg(k, T_TITLE_OUT)) + seg(k, self.t_title_in))
+        ta = min(1.0, (1 - seg(k, T_TITLE_OUT)) + seg(k, T_TITLE_IN))
         if ta > 0.001:
-            for im, y in ((self.title, 392), (self.sub, 392 + self.title.height + 18)):
+            for im, y in ((self.title, TITLE_Y), (self.sub, TITLE_Y + self.title.height + 18)):
                 t2 = im.copy() if im.mode == "RGBA" else Image.merge("RGBA", (*[Image.new("L", im.size, 236)] * 3, im))
                 t2.putalpha(t2.getchannel("A").point(lambda v: round(v * ta)))
                 out.alpha_composite(t2, (round(W / 2 - t2.width / 2), y))
