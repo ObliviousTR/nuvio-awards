@@ -162,7 +162,9 @@ class DC:
                 d.ellipse((x - wd, y - 3 - i, x + wd, y + 3 + i), fill=(150, 200, 255, al))
             st = st.filter(ImageFilter.GaussianBlur(3))
             cv.alpha_composite(st)
-            cv.alpha_composite(glow(Image.new("RGBA", (60, 60), (200, 230, 255, 255)), 30, (120, 180, 255), 1.4), (round(x - 60), round(y - 60)))
+            core = Image.new("RGBA", (160, 160), (0, 0, 0, 0))
+            ImageDraw.Draw(core).ellipse((50, 50, 110, 110), fill=(220, 240, 255, 255))
+            cv.alpha_composite(core.filter(ImageFilter.GaussianBlur(14)), (round(x - 80), round(y - 80)))
 
     def base(self, k, settle):
         cv = self.bg.copy().convert("RGBA")
@@ -304,7 +306,9 @@ class MiddleEarth:
         base = U.text_layer("MIDDLE-EARTH", f, (255, 255, 255), 14)
         self.word = U.gradient_fill(base, (255, 226, 150), (176, 120, 40))
         self.hot = U.gradient_fill(base, (255, 250, 220), (255, 150, 40))
-        self.rings = [fit(trim(f), 250, 250) for f in U.sticker("jU8YU7i8WJFLMMDrEb")]
+        rings = [trim(f) for f in U.sticker("jU8YU7i8WJFLMMDrEb") if f.getchannel("A").getbbox()]
+        big = max(r.width * r.height for r in rings)
+        self.rings = [fit(r, 250, 250) for r in rings if r.width * r.height > 0.25 * big]   # drop stray specks
         self.bg = radial((0, 0, 0), (34, 12, 2), cy=0.9, r=0.9)
         self.embers = particles(120, 21)
 
@@ -345,7 +349,7 @@ class MiddleEarth:
         place(cv, glow(padded(rg, 50), 28, (255, 110, 20), rh), W / 2, y, 1)
         place(cv, rg, W / 2, y, clamp(seg(k, 8, 26)) if not cover else 1)
         if not cover and 66 <= k < 80:
-            U.flash(cv, 0.35 * (1 - abs(k - 70) / 10), (255, 160, 60))
+            U.flash(cv, 0.18 * (1 - abs(k - 70) / 10), (255, 160, 60))
         p = seg(k, 84, 124) if not cover else 1
         if p > 0:
             hot = U.wipe(self.hot, p, soft=80)
