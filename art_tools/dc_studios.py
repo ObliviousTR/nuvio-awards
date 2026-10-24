@@ -70,7 +70,7 @@ class Scene:
         self.logo = Logo(os.path.join(src, "dc-studios.svg"))
         vx, vy, vw, vh = self.logo.vb
         self.k = 900 / vw
-        self.cy = 318
+        self.cy = 342
         self.o = (W / 2 - vw * self.k / 2 - vx * self.k, self.cy - vh * self.k / 2 - vy * self.k)
         self.stills = []
         for f in sorted(glob.glob(os.path.join(src, "stills", "*.jpg"))):
@@ -79,8 +79,10 @@ class Scene:
             im = im.resize((math.ceil(im.width * k), math.ceil(im.height * k)), Image.LANCZOS)
             x0, y0 = (im.width - W) // 2, (im.height - H) // 2
             self.stills.append(np.asarray(im.crop((x0, y0, x0 + W, y0 + H)), np.float32))
-        self.sub = self.text_line("THE COLLECTION", os.path.join(src, "Oswald-VF.ttf"), 400, 26, 16, (232, 236, 242))
-        self.sub_y = self.cy + vh * self.k / 2 + 40
+        # THE COLLECTION under STUDIOS, spread across the width of its rules (SVG x 436..1288, lower rule ends at y 327)
+        x0, x1 = self.o[0] + 436 * self.k, self.o[0] + 1288 * self.k
+        self.sub = self.justified("THE COLLECTION", os.path.join(src, "Oswald-VF.ttf"), 500, 30, x1 - x0, (240, 244, 250))
+        self.sub_x, self.sub_y = x0, self.o[1] + 327 * self.k + 16
         self.anchor, r_px = self.find_portal()
         self.s_max = max(30.0, 820 / r_px)
         y, x = np.mgrid[0:H, 0:W].astype(np.float32)
@@ -101,6 +103,21 @@ class Scene:
         dt = ndimage.distance_transform_edt(big)
         y, x = np.unravel_index(np.argmax(dt), dt.shape)
         return (x / 2, y / 2), dt[y, x] / 2
+
+    def justified(self, text, font, wght, size, width, color):
+        """letters spread evenly so the line is exactly `width` px wide"""
+        f = ImageFont.truetype(font, size * 4); f.set_variation_by_axes([wght])
+        ws = [f.getlength(c) for c in text]
+        boxes = [f.getbbox(c) for c in text]
+        ink = sum(ws) - boxes[0][0] - (ws[-1] - boxes[-1][2])
+        gap = (width * 4 - ink) / (len(text) - 1) - 0          # extra space between letter advances
+        extra = (width * 4 - ink) / (len(text) - 1)
+        im = Image.new("RGBA", (round(width * 4) + 8, size * 6), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im); x = -boxes[0][0]
+        for c, w in zip(text, ws):
+            d.text((x, size * 4.6), c, font=f, fill=color + (255,), anchor="ls"); x += w + extra
+        bb = im.getbbox(); im = im.crop((0, bb[1], im.width, bb[3]))
+        return im.resize((round(im.width / 4), round(im.height / 4)), Image.LANCZOS)
 
     def text_line(self, text, font, wght, size, track, color):
         f = ImageFont.truetype(font, size * 2); f.set_variation_by_axes([wght])
@@ -141,7 +158,7 @@ class Scene:
         out = Image.fromarray(np.clip(img, 0, 255).astype("uint8"), "RGB").convert("RGBA")
         if sub_a > 0.001:
             t = self.sub.copy(); t.putalpha(t.getchannel("A").point(lambda v: round(v * sub_a)))
-            out.alpha_composite(t, (round(W / 2 - t.width / 2), round(self.sub_y)))
+            out.alpha_composite(t, (round(self.sub_x), round(self.sub_y)))
         return out.convert("RGB")
 
 
