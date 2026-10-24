@@ -127,8 +127,8 @@ def find_coeffs(dst, src):
 
 
 class StarWars:
-    n = 274            # 11 s: recede + crawl, the cover rises from below, a short hold
-    RISE0, RISE1 = 222, 262
+    n = 254            # 10 s: recede + crawl, the cover rises from below, a short hold
+    RISE0, RISE1 = 200, 240
     YELLOW = (229, 177, 58)
 
     def __init__(self):
