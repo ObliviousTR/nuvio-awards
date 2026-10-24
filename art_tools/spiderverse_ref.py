@@ -55,6 +55,8 @@ def split_logo(cv, s, oy):
 
 
 FACE, SHADE, STILLS = None, None, []
+TITLES = []                 # one per still: the line under the logo shows it while that still is up
+LINE = "THE COLLECTION"
 MODE = ["letters"]          # "letters": the heroes flip by inside the letters; "behind": full frame behind the logo
 
 
@@ -156,7 +158,49 @@ def frame(k, bg, logo, box, cover=False):
         band = ImageChops.multiply(band.filter(ImageFilter.GaussianBlur(18)), ImageChops.multiply(letters, lg.getchannel("A")))
         lay = Image.new("RGBA", (W, H), (255, 255, 255, 0)); lay.putalpha(band)
         out.alpha_composite(lay)
+    draw_line(out, k, box, cover, g)
     return out.convert("RGB")
+
+
+def line_font(size=24):
+    for p in (os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scripts", ".cache"),):
+        for f in sorted(os.listdir(p)):
+            if "Montserrat" in f:
+                ft = ImageFont.truetype(os.path.join(p, f), size); ft.set_variation_by_axes([700]); return ft
+    return ImageFont.load_default()
+
+
+def text_layer(text, size=24, track=6, color=(225, 238, 255)):
+    ft = line_font(size)
+    ws = [ft.getlength(c) for c in text]
+    tw = round(sum(ws) + track * (len(text) - 1)) + 4
+    im = Image.new("RGBA", (tw, size * 2), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im); x = 2
+    for c, w in zip(text, ws):
+        d.text((x, size * 0.3), c, font=ft, fill=color + (255,)); x += w + track
+    return im.crop(im.getbbox() or (0, 0, 1, 1))
+
+
+def draw_line(out, k, box, cover=False, glitch=0.0):
+    """THE COLLECTION under the logo; while the heroes flip by, the title of each film / series runs through it"""
+    y = box[3] + 34
+    i = (k - FLIP0) // HOLD
+    flipping = not cover and TITLES and 0 <= i < len(TITLES)
+    if flipping:
+        j = (k - FLIP0) % HOLD
+        lay = text_layer(TITLES[i], size=22, track=4, color=(255, 255, 255))
+        a = min(1.0, (j + 1) / 2); dy = round(10 * (1 - a))
+    else:
+        lay = text_layer(LINE, size=24, track=9)
+        a, dy = 1.0, 0
+    x = round(W / 2 - lay.width / 2)
+    if glitch > 0:
+        sh = round(10 * glitch)
+        r = lay.copy(); r.putalpha(r.getchannel("A").point(lambda v: round(v * 0.8)))
+        red = Image.new("RGBA", lay.size, (255, 40, 60, 0)); red.putalpha(r.getchannel("A"))
+        cyan = Image.new("RGBA", lay.size, (40, 230, 255, 0)); cyan.putalpha(r.getchannel("A"))
+        out.alpha_composite(red, (x - sh, y + dy)); out.alpha_composite(cyan, (x + sh, y + dy))
+    out.alpha_composite(lay if a >= 1 else U_alpha(lay, a), (x, y + dy))
 
 
 def tagline(im, y, text="EVERY SPIDER  ·  EVERY UNIVERSE"):
@@ -197,6 +241,8 @@ def main(ref, out, keep_marvel=False, stills=()):
 
 if __name__ == "__main__":
     st = sys.argv[sys.argv.index("--stills") + 1].split(",") if "--stills" in sys.argv else []
+    if "--titles" in sys.argv:
+        TITLES[:] = sys.argv[sys.argv.index("--titles") + 1].split(";")
     if "--behind" in sys.argv:
         MODE[0] = "behind"
     main(sys.argv[1], sys.argv[2], "--keep-marvel" in sys.argv, st)
