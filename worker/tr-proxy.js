@@ -76,6 +76,23 @@ function cors(resp) {
   return headers;
 }
 
+const PP_ORIGIN = "https://postersplus.slokker.cc";
+
+async function posterRedirect(url, base, env) {
+  const target = new URL(PP_ORIGIN + url.pathname.slice((base + "/pp").length) + url.search);
+  try {
+    const q = target.searchParams;
+    const type = q.get("type") === "series" || q.get("type") === "tv" ? "series" : "movie";
+    const set = await keys(env);
+    const cands = [q.get("imdb_id"), q.get("stremio_id"), q.get("tmdb_id") && `tmdb:${q.get("tmdb_id")}`]
+      .filter(Boolean).map(id => `${type}|${id}`);
+    const key = set && cands.find(k => set.has(k));
+    const e = key && await entry(env, key);
+    if (e && e[1]) q.set("logo_priority", PP_LOGO);
+  } catch (err) { /* plain redirect */ }
+  return new Response(null, { status: 302, headers: { Location: target.toString(), "Cache-Control": "public, max-age=86400" } });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -86,6 +103,9 @@ export default {
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*" } });
     }
+    // Posters+ through the app's own custom-poster pattern: <base>/pp/<path>?<query> redirects to
+    // postersplus.slokker.cc/<path>?<query>, with the Turkish logo asked for when the title is Turkish and has one
+    if (url.pathname.startsWith(base + "/pp/")) return posterRedirect(url, base, env);
     const upstream = env.AIO_ORIGIN.replace(/\/+$/, "") + url.pathname + url.search;
     const resp = await fetch(upstream, { method: request.method, headers: request.headers, redirect: "follow" });
     const m = url.pathname.slice(base.length).match(/^\/(catalog|meta)\/([^/]+)\/([^/]+)\.json$|^\/(catalog)\/([^/]+)\//);
