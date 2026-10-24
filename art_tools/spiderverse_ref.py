@@ -181,24 +181,49 @@ def text_layer(text, size=24, track=6, color=(225, 238, 255)):
     return im.crop(im.getbbox() or (0, 0, 1, 1))
 
 
+def glow_text(text, size, track, top, bottom, glow=(60, 200, 255), strength=0.9):
+    lay = text_layer(text, size=size, track=track)
+    w, h = lay.size
+    g = Image.new("RGBA", (w, h))
+    for yy in range(h):
+        f = yy / max(1, h - 1)
+        g.paste(tuple(round(top[i] + (bottom[i] - top[i]) * f) for i in range(3)) + (255,), (0, yy, w, yy + 1))
+    g.putalpha(lay.getchannel("A"))
+    pad = 24
+    out = Image.new("RGBA", (w + 2 * pad, h + 2 * pad), (0, 0, 0, 0))
+    gl = Image.new("RGBA", out.size, glow + (0,))
+    m = Image.new("L", out.size, 0); m.paste(lay.getchannel("A"), (pad, pad))
+    gl.putalpha(m.filter(ImageFilter.GaussianBlur(9)).point(lambda v: round(min(255, v * strength))))
+    out.alpha_composite(gl); out.alpha_composite(g, (pad, pad))
+    return out
+
+
+LINE_Y = 532        # centre of the line under the logo (cover scale)
+
+
 def draw_line(out, k, box, cover=False, glitch=0.0):
-    """THE COLLECTION under the logo; while the heroes flip by, the title of each film / series runs through it"""
-    y = box[3] + 34
+    """THE COLLECTION under the logo; while the heroes flip by, each film / series title (year below) runs through it"""
     i = (k - FLIP0) // HOLD
     flipping = not cover and TITLES and 0 <= i < len(TITLES)
     if flipping:
         j = (k - FLIP0) % HOLD
-        lay = text_layer(TITLES[i], size=22, track=4, color=(255, 255, 255))
+        name, _, year = TITLES[i].partition("|")
+        t = glow_text(name.strip(), 26, 5, (255, 255, 255), (215, 235, 255), strength=0.6)
+        lay = Image.new("RGBA", (max(t.width, 10), t.height + 30), (0, 0, 0, 0))
+        lay.alpha_composite(t, ((lay.width - t.width) // 2, 0))
+        if year.strip():
+            yv = glow_text(year.strip(), 21, 8, (150, 235, 255), (90, 190, 255), strength=0.5)
+            lay.alpha_composite(yv, ((lay.width - yv.width) // 2, t.height - 22))
         a = min(1.0, (j + 1) / 2); dy = round(10 * (1 - a))
     else:
-        lay = text_layer(LINE, size=24, track=9)
+        lay = glow_text(LINE, 34, 14, (255, 255, 255), (130, 225, 255))
         a, dy = 1.0, 0
     x = round(W / 2 - lay.width / 2)
+    y = round(LINE_Y - (lay.height if not flipping else lay.height - 20) / 2) - (6 if not flipping else 16)
     if glitch > 0:
         sh = round(10 * glitch)
-        r = lay.copy(); r.putalpha(r.getchannel("A").point(lambda v: round(v * 0.8)))
-        red = Image.new("RGBA", lay.size, (255, 40, 60, 0)); red.putalpha(r.getchannel("A"))
-        cyan = Image.new("RGBA", lay.size, (40, 230, 255, 0)); cyan.putalpha(r.getchannel("A"))
+        red = Image.new("RGBA", lay.size, (255, 40, 60, 0)); red.putalpha(lay.getchannel("A").point(lambda v: round(v * 0.7)))
+        cyan = Image.new("RGBA", lay.size, (40, 230, 255, 0)); cyan.putalpha(lay.getchannel("A").point(lambda v: round(v * 0.7)))
         out.alpha_composite(red, (x - sh, y + dy)); out.alpha_composite(cyan, (x + sh, y + dy))
     out.alpha_composite(lay if a >= 1 else U_alpha(lay, a), (x, y + dy))
 
