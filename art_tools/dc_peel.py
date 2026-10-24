@@ -1,9 +1,9 @@
 """DC card, as the DC "peel" ident (DC Entertainment, Landor 2012; used on the films 2012-2016): the steel D with its
 corner peeled back over the dark C beneath, DC UNIVERSE and THE COLLECTION under it, on a deep night blue.
 Hover (10 s): light rises behind the logo and shines through the C; the peel lifts further back and stays lifted,
-breathing, while the C underneath shows the heroes one after another - Superman, Batman, Wonder Woman, Green Lantern,
-The Flash - their emblems embossed in the steel, as in the character versions of the peel; then the peel settles
-back, the light goes down and the card is the cover again. The logo never leaves the screen.
+breathing, while its back - the hidden side, the dual identity - shows the heroes one after another, Superman,
+Batman, Wonder Woman, Green Lantern, The Flash, their emblems engraved in the polished steel and caught by a glint;
+then the peel settles back, the light goes down and the card is the cover again. The logo never leaves the screen.
 The peel is modelled, not traced: the D (a box and a circle), the C (the D minus a round counter and a mouth), a fold
 line, and the flap as the peeled part folded back over the fold and foreshortened by the curl. The geometry is
 measured from the DC Entertainment logo, in its pixels (D from x 14 to 277, y 5 to 295).
@@ -53,9 +53,9 @@ def emblem_canvas(name, font):
     """a hero's emblem as a filled silhouette, in the D's own pixels (4x), centred in the open part of the counter"""
     S = 4; W, H = 300 * S, 310 * S
     im = Image.new("L", (W, H), 0); d = ImageDraw.Draw(im)
-    cx, cy = 172 * S, 152 * S
+    cx, cy = 150 * S, 155 * S
     P = lambda pts, s=1.0: [(cx + x * s * S, cy + y * s * S) for x, y in pts]
-    g = 0.31
+    g = 0.27
     if name == "superman":
         shield = [(-120, -78), (120, -78), (150, -38), (0, 128), (-150, -38)]
         d.polygon(P(shield, g), fill=255)
@@ -81,9 +81,14 @@ def emblem_canvas(name, font):
         for y0 in (-118, 82):
             d.rectangle([cx - 120 * g * S, cy + y0 * g * S, cx + 120 * g * S, cy + (y0 + 36) * g * S], fill=255)
     elif name == "flash":
-        bolt = [(-128, -64), (36, -24), (8, -6), (150, 38), (-20, 4), (6, -12)]
-        d.polygon(P(bolt, g * 1.1), fill=255)
-    a = np.asarray(im, np.float32) / 255
+        bolt = [(-40, -150), (60, -150), (20, -40), (80, -40), (-50, 150), (-10, 10), (-60, 10)]
+        d.polygon(P(bolt, g), fill=255)
+    # same size and centre for all of them: fit the emblem's box in 76 x 76 D pixels round (cx, cy)
+    bb = im.getbbox(); e = im.crop(bb)
+    f = min(76 * S / e.width, 76 * S / e.height)
+    e = e.resize((round(e.width * f), round(e.height * f)), Image.LANCZOS)
+    out = Image.new("L", (W, H), 0); out.paste(e, (round(cx - e.width / 2), round(cy - e.height / 2)))
+    a = np.asarray(out, np.float32) / 255
     return cv2.GaussianBlur(a, (0, 0), 1.2)
 
 
@@ -127,8 +132,7 @@ class Scene:
         self.emb = {}
         for n in EMBLEMS:
             a = emblem_canvas(n, font)
-            m = cv2.remap(a, self.px * 4, self.py * 4, cv2.INTER_LINEAR)
-            self.emb[n] = m
+            self.emb[n] = a
         # background: rays from behind the counter of the C
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
         self.ccx = self.ox + (KX + 30) * self.k; self.ccy = self.oy + KY * self.k
@@ -143,6 +147,10 @@ class Scene:
         vg = np.sqrt(((xx - W / 2) / (W * 0.6)) ** 2 + ((yy - H / 2) / (H * 0.62)) ** 2)
         self.vig = 1 - 0.45 * np.clip(vg - 0.4, 0, 1) ** 1.3
         self.yy, self.xx = yy, xx
+        # where the emblems sit: the middle of the flap when the peel is fully lifted
+        fl = self.logo(0, 1.0)[4]
+        ys_ = self.py[fl]; self.efy = ys_.min() + (ys_.max() - ys_.min()) * 0.56
+        self.efx = float(self.px[fl & (np.abs(self.py - self.efy) < 6)].mean())
 
     def background(self, k, light):
         rot = 0.002 * k
@@ -196,18 +204,9 @@ class Scene:
         holes = rev & ~self.C
         dd = np.hypot(self.px - 172, self.py - KY)
         core = np.exp(-(dd / 70) ** 2)
-        sil = np.zeros_like(core)
         span = (T_EMB[1] - T_EMB[0]) / len(EMBLEMS)
-        for i, nme in enumerate(EMBLEMS):
-            a0 = T_EMB[0] + i * span
-            vis = smooth((k - a0) / 7) * (1 - smooth((k - (a0 + span - 3)) / 7))
-            if i == len(EMBLEMS) - 1:
-                vis = smooth((k - a0) / 7) * (1 - seg(k, (T_DROP[0] - 6, T_DROP[0] + 8)))
-            if vis > 0.001:
-                sil = np.maximum(sil, self.emb[nme] * vis)
         pulse = sum(math.exp(-((k - (T_EMB[0] + i * span + 3)) / 4.0) ** 2) for i in range(len(EMBLEMS)))
         lightc = (core * (0.75 + 0.25 * pulse) + 0.15)[..., None] * np.array([200, 225, 255], np.float32) * light
-        lightc = lightc * (1 - 0.92 * sil[..., None])
         hl = holes & (light > 0.001)
         col[hl] = lightc[hl]; alpha[hl] = np.clip(light * 1.4, 0, 1)
         # rim light where the C meets the holes, from the light behind
@@ -220,6 +219,30 @@ class Scene:
         lip = np.exp(-((-t) / (5.0)) ** 2)
         fv = fv - 70 * lip * np.clip(1 - (self.py - Y0) / 80, 0, 1)
         fcol = fv[..., None] * np.array([0.95, 0.98, 1.04], np.float32)
+        # the back of the peel carries the hero: the emblem engraved in the polished steel, centred on the flap
+        if flap.any():
+            fx = self.efx + 0.6 * 4 * math.sin(k * 0.21) * lift; fy = self.efy
+            eng = np.zeros(fv.shape, np.float32); glint = 0.0
+            for i, nme in enumerate(EMBLEMS):
+                a0 = T_EMB[0] + i * span
+                vis = smooth((k - a0) / 7) * (1 - smooth((k - (a0 + span - 3)) / 7))
+                if i == len(EMBLEMS) - 1:
+                    vis = smooth((k - a0) / 7) * (1 - seg(k, (T_DROP[0] - 6, T_DROP[0] + 8)))
+                if vis > 0.001:
+                    m = cv2.remap(self.emb[nme], ((self.px - fx + 150) * 4).astype(np.float32), ((self.py - fy + 155) * 4).astype(np.float32), cv2.INTER_LINEAR)
+                    eng = np.maximum(eng, m * vis)
+                    glint = max(glint, math.exp(-(((k - a0) - 12) / 6.0) ** 2) * vis)
+            if eng.max() > 0.001:
+                b = cv2.GaussianBlur(eng, (0, 0), 1.6 * SS * sc)
+                gx_ = cv2.Sobel(b, cv2.CV_32F, 1, 0, ksize=3); gy_ = cv2.Sobel(b, cv2.CV_32F, 0, 1, ksize=3)
+                bev = np.clip((gx_ + gy_) * 5, -1, 1)                # engraved: lit on the far edge, dark on the near one
+                face = eng[..., None] * np.array([-120, -104, -70], np.float32)
+                edge = (np.clip(bev, 0, 1) * (60 + 120 * glint) - np.clip(-bev, 0, 1) * 70)[..., None]
+                fcol = fcol + face + edge
+                if glint > 0.01:
+                    sx = self.px - fx; sy = self.py - fy
+                    band = np.exp(-(((sx + sy * 0.5) - (-60 + 120 * min(1, glint * 1.2))) / 10) ** 2) * glint
+                    fcol = fcol + band[..., None] * 50
         col[flap] = fcol[flap]; alpha[flap] = 1
         # down to screen size and over the background
         h2, w2 = self.rh, self.rw
