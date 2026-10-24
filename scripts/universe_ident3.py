@@ -270,13 +270,14 @@ class Wizarding3(V.Wizarding):
         rise = smooth(seg(k, 30, 62)) * (1 - smooth(seg(k, 168, 192)))
         fan = smooth(seg(k, 52, 118)) * (1 - smooth(seg(k, 146, 178)))
         cam = 1 + 0.05 * math.sin(math.pi * seg(k, 0, self.n))
-        self.tag_a = smooth(seg(k, 110, 128)) * (1 - smooth(seg(k, 150, 166)))   # the line writes in once the fan is open
+        self.tag_a = smooth(seg(k, 110, 128))                       # the line writes in once the fan is open...
+        self.tag_f = 1 - smooth(seg(k, 148, 162))                   # ...and fades before the fan closes
         return down, bar, rise, fan, cam
 
     def scene(self, k, cover=False):
         down, bar, rise, fan, cam = (0, 0, 0, 0, 1) if cover else self.timeline(k)
         if cover:
-            self.tag_a = 0
+            self.tag_a, self.tag_f = 0, 0
         ty = self.TY0 + (self.TY1 - self.TY0) * down
         self.ty = ty
         self.pivot = (W / 2, ty - self.text.height / 2 - 18)
@@ -298,10 +299,10 @@ class Wizarding3(V.Wizarding):
             b = self.bar.resize((max(1, round(self.bar.width * (0.2 + 0.8 * bar))), self.bar.height))
             st.alpha_composite(U.alpha(b, bar), (round(px - b.width / 2), round(py - 2)))
         place(st, self.text, W / 2, ty, 1)
-        if self.tag_a > 0:
+        if self.tag_a > 0 and self.tag_f > 0:
             tg = Image.new("RGBA", (W, H), (0, 0, 0, 0))
             U.tagline(tg, self.tag, ty + self.text.height / 2 + 42, 1, size=22, color=(214, 196, 150))
-            st.alpha_composite(V.wipe_lr(tg, self.tag_a) if hasattr(V, "wipe_lr") else U.wipe(tg, self.tag_a, soft=120))
+            st.alpha_composite(U.alpha(U.wipe(tg, self.tag_a, soft=120), self.tag_f))
         scaled_onto(cv, st, cam, W / 2, H / 2 + 20)
         d = ImageDraw.Draw(cv)
         u = 2 * math.pi * ((0 if cover else k) / self.n)     # periodic over the loop: dust is where it began
