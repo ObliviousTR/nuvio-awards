@@ -1,4 +1,4 @@
-# Library report — 2026-10-22
+# Library report — 2026-10-25
 
 648 catalogs
 
@@ -61,7 +61,7 @@
 - **The Skywalker Saga** (9): Star Wars, The Empire Strikes Back, Return of the Jedi, Star Wars: Episode I - The Phantom Menace, Star Wars: Episode II - Attack of the Clones, Star Wars: Episode III - Revenge of the Sith, Star Wars: The Force Awakens, Star Wars: The Last Jedi, Star Wars: The Rise of Skywalker
 - **Anthology & Spin-off Films** (4): The Star Wars Holiday Special, Rogue One: A Star Wars Story, Solo: A Star Wars Story, The Mandalorian and Grogu
 - **Live-Action Series** (7): The Mandalorian, The Book of Boba Fett, Obi-Wan Kenobi, Andor, Ahsoka, The Acolyte, Star Wars: Skeleton Crew
-- **Animated Series** (11): Star Wars: Clone Wars, Star Wars: The Clone Wars, Star Wars Rebels, Star Wars Resistance, Star Wars: The Bad Batch, Star Wars: Visions, Star Wars: Tales of the Jedi, Star Wars: Tales of the Empire, Star Wars: Tales of the Underworld, Star Wars: Maul - Shadow Lord, Star Wars: Visions Presents - The Ninth Jedi
+- **Animated Series** (12): Star Wars: Clone Wars, Star Wars: The Clone Wars, Star Wars Rebels, Star Wars Blips, Star Wars Resistance, Star Wars: The Bad Batch, Star Wars: Visions, Star Wars: Tales of the Jedi, Star Wars: Tales of the Empire, Star Wars: Tales of the Underworld, Star Wars: Maul - Shadow Lord, Star Wars: Visions Presents - The Ninth Jedi
 - **LEGO & Young Audiences** (5): LEGO Star Wars: Droid Tales, Star Wars: Forces of Destiny, LEGO Star Wars: All-Stars, Star Wars Galaxy of Adventures, LEGO Star Wars: Rebuild the Galaxy
 - **Animated Films** (5): Star Wars: The Clone Wars, LEGO Star Wars Holiday Special, LEGO Star Wars Terrifying Tales, LEGO Star Wars Summer Vacation, LEGO Star Wars: The Mandalorian
 
@@ -172,7 +172,7 @@
 - **Drama Collections**: 9 rails — Creed (3), Magic Mike (3), Step Up (5), Fifty Shades (3), Rocky (6), Goal! (3), The Before (3), After (5), The Best Exotic Marigold Hotel (2)
 - **Family & Animation Collections**: 37 rails — Alvin and the Chipmunks (4), Cars (3), Despicable Me (4), Diary of a Wimpy Kid (4), Finding Nemo (2), Home Alone (4), Hotel Transylvania (4), How to Train Your Dragon (3), Ice Age (6), Kung Fu Panda (4), Madagascar (3), Monsters, Inc. (2), Paddington (3), Scooby-Doo (2), Shrek (4), Sing (2), The Addams Family (Animated) (2), The Boss Baby (2), The Incredibles (2), The Lego Movie (2), The Secret Life of Pets (2), Toy Story (5), Trolls Holiday (2), Wreck-It Ralph (2), Cloudy with a Chance of Meatballs (2), Inside Out (2), Minions (3), Spy Kids (4), The Lion King (3), Aladdin (3), Beauty and the Beast (3), The Little Mermaid (3), Mulan (2), The Land Before Time (14), Teenage Mutant Ninja Turtles (3), Open Season (4), The Mighty Ducks (3)
 - **Fantasy Collections**: 14 rails — Ghostbusters (4), Jumanji (3), National Treasure (2), Night at the Museum (3), Percy Jackson (2), Pirates of the Caribbean (5), The Chronicles of Narnia (3), The Mummy (3), The Twilight (5), Clash of the Titans (2), Highlander (5), Mortal Kombat (2), Hellboy (2), Conan the Barbarian (2)
-- **Horror Collections**: 35 rails — A Nightmare on Elm Street (7), A Quiet Place (2), Blade (3), Child's Play (7), Evil Dead (3), Final Destination (6), Friday the 13th (11), Halloween (11), Hellraiser (10), It (2), Jaws (4), Paranormal Activity (7), Poltergeist (3), Resident Evil (6), Saw (10), Scream (7), The Exorcist (6), The Grudge (3), The Omen (5), The Purge (5), The Ring (3), Tremors (7), Underworld (5), V/H/S (9), 28 Days/Weeks/Years Later (4), Jeepers Creepers (3), Texas Chainsaw Massacre (8), Zombieland (2), Psycho (4), The Fly (3), Candyman (4), Sinister (2), Silent Hill (3), Phantasm (5), The Amityville (10)
+- **Horror Collections**: 35 rails — A Nightmare on Elm Street (7), A Quiet Place (2), Blade (3), Child's Play (7), Evil Dead (3), Final Destination (6), Friday the 13th (11), Halloween (11), Hellraiser (10), It (2), Jaws (4), Paranormal Activity (7), Poltergeist (3), Resident Evil (6), Saw (10), Scream (7), The Exorcist (6), The Grudge (3), The Omen (5), The Purge (5), The Ring (3), Tremors (7), Underworld (5), V/H/S (9), 28 Days/Weeks/Years Later (4), Jeepers Creepers (3), Texas Chainsaw Massacre (7), Zombieland (2), Psycho (4), The Fly (3), Candyman (4), Sinister (2), Silent Hill (3), Phantasm (5), The Amityville (10)
 - **Mystery Collections**: 7 rails — Knives Out (3), Robert Langdon (3), Sherlock Holmes (2), Enola Holmes (3), Now You See Me (3), Hercule Poirot (Kenneth Branagh) (3), Murder Mystery (2)
 - **Sci-Fi Collections**: 13 rails — Back to the Future (3), Blade Runner (2), Divergent (3), Pacific Rim (2), RoboCop (3), Starship Troopers (3), The Hunger Games (4), TRON (3), Avatar (3), Cloverfield (3), The Chronicles of Riddick (3), Men in Black (3), The Maze Runner (3)
 - **Thriller Collections**: 7 rails — Hannibal Lecter (3), Escape Room (2), Don't Breathe (2), Sicario (2), Eastrail 177 (3), The Jack Ryan (3), Basic Instinct (2)
@@ -186,7 +186,7 @@
 - Leonardo DiCaprio: Essential Films 33; Top Rated 31; Latest 33
 - Brad Pitt: Essential Films 56; Top Rated 48; Latest 56
 - Joaquin Phoenix: Essential Films 38; Top Rated 35; Latest 38
-- Matthew McConaughey: Essential Films 49; Top Rated 42; Latest 49; Series 3
+- Matthew McConaughey: Essential Films 49; Top Rated 42; Latest 49; Series 2
 - Jake Gyllenhaal: Essential Films 44; Top Rated 38; Latest 44
 - Cillian Murphy: Essential Films 40; Top Rated 30; Latest 40; Series 2
 - Mads Mikkelsen: Essential Films 45; Top Rated 32; Latest 45; Series 2
@@ -220,7 +220,7 @@
 - Simon Pegg: Essential Films 39; Top Rated 31; Latest 39; Series 8
 - Jackie Chan: Essential Films 100; Top Rated 61; Latest 100
 - Song Kang-ho: Essential Films 32; Top Rated 16; Latest 32; Series 2
-- Robert Pattinson: Essential Films 35; Top Rated 27; Latest 35
+- Robert Pattinson: Essential Films 35; Top Rated 28; Latest 35
 - Meryl Streep: Essential Films 63; Top Rated 53; Latest 63; Series 4
 - Anne Hathaway: Essential Films 43; Top Rated 40; Latest 43
 - Tilda Swinton: Essential Films 66; Top Rated 43; Latest 66
@@ -257,7 +257,7 @@
 - Bong Joon-ho: Best Of 9; Recent 15
 - Park Chan-wook: Best Of 11; Recent 20; Series 2
 - Francis Ford Coppola: Best Of 22; Recent 32; Series 2
-- Ridley Scott: Best Of 30; Recent 36; Series 6
+- Ridley Scott: Best Of 30; Recent 35; Series 6
 - James Cameron: Best Of 11; Recent 16
 - Paul Thomas Anderson: Best Of 11; Recent 20
 - Joel & Ethan Coen: Best Of 23; Recent 24
@@ -286,7 +286,14 @@
 - Billy Wilder: Best Of 24; Recent 27
 
 ## Candidates (one signal — approve or reject)
-- Spider-Verse → Wild Arms: Twilight Venom (1999) `tv:39026` [title]
+- Batman & Gotham → Gotham Stories (2016) `tv:297214` [title]
+- X-Men & Mutants → Astonishing X-Men (2009) `tv:117657` [title]
+- Godzilla & Kong → Hong Kong Story II (1978) `tv:109199` [title]
+- Alien & Predator → Alien News Desk (2019) `tv:86269` [title]
 - The Matrix → Matrix (1993) `tv:11393` [title]
+- Transformers → Transformers: BotBots (2022) `tv:125574` [title]
+- Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
+- Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
 
 ## Log
+- Star Wars: added Star Wars Blips (2017) [co+title]
