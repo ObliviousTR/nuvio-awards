@@ -153,7 +153,7 @@ class Scene:
         M = np.float32([[z * z0, 0, W / 2 - cx * z * z0], [0, z * z0, H / 2 - (cy - 30) * z * z0]])
         img = cv2.warpAffine(bg, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
         # a soft shadow under the title so it sits in front of the storm
-        img *= (1 - 0.45 * bigblur(self.la, 18))[..., None]
+        img *= (1 - 0.45 * bigblur(self.la, 18) - 0.55 * np.clip(bigblur(self.sub, 12) * 2.5, 0, 1))[..., None]   # keeps THE COLLECTION readable
         # the title: rust, catching the flash on the edges that face the strike
         L = np.dstack([self.bolt_x - self.xx, -400 - self.yy]); L /= np.linalg.norm(L, axis=2, keepdims=True) + 1e-6
         facing = np.clip(-(self.gx * L[..., 0] + self.gy * L[..., 1]) * 6, 0, 1)
