@@ -127,7 +127,7 @@ def panels(alpha, x0, y0, w, h, seed, smin=16, smax=46):
     return out
 
 
-TO_START, BACK_START = 6, 122
+TO_START, BACK_START = 1, 122
 
 
 class Transform(Stage):

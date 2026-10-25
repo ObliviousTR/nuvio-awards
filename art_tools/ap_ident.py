@@ -248,13 +248,13 @@ class Hunt(Base):
 
 
 class Encounter(Base):
-    T_DARK = (16, 28)
-    T_FRAG = (30, 80)
-    T_BLUE = (78, 116)
-    T_CLOAK = (114, 132)
-    T_LASER = (128, 168)
-    T_DECLOAK = (162, 182)
-    T_RED = (180, 226)
+    T_DARK = (3, 15)
+    T_FRAG = (17, 67)
+    T_BLUE = (65, 103)
+    T_CLOAK = (101, 119)
+    T_LASER = (115, 155)
+    T_DECLOAK = (149, 169)
+    T_RED = (167, 226)
 
     def __init__(self, src):
         super().__init__()

@@ -25,8 +25,8 @@ KX, KY, KR = 121.0, 152.5, 81.0
 MY0, MY1 = 136.0, 168.0
 F0 = np.array([100.0, 5.0]); F1 = np.array([207.0, 270.0])
 CURL, SHEAR = 0.75, -0.25
-T_LIFT = (18, 52); T_DROP = (196, 228)
-T_LIGHT = (12, 50); T_DARK = (200, 234)
+T_LIFT = (6, 42); T_DROP = (196, 228)
+T_LIGHT = (2, 40); T_DARK = (200, 234)
 T_EMB = (50, 196)
 NAVY = np.array([5, 8, 17], np.float32)
 EMBLEMS = ["superman", "batman", "wonderwoman", "lantern", "flash"]
