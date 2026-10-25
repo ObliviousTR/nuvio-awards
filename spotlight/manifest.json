@@ -1,6 +1,6 @@
 {
   "id": "community.oblivioustr.nuvio-spotlight",
-  "version": "1.20.20261024",
+  "version": "1.20.20261025",
   "name": "Nuvio Spotlight",
   "description": "Rotating spotlights (actor, director, studio, saga, season, Oscar talent, legends, eras, Turkish stars) and daily charts, rebuilt from TMDB.",
   "resources": [
@@ -257,7 +257,7 @@
     {
       "type": "movie",
       "id": "spotlight-pulse-movies",
-      "name": "Slashers & Masked Killers · Movies",
+      "name": "Halloween Night · Movies",
       "extra": [
         {
           "name": "search",
@@ -272,7 +272,7 @@
     {
       "type": "series",
       "id": "spotlight-pulse-series",
-      "name": "Slashers & Masked Killers · Series",
+      "name": "Halloween Night · Series",
       "extra": [
         {
           "name": "search",

@@ -7,7 +7,7 @@
     "legend": "Vincent Price",
     "powerhouse": "Blumhouse Productions",
     "prestige": "Meryl Streep",
-    "pulse": "Slashers & Masked Killers",
+    "pulse": "Halloween Night",
     "retro": "Universal & Hammer Monsters",
     "saga": "Alien",
     "simkl": "poster-wall-1",
@@ -22,7 +22,7 @@
     "legend": "/nxE4O2EFIOfanWkdaCWiBRfwjrn.jpg",
     "powerhouse": "/9pkZesKMnblFfKxEhQx45YQ2kIe.jpg",
     "prestige": "/gkh6Nt8DtY1XT4gQsyFq9XAVJlJ.jpg",
-    "pulse": "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "pulse": "/qVGpxnjrGlHaSTCqTQI6viBDSfp.jpg",
     "retro": "/wFbPbJ9uRDpjY7micBTeolgkOA4.jpg",
     "saga": "/6X42JnSMdo3dPAswOHUuvebdTq7.jpg",
     "visionary": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
@@ -50,8 +50,8 @@
       "subject": "Meryl Streep"
     },
     "pulse": {
-      "since": "10-15",
-      "subject": "Slashers & Masked Killers"
+      "since": "10-25",
+      "subject": "Halloween Night"
     },
     "retro": {
       "period": 20,
@@ -147,5 +147,5 @@
     }
   },
   "pin": {},
-  "updated": "2026-10-24"
+  "updated": "2026-10-25"
 }

@@ -1,7 +1,7 @@
-# Spotlight status — 2026-10-24
+# Spotlight status — 2026-10-25
 
 Next rotation (all rotating cards): **2026-10-26**
-Next Cultural Pulse theme starts: **2026-10-25**
+Next Cultural Pulse theme starts: **2026-11-03**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
@@ -13,8 +13,8 @@ Next Cultural Pulse theme starts: **2026-10-25**
 | The Living Legend | Vincent Price | 72 | 1 |  |
 | Retro Rewind | Universal & Hammer Monsters | 100 | 0 |  |
 | Yerli Yıldız | Kıvanç Tatlıtuğ | 7 | 11 |  |
-| The Cultural Pulse | Slashers & Masked Killers | 100 | 78 |  |
-| Fresh Out of Theaters | daily | 50 | 42 |  |
+| The Cultural Pulse | Halloween Night | 100 | 38 | ✓ |
+| Fresh Out of Theaters | daily | 50 | 41 |  |
 | Box Office Champions | daily | 40 | 100 |  |
 | Certified Fresh & Must-See | daily | 60 | 52 |  |
 
@@ -28,4 +28,4 @@ Next Cultural Pulse theme starts: **2026-10-25**
 - **The Living Legend**: TMDB person 1905 Vincent Price (Acting)
 - **Retro Rewind**: 1931–1972; keywords=-
 - **Yerli Yıldız**: TMDB person 1078769 Kıvanç Tatlıtuğ (Acting)
-- **The Cultural Pulse**: keywords movie=12339|305666|10714 series=12339|305666|10714
+- **The Cultural Pulse**: keywords movie=3335 series=3335
