@@ -287,68 +287,136 @@ class Charge:
         return finish(img, self.xx, self.yy, self.sub, self.sub_y)
 
 
+class Titan:
+    """A cut-out reduced to a silhouette: full-frame alpha, a rim along the outline that faces up and a faint texture."""
+
+    def __init__(self, src, name, cx, h, flip, bottom=H + 70):
+        im = Image.open(os.path.join(src, "elements", f"{name}.png")).convert("RGBA")
+        if flip:
+            im = im.transpose(Image.FLIP_LEFT_RIGHT)
+        bb = im.getchannel("A").point(lambda v: 255 if v > 40 else 0).getbbox()
+        im = im.crop(bb)
+        arr = np.asarray(im).copy()                                      # cut-outs end at a flat line: carry
+        rows = np.where(arr[..., 3].max(1) > 128)[0]                     # the lowest solid rows on down so the
+        last = arr[max(0, rows[-1] - 12):rows[-1] + 1]                   # body runs out of the frame into mist
+        ext = np.repeat(last.max(0, keepdims=True), int(arr.shape[0] * 0.45), 0)
+        im = Image.fromarray(np.concatenate([arr[:rows[-1] + 1], ext], 0), "RGBA")
+        body = h; h = int(h * im.height / (rows[-1] + 1))
+        w = round(im.width * h / im.height)
+        im = im.resize((w, h), Image.LANCZOS)
+        a = np.asarray(im, np.float32) / 255
+        x0, y0 = int(cx - w / 2), int(bottom - body)
+        al = np.zeros((H, W), np.float32); lum = np.zeros((H, W), np.float32)
+        ys, xs = slice(max(0, y0), min(H, y0 + h)), slice(max(0, x0), min(W, x0 + w))
+        sub = a[ys.start - y0:ys.stop - y0, xs.start - x0:xs.stop - x0]
+        al[ys, xs] = sub[..., 3]
+        lum[ys, xs] = sub[..., :3] @ np.array([0.299, 0.587, 0.114], np.float32)
+        yy = np.mgrid[0:H, 0:W][0].astype(np.float32)
+        mist = smooth((H + 60 - yy) / 280)                     # feet lost in the rain and the mist
+        al = np.clip((al - 0.15) / 0.85, 0, 1)
+        m = (al > 0.5).astype(np.uint8)
+        er = cv2.erode(m, np.ones((5, 5), np.uint8))
+        gy = cv2.Sobel(blur(al, 3), cv2.CV_32F, 0, 1, ksize=5)
+        up = np.clip(gy / (np.abs(gy).max() * 0.25 + 1e-6), 0, 1)
+        self.al = blur(al * mist, 0.7)
+        self.rim = blur(np.clip(al - er, 0, 1), 1.0) * (0.35 + 0.65 * up) * mist
+        self.tex = blur(lum, 1.0) * self.al * (1 - smooth((yy - y0 - body * 0.35) / (body * 0.2)))   # spray below: no
+        self.cx, self.top = cx, y0
+
+
 class Storm:
     FLICK = [1.0, 0.35, 0.95, 0.2, 0.55, 0.12, 0.05]
     T_STRIKE = 186
+    LX, RX = 205, 1075                                   # where the Titans stand, either side of THE COLLECTION
 
     def __init__(self, src):
         self.t = Title(src)
+        t = self.t
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32); self.xx, self.yy = xx, yy
         self.cloud = cv2.resize(periodic_noise(200, 1024, 1.75, 11), (2 * W, H), interpolation=cv2.INTER_CUBIC)
         self.cloud2 = cv2.resize(periodic_noise(120, 512, 1.4, 12), (2 * W, H), interpolation=cv2.INTER_CUBIC)
         self.rain = make_rain()
         self.sub = collection(src)
-        self.sub_y = self.t.y0 + self.t.lh + 38
-        t = self.t
-        self.events = [  # frame, bolt x, (end y), seed, strength
-            (34, W * 0.065, H * 0.78, 21, 0.75),
-            (90, W * 0.94, H * 0.72, 22, 0.8),
-            (140, W * 0.36, t.y0 - 40, 23, 0.7),
+        self.sub_y = t.y0 + t.lh + 38
+        L, R = self.LX, self.RX
+        # frame, bolt x, bolt end y, seed, strength, Titan (name, x, height, flip) or None
+        self.events = [
+            (16, W * 0.68, t.y0 - 70, 24, 0.45, None),
+            (32, L - 40, H * 0.7, 21, 0.9, ("godzilla1954", L, 385, False)),
+            (58, R + 30, H * 0.7, 22, 0.9, ("kong1933", R, 340, False)),
+            (82, W * 0.3, t.y0 - 60, 25, 0.5, None),
+            (100, L + 30, H * 0.7, 26, 0.9, ("shin", L, 385, True)),
+            (126, R - 30, H * 0.72, 27, 0.9, ("minusone", R, 375, False)),
+            (150, W * 0.6, t.y0 - 50, 28, 0.55, None),
+            (164, W * 0.92, H * 0.5, 29, 0.4, None),
         ]
-        self.bolts = [bolt_layer((x + 40, -20), (x - 30, ye), s, 5, 2) for _, x, ye, s, _ in self.events]
+        self.bolts = [bolt_layer((x + 40, -20), (x - 30, ye), s, 5, 2) for _, x, ye, s, _, _ in self.events]
+        self.titans = [Titan(src, *ti) if ti else None for *_, ti in self.events]
+        self.pair = [Titan(src, "godzilla_kotm", L, 385, True), Titan(src, "kong_skull", R, 355, False)]
         self.strike = bolt_layer((t.xm + 18, -20), (t.xm, t.xm_top + 4), 31, 4, 3)
 
     def flick(self, k, k0):
         i = k - k0
         return self.FLICK[i] if 0 <= i < len(self.FLICK) else 0.0
 
+    def silhouette(self, img, ti, f, col):
+        """Occlude the lit clouds with the Titan and catch its outline; f: how much light is behind it."""
+        occ = min(1.0, f * 2.5)
+        dark = NAVY * 0.55
+        img = img * (1 - (ti.al * occ)[..., None]) + (ti.al * occ)[..., None] * dark
+        img += (ti.tex * f * 0.22)[..., None] * np.array([150, 165, 200], np.float32)
+        img += ((ti.rim * 1.5 + blur(ti.rim, 3) * 0.8) * f)[..., None] * col
+        return img
+
     def frame(self, k):
         t = self.t
-        c = drift(self.cloud, k, 1.6); c2 = drift(self.cloud2, k, 3.0)
+        c = drift(self.cloud, k, 2.6); c2 = drift(self.cloud2, k, 4.5)
         cl = np.clip(c * 0.75 + c2 * 0.35, 0, 1)
         sky = 1 - smooth((self.yy - H * 0.2) / (H * 0.9)) * 0.45
         img = NAVY + ((cl ** 1.5) * sky)[..., None] * np.array([44, 52, 70], np.float32)
         light = np.zeros((H, W), np.float32); amb = 0.0
         extra = np.zeros((H, W, 3), np.float32)
-        for (k0, x, ye, s, st), bl in zip(self.events, self.bolts):
+        sil = []
+        for (k0, x, ye, s, st, ti), bl, tt in zip(self.events, self.bolts, self.titans):
             f = self.flick(k, k0) * st
             if f <= 0:
                 continue
-            L = np.exp(-((self.xx - x) / (W * 0.3)) ** 2 - ((self.yy - H * 0.2) / (H * 0.55)) ** 2)
-            light += f * L; amb += f * 0.25
+            cy = H * 0.55 if tt else H * 0.2
+            L = np.exp(-((self.xx - x) / (W * 0.24)) ** 2 - ((self.yy - cy) / (H * 0.5)) ** 2)
+            light += f * L; amb += f * (0.2 if tt else 0.12)
             img += ((blur(bl, 2) * 1.2 + blur(bl, 10) * 0.9) * f)[..., None] * np.array([150, 170, 230], np.float32)
             img += (bl * f)[..., None] * np.array([235, 240, 255], np.float32)
             side = np.clip(t.nx * (1 if x > W / 2 else -1), 0, 1)
             extra += ((side * 1.6 + 0.18) * f)[..., None] * np.array([190, 205, 240], np.float32)
+            if tt:
+                sil.append((tt, f))
         # the strike on the x and the charge it leaves
         E = np.zeros((H, W), np.float32); Eg = 0.0; band = E
-        fs = self.flick(k, self.T_STRIKE) if k >= self.T_STRIKE else 0.0
         if k >= self.T_STRIKE:
-            fs = max(fs, 0.0)
+            fs = self.flick(k, self.T_STRIKE)
+            kk = k - self.T_STRIKE
+            fade = 1 - seg(k, (self.T_STRIKE + 14, 240))
             light += fs * 1.3 * np.exp(-((self.xx - t.xm) / (W * 0.35)) ** 2 - ((self.yy - H * 0.15) / (H * 0.6)) ** 2)
+            pl = (fs * 0.8 + 0.45 * fade * float(kk >= 1))
+            for p in self.pair:                                      # the pair, backlit while the charge lasts
+                light += pl * np.exp(-((self.xx - p.cx) / (W * 0.16)) ** 2 - ((self.yy - H * 0.62) / (H * 0.35)) ** 2)
             amb += fs * 0.35
             img += ((blur(self.strike, 2) * 1.5 + blur(self.strike, 12) * 1.1) * fs)[..., None] * np.array([150, 185, 255], np.float32)
             img += (self.strike * fs)[..., None] * np.array([240, 248, 255], np.float32)
-            kk = k - self.T_STRIKE
             r = (kk - 1) / 15.0 * (t.lw / 2 + 60)
             dx = np.abs(self.xx - t.xm)
-            fade = 1 - seg(k, (self.T_STRIKE + 14, 240))
             band = np.exp(-((dx - r) / 28) ** 2) * (1 - seg(kk, (14, 22))) * 1.3 * (kk >= 1)
             E = (smooth((r - dx) / 30) * 0.9 + band) * fade
             Eg = 0.9 * fade * float(kk >= 1)
             spot = np.exp(-(((self.xx - t.xm) ** 2 + (self.yy - t.ym) ** 2) / (2 * 22.0 ** 2)))
             img += (spot * (fs * 2.5 + 0.8 * fade))[..., None] * CYAN
         img += (light * cl ** 1.1)[..., None] * np.array([170, 185, 225], np.float32) + amb * np.array([26, 30, 44], np.float32)
+        img += (light * 0.18)[..., None] * np.array([120, 135, 175], np.float32)
+        for tt, f in sil:
+            img = self.silhouette(img, tt, f, np.array([190, 205, 240], np.float32))
+        if k >= self.T_STRIKE:
+            for p in self.pair:
+                img = self.silhouette(img, p, pl, CYAN * 0.6 + np.array([90, 90, 90], np.float32) * fs)
         img = t.charge_light(img, E, Eg)
         img = t.composite(img, E, Eg, 0.0, extra)
         if Eg > 0.05:
