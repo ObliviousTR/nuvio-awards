@@ -1,13 +1,15 @@
 """Middle-earth card, as a title ident: the title in gold inside the One Ring's inscription, THE COLLECTION under it.
 Hover (10 s): as if the Ring were in the fire, the inscription heats letter by letter round the circle until it burns
-orange and gold, embers rise, the heat shimmers and the title takes the warm light; then it cools back to dark gold.
+orange and gold (starting in its gap, not in a word), embers rise, the heat shimmers and the title takes the warm
+light and comes forward, waits and goes back; then the inscription cools back to dark gold.
 The title never leaves the screen. First frame = last frame = cover.
 Titles (--title):
   lotr    - The Lord of the Rings film title logo (TMDB, film 120), its subtitle removed
   stacked - the same title's own letters set in three lines (THE LORD / OF THE / RINGS), inside the ring
   game   - MIDDLE-EARTH set like the Middle-earth game series header (spaced Cinzel between ruled ornaments)
+  split  - MIDDLE / THE COLLECTION / EARTH, set across the ring like the stacked title
   ring   - MIDDLE-EARTH in Ringbearer (the films' lettering), chiselled in the gold of the film title (me_wordmark)
-usage: python3 art_tools/middleearth_ident.py SRC_DIR OUT_DIR --title lotr|stacked|game|ring [--frames a,b] [--scale s] [--mp4 p]
+usage: python3 art_tools/middleearth_ident.py SRC_DIR OUT_DIR --title lotr|stacked|game|ring|split [--frames a,b] [--scale s] [--mp4 p]
   SRC_DIR: inscription.png (the Ring inscription, TMDB film 120 logo), lotr_title.png, lotr_stacked.png, cinzel.ttf, ringbearer.ttf
   (Ringbearer is freeware, not redistributed: dafont.com/ringbearer.font, RINGM___.TTF)
 """
@@ -22,6 +24,7 @@ GW, GH, MS, N = 512, 288, 40, 250
 T_HEAT = (16, 150)          # the heat runs round the circle
 T_HOLD = (150, 180)
 T_COOL = (176, 228)
+T_ZOOM = (58, 94, 128, 170)  # the lockup comes forward, waits, goes back
 BG = np.array([9, 6, 4], np.float32)
 
 
@@ -76,61 +79,87 @@ class Scene:
         W, H = self.W, self.H = round(1280 * sc), round(720 * sc)
         self.sc = sc
         ramp = gold_ramp(src)
-        # the title
-        D = round(684 * sc)                                   # the inscription's diameter; the title fits inside it
-        inner = D * 0.63                                      # the inscription's inner diameter
+        # the lockup (title + THE COLLECTION) is built once at its largest size and scaled per frame: it sits inside
+        # the ring on the cover and comes forward (to the size of a full-width title) while the ring burns, then goes back
+        D = round(684 * sc)                                   # the inscription's diameter
+        inner = D * 0.63                                      # its inner diameter: the lockup fits inside on the cover
+        self.zmax = 1.6
+        Z = self.zmax
+        sub_m = text_mask("THE COLLECTION", os.path.join(src, "cinzel.ttf"), round(18 * sc * Z), round(9 * sc * Z))
+        subcol = ramp[150] * 0.95
+
+        def rgba_from_mask(m, col):
+            return np.dstack([np.ones_like(m)[..., None] * col[None, None, :], m[..., None]]).astype(np.float32)
+
+        def rgba_from_img(im):
+            g = np.asarray(im, np.float32); g[..., :3] = g[..., :3]; g[..., 3] /= 255; return g
+
+        def fit(g, w):
+            f = w / g.shape[1]
+            return cv2.resize(g, (max(1, round(g.shape[1] * f)), max(1, round(g.shape[0] * f))), interpolation=cv2.INTER_AREA)
+
+        def stack(parts, gap, align="c"):
+            """parts: [(rgba, align)] top to bottom"""
+            wmax = max(p[0].shape[1] for p in parts)
+            hsum = sum(p[0].shape[0] for p in parts) + gap * (len(parts) - 1)
+            out = np.zeros((hsum, wmax, 4), np.float32); y = 0
+            for g, al in parts:
+                h, w = g.shape[:2]
+                x = 0 if al == "l" else (wmax - w if al == "r" else (wmax - w) // 2)
+                out[y:y + h, x:x + w] = np.where(g[..., 3:4] > out[y:y + h, x:x + w, 3:4], g, out[y:y + h, x:x + w])
+                y += h + gap
+            return out
+        sub = rgba_from_mask(sub_m, subcol)
         if title in ("lotr", "stacked"):
-            g = np.asarray(Image.open(os.path.join(src, "lotr_title.png" if title == "lotr" else "lotr_stacked.png")).convert("RGBA"), np.float32) / 255
-            tw = round(inner * (0.86 if title == "lotr" else 0.72)); th = round(g.shape[0] * tw / g.shape[1])
-            g = cv2.resize(g, (tw, th), interpolation=cv2.INTER_AREA)
-            trgb, ta = g[..., :3] * 255, g[..., 3]
-        else:
+            g = rgba_from_img(Image.open(os.path.join(src, "lotr_title.png" if title == "lotr" else "lotr_stacked.png")).convert("RGBA"))
+            g = fit(g, inner * (0.86 if title == "lotr" else 0.72) * Z)
+            block = stack([(g, "c"), (sub, "c")], round(24 * sc * Z))
+        elif title in ("ring", "split"):
+            from me_wordmark import wordmark
+            rb, lt = os.path.join(src, "ringbearer.ttf"), os.path.join(src, "lotr_title.png")
             if title == "ring":
-                from me_wordmark import wordmark
-                wm = wordmark(os.path.join(src, "ringbearer.ttf"), os.path.join(src, "lotr_title.png"), height=round(112 * sc))
-                f_ = inner * 0.86 / wm.width
-                wm = wm.resize((round(wm.width * f_), round(wm.height * f_)), Image.LANCZOS)
-                g = np.asarray(wm, np.float32) / 255
-                m = None
+                wm = rgba_from_img(wordmark(rb, lt, height=round(112 * sc * Z)))
+                wm = fit(wm, inner * 0.86 * Z)
+                block = stack([(wm, "c"), (sub, "c")], round(26 * sc * Z))
             else:
-                m = text_mask("MIDDLE-EARTH", os.path.join(src, "cinzel.ttf"), round(74 * sc), round(16 * sc))
-                # the game header's ruled ornaments either side
-                pad = round(110 * sc); h0 = m.shape[0]
-                mm = np.zeros((h0, m.shape[1] + 2 * pad), np.float32); mm[:, pad:pad + m.shape[1]] = m
-                cy = h0 // 2
-                orn = Image.new("L", (mm.shape[1] * 4, h0 * 4), 0); d = ImageDraw.Draw(orn)
-                for side in (-1, 1):
-                    x_in = (pad - round(24 * sc)) if side < 0 else (pad + m.shape[1] + round(24 * sc))
-                    x_out = round(6 * sc) if side < 0 else mm.shape[1] - round(6 * sc)
-                    d.line([(x_out * 4, cy * 4), (x_in * 4, cy * 4)], fill=255, width=max(4, round(2.2 * sc * 4)))
-                    for xd in (x_in + side * round(-10 * sc), x_out + side * round(-14 * sc)):
-                        r = 6 * sc
-                        d.polygon([((xd - r) * 4, cy * 4), (xd * 4, (cy - r) * 4), ((xd + r) * 4, cy * 4), (xd * 4, (cy + r) * 4)], fill=255)
-                orn = np.asarray(orn.resize((mm.shape[1], h0), Image.LANCZOS), np.float32) / 255
-                m = np.maximum(mm, orn)
-            if m is None:
-                th, tw = g.shape[:2]; trgb, ta = g[..., :3] * 255, g[..., 3]
-            else:
-                th, tw = m.shape
-                rows = ramp[np.clip((np.arange(th) / th * 255).astype(int), 0, 255)]
-                light = bevel_light(m, 3 * sc)
-                trgb = rows[:, None, :] * light[..., None]
-                ta = m
-        self.cx, self.cy = W / 2, H / 2
-        sub = text_mask("THE COLLECTION", os.path.join(src, "cinzel.ttf"), round(18 * sc), round(9 * sc))
-        sh, sw = sub.shape
-        gap = round((26 if title != "stacked" else 22) * sc)
-        block = th + gap + sh
-        tx, ty = round(self.cx - tw / 2), round(self.cy - block / 2)
-        self.trgb = np.zeros((H, W, 3), np.float32); self.ta = np.zeros((H, W), np.float32)
-        self.trgb[ty:ty + th, tx:tx + tw] = trgb; self.ta[ty:ty + th, tx:tx + tw] = ta
-        self.tbox = (tx, ty, tw, th)
+                mid = rgba_from_img(wordmark(rb, lt, height=round(112 * sc * Z), words=("MIDDLE",)))
+                ear = rgba_from_img(wordmark(rb, lt, height=round(112 * sc * Z), words=("EARTH",)))
+                k_ = inner * 0.60 * Z / mid.shape[1]
+                mid = fit(mid, mid.shape[1] * k_); ear = fit(ear, ear.shape[1] * k_)
+                # THE COLLECTION between them, with a fine rule either side
+                rule = round(46 * sc * Z); pad = round(14 * sc * Z)
+                sh_, sw_ = sub_m.shape
+                row = np.zeros((sh_, sw_ + 2 * (rule + pad)), np.float32)
+                row[:, rule + pad:rule + pad + sw_] = sub_m
+                cyr = sh_ // 2; t_ = max(1, round(1.3 * sc * Z))
+                row[cyr - t_ // 2:cyr - t_ // 2 + t_, :rule] = 0.85
+                row[cyr - t_ // 2:cyr - t_ // 2 + t_, -rule:] = 0.85
+                mid_row = rgba_from_mask(row, subcol)
+                wtot = max(mid.shape[1], ear.shape[1], mid_row.shape[1]) + round(inner * 0.16 * Z)
+                def place(g, al):
+                    out = np.zeros((g.shape[0], wtot, 4), np.float32)
+                    x = 0 if al == "l" else (wtot - g.shape[1] if al == "r" else (wtot - g.shape[1]) // 2)
+                    out[:, x:x + g.shape[1]] = g; return out
+                block = stack([(place(mid, "l"), "c"), (place(mid_row, "c"), "c"), (place(ear, "r"), "c")], round(10 * sc * Z))
+        else:
+            m = text_mask("MIDDLE-EARTH", os.path.join(src, "cinzel.ttf"), round(74 * sc * Z), round(16 * sc * Z))
+            rows = ramp[np.clip((np.arange(m.shape[0]) / m.shape[0] * 255).astype(int), 0, 255)]
+            g = np.dstack([rows[:, None, :] * bevel_light(m, 3 * sc * Z)[..., None], m[..., None]]).astype(np.float32)
+            g = fit(g, inner * 0.86 * Z)
+            block = stack([(g, "c"), (sub, "c")], round(26 * sc * Z))
+        self.block = block
         # the inscription round it
         ins = Image.open(os.path.join(src, "inscription.png")).convert("RGBA")
         ins = np.asarray(ins.resize((D, round(ins.height * D / ins.width)), Image.LANCZOS), np.float32) / 255
         ih, iw = ins.shape[:2]
         self.ia = np.zeros((H, W), np.float32)
-        ix, iy = round(self.cx - iw / 2), round(self.cy - ih / 2)
+        self.cx, self.cy = W / 2, H / 2
+        # the circle's true centre in the inscription picture (a least-squares circle through its letters), which is a
+        # little right of and below the picture's middle: put that on the card's centre, not the picture's middle
+        al_ = ins[..., 3]; ys_, xs_ = np.nonzero(al_ > 0.4)
+        Dl, El, Fl = np.linalg.lstsq(np.c_[xs_, ys_, np.ones_like(xs_)], -(xs_ ** 2 + ys_ ** 2).astype(np.float64), rcond=None)[0]
+        ccx, ccy = -Dl / 2, -El / 2
+        ix, iy = round(self.cx - ccx), round(self.cy - ccy)
         y0, y1 = max(0, iy), min(H, iy + ih); x0, x1 = max(0, ix), min(W, ix + iw)
         self.ia[y0:y1, x0:x1] = ins[y0 - iy:y1 - iy, x0 - ix:x1 - ix, 3]
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
@@ -139,11 +168,6 @@ class Scene:
         ang = (ang - 0.158) % 1.0                             # start where the inscription has its gap (about 2 o'clock)
         self.ang = ang
         self.ilight = bevel_light(self.ia, 1.5 * sc)
-        # THE COLLECTION
-        self.sub = np.zeros((H, W), np.float32)
-        sy = ty + th + gap
-        self.sub[sy:sy + sh, round(self.cx - sw / 2):round(self.cx - sw / 2) + sw] = sub
-        self.subcol = ramp[150] * 0.95
         # embers
         r = np.random.default_rng(9)
         self.ne = 140
@@ -193,15 +217,23 @@ class Scene:
             sh = (np.sin(self.yy / (9 * sc) + k * 0.9) * np.cos(self.xx / (23 * sc) - k * 0.4)) * 1.6 * sc * total
             img = cv2.remap(img.astype(np.float32), (self.xx + sh).astype(np.float32), (self.yy - abs(sh) * 0.5).astype(np.float32),
                             cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-        # the title, taking the warm light
+        # the lockup, taking the warm light; it comes forward while the ring burns, waits, and goes back
+        z = 1 + (self.zmax - 1) * seg(k, T_ZOOM[:2]) * (1 - seg(k, T_ZOOM[2:]))
+        f = z / self.zmax
+        g = self.block if abs(f - 1) < 1e-6 else cv2.resize(self.block, (max(1, round(self.block.shape[1] * f)), max(1, round(self.block.shape[0] * f))),
+                                                            interpolation=cv2.INTER_AREA)
+        bh, bw = g.shape[:2]
+        x0, y0 = round(self.cx - bw / 2), round(self.cy - bh / 2)
+        lay = np.zeros((H, W, 4), np.float32)
+        sx0, sy0 = max(0, -x0), max(0, -y0); dx0, dy0 = max(0, x0), max(0, y0)
+        ww, hh = min(bw - sx0, W - dx0), min(bh - sy0, H - dy0)
+        lay[dy0:dy0 + hh, dx0:dx0 + ww] = g[sy0:sy0 + hh, sx0:sx0 + ww]
+        ta = lay[..., 3:4]
         warm = 1 + 0.35 * total
-        tcol = self.trgb * warm + total * np.array([30, 12, 0], np.float32) * self.ta[..., None]
-        ta = self.ta[..., None]
-        shadow = cv2.GaussianBlur(self.ta, (0, 0), 6 * sc)[..., None]
+        tcol = lay[..., :3] * warm + total * np.array([30, 12, 0], np.float32) * ta
+        shadow = cv2.GaussianBlur(lay[..., 3], (0, 0), 6 * sc * z)[..., None]
         img = img * (1 - 0.6 * shadow)
         img = img * (1 - ta) + tcol * ta
-        s_ = self.sub[..., None]
-        img = img * (1 - s_) + (self.subcol * (1 + 0.3 * total))[None, None, :] * s_
         img *= self.vig[..., None]
         return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
