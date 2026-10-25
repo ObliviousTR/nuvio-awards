@@ -2,15 +2,17 @@
 
 modes
   eclipse  the eclipse of the Dune posters: a black moon holds the sun behind U and N, a gold ring of fire round it,
-           the corona's rays turning slowly. The moon drifts off to the right, the sun's edge breaks out and floods
-           the copper letters, then the moon comes back - a diamond-ring flash as it closes, the glint on the E flares -
+           the corona's rays turning slowly. The moon sinks a little, the sun's upper edge breaks out above the title
+           and lights the copper letters from above, then the moon comes back - a diamond-ring flash as it closes, the glint on the E flares -
            and the ring settles. THE COLLECTION sits inside the moon, under the title.
-  worm     dusk over the deep desert, the title in the sky over the dunes, sand blowing. Worm sign: a ripple runs
-           under the sand and the dune swells and sprays, then the sandworm's mouth rises behind the title, sand
-           pouring off its rim, and sinks back in a burst of sand.
+  worm     dusk over the deep desert, the title in the sky over the dunes, sand blowing. Worm sign: a plume of sand
+           runs in under the dunes towards the middle, then the sandworm rises behind the title - its open mouth in
+           the storm, from the Part Two still, the dust in it boiling - sand pouring off it, and it sinks back in a
+           cloud of sand.
 All modes: 250 frames at 40 ms, first frame = last frame = cover.
 usage: python3 art_tools/dune_ident.py SRC_DIR OUT_DIR --mode eclipse|worm [--frames a,b] [--mp4 path]
-  SRC_DIR: logo.png (the Dune (2021) title logo on TMDB, copper with the glint), Montserrat-VF.ttf
+  SRC_DIR: logo.png (the Dune (2021) title logo on TMDB, copper with the glint), Montserrat-VF.ttf,
+           worm_plate.jpg (worm mode: a Dune: Part Two backdrop on TMDB, cropped, the ornithopter painted out)
 """
 import math, os, sys, subprocess
 import numpy as np
@@ -143,7 +145,7 @@ class Eclipse(Base):
     def frame(self, k):
         R = self.R
         dx = self.moon_dx(k)
-        dm = np.sqrt((self.xx - self.cx - dx) ** 2 + (self.yy - self.cy) ** 2)
+        dm = np.sqrt((self.xx - self.cx) ** 2 + (self.yy - self.cy - dx) ** 2)      # the moon drifts down: the sun breaks out above the title
         sun = smooth((R - self.d) / 1.5)
         moon = smooth((R * 1.012 - dm) / 1.2)
         vis = sun * (1 - moon)
@@ -165,7 +167,7 @@ class Eclipse(Base):
         # the bare sun
         limb = np.clip(1 - (self.d / R) ** 2, 0, 1) ** 0.35
         img += (vis * (0.75 + 0.25 * limb))[..., None] * np.array([255, 240, 214], np.float32) * 1.3
-        bloom = blur(vis, 22) * 2.2 + blur(vis, 70) * 3.5
+        bloom = blur(vis, 22) * 2.0 + blur(vis, 70) * 2.0
         img += bloom[..., None] * GOLD * 0.7
         # anamorphic streak through the bare limb
         if frac > 0.001:
@@ -178,7 +180,7 @@ class Eclipse(Base):
         for kc, side in ((self.T_OUT[0] + 4, 1), (self.T_IN[1] - 6, 1)):
             f = math.exp(-((k - kc) / 4.0) ** 2)
             if f > 0.01:
-                bx, by = self.cx - R * 0.99 * side, self.cy
+                bx, by = self.cx, self.cy - R * 0.99 * side
                 d2 = (self.xx - bx) ** 2 + (self.yy - by) ** 2
                 bead = np.exp(-d2 / (2 * 6.0 ** 2)) * 3 + np.exp(-d2 / (2 * 40.0 ** 2)) * 1.2
                 star = (np.exp(-((self.yy - by) / 2.0) ** 2) * np.exp(-np.abs(self.xx - bx) / 380)
@@ -197,16 +199,16 @@ class Eclipse(Base):
         img = img * (1 - moon[..., None] * (1 - 0.0)) + moon[..., None] * np.array([5, 4, 4], np.float32)
         # title, lit by the bare sun; the glint flares with the diamond rings
         gl = max(math.exp(-((k - self.T_OUT[0] - 4) / 6.0) ** 2), math.exp(-((k - self.T_IN[1] + 6) / 6.0) ** 2))
-        img = self.title(img, light=min(1.0, frac * 3), glint=gl, lightpos=(self.cx - R, self.cy))
+        img = self.title(img, light=min(1.0, frac * 3), glint=gl, lightpos=(self.cx, self.cy - R))
         img += (blur(self.la, 6) * (0.35 * tot + 0.8 * min(1.0, frac * 3)))[..., None] * GOLD * 0.35
         img = img * (1 - self.sub[..., None]) + self.sub[..., None] * np.array([228, 196, 172], np.float32)
         return Image.fromarray(np.clip(img, 0, 255).astype("uint8"), "RGB")
 
 
 class Worm(Base):
-    T_SIGN = (30, 110)
-    T_RISE = (104, 150)
-    T_SINK = (168, 206)
+    T_SIGN = (26, 100)     # a sand trail runs in towards the middle under the dunes
+    T_RISE = (96, 150)     # the worm rises behind the title
+    T_SINK = (176, 214)    # and goes back down
 
     def __init__(self, src):
         super().__init__(src, lw=860, cy=262)
@@ -227,112 +229,101 @@ class Worm(Base):
             self.ridges.append((y.astype(np.float32), np.array(col, np.float32)))
         self.wind = noise(H, 2 * W, 1.2, 31)
         self.grain = noise(H, W, 0.6, 32)
-        # the worm's mouth: polar texture
-        self.mcx, self.mR = self.cx, 250.0
-        self.wr = noise(16, 720, 1.4, 33)
-        self.parts = rng.uniform(0, 1, (900, 4)).astype(np.float32)   # spray / pouring sand
+        self.parts = rng.uniform(0, 1, (900, 4)).astype(np.float32)
+        # the worm: the Part Two still of its open mouth in the sand storm (TMDB backdrop), graded into the dusk
+        pl = np.asarray(Image.open(os.path.join(src, "worm_plate.jpg")).convert("RGB"), np.float32)
+        pw = 900; ph = round(pl.shape[0] * pw / pl.shape[1])
+        pl = cv2.resize(pl, (pw, ph), interpolation=cv2.INTER_AREA)
+        v, u = np.mgrid[0:ph, 0:pw].astype(np.float32)
+        u /= pw; v /= ph
+        r = np.sqrt(((u - 0.51) / 0.47) ** 2 + ((v - 0.47) / 0.52) ** 2)
+        al = 1 - smooth((r - 0.78) / 0.24)
+        al *= 1 - smooth((0.36 - np.sqrt(((u - 0.18) / 0.22) ** 2 + ((v - 0.1) / 0.17) ** 2)) / 0.3)   # the patched corner
+        al *= smooth(v / 0.07)                                           # no hard top edge while it rises
+        # the still is used as light and shade only: how much darker (the worm) or brighter (dust) than the haze
+        lum = pl @ np.array([0.3, 0.55, 0.15], np.float32)
+        haze = float(np.percentile(lum[(r > 0.8) & (r < 1.0)], 55))
+        self.plate = np.clip(lum / haze, 0.04, 1.3).astype(np.float32)
+        self.pal = al.astype(np.float32)
+        self.pw, self.ph = pw, ph
+        self.maw = (0.51 * pw, 0.47 * ph)
+        self.boil = noise(ph, pw, 1.6, 41), noise(ph, pw, 1.6, 42)
 
-    def dunes(self, img, k, bump_x=None, bump=0.0):
+    def dunes(self, img):
         for i, (y, col) in enumerate(self.ridges):
-            yl = y.copy()
-            if bump_x is not None and i == 1:
-                yl = yl - bump * 42 * np.exp(-((np.arange(W) - bump_x) / 70.0) ** 2)
-            m = smooth((self.yy - yl[None, :]) / 1.5)
-            shade = np.clip((self.yy - yl[None, :]) / 140, 0, 1)
-            lit = np.exp(-np.maximum(self.yy - yl[None, :], 0) / 5) * 0.8
+            m = smooth((self.yy - y[None, :]) / 1.5)
+            shade = np.clip((self.yy - y[None, :]) / 140, 0, 1)
+            lit = np.exp(-np.maximum(self.yy - y[None, :], 0) / 5) * 0.8
             c = col * (1.0 - 0.45 * shade[..., None]) + lit[..., None] * np.array([150, 90, 40], np.float32)
             c *= (0.92 + 0.16 * self.grain)[..., None]
             img = img * (1 - m[..., None]) + c * m[..., None]
         return img
 
-    def mouth(self, img, k, rise):
-        """the open mouth seen head-on: a lip, rings of teeth, the dark throat; rising from below the dunes"""
-        cy = 760 - rise * 340
-        R = self.mR
-        dx, dy = self.xx - self.mcx, (self.yy - cy) * 1.05
-        r = np.sqrt(dx * dx + dy * dy) / R
-        ang = np.arctan2(dy, dx)
-        idx = ((ang + math.pi) / (2 * math.pi) * 720).astype(int) % 720
-        rr = np.clip(r, 0, 1.5)
-        tex = self.wr[(rr * 10).astype(int).clip(0, 15), idx]
-        wob = 1 + 0.035 * (self.wr[3, idx] - 0.5) * 2                  # the rim is not a perfect circle
-        rw = r / wob
-        body = smooth((1.0 - rw) / 0.015)
-        lip = smooth((rw - 0.8) / 0.04) * body
-        seg_rings = 0.75 + 0.25 * np.cos(rw * 2 * math.pi * 7)          # ridges of the lip
-        # teeth: several rows of fine baleen spikes pointing in, lengths and spacing irregular
-        teeth = np.zeros_like(r)
-        for row, (r1, nn, sh) in enumerate(((0.8, 140, 0.0), (0.68, 110, 0.4), (0.56, 86, 0.8))):
-            jitter = self.wr[6 + row, idx] - 0.5
-            spike = np.clip(np.cos(ang * nn + sh + jitter * 3.0), 0, 1) ** 6
-            length = 0.09 + 0.07 * self.wr[9 + row, idx]
-            teeth += spike * smooth((rw - (r1 - length)) / 0.02) * (1 - smooth((rw - r1) / 0.015)) * (1 - 0.25 * row)
-        throat = 1 - smooth((rw - 0.1) / 0.45)
-        col = np.array([96, 60, 34], np.float32) * (0.55 + 0.6 * tex)[..., None] * seg_rings[..., None] * (0.35 + 0.75 * lip)[..., None]
-        col = col * (1 - lip[..., None]) * 0.5 + col * lip[..., None]
-        col = col + np.clip(teeth, 0, 1)[..., None] * np.array([150, 116, 80], np.float32) * (1 - lip)[..., None]
-        col = col * (1 - throat[..., None] * 0.94)
-        light = np.clip((dy * 0.6 - dx * 0.3) / (R * 1.2) + 0.2, 0, 1) * lip
-        col = col + light[..., None] * np.array([110, 62, 26], np.float32)
-        img = img * (1 - body[..., None]) + col * body[..., None]
-        # dust hangs in front of it
-        haze = blur(body, 30) * 0.35
-        img = img * (1 - haze[..., None]) + haze[..., None] * np.array([150, 86, 40], np.float32)
-        return img, cy
+    def offset(self, k):
+        """how far below its resting place the worm is (px): rises with weight, creeps, sinks"""
+        rise = seg(k, *self.T_RISE); sink = seg(k, *self.T_SINK)
+        creep = 18 * seg(k, self.T_RISE[1], self.T_SINK[0])
+        return 520 * (1 - rise) - creep + (520 + creep) * sink, rise * (1 - sink)
 
     def frame(self, k):
         img = self.sky.copy()
-        # haze bands drifting (loops: the wind texture tiles over 2W)
         w = np.roll(self.wind, -int(round(2 * W * k / N)), axis=1)[:, :W]
         img += (w ** 2 * smooth((self.yy - 300) / 260))[..., None] * np.array([70, 40, 20], np.float32) * 0.6
-        rise = seg(k, *self.T_RISE) * (1 - seg(k, *self.T_SINK))
-        mcy = None
-        if rise > 0:
-            img, mcy = self.mouth(img, k, rise)
-        # worm sign: the bump runs left to right under the middle dune
-        bx = None; bump = 0.0
-        if self.T_SIGN[0] <= k <= self.T_SIGN[1]:
-            u = (k - self.T_SIGN[0]) / (self.T_SIGN[1] - self.T_SIGN[0])
-            bx = -100 + u * (self.cx + 100)
-            bump = math.sin(math.pi * min(1.0, u * 1.1)) * (1 - seg(k, 96, 110))
-        img = self.dunes(img, k, bx, bump)
-        # sand: spray behind the bump, pouring off the mouth, the burst as it sinks
+        off, up = self.offset(k)
+        sx = self.cx - self.maw[0]; sy = self.cy + 30 - self.maw[1] + off
+        if up > 0.001:
+            # dust boiling in the still: a slow displacement that moves with the frame
+            b1, b2 = self.boil
+            ph = 2 * math.pi * k / N
+            dxm = (np.sin(b1 * 12 + ph * 3) * 2.5).astype(np.float32)
+            dym = (np.cos(b2 * 12 + ph * 3) * 2.5 - 1.0).astype(np.float32)
+            v, u = np.mgrid[0:self.ph, 0:self.pw].astype(np.float32)
+            pl = cv2.remap(self.plate, u + dxm, v + dym, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+            M = np.float32([[1, 0, sx], [0, 1, sy]])
+            ratio = cv2.warpAffine(pl, M, (W, H), flags=cv2.INTER_LINEAR, borderValue=1.0)
+            pa = cv2.warpAffine(self.pal, M, (W, H), flags=cv2.INTER_LINEAR, borderValue=0)
+            pa *= min(1.0, up * 1.6)
+            shade = 1 + (ratio ** 1.15 - 1) * pa * 0.88                      # some haze stays in front of it
+            img = img * shade[..., None]
+        # the trail: a plume of sand running in under the dunes towards the middle
         sp = np.zeros((H, W), np.float32)
         P = self.parts
-        if bx is not None and bump > 0.05:
-            for i in range(0, 300):
-                age = (P[i, 0] * 18)
-                x = bx - age * 6 + (P[i, 1] - 0.5) * 60
-                ridge = self.ridges[1][0][int(np.clip(x, 0, W - 1))] - bump * 40
-                y = ridge - (P[i, 2] * 50) * math.sin(math.pi * min(1, age / 18)) * bump
+        if self.T_SIGN[0] <= k <= self.T_SIGN[1] + 10:
+            u_ = (k - self.T_SIGN[0]) / (self.T_SIGN[1] - self.T_SIGN[0])
+            hx = -60 + min(1.0, u_) * (self.cx + 60)
+            fade = 1 - seg(k, self.T_SIGN[1] - 6, self.T_SIGN[1] + 10)
+            for i in range(0, 320):
+                age = P[i, 0]
+                x = hx - age * 160 + (P[i, 1] - 0.5) * 30
+                if not (0 <= x < W):
+                    continue
+                ridge = self.ridges[0][0][int(x)]
+                y = ridge - (P[i, 2] ** 1.5) * 34 * (1 - age) - age * 6 + 4
+                if 0 <= y < H:
+                    sp[int(y), int(x)] += 0.55 * (1 - age) * fade
+        # sand pouring off the worm while it is up, a heavy fall as it sinks
+        if up > 0.2:
+            R = 0.42 * self.pw
+            for i in range(320, 720):
+                a = math.pi + P[i, 0] * math.pi
+                x = self.cx + math.cos(a) * R * (0.92 + 0.08 * P[i, 3])
+                y0 = self.cy + 30 + math.sin(a) * R * 1.05 + off
+                fall = ((P[i, 1] + k * 0.02) % 1.0) * 260
+                y = y0 + fall
+                x += (P[i, 2] - 0.5) * 8 + fall * 0.04 * math.cos(a)
                 if 0 <= x < W and 0 <= y < H:
-                    sp[int(y), int(x)] += 0.6 * (1 - age / 18)
-        if mcy is not None and rise > 0.2:
-            for i in range(300, 700):
-                a = P[i, 0] * math.pi + math.pi            # the upper rim
-                x = self.mcx + math.cos(a) * self.mR * 0.98
-                y0 = mcy + math.sin(a) * self.mR * 0.93
-                fall = ((P[i, 1] + k * 0.035) % 1.0) * 180
-                y = y0 + fall + (P[i, 2] - 0.5) * 6
-                x += (P[i, 3] - 0.5) * 10 + fall * 0.05
-                if 0 <= x < W and 0 <= y < H:
-                    sp[int(y), int(x)] += 0.7 * rise
-        burst = seg(k, self.T_SINK[0], self.T_SINK[0] + 6) * (1 - seg(k, self.T_SINK[0] + 10, self.T_SINK[1] + 20))
-        if burst > 0:
-            for i in range(700, 900):
-                t = (k - self.T_SINK[0]) / 30.0
-                a = P[i, 0] * math.pi + math.pi
-                v = 120 + P[i, 1] * 260
-                x = self.mcx + math.cos(a) * v * t * 1.4
-                y = 520 + math.sin(a) * v * t + 90 * t * t
-                if 0 <= x < W and 0 <= y < H:
-                    sp[int(y), int(x)] += 1.0 * burst
-        sp = blur(sp, 1.2) * 3 + blur(sp, 4) * 3
-        img += np.clip(sp, 0, 1.2)[..., None] * np.array([200, 140, 84], np.float32) * 0.45
-        dust = burst * 0.5 + rise * 0.1
-        cloud = np.clip(blur(sp, 24) * 40, 0, 1) * dust
-        img = img * (1 - cloud[..., None] * 0.6) + cloud[..., None] * 0.6 * np.array([170, 104, 52], np.float32)
-        img = self.title(img, light=0.15 + 0.25 * burst, glint=0.25 + 0.25 * math.sin(2 * math.pi * k / N) ** 2,
+                    sp[int(y), int(x)] += 0.45 * up * (1 - fall / 300)
+        sink = seg(k, self.T_SINK[0], self.T_SINK[0] + 8) * (1 - seg(k, self.T_SINK[0] + 14, self.T_SINK[1] + 24))
+        rise_dust = math.sin(math.pi * seg(k, self.T_RISE[0], self.T_RISE[1] + 20)) if k < self.T_RISE[1] + 20 else 0.0
+        img = self.dunes(img)
+        sp = blur(sp, 0.9) * 2.5 + blur(sp, 3) * 2.0
+        img += np.clip(sp, 0, 1)[..., None] * np.array([200, 140, 84], np.float32) * 0.5
+        # dust clouds where it breaks the surface (rising) and where it goes down (sinking)
+        cloud_n = np.roll(self.wind, int(k * 3), axis=1)[:, :W]
+        band = np.exp(-((self.yy - 505) / 60) ** 2) * np.exp(-((self.xx - self.cx) / 380) ** 2)
+        dust = np.clip(band * (0.6 + 0.8 * cloud_n), 0, 1) * (0.55 * rise_dust + 0.75 * sink)
+        img = img * (1 - dust[..., None] * 0.7) + dust[..., None] * 0.7 * np.array([168, 102, 50], np.float32)
+        img = self.title(img, light=0.15 + 0.15 * sink, glint=0.25 + 0.25 * math.sin(2 * math.pi * k / N) ** 2,
                          lightpos=(W * 0.5, H * 0.66))
         img = img * (1 - self.sub[..., None]) + self.sub[..., None] * np.array([240, 214, 190], np.float32)
         rr = np.sqrt(((self.xx - W / 2) / (W * 0.62)) ** 2 + ((self.yy - H / 2) / (H * 0.66)) ** 2)
