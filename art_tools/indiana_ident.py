@@ -5,8 +5,9 @@
                the graticule; the line draws Raiders' journey (San Francisco, Honolulu, Manila, Nepal, Cairo), the
                camera following it from close, each stop named as it is reached; then the map pulls back to the whole
                route and the line fades for the cover.
---mode shadow  Indy's shadow: the hat-and-whip silhouette (from a TMDB Raiders backdrop) falls on a lamplit plaster wall
-               (the wall of Marion's bar, from the film's still) as he walks in, stops behind the title, and leaves.
+--mode shadow  Indy's shadow: first his whip cracks across the lamplit plaster wall from off the frame (its shadow, a rope
+               pulled by its handle and integrated, so the loop rolls out and the tip snaps), then the hat-and-whip
+               silhouette (from a TMDB Raiders backdrop) walks in, stops behind the title, and leaves.
 250 frames at 40 ms, first frame = last frame = cover.
 usage: python3 art_tools/indiana_ident.py SRC_DIR OUT_DIR [--mode map|shadow] [--frames a,b] [--mp4 path]
   SRC_DIR: logo.png (INDIANA JONES cut from TMDB logo AoXnr773qvewCqQ5OnD8sSA1s0l, film 89, the subtitle removed),
@@ -249,6 +250,9 @@ class MapMode:
 
 
 # --------------------------------------------------------------------------------------------------------- shadow
+WHIP0 = 4                                                                # the crack comes first, from off the frame
+
+
 class ShadowMode:
     def __init__(self, src):
         self.t = Title(src, lw=780, x0=150, y0=180)
@@ -263,22 +267,71 @@ class ShadowMode:
         self.pool = (np.clip(1.15 - d, 0, 1) ** 1.4).astype(np.float32)
         sil = cv2.imread(os.path.join(src, "indy_silhouette.png"), 0).astype(np.float32) / 255
         self.sil = sil
+        self.whip = self.crack()
         self.grain = noise(H * 2, W * 2, 0.0, 7)
+
+    def crack(self):
+        """a whip cracked from off the frame (right): a rope of 50 links pulled by its handle, integrated (Verlet);
+        returns, per frame, a few positions within the frame for its motion blur"""
+        n, L, SUB = 56, 1000.0, 24
+        sl = L / (n - 1)
+        keys = [(0, (1420, 300)), (WHIP0, (1420, 300)), (WHIP0 + 6, (1620, 120)), (WHIP0 + 9, (1230, 300)),
+                (WHIP0 + 12, (1225, 305)), (WHIP0 + 24, (1260, 310)), (WHIP0 + 32, (1600, 300)), (N, (1600, 300))]
+
+        def handle(t):
+            for (t0, p0), (t1, p1) in zip(keys, keys[1:]):
+                if t0 <= t <= t1:
+                    u = smooth((t - t0) / max(t1 - t0, 1e-6))
+                    return np.array(p0, float) + (np.array(p1, float) - np.array(p0, float)) * u
+            return np.array(keys[-1][1], float)
+        P = np.array([[1420 + i * sl * 0.98, 300 + i * 1.0] for i in range(n)], float); Pp = P.copy()
+        g = np.array([0, 0.0015]); out = []
+        for f in range(N):
+            snaps = []
+            for s in range(SUB):
+                t = f + s / SUB
+                V = (P - Pp) * 0.9985; Pp = P.copy(); P = P + V + g; P[0] = handle(t)
+                for _ in range(14):
+                    d = P[1:] - P[:-1]; dist = np.linalg.norm(d, axis=1) + 1e-6
+                    c = d * ((dist - sl) / dist)[:, None] * 0.5
+                    P[:-1] += c; P[1:] -= c; P[0] = handle(t)
+                if s % 2 == 0:
+                    snaps.append(P.copy())
+            out.append(snaps)
+        return out
+
+    def whip_shadow(self, k):
+        if not (WHIP0 <= k < WHIP0 + 40):
+            return np.zeros((H, W), np.float32)
+        acc = np.zeros((H * 2, W * 2), np.float32)
+        snaps = self.whip[k]
+        for Q in snaps:
+            m = np.zeros((H * 2, W * 2), np.uint8)
+            q = (Q * 2).astype(np.int32)
+            for i in range(len(q) - 1):
+                th = int(round(18 - 13 * i / (len(q) - 1)))             # thick at the handle, thin at the tip
+                cv2.line(m, tuple(int(v) for v in q[i]), tuple(int(v) for v in q[i + 1]), 255, max(th, 2), cv2.LINE_AA)
+            acc += m.astype(np.float32) / 255
+        acc = np.clip(acc / len(snaps) * 2.2, 0, 1)                 # a fast whip still throws a full shadow, smeared
+        return blur(cv2.resize(acc, (W, H), interpolation=cv2.INTER_AREA), 2.2)
 
     def place(self, k):
         """where his shadow is: x of the hat's centre, scale, softness, bob"""
-        enter = seg(k, 8, 74); leave = seg(k, 168, 226)
+        enter = seg(k, 44, 100); leave = seg(k, 172, 228)
         x = 1650 + (930 - 1650) * enter
         x = x + (1700 - x) * leave
-        walking = (8 <= k < 74) or (168 <= k < 226)
+        walking = (44 <= k < 100) or (172 <= k < 228)
         bob = 3.0 * abs(math.sin(k * 0.42)) if walking else 0.8 * math.sin(k * 0.12)
-        s = 1.85 + 0.12 * seg(k, 60, 90) * (1 - seg(k, 160, 180))     # a step towards the lamp: larger, softer
-        soft = 3.5 + 3.0 * seg(k, 60, 90) * (1 - seg(k, 160, 180))
+        s = 1.85 + 0.12 * seg(k, 92, 116) * (1 - seg(k, 160, 180))    # a step towards the lamp: larger, softer
+        soft = 3.5 + 3.0 * seg(k, 92, 116) * (1 - seg(k, 160, 180))
         return x, s, soft, bob
 
     def frame(self, k):
         k = k % N
         flick = 1.0 + 0.015 * math.sin(k * 1.7) + 0.01 * math.sin(k * 4.1)
+        tc = k - (WHIP0 + 18)                                            # the crack stirs the lamp's flame
+        if 0 <= tc < 10:
+            flick *= 1 - 0.07 * math.exp(-tc / 3) * abs(math.cos(tc * 1.6))
         x, s, soft, bob = self.place(k)
         sh = np.zeros((H, W), np.float32)
         if x < W + 400:
@@ -286,6 +339,7 @@ class ShadowMode:
             M = np.float32([[s, 0, x - sw / 2], [0, s, 30 + bob]])
             sh = cv2.warpAffine(self.sil, M, (W, H), flags=cv2.INTER_LINEAR)
             sh = blur(sh, soft)
+        sh = np.maximum(sh, self.whip_shadow(k) * 0.9)
         light = self.pool * flick
         tm = self.t.mask()
         tshadow = blur(np.roll(np.roll(tm, 16, 0), 22, 1), 7)          # the title's own shadow, lamp front left
