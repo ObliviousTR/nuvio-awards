@@ -46,6 +46,14 @@ def noise(h, w, beta, seed):
     return ((n - n.min()) / (n.max() - n.min())).astype(np.float32)
 
 
+def bigblur(a, s):
+    """a wide gaussian, done at a quarter size (fast, same look)"""
+    h, w = a.shape[:2]
+    sm = cv2.resize(a, (w // 4, h // 4), interpolation=cv2.INTER_AREA)
+    sm = cv2.GaussianBlur(sm, (0, 0), s / 4)
+    return cv2.resize(sm, (w, h), interpolation=cv2.INTER_LINEAR)
+
+
 def text_layer(font, size, txt, track, shear=0.0, var=None):
     f = ImageFont.truetype(font, size)
     if var:
@@ -81,11 +89,10 @@ def make_rain(seed=9, count=1300):
 
 
 class Neon:
-    """the Chapter 4 neon title, recoloured to the Parabellum palette (blue through violet to magenta), on a dark
-    violet ground with slow haze; the sign hums, WICK stutters once, later the power sags and the tubes strike back."""
-    T_STUTTER = (40, 54)
-    T_SAG = (122, 138)
-    T_STRIKE = (138, 160)
+    """the Chapter 4 neon title in the Parabellum palette (blue, violet, magenta) hanging in front of a rainy New York
+    street (a Parabellum still, thrown far out of focus and graded to the palette); rain falls through the sign's
+    light. The neon is alive from the start: tubes stutter, WICK drops out and strikes back, the C buzzes on a bad
+    transformer, the power sags and every letter strikes back in turn."""
 
     def __init__(self, src):
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32); self.xx, self.yy = xx, yy
@@ -99,76 +106,123 @@ class Neon:
         al[self.top:self.top + lh, x0:x0 + lw] = a[..., 3] / 255
         rgb[self.top:self.top + lh, x0:x0 + lw] = a[..., :3]
         pm = rgb * al[..., None]
-        inten = pm.max(2) / 255                                             # how bright the original neon is here
-        core = smooth((pm[..., 1] / 255 - 0.42) / 0.4)                      # the yellow-white heart of the tubes
-        # Parabellum palette across the title: blue, violet, magenta
+        inten = pm.max(2) / 255
+        core = smooth((pm[..., 1] / 255 - 0.42) / 0.4)
         u = np.clip((xx - x0) / lw, 0, 1)
         stops = np.array([0.0, 0.5, 1.0]); cols = np.array([[70, 110, 255], [150, 86, 255], [255, 70, 196]], np.float32)
         grad = np.stack([np.interp(u, stops, cols[:, c]) for c in range(3)], -1).astype(np.float32)
-        self.grad = grad
         self.lit = grad * (inten ** 1.5)[..., None] * 1.05 + core[..., None] * np.array([235, 225, 255], np.float32) * 0.85
         self.tube = smooth((inten - 0.55) / 0.3) * core.clip(0.3, 1)
-        self.x0, self.lw, self.lh = x0, lw, lh
-        # word masks (JOHN | WICK) for the stutter: the gap between the words in the original (x 1642..1664 of 3218),
-        # slanted like the italic
-        split = x0 + 1653 * s
-        midy = self.top + lh / 2
-        self.wick = blur(smooth((xx - split + 0.2 * (yy - midy)) / 6), 4)
+        self.lh = lh
+        # each letter's share of the sign, from the vector logo fitted onto the tubes
+        import cairosvg
+        from io import BytesIO
+        sv = Image.open(BytesIO(cairosvg.svg2png(url=os.path.join(src, "solid.svg"), output_width=3000))).getchannel("A")
+        sa = np.asarray(sv, np.float32) / 255
+        n, lab, st, cen = cv2.connectedComponentsWithStats((sa > 0.5).astype(np.uint8))
+        rows = sorted([i for i in range(1, n) if st[i][1] < sa.shape[0] * 0.6 and st[i][4] > 1000], key=lambda i: st[i][0])
+        sx0 = min(st[i][0] for i in rows); sx1 = max(st[i][0] + st[i][2] for i in rows)
+        sy0 = min(st[i][1] for i in rows); sy1 = max(st[i][1] + st[i][3] for i in rows)
+        ys, xs = np.where(self.tube > 0.5)
+        tx0, tx1, ty0, ty1 = xs.min(), xs.max(), ys.min(), ys.max()
+        M = np.float32([[(tx1 - tx0) / (sx1 - sx0), 0, tx0 - sx0 * (tx1 - tx0) / (sx1 - sx0)],
+                        [0, (ty1 - ty0) / (sy1 - sy0), ty0 - sy0 * (ty1 - ty0) / (sy1 - sy0)]])
+        self.w = [blur(cv2.dilate(cv2.warpAffine((lab == i).astype(np.float32), M, (W, H)), np.ones((7, 7), np.uint8)), 5) + 1e-4
+                  for i in rows]
+        self.wsum = sum(self.w)
         sub = text_layer(os.path.join(src, "BarlowCondensed-Medium.ttf"), 60, "THE COLLECTION", 34, shear=0.2)
         self.sub = put(sub, W / 2, self.top + lh + 16)
-        # the room: dark violet, a little lighter behind the sign; haze that drifts and loops
-        d = np.sqrt(((xx - W / 2) / (W * 0.55)) ** 2 + ((yy - self.top - lh / 2) / (H * 0.5)) ** 2)
-        self.room = (np.array([9, 6, 20], np.float32) + np.exp(-d * 1.6)[..., None] * np.array([26, 14, 52], np.float32))
-        self.haze = noise(H, 2 * W, 1.6, 21)
-        self.haze2 = noise(H, 2 * W, 1.3, 22)
+        # the street: a Parabellum still, lens-blurred (disc kernel: real bokeh), graded to the palette, kept dark
+        st_ = np.asarray(Image.open(os.path.join(src, "street.jpg")).convert("RGB"), np.float32)
+        BW, BH = int(W * 1.08), int(H * 1.08)
+        sc = max(BW / st_.shape[1], BH / st_.shape[0])
+        st_ = cv2.resize(st_, (int(st_.shape[1] * sc), int(st_.shape[0] * sc)), interpolation=cv2.INTER_AREA)
+        oy = (st_.shape[0] - BH) // 2; ox = (st_.shape[1] - BW) // 2
+        st_ = st_[oy:oy + BH, ox:ox + BW]
+        r = 11
+        disc = np.zeros((2 * r + 1, 2 * r + 1), np.float32); cv2.circle(disc, (r, r), r, 1.0, -1, cv2.LINE_AA); disc /= disc.sum()
+        lin = (st_ / 255) ** 2.2                                            # blur in linear light: highlights bloom
+        lin = cv2.filter2D(lin, -1, disc)
+        lum = lin @ np.array([0.25, 0.6, 0.15], np.float32)
+        t = np.clip(lum ** 0.45, 0, 1)
+        tone = np.stack([np.interp(t, [0, 0.35, 0.7, 1.0], c) for c in
+                         ([6, 40, 150, 255], [6, 26, 70, 200], [18, 70, 200, 255])], -1).astype(np.float32)
+        hue = (lin / (lin.max(2, keepdims=True) + 1e-4))
+        orig = (lin ** (1 / 2.2)) * 255
+        self.street = (np.clip((tone * 0.75 + orig * 0.25) / 255, 0, 1) ** 1.5) * 255 * 0.95   # deep blacks, bright bokeh
+        self.sw, self.shh = BW, BH
+        self.rain = [self.rain_layer(i) for i in range(3)]
+        self.inside = np.clip(blur((al > 0.05).astype(np.float32), 6) * 1.5, 0, 1)   # no streaks over the sign itself
 
-    def level(self, k):
-        """(JOHN, WICK) brightness"""
-        hum = 0.985 + 0.015 * math.sin(2 * math.pi * 7 * k / N)
-        j = w = 1.0
-        if self.T_STUTTER[0] <= k < self.T_STUTTER[1]:
-            w = [1, 0.25, 1, 1, 0.1, 0.1, 0.9, 1, 0.35, 1, 1, 1, 0.6, 1][k - self.T_STUTTER[0]]
-        if self.T_SAG[0] <= k < self.T_STRIKE[1]:
-            if k < self.T_SAG[1]:
-                v = 1 - 0.8 * seg(k, self.T_SAG[0], self.T_SAG[1])
-            else:
-                dt = k - self.T_STRIKE[0]
-                pat = [0.2, 0.2, 0.9, 0.25, 0.25, 1.0, 0.5, 1.0, 1.0, 0.8, 1.0]
-                v = pat[dt] if dt < len(pat) else 0.2 + 0.8 * seg(k, self.T_STRIKE[0] + len(pat), self.T_STRIKE[1])
-                v = max(v, 0.2)
-            j *= v; w *= v
-        return j * hum, w * hum
+    def rain_layer(self, depth):
+        """streaks at one depth: near drops are long, soft and few; far ones fine and many"""
+        rng = np.random.default_rng(40 + depth)
+        lay = np.zeros((H, W), np.float32)
+        count, L0, L1, b, soft = [(1700, 8, 16, 0.35, 0.0), (500, 18, 34, 0.6, 0.8), (90, 40, 70, 0.8, 2.2)][depth]
+        for _ in range(count):
+            x, y = rng.uniform(0, W), rng.uniform(0, H); L = rng.uniform(L0, L1); bb = rng.uniform(0.4, 1) * b
+            for dy in (-H, 0, H):
+                p0 = (x, y + dy); p1 = (x - L * 0.06, y + dy + L)
+                cv2.line(lay, (int(p0[0] * 4), int(p0[1] * 4)), (int(p1[0] * 4), int(p1[1] * 4)), bb, 1, cv2.LINE_AA, 2)
+        if soft:
+            lay = blur(lay, soft) * (1 + soft)
+        return lay
 
-    def drift(self, tex, k, v):
-        t = k / N
-        a = np.roll(tex, -int(round(v * k)), axis=1)[:, :W]
-        b = np.roll(tex, -int(round(v * k - v * N)), axis=1)[:, :W]
-        m = float(tex.mean())
-        return np.clip(m + ((1 - t) * a + t * b - m) / math.sqrt((1 - t) ** 2 + t ** 2), 0, 1)
+    def letters(self, k):
+        rng = np.random.default_rng(3000 + k)
+        b = np.ones(8)
+        hum = 0.98 + 0.02 * math.sin(2 * math.pi * 9 * k / N)
+        if 5 <= k < 17:                                                     # H and N stutter
+            p = [1, 0.2, 1, 0.9, 0.1, 0.1, 1, 0.5, 1, 1, 0.3, 1][k - 5]
+            b[2] = p; b[3] = [1, 1, 0.3, 1, 1, 0.2, 0.2, 1, 1, 0.6, 1, 1][k - 5]
+        if 22 <= k < 40:                                                    # the whole sign buzzes
+            b *= 0.65 + 0.35 * (rng.random() > 0.35)
+        if 48 <= k < 70:                                                    # WICK drops out and strikes back
+            dt = k - 48
+            p = [0.3, 0, 0, 0, 0, 0, 0, 0, 0.8, 0, 0, 0.9, 0.2, 1, 0.4, 1, 1, 0.7, 1, 1, 1, 1][dt]
+            b[4:] = p
+        if 80 <= k < 122 and rng.random() < 0.3:                            # the C on a bad transformer
+            b[6] = rng.uniform(0.0, 0.5)
+        if 128 <= k < 140:                                                  # the power sags
+            b *= 1 - 0.85 * seg(k, 128, 136)
+        if 140 <= k < 172:                                                  # every letter strikes back in turn
+            for i in range(8):
+                dt = k - (140 + i * 3)
+                b[i] = 0.15 if dt < 0 else ([0.9, 0.15, 0.15, 1.0, 0.4, 1.0][dt] if dt < 6 else 1.0)
+        if 186 <= k < 198:                                                  # K, twice
+            b[7] = [1, 0.1, 0.1, 1, 1, 1, 0.2, 1, 0.6, 1, 1, 1][k - 186]
+        return b * hum
 
     def frame(self, k):
-        jl, wl = self.level(k)
-        f = jl * (1 - self.wick) + wl * self.wick
+        b = self.letters(k)
+        f = sum(wi * bi for wi, bi in zip(self.w, b)) / self.wsum
         lit = self.lit * f[..., None]
-        glow = blur(lit, 14) * 0.45 + blur(lit, 46) * 0.6 + blur(lit, 120) * 0.5
-        img = self.room.copy() + glow * 0.8
-        # haze in the light of the sign
-        hz = self.drift(self.haze, k, 1.2) * 0.6 + self.drift(self.haze2, k, -0.8) * 0.4
-        lightc = blur(lit, 90) * 2.2 + 6
-        img += (np.clip(hz - 0.35, 0, 1) * 0.9)[..., None] * lightc * 0.6
-        # glass tubes, faint when the power sags
+        glow = blur(lit, 14) * 0.45 + bigblur(lit, 46) * 0.6 + bigblur(lit, 120) * 0.5
+        level = float(np.mean(b))
+        # the street behind, drifting slowly (parallax: it moves less than the sign)
+        zb = 1 + 0.015 * (1 - math.cos(2 * math.pi * k / N)) / 2
+        Mb = np.float32([[zb, 0, W / 2 * (1 - zb) - (self.sw - W) / 2], [0, zb, H / 2 * (1 - zb) - (self.shh - H) / 2]])
+        img = cv2.warpAffine(self.street, Mb, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+        img = img * (0.85 + 0.15 * level)                                    # the sign lights the scene a little
+        img += glow * 0.85
+        # rain, seen only where there is light behind or around it
+        g60 = bigblur(lit, 60)
+        light = (g60.max(2) / 255 * 3.2) * (1 - self.inside) + (img.max(2) / 255) * 0.9
+        rainc = g60 * 2.4 + np.array([60, 50, 90], np.float32)
+        for depth, (falls, a) in enumerate(((6, 0.5), (10, 0.8), (16, 1.0))):     # whole falls per loop: seamless
+            r = np.roll(self.rain[depth], (k * falls * H // N) % H, axis=0)
+            img += (r * light * a)[..., None] * rainc / 255 * 120
+        # glass tubes when off, then the light
         dark = np.clip(1 - f, 0, 1)
         img = img * (1 - (self.tube * 0.6 * dark)[..., None]) + (self.tube * dark)[..., None] * np.array([40, 30, 58], np.float32)
         img += lit
-        img = img * (1 - self.sub[..., None]) + self.sub[..., None] * np.array([228, 222, 246], np.float32) * (0.85 + 0.15 * (jl + wl) / 2)
-        # a slow push in and back
-        z = 1 + 0.03 * (1 - math.cos(2 * math.pi * k / N)) / 2
+        img = img * (1 - self.sub[..., None]) + self.sub[..., None] * np.array([228, 222, 246], np.float32) * (0.85 + 0.15 * level)
+        z = 1 + 0.035 * (1 - math.cos(2 * math.pi * k / N)) / 2
         M = np.float32([[z, 0, W / 2 * (1 - z)], [0, z, H / 2 * (1 - z)]])
         img = cv2.warpAffine(img.astype(np.float32), M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
         rr = np.sqrt(((self.xx - W / 2) / (W * 0.6)) ** 2 + ((self.yy - H / 2) / (H * 0.62)) ** 2)
         img *= (1 - 0.5 * np.clip(rr - 0.4, 0, 1))[..., None]
-        g = np.random.default_rng(700 + k).normal(size=(H, W)).astype(np.float32) * 2.0        # a little film grain
-        img += g[..., None]
+        img += np.random.default_rng(700 + k).normal(size=(H, W)).astype(np.float32)[..., None] * 2.0
         return Image.fromarray(np.clip(img, 0, 255).astype("uint8"), "RGB")
 
 
