@@ -2,9 +2,11 @@
 pages are nine wands (Voldemort, Ron, Hermione, Harry, Dumbledore's Elder Wand in the centre, Newt, Tina, Queenie,
 Grindelwald), gold, over the Harry Beast lettering. The art is the official gold logo itself, cut from its black.
 
---mode book  The book opens, as in the franchise's logo animation: the wands fold flat onto the left page, then turn
-             over one by one like pages and stand in their fan again, each settling with a small swing and catching the
-             light as it comes upright; Dumbledore's wand, the last to stand in the middle, brings the light up.
+--mode book  The cover is WIZARDING WORLD and THE COLLECTION alone, centred. On hover the lettering moves down, the
+             book's line draws out from the spine and the book opens as in the franchise's logo animation: its wands
+             turn over one by one like pages and stand in their fan, each settling with a small swing and catching the
+             light; Dumbledore's wand in the middle brings the light up. Then the book closes (the wands fall back
+             flat), the line draws back in and the lettering rises to the cover.
 --mode map   The Marauder's Map: the mark is inked on blank parchment; the wand's touch wakes the map and its ink runs
              out from the mark through the castle plan; a pair of footprints walks round the mark and away; the ink
              withdraws ("mischief managed") and the parchment is blank again.
@@ -112,38 +114,47 @@ class Mark:
 
 
 # --------------------------------------------------------------------------------------------------------- book
-CLOSE = (6, 22)
-FLAT = 176.0                                                             # lying on the left page
+FLAT = 176.0                                                             # a wand lying on the left page
+DOWN = (4, 30); UP = (212, 240)                                          # the lettering moves down to make room / back
+BOOK_IN = (16, 40); BOOK_OUT = (196, 216)                                # the book's line draws out / back in
+TURN0, TURN_GAP, TURN_LEN = 38, 11, 22                                   # pages (wands) turn one by one
+CLOSE = (178, 196)                                                       # the book closes: the wands fall back flat
 
 
 class Book:
+    """the cover is the lettering alone, centred; the hover brings the book of wands up over it and closes it again"""
+
     def __init__(self, src):
-        self.m = Mark(src)
+        self.m = m = Mark(src)
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32); self.xx, self.yy = xx, yy
         r = np.sqrt(((xx - W / 2) / (W * 0.62)) ** 2 + ((yy - H * 0.42) / (H * 0.7)) ** 2)
-        n1 = cv2.resize(noise(H // 2, W, 2.1, 5), (W * 2, H))
-        self.sky_n = n1
+        self.sky_n = cv2.resize(noise(H // 2, W, 2.1, 5), (W * 2, H))
         self.vig = np.clip(1 - r, 0, 1) ** 1.3
         self.grain = noise(H * 2, W * 2, 0.0, 7)
-        n = len(self.m.wand_a)
-        # pages turn from the right-most destination first; Dumbledore's wand (the middle) ...
-        order = list(range(n))[::-1]
-        self.start = {}
-        for j, i in enumerate(order):
-            self.start[i] = 34 + j * 13
-        self.order = order
+        # split what is not a wand into the book (line and arch) and the lettering below it
+        cut = m.book_y + 12
+        self.book_a = m.rest_a.copy(); self.book_a[cut:] = 0
+        self.let_a = m.rest_a.copy(); self.let_a[:cut] = 0
+        ys = np.nonzero(np.maximum(self.let_a, m.col).max(1) > 0.3)[0]
+        self.dy_cover = H / 2 - (ys.min() + ys.max()) / 2                # the lettering centred on the cover
+        xs = np.nonzero(self.book_a.max(0) > 0.3)[0]
+        self.bx0, self.bx1 = xs.min(), xs.max()
+        n = len(m.wand_a)
+        order = list(range(n))[::-1]                                     # the right-most page turns first
+        self.start = {i: TURN0 + j * TURN_GAP for j, i in enumerate(order)}
 
     def angle(self, i, k):
         a1 = self.m.wand_ang[i]
         close = seg(k, *CLOSE)
-        if k < self.start[i]:
-            return a1 + (FLAT - a1) * close, 0.0
-        t = (k - self.start[i]) / 22.0
-        if t >= 1:
-            settle = 5.0 * math.exp(-(t - 1) * 3.0) * math.sin((t - 1) * 9.0)
-            return a1 + settle, max(0.0, 1 - (t - 1) * 1.5)
-        u = smooth(t)
-        return FLAT + (a1 - FLAT) * u, 0.0
+        t = (k - self.start[i]) / TURN_LEN
+        if t <= 0:
+            return FLAT, 0.0, 0.0
+        if t < 1:
+            return FLAT + (a1 - FLAT) * smooth(t), 0.0, t
+        settle = 5.0 * math.exp(-(t - 1) * 3.0) * math.sin((t - 1) * 9.0)
+        glint = max(0.0, 1 - (t - 1) * 1.5)
+        a = a1 + settle
+        return a + (FLAT - a) * close, glint * (1 - close), 1.0
 
     def frame(self, k):
         k = k % N
@@ -151,38 +162,49 @@ class Book:
         ph = 2 * math.pi * k / N
         sh = int(40 + 30 * math.sin(ph))
         sky = self.sky_n[:, sh:sh + W]
-        base = np.array([0.015, 0.03, 0.05], np.float32) + (self.vig * (0.10 + 0.06 * sky))[..., None] * np.array([0.32, 0.55, 0.72], np.float32)
-        img = base.copy()
-        # Dumbledore's wand standing brings the light up
+        img = np.array([0.015, 0.03, 0.05], np.float32) + (self.vig * (0.10 + 0.06 * sky))[..., None] * np.array([0.32, 0.55, 0.72], np.float32)
+        # the lettering: centred on the cover, down under the book while it is open
+        dy = self.dy_cover * (1 - seg(k, *DOWN) + seg(k, *UP))
+        T = np.float32([[1, 0, 0], [0, 1, dy]])
+        let_a = cv2.warpAffine(self.let_a, T, (W, H)); col = cv2.warpAffine(m.col, T, (W, H))
+        rgb_l = cv2.warpAffine(m.rgb * self.let_a[..., None], T, (W, H))
+        # the book's line draws out from the spine and back
+        bk = seg(k, *BOOK_IN) * (1 - seg(k, *BOOK_OUT))
+        half = (self.bx1 - self.bx0) / 2 * bk
+        cx = m.pivot[0]
+        reveal = smooth((half - np.abs(self.xx - cx)) / 6.0)
+        book_a = self.book_a * reveal
+        layer_a = np.maximum(let_a, book_a)
+        layer_rgb = rgb_l * (1 - book_a[..., None]) + m.rgb * book_a[..., None]
+        # the wands: pages that lie flat on the left page, turn over one by one, stand, and fall back as it closes
+        stack = seg(k, BOOK_IN[0] + 12, BOOK_IN[1]) * (1 - seg(k, CLOSE[1], BOOK_OUT[0] + 8))
         mid = len(m.wand_a) // 2
-        lift = seg(k, self.start[mid] + 18, self.start[mid] + 40) * (1 - seg(k, 205, 240))
+        lift = seg(k, self.start[mid] + TURN_LEN - 4, self.start[mid] + TURN_LEN + 18) * (1 - seg(k, *CLOSE))
         gain = 1.0 + 0.18 * lift
-        layer_a = m.rest_a.copy(); layer_rgb = m.rgb * m.rest_a[..., None]
         glints = np.zeros((H, W), np.float32)
         for i, wa in enumerate(m.wand_a):
-            ang, glint = self.angle(i, k)
+            ang, glint, prog = self.angle(i, k)
+            vis = stack if prog <= 0 or k >= CLOSE[1] else 1.0
+            if vis <= 0.001:
+                continue
             d = m.wand_ang[i] - ang
-            if abs(d) > 0.05:
-                M = cv2.getRotationMatrix2D((float(m.pivot[0]), float(m.pivot[1])), -d, 1.0)
-                w_a = cv2.warpAffine(wa, M, (W, H), flags=cv2.INTER_LINEAR)
-                w_rgb = cv2.warpAffine(m.rgb * wa[..., None], M, (W, H), flags=cv2.INTER_LINEAR)
-            else:
-                w_a = wa; w_rgb = m.rgb * wa[..., None]
-            # a wand turning over passes edge-on to us: it darkens there
-            turn = abs(math.sin(math.radians((ang - FLAT) * 0.5))) if self.start[i] <= k < self.start[i] + 22 else 0.0
-            w_rgb = w_rgb * (1 - 0.3 * turn)
+            M = cv2.getRotationMatrix2D((float(m.pivot[0]), float(m.pivot[1])), -d, 1.0)
+            w_a = cv2.warpAffine(wa, M, (W, H), flags=cv2.INTER_LINEAR) * vis
+            w_rgb = cv2.warpAffine(m.rgb * wa[..., None], M, (W, H), flags=cv2.INTER_LINEAR) * vis
+            turning = 0 < prog < 1
+            if turning:
+                w_rgb = w_rgb * (1 - 0.3 * abs(math.sin(math.radians((ang - FLAT) * 0.5))))
             layer_rgb = layer_rgb * (1 - w_a[..., None]) + w_rgb
             layer_a = np.maximum(layer_a, w_a)
             if glint > 0:
                 glints = np.maximum(glints, w_a * glint)
-        # shadows of the mark on the dark (very soft)
         img = img * (1 - 0.35 * bigblur(layer_a, 14))[..., None]
         face = layer_rgb * gain + (glints[..., None] * np.array([1.0, 0.85, 0.55], np.float32) * 0.45) * layer_a[..., None]
         img = img * (1 - layer_a[..., None]) + face
         img += bigblur(glints, 10)[..., None] * np.array([1.0, 0.8, 0.45], np.float32) * 0.18
-        img += (bigblur(m.a, 30) * 0.06 * lift)[..., None] * np.array([1.0, 0.8, 0.45], np.float32)
-        img = img * (1 - m.col[..., None]) + np.array([0.86, 0.72, 0.46], np.float32) * gain * m.col[..., None]
-        return to_image(img, k, self.grain)
+        img += (bigblur(layer_a, 30) * 0.06 * lift)[..., None] * np.array([1.0, 0.8, 0.45], np.float32)
+        img = img * (1 - col[..., None]) + np.array([0.86, 0.72, 0.46], np.float32) * gain * col[..., None]
+        return to_image(img, 0, self.grain, 0.012)                     # still grain: it is the same film every frame
 
 
 # --------------------------------------------------------------------------------------------------------- map
