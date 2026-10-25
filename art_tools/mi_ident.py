@@ -3,8 +3,8 @@
 The fuse runs under the title from left to right - a single hot point of light with a long anamorphic streak, no
 particles - and where it has passed the red letters open onto the series' signature stunts, film by film (the
 Langley vault, the aquarium, the Burj Khalifa, the A400M door, the HALO jump, the helicopter, the rooftop leap, the
-cliff jump, the paraglider, the biplane), cut on the beat, each pushing in slowly; the rest of the still shows dimly
-around the letters. The fuse runs back from right to left and the title is red again.
+cliff jump, the paraglider, the biplane), cut on the beat, each pushing in slowly; the film plays only inside the
+letters, the ground stays black. The fuse runs back from right to left and the title is red again.
 250 frames at 40 ms, first frame = last frame = cover.
 usage: python3 art_tools/mi_ident.py SRC_DIR OUT_DIR [--frames a,b] [--mp4 path]
   SRC_DIR: title.png (the Final Reckoning title logo on TMDB, film 575265; only the MISSION: IMPOSSIBLE line is used),
@@ -125,8 +125,8 @@ class Scene:
                 g = 1 - float(smooth((k - T_OUT[0]) / (T_OUT[1] - T_OUT[0])))
             else:
                 g = 1.0
-            img = img * (1 - 0.9 * g) + st * (0.16 * g)                     # a dim memory around (fades, no wipe)
-            img += bigblur(st * (self.la * openm)[..., None], 26) * 0.3                    # light from the letters
+            img = img * (1 - 0.6 * g)                                           # the room darkens a little; no film outside the letters
+            img += bigblur(st * (self.la * openm)[..., None], 26) * 0.12                   # a faint glow off the letters
         a = self.la[..., None]
         letters = self.red * (1 - openm[..., None])
         if st is not None:
