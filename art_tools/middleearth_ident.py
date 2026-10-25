@@ -213,7 +213,7 @@ class Scene:
                     cv2.circle(lay, (int(ex * 4), int(ey * 4)), max(1, int(self.esz[i] * 4)), b, -1, cv2.LINE_AA, 2)
             img += cv2.GaussianBlur(lay, (0, 0), 1.5 * sc)[..., None] * np.array([255, 160, 60], np.float32) * 1.6
         # heat shimmer over the whole picture while it burns
-        if total > 0.05:
+        if total > 0.05 and getattr(self, 'shimmer', True):
             sh = (np.sin(self.yy / (9 * sc) + k * 0.9) * np.cos(self.xx / (23 * sc) - k * 0.4)) * 1.6 * sc * total
             img = cv2.remap(img.astype(np.float32), (self.xx + sh).astype(np.float32), (self.yy - abs(sh) * 0.5).astype(np.float32),
                             cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
