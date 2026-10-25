@@ -3,11 +3,12 @@ Hover (10 s): as if the Ring were in the fire, the inscription heats letter by l
 orange and gold, embers rise, the heat shimmers and the title takes the warm light; then it cools back to dark gold.
 The title never leaves the screen. First frame = last frame = cover.
 Titles (--title):
-  lotr   - The Lord of the Rings film title logo (TMDB, film 120), its subtitle removed
+  lotr    - The Lord of the Rings film title logo (TMDB, film 120), its subtitle removed
+  stacked - the same title's own letters set in three lines (THE LORD / OF THE / RINGS), inside the ring
   game   - MIDDLE-EARTH set like the Middle-earth game series header (spaced Cinzel between ruled ornaments)
   ring   - MIDDLE-EARTH in Ringbearer (the films' lettering), chiselled in the gold of the film title (me_wordmark)
-usage: python3 art_tools/middleearth_ident.py SRC_DIR OUT_DIR --title lotr|game|ring [--frames a,b] [--scale s] [--mp4 p]
-  SRC_DIR: inscription.png (the Ring inscription, TMDB film 120 logo), lotr_title.png, cinzel.ttf, ringbearer.ttf
+usage: python3 art_tools/middleearth_ident.py SRC_DIR OUT_DIR --title lotr|stacked|game|ring [--frames a,b] [--scale s] [--mp4 p]
+  SRC_DIR: inscription.png (the Ring inscription, TMDB film 120 logo), lotr_title.png, lotr_stacked.png, cinzel.ttf, ringbearer.ttf
   (Ringbearer is freeware, not redistributed: dafont.com/ringbearer.font, RINGM___.TTF)
 """
 import math, os, sys
@@ -76,15 +77,19 @@ class Scene:
         self.sc = sc
         ramp = gold_ramp(src)
         # the title
-        if title == "lotr":
-            g = np.asarray(Image.open(os.path.join(src, "lotr_title.png")).convert("RGBA"), np.float32) / 255
-            tw = round(780 * sc); th = round(g.shape[0] * tw / g.shape[1])
+        D = round(684 * sc)                                   # the inscription's diameter; the title fits inside it
+        inner = D * 0.63                                      # the inscription's inner diameter
+        if title in ("lotr", "stacked"):
+            g = np.asarray(Image.open(os.path.join(src, "lotr_title.png" if title == "lotr" else "lotr_stacked.png")).convert("RGBA"), np.float32) / 255
+            tw = round(inner * (0.86 if title == "lotr" else 0.72)); th = round(g.shape[0] * tw / g.shape[1])
             g = cv2.resize(g, (tw, th), interpolation=cv2.INTER_AREA)
             trgb, ta = g[..., :3] * 255, g[..., 3]
         else:
             if title == "ring":
                 from me_wordmark import wordmark
                 wm = wordmark(os.path.join(src, "ringbearer.ttf"), os.path.join(src, "lotr_title.png"), height=round(112 * sc))
+                f_ = inner * 0.86 / wm.width
+                wm = wm.resize((round(wm.width * f_), round(wm.height * f_)), Image.LANCZOS)
                 g = np.asarray(wm, np.float32) / 255
                 m = None
             else:
@@ -111,14 +116,17 @@ class Scene:
                 light = bevel_light(m, 3 * sc)
                 trgb = rows[:, None, :] * light[..., None]
                 ta = m
-        self.cx, self.cy = W / 2, round(318 * sc)
-        tx, ty = round(self.cx - tw / 2), round(self.cy - th / 2)
+        self.cx, self.cy = W / 2, H / 2
+        sub = text_mask("THE COLLECTION", os.path.join(src, "cinzel.ttf"), round(18 * sc), round(9 * sc))
+        sh, sw = sub.shape
+        gap = round((26 if title != "stacked" else 22) * sc)
+        block = th + gap + sh
+        tx, ty = round(self.cx - tw / 2), round(self.cy - block / 2)
         self.trgb = np.zeros((H, W, 3), np.float32); self.ta = np.zeros((H, W), np.float32)
         self.trgb[ty:ty + th, tx:tx + tw] = trgb; self.ta[ty:ty + th, tx:tx + tw] = ta
         self.tbox = (tx, ty, tw, th)
         # the inscription round it
         ins = Image.open(os.path.join(src, "inscription.png")).convert("RGBA")
-        D = round(560 * sc)
         ins = np.asarray(ins.resize((D, round(ins.height * D / ins.width)), Image.LANCZOS), np.float32) / 255
         ih, iw = ins.shape[:2]
         self.ia = np.zeros((H, W), np.float32)
@@ -128,13 +136,12 @@ class Scene:
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
         self.yy, self.xx = yy, xx
         ang = (np.arctan2(yy - self.cy, xx - self.cx) + math.pi / 2) % (2 * math.pi) / (2 * math.pi)   # 0 at top, clockwise
+        ang = (ang - 0.158) % 1.0                             # start where the inscription has its gap (about 2 o'clock)
         self.ang = ang
         self.ilight = bevel_light(self.ia, 1.5 * sc)
         # THE COLLECTION
-        sub = text_mask("THE COLLECTION", os.path.join(src, "cinzel.ttf"), round(20 * sc), round(11 * sc))
-        sh, sw = sub.shape
         self.sub = np.zeros((H, W), np.float32)
-        sy = ty + th + round(30 * sc) if title != "lotr" else ty + th + round(22 * sc)
+        sy = ty + th + gap
         self.sub[sy:sy + sh, round(self.cx - sw / 2):round(self.cx - sw / 2) + sw] = sub
         self.subcol = ramp[150] * 0.95
         # embers
