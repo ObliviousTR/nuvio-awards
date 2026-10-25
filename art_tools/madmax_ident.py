@@ -8,7 +8,7 @@ flash on its edges.
 250 frames at 40 ms, first frame = last frame = cover.
 usage: python3 art_tools/madmax_ident.py SRC_DIR OUT_DIR [--frames a,b] [--mp4 path]
   SRC_DIR: logo.png (the Mad Max title logo on TMDB, film 9659, Fury Road style), storm.jpg (the Mad Max: Fury Road
-           backdrop on TMDB, film 76341), BarlowCondensed-Medium.ttf
+           backdrop on TMDB, film 76341), dust.jpg (another Fury Road backdrop: the dust clouds), BarlowCondensed-Medium.ttf
 """
 import math, os, sys, subprocess
 import numpy as np
@@ -72,7 +72,7 @@ def split_lightning(a):
 class Scene:
     def __init__(self, src):
         yy, xx = np.mgrid[0:H, 0:W].astype(np.float32); self.xx, self.yy = xx, yy
-        a = np.asarray(Image.open(os.path.join(src, "storm.jpg")).convert("RGB"))
+        a = np.asarray(Image.open(os.path.join(src, "storm.jpg")).convert("RGB")); a_src = a
         nob, bolt = split_lightning(a)
         BW, BH = int(W * 1.3), int(H * 1.3)
         s = max(BW / a.shape[1], BH / a.shape[0])
@@ -126,6 +126,17 @@ class Scene:
         sy = self.top + lh + 26; sx = (W - sub.shape[1]) // 2
         self.sub[sy:sy + sub.shape[0], sx:sx + sub.shape[1]] = sub
         self.bolt_x = W * 0.66                                              # where the light comes from
+        # dust gusts in front of the title: the storm's own dust (the still's cloud texture, as a matte), tiled
+        cl = cv2.cvtColor(np.asarray(Image.open(os.path.join(src, "dust.jpg")).convert("RGB")), cv2.COLOR_RGB2GRAY).astype(np.float32)
+        hh, ww = cl.shape
+        patch = cl[int(hh * 0.02):int(hh * 0.62), int(ww * 0.02):int(ww * 0.62)]      # billowing dust, nothing else
+        patch = cv2.resize(patch, (W, int(W * patch.shape[0] / patch.shape[1])))
+        hp = blur(patch, 3) - blur(patch, 90)
+        m = np.clip(hp / (hp.std() * 2.5) + 0.35, 0, 1) ** 1.5
+        tile = np.concatenate([m, m[:, ::-1]], 1)                            # seamless across
+        tile = cv2.resize(tile, (2 * W, H))
+        self.gust = blur(tile, 2.5)
+        self.gust_env = noise(4, 2 * W, 1.0, 17)[2]                          # where along the tile the gusts are thick
 
     def flash(self, k):
         f = 0.0
@@ -136,6 +147,16 @@ class Scene:
             elif len(pat) <= i < len(pat) + 8:                                # the clouds glow on a moment
                 f = max(f, 0.12 * (1 - (i - len(pat)) / 8))
         return f
+
+    def thunder(self, k):
+        """camera shake a few frames after each strike, decaying"""
+        amp = 0.0
+        for k0, pat in STRIKES:
+            t = k - (k0 + 3)
+            if 0 <= t < 16:
+                amp = max(amp, (1 - t / 16) ** 2 * 5.0 * max(pat))
+        rng = np.random.default_rng(3000 + k)
+        return rng.normal() * amp, rng.normal() * amp * 0.6
 
     def frame(self, k):
         f = self.flash(k)
@@ -152,16 +173,38 @@ class Scene:
         z0 = W / self.bw * 1.06                                              # the plate is bigger than the frame
         M = np.float32([[z * z0, 0, W / 2 - cx * z * z0], [0, z * z0, H / 2 - (cy - 30) * z * z0]])
         img = cv2.warpAffine(bg, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-        # a soft shadow under the title so it sits in front of the storm
-        img *= (1 - 0.45 * bigblur(self.la, 18) - 0.55 * np.clip(bigblur(self.sub, 12) * 2.5, 0, 1))[..., None]   # keeps THE COLLECTION readable
-        # the title: rust, catching the flash on the edges that face the strike
+        # the title moves on its own plane: it comes forward more than the storm behind it (parallax)
+        zl = 1.0 + 0.075 * (1 - math.cos(ph)) / 2
+        tcy = self.top + 60
+        ML = np.float32([[zl, 0, W / 2 * (1 - zl)], [0, zl, tcy * (1 - zl)]])
+        wp = lambda im: cv2.warpAffine(im, ML, (W, H), flags=cv2.INTER_LINEAR)
+        la, gx, gy, sub = wp(self.la), wp(self.gx), wp(self.gy), wp(self.sub)
+        rgb = wp(self.rgb)
+        # it casts a shadow into the dust when the lightning strikes behind it (light from above right)
+        sh = cv2.warpAffine(la, np.float32([[1, 0, -22], [0, 1, 26]]), (W, H))
+        img *= (1 - 0.42 * bigblur(la, 18) - 0.55 * np.clip(bigblur(sub, 12) * 2.5, 0, 1) - 0.5 * f * blur(sh, 7))[..., None]
+        # the title: rust in the storm's dark, lit hard by each strike; its edges facing the bolt flare
         L = np.dstack([self.bolt_x - self.xx, -400 - self.yy]); L /= np.linalg.norm(L, axis=2, keepdims=True) + 1e-6
-        facing = np.clip(-(self.gx * L[..., 0] + self.gy * L[..., 1]) * 6, 0, 1)
-        face = self.rgb * (0.82 + 0.18 * f)
-        face = face + (facing * f * 0.9)[..., None] * np.array([235, 230, 255], np.float32)
-        a = self.la[..., None]
+        facing = np.clip(-(gx * L[..., 0] + gy * L[..., 1]) * 6, 0, 1)
+        face = rgb * (0.84 + 0.2 * f)
+        face = face + (facing * f * 1.3)[..., None] * np.array([235, 230, 255], np.float32)
+        a = la[..., None]
         img = img * (1 - a) + face * a
-        img = img * (1 - self.sub[..., None]) + self.sub[..., None] * np.array([236, 220, 196], np.float32)
+        img += (bigblur(la, 30) * f * 0.35)[..., None] * np.array([255, 200, 140], np.float32)
+        img = img * (1 - sub[..., None]) + sub[..., None] * np.array([236, 220, 196], np.float32)
+        # gusts of the storm's dust blow across in front of everything, two depths
+        for spd, op, sc in ((3, 0.24, 1.0), (5, 0.16, 1.6)):
+            sx = (k * spd * 2 * W // N) % (2 * W)
+            g = np.roll(self.gust, -sx, axis=1)[:, :W]
+            env = np.roll(self.gust_env, -sx)[:W]
+            if sc != 1.0:
+                g = cv2.resize(cv2.resize(g, (int(W / sc), int(H / sc))), (W, H))
+            g = g * np.clip((env[None, :] - 0.35) * 2.2, 0, 1) * op
+            dust_col = np.array([150, 104, 76], np.float32) * (0.55 + 0.8 * f)
+            img = img * (1 - g[..., None]) + dust_col * g[..., None]
+        sxk, syk = self.thunder(k)
+        if abs(sxk) + abs(syk) > 0.05:
+            img = cv2.warpAffine(img.astype(np.float32), np.float32([[1, 0, sxk], [0, 1, syk]]), (W, H), borderMode=cv2.BORDER_REFLECT)
         rr = np.sqrt(((self.xx - W / 2) / (W * 0.6)) ** 2 + ((self.yy - H / 2) / (H * 0.62)) ** 2)
         img *= (1 - 0.45 * np.clip(rr - 0.4, 0, 1))[..., None]
         img += np.random.default_rng(900 + k).normal(size=(H, W)).astype(np.float32)[..., None] * 2.0
