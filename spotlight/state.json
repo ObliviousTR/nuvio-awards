@@ -3,75 +3,75 @@
     "boxoffice": "static",
     "certified": "static",
     "fresh": "static",
-    "headliner": "Jenna Ortega",
-    "legend": "Vincent Price",
-    "powerhouse": "Blumhouse Productions",
-    "prestige": "Meryl Streep",
+    "headliner": "Brad Pitt",
+    "legend": "Boris Karloff",
+    "powerhouse": "Hammer Film Productions",
+    "prestige": "Jack Nicholson",
     "pulse": "Halloween Night",
-    "retro": "Universal & Hammer Monsters",
-    "saga": "Alien",
+    "retro": "Golden Age of Slashers",
+    "saga": "Rocky & Creed",
     "simkl": "poster-wall-1",
-    "visionary": "Jordan Peele",
-    "yerli": "Kıvanç Tatlıtuğ"
+    "visionary": "Ari Aster",
+    "yerli": "Haluk Bilginer"
   },
   "backdrops": {
     "boxoffice": "/lgotja3xMoJZbynwHfcQcJAEMWH.jpg",
     "certified": "/8Tfys3mDZVp4tNoH2ktm06a0Tau.jpg",
     "fresh": "/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
-    "headliner": "/o375tDNib7tihlkWdtLW1fQhNL1.jpg",
-    "legend": "/nxE4O2EFIOfanWkdaCWiBRfwjrn.jpg",
-    "powerhouse": "/9pkZesKMnblFfKxEhQx45YQ2kIe.jpg",
-    "prestige": "/gkh6Nt8DtY1XT4gQsyFq9XAVJlJ.jpg",
+    "headliner": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+    "legend": "/hrED8MSOn4xJP9Cpk7WomUcFKGI.jpg",
+    "powerhouse": "/jJ3yFKs6xeVGxtmm7GXZYQ3XAvz.jpg",
+    "prestige": "/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
     "pulse": "/qVGpxnjrGlHaSTCqTQI6viBDSfp.jpg",
-    "retro": "/wFbPbJ9uRDpjY7micBTeolgkOA4.jpg",
-    "saga": "/6X42JnSMdo3dPAswOHUuvebdTq7.jpg",
-    "visionary": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
-    "yerli": "/hSiKjVcXnUVfVQFC3Sq7KDFilJa.jpg"
+    "retro": "/nzSjTiecdosBfwMGAdpt9CxltCI.jpg",
+    "saga": "/yaXXemxz3ePNSrqNtc4ZAbuxJRv.jpg",
+    "visionary": "/pS9Aub8MPyQbENblGD8mHeaqMuv.jpg",
+    "yerli": "/4JuoO0XywrCDeHLy4kTB9FU5U2C.jpg"
   },
   "cards": {
     "headliner": {
-      "period": 20,
-      "reason": null,
-      "subject": "Jenna Ortega"
+      "period": 21,
+      "reason": "In theaters now: Once Upon a Time... in Hollywood",
+      "subject": "Brad Pitt"
     },
     "legend": {
-      "period": 20,
+      "period": 21,
       "reason": null,
-      "subject": "Vincent Price"
+      "subject": "Boris Karloff"
     },
     "powerhouse": {
-      "period": 20,
+      "period": 21,
       "reason": null,
-      "subject": "Blumhouse Productions"
+      "subject": "Hammer Film Productions"
     },
     "prestige": {
-      "period": 20,
+      "period": 21,
       "reason": null,
-      "subject": "Meryl Streep"
+      "subject": "Jack Nicholson"
     },
     "pulse": {
       "since": "10-25",
       "subject": "Halloween Night"
     },
     "retro": {
-      "period": 20,
+      "period": 21,
       "reason": null,
-      "subject": "Universal & Hammer Monsters"
+      "subject": "Golden Age of Slashers"
     },
     "saga": {
-      "period": 20,
-      "reason": null,
-      "subject": "Alien"
+      "period": 21,
+      "reason": "New chapter · Rocky",
+      "subject": "Rocky & Creed"
     },
     "visionary": {
-      "period": 20,
+      "period": 21,
       "reason": null,
-      "subject": "Jordan Peele"
+      "subject": "Ari Aster"
     },
     "yerli": {
-      "period": 20,
+      "period": 21,
       "reason": null,
-      "subject": "Kıvanç Tatlıtuğ"
+      "subject": "Haluk Bilginer"
     }
   },
   "collection_ids": {
@@ -122,30 +122,38 @@
   "grown": "2026-10-20",
   "history": {
     "headliner": {
+      "Brad Pitt": "2026-10-26",
       "Jenna Ortega": "2026-10-20"
     },
     "legend": {
+      "Boris Karloff": "2026-10-26",
       "Vincent Price": "2026-10-20"
     },
     "powerhouse": {
-      "Blumhouse Productions": "2026-10-20"
+      "Blumhouse Productions": "2026-10-20",
+      "Hammer Film Productions": "2026-10-26"
     },
     "prestige": {
+      "Jack Nicholson": "2026-10-26",
       "Meryl Streep": "2026-10-20"
     },
     "retro": {
+      "Golden Age of Slashers": "2026-10-26",
       "Universal & Hammer Monsters": "2026-10-20"
     },
     "saga": {
-      "Alien": "2026-10-20"
+      "Alien": "2026-10-20",
+      "Rocky & Creed": "2026-10-26"
     },
     "visionary": {
+      "Ari Aster": "2026-10-26",
       "Jordan Peele": "2026-10-20"
     },
     "yerli": {
+      "Haluk Bilginer": "2026-10-26",
       "Kıvanç Tatlıtuğ": "2026-10-20"
     }
   },
   "pin": {},
-  "updated": "2026-10-25"
+  "updated": "2026-10-26"
 }

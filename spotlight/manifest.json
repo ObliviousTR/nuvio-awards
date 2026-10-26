@@ -1,6 +1,6 @@
 {
   "id": "community.oblivioustr.nuvio-spotlight",
-  "version": "1.20.20261025",
+  "version": "1.21.20261026",
   "name": "Nuvio Spotlight",
   "description": "Rotating spotlights (actor, director, studio, saga, season, Oscar talent, legends, eras, Turkish stars) and daily charts, rebuilt from TMDB.",
   "resources": [
@@ -17,7 +17,7 @@
     {
       "type": "movie",
       "id": "spotlight-headliner-movies",
-      "name": "The Headliner: Jenna Ortega",
+      "name": "The Headliner: Brad Pitt",
       "extra": [
         {
           "name": "search",
@@ -32,7 +32,7 @@
     {
       "type": "series",
       "id": "spotlight-headliner-series",
-      "name": "The Headliner: Jenna Ortega · Series",
+      "name": "The Headliner: Brad Pitt · Series",
       "extra": [
         {
           "name": "search",
@@ -47,7 +47,7 @@
     {
       "type": "movie",
       "id": "spotlight-visionary-movies",
-      "name": "The Visionary: Jordan Peele",
+      "name": "The Visionary: Ari Aster",
       "extra": [
         {
           "name": "search",
@@ -62,7 +62,7 @@
     {
       "type": "series",
       "id": "spotlight-visionary-series",
-      "name": "The Visionary: Jordan Peele · Series",
+      "name": "The Visionary: Ari Aster · Series",
       "extra": [
         {
           "name": "search",
@@ -77,7 +77,7 @@
     {
       "type": "movie",
       "id": "spotlight-powerhouse-movies",
-      "name": "The Powerhouse: Blumhouse Productions",
+      "name": "The Powerhouse: Hammer Horror",
       "extra": [
         {
           "name": "search",
@@ -92,7 +92,7 @@
     {
       "type": "series",
       "id": "spotlight-powerhouse-series",
-      "name": "The Powerhouse: Blumhouse Productions · Series",
+      "name": "The Powerhouse: Hammer Horror · Series",
       "extra": [
         {
           "name": "search",
@@ -107,7 +107,7 @@
     {
       "type": "movie",
       "id": "spotlight-saga-movies",
-      "name": "The Saga: Alien Saga",
+      "name": "The Saga: Rocky & Creed Saga",
       "extra": [
         {
           "name": "search",
@@ -122,7 +122,7 @@
     {
       "type": "series",
       "id": "spotlight-saga-series",
-      "name": "The Saga: Alien Saga · Series",
+      "name": "The Saga: Rocky & Creed Saga · Series",
       "extra": [
         {
           "name": "search",
@@ -137,7 +137,7 @@
     {
       "type": "movie",
       "id": "spotlight-prestige-movies",
-      "name": "The Prestige Darling: Meryl Streep",
+      "name": "The Prestige Darling: Jack Nicholson",
       "extra": [
         {
           "name": "search",
@@ -152,7 +152,7 @@
     {
       "type": "series",
       "id": "spotlight-prestige-series",
-      "name": "The Prestige Darling: Meryl Streep · Series",
+      "name": "The Prestige Darling: Jack Nicholson · Series",
       "extra": [
         {
           "name": "search",
@@ -167,7 +167,7 @@
     {
       "type": "movie",
       "id": "spotlight-legend-movies",
-      "name": "The Living Legend: Vincent Price",
+      "name": "The Living Legend: Boris Karloff",
       "extra": [
         {
           "name": "search",
@@ -182,7 +182,7 @@
     {
       "type": "series",
       "id": "spotlight-legend-series",
-      "name": "The Living Legend: Vincent Price · Series",
+      "name": "The Living Legend: Boris Karloff · Series",
       "extra": [
         {
           "name": "search",
@@ -197,7 +197,7 @@
     {
       "type": "movie",
       "id": "spotlight-retro-movies",
-      "name": "Retro Rewind: Universal & Hammer Monsters",
+      "name": "Retro Rewind: Golden Age of Slashers",
       "extra": [
         {
           "name": "search",
@@ -212,7 +212,7 @@
     {
       "type": "series",
       "id": "spotlight-retro-series",
-      "name": "Retro Rewind: Universal & Hammer Monsters · Series",
+      "name": "Retro Rewind: Golden Age of Slashers · Series",
       "extra": [
         {
           "name": "search",
@@ -227,7 +227,7 @@
     {
       "type": "movie",
       "id": "spotlight-yerli-movies",
-      "name": "Yerli Yıldız: Kıvanç Tatlıtuğ · Filmler",
+      "name": "Yerli Yıldız: Haluk Bilginer · Filmler",
       "extra": [
         {
           "name": "search",
@@ -242,7 +242,7 @@
     {
       "type": "series",
       "id": "spotlight-yerli-series",
-      "name": "Yerli Yıldız: Kıvanç Tatlıtuğ · Diziler",
+      "name": "Yerli Yıldız: Haluk Bilginer · Diziler",
       "extra": [
         {
           "name": "search",
