@@ -1,0 +1,34 @@
+name: Home lists
+# The Library's four visible lists: Trending Movies / Series (Nuvio's home hero) and For You Movies / Series
+# (recommendations from Ozzy's Simkl history). The Simkl tokens are refreshed and re-saved encrypted on every run.
+on:
+  schedule:
+    - cron: "47 3 * * *"   # every day 03:47 UTC (06:47 Istanbul)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: repo-writes
+jobs:
+  lists:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q pillow
+      - name: Build
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          SIMKL_CLIENT_ID: ${{ secrets.SIMKL_CLIENT_ID }}
+          SIMKL_CLIENT_SECRET: ${{ secrets.SIMKL_CLIENT_SECRET }}
+          MDBLIST_API_KEY: ${{ secrets.MDBLIST_API_KEY }}
+        run: python3 scripts/home_lists.py
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A library simkl/token.enc spotlight/cache
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -q -m "Home lists $(date -u +%Y-%m-%d)"
+          git pull --rebase -q && git push

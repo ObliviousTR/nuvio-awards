@@ -441,7 +441,7 @@ def main():
     try:
         old = json.load(open(L("manifest.json"), encoding="utf-8"))["catalogs"]
         kept = [c for c in old if c["id"].startswith(("gen-", "mdb-"))]
-        head = [c for c in old if c["id"].startswith("disc-")]
+        head = [c for c in old if c["id"].startswith("home-")] + [c for c in old if c["id"].startswith("disc-")]  # home-*: scripts/home_lists.py
     except Exception:
         kept, head = [], []
     manifest = {"id": "community.oblivioustr.nuvio-library", "version": f"1.0.{TODAY.strftime('%Y%m%d')}",

@@ -390,7 +390,8 @@ def main():
     mdisc, mhidden = build_mdb(report)
     # the Library's manifest: Discover catalogs first (they head Nuvio's Discover menu), its own catalogs, ours (gen-*)
     man = json.load(open(L("manifest.json"), encoding="utf-8"))
-    man["catalogs"] = disc + mdisc + [c for c in man["catalogs"] if not c["id"].startswith(("gen-", "disc-", "mdb-"))] + cats + mhidden
+    home = [c for c in man["catalogs"] if c["id"].startswith("home-")]      # scripts/home_lists.py: the hero / For You lists
+    man["catalogs"] = home + disc + mdisc + [c for c in man["catalogs"] if not c["id"].startswith(("home-", "gen-", "disc-", "mdb-"))] + cats + mhidden
     man["version"] = f"1.0.{TODAY.strftime('%Y%m%d')}"
     json.dump(man, open(L("manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     S.IMDB.save()
