@@ -75,7 +75,9 @@ def read_additions():
 
 def meta(r, typ):
     return {"id": r["imdb"], "type": typ, "name": r["title"], "releaseInfo": str(r["year"]),
-            "poster": f"https://images.metahub.space/poster/medium/{r['imdb']}/img", "posterShape": "poster"}
+            "poster": f"https://images.metahub.space/poster/medium/{r['imdb']}/img", "posterShape": "poster",
+            # a full-size landscape image: Nuvio's home hero uses it instead of blowing the poster up
+            "background": f"https://images.metahub.space/background/medium/{r['imdb']}/img"}
 
 
 def write_pages(typ, cid, metas):

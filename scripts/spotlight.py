@@ -547,9 +547,19 @@ def tr_name(typ, imdb):
     return e[0] if e and e[0] else None
 
 
+def background(imdb, path=None):
+    """A full-size landscape image for the item. Nuvio's home hero (and its focus backdrop) uses `background` and,
+    without one, blows the small poster up to the full screen. TMDB's original backdrop when we know it, else
+    MetaHub's 1920x1080 background."""
+    if path:
+        return f"https://image.tmdb.org/t/p/original{path}"
+    return f"https://images.metahub.space/background/medium/{imdb}/img"
+
+
 def meta(x, typ):
     return {"id": x["imdb"], "type": typ, "name": tr_name(typ, x["imdb"]) or x["name"], "releaseInfo": x["year"],
-            "poster": f"https://images.metahub.space/poster/medium/{x['imdb']}/img", "posterShape": "poster"}
+            "poster": f"https://images.metahub.space/poster/medium/{x['imdb']}/img", "posterShape": "poster",
+            "background": background(x["imdb"], x.get("backdrop"))}
 
 
 def write_catalog(typ, cid, items):

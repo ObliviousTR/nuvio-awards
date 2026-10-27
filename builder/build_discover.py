@@ -114,7 +114,8 @@ FOLDERS = [
         aio("Trending Today", "TV", "tmdb.trending", "Day"),
         aio("Trending This Week", "TV", "tmdb.trending", "Week"),
         aio("Trending on Trakt", "TV", "trakt.trending.shows"),
-        aio("Trending Anime · Simkl", "TV", "simkl.trending.anime", "week"),
+        src("Trending Anime Series", "TV", POP, voteCountGte=10, **ANIME, **RECENT),   # was Simkl's anime catalog:
+        # AIOMetadata serves it as type "anime", so the TV rail asked for it came back empty
     ] + genre_rails("TV", POP, 20, "Trending ", "Series", **RECENT)),
     ("All-Time Top Rated", "Top Movies", [
         src("Top Rated Movies", "MOVIE", TOP, voteCountGte=3000, withoutGenres="16|99", **EN),  # docs/kids have own rails
