@@ -7,6 +7,12 @@ Pinterest or Giphy. The logo carries the name, so folder titles are hidden.
 import hashlib, os, sys
 from common import load, save, row, addon_src, SPOT_ART
 
+
+def lib_src(title, media, cid):
+    s = addon_src(title, media, cid, addon_id="community.oblivioustr.nuvio-library")
+    s["genre"] = None
+    return s
+
 SRC, OUT = sys.argv[1], sys.argv[2]
 FAV = f"{SPOT_ART}/favourites"
 
@@ -37,6 +43,8 @@ for f in fav["folders"]:
     if f["title"] in slots:
         style(f, slots[f["title"]])
 simkl = style({"id": "folder-spotlight-simkl", "title": "My Simkl", "catalogSources": [], "sources": [
+    lib_src("For You · Movies", "MOVIE", "home-foryou-movies"),     # scripts/home_lists.py, from the Simkl history
+    lib_src("For You · Series", "TV", "home-foryou-series"),
     addon_src("Up Next", "TV", "simkl.upnext"),
     addon_src("Watching", "TV", "simkl.watchlist.shows.watching"),
     addon_src("Plan to Watch · Movies", "MOVIE", "simkl.watchlist.movies.plantowatch"),
