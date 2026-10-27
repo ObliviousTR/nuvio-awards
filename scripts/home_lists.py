@@ -26,7 +26,8 @@ SIZE = 60
 
 
 def anime(r):
-    return 16 in (r.get("genre_ids") or [g["id"] for g in r.get("genres", [])]) and r.get("original_language") == "ja"
+    """anime, and animation at all: both live in their own rails (the hero and For You are live action)"""
+    return 16 in (r.get("genre_ids") or [g["id"] for g in r.get("genres", [])])
 
 
 def noise(kind, r):
@@ -135,9 +136,11 @@ def for_you(kind, seen, seeds):
                 score[r["id"]] = score.get(r["id"], 0) + w * (1 - rank / 45)
                 hits[r["id"]] = hits.get(r["id"], 0) + (1 if w > 0 else 0)
                 data[r["id"]] = r
-    for i in score:                                       # liked by several seeds, and a little for quality
-        score[i] *= 1 + 0.25 * (hits[i] - 1)
-        score[i] += 0.02 * (data[i].get("vote_average", 0) - 6.5)
+    for i in score:                                       # liked by several seeds, well rated, not too old
+        r = data[i]
+        year = int(((r.get("release_date") or r.get("first_air_date") or "1900")[:4]) or 1900)
+        age = 1.0 if year >= 2012 else 0.8 if year >= 2000 else 0.55
+        score[i] *= (1 + 0.25 * (hits[i] - 1)) * age * (0.6 + 0.4 * min(1.0, max(0.0, (r.get("vote_average", 0) - 5.5) / 2)))
     ranked = [data[i] for i in sorted(score, key=lambda i: -score[i]) if score[i] > 0]
     return S.rows(kind, ranked, SIZE)
 
