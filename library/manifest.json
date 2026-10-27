@@ -16,6 +16,30 @@
  "catalogs": [
   {
    "type": "movie",
+   "id": "home-trending-movies",
+   "name": "Trending Movies",
+   "extra": []
+  },
+  {
+   "type": "series",
+   "id": "home-trending-series",
+   "name": "Trending Series",
+   "extra": []
+  },
+  {
+   "type": "movie",
+   "id": "home-foryou-movies",
+   "name": "For You · Movies",
+   "extra": []
+  },
+  {
+   "type": "series",
+   "id": "home-foryou-series",
+   "name": "For You · Series",
+   "extra": []
+  },
+  {
+   "type": "movie",
    "id": "disc-comedy-movies",
    "name": "Discover · Comedy",
    "extra": [
