@@ -15,6 +15,21 @@
    "name": "Austin Abrams",
    "auto": true,
    "added": "2026-10-20"
+  },
+  {
+   "name": "Nicole Kidman",
+   "auto": true,
+   "added": "2026-10-27"
+  },
+  {
+   "name": "Robert Downey Jr.",
+   "auto": true,
+   "added": "2026-10-27"
+  },
+  {
+   "name": "Alan Ritchson",
+   "auto": true,
+   "added": "2026-10-27"
   }
  ],
  "visionary": [
@@ -32,6 +47,21 @@
    "name": "Kitao Sakurai",
    "auto": true,
    "added": "2026-10-20"
+  },
+  {
+   "name": "Peter Spierig",
+   "auto": true,
+   "added": "2026-10-27"
+  },
+  {
+   "name": "Michael Spierig",
+   "auto": true,
+   "added": "2026-10-27"
+  },
+  {
+   "name": "James Watkins",
+   "auto": true,
+   "added": "2026-10-27"
   }
  ],
  "saga": [
@@ -58,6 +88,39 @@
    ],
    "auto": true,
    "added": "2026-10-20"
+  },
+  {
+   "name": "Fall",
+   "collections": [
+    1102372
+   ],
+   "auto": true,
+   "added": "2026-10-27"
+  },
+  {
+   "name": "The Avengers",
+   "collections": [
+    86311
+   ],
+   "auto": true,
+   "added": "2026-10-27"
+  }
+ ],
+ "yerli": [
+  {
+   "name": "Ozan Akbaba",
+   "auto": true,
+   "added": "2026-10-27"
+  },
+  {
+   "name": "Murat Yildirim",
+   "auto": true,
+   "added": "2026-10-27"
+  },
+  {
+   "name": "Cemre Baysel",
+   "auto": true,
+   "added": "2026-10-27"
   }
  ]
 }

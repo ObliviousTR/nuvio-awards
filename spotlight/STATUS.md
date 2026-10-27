@@ -1,20 +1,20 @@
-# Spotlight status — 2026-10-26
+# Spotlight status — 2026-10-27
 
 Next rotation (all rotating cards): **2026-11-09**
 Next Cultural Pulse theme starts: **2026-11-03**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
-| The Headliner | Brad Pitt | 56 | 0 | ✓ |
-| The Visionary | Ari Aster | 7 | 0 | ✓ |
-| The Powerhouse | Hammer Horror | 71 | 3 | ✓ |
-| The Saga | Rocky & Creed Saga | 9 | 0 | ✓ |
-| The Prestige Darling | Jack Nicholson | 55 | 0 | ✓ |
-| The Living Legend | Boris Karloff | 68 | 1 | ✓ |
-| Retro Rewind | Golden Age of Slashers | 50 | 0 | ✓ |
-| Yerli Yıldız | Haluk Bilginer | 44 | 22 | ✓ |
+| The Headliner | Brad Pitt | 56 | 0 |  |
+| The Visionary | Ari Aster | 7 | 0 |  |
+| The Powerhouse | Hammer Horror | 71 | 3 |  |
+| The Saga | Rocky & Creed Saga | 9 | 0 |  |
+| The Prestige Darling | Jack Nicholson | 55 | 0 |  |
+| The Living Legend | Boris Karloff | 68 | 1 |  |
+| Retro Rewind | Golden Age of Slashers | 50 | 0 |  |
+| Yerli Yıldız | Haluk Bilginer | 44 | 22 |  |
 | The Cultural Pulse | Halloween Night | 100 | 38 |  |
-| Fresh Out of Theaters | daily | 50 | 42 |  |
+| Fresh Out of Theaters | daily | 50 | 44 |  |
 | Box Office Champions | daily | 40 | 100 |  |
 | Certified Fresh & Must-See | daily | 60 | 52 |  |
 
@@ -31,5 +31,7 @@ Next Cultural Pulse theme starts: **2026-11-03**
 - **Retro Rewind**: 1978–1989; keywords=12339
 - **Yerli Yıldız**: TMDB person 117640 Haluk Bilginer (Acting)
 - **The Cultural Pulse**: keywords movie=3335 series=3335
-- headliner: topical: Brad Pitt (In theaters now: Once Upon a Time... in Hollywood); Sylvester Stallone (In theaters now: Rocky)
-- saga: topical: Rocky & Creed (New chapter · Rocky)
+- headliner: added to the auto pool: Nicole Kidman, Robert Downey Jr., Alan Ritchson
+- visionary: added to the auto pool: Peter Spierig, Michael Spierig, James Watkins
+- saga: added to the auto pool: Fall, The Avengers
+- yerli: added to the auto pool: Ozan Akbaba, Murat Yildirim, Cemre Baysel
