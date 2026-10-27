@@ -13,25 +13,32 @@ from keyframe_webp import encode
 
 GW, GH, MS = 512, 288, 40
 # source frames (25 fps) kept for the hover, in order, and the frame used for the cover
+# and a zoom about the logo's centre (tabii's splash frames its logo small)
 CUTS = {
-    "exxen": ("exxen.mp4", [(9, 75), (95, 160)], 80),        # border + dot, letters build, hold (shortened), out
-    "gain": ("gain.webm", [(3, 97)], 50),                    # G A I N with the balloon, the door, the girl, out
-    "tabii": ("tabii.mp4", [(8, 94)], 50),                   # the star turns in, wordmark, the star opens, out
+    "exxen": ("exxen.mp4", [(9, 75), (95, 160)], 80, 1.0),   # border + dot, letters build, hold (shortened), out
+    "gain": ("gain.webm", [(3, 97)], 50, 1.0),               # G A I N with the balloon, the door, the girl, out
+    "tabii": ("tabii.mp4", [(8, 94)], 50, 1.45),             # the star turns in, wordmark, the star opens, out
 }
+CENTRE_Y = {"tabii": 0.48}
 
 
-def frames(path, size):
+def frames(path, size, zoom=1.0, cy=0.5):
     w, h = size
-    p = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-map", "0:v:0", "-vf", f"scale={w}:{h}:flags=lanczos",
+    vf = f"scale={w}:{h}:flags=lanczos"
+    if zoom != 1.0:
+        vf = (f"crop=iw/{zoom}:ih/{zoom}:(iw-iw/{zoom})/2:max(0\\,min(ih-ih/{zoom}\\,ih*{cy}-ih/{zoom}/2)),"
+              + vf)
+    p = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-map", "0:v:0", "-vf", vf,
                         "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True, check=True)
     return np.frombuffer(p.stdout, np.uint8).reshape(-1, h, w, 3)
 
 
 def build(vdir, out, pid):
-    name, cuts, cov = CUTS[pid]
+    name, cuts, cov, zoom = CUTS[pid]
     path = os.path.join(vdir, name)
-    big = frames(path, (1280, 720))
-    small = frames(path, (GW, GH))
+    cy = CENTRE_Y.get(pid, 0.5)
+    big = frames(path, (1280, 720), zoom, cy)
+    small = frames(path, (GW, GH), zoom, cy)
     os.makedirs(os.path.join(out, pid), exist_ok=True)
     Image.fromarray(big[cov]).save(os.path.join(out, pid, "cover.jpg"), quality=92)
     keep = [i for a, b in cuts for i in range(a, min(b, len(small)))]
