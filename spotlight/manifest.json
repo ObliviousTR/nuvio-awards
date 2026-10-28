@@ -1,6 +1,6 @@
 {
   "id": "community.oblivioustr.nuvio-spotlight",
-  "version": "1.21.20261027",
+  "version": "1.21.20261028",
   "name": "Nuvio Spotlight",
   "description": "Rotating spotlights (actor, director, studio, saga, season, Oscar talent, legends, eras, Turkish stars) and daily charts, rebuilt from TMDB.",
   "resources": [

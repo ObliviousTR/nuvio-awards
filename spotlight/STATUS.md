@@ -1,11 +1,11 @@
-# Spotlight status — 2026-10-27
+# Spotlight status — 2026-10-28
 
 Next rotation (all rotating cards): **2026-11-09**
 Next Cultural Pulse theme starts: **2026-11-03**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
-| The Headliner | Brad Pitt | 56 | 0 |  |
+| The Headliner | Brad Pitt | 55 | 0 |  |
 | The Visionary | Ari Aster | 7 | 0 |  |
 | The Powerhouse | Hammer Horror | 71 | 3 |  |
 | The Saga | Rocky & Creed Saga | 9 | 0 |  |
@@ -15,8 +15,8 @@ Next Cultural Pulse theme starts: **2026-11-03**
 | Yerli Yıldız | Haluk Bilginer | 44 | 22 |  |
 | The Cultural Pulse | Halloween Night | 100 | 38 |  |
 | Fresh Out of Theaters | daily | 50 | 44 |  |
-| Box Office Champions | daily | 40 | 100 |  |
-| Certified Fresh & Must-See | daily | 60 | 52 |  |
+| Box Office Champions | daily | 37 | 99 |  |
+| Certified Fresh & Must-See | daily | 57 | 52 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 287 Brad Pitt (Acting)
@@ -31,7 +31,3 @@ Next Cultural Pulse theme starts: **2026-11-03**
 - **Retro Rewind**: 1978–1989; keywords=12339
 - **Yerli Yıldız**: TMDB person 117640 Haluk Bilginer (Acting)
 - **The Cultural Pulse**: keywords movie=3335 series=3335
-- headliner: added to the auto pool: Nicole Kidman, Robert Downey Jr., Alan Ritchson
-- visionary: added to the auto pool: Peter Spierig, Michael Spierig, James Watkins
-- saga: added to the auto pool: Fall, The Avengers
-- yerli: added to the auto pool: Ozan Akbaba, Murat Yildirim, Cemre Baysel
