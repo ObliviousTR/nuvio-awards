@@ -6,7 +6,7 @@ Every keyword below was looked up on the TMDB API (search/keyword); the risky on
 through discover to check the titles they return.
 """
 import sys
-from common import src, span, load, save, row, add, placeholder_folder, NOISE, CURRENT_YEAR, INTL_LANGS, TOP, NEW
+from common import src, span, load, save, row, add, placeholder_folder, NOISE, CURRENT_YEAR, SHOWCASE_YEAR, INTL_LANGS, TOP, NEW
 
 SRC, OUT, REPORT = sys.argv[1], sys.argv[2], sys.argv[3]
 DATE_M, DATE_T = NEW["MOVIE"], NEW["TV"]
@@ -216,7 +216,7 @@ DOCS = [
     ("Trending & Award-Winning Docs", None, [   # ours (agreed list), no Kaptain counterpart
         dm("Popular Documentaries", vc=50), dt("Popular Docuseries", vc=20),
         dm("New Documentaries", DATE_M, vc=10), dt("New Docuseries", DATE_T, vc=5),
-        dm(f"Best Documentaries of {CURRENT_YEAR}", TOP, vc=15, **span(CURRENT_YEAR)),
+        dm(f"Best Documentaries of {SHOWCASE_YEAR}", TOP, vc=15, **span(SHOWCASE_YEAR)),
         dm("All-Time Great Documentaries", TOP, vc=1000),
         dt("All-Time Great Docuseries", TOP, vc=200),
     ]),

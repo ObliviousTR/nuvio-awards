@@ -3,7 +3,9 @@ import datetime
 import json
 
 NOISE = "10763|10767|10766"  # News, Talk, Soap
-CURRENT_YEAR = datetime.date.today().year  # rails "of the year" follow the calendar (builder/new_year.py rolls the delivered file)
+CURRENT_YEAR = datetime.date.today().year  # the calendar: "right now" windows (last year + this year)
+# the year the "of the year" rails show: the new year only from March, when it has films (builder/new_year.py)
+SHOWCASE_YEAR = CURRENT_YEAR if datetime.date.today().month >= 3 else CURRENT_YEAR - 1
 INTL_LANGS = "ko|es|fr|de|it|da|sv|no|pt|ja|zh|cn|hi|te|ta|tr|pl|nl|he|fa|th|ru"
 POP, TOP = "popularity.desc", "vote_average.desc"
 NEW = {"MOVIE": "primary_release_date.desc", "TV": "first_air_date.desc"}

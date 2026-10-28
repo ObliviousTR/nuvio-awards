@@ -7,7 +7,7 @@ All year rails use release-date windows (span), never TMDB's `year` filter (matc
 Main rails become English-only in apply_language_policy.py; anime rails are pinned to Japanese.
 """
 import sys
-from common import src, span, load, save, row, add, placeholder_folder, NOISE, CURRENT_YEAR, INTL_LANGS, TOP, NEW
+from common import src, span, load, save, row, add, placeholder_folder, NOISE, CURRENT_YEAR, SHOWCASE_YEAR, INTL_LANGS, TOP, NEW
 
 SRC, OUT, REPORT = sys.argv[1], sys.argv[2], sys.argv[3]
 HORROR_TV = "315058|9853|162846|3358|295907"  # verified: Supernatural, AHS, Stranger Things, Ghosts
@@ -76,7 +76,7 @@ def toon_rails(base, subs, anime):
     """Main flow (New / Popular / Top All Time / Top of the Year, movie-series pairs) + sub-genres."""
     lang = {"withOriginalLanguage": "ja"} if anime else {}
     vc = dict(new=(10, 5), pop=(50, 30), top=(300, 150), yr=(15, 8), sub=(30, 20))
-    yr = span(CURRENT_YEAR)
+    yr = span(SHOWCASE_YEAR)
     r = []
     for label, sort, key, extra in (("New", NEW, "new", {}), ("Popular", None, "pop", {}),
                                     ("Top All Time", TOP, "top", {}), ("Top of the Year", TOP, "yr", yr)):
@@ -96,7 +96,7 @@ def toon_rails(base, subs, anime):
 def genre_rails(title, mf, tf, small, am, at):
     fl = dict(new_m=10, new_t=5, pop_m=30, pop_t=10, top_m=300, top_t=50, yr_m=15, yr_t=8, im=400, it=150) \
         if small else dict(new_m=20, new_t=10, pop_m=100, pop_t=50, top_m=1000, top_t=300, yr_m=60, yr_t=25, im=1500, it=800)
-    yr = span(CURRENT_YEAR)
+    yr = span(SHOWCASE_YEAR)
     pairs = [
         ("New", NEW, "new"), ("Popular", None, "pop"), ("Top All Time", TOP, "top"), ("Top of the Year", TOP, "yr"),
     ]
@@ -140,9 +140,9 @@ def decade_rails(label, start, end, last_year, intl_tv_floor=None):
     return r
 
 
-yr = span(CURRENT_YEAR)
+yr = span(SHOWCASE_YEAR)
 DECADES = [  # (title, backup art folder or None, rails)
-    (f"🏆 Best of {CURRENT_YEAR}", None, [
+    (f"🏆 Best of {SHOWCASE_YEAR}", None, [
         src("Top Rated Movies", "MOVIE", TOP, voteCountGte=60, **yr),
         src("Top Rated Series", "TV", TOP, voteCountGte=25, **yr),
         src("Popular Movies", "MOVIE", voteCountGte=40, **yr),
@@ -152,7 +152,7 @@ DECADES = [  # (title, backup art folder or None, rails)
         src("International Hits Series", "TV", voteCountGte=60, withOriginalLanguage=INTL_LANGS,
             withoutGenres="16|" + NOISE, **yr),
     ]),
-    ("2020s", "2020s Movies", decade_rails("2020s", 2020, 2029, CURRENT_YEAR, 500)),
+    ("2020s", "2020s Movies", decade_rails("2020s", 2020, 2029, SHOWCASE_YEAR, 500)),
     ("2010s", "10s Movies", decade_rails("2010s", 2010, 2019, 2019, 800)),
     ("2000s", "00s Movies", decade_rails("2000s", 2000, 2009, 2009, 500)),
     ("1990s", "90s Movies", decade_rails("1990s", 1990, 1999, 1999, 150)),

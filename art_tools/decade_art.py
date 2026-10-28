@@ -24,7 +24,7 @@ from reletter import f as font, tracked, width
 W, H = 1280, 720
 OW, OH = 512, 288
 TEST = bool(os.environ.get("DECADE_TEST"))
-YEAR = dt.date.today().year
+YEAR = dt.date.today().year if dt.date.today().month >= 3 else dt.date.today().year - 1   # Best of <year>: the new year from March (builder/new_year.py)
 
 CARDS = {  # folder -> (numbers, era, accent, pool of (title, year))
     "1950s & Golden Age": ("50S", "50s", (230, 90, 80), [
