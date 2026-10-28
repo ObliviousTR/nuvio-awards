@@ -1,0 +1,35 @@
+name: New year
+# 1 January: the delivered collection's calendar rails move one year on (builder/new_year.py) and the result is
+# published as builder/out/delivered/nuvio-yeni-yil-<year>.json for Ozzy to import with "Replace". Runs after the
+# Decade art job (06:07 UTC) has rendered the new "Best of <year>" card.
+on:
+  schedule:
+    - cron: "30 7 1 1 *"   # 1 January, 07:30 UTC (10:30 Istanbul)
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "the new year (default: this year)"
+        default: ""
+permissions:
+  contents: write
+concurrency: repo-writes
+jobs:
+  roll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Roll the year
+        run: |
+          Y="${{ github.event.inputs.year }}"; Y="${Y:-$(date -u +%Y)}"
+          cd builder
+          python3 new_year.py out/delivered/baseline.json "out/nuvio-yeni-yil-$Y.json" "$Y"
+          bash deliver.sh "nuvio-yeni-yil-$Y.json"
+          echo "Y=$Y" >> "$GITHUB_ENV"
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "builder/out/delivered/nuvio-yeni-yil-$Y.json" builder/out/delivered/baseline.json
+          git commit -q -m "New year $Y: calendar rails moved on"
+          git pull --rebase -X theirs -q && git push -q
