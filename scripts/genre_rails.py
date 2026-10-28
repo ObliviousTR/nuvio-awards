@@ -283,10 +283,15 @@ def mdb_items(lid, kind):
             break
         offset += len(d.get("movies") or []) + len(d.get("shows") or [])
     rows = []
+    recent = dt.date.today().year - 1
     for x in out:
         imdb = x.get("imdb_id")
-        if imdb:
-            rows.append({"imdb": imdb, "name": x.get("title"), "year": str(x.get("release_year") or ""), "rank": x.get("rank") or 0})
+        if not imdb:
+            continue
+        # a film of this or last year stays out until it is out at home (scripts/spotlight.py, ImdbCache.digital)
+        if kind == "movie" and int(x.get("release_year") or 0) >= recent and x.get("id") and not S.IMDB.digital_tmdb(x["id"]):
+            continue
+        rows.append({"imdb": imdb, "name": x.get("title"), "year": str(x.get("release_year") or ""), "rank": x.get("rank") or 0})
     return rows
 
 

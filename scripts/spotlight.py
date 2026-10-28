@@ -129,15 +129,29 @@ class ImdbCache:
                 continue
             todo.append(r["id"])
 
-        def ask(tid):
-            d = tmdb(f"/movie/{tid}/release_dates") or {}
-            days = [x.get("release_date", "")[:10] for c in d.get("results", []) for x in c.get("release_dates", [])
-                    if x.get("type") in (4, 5, 6) and x.get("release_date")]
-            return tid, min(days) if days else ""
-
         with ThreadPoolExecutor(8) as ex:
-            for tid, first in ex.map(ask, list(dict.fromkeys(todo))):
+            for tid, first in ex.map(self._ask, list(dict.fromkeys(todo))):
                 cache[str(tid)] = [first, today]
+
+    @staticmethod
+    def _ask(tid):
+        """The first home release (digital or physical; a TV premiere counts only without any cinema run)."""
+        d = tmdb(f"/movie/{tid}/release_dates") or {}
+        rel = [(x.get("type"), x.get("release_date", "")[:10]) for c in d.get("results", []) for x in c.get("release_dates", [])
+               if x.get("release_date")]
+        home = [day for t, day in rel if t in (4, 5)]
+        if not home and not any(t in (2, 3) for t, _ in rel):
+            home = [day for t, day in rel if t == 6]
+        return tid, min(home) if home else ""
+
+    def digital_tmdb(self, tid):
+        """For lists that only know the TMDB id (MDBList): out at home yet? Asked once a day while it is not."""
+        cache, today = self._digital_cache(), dt.date.today().isoformat()
+        e = cache.get(str(tid))
+        if not (e and ((e[0] and e[0] <= today) or e[1] >= today)):
+            _, first = self._ask(tid)
+            e = cache[str(tid)] = [first, today]
+        return bool(e[0] and e[0] <= today)
 
     def digital(self, r):
         if not self._recent(r):

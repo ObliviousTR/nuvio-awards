@@ -27,7 +27,7 @@ jobs:
           git add -A library spotlight/cache
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -q -m "Library update $(date -u +%Y-%m-%d)"
-          git pull --rebase -q && git push
+          git pull --rebase -X theirs -q && git push
       - name: Open an issue with new additions / candidates
         env:
           GH_TOKEN: ${{ github.token }}
