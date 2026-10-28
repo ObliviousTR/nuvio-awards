@@ -1,4 +1,4 @@
-# Library report — 2026-10-25
+# Library report — 2026-10-28
 
 648 catalogs
 
@@ -11,7 +11,7 @@
 - **Classic Batman** (2): Batman, Batman
 - **Live-Action Series** (6): Batman, Gotham, Pennyworth: The Origin of Batman's Butler, Batwoman, Gotham Knights, The Penguin
 - **Batman: The Animated Series Films** (4): Batman: Mask of the Phantasm, Batman & Mr. Freeze: SubZero, Batman Beyond: Return of the Joker, Batman: Mystery of the Batwoman
-- **DC Animated Movies** (17): Batman: Gotham Knight, Batman: Under the Red Hood, Batman: Year One, Batman: The Dark Knight Returns, Part 1, Batman: The Dark Knight Returns, Part 2, Son of Batman, Batman: Assault on Arkham, Batman: Bad Blood, Batman: The Killing Joke, Batman: Gotham by Gaslight, Batman Ninja, Batman: Hush, Batman: The Long Halloween, Part One, Batman: The Long Halloween, Part Two, Batman: The Doom That Came to Gotham, Aztec Batman: Clash of Empires, Batman: Knightfall Part 1: Knightfall
+- **DC Animated Movies** (18): Batman: Gotham Knight, Batman: Under the Red Hood, Batman: Year One, Batman: The Dark Knight Returns, Part 1, Batman: The Dark Knight Returns, Part 2, Son of Batman, Batman: Assault on Arkham, Batman: Bad Blood, Batman: The Killing Joke, Batman: Gotham by Gaslight, Batman Ninja, Batman: Hush, Batman: The Long Halloween, Part One, Batman: The Long Halloween, Part Two, Batman and Superman: Battle of the Super Sons, Batman: The Doom That Came to Gotham, Aztec Batman: Clash of Empires, Batman: Knightfall Part 1: Knightfall
 - **LEGO Batman** (2): LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout, The Lego Batman Movie
 - **Animated Series** (11): The Adventures of Batman, The New Adventures of Batman, Batman: The Animated Series, The New Batman Adventures, Batman Beyond, Gotham Girls, The Batman, Batman: The Brave and the Bold, Beware the Batman, Harley Quinn, Batman: Caped Crusader
 
@@ -52,9 +52,9 @@
 - **Arrowverse** (6): Arrow, The Flash, Supergirl, DC's Legends of Tomorrow, DC's Stargirl, Superman & Lois
 - **Modern DC Series** (4): Titans, Doom Patrol, Peacemaker, Lanterns
 - **Classic DC Series** (4): Adventures of Superman, Wonder Woman, Lois & Clark: The New Adventures of Superman, Smallville
-- **Justice League Animated Films** (17): Justice League: Secret Origins, Justice League: Paradise Lost, Justice League: Starcrossed - The Movie, Justice League: The New Frontier, Justice League: Crisis on Two Earths, Justice League: Doom, Justice League: The Flashpoint Paradox, Justice League: War, Justice League: Throne of Atlantis, Justice League: Gods and Monsters, Justice League vs. Teen Titans, Justice League Dark, Justice League vs. the Fatal Five, Justice League Dark: Apokolips War, Justice League: Warworld, Justice League: Crisis on Infinite Earths Part One, Justice League: Crisis on Infinite Earths Part Three
-- **Superman Animated Films** (10): Superman, Superman: Doomsday, Superman/Batman: Public Enemies, Superman/Batman: Apocalypse, All Star Superman, Superman vs. The Elite, Superman: Unbound, The Death of Superman, Superman: Red Son, Superman: Man of Tomorrow
-- **More DC Animated Films** (3): Suicide Squad: Hell to Pay, Teen Titans Go! To the Movies, Wonder Woman: Bloodlines
+- **Justice League Animated Films** (18): Justice League: Secret Origins, Justice League: Paradise Lost, Justice League: Starcrossed - The Movie, Justice League: The New Frontier, Justice League: Crisis on Two Earths, Justice League: Doom, Justice League: The Flashpoint Paradox, Justice League: War, Justice League: Throne of Atlantis, Justice League: Gods and Monsters, Justice League vs. Teen Titans, Justice League Dark, Justice League vs. the Fatal Five, Justice League Dark: Apokolips War, Justice League: Warworld, Justice League: Crisis on Infinite Earths Part One, Justice League: Crisis on Infinite Earths Part Two, Justice League: Crisis on Infinite Earths Part Three
+- **Superman Animated Films** (11): Superman, Superman: Doomsday, Superman/Batman: Public Enemies, Superman/Batman: Apocalypse, All Star Superman, Superman vs. The Elite, Superman: Unbound, The Death of Superman, Superman: Red Son, Superman: Man of Tomorrow, Batman and Superman: Battle of the Super Sons
+- **More DC Animated Films** (4): Teen Titans: The Judas Contract, Suicide Squad: Hell to Pay, Teen Titans Go! To the Movies, Wonder Woman: Bloodlines
 - **Animated Series** (12): The New Adventures of Superman, The Superman/Aquaman Hour of Adventure, Superman, Superman: The Animated Series, Justice League, Teen Titans, Justice League Unlimited, Young Justice, Teen Titans Go!, Justice League: Gods and Monsters Chronicles, My Adventures with Superman, Creature Commandos
 
 ## Star Wars (universe)
@@ -177,20 +177,20 @@
 - **Sci-Fi Collections**: 13 rails — Back to the Future (3), Blade Runner (2), Divergent (3), Pacific Rim (2), RoboCop (3), Starship Troopers (3), The Hunger Games (4), TRON (3), Avatar (3), Cloverfield (3), The Chronicles of Riddick (3), Men in Black (3), The Maze Runner (3)
 - **Thriller Collections**: 7 rails — Hannibal Lecter (3), Escape Room (2), Don't Breathe (2), Sicario (2), Eastrail 177 (3), The Jack Ryan (3), Basic Instinct (2)
 - **War Collections**: 8 rails — Rambo (5), Sniper (12), Jarhead (4), Behind Enemy Lines (4), Missing in Action (3), The Dirty Dozen (4), The Guns of Navarone (2), Iron Eagle (4)
-- **Anime Film Collections**: 8 rails — Detective Conan (29), Dragon Ball (4), Evangelion (4), My Hero Academia (4), Naruto (11), One Piece (14), Demon Slayer (2), Pokémon (5)
+- **Anime Film Collections**: 8 rails — Detective Conan (28), Dragon Ball (4), Evangelion (4), My Hero Academia (4), Naruto (11), One Piece (14), Demon Slayer (2), Pokémon (5)
 
 ## People
 - Christian Bale: Essential Films 49; Top Rated 42; Latest 49
 - Gary Oldman: Essential Films 66; Top Rated 51; Latest 66
 - Daniel Day-Lewis: Essential Films 19; Top Rated 16; Latest 19
 - Leonardo DiCaprio: Essential Films 33; Top Rated 31; Latest 33
-- Brad Pitt: Essential Films 56; Top Rated 48; Latest 56
+- Brad Pitt: Essential Films 55; Top Rated 47; Latest 55
 - Joaquin Phoenix: Essential Films 38; Top Rated 35; Latest 38
-- Matthew McConaughey: Essential Films 49; Top Rated 42; Latest 49; Series 2
+- Matthew McConaughey: Essential Films 49; Top Rated 42; Latest 49; Series 3
 - Jake Gyllenhaal: Essential Films 44; Top Rated 38; Latest 44
 - Cillian Murphy: Essential Films 40; Top Rated 30; Latest 40; Series 2
 - Mads Mikkelsen: Essential Films 45; Top Rated 32; Latest 45; Series 2
-- Willem Dafoe: Essential Films 100; Top Rated 75; Latest 100
+- Willem Dafoe: Essential Films 100; Top Rated 76; Latest 100
 - Christoph Waltz: Essential Films 32; Top Rated 25; Latest 32; Series 3
 - Philip Seymour Hoffman: Essential Films 49; Top Rated 40; Latest 49
 - Bryan Cranston: Essential Films 41; Top Rated 30; Latest 41; Series 10
@@ -210,7 +210,7 @@
 - Anya Taylor-Joy: Essential Films 20; Top Rated 17; Latest 20; Series 5
 - Florence Pugh: Essential Films 21; Top Rated 17; Latest 21; Series 4
 - Natalie Portman: Essential Films 49; Top Rated 45; Latest 49
-- Tom Cruise: Essential Films 48; Top Rated 46; Latest 48
+- Tom Cruise: Essential Films 47; Top Rated 45; Latest 47
 - Keanu Reeves: Essential Films 72; Top Rated 58; Latest 72
 - Tom Hardy: Essential Films 40; Top Rated 28; Latest 40; Series 7
 - Ryan Gosling: Essential Films 29; Top Rated 27; Latest 29
@@ -220,10 +220,10 @@
 - Simon Pegg: Essential Films 39; Top Rated 31; Latest 39; Series 8
 - Jackie Chan: Essential Films 100; Top Rated 61; Latest 100
 - Song Kang-ho: Essential Films 32; Top Rated 16; Latest 32; Series 2
-- Robert Pattinson: Essential Films 35; Top Rated 28; Latest 35
+- Robert Pattinson: Essential Films 33; Top Rated 26; Latest 33
 - Meryl Streep: Essential Films 63; Top Rated 53; Latest 63; Series 4
-- Anne Hathaway: Essential Films 43; Top Rated 40; Latest 43
-- Tilda Swinton: Essential Films 66; Top Rated 43; Latest 66
+- Anne Hathaway: Essential Films 42; Top Rated 39; Latest 42
+- Tilda Swinton: Essential Films 67; Top Rated 43; Latest 67
 - Javier Bardem: Essential Films 49; Top Rated 33; Latest 49
 - Oscar Isaac: Essential Films 41; Top Rated 30; Latest 41; Series 4
 - Frances McDormand: Essential Films 41; Top Rated 31; Latest 41; Series 3
@@ -235,19 +235,19 @@
 - Scarlett Johansson: Essential Films 54; Top Rated 47; Latest 54
 - Kate Winslet: Essential Films 41; Top Rated 36; Latest 41; Series 3
 - Nicole Kidman: Essential Films 67; Top Rated 61; Latest 67; Series 10
-- Charlize Theron: Essential Films 51; Top Rated 48; Latest 51
+- Charlize Theron: Essential Films 50; Top Rated 47; Latest 50
 - Hugh Jackman: Essential Films 40; Top Rated 35; Latest 40; Series 2
-- Matt Damon: Essential Films 68; Top Rated 67; Latest 68
+- Matt Damon: Essential Films 67; Top Rated 66; Latest 67
 - Robert Downey Jr.: Essential Films 64; Top Rated 43; Latest 64; Series 3
 - Timothée Chalamet: Essential Films 23; Top Rated 21; Latest 23; Series 2
-- Zendaya: Essential Films 14; Top Rated 13; Latest 14; Series 4
-- Tom Holland: Essential Films 23; Top Rated 20; Latest 23; Series 2
+- Zendaya: Essential Films 13; Top Rated 12; Latest 13; Series 4
+- Tom Holland: Essential Films 22; Top Rated 19; Latest 22; Series 2
 - Pedro Pascal: Essential Films 23; Top Rated 20; Latest 23; Series 8
 - Austin Butler: Essential Films 13; Top Rated 12; Latest 13; Series 7
 - Alfred Hitchcock: Best Of 44; Recent 61; Series 6
 - Stanley Kubrick: Best Of 16; Recent 16
-- Christopher Nolan: Best Of 14; Recent 18
-- Martin Scorsese: Best Of 33; Recent 56; Series 3
+- Christopher Nolan: Best Of 13; Recent 17
+- Martin Scorsese: Best Of 33; Recent 55; Series 3
 - Quentin Tarantino: Best Of 14; Recent 14; Series 3
 - Denis Villeneuve: Best Of 12; Recent 16
 - David Fincher: Best Of 12; Recent 17; Series 3
@@ -257,15 +257,15 @@
 - Bong Joon-ho: Best Of 9; Recent 15
 - Park Chan-wook: Best Of 11; Recent 20; Series 2
 - Francis Ford Coppola: Best Of 22; Recent 32; Series 2
-- Ridley Scott: Best Of 30; Recent 35; Series 6
-- James Cameron: Best Of 11; Recent 16
+- Ridley Scott: Best Of 30; Recent 35; Series 7
+- James Cameron: Best Of 11; Recent 17
 - Paul Thomas Anderson: Best Of 11; Recent 20
 - Joel & Ethan Coen: Best Of 23; Recent 24
 - Wes Anderson: Best Of 19; Recent 19
 - Guillermo del Toro: Best Of 12; Recent 14; Series 3
 - Yorgos Lanthimos: Best Of 10; Recent 15
 - Alfonso Cuarón: Best Of 8; Recent 13; Series 4
-- Alejandro González Iñárritu: Best Of 10; Recent 16; Series 2
+- Alejandro González Iñárritu: Best Of 9; Recent 15; Series 2
 - Alex Garland: Filmography 5
 - Jordan Peele: Filmography 3; Series 4
 - Robert Eggers: Filmography 7
@@ -273,7 +273,7 @@
 - David Lynch: Best Of 16; Recent 46; Series 4
 - Sergio Leone: Filmography 8
 - Edgar Wright: Best Of 8; Recent 13; Series 7
-- Guy Ritchie: Best Of 18; Recent 19; Series 4
+- Guy Ritchie: Best Of 18; Recent 20; Series 4
 - Greta Gerwig: Filmography 4
 - Kathryn Bigelow: Best Of 10; Recent 15; Series 3
 - Sofia Coppola: Best Of 9; Recent 13
@@ -288,12 +288,15 @@
 ## Candidates (one signal — approve or reject)
 - Batman & Gotham → Gotham Stories (2016) `tv:297214` [title]
 - X-Men & Mutants → Astonishing X-Men (2009) `tv:117657` [title]
-- Godzilla & Kong → Hong Kong Story II (1978) `tv:109199` [title]
+- Alien & Predator → Alien Agent (2007) `movie:19279` [title]
 - Alien & Predator → Alien News Desk (2019) `tv:86269` [title]
 - The Matrix → Matrix (1993) `tv:11393` [title]
 - Transformers → Transformers: BotBots (2022) `tv:125574` [title]
-- Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
 - Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
+- Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
 
 ## Log
-- Star Wars: added Star Wars Blips (2017) [co+title]
+- Batman & Gotham: added Batman and Superman: Battle of the Super Sons (2022) [co+title]
+- DC Universe: added Batman and Superman: Battle of the Super Sons (2022) [co+title]
+- DC Universe: added Teen Titans: The Judas Contract (2017) [co+title]
+- DC Universe: added Justice League: Crisis on Infinite Earths Part Two (2024) [co+title]
