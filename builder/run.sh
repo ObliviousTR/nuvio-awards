@@ -23,6 +23,7 @@ python3 apply_no_animation.py      out/tmp/07.json  out/tmp/08.json
 python3 apply_genre_rails.py       out/tmp/08.json  out/tmp/082.json
 python3 apply_order.py             out/tmp/082.json out/tmp/085.json
 python3 apply_own_art.py           out/tmp/085.json out/tmp/087.json
-python3 apply_art_mirror.py        out/tmp/087.json out/tmp/09.json
+python3 apply_art_mirror.py        out/tmp/087.json out/tmp/088.json
+python3 apply_digital_only.py      out/tmp/088.json out/tmp/09.json
 python3 user_layer.py apply        out/tmp/09.json  "out/${1:-nuvio-latest.json}"
 rm -rf out/tmp

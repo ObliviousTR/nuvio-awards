@@ -96,6 +96,57 @@ class ImdbCache:
     def save(self):
         os.makedirs(os.path.dirname(self.path), exist_ok=True)
         json.dump(self.d, open(self.path, "w"), sort_keys=True, separators=(",", ":"))
+        if self._dig is not None:
+            json.dump(self._dig, open(self.dig_path, "w"), sort_keys=True, separators=(",", ":"))
+
+    # ------------------------------------------------ out on digital yet?
+    # Ozzy wants no film in his collections that cannot be watched at home yet (still only in cinemas). A film released
+    # within the last DIGITAL_DAYS counts once TMDB lists a digital, physical or TV release for it that is not in the
+    # future (any country); older films always count. Answers are cached in spotlight/cache/digital.json and a film
+    # that is not out yet is asked about again the next day.
+    DIGITAL_DAYS = 400
+    _dig = None
+    dig_path = P("cache", "digital.json")
+
+    def _digital_cache(self):
+        if self._dig is None:
+            self._dig = json.load(open(self.dig_path)) if os.path.exists(self.dig_path) else {}
+        return self._dig
+
+    @staticmethod
+    def _recent(r):
+        d = r.get("release_date") or ""
+        return not d or d >= (dt.date.today() - dt.timedelta(days=ImdbCache.DIGITAL_DAYS)).isoformat()
+
+    def digital_prefetch(self, results):
+        cache, today = self._digital_cache(), dt.date.today().isoformat()
+        todo = []
+        for r in results:
+            if not self._recent(r) or not r.get("release_date") or r["release_date"] > today:
+                continue
+            e = cache.get(str(r["id"]))
+            if e and ((e[0] and e[0] <= today) or e[1] >= today):
+                continue
+            todo.append(r["id"])
+
+        def ask(tid):
+            d = tmdb(f"/movie/{tid}/release_dates") or {}
+            days = [x.get("release_date", "")[:10] for c in d.get("results", []) for x in c.get("release_dates", [])
+                    if x.get("type") in (4, 5, 6) and x.get("release_date")]
+            return tid, min(days) if days else ""
+
+        with ThreadPoolExecutor(8) as ex:
+            for tid, first in ex.map(ask, list(dict.fromkeys(todo))):
+                cache[str(tid)] = [first, today]
+
+    def digital(self, r):
+        if not self._recent(r):
+            return True
+        today = dt.date.today().isoformat()
+        if not r.get("release_date") or r["release_date"] > today:
+            return False
+        e = self._digital_cache().get(str(r["id"]))
+        return bool(e and e[0] and e[0] <= today)
 
 
 IMDB = None
@@ -114,6 +165,9 @@ def item(kind, r):
 
 
 def rows(kind, results, limit=LIMIT):
+    if kind == "movie":                                    # films still only in cinemas stay out (see ImdbCache)
+        IMDB.digital_prefetch(results[:int(limit * 1.5) + 20])
+        results = [r for r in results if IMDB.digital(r)]
     IMDB.prefetch(kind, [r["id"] for r in results[:int(limit * 1.5)]])
     out, seen = [], set()
     for r in results:
