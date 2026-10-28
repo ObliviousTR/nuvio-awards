@@ -12384,12 +12384,12 @@ EMPTY gen-genres-western-international-hits-series
 - mdb-198591 (Series): 265
 - mdb-148283 (Under-the-Radar Series): 100
 - mdb-230335 (Anime): 44
-- mdb-205811 (IMDb Top 250): 250
-- mdb-205902 (Letterboxd Top 500): 499
+- mdb-205811 (IMDb Top 250): 249
+- mdb-205902 (Letterboxd Top 500): 495
 - mdb-207869 (Sight and Sound Greatest Films): 263
-- mdb-146624 (Cannes Winners): 1471
-- mdb-146622 (Venice Winners): 1372
-- mdb-146625 (Sundance Winners): 897
+- mdb-146624 (Cannes Winners): 1431
+- mdb-146622 (Venice Winners): 1308
+- mdb-146625 (Sundance Winners): 866
 - mdb-146627 (Golden Globe Winners): 923
 - mdb-32972 (Golden Globe Nominees): 1787
 - mdb-32970 (BAFTA Nominees): 1676
