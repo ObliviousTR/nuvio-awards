@@ -621,7 +621,7 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Dope (2017) [tv:75892] - Documentary, Crime, War & Politics
 - left out: JAPAN SINKS: People of Hope (2021) [tv:135144] - Sci-Fi & Fantasy, Drama, War & Politics
 
-## Netflix · Horror Movies (movie) - 232 kept of 264 looked at
+## Netflix · Horror Movies (movie) - 231 kept of 264 looked at
 - kept (not its first genre): Frankenstein (2025) - Drama, Fantasy, Horror
 - kept (not its first genre): Godzilla Minus One (2023) - Sci-Fi, Horror, Action
 - kept (not its first genre): Thrash (2026) - Thriller, Horror
@@ -686,6 +686,7 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Spenser Confidential (2020) [movie:581600] - Comedy, Action, Thriller
 - left out: The House with a Clock in Its Walls (2018) [movie:463821] - Comedy, Family, Fantasy, Horror, Mystery
 - left out: Pride and Prejudice and Zombies (2016) [movie:58431] - Romance, Horror, Comedy, Thriller
+- left out: Pride and Prejudice and Zombies (2016) [movie:58431] - Romance, Horror, Comedy, Thriller
 - left out: Murder Mystery 2 (2023) [movie:638974] - Comedy, Mystery, Crime
 - left out: Hubie Halloween (2020) [movie:617505] - Comedy, Mystery
 - left out: The Do-Over (2016) [movie:389053] - Action, Adventure, Comedy, Mystery
@@ -703,7 +704,6 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: It's What's Inside (2024) [movie:1052280] - Comedy, Mystery, Sci-Fi
 - left out: Go (1999) [movie:9430] - Crime, Comedy, Thriller
 - left out: They Cloned Tyrone (2023) [movie:736769] - Comedy, Sci-Fi, Mystery
-- left out: Poison (2023) [movie:1172676] - Comedy, Thriller
 
 ## Netflix · Mystery & Thriller Series (series) - 300 kept of 374 looked at
 - kept (not its first genre): C.I.D. (1998) - Action & Adventure, Crime, Drama, Mystery
@@ -1131,7 +1131,7 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Coffee and Cigarettes (2004) [movie:883] - Comedy, Drama
 - left out: Goodbye Christopher Robin (2017) [movie:418680] - Family, History, Drama
 
-## HBO Max · Drama Series (series) - 219 kept of 264 looked at
+## HBO Max · Drama Series (series) - 218 kept of 264 looked at
 - kept (not its first genre): Luther (2010) - Crime, Drama, Mystery
 - kept (not its first genre): Game of Thrones (2011) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): The Sopranos (1999) - Crime, Drama
@@ -2412,6 +2412,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Bodies Bodies Bodies (2022) [movie:520023] - Comedy, Mystery, Horror
 - left out: Brimstone (2016) [movie:324560] - Thriller, Western, Drama, Horror
 - left out: Killer Klowns from Outer Space (1988) [movie:16296] - Comedy, Horror, Sci-Fi
+- left out: Killer Klowns from Outer Space (1988) [movie:16296] - Comedy, Horror, Sci-Fi
 - left out: Black Death (2010) [movie:41215] - Drama, History, Horror
 - left out: Buffy the Vampire Slayer (1992) [movie:10206] - Action, Comedy, Horror
 - left out: Teeth (2008) [movie:13121] - Comedy, Horror
@@ -2426,7 +2427,6 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Club Dread (2004) [movie:11217] - Comedy, Horror, Mystery, Thriller
 - left out: The Order (2003) [movie:9616] - Fantasy, Mystery, Thriller, Romance, Drama, Horror
 - left out: Meet the Blacks (2016) [movie:377587] - Comedy, Horror
-- left out: Motel Hell (1980) [movie:30924] - Comedy, Horror
 
 ## Prime Video · Mystery & Thriller Movies (movie) - 300 kept of 420 looked at
 - kept (not its first genre): Masterplan (2026) - Action, Thriller
@@ -4125,7 +4125,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Why Women Kill (2019) [tv:87428] - Comedy, Crime, Drama
 - left out: Average Joe (2023) [tv:228421] - Comedy, Drama, Crime
 
-## Paramount+ · Drama Movies (movie) - 213 kept of 268 looked at
+## Paramount+ · Drama Movies (movie) - 212 kept of 268 looked at
 - kept (not its first genre): Interstellar (2014) - Adventure, Drama, Sci-Fi
 - kept (not its first genre): Top Gun: Maverick (2022) - Action, Drama
 - kept (not its first genre): Tuner (2026) - Crime, Drama, Thriller
@@ -4347,7 +4347,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Cursed Friends (2022) [movie:1031206] - Comedy, Horror
 - left out: A Really Haunted Loud House (2023) [movie:1146147] - TV Movie, Comedy, Family, Horror
 
-## Paramount+ · Mystery & Thriller Movies (movie) - 213 kept of 231 looked at
+## Paramount+ · Mystery & Thriller Movies (movie) - 212 kept of 231 looked at
 - kept (not its first genre): Tuner (2026) - Crime, Drama, Thriller
 - kept (not its first genre): Se7en (1995) - Crime, Mystery, Thriller
 - kept (not its first genre): Shutter Island (2010) - Drama, Thriller, Mystery
@@ -4798,7 +4798,7 @@ EMPTY gen-streaming-services-mubi-family-movies
 - kept (not its first genre): HarmonQuest (2016) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Onyx Equinox (2020) - Sci-Fi & Fantasy, Animation, Action & Adventure
 
-## Crunchyroll · Anime Movies (movie) - 189 kept of 189 looked at
+## Crunchyroll · Anime Movies (movie) - 188 kept of 189 looked at
 - kept (not its first genre): Dragon Ball Z: Resurrection 'F' (2015) - Action, Animation, Sci-Fi
 - kept (not its first genre): Dragon Ball Z: Bojack Unbound (1993) - Action, Animation, Sci-Fi
 - kept (not its first genre): Dragon Ball Z: The Return of Cooler (1992) - Action, Animation, Sci-Fi
@@ -4988,13 +4988,13 @@ EMPTY gen-streaming-services-mubi-family-movies
 - left out: A Bucket of Blood (1959) [movie:22642] - Comedy, Horror
 - left out: Let the Corpses Tan (2017) [movie:422708] - Crime, Western, Horror
 - left out: The Toxic Avenger Part III: The Last Temptation of Toxie (1989) [movie:28169] - Action, Comedy, Horror, Sci-Fi
+- left out: The Toxic Avenger Part III: The Last Temptation of Toxie (1989) [movie:28169] - Action, Comedy, Horror, Sci-Fi
 - left out: Vicious Fun (2021) [movie:728054] - Comedy, Horror, Romance
 - left out: Teddy (2020) [movie:712123] - Comedy, Drama, Horror
 - left out: Exte: Hair Extensions (2007) [movie:21784] - Comedy, Horror, Mystery, Thriller
 - left out: Hollywood Chainsaw Hookers (1988) [movie:27412] - Comedy, Horror
-- left out: Combat Shock (1986) [movie:26558] - War, Drama, Horror
 
-## Shudder · Mystery & Thriller Movies (movie) - 299 kept of 316 looked at
+## Shudder · Mystery & Thriller Movies (movie) - 297 kept of 316 looked at
 - kept (not its first genre): The Cycle (2026) - Crime, Horror, Thriller
 - kept (not its first genre): Halloween (1978) - Horror, Thriller
 - kept (not its first genre): The Others (2001) - Horror, Mystery, Thriller
@@ -6016,7 +6016,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Renfield (2023) [movie:649609] - Comedy, Fantasy, Horror
 - left out: Scouts Guide to the Zombie Apocalypse (2015) [movie:273477] - Comedy, Horror
 - left out: A Haunted House (2013) [movie:139038] - Comedy, Horror
-- left out: The Babysitter: Killer Queen (2020) [movie:623491] - Comedy, Horror
+- left out: A Haunted House (2013) [movie:139038] - Comedy, Horror
 
 ## Horror · Top All Time Movies (movie) - 500 kept of 671 looked at
 - kept (not its first genre): Rosemary's Baby (1968) - Drama, Horror, Thriller
@@ -6281,19 +6281,19 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Idiocracy (2006) [movie:7512] - Comedy, Sci-Fi, Adventure, Thriller
 
 ## Mystery & Thriller · Popular Series (series) - 500 kept of 596 looked at
+- kept (not its first genre): Medium (2005) - Crime, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Law & Order: Special Victims Unit (1999) - Crime, Drama, Mystery
 - kept (not its first genre): Supernatural (2005) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
-- kept (not its first genre): Medium (2005) - Crime, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Luther (2010) - Crime, Drama, Mystery
 - kept (not its first genre): Death in Paradise (2011) - Comedy, Crime, Drama, Mystery
 - kept (not its first genre): The Mentalist (2008) - Crime, Drama, Mystery
 - kept (not its first genre): Slow Horses (2022) - Crime, Drama, Mystery
 - kept (not its first genre): CSI: Crime Scene Investigation (2000) - Crime, Drama, Mystery
 - kept (not its first genre): Midsomer Murders (1997) - Crime, Drama, Mystery
+- kept (not its first genre): Dexter (2006) - Crime, Drama, Mystery
 - kept (not its first genre): American Horror Story (2011) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): The Blacklist (2013) - Drama, Crime, Mystery
-- kept (not its first genre): Dexter (2006) - Crime, Drama, Mystery
 - kept (not its first genre): Crystal Lake (2026) - Drama, Mystery
 - kept (not its first genre): CSI: Miami (2002) - Drama, Mystery, Crime
 - left out: Bodyguard (2018) [tv:80307] - Crime, Drama, War & Politics, Mystery
@@ -9098,7 +9098,7 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The World's Strongest Rearguard (2026) - Action & Adventure, Sci-Fi & Fantasy, Animation
 - kept (not its first genre): Petals of Reincarnation (2026) - Action & Adventure, Mystery, Animation
 
-## Anime · Action & Adventure Movies (movie) - 421 kept of 437 looked at
+## Anime · Action & Adventure Movies (movie) - 420 kept of 437 looked at
 - kept (not its first genre): Castle in the Sky (1986) - Adventure, Fantasy, Animation, Action, Family
 - kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
 - kept (not its first genre): Naruto the Movie: Ninja Clash in the Land of Snow (2004) - Comedy, Action, Animation, Adventure
@@ -9522,6 +9522,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Love & Other Drugs (2010) [movie:43347] - Drama, Comedy, Romance
 - left out: Murder Mystery (2019) [movie:514999] - Comedy, Mystery, Crime
 - left out: High School Musical (2006) [movie:10947] - Comedy, Family, TV Movie, Music, Romance
+- left out: High School Musical (2006) [movie:10947] - Comedy, Family, TV Movie, Music, Romance
 - left out: As Good as It Gets (1997) [movie:2898] - Drama, Comedy, Romance
 - left out: The Fall Guy (2024) [movie:746036] - Action, Comedy, Romance
 - left out: The Graduate (1967) [movie:37247] - Drama, Romance, Comedy
@@ -9537,7 +9538,6 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Sing Street (2016) [movie:369557] - Romance, Drama, Music, Comedy
 - left out: We Are Your Friends (2015) [movie:301351] - Drama, Music, Romance, Comedy
 - left out: About a Boy (2002) [movie:245] - Drama, Comedy, Romance
-- left out: Pride and Prejudice and Zombies (2016) [movie:58431] - Romance, Horror, Comedy, Thriller
 
 ## Cozy & Comforting · Heartwarming TV Comedies & Dramas (series) - 278 kept of 296 looked at
 - kept (not its first genre): Tulsa King (2022) - Crime, Drama, Comedy
@@ -9749,7 +9749,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Cooties (2014) [movie:241843] - Comedy, Horror, Action, Sci-Fi, Thriller
 - left out: The Avengers (1998) [movie:9320] - Action, Adventure, Thriller, Sci-Fi, Comedy
 
-## Mind-Bending · Psychological Mystery Shows (series) - 296 kept of 309 looked at
+## Mind-Bending · Psychological Mystery Shows (series) - 295 kept of 309 looked at
 - kept (not its first genre): Law & Order: Special Victims Unit (1999) - Crime, Drama, Mystery
 - kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
 - kept (not its first genre): Medium (2005) - Crime, Drama, Mystery, Sci-Fi & Fantasy
@@ -10043,7 +10043,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Hot Shots! Part Deux (1993) [movie:9255] - Action, Comedy, War
 - left out: The Ministry of Ungentlemanly Warfare (2024) [movie:799583] - Action, Comedy, War
 
-## Epic & Sweeping · Grand Fantasy Epics (movie) - 133 kept of 150 looked at
+## Epic & Sweeping · Grand Fantasy Epics (movie) - 132 kept of 150 looked at
 - kept (not its first genre): Avatar: Fire and Ash (2025) - Sci-Fi, Adventure, Fantasy
 - kept (not its first genre): The Hobbit: The Battle of the Five Armies (2014) - Action, Adventure, Fantasy
 - kept (not its first genre): Aquaman and the Lost Kingdom (2023) - Action, Adventure, Fantasy
@@ -11227,7 +11227,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: F Marry Kill (2025) [movie:1200801] - Comedy, Thriller, Horror
 - left out: The Radleys (2024) [movie:1139713] - Comedy, Horror, Thriller
 
-## Spooky & Creepy · International Hits Movies (movie) - 78 kept of 84 looked at
+## Spooky & Creepy · International Hits Movies (movie) - 77 kept of 84 looked at
 - kept (not its first genre): Godzilla Minus One (2023) - Sci-Fi, Horror, Action
 - kept (not its first genre): Train to Busan (2016) - Action, Horror, Thriller, Adventure
 - kept (not its first genre): Exit 8 (2025) - Mystery, Thriller, Horror
@@ -12166,7 +12166,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Horror (movie) / Slasher: 241
 - Discover · Horror (movie) / Supernatural: 185
 - Discover · Horror (movie) / Possession: 74
-- Discover · Horror (movie) / Zombies: 123
+- Discover · Horror (movie) / Zombies: 122
 - Discover · Horror (movie) / Found Footage: 134
 - Discover · Horror (movie) / Haunted House: 99
 - Discover · Horror (movie) / Folk Horror: 84
@@ -12187,7 +12187,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Mystery & Thriller (movie) / Whodunit: 47
 - Discover · Mystery & Thriller (movie) / Neo-Noir: 253
 - Discover · Mystery & Thriller (movie) / Conspiracy: 93
-- Discover · Mystery & Thriller (movie) / Serial Killer: 277
+- Discover · Mystery & Thriller (movie) / Serial Killer: 276
 - Discover · Mystery & Thriller (movie) / Political: 27
 - Discover · Mystery & Thriller (movie) / Courtroom: 24
 - Discover · Mystery & Thriller (movie) / Spy: 98
