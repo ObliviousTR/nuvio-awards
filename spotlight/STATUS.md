@@ -14,7 +14,7 @@ Next Cultural Pulse theme starts: **2026-11-03**
 | Retro Rewind | Golden Age of Slashers | 50 | 0 |  |
 | Yerli Yıldız | Haluk Bilginer | 44 | 22 |  |
 | The Cultural Pulse | Halloween Night | 100 | 38 |  |
-| Fresh Out of Theaters | daily | 50 | 44 |  |
+| Fresh Out of Theaters | daily | 50 | 43 |  |
 | Box Office Champions | daily | 37 | 99 |  |
 | Certified Fresh & Must-See | daily | 57 | 52 |  |
 
