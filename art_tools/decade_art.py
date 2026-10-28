@@ -349,6 +349,10 @@ def films_of(folder, n=3):
         r = (K.tmdb("/discover/movie", primary_release_year=YEAR, sort_by="popularity.desc",
                     **{"vote_count.gte": 300, "vote_average.gte": 6.8}) or {}).get("results", [])
         pool = [(x["title"], YEAR) for x in r]
+        if len(pool) < 2 * n:   # early in the year few films qualify yet: last year's best fill the card meanwhile
+            r = (K.tmdb("/discover/movie", primary_release_year=YEAR - 1, sort_by="popularity.desc",
+                        **{"vote_count.gte": 300, "vote_average.gte": 6.8}) or {}).get("results", [])
+            pool += [(x["title"], YEAR - 1) for x in r]
         start = 0
     else:
         m = dt.date.today().year * 12 + dt.date.today().month
