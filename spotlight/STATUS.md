@@ -1,4 +1,4 @@
-# Spotlight status — 2026-10-28
+# Spotlight status — 2026-10-29
 
 Next rotation (all rotating cards): **2026-11-09**
 Next Cultural Pulse theme starts: **2026-11-03**
@@ -14,9 +14,9 @@ Next Cultural Pulse theme starts: **2026-11-03**
 | Retro Rewind | Golden Age of Slashers | 50 | 0 |  |
 | Yerli Yıldız | Haluk Bilginer | 44 | 22 |  |
 | The Cultural Pulse | Halloween Night | 100 | 38 |  |
-| Fresh Out of Theaters | daily | 50 | 43 |  |
+| Fresh Out of Theaters | daily | 50 | 44 |  |
 | Box Office Champions | daily | 37 | 99 |  |
-| Certified Fresh & Must-See | daily | 57 | 52 |  |
+| Certified Fresh & Must-See | daily | 57 | 51 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 287 Brad Pitt (Acting)
