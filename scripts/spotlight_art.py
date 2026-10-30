@@ -72,10 +72,28 @@ def spaced(draw, xy, text, fnt, fill, spacing):
     return x
 
 
-def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portrait=None, logo=None, poster=None,
-          base=None, tr=False):
-    """card: small card name top-left ('THE HEADLINER'); tag: label above the title ('ACTOR SPOTLIGHT').
-    base: a ready background image (skips the backdrop)."""
+class Layers:
+    """A cover in layers, so the hover can move them: the graded backdrop, the left shade, the hero (portrait, poster
+    or logo) and the text. compose() with no arguments is the cover."""
+
+    def __init__(self, bg, shade, hero, text, acc, kind):
+        self.bg, self.shade, self.hero, self.text, self.acc, self.kind = bg, shade, hero, text, acc, kind
+        self.black = Image.new("RGB", (W, H), (8, 8, 10))
+
+    def base(self, bg=None):
+        return Image.composite(self.black, bg if bg is not None else self.bg, self.shade)
+
+    def compose(self, bg=None, hero=True, text=True):
+        b = self.base(bg)
+        if hero and self.hero is not None:
+            b.paste(self.hero, (0, 0), self.hero)
+        if text:
+            b.paste(self.text, (0, 0), self.text)
+        return b
+
+
+def cover_layers(*, card, tag, title, subtitle, accent, backdrop=None, portrait=None, logo=None, poster=None,
+                 base=None, tr=False):
     acc = hex_rgb(accent)
     up = (lambda t: t.replace("i", "İ").upper()) if tr else str.upper  # Turkish capitals: i → İ
     bg = None if base else fetch(backdrop, "w1280")
@@ -90,9 +108,9 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
         glow = Image.new("RGB", (W, H), acc)
         base = Image.composite(glow, base, gradient_mask(W, H, [(0, 0), (0.6, 30), (1, 90)]))
     # left shade for the text
-    black = Image.new("RGB", (W, H), (8, 8, 10))
-    base = Image.composite(black, base, gradient_mask(W, H, [(0, 235), (0.45, 170), (0.75, 40), (1, 0)]))
+    shade = gradient_mask(W, H, [(0, 235), (0.45, 170), (0.75, 40), (1, 0)])
 
+    hero, kind = None, None
     if portrait:
         p = fetch(portrait, "h632")
         if p:
@@ -100,9 +118,9 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
             ph = H
             pw = round(p.width * ph / p.height)
             p = p.resize((pw, ph), Image.LANCZOS)
-            x = W - pw
-            mask = gradient_mask(pw, ph, [(0, 0), (0.28, 255), (1, 255)])
-            base.paste(p, (x, 0), mask)
+            p.putalpha(gradient_mask(pw, ph, [(0, 0), (0.28, 255), (1, 255)]))
+            hero, kind = Image.new("RGBA", (W, H), (0, 0, 0, 0)), "portrait"
+            hero.paste(p, (W - pw, 0))
     elif poster:
         p = fetch(poster, "w500")
         if p:
@@ -114,8 +132,11 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
             ImageDraw.Draw(shadow).rectangle((30, 30, pw + 30, ph + 30), fill=170)
             shadow = shadow.filter(ImageFilter.GaussianBlur(18))
             x, y = W - pw - 80, 60
-            base.paste(Image.new("RGB", shadow.size, (0, 0, 0)), (x - 30, y - 20), shadow)
-            base.paste(p, (x, y))
+            hero, kind = Image.new("RGBA", (W, H), (0, 0, 0, 0)), "poster"
+            sh = Image.new("RGBA", shadow.size, (0, 0, 0, 255))
+            sh.putalpha(shadow)
+            hero.paste(sh, (x - 30, y - 20))
+            hero.paste(p, (x, y))
     elif logo:
         lg = fetch(logo, "w500")
         if lg:
@@ -128,9 +149,11 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
             white = white.resize((round(lg.width * r), round(lg.height * r)), Image.LANCZOS)
             x = W - white.width - 110
             y = (H - white.height) // 2 - 40
-            base.paste(white, (x, y), white)
+            hero, kind = Image.new("RGBA", (W, H), (0, 0, 0, 0)), "logo"
+            hero.paste(white, (x, y))
 
-    d = ImageDraw.Draw(base)
+    text = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(text)
     left, maxw = 72, 600
     # card name, top-left
     spaced(d, (left, 58), up(card), font("SemiBold", 20), (235, 235, 235), 4)
@@ -159,10 +182,17 @@ def cover(out_path, *, card, tag, title, subtitle, accent, backdrop=None, portra
     while sub_font.size > 13 and sum(d.textlength(ch, font=sub_font) + 2 for ch in sub) > W - left - 60:
         sub_font = font("Medium", sub_font.size - 1)
     spaced(d, (left, y), sub, sub_font, (190, 190, 196), 2)
+    return Layers(base, shade, hero, text, acc, kind)
+
+
+def cover(out_path, **kw):
+    """card: small card name top-left ('THE HEADLINER'); tag: label above the title ('ACTOR SPOTLIGHT').
+    base: a ready background image (skips the backdrop). Returns the cover's Layers."""
+    L = cover_layers(**kw)
     if out_path:
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
-        base.save(out_path, "JPEG", quality=86, optimize=True, progressive=True)
-    return base
+        L.compose().save(out_path, "JPEG", quality=86, optimize=True, progressive=True)
+    return L
 
 
 def backdrop(out_path, path):

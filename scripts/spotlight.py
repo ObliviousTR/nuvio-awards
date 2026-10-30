@@ -15,6 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spotlight_art as art
+import spotlight_hover as hover
 import spotlight_live as live
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -293,8 +294,10 @@ def person_card(entry, today, director, tr=False, toon_ok=False):
         what = f"{'Directorial catalog' if director else 'Filmography'} · {n} titles"
     if entry.get("note"):
         what = entry["note"] + " · " + what
+    picks = sorted([x for x in m + s if x["tmdb"] in lead], key=lambda x: -x["votes"])
+    picks += sorted([x for x in m + s if x not in picks], key=lambda x: -x["votes"])
     a = dict(title=entry.get("title") or p["name"], subtitle=what, portrait=p.get("profile_path"),
-             backdrops=backs[:12])
+             backdrops=backs[:12], picks=picks[:10])
     return m, s, a, [f"TMDB person {p['id']} {p['name']} ({p.get('known_for_department')})"]
 
 
@@ -322,7 +325,7 @@ def studio_card(entry, today):
                         "without_genres": NOISE_TV})
     logo = (tmdb(f"/company/{ids[0]}") or {}).get("logo_path")
     a = dict(title=entry.get("title", entry["name"]), subtitle=f"Studio catalog · {len(m) + len(s)} titles", logo=logo,
-             backdrops=[x["backdrop"] for x in m if x["backdrop"]][:12])
+             backdrops=[x["backdrop"] for x in m if x["backdrop"]][:12], picks=m[:10])
     return m, s, a, notes
 
 
@@ -355,7 +358,8 @@ def saga_card(entry, today):
     t = entry.get("title", entry["name"])
     a = dict(title=t if re.search(r"saga|universe|trilogy|world", t, re.I) else t + " Saga",
              subtitle=f"In release order · {len(m) + len(s)} titles", poster=poster,
-             backdrops=([back] if back else []) + [x["backdrop"] for x in m if x["backdrop"]][:12])
+             backdrops=([back] if back else []) + [x["backdrop"] for x in m if x["backdrop"]][:12],
+             picks=m + s, in_order=True)
     return m, s, a, notes
 
 
@@ -636,9 +640,60 @@ def write_catalog(typ, cid, items):
               ensure_ascii=False)
 
 
-def make_art(slot, a, key, state, force=False):
+HOVER_N = {"saga": 7, "pulse": 8, "powerhouse": 6, "visionary": 6, "legend": 6}
+
+
+def still_of(kind, tid, avoid):
+    """the best-rated textless backdrop of a title (a still for the hover), not one already used"""
+    d = tmdb(f"/{kind}/{tid}/images", include_image_language="null") or {}
+    for b in sorted(d.get("backdrops", []), key=lambda x: (-x.get("vote_average", 0), -x.get("vote_count", 0))):
+        if b["file_path"] not in avoid and b.get("width", 0) >= 1280:
+            return b["file_path"]
+    return None
+
+
+def hover_films(slot, a, m, s):
+    """the titles the hover shows: the card's picks (lead roles first for people, release order for sagas),
+    in release order, each with a textless still and its poster"""
+    n = HOVER_N.get(slot, 5)
+    picks = list(a.get("picks") or sorted(m + s, key=lambda x: -x.get("votes", 0)))
+    if a.get("in_order"):
+        if len(picks) > n:                                  # spread over the whole saga, first and last kept
+            picks = [picks[round(k * (len(picks) - 1) / (n - 1))] for k in range(n)]
+    else:
+        picks = picks[:n + 3]
+    for x in picks:
+        if not x.get("tmdb"):
+            f = tmdb(f"/find/{x['imdb']}", external_source="imdb_id") or {}
+            hit = (f.get("movie_results") or f.get("tv_results") or [None])[0]
+            if hit:
+                x.update(tmdb=hit["id"], poster=x.get("poster") or hit.get("poster_path"),
+                         backdrop=x.get("backdrop") or hit.get("backdrop_path"))
+    picks = [x for x in picks if x.get("tmdb")]
+    avoid = {a.get("backdrop")}
+    with ThreadPoolExecutor(6) as ex:
+        stills = list(ex.map(lambda x: still_of(x["kind"], x["tmdb"], avoid), picks))
+    films = []
+    for x, st in zip(picks, stills):
+        st = st or (x.get("backdrop") if x.get("backdrop") not in avoid else None)
+        if not st:
+            continue
+        typ = "movie" if x["kind"] == "movie" else "series"
+        name = (tr_name(typ, x["imdb"]) if slot == "yerli" else None) or x["name"]
+        films.append(dict(title=name, year=x.get("year", ""), date=x.get("date") or x.get("year") or "",
+                          still=st, poster=x.get("poster")))
+        if len(films) >= n:
+            break
+    if slot != "pulse" and not a.get("in_order"):
+        films.sort(key=lambda f: f["date"] or "9999")
+    return films
+
+
+def make_art(slot, a, key, state, force=False, m=(), s=()):
     st = state.setdefault("art", {})
     have = os.path.exists(P("art", slot, "cover.jpg"))
+    if slot in hover.STYLES:
+        have = have and os.path.exists(P("art", slot, "hover.webp"))
     if have and st.get(slot) == key and not force:
         return False
     c = CARDS[slot]
@@ -646,9 +701,13 @@ def make_art(slot, a, key, state, force=False):
     taken = {v for k, v in shown.items() if k != slot}
     a["backdrop"] = next((b for b in a.get("backdrops", []) if b not in taken), (a.get("backdrops") or [None])[0])
     shown[slot] = a["backdrop"]
-    art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=a.get("tag", c["tag"]), accent=c["accent"], title=a["title"],
-              subtitle=a["subtitle"], backdrop=a.get("backdrop"), portrait=a.get("portrait"), logo=a.get("logo"),
-              poster=a.get("poster"), tr=slot == "yerli")
+    L = art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=a.get("tag", c["tag"]), accent=c["accent"],
+                  title=a["title"], subtitle=a["subtitle"], backdrop=a.get("backdrop"), portrait=a.get("portrait"),
+                  logo=a.get("logo"), poster=a.get("poster"), tr=slot == "yerli")
+    if slot in hover.STYLES:                                 # the card's own hover (see scripts/spotlight_hover.py)
+        dst = P("art", slot, "hover.webp")
+        if not hover.render(slot, L, hover_films(slot, a, m, s), dst, tr=slot == "yerli"):
+            hover.encode([L.compose().resize((hover.GW, hover.GH), art.Image.LANCZOS)], [1000], dst)
     if a.get("backdrop"):
         art.backdrop(P("art", slot, "backdrop.jpg"), a["backdrop"])
     st[slot] = key
@@ -715,7 +774,7 @@ def main():
                        else (f"{label}: {a['title']}", f"{label}: {a['title']} · Series"))
         write_catalog("movie", f"spotlight-{slot}-movies", m)
         write_catalog("series", f"spotlight-{slot}-series", s)
-        drew = make_art(slot, a, subject, state, args.redraw)
+        drew = make_art(slot, a, subject, state, args.redraw, m, s)
         status.append((label, a["title"], len(m), len(s), notes, drew))
 
     ov = state.get("pulse_override")
@@ -727,7 +786,7 @@ def main():
     names["pulse"] = (f"{t['title']} · Movies", f"{t['title']} · Series")
     write_catalog("movie", "spotlight-pulse-movies", m)
     write_catalog("series", "spotlight-pulse-series", s)
-    drew = make_art("pulse", a, t["title"], state, args.redraw)
+    drew = make_art("pulse", a, t["title"], state, args.redraw, m, s)
     state.setdefault("cards", {})["pulse"] = {"subject": t["title"], "since": t["start"]}
     status.append(("The Cultural Pulse", t["title"], len(m), len(s), notes, drew))
 
