@@ -15,7 +15,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spotlight_art as art
-import spotlight_hover as hover
+import spotlight_hover
+import spotlight_hover_full
 import spotlight_live as live
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -697,7 +698,12 @@ def hover_films(slot, a, m, s):
     return films
 
 
-HOVER_VERSION = "left-2"                                     # bump to redraw every card's hover once
+# Which hover set the cards use (Ozzy, 30 Oct 2026):
+#   "left"  the hero stays put, each card's own style plays in the dark left side (spotlight_hover.py) - in use
+#   "full"  the first set: the hero steps aside and the style takes the right side (spotlight_hover_full.py)
+HOVER_LAYOUT = "left"
+hover = {"left": spotlight_hover, "full": spotlight_hover_full}[HOVER_LAYOUT]
+HOVER_VERSION = f"{HOVER_LAYOUT}-2"                          # changes (or a bump) redraw every card's hover once
 
 
 def make_art(slot, a, key, state, force=False, m=(), s=()):
@@ -717,7 +723,7 @@ def make_art(slot, a, key, state, force=False, m=(), s=()):
     L = art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=a.get("tag", c["tag"]), accent=c["accent"],
                   title=a["title"], subtitle=a["subtitle"], backdrop=a.get("backdrop"), portrait=a.get("portrait"),
                   logo=a.get("logo"), poster=a.get("poster"), tr=slot == "yerli")
-    if slot in hover.STYLES:                                 # the card's own hover (see scripts/spotlight_hover.py)
+    if slot in hover.STYLES:                                 # the card's own hover (the set chosen by HOVER_LAYOUT)
         dst = P("art", slot, "hover.webp")
         if not hover.render(slot, L, hover_films(slot, a, m, s), dst, tr=slot == "yerli"):
             hover.encode([L.compose().resize((hover.GW, hover.GH), art.Image.LANCZOS)], [1000], dst)
