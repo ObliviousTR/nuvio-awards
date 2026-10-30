@@ -380,12 +380,27 @@ def next_start(pool, today):
     return dt.date(y, int(x[:2]), int(x[3:]))
 
 
+def peak_day(t, year):
+    """the day a theme is about ("peak" in pool.json: MM-DD, or "thanksgiving" for the 4th Thursday of November)"""
+    p = t.get("peak")
+    if p == "thanksgiving":
+        d = dt.date(year, 11, 1)
+        return d + dt.timedelta(days=(3 - d.weekday()) % 7 + 21)
+    return dt.date(year, int(p[:2]), int(p[3:])) if p else None
+
+
+def in_peak(t, today, days=7):
+    """True in a theme's peak week (the week up to its day): no hand-picked theme may cover it"""
+    d = peak_day(t, today.year)
+    return bool(d) and d - dt.timedelta(days=days) <= today <= d
+
+
 def pulse_theme(pool, today, override=None):
     md = today.strftime("%m-%d")
     themes = sorted(pool["pulse"], key=lambda t: t["start"])
     cur = [t for t in themes if t["start"] <= md]
     t = dict(cur[-1] if cur else themes[-1])
-    if override and today.isoformat() < override["until"]:
+    if override and today.isoformat() < override["until"] and not in_peak(t, today):
         t = dict(next(x for x in themes if x["title"] == override["theme"]))
     t["_raw"] = t["title"]
     best_year = today.year if today.month == 12 else today.year - 1
@@ -797,7 +812,9 @@ def main():
         status.append((label, a["title"], len(m), len(s), notes, drew))
 
     ov = state.get("pulse_override")
-    if ov and today.isoformat() >= ov["until"]:
+    if ov and (today.isoformat() >= ov["until"] or in_peak(pulse_theme(pool, today), today)):
+        if today.isoformat() < ov["until"]:
+            log.append(f"- pulse: '{ov['theme']}' (picked by hand) ended early: the calendar theme's peak week")
         state.pop("pulse_override")
         ov = None
     t = pulse_theme(pool, today, ov)

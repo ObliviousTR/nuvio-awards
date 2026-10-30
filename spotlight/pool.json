@@ -1,5 +1,5 @@
 {
-  "_comment": "Spotlight subjects. legend/yerli entries may have role=director; retro entries are era themes (from/to years, keywords, movie/series TMDB filters, series false = films only); prestige is built from the Oscar data. Edit freely: the daily workflow picks the next subject every 14 days (anchor below). Entries with 'months' are preferred in those months (October = horror, December = holidays). People are found by name; studios (optional 'title' = name shown on the card) by TMDB company id (name is checked); sagas by TMDB collection name plus optional series names. To force a subject, set state.json 'pin', e.g. {\"headliner\": \"Pedro Pascal\"}.",
+  "_comment": "Spotlight subjects. legend/yerli entries may have role=director; retro entries are era themes (from/to years, keywords, movie/series TMDB filters, series false = films only); prestige is built from the Oscar data. Edit freely: the daily workflow picks the next subject every 14 days (anchor below). Entries with 'months' are preferred in those months (October = horror, December = holidays). People are found by name; studios (optional 'title' = name shown on the card) by TMDB company id (name is checked); sagas by TMDB collection name plus optional series names. To force a subject, set state.json 'pin', e.g. {\"headliner\": \"Pedro Pascal\"}. Pulse themes run on the calendar (start = MM-DD, until the next theme starts); 'peak' (MM-DD or thanksgiving) marks the day a theme is about: in the week up to it a theme picked by hand gives way to the calendar.",
   "anchor": "2026-01-05",
   "period_days": 14,
   "headliner": [
@@ -109,7 +109,7 @@
     {"start": "01-01", "title": "{best_year} in Review", "subtitle": "The year's most acclaimed", "best_year": true},
     {"start": "01-20", "title": "Snowbound & Survival", "subtitle": "Cold-weather thrills",
      "keywords": ["snow", "blizzard", "survival", "avalanche"]},
-    {"start": "02-01", "title": "Love Is in the Air", "subtitle": "Valentine's season",
+    {"start": "02-01", "title": "Love Is in the Air", "peak": "02-14", "subtitle": "Valentine's season",
      "movie": {"with_genres": "10749"}, "keywords_series": ["romance", "romantic comedy", "love"]},
     {"start": "02-20", "title": "Road to the Oscars", "subtitle": "This year's nominees",
      "awards_movie": "oscar-latest-nominees", "awards_series": "gg-drama-series"},
@@ -138,13 +138,13 @@
      "keywords": ["haunted house", "ghost", "demonic possession", "supernatural", "exorcism"], "movie": {"with_genres": "27"}},
     {"start": "10-15", "title": "Slashers & Masked Killers", "subtitle": "October horror",
      "keywords": ["slasher", "masked killer", "serial killer"], "movie": {"with_genres": "27"}},
-    {"start": "10-25", "title": "Halloween Night", "subtitle": "Trick or treat",
+    {"start": "10-25", "title": "Halloween Night", "peak": "10-31", "subtitle": "Trick or treat",
      "keywords": ["halloween"]},
     {"start": "11-03", "title": "Based on a True Story", "subtitle": "Stranger than fiction",
      "keywords": ["based on true story", "biography", "true crime"]},
-    {"start": "11-20", "title": "Family Gatherings", "subtitle": "Thanksgiving season",
+    {"start": "11-20", "title": "Family Gatherings", "peak": "thanksgiving", "subtitle": "Thanksgiving season",
      "keywords": ["thanksgiving", "family reunion", "dysfunctional family", "family holiday"]},
-    {"start": "12-01", "title": "Holiday Classics", "subtitle": "Tis the season",
+    {"start": "12-01", "title": "Holiday Classics", "peak": "12-25", "subtitle": "Tis the season",
      "keywords": ["christmas", "holiday", "santa claus", "christmas party"]},
     {"start": "12-26", "title": "{best_year} in Review", "subtitle": "The year's most acclaimed", "best_year": true}
   ],
