@@ -697,8 +697,13 @@ def hover_films(slot, a, m, s):
     return films
 
 
+HOVER_VERSION = "left-2"                                     # bump to redraw every card's hover once
+
+
 def make_art(slot, a, key, state, force=False, m=(), s=()):
     st = state.setdefault("art", {})
+    if slot in hover.STYLES:
+        key = f"{key} | hover {HOVER_VERSION}"
     have = os.path.exists(P("art", slot, "cover.jpg"))
     if slot in hover.STYLES:
         have = have and os.path.exists(P("art", slot, "hover.webp"))
