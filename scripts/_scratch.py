@@ -1,26 +1,26 @@
-import os, json, urllib.request, urllib.parse
-# Spotlight hover samples (Headliner, Brad Pitt): his portrait and the best textless stills of his best-known films.
+import os, sys, json, datetime as dt
+# Spotlight hovers: for each card's current subject, the cover arguments and the hover films (TMDB paths only).
+sys.path.insert(0, "scripts")
+import spotlight as S
 OUT = "refs/spotlight"; os.makedirs(OUT, exist_ok=True)
-K = os.environ["TMDB_API_KEY"]
-
-
-def get(p, **q):
-    q["api_key"] = K
-    return json.loads(urllib.request.urlopen(f"https://api.themoviedb.org/3{p}?{urllib.parse.urlencode(q)}", timeout=60).read())
-
-
-pid = 287
-person = get(f"/person/{pid}")
-imgs = get(f"/person/{pid}/images")["profiles"]
-cred = get(f"/person/{pid}/movie_credits")["cast"]
-lead = [c for c in cred if (c.get("order") or 9) <= 2 and c.get("vote_count", 0) > 3000 and c.get("backdrop_path")]
-lead.sort(key=lambda c: -c["vote_count"])
-films = []
-for c in lead[:14]:
-    im = get(f"/movie/{c['id']}/images", include_image_language="null")
-    bs = sorted(im.get("backdrops", []), key=lambda b: (-b.get("vote_average", 0), -b.get("width", 0)))[:8]
-    films.append({"id": c["id"], "title": c["title"], "year": (c.get("release_date") or "")[:4], "character": c.get("character"),
-                  "votes": c["vote_count"], "backdrops": [b["file_path"] for b in bs]})
-json.dump({"profile": person.get("profile_path"), "profiles": [p["file_path"] for p in imgs[:10]], "films": films},
-          open(OUT + "/brad_pitt.json", "w"), indent=1)
-print("ok", len(films))
+S.IMDB = S.ImdbCache(); S.AUTO = json.load(open("spotlight/pool_auto.json"))
+today = dt.datetime.utcnow().date()
+pool = json.load(open("spotlight/pool.json", encoding="utf-8")); pool["prestige"] = S.prestige_pool()
+for slot in S.ROTATING:
+    pool[slot] = pool[slot] + S.AUTO.get(slot, [])
+state = json.load(open("spotlight/state.json"))
+res = {}
+for slot in S.ROTATING:
+    subj = state["cards"][slot]["subject"]
+    _, m, s, a, notes = S.build_rotating(slot, pool, state, today, state["cards"][slot]["period"], [], False, subj)
+    a["backdrop"] = state["backdrops"][slot]
+    films = S.hover_films(slot, a, m, s)
+    a.pop("picks", None)
+    res[slot] = dict(a=a, films=films)
+    print(slot, subj, [f["title"] for f in films])
+t = S.pulse_theme(pool, today, state.get("pulse_override"))
+m, s, a, notes = S.pulse_card(t, today)
+a["backdrop"] = state["backdrops"]["pulse"]
+res["pulse"] = dict(a=a, films=S.hover_films("pulse", a, m, s))
+print("pulse", [f["title"] for f in res["pulse"]["films"]])
+json.dump(res, open(f"{OUT}/hover_inputs.json", "w"), ensure_ascii=False, indent=1)
