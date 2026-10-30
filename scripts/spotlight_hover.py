@@ -285,7 +285,7 @@ def shelf(K):
 
 # -------------------------------------------------------------------------------------------------- saga: timeline
 def timeline(K):
-    CW, CH, GAP, CY, CX, LY = 560, 315, 30, 116, 600, 512
+    CW, CH, GAP, CY, CX, LY = 560, 315, 30, 124, 600, 86
     films = K.films[:7]
     n, step = len(films), CW + GAP
     cards = []
@@ -319,13 +319,13 @@ def timeline(K):
         if HOLD0 < i < total - HOLD1:
             layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
             d = ImageDraw.Draw(layer)
-            d.line((CX - 40, LY, W, LY), fill=K.acc + (150,), width=2)
+            d.line((CX - 60, LY, W, LY), fill=K.acc + (150,), width=2)
             o = keyed(keys, i)
             for k, (c, lab) in enumerate(cards):
                 x = CX + o + k * step
                 put(layer, c, (x - 24, CY - 24))
                 put(layer, lab, (x, CY + CH + 18))
-                d.line((x + 2, CY + CH + 48, x + 2, LY), fill=K.acc + (110,), width=1)
+                d.line((x + 2, LY, x + 2, CY - 2), fill=K.acc + (140,), width=1)
                 d.ellipse((x - 5, LY - 7, x + 9, LY + 7), fill=K.acc)
             layer.putalpha(ImageChops.multiply(layer.getchannel("A"), fade))
             layer.putalpha(layer.getchannel("A").point(lambda v: int(v * min(1, pk * 1.6))))
@@ -532,7 +532,7 @@ def reel(K, seed=7):
     f += HOLD; keys.append((f, c(n - 1)))
     f += OUT; keys.append((f, -sh - 20))
     total, back = f + HOLD1, f - OUT
-    grain = [Image.effect_noise((STW // 2, H // 2), 40).resize((STW, H)) for _ in range(6)]
+    grain = [Image.effect_noise((STW // 4, H // 4), 40).resize((STW, H), Image.BILINEAR) for _ in range(6)]
     out = []
     for i in range(total):
         pk = ramp(i, HOLD0, IN) if i < back else 1 - ramp(i, back, OUT)
@@ -541,18 +541,16 @@ def reel(K, seed=7):
             K.hero(b, dx=pk * 480, a=1 - pk * 0.9)
         if HOLD0 < i < total - HOLD1:
             top = keyed(keys, i)
-            t0 = max(0, int(-top))
-            view = strip_.crop((0, t0, STW, t0 + H)) if top <= 0 else None
             layer = Image.new("RGBA", (STW, H), (0, 0, 0, 0))
-            if view is None:
-                layer.paste(strip_.crop((0, 0, STW, H - int(top))), (0, int(top)))
-            else:
-                layer = view
+            t0 = int(max(0, -top))
+            lo = min(sh, t0 + H - int(max(0, top)))
+            if top < H and lo > t0:
+                layer.paste(strip_.crop((0, t0, STW, lo)), (0, int(max(0, top))))
             rgb = layer.convert("RGB")
             fl = 1 + (rnd.random() - 0.5) * 0.08
             rgb = ImageEnhance.Brightness(rgb).enhance(fl)
             g = grain[i % len(grain)]
-            rgb = ImageChops.overlay(rgb, Image.merge("RGB", (g, g, g)).point(lambda v: 128 + (v - 128) // 3))
+            rgb = ImageChops.overlay(rgb, Image.merge("RGB", (g, g, g)).point(lambda v: 128 + (v - 128) // 6))
             layer = Image.merge("RGBA", (*rgb.split(), layer.getchannel("A")))
             if rnd.random() < 0.08:                     # a scratch now and then
                 x = rnd.randint(SP, SP + FW_)
@@ -564,6 +562,18 @@ def reel(K, seed=7):
             put(b, labs[k], (SX - 30 - 330, H / 2 - 70), max(0, 1 - near * 3) * pk)
         out.append(K.finish(b))
     return out
+
+
+def osd_text(d, word, sym, fnt):
+    """a VCR's on-screen word with its symbol drawn (VT323 has no ▶ or ■), top right, with a drop shadow"""
+    x = W - 60 - 30 - 14 - d.textlength(word, font=fnt)
+    for off, col in ((2, (0, 0, 0)), (0, (245, 245, 245))):
+        d.text((x + off, 44 + off), word, font=fnt, fill=col)
+        sx, sy = W - 60 - 30 + off, 58 + off
+        if sym == "play":
+            d.polygon([(sx, sy), (sx + 26, sy + 13), (sx, sy + 26)], fill=col)
+        else:
+            d.rectangle((sx + 2, sy + 2, sx + 24, sy + 24), fill=col)
 
 
 # ------------------------------------------------------------------------------------------------------ retro: vhs
@@ -580,7 +590,7 @@ def vhs(K, seed=3):
         r, g, b_ = im.split()
         r = ImageChops.offset(r, 4, 0)
         b_ = ImageChops.offset(b_, -3, 0)
-        im = Image.merge("RGB", (r, g, b_)).filter(ImageFilter.GaussianBlur(0.8))
+        im = Image.merge("RGB", (r, g, b_)).filter(ImageFilter.GaussianBlur(1.8))   # tape softness
         im = ImageEnhance.Color(im).enhance(1.25)
         im = ImageEnhance.Contrast(im).enhance(1.08)
         return im
@@ -588,8 +598,9 @@ def vhs(K, seed=3):
     stills = [tape(f["img"]) for f in films]
     lines = Image.new("L", (RW, H), 255)
     dl = ImageDraw.Draw(lines)
-    for y in range(0, H, 3):
-        dl.line((0, y, RW, y), fill=205)
+    for y in range(0, H, 5):                       # coarse enough to survive the 512 px hover
+        dl.line((0, y, RW, y), fill=215)
+        dl.line((0, y + 1, RW, y + 1), fill=215)
     osd = mono(46)
     small = mono(36)
     HOLD0, GL, PLAY, OUT, HOLD1 = 12, 8, 40, 10, 12
@@ -617,7 +628,7 @@ def vhs(K, seed=3):
             a[y:y + rnd.randint(1, 3), RX:] = np.clip(a[y:y + 1, RX:].astype(int) + rnd.randint(60, 160), 0, 255)
         return Image.fromarray(a)
 
-    noise = [Image.effect_noise((RW // 3, H // 3), 60).resize((RW, H)).convert("RGB") for _ in range(4)]
+    noise = [Image.effect_noise((RW // 6, H // 6), 50).resize((RW, H), Image.BILINEAR).convert("RGB") for _ in range(4)]
     for i in range(total):
         if i < t_in:
             out.append(K.cover.copy())
@@ -645,7 +656,7 @@ def vhs(K, seed=3):
         reg = scr.crop((RX, 0, W, H))
         reg = Image.composite(reg, Image.new("RGB", reg.size, (0, 0, 0)), lines)
         nz = noise[i % 4]
-        reg = Image.blend(reg, ImageChops.add(reg, nz, scale=2.2), 0.25 + 0.6 * amt)
+        reg = Image.blend(reg, ImageChops.add(reg, nz, scale=2.2), 0.12 + 0.7 * amt)
         scr.paste(reg, (RX, 0), mask)
         if amt > 0:
             scr = glitch(scr, amt)
@@ -656,21 +667,20 @@ def vhs(K, seed=3):
         # on-screen display, VCR style
         if i < stop:
             if (i - t_in) < 40 or (i // 14) % 2 == 0:
-                txt = "PLAY ▶"
-                d.text((W - 60 - d.textlength(txt, font=osd) + 2, 44 + 2), txt, font=osd, fill=(0, 0, 0))
-                d.text((W - 60 - d.textlength(txt, font=osd), 44), txt, font=osd, fill=(245, 245, 245))
+                osd_text(d, "PLAY", "play", osd)
         elif i < stop + 12 + GL:
-            txt = "STOP ■"
-            d.text((W - 60 - d.textlength(txt, font=osd), 44), txt, font=osd, fill=(245, 245, 245))
+            osd_text(d, "STOP", "stop", osd)
         if seg[0] <= i < stop:
             k = min(n - 1, (i - seg[0]) // (PLAY + GL))
             sec = (i - seg[0]) * MS // 1000
             cnt = f"SP  0:{sec // 60:02d}:{sec % 60:02d}"
             d.text((W - 60 - d.textlength(cnt, font=small), H - 92), cnt, font=small, fill=(235, 235, 235))
             f = films[k]
-            lab = f"{f['title'].upper()}  {f.get('year') or ''}"
-            while d.textlength(lab, font=small) > 560 and len(lab) > 10:
-                lab = lab[:-6] + "…  " + str(f.get("year") or "")
+            name, yr = f["title"].upper(), str(f.get("year") or "")
+            lab = f"{name}  {yr}"
+            while d.textlength(lab, font=small) > 560 and len(name) > 4:
+                name = name[:-2].rstrip()
+                lab = f"{name}…  {yr}"
             x = W - 60 - d.textlength(lab, font=small)
             d.rectangle((x - 18, H - 132, x - 12, H - 104), fill=K.acc)
             d.text((x + 2, H - 136 + 2), lab, font=small, fill=(0, 0, 0))
@@ -757,6 +767,7 @@ def wipe(K):
 
 STYLES = {"headliner": strip, "visionary": viewfinder, "powerhouse": shelf, "saga": timeline, "pulse": mosaic,
           "prestige": deck, "legend": reel, "retro": vhs, "yerli": wipe}
+QUALITY = {"retro": 60, "legend": 62, "yerli": 66, "prestige": 66}   # noisy or detailed frames: kept near 2 MB
 NEED = {"headliner": 3, "visionary": 3, "powerhouse": 3, "saga": 2, "pulse": 4, "prestige": 3, "legend": 3,
         "retro": 3, "yerli": 3}
 
@@ -789,5 +800,5 @@ def render(slot, L, films, out_path, tr=False):
     frames = frames_for(slot, L, films, tr)
     small = [f.resize((GW, GH), Image.LANCZOS) for f in frames]
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    encode(small, [MS] * len(small), out_path, quality=72)
+    encode(small, [MS] * len(small), out_path, quality=QUALITY.get(slot, 72))
     return frames

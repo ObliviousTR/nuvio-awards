@@ -661,7 +661,7 @@ def hover_films(slot, a, m, s):
         if len(picks) > n:                                  # spread over the whole saga, first and last kept
             picks = [picks[round(k * (len(picks) - 1) / (n - 1))] for k in range(n)]
     else:
-        picks = picks[:n + 3]
+        picks = picks[:n + 6]
     for x in picks:
         if not x.get("tmdb"):
             f = tmdb(f"/find/{x['imdb']}", external_source="imdb_id") or {}
@@ -673,13 +673,21 @@ def hover_films(slot, a, m, s):
     avoid = {a.get("backdrop")}
     with ThreadPoolExecutor(6) as ex:
         stills = list(ex.map(lambda x: still_of(x["kind"], x["tmdb"], avoid), picks))
-    films = []
+    films, bases = [], []
     for x, st in zip(picks, stills):
         st = st or (x.get("backdrop") if x.get("backdrop") not in avoid else None)
         if not st:
             continue
+        base = norm(re.split(r"[:\d]| part ", x["name"].lower())[0])[:14]
+        if not a.get("in_order") and len(picks) > n and len(base) >= 5 and any(base.startswith(b) or b.startswith(base) for b in bases):
+            continue                                        # one film per franchise (three Elm Streets in a row)
+        if len(base) >= 5:
+            bases.append(base)
         typ = "movie" if x["kind"] == "movie" else "series"
         name = (tr_name(typ, x["imdb"]) if slot == "yerli" else None) or x["name"]
+        if slot == "yerli" and not tr_name(typ, x["imdb"]):  # Turkish titles under their Turkish name
+            d = tmdb(f"/{x['kind']}/{x['tmdb']}", language="tr-TR") or {}
+            name = d.get("title") or d.get("name") or name
         films.append(dict(title=name, year=x.get("year", ""), date=x.get("date") or x.get("year") or "",
                           still=st, poster=x.get("poster")))
         if len(films) >= n:

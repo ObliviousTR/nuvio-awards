@@ -34,7 +34,7 @@ folders, report = [], []
 for title, slot, keep in CARDS:
     fid = kaptain[keep]["id"] if keep in kaptain else f"folder-spotlight-{slot}"
     rails = pair(slot, title, "Filmler", "Diziler") if slot == "yerli" else pair(slot, title)
-    folders.append(art_folder(fid, title, slot, rails))
+    folders.append(art_folder(fid, title, slot, rails, gif=f"{SPOT_ART}/{slot}/hover.webp"))  # each card's own hover
     report.append(f"## {title} ({len(rails)} rails)")
     report += [f"   {i+1:2}. {s['title']}  [{s['catalogId']}]" for i, s in enumerate(rails)]
 spotlight["folders"] = folders
