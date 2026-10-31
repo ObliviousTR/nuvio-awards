@@ -15,10 +15,13 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spotlight_art as art
-import spotlight_hover
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "art_tools"))
-import hero_styles
-import spotlight_hover_full
+try:                      # the art needs numpy; the list-only jobs that import this module (genre rails, home lists,
+    import spotlight_hover            # library, new year) don't install it and only use its TMDB helpers
+    import hero_styles
+    import spotlight_hover_full
+except ImportError:
+    spotlight_hover = hero_styles = spotlight_hover_full = None
 import spotlight_live as live
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

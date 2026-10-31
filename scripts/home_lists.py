@@ -144,8 +144,8 @@ def for_you(kind, seen, seeds):
             for rank, r in enumerate(res):
                 if (kind, r["id"]) in seen or anime(r) or noise(kind, r) or not r.get("backdrop_path"):
                     continue
-                if r.get("vote_count", 0) < (150 if kind == "movie" else 60):
-                    continue
+                if r.get("vote_count", 0) < (150 if kind == "movie" else 60) or 10770 in (r.get("genre_ids") or []):
+                    continue                                  # TV movies and specials (Doctor Who specials) are not films
                 c = w * (1 - rank / 45)
                 score[r["id"]] = score.get(r["id"], 0) + c
                 hits[r["id"]] = hits.get(r["id"], 0) + (1 if w > 0 else 0)
@@ -164,7 +164,7 @@ def for_you(kind, seen, seeds):
         if kind == "tv":
             age = 1.0 if year >= 2012 else 0.75 if year >= 2005 else 0.4
         else:
-            age = 1.0 if year >= 2012 else 0.8 if year >= 2000 else 0.5
+            age = 1.0 if year >= 2012 else 0.8 if year >= 2000 else 0.5 if year >= 1990 else 0.3
         gs = r.get("genre_ids") or []
         fit = 0.65 + 0.7 * (sum(taste.get(g, 0) for g in gs) / len(gs) if gs else 0.3)
         quality = min(1.2, max(0.15, (va - 5.8) / 1.7))
@@ -209,8 +209,10 @@ def first_films(ranked, score, data, seen):
         nxt = next((p for p in parts if ("movie", p["id"]) not in seen), None)
         if nxt is None:
             continue
-        if nxt["id"] != i:
-            if not nxt.get("backdrop_path") or anime(nxt) or nxt.get("vote_average", 0) < 6.0:
+        if nxt["id"] != i:         # the stand-in must hold up on its own: recent enough, well rated, not a huge old hit
+            year = int((nxt.get("release_date") or "1900")[:4])
+            famous = nxt.get("vote_count", 0) > 15000 and year <= TODAY.year - 3
+            if not nxt.get("backdrop_path") or anime(nxt) or nxt.get("vote_average", 0) < 6.5 or year < 2000 or famous:
                 continue
             data[nxt["id"]] = nxt
             score[nxt["id"]] = score[i]
