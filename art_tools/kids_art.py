@@ -10,6 +10,7 @@ import datetime as dt, io, json, os, sys, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import genre_art as g
+import hero_styles, hero_logos
 from spotlight import tmdb
 from PIL import Image
 
@@ -152,6 +153,10 @@ def build(t, out):
     frames[0].save(os.path.join(dd, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * n, loop=0,
                    quality=80, method=4, kmin=0, kmax=1)
     frame.cover().save(os.path.join(dd, "cover.jpg"), quality=90)
+    # Nuvio TV's hero and title logo: the cover's picture laid out for the TV, the cover's own type as the logo
+    if imgs:
+        hero_styles.scene(imgs[0].convert("RGB")).save(os.path.join(dd, "backdrop.jpg"), quality=86)
+    hero_logos.bar_logo(title, sub, accent).save(os.path.join(dd, "logo.png"))
     strip = Image.new("RGB", (g.OW * 3, g.OH * 2))
     for jj, idx in enumerate([0, n // 6, n // 3, n // 2, 2 * n // 3, n - 1]):
         strip.paste(frames[idx], ((jj % 3) * g.OW, (jj // 3) * g.OH))

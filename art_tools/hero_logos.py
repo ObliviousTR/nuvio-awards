@@ -55,3 +55,44 @@ def kicker_logo(main, kicker, accent, jp=None, maxw=1100):
     final.alpha_composite(sh, (0, 4))
     final.alpha_composite(out)
     return um.trim(final)
+
+
+def bar_logo(title, sub, accent, maxw=1150):
+    """the cover's own type (Kids & Family, after Kaptain): an accent bar on the left, the title in heavy caps, the
+    subtitle tracked small under it"""
+    size = 150
+    words = title.upper().split()
+    if len(title) > 12 and len(words) > 1:          # long titles on two lines, so the TV draws them larger
+        cut = min(range(1, len(words)), key=lambda i: abs(len(" ".join(words[:i])) - len(" ".join(words[i:]))))
+        lines = [" ".join(words[:cut]), " ".join(words[cut:])]
+    else:
+        lines = [title.upper()]
+
+    def block(sz):
+        ls = [um.trim(um.text_layer(t, fa.black(sz), (255, 255, 255), 2)) for t in lines]
+        lh = max(l.height for l in ls) + round(sz * 0.12)
+        b = Image.new("RGBA", (max(l.width for l in ls), lh * (len(ls) - 1) + ls[-1].height), (0, 0, 0, 0))
+        for i, l in enumerate(ls):
+            b.alpha_composite(l, (0, i * lh))
+        return b
+    T = block(size)
+    while T.width > maxw and size > 60:
+        size -= 6
+        T = block(size)
+    ss = max(30, round(size * 0.26))
+    S = um.trim(um.text_layer(sub.upper(), fa.semi(ss), (235, 235, 235), round(ss * 0.22)))
+    while S.width > T.width * 1.25 and ss > 24:
+        ss -= 2
+        S = um.trim(um.text_layer(sub.upper(), fa.semi(ss), (235, 235, 235), round(ss * 0.22)))
+    gap = round(size * 0.16)
+    bw = max(8, round(size * 0.075)); pad = round(size * 0.16)
+    h = T.height + gap + S.height
+    out = Image.new("RGBA", (bw + pad + max(T.width, S.width) + 24, h + 24), (0, 0, 0, 0))
+    ImageDraw.Draw(out).rectangle((12, 12, 12 + bw, 12 + h), fill=tuple(accent) + (255,))
+    out.alpha_composite(T, (12 + bw + pad, 12))
+    out.alpha_composite(S, (12 + bw + pad, 12 + T.height + gap))
+    sh = Image.new("RGBA", out.size, (0, 0, 0, 0))
+    sh.putalpha(out.getchannel("A").point(lambda v: v * 0.55).filter(ImageFilter.GaussianBlur(10)))
+    final = Image.new("RGBA", out.size, (0, 0, 0, 0))
+    final.alpha_composite(sh, (0, 4)); final.alpha_composite(out)
+    return um.trim(final)
