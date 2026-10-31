@@ -11,6 +11,7 @@ usage: python3 art_tools/basedon_art.py OUT_DIR [folder titles...]     (BASEDON_
 """
 import datetime as dt, math, os, random, sys
 import numpy as np
+import hero_styles  # Nuvio TV hero (backdrop.jpg) and title logo (logo.png), Ozzy 31 Oct 2026
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
@@ -709,6 +710,8 @@ def build(folder, out):
     frames[0].save(os.path.join(d, "hover.webp"), save_all=True, append_images=frames[1:], duration=[50] * len(frames),
                    loop=0, quality=80, method=4, kmin=0, kmax=1)
     cover.save(os.path.join(d, "cover.jpg"), quality=90)
+    hero_styles.scene(reals[0]).save(os.path.join(d, "backdrop.jpg"), quality=86)
+    em.crop(em.getchannel("A").getbbox()).save(os.path.join(d, "logo.png"))
     strip = Image.new("RGB", (OW * 4, OH * 2))
     for j, idx in enumerate([0, 12, 30, 44, 70, 100, 140, 152]):
         strip.paste(frames[min(idx, len(frames) - 1)], ((j % 4) * OW, (j // 4) * OH))

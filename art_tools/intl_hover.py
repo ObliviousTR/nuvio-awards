@@ -10,6 +10,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import intl_art as I
 import intl_cover as C
+import hero_styles  # Nuvio TV hero (backdrop.jpg) and title logo (logo.png), Ozzy 31 Oct 2026
 from PIL import Image, ImageDraw, ImageFilter
 from reletter import f as font, tracked, width
 
@@ -148,6 +149,14 @@ def build(folder, out):
             title_at(cv, 0)
         frames.append(cv.convert("RGB").resize((OW, OH), Image.LANCZOS))
     I.save_reel(frames, cover, folder, out)
+    d = os.path.join(out, I.slug_of(folder))
+    hero_styles.scene(reals[0]).save(os.path.join(d, "backdrop.jpg"), quality=86)
+    gap = 26
+    lg = Image.new("RGBA", (mini.width * 2 + gap + tcrop.width, max(mini.height * 2, tcrop.height)), (0, 0, 0, 0))
+    m2 = mini.resize((mini.width * 2, mini.height * 2), Image.LANCZOS)
+    lg.alpha_composite(m2, (0, (lg.height - m2.height) // 2))
+    lg.alpha_composite(tcrop, (m2.width + gap, (lg.height - tcrop.height) // 2))
+    lg.save(os.path.join(d, "logo.png"))
     return [f"{t} ({y})" for t, y, _ in films]
 
 
