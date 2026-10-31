@@ -21,7 +21,7 @@ def catalog(cid):
 
 
 SKIP = {"A Serbian Film", "365 Days", "Ali G: Who Iz I?", "Law & Order: Special Victims Unit", "Depp V Heard",
-        "Livestream from Hell", "Mums Make Porn", "High School DxD", "Super Dragon Ball Heroes"}
+        "Livestream from Hell", "Mums Make Porn", "Obsession", "Backrooms", "Ally McBeal", "Baywatch", "Masterplan", "UNABOMBER", "Remarkably Bright Creatures", "Love of Your Life", "Gabriel's Inferno", "High School DxD", "Super Dragon Ball Heroes"}
 
 
 def posters(rows_json, sources, row, folder, n=28, used=()):

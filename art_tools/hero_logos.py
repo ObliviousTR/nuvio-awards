@@ -16,12 +16,22 @@ def kicker_logo(main, kicker, accent, jp=None, maxw=1100):
     """main: the subject (caps, heavy); kicker: a small tracked label above it; jp: optional Japanese word set
     before the kicker in the accent colour"""
     size = 190
-    M = um.text_layer(main.upper(), fa.black(size), (255, 255, 255), 4)
+    import re
+    lines = re.sub(r"(\d)S\b", r"\1s", main.upper()).split("\n")      # decades keep their small s: 80s
+
+    def block(sz):
+        ls = [um.trim(um.text_layer(t, fa.black(sz), (255, 255, 255), 4)) for t in lines]
+        lh = max(l.height for l in ls) + round(sz * 0.12)
+        b = Image.new("RGBA", (max(l.width for l in ls), lh * (len(ls) - 1) + ls[-1].height), (0, 0, 0, 0))
+        for i, l in enumerate(ls):
+            b.alpha_composite(l, (0, i * lh))
+        return b
+    M = block(size)
     while M.width > maxw and size > 60:
         size -= 8
-        M = um.text_layer(main.upper(), fa.black(size), (255, 255, 255), 4)
-    M = um.trim(M)
-    ks = max(40, round(M.height * 0.34))
+        M = block(size)
+    M.info["size"] = size
+    ks = max(40, round(M.info["size"] * 0.26))      # the kicker follows the lettering's size, one line or two
     parts = []
     if jp:
         parts.append(um.trim(um.text_layer(jp, um.font("jp", round(ks * 1.08), weight=800), accent, 2)))
