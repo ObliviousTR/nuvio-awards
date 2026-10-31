@@ -198,11 +198,34 @@ def make(img, kicker, word, split, accent, sub, tag=None):
         um.place(bg, S, cx, cy + full.height / 2 + 52 + (1 - sa) * 20, sa)
         return bg.convert("RGB")
 
-    logo = Image.new("RGBA", full.size, (0, 0, 0, 0))
-    logo.alpha_composite(fa.textured(full, texsrc))
-    if tag:
-        logo = tagged(logo, tag, accent)
+    logo = tv_logo(word, kicker, accent, texsrc, tag)
     return frame, logo
+
+
+def tv_logo(word, kicker, accent, texsrc, tag=None):
+    """the TV title logo (Nuvio draws it in 220x100 dp at most): a two-word title on two lines, a one-word title
+    under its kicker, so neither is a thin strip on the TV (Ozzy, 31 Oct 2026)"""
+    lines = word.split() if " " in word and not tag else [word]
+    ls = [um.trim(um.text_layer(t, fa.black(300), (255, 255, 255), 6)) for t in lines]
+    gap = 26
+    m = Image.new("RGBA", (max(l.width for l in ls), sum(l.height for l in ls) + gap * (len(ls) - 1)), (0, 0, 0, 0))
+    y = 0
+    for l in ls:
+        m.alpha_composite(l, (0, y))
+        y += l.height + gap
+    logo = fa.textured(m, texsrc)
+    if tag:
+        return tagged(logo, tag, accent)
+    if len(lines) == 1:            # MUST-SEE, PRESTIGE: the folder's first words above, solid in the accent
+        top = {"MUST-SEE": "CERTIFIED FRESH", "PRESTIGE": "AWARDS &"}.get(word, kicker)
+        k = um.trim(um.text_layer(top, fa.black(300), accent, 6))
+        r = logo.width / k.width if k.width > logo.width else 1.0
+        k = k.resize((round(k.width * r), round(k.height * r)), Image.LANCZOS)
+        out = Image.new("RGBA", (logo.width, k.height + gap + logo.height), (0, 0, 0, 0))
+        out.alpha_composite(k, (0, 0))
+        out.alpha_composite(logo, (0, k.height + gap))
+        return out
+    return logo
 
 
 def tagged(logo, tag, accent):

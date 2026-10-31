@@ -166,17 +166,24 @@ def border(mask, col=(255, 255, 255)):
     return out
 
 
-def title_layer(folder, mode, area):
+# the TV title logo (220x100 dp at most) needs a block, not a strip: other lines / sizes there (Ozzy, 31 Oct 2026)
+TV_LINES = {"Türkiye": ["TÜRK", "SİNEMASI"], GEMS: ["WORLD", "CINEMA", "GEMS"]}
+TV_MAXSIZE = {GEMS: 150}
+
+
+def title_layer(folder, mode, area, tv=False):
     lines, fname, wght, en = TITLES[folder]
+    if tv:
+        lines = TV_LINES.get(folder, lines)
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
     if mode == "side":
-        maxw = W * 0.36
+        maxw = W * (0.8 if tv else 0.36)
         x0 = W * 0.06
     else:
         maxw = W * 0.8
         x0 = None
-    size = MAXSIZE.get(folder, 150)
+    size = (TV_MAXSIZE if tv else MAXSIZE).get(folder, 150)
     while size > 40:
         fn = ufont(fname, size, wght)
         if max(d.textlength(l, font=fn) for l in lines) <= maxw:

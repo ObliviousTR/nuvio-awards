@@ -152,6 +152,9 @@ def build(folder, out):
     d = os.path.join(out, I.slug_of(folder))
     hero_styles.scene(reals[0]).save(os.path.join(d, "backdrop.jpg"), quality=86)
     gap = 26
+    if folder in C.TV_LINES or folder in C.TV_MAXSIZE:
+        tv = C.title_layer(folder, p["mode"], p["area"], tv=True)
+        tcrop = tv.crop(tv.getchannel("A").getbbox())
     lg = Image.new("RGBA", (mini.width * 2 + gap + tcrop.width, max(mini.height * 2, tcrop.height)), (0, 0, 0, 0))
     m2 = mini.resize((mini.width * 2, mini.height * 2), Image.LANCZOS)
     lg.alpha_composite(m2, (0, (lg.height - m2.height) // 2))

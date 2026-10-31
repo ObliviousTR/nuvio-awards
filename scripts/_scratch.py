@@ -1,42 +1,24 @@
-import os, json, urllib.request, urllib.parse
-from concurrent.futures import ThreadPoolExecutor
-# People heroes, option B: several textless backdrops from each person's best-known films (lead roles / directed).
+import os, sys, json
+sys.path.insert(0, "scripts")
 OUT = "refs/hero"; os.makedirs(OUT, exist_ok=True)
-K = os.environ["TMDB_API_KEY"]
-P = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))      # name -> [person id, dept]
-
-
-def get(p, **q):
-    q["api_key"] = K
-    for _ in range(3):
-        try:
-            return json.loads(urllib.request.urlopen(f"https://api.themoviedb.org/3{p}?{urllib.parse.urlencode(q)}",
-                                                     timeout=60).read())
-        except Exception as e:
-            err = e
-    print("ERR", p, err)
-    return {}
-
-
-def stills(item):
-    name, (pid, dept) = item
-    cr = get(f"/person/{pid}/movie_credits")
-    if dept == "Directing":
-        films = [f for f in cr.get("crew", []) if f.get("job") == "Director"]
-    else:
-        films = [f for f in cr.get("cast", []) if f.get("order", 99) <= 4] or cr.get("cast", [])
-    films = sorted({f["id"]: f for f in films}.values(), key=lambda f: -f.get("vote_count", 0))[:12]
-    out = []
-    for f in films:
-        bd = [b for b in get(f"/movie/{f['id']}/images", include_image_language="null").get("backdrops", [])
-              if not b.get("iso_639_1") and b.get("width", 0) >= 1280]
-        bd.sort(key=lambda b: (-b.get("vote_count", 0), -b.get("vote_average", 0)))
-        out += [{"film": f["title"], "path": b["file_path"], "votes": b.get("vote_count", 0)} for b in bd[:25]]
-    return name, out
-
-
-with ThreadPoolExecutor(8) as ex:
-    res = dict(ex.map(stills, P.items()))
-json.dump(res, open(f"{OUT}/stills6.json", "w"), ensure_ascii=False)
-for n, v in res.items():
-    print(n, len(v))
+import spotlight as S
+import home_lists as NEW, _old_home_lists as OLD
+S.IMDB = S.ImdbCache()
+# a plausible history (not Ozzy's: no Simkl here) to exercise both versions
+mv = [(27205, "2026-10-20", 9, "Inception"), (146233, "2026-09-30", 9, "Prisoners"), (273481, "2026-09-01", 8, "Sicario"),
+      (438631, "2026-08-15", 8, "Dune"), (872585, "2026-07-01", 9, "Oppenheimer"), (546554, "2026-06-01", 8, "Knives Out"),
+      (299536, "2026-05-01", 7, "Infinity War"), (1124, "2026-04-01", 10, "The Prestige"), (49026, "2026-03-01", None, "TDKR"),
+      (335984, "2026-02-01", 8, "Blade Runner 2049"), (11324, "2025-12-01", 9, "Shutter Island"), (155, "2025-10-01", 10, "TDK"),
+      (419430, "2026-10-01", 4, "Get Out (low)")]
+tv = [(1396, "2026-10-01", 10, "Breaking Bad"), (60059, "2026-09-01", 9, "Better Call Saul"), (95396, "2026-08-01", 9, "Severance"),
+      (66732, "2026-07-01", 8, "Stranger Things"), (87108, "2026-06-01", 9, "Chernobyl"), (1405, "2026-05-01", 7, "Dexter"),
+      (76479, "2026-04-01", 8, "The Boys"), (100088, "2026-10-10", 9, "The Last of Us"), (46648, "2026-03-01", 9, "True Detective")]
+seen = {("movie", t[0]) for t in mv} | {("tv", t[0]) for t in tv}
+res = {}
+for name, mod in (("old", OLD), ("new", NEW)):
+    res[name] = {k: [f"{x.get('title') or x.get('name')} ({x.get('year', '')})" for x in mod.for_you(k, seen, s)]
+                 for k, s in (("movie", mv), ("tv", tv))}
+json.dump(res, open(f"{OUT}/foryou_test.json", "w"), ensure_ascii=False, indent=1)
+for n in res:
+    for k in res[n]:
+        print(n, k, " | ".join(res[n][k][:40]))

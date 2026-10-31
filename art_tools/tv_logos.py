@@ -40,6 +40,8 @@ def stack(layers, gap, align="left"):
 
 
 def lines_of(title, limit=12):
+    if "\n" in title:
+        return title.upper().split("\n")
     words = title.upper().split()
     if len(title) <= limit or len(words) < 2:
         return [title.upper()]
@@ -257,6 +259,8 @@ def reality_logo(title, accent):
 # ---------------------------------------------------------------- Documentaries: a camera viewfinder
 def docs_logo(title, accent):
     accent = tuple(accent)
+    # one-line titles would be a thin strip on the TV: give them a second line from the folder's name
+    title = {"INVESTIGATIVE": "INVESTIGATIVE\n& SCANDALS", "TRUE CRIME": "TRUE\nCRIME"}.get(title.upper(), title)
     ls = lines_of(title, 10)
     s = 250
     rows = [T(t, "bebas", s, (255, 255, 255), 14) for t in ls]
