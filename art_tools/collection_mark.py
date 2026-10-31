@@ -35,10 +35,10 @@ def mark(width, style="lines", color=(236, 236, 240), word="COLLECTION"):
     return out
 
 
-def with_mark(logo, style="lines", color=(236, 236, 240)):
+def with_mark(logo, style="lines", color=(236, 236, 240), word="COLLECTION"):
     logo = um.trim(logo.convert("RGBA"))
     # narrow, tall lockups (the DC mark) still get a readable mark: as wide as the logo, or twice its height
-    m = mark(max(logo.width, round(logo.height * 2.0)), style, color)
+    m = mark(max(logo.width, round(logo.height * 2.0)), style, color, word)
     gap = round(m.height * 0.9)
     out = Image.new("RGBA", (max(logo.width, m.width), logo.height + gap + m.height), (0, 0, 0, 0))
     out.alpha_composite(logo, ((out.width - logo.width) // 2, 0))
