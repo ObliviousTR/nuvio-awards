@@ -1,5 +1,6 @@
 import os, json, urllib.request, urllib.parse
-# Universe title logos: English/neutral logos of each franchise's collection, key film or studio.
+from concurrent.futures import ThreadPoolExecutor
+# People heroes: each actor's / director's TMDB photos and a textless still from their best-known film.
 OUT = "refs/hero"; os.makedirs(OUT, exist_ok=True)
 K = os.environ["TMDB_API_KEY"]
 SRC = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))
@@ -7,37 +8,46 @@ SRC = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))
 
 def get(p, **q):
     q["api_key"] = K
-    try:
-        return json.loads(urllib.request.urlopen(f"https://api.themoviedb.org/3{p}?{urllib.parse.urlencode(q)}",
-                                                 timeout=60).read())
-    except Exception as e:
-        print("ERR", p, e)
-        return {}
+    for _ in range(3):
+        try:
+            return json.loads(urllib.request.urlopen(f"https://api.themoviedb.org/3{p}?{urllib.parse.urlencode(q)}",
+                                                     timeout=60).read())
+        except Exception as e:
+            err = e
+    print("ERR", p, err)
+    return {}
 
 
-res = {}
-for u, qs in SRC.items():
-    cands = []
-    for kind, q in qs:
-        name, _, year = q.partition("|")
-        p = {"query": name}
-        if year:
-            p["year"] = year
-        rs = get(f"/search/{kind}", **p).get("results", [])
-        if not rs:
-            print("MISS", u, kind, q)
-            continue
-        exact = [r for r in rs if (r.get("name") or r.get("title") or "").lower() == name.lower()]
-        r = (exact or rs)[0]
-        if kind == "company":
-            ls = get(f"/company/{r['id']}/images").get("logos", [])
-        else:
-            ls = get(f"/{kind}/{r['id']}/images", include_image_language="en,null").get("logos", [])
-            ls = [l for l in ls if l.get("iso_639_1") in ("en", None)]
-        ls.sort(key=lambda l: (-l.get("vote_average", 0), -l.get("vote_count", 0)))
-        for l in ls[:4]:
-            cands.append({"src": f"{kind}:{r.get('name') or r.get('title')}", "path": l["file_path"],
-                          "w": l["width"], "h": l["height"], "lang": l.get("iso_639_1")})
-    res[u] = cands
-    print(u, len(cands))
-json.dump(res, open(f"{OUT}/univ_logos.json", "w"), ensure_ascii=False, indent=1)
+def person(job):
+    row, name = job
+    dept = "Directing" if row == "Legendary Directors" else "Acting"
+    rs = get("/search/person", query=name).get("results", [])
+    rs = [r for r in rs if r.get("known_for_department") == dept] or rs
+    if not rs:
+        return name, None
+    p = max(rs[:3], key=lambda r: r.get("popularity", 0))
+    ims = get(f"/person/{p['id']}/images").get("profiles", [])
+    ims.sort(key=lambda x: (-x.get("vote_average", 0), -x.get("height", 0)))
+    cr = get(f"/person/{p['id']}/movie_credits")
+    films = cr.get("crew", []) if dept == "Directing" else cr.get("cast", [])
+    if dept == "Directing":
+        films = [f for f in films if f.get("job") == "Director"]
+    films = sorted({f["id"]: f for f in films}.values(), key=lambda f: -f.get("vote_count", 0))
+    still, film = None, None
+    for f in films[:4]:
+        bd = [b for b in get(f"/movie/{f['id']}/images", include_image_language="null").get("backdrops", [])
+              if not b.get("iso_639_1")]
+        bd.sort(key=lambda b: (-b.get("vote_count", 0), -b.get("width", 0)))
+        if bd:
+            still, film = bd[0]["file_path"], f["title"]
+            break
+    return name, {"id": p["id"], "photos": [x["file_path"] for x in ims[:8]], "still": still, "film": film,
+                  "films": [f["title"] for f in films[:5]]}
+
+
+jobs = [(row, n) for row, ns in SRC.items() for n in ns]
+with ThreadPoolExecutor(8) as ex:
+    res = dict(ex.map(person, jobs))
+json.dump(res, open(f"{OUT}/people_all.json", "w"), ensure_ascii=False, indent=1)
+for n, v in res.items():
+    print(n, v and (len(v["photos"]), v["film"]))
