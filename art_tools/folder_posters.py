@@ -8,7 +8,10 @@ ROOT = os.path.dirname(HERE)
 
 
 def _key(t):
-    return " ".join(re.sub(r"[^a-z0-9 ]", "", (t or "").lower()).split()[:2])
+    """a franchise key: the title before any subtitle, sequel numbers dropped, first two words (Deadpool 2 = Deadpool)"""
+    t = (t or "").lower().split(":")[0]
+    t = re.sub(r"\b(\d+|ii|iii|iv|part \w+)$", "", re.sub(r"[^a-z0-9 ]", "", t).strip())
+    return " ".join(t.split()[:2])
 
 
 def catalog(cid):
@@ -21,7 +24,7 @@ def catalog(cid):
 
 
 SKIP = {"A Serbian Film", "365 Days", "Ali G: Who Iz I?", "Law & Order: Special Victims Unit", "Depp V Heard",
-        "Livestream from Hell", "Mums Make Porn", "Obsession", "Backrooms", "Ally McBeal", "Baywatch", "Masterplan", "UNABOMBER", "Remarkably Bright Creatures", "Love of Your Life", "Gabriel's Inferno", "High School DxD", "Super Dragon Ball Heroes"}
+        "Livestream from Hell", "Mums Make Porn", "Obsession", "Backrooms", "Ally McBeal", "Baywatch", "Masterplan", "UNABOMBER", "Remarkably Bright Creatures", "Love of Your Life", "Gabriel's Inferno", "High School DxD", "Super Dragon Ball Heroes", "Fifty Shades of Grey"}
 
 
 def posters(rows_json, sources, row, folder, n=28, used=()):
