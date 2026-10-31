@@ -103,6 +103,7 @@ def main():
     ap.add_argument("art"); ap.add_argument("baseline")
     ap.add_argument("--rows", default=""); ap.add_argument("--only", default="")
     ap.add_argument("--sheet", default="")
+    ap.add_argument("--reuse", action="store_true", help="keep heroes already built (patch their URLs only)")
     a = ap.parse_args()
     global ART_DIR
     ART_DIR = a.art
@@ -120,9 +121,10 @@ def main():
                 continue
             rel = f"art/heroes/{slug(row['title'])}/{slug(f['title'])}"
             os.makedirs(os.path.join(a.art, rel), exist_ok=True)
-            hero = build(sp, f)
             hp = os.path.join(a.art, rel, "hero.jpg")
-            hero.save(hp, quality=88, optimize=True, progressive=True)
+            if not (a.reuse and os.path.exists(hp)):
+                hero = build(sp, f)
+                hero.save(hp, quality=88, optimize=True, progressive=True)
             f["heroBackdropUrl"] = f"{RAW}{rel}/hero.jpg?v={md5(hp)}"
             lg = sp.get("logo", "keep")
             if lg != "keep":
@@ -133,7 +135,8 @@ def main():
                 im.save(lp, optimize=True)
                 f["titleLogoUrl"] = f"{RAW}{rel}/logo.png?v={md5(lp)}"
             done.append((row["title"], f["title"], hp, f.get("titleLogoUrl")))
-            print("built", row["title"], "/", f["title"])
+            print("built", row["title"], "/", f["title"], flush=True)
+            _cache.clear()                                  # people rows load hundreds of full-size photos
     json.dump(data, open(a.baseline, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     if a.sheet:
         sheet(done, a.sheet, a.art)
