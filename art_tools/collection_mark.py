@@ -10,8 +10,8 @@ import universe_motion as um
 import folder_art as fa
 
 
-def mark(width, style="lines", color=(236, 236, 240), word="COLLECTION"):
-    h = max(28, round(width * 0.052))
+def mark(width, style="lines", color=(236, 236, 240), word="COLLECTION", size=None):
+    h = size or max(28, round(width * 0.052))
     T = um.trim(um.text_layer(word, fa.semi(h), color, round(h * 0.55)))
     gap = round(h * 0.9)
     rule = max(2, round(h * 0.07))
