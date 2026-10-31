@@ -106,10 +106,11 @@ def spot_src(title, media, cid):
     return s
 
 
-def art_folder(fid, title, path, rails, hero=True, gif=None):
+def art_folder(fid, title, path, rails, hero=True, gif=None, logo=False):
     """Folder with our generated cover (text is on the image, so the title is hidden)."""
     return {"id": fid, "title": title, "hideTitle": True, "tileShape": "LANDSCAPE",
-            "coverImageUrl": f"{SPOT_ART}/{path}/cover.jpg", "coverEmoji": None, "titleLogoUrl": None,
+            "coverImageUrl": f"{SPOT_ART}/{path}/cover.jpg", "coverEmoji": None,
+            "titleLogoUrl": f"{SPOT_ART}/{path}/logo.png" if logo else None,
             "focusGifUrl": gif, "focusGifEnabled": bool(gif),
             "heroBackdropUrl": f"{SPOT_ART}/{path}/backdrop.jpg" if hero else None,
             "sources": rails, "catalogSources": []}

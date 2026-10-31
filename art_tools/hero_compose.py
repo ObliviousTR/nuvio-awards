@@ -98,7 +98,9 @@ def compose(src, subject=None, zoom_limit=1.35):
     iw, ih = round(im.width * s), round(im.height * s)
     big = im.resize((iw, ih), Image.LANCZOS)
     cx, cy = (bx0 + bx1) / 2 * iw, (by0 + by1) / 2 * ih
-    ox, oy = TARGET[0] * W - cx, TARGET[1] * H - cy
+    # a wide subject (a group) sits nearer the middle, so its left end is not lost in the fade
+    wide = min(1.0, max(0.0, ((bx1 - bx0) - 0.35) / 0.3))
+    ox, oy = (TARGET[0] - 0.1 * wide) * W - cx, TARGET[1] * H - cy
     # never leave a gap at the top or the right: those are the edges both layouts show
     ox = max(ox, W - iw)
     oy = min(oy, 0)
@@ -107,14 +109,16 @@ def compose(src, subject=None, zoom_limit=1.35):
     # the fill: the picture itself, covering the frame, blurred and darkened
     fill = im.resize((max(W, round(im.width * H / im.height)), H), Image.BILINEAR)
     fill = fill.crop((fill.width - W, 0, fill.width, H)) if fill.width > W else fill.resize((W, H))
-    fill = fill.filter(ImageFilter.GaussianBlur(40))
-    fill = ImageEnhance.Brightness(fill).enhance(0.55)
+    fill = fill.filter(ImageFilter.GaussianBlur(28))
+    fill = ImageEnhance.Brightness(fill).enhance(0.62)
     out = fill.copy()
     mask = Image.new("L", (iw, ih), 255)
-    feather = 90
-    mpx = np.asarray(mask, np.float32)
+    # a long, smooth seam: the picture melts into its own blurred continuation, never a visible edge
+    feather = max(260, round(min(ox, W * 0.5) * 1.1)) if ox > 0 else 1
     ramp = np.clip(np.arange(iw) / feather, 0, 1) if ox > 0 else np.ones(iw)
-    rampy = np.clip((ih - 1 - np.arange(ih)) / feather, 0, 1) if oy + ih < H else np.ones(ih)
+    rampy = np.clip((ih - 1 - np.arange(ih)) / 220, 0, 1) if oy + ih < H else np.ones(ih)
+    ramp = ramp * ramp * (3 - 2 * ramp)
+    rampy = rampy * rampy * (3 - 2 * rampy)
     mpx = (np.outer(rampy, ramp) * 255).astype(np.uint8)
     out.paste(big, (round(ox), round(oy)), Image.fromarray(mpx))
     return out, dict(box=(bx0, by0, bx1, by1), how=how, scale=s / s0, offset=(round(ox), round(oy)))

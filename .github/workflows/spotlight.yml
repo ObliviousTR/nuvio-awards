@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install -q pillow numpy
+      - run: pip install -q pillow numpy scipy opencv-python-headless rembg onnxruntime
       - name: Build
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}

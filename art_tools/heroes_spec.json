@@ -1,0 +1,8 @@
+{
+ "Favourites": {
+  "My Simkl": {"style": "wall", "posters": ["catalog:library/catalog/movie/home-foryou-movies.json", "catalog:library/catalog/series/home-foryou-series.json"], "glow": "#2F7BF5", "seed": 3, "logo": "file:spotlight/logos/mysimkl-e.png"},
+  "Doctor Who": {"style": "scene", "src": "file:spotlight/art/favourites/_sources/doctorwho-art.jpg", "logo": "file:spotlight/logos/whoniverse-gold.png"},
+  "One Pace": {"style": "scene", "src": "file:spotlight/art/favourites/_sources/onepace-art.jpg", "logo": "file:spotlight/logos/onepace.png"},
+  "Live Sport": {"style": "scene", "src": "file:spotlight/art/favourites/_sources/livesport-art.jpg", "logo": "file:spotlight/logos/livesport-a.png"}
+ }
+}

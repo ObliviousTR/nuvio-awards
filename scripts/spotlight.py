@@ -16,6 +16,8 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spotlight_art as art
 import spotlight_hover
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "art_tools"))
+import hero_styles
 import spotlight_hover_full
 import spotlight_live as live
 
@@ -719,12 +721,35 @@ def hover_films(slot, a, m, s):
 HOVER_LAYOUT = "left"
 hover = {"left": spotlight_hover, "full": spotlight_hover_full}[HOVER_LAYOUT]
 HOVER_VERSION = f"{HOVER_LAYOUT}-2"                          # changes (or a bump) redraw every card's hover once
+HERO_VERSION = "tv-1"                                       # the Nuvio TV hero (backdrop.jpg) and title logo (logo.png)
+
+
+def make_hero(slot, a, films):
+    """backdrop.jpg, the folder's hero on Nuvio TV (art_tools/hero_styles.py): people get their photo, cut out, over
+    a darkened still from the card's film; the other cards a textless still placed where the TV shows it whole."""
+    still = art.fetch(a.get("backdrop"), "w1280") if a.get("backdrop") else None
+    img = None
+    if a.get("portrait"):
+        photo = art.fetch(a["portrait"], "original")
+        if photo is not None:
+            try:
+                img = hero_styles.portrait(photo, still)
+            except Exception as e:                           # rembg or the face model unavailable: fall back
+                print(f"{slot}: portrait hero failed ({type(e).__name__}), using a scene")
+    if img is None:
+        src = art.fetch(films[0]["still"], "original") if films else art.fetch(a.get("backdrop"), "original")
+        if src is None:
+            return False
+        img = hero_styles.scene(src)
+    os.makedirs(P("art", slot), exist_ok=True)
+    img.save(P("art", slot, "backdrop.jpg"), "JPEG", quality=86, optimize=True, progressive=True)
+    return True
 
 
 def make_art(slot, a, key, state, force=False, m=(), s=()):
     st = state.setdefault("art", {})
     if slot in hover.STYLES:
-        key = f"{key} | hover {HOVER_VERSION}"
+        key = f"{key} | hover {HOVER_VERSION} | hero {HERO_VERSION}"
     have = os.path.exists(P("art", slot, "cover.jpg"))
     if slot in hover.STYLES:
         have = have and os.path.exists(P("art", slot, "hover.webp"))
@@ -738,11 +763,16 @@ def make_art(slot, a, key, state, force=False, m=(), s=()):
     L = art.cover(P("art", slot, "cover.jpg"), card=c["card"], tag=a.get("tag", c["tag"]), accent=c["accent"],
                   title=a["title"], subtitle=a["subtitle"], backdrop=a.get("backdrop"), portrait=a.get("portrait"),
                   logo=a.get("logo"), poster=a.get("poster"), tr=slot == "yerli")
+    films = hover_films(slot, a, m, s) if slot in hover.STYLES else []
     if slot in hover.STYLES:                                 # the card's own hover (the set chosen by HOVER_LAYOUT)
         dst = P("art", slot, "hover.webp")
-        if not hover.render(slot, L, hover_films(slot, a, m, s), dst, tr=slot == "yerli"):
+        if not hover.render(slot, L, films, dst, tr=slot == "yerli"):
             hover.encode([L.compose().resize((hover.GW, hover.GH), art.Image.LANCZOS)], [1000], dst)
-    if a.get("backdrop"):
+        art.title_logo(P("art", slot, "logo.png"), card=c["card"], title=a["title"], accent=c["accent"],
+                       tr=slot == "yerli")
+        if not make_hero(slot, a, films) and a.get("backdrop"):
+            art.backdrop(P("art", slot, "backdrop.jpg"), a["backdrop"])
+    elif a.get("backdrop"):
         art.backdrop(P("art", slot, "backdrop.jpg"), a["backdrop"])
     st[slot] = key
     return True

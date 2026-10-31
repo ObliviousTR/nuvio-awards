@@ -299,3 +299,37 @@ def put_logo(base, lg, maxw=560, maxh=190, bottom=58):
 def graded(im, b=0.92, c=1.05, size=(W, H)):
     im = cover_fit(im.convert("RGB"), *size)
     return ImageEnhance.Contrast(ImageEnhance.Brightness(im).enhance(b)).enhance(c)
+
+
+def title_logo(out_path, *, card, title, accent, tr=False):
+    """The folder's title logo for Nuvio TV's hero (it is drawn in at most 220x100 dp): the cover's own lettering,
+    the small card name with its accent rule, the subject in ExtraBold caps with the accent bar, on transparency."""
+    up = (lambda t: t.replace("i", "İ").upper()) if tr else str.upper
+    acc = hex_rgb(accent)
+    im = Image.new("RGBA", (1300, 560), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    left = 26
+    spaced(d, (left, 10), up(card), font("SemiBold", 34), (240, 240, 240), 7)
+    d.rectangle((left, 62, left + 80, 69), fill=acc)
+    tf = font("ExtraBold", 120)
+    lines = wrap(d, up(title), tf, 760)            # two short lines fill the TV's 2.2:1 logo box better than one
+    if len(lines) > 2:
+        tf = font("ExtraBold", 92)
+        lines = wrap(d, up(title), tf, 900)[:3]
+    y, lh = 96, tf.size + 8
+    d.rectangle((0, y + 14, 9, y + len(lines) * lh - 6), fill=acc)
+    for ln in lines:
+        d.text((left, y), ln, font=tf, fill=(255, 255, 255))
+        y += lh
+    im = im.crop(im.getbbox())
+    # a soft shadow keeps it readable over a bright backdrop
+    out = Image.new("RGBA", (im.width + 60, im.height + 60), (0, 0, 0, 0))
+    blk = Image.new("RGBA", im.size, (0, 0, 0, 255))
+    blk.putalpha(im.getchannel("A").point(lambda v: int(v * 0.55)))
+    out.paste(blk, (30, 34))
+    out = out.filter(ImageFilter.GaussianBlur(10))
+    out.alpha_composite(im, (30, 30))
+    if out_path:
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        out.save(out_path, optimize=True)
+    return out
