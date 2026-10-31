@@ -330,7 +330,10 @@ def find_in_stills(photo, stills, thr=0.38):
         if im is None:
             continue
         found = _embeds(im)
-        crowd = 0.06 * max(0, len(found) - 3)         # a collage of the cast (key art) is not a scene
+        crowd = 0.15 * max(0, len(found) - 3)         # a collage of the cast (key art) is not a scene
+        g = np.asarray(im.convert("L").resize((160, 90)), np.float32) / 255
+        if (g > 0.9).mean() > 0.18:                   # a white studio ground: key art, not a film frame
+            crowd += 0.6
         for box, e in found:
             s = _REC.match(ref, e, cv2.FaceRecognizerSF_FR_COSINE)
             if s < thr:
