@@ -257,3 +257,36 @@ def pick_still(stills):
 def scene(im, subject=None):
     out, _ = hc.compose(im, subject)
     return left_fade(out)
+
+
+def photo_panel(photo, tint=(13, 13, 16)):
+    """the person's own photograph, not cut out: set on the right at the portrait size and place (FACE_H, FACE_C),
+    its own background kept and dissolving into the dark on every side, over a blurred glow of the same photo"""
+    p = photo.convert("RGB")
+    fs = hc.faces(p)
+    fb = fs[0][:4] if fs else (0.32, 0.18, 0.68, 0.45)
+    scale = (H * FACE_H) / max(1.0, (fb[3] - fb[1]) * p.height)
+    pw, ph = round(p.width * scale), round(p.height * scale)
+    big = ImageEnhance.Color(p.resize((pw, ph), Image.LANCZOS)).enhance(0.9)
+    fx0, fy0, fx1, fy1 = fb[0] * pw, fb[1] * ph, fb[2] * pw, fb[3] * ph
+    x = round(W * FACE_C[0] - (fx0 + fx1) / 2)
+    y = round(H * FACE_C[1] - (fy0 + fy1) / 2)
+    fw, fh = fx1 - fx0, fy1 - fy0
+    # an ellipse round the head and shoulders, wide and soft: the photo's own backdrop melts away from the person
+    yy, xx = np.mgrid[0:ph, 0:pw].astype(np.float32)
+    cx, cy = (fx0 + fx1) / 2, (fy0 + fy1) / 2 + fh * 0.55
+    d = np.sqrt(((xx - cx) / (fw * 2.1)) ** 2 + ((yy - cy) / (fh * 2.0)) ** 2)
+    m = np.clip((1.0 - d) / 0.55, 0, 1)
+    m = m * m * (3 - 2 * m)
+    # and never a hard photo edge inside the frame
+    m *= _edge_ramp(pw, pw * 0.12)[None, :] * _edge_ramp(pw, pw * 0.12)[::-1][None, :]
+    m *= _edge_ramp(ph, ph * 0.10)[:, None] * _edge_ramp(ph, ph * 0.25)[::-1][:, None]
+    out = Image.new("RGB", (W, H), tint)
+    glow = big.resize((W, H)).filter(ImageFilter.GaussianBlur(60))
+    glow = ImageEnhance.Brightness(glow).enhance(0.35)
+    out = Image.composite(glow, out, _hmask(W, H, [(0, 0), (0.45, 0), (0.75, 200), (1, 230)]))
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    bp = big.convert("RGBA"); bp.putalpha(Image.fromarray((m * 255).astype(np.uint8)))
+    layer.paste(bp, (x, y), bp)
+    out = out.convert("RGBA"); out.alpha_composite(layer)
+    return left_fade(out.convert("RGB"))
