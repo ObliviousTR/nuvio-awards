@@ -299,7 +299,7 @@ def person_card(entry, today, director, tr=False, toon_ok=False):
         what = entry["note"] + " · " + what
     picks = sorted([x for x in m + s if x["tmdb"] in lead], key=lambda x: -x["votes"])
     picks += sorted([x for x in m + s if x not in picks], key=lambda x: -x["votes"])
-    a = dict(title=entry.get("title") or p["name"], subtitle=what, portrait=p.get("profile_path"),
+    a = dict(title=entry.get("title") or p["name"], subtitle=what, portrait=p.get("profile_path"), person=p["id"],
              backdrops=backs[:12], picks=picks[:10])
     return m, s, a, [f"TMDB person {p['id']} {p['name']} ({p.get('known_for_department')})"]
 
@@ -730,7 +730,15 @@ def make_hero(slot, a, films):
     still = art.fetch(a.get("backdrop"), "w1280") if a.get("backdrop") else None
     img = None
     if a.get("portrait"):
-        photo = art.fetch(a["portrait"], "original")
+        # the best-framed of the person's photos (their face well inside it), not just the cover's
+        paths = [a["portrait"]]
+        if a.get("person"):
+            imgs = (tmdb(f"/person/{a['person']}/images") or {}).get("profiles", [])
+            imgs.sort(key=lambda x: (-x.get("vote_average", 0), -x.get("height", 0)))
+            paths += [x["file_path"] for x in imgs[:7] if x["file_path"] != a["portrait"]]
+        with ThreadPoolExecutor(4) as ex:
+            photos = list(ex.map(lambda q: art.fetch(q, "original"), paths))
+        photo = hero_styles.best_photo(photos)
         if photo is not None:
             try:
                 img = hero_styles.portrait(photo, still)

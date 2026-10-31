@@ -72,26 +72,31 @@ def wall(posters, tint=(20, 20, 26), glow=None, seed=1, angle=-9.0, cols=7, rows
     if glow:
         g = Image.new("RGB", (W, H), glow)
         canvas = Image.composite(g, canvas, _hmask(W, H, [(0, 0), (0.6, 0), (1, 46)]))
-    return ImageEnhance.Contrast(canvas).enhance(1.05)
+    return left_fade(ImageEnhance.Contrast(canvas).enhance(1.05))
 
 
 _RB = None
 
 
 def best_photo(photos):
-    """of a person's photos (best voted first), the one that shows more than a face: a waist-up or shoulders-up
-    portrait, sharp enough for the frame"""
+    """of a person's photos (best voted first), the one that frames them best for the hero: the face well inside the
+    photo (not at an edge, where a cut would run through it), shoulders below the chin, sharp enough"""
     scored = []
     for i, im in enumerate(photos):
-        if im is None or im.height < 900:
+        if im is None or im.height < 700:
             continue
         fs = hc.faces(im.convert("RGB"))
         if not fs:
             continue
-        frac = (fs[0][3] - fs[0][1])
+        x0, y0, x1, y1 = fs[0][:4]
+        frac = y1 - y0
+        cx = (x0 + x1) / 2
         fit = abs(frac - 0.3)
-        if fs[0][3] > 0.72:                 # the chin near the photo's bottom: a head with nothing below it
+        fit += 0.6 * max(0.0, abs(cx - 0.5) - 0.12)          # face pushed towards a side of the photo
+        if y1 > 0.72:                                         # the chin near the bottom: nothing below the head
             fit += 0.3
+        if x0 < 0.08 or x1 > 0.92 or y0 < 0.04:              # the face touches an edge: never usable
+            fit += 2
         scored.append((fit + i * 0.02, i))
     if not scored:
         return next((im for im in photos if im is not None), None)
@@ -112,14 +117,23 @@ def cutout(photo):
     return out
 
 
+FACE_H = 0.27          # the face (YuNet's box, brow to chin) in every portrait hero: this share of the frame's height
+FACE_C = (0.72, 0.37)  # and its centre
+
+
+def _edge_ramp(n, width):
+    r = np.clip(np.arange(n) / max(1.0, width), 0, 1)
+    return r * r * (3 - 2 * r)
+
+
 def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
     """photo: the person (portrait-oriented; cut out if it has no alpha). film_still: a still from their best-known
-    film, blurred and darkened behind them for atmosphere."""
+    film, blurred and darkened behind them for atmosphere. Every portrait puts the face at the same size and place
+    (FACE_H, FACE_C); wherever the photo ends inside the frame, the figure dissolves into the backdrop, never cut."""
     bg = Image.new("RGB", (W, H), tint)
     if film_still is not None:
         b = _cover(film_still.convert("RGB"), W, H)
         b = b.filter(ImageFilter.GaussianBlur(14))
-        # darken to a steady level whatever the still: about 15% mean brightness behind the person
         mean = float(np.asarray(b.convert("L"), np.float32)[:, W // 2:].mean()) / 255   # behind the person
         b = ImageEnhance.Color(ImageEnhance.Brightness(b).enhance(min(0.6, 0.15 / max(0.05, mean)))).enhance(0.75)
         bg = b
@@ -130,43 +144,33 @@ def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
         p = g
     fs = hc.faces(p.convert("RGB"))
     if fs:
-        face_h = (fs[0][3] - fs[0][1]) * p.height
-        ph = round(p.height * (H * 0.32) / max(1.0, face_h))
-    else:
-        ph = H
-    ph = max(ph, round(H * 0.5))
-    pw = round(p.width * ph / p.height)
+        fb = fs[0][:4]
+    else:                                                     # no face found: assume a standard head-and-shoulders
+        fb = (0.32, 0.18, 0.68, 0.45)
+    scale = (H * FACE_H) / max(1.0, (fb[3] - fb[1]) * p.height)
+    pw, ph = round(p.width * scale), round(p.height * scale)
     p = p.resize((pw, ph), Image.LANCZOS)
-    if fs:
-        fx = (fs[0][0] + fs[0][2]) / 2 * pw
-        fy = (fs[0][1] + fs[0][3]) / 2 * ph
-    else:
-        fx, fy = pw / 2, ph * 0.3
-    x = round(W * 0.72 - fx)
-    y = min(round(H * 0.36 - fy), round(H * 0.04))
-    # the body fades out towards the bottom of the frame
+    fx0, fy0, fx1, fy1 = fb[0] * pw, fb[1] * ph, fb[2] * pw, fb[3] * ph
+    x = round(W * FACE_C[0] - (fx0 + fx1) / 2)
+    y = round(H * FACE_C[1] - (fy0 + fy1) / 2)
     a = np.asarray(p.getchannel("A"), np.float32)
-    rows_ = np.arange(ph)[:, None] + y
-    fade = np.clip((H * 0.98 - rows_) / (H * 0.28), 0, 1)
-    own = np.clip((ph - np.arange(ph)[:, None]) / (ph * 0.3), 0, 1)     # and towards the photo's own bottom edge
-    fade = np.minimum(fade, own)
-    # where the photo itself cuts the figure (shoulders running off its sides), dissolve the cut: the figure fades
-    # out over the last fifth of the photo's width on each side it touches, on a smooth curve, never a straight edge
+    # dissolve every photo edge that falls inside the frame and that the figure touches, as wide as possible
+    # without reaching the face (the face itself is never faded)
     a0 = a > 8
-    touch_l = a0[:, :3].mean() > 0.02
-    touch_r = a0[:, -3:].mean() > 0.02
-    xs = np.arange(pw)[None, :]
-    side = np.ones((1, pw))
-    fw = pw * 0.22
-    if touch_l:
-        side = np.minimum(side, np.clip(xs / fw, 0, 1))
-    if touch_r:
-        side = np.minimum(side, np.clip((pw - 1 - xs) / fw, 0, 1))
-    side = side * side * (3 - 2 * side)                                  # smoothstep
-    own = own * own * (3 - 2 * own)
-    fade = np.minimum(np.clip((H * 0.98 - rows_) / (H * 0.28), 0, 1), own) * side
-    p.putalpha(Image.fromarray((a * fade).astype(np.uint8)))
-    # a soft shadow and a faint rim of the backdrop's light around the figure
+    m = np.ones((ph, pw), np.float32)
+    marg = H * 0.04
+    if x > 0 and a0[:, :3].mean() > 0.01:
+        m *= _edge_ramp(pw, max(24, min(pw * 0.3, fx0 - marg)))[None, :]
+    if x + pw < W and a0[:, -3:].mean() > 0.01:
+        m *= _edge_ramp(pw, max(24, min(pw * 0.3, pw - fx1 - marg)))[::-1][None, :]
+    if y > 0 and a0[:3, :].mean() > 0.01:
+        m *= _edge_ramp(ph, max(24, min(ph * 0.2, fy0 - marg)))[:, None]
+    # the bottom: the photo's own lower edge, or the frame's, whichever comes first
+    bottom = min(ph, H - y)
+    ramp_h = max(60, min(ph * 0.35, bottom - fy1 - marg))
+    rows_ = np.arange(ph)[:, None]
+    m *= np.clip((bottom - rows_) / ramp_h, 0, 1) ** 1.5
+    p.putalpha(Image.fromarray((a * m).astype(np.uint8)))
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     blk = Image.new("RGBA", p.size, (0, 0, 0, 255))
     blk.putalpha(p.getchannel("A").point(lambda v: int(v * 0.6)))
@@ -177,9 +181,17 @@ def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     layer.paste(p, (x, y), p)
     out.alpha_composite(layer)
-    return out.convert("RGB")
+    return left_fade(out.convert("RGB"))
+
+
+def left_fade(im, tint=(13, 13, 16)):
+    """the hero's own left side melts into the TV's background colour, so wherever the TV starts drawing it (its box
+    begins about a third of the way across), there is no edge between the title side and the picture"""
+    m = _hmask(W, H, [(0, 255), (0.18, 235), (0.34, 150), (0.5, 40), (0.62, 0), (1, 0)])
+    m = m.filter(ImageFilter.GaussianBlur(30))
+    return Image.composite(Image.new("RGB", (W, H), tint), im, m)
 
 
 def scene(im, subject=None):
     out, _ = hc.compose(im, subject)
-    return out
+    return left_fade(out)
