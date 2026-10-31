@@ -707,7 +707,7 @@ def hover_films(slot, a, m, s):
             d = tmdb(f"/{x['kind']}/{x['tmdb']}", language="tr-TR") or {}
             name = d.get("title") or d.get("name") or name
         films.append(dict(title=name, year=x.get("year", ""), date=x.get("date") or x.get("year") or "",
-                          still=st, poster=x.get("poster")))
+                          still=st, poster=x.get("poster"), tmdb=x["tmdb"], kind=x["kind"]))
         if len(films) >= n:
             break
     if slot != "pulse" and not a.get("in_order"):
@@ -721,32 +721,41 @@ def hover_films(slot, a, m, s):
 HOVER_LAYOUT = "left"
 hover = {"left": spotlight_hover, "full": spotlight_hover_full}[HOVER_LAYOUT]
 HOVER_VERSION = f"{HOVER_LAYOUT}-2"                          # changes (or a bump) redraw every card's hover once
-HERO_VERSION = "tv-1"                                       # the Nuvio TV hero (backdrop.jpg) and title logo (logo.png)
+HERO_VERSION = "tv-2"                                       # the Nuvio TV hero (backdrop.jpg) and title logo (logo.png)
 
 
 def make_hero(slot, a, films):
-    """backdrop.jpg, the folder's hero on Nuvio TV (art_tools/hero_styles.py): people get their photo, cut out, over
-    a darkened still from the card's film; the other cards a textless still placed where the TV shows it whole."""
-    still = art.fetch(a.get("backdrop"), "w1280") if a.get("backdrop") else None
+    """backdrop.jpg, the folder's hero on Nuvio TV (art_tools/hero_styles.py), a film still laid out for the TV.
+    People cards (Ozzy, 31 Oct 2026): the person themself in a still of their own films - their face found by face
+    recognition (SFace) against their TMDB photos - laid out round them; directors (and anyone not found): the best
+    composing still of their films. Nothing is cut out and pasted."""
     img = None
-    if a.get("portrait"):
-        # the best-framed of the person's photos (their face well inside it), not just the cover's
-        paths = [a["portrait"]]
+    refs = [f["still"] for f in films[:6] if f.get("still")] or [a.get("backdrop")]
+    if a.get("portrait") and slot != "visionary":
+        photos_p = [a["portrait"]]
         if a.get("person"):
-            imgs = (tmdb(f"/person/{a['person']}/images") or {}).get("profiles", [])
-            imgs.sort(key=lambda x: (-x.get("vote_average", 0), -x.get("height", 0)))
-            paths += [x["file_path"] for x in imgs[:7] if x["file_path"] != a["portrait"]]
-        with ThreadPoolExecutor(4) as ex:
-            photos = list(ex.map(lambda q: art.fetch(q, "original"), paths))
-        photo = hero_styles.best_photo(photos)
-        if photo is not None:
-            try:
-                img = hero_styles.portrait(photo, still)
-            except Exception as e:                           # rembg or the face model unavailable: fall back
-                print(f"{slot}: portrait hero failed ({type(e).__name__}), using a scene")
+            ims = (tmdb(f"/person/{a['person']}/images") or {}).get("profiles", [])
+            ims.sort(key=lambda x: (-x.get("vote_average", 0), -x.get("height", 0)))
+            photos_p += [x["file_path"] for x in ims if x.get("height", 0) >= 700 and x["file_path"] != a["portrait"]][:11]
+        cands = list(refs)
+        for f in films[:6]:                                   # more stills of the same films: the person in a scene
+            if f.get("tmdb"):
+                d = tmdb(f"/{f['kind']}/{f['tmdb']}/images", include_image_language="null") or {}
+                bd = sorted([b for b in d.get("backdrops", []) if b.get("width", 0) >= 1280 and not b.get("iso_639_1")],
+                            key=lambda b: (-b.get("vote_count", 0), -b.get("vote_average", 0)))
+                cands += [b["file_path"] for b in bd[:6] if b["file_path"] not in cands]
+        with ThreadPoolExecutor(6) as ex:
+            photos = list(ex.map(lambda q: art.fetch(q, "h632"), photos_p))
+            stills = list(ex.map(lambda q: art.fetch(q, "w1280"), cands))
+        try:
+            photo = hero_styles.best_photo(photos, min_h=0)
+            k, face = hero_styles.find_in_stills(photo, stills) if photo is not None else (None, None)
+            if k is not None:
+                img = hero_styles.person_scene(art.fetch(cands[k], "original"), face)
+        except Exception as e:                                # the face models unavailable: a plain scene
+            print(f"{slot}: person scene failed ({type(e).__name__})")
     if img is None:
-        # the best-composing of the first few films' textless stills (or the card's own backdrop)
-        refs = [f["still"] for f in films[:5] if f.get("still")] or [a.get("backdrop")]
+        # the best-composing of the films' textless stills (or the card's own backdrop)
         with ThreadPoolExecutor(4) as ex:
             stills = list(ex.map(lambda q: art.fetch(q, "original") if q else None, refs))
         _, src = hero_styles.pick_still(stills)
