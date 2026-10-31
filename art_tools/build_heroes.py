@@ -4,7 +4,7 @@ URLs (cache-busted with the file's md5). See hero_styles.py for the three styles
 
 spec: {"<Row>": {"<Folder title>": {
     "style": "scene" | "wall" | "portrait",
-    "src": "file:<path>" | "tmdb:<path>" | "url:<url>",            scene: the picture; portrait: the film still
+    "src": "file:<path>" | "art:<path in nuvio-art>" | "tmdb:<path>" | "url:<url>",            scene: the picture; portrait: the film still
     "subject": [x0, y0, x1, y1],                                   scene: optional subject box (fractions)
     "posters": ["tmdb:<path>" | "url:<url>" | "catalog:<path in nuvio-awards>", ...],   wall
     "glow": "#rrggbb", "seed": 1,                                   wall
@@ -32,6 +32,7 @@ def slug(s):
 
 
 _cache = {}
+ART_DIR = "."
 
 
 def load(ref, size="original"):
@@ -40,6 +41,8 @@ def load(ref, size="original"):
     kind, _, val = ref.partition(":")
     if kind == "file":
         im = Image.open(os.path.join(ROOT, val))
+    elif kind == "art":                                   # a file in the nuvio-art checkout
+        im = Image.open(os.path.join(ART_DIR, val))
     else:
         url = f"https://image.tmdb.org/t/p/{size}{val}" if kind == "tmdb" else val
         for _ in range(3):
@@ -75,6 +78,8 @@ def build(spec, folder):
     st = spec["style"]
     if st == "scene":
         return hs.scene(load(spec["src"]), tuple(spec["subject"]) if spec.get("subject") else None)
+    if st == "fade":                                      # a picture already laid out for the hero: only the fade
+        return hs.left_fade(hs._cover(load(spec["src"]).convert("RGB"), hs.W, hs.H))
     if st == "wall":
         refs = poster_refs(spec["posters"])[:36]
         with ThreadPoolExecutor(12) as ex:
@@ -99,6 +104,8 @@ def main():
     ap.add_argument("--rows", default=""); ap.add_argument("--only", default="")
     ap.add_argument("--sheet", default="")
     a = ap.parse_args()
+    global ART_DIR
+    ART_DIR = a.art
     spec = json.load(open(os.path.join(HERE, "heroes_spec.json"), encoding="utf-8"))
     data = json.load(open(a.baseline, encoding="utf-8"))
     rows = [r.strip() for r in a.rows.split(",") if r.strip()] or list(spec)

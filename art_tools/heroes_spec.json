@@ -2486,5 +2486,127 @@
    "shade": 0.5,
    "logo": "file:art_tools/logos/moods/80s-90s-vibes.png"
   }
+ },
+ "Universes & Franchises": {
+  "Marvel Cinematic Universe": {
+   "style": "scene",
+   "src": "art:art/universes/mcu/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/mcu.png"
+  },
+  "DC Universe": {
+   "style": "scene",
+   "src": "art:art/universes/dc/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/dc.png"
+  },
+  "Batman & Gotham": {
+   "style": "scene",
+   "src": "art:art/universes/batman/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/batman.png"
+  },
+  "Spider-Verse": {
+   "style": "scene",
+   "src": "art:art/universes/spiderman/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/spiderman.png"
+  },
+  "X-Men & Mutants": {
+   "style": "scene",
+   "src": "art:art/universes/xmen/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/xmen.png"
+  },
+  "Middle-earth": {
+   "style": "scene",
+   "src": "art:art/universes/middleearth/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/middleearth.png"
+  },
+  "Star Wars": {
+   "style": "fade",
+   "src": "art:art/universes/starwars/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/starwars.png"
+  },
+  "Wizarding World": {
+   "style": "scene",
+   "src": "art:art/universes/wizarding/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/wizarding.png"
+  },
+  "Dune": {
+   "style": "scene",
+   "src": "art:art/universes/dune/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/dune.png"
+  },
+  "Star Trek": {
+   "style": "scene",
+   "src": "art:art/universes/startrek/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/startrek.png"
+  },
+  "007 James Bond": {
+   "style": "scene",
+   "src": "art:art/universes/bond/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/bond.png"
+  },
+  "Mission: Impossible": {
+   "style": "scene",
+   "src": "art:art/universes/mi/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/mi.png"
+  },
+  "The World of John Wick": {
+   "style": "scene",
+   "src": "art:art/universes/johnwick/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/johnwick.png"
+  },
+  "The Fast Saga": {
+   "style": "scene",
+   "src": "art:art/universes/fast/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/fast.png"
+  },
+  "Mad Max Saga": {
+   "style": "scene",
+   "src": "art:art/universes/madmax/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/madmax.png"
+  },
+  "Indiana Jones": {
+   "style": "scene",
+   "src": "art:art/universes/indiana/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/indiana.png"
+  },
+  "The Matrix": {
+   "style": "scene",
+   "src": "art:art/universes/matrix/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/matrix.png"
+  },
+  "Alien & Predator": {
+   "style": "scene",
+   "src": "art:art/universes/alienpredator/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/alienpredator.png"
+  },
+  "Godzilla & Kong": {
+   "style": "scene",
+   "src": "art:art/universes/godzillakong/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/godzillakong.png"
+  },
+  "Jurassic Park": {
+   "style": "scene",
+   "src": "art:art/universes/jurassic/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/jurassic.png"
+  },
+  "Planet of the Apes": {
+   "style": "scene",
+   "src": "art:art/universes/apes/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/apes.png"
+  },
+  "Terminator": {
+   "style": "scene",
+   "src": "art:art/universes/terminator/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/terminator.png"
+  },
+  "Transformers": {
+   "style": "scene",
+   "src": "art:art/universes/transformers/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/transformers.png"
+  },
+  "The Conjuring & Insidious": {
+   "style": "scene",
+   "src": "art:art/universes/conjuring/backdrop.jpg",
+   "logo": "file:art_tools/logos/universes/conjuring.png"
+  }
  }
 }
