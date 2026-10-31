@@ -198,7 +198,9 @@ def title_layer(folder, mode, area, tv=False):
     en_f = font("SemiBold", 24)
     en_w = width(en, en_f, 8)
     block_h = sum(b - a for a, b in lh) + gap * (len(lines) - 1) + 26 + 30
-    if mode == "side":
+    if tv:                                            # its own canvas: from the top, nothing falls off the bottom
+        y = 40
+    elif mode == "side":
         y = H / 2 - block_h / 2
     else:
         y = area[3] + (H - area[3]) / 2 - block_h / 2 + 6
