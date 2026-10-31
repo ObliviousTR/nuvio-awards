@@ -86,6 +86,20 @@ def build(spec, folder):
             ps = [p for p in ex.map(lambda r: load(r, "w342"), refs) if p is not None]
         return hs.wall(ps, glow=hex_rgb(spec["glow"]) if spec.get("glow") else None, seed=spec.get("seed", 1),
                        shade=spec.get("shade", 1.0))
+    if st == "film":                                      # the person in a still of their own films (or the film)
+        refs = [r for r, wh in zip(spec["photos"], spec.get("sizes") or [[0, 9999]] * len(spec["photos"]))
+                if wh[1] >= 700][:20] or spec["photos"][:6]
+        with ThreadPoolExecutor(8) as ex:
+            photos = list(ex.map(lambda r: load(r, "h632"), refs))
+            stills = list(ex.map(lambda r: load(r, "w1280"), spec["stills"]))
+        best = hs.best_photo(photos, min_h=0)
+        k, face = (None, None)
+        if best is not None and not spec.get("director"):
+            k, face = hs.find_in_stills(load(refs[photos.index(best)]), stills)
+        if k is not None:
+            return hs.person_scene(load(spec["stills"][k]), face)
+        k, _ = hs.pick_still(stills[:12])
+        return hs.scene(load(spec["stills"][k if k is not None else 0]))
     if st == "portrait":
         with ThreadPoolExecutor(6) as ex:
             refs = [r for r, wh in zip(spec["photos"], spec.get("sizes") or [[0, 9999]] * len(spec["photos"]))

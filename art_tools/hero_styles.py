@@ -329,12 +329,14 @@ def find_in_stills(photo, stills, thr=0.38):
     for i, im in enumerate(stills):
         if im is None:
             continue
-        for box, e in _embeds(im):
+        found = _embeds(im)
+        crowd = 0.06 * max(0, len(found) - 3)         # a collage of the cast (key art) is not a scene
+        for box, e in found:
             s = _REC.match(ref, e, cv2.FaceRecognizerSF_FR_COSINE)
             if s < thr:
                 continue
             size = box[3] - box[1]
-            score = s + 1.5 * min(size, 0.35) - 0.02 * i
+            score = s + 1.5 * min(size, 0.35) - 0.02 * i - crowd
             if best is None or score > best[0]:
                 best = (score, i, box)
     return (best[1], best[2]) if best else (None, None)
