@@ -90,6 +90,8 @@ def best_photo(photos):
             continue
         frac = (fs[0][3] - fs[0][1])
         fit = abs(frac - 0.3)
+        if fs[0][3] > 0.72:                 # the chin near the photo's bottom: a head with nothing below it
+            fit += 0.3
         scored.append((fit + i * 0.02, i))
     if not scored:
         return next((im for im in photos if im is not None), None)
@@ -117,7 +119,9 @@ def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
     if film_still is not None:
         b = _cover(film_still.convert("RGB"), W, H)
         b = b.filter(ImageFilter.GaussianBlur(14))
-        b = ImageEnhance.Color(ImageEnhance.Brightness(b).enhance(0.38)).enhance(0.75)
+        # darken to a steady level whatever the still: about 15% mean brightness behind the person
+        mean = float(np.asarray(b.convert("L"), np.float32)[:, W // 2:].mean()) / 255   # behind the person
+        b = ImageEnhance.Color(ImageEnhance.Brightness(b).enhance(min(0.6, 0.15 / max(0.05, mean)))).enhance(0.75)
         bg = b
     p = photo if photo.mode == "RGBA" else cutout(photo)
     if mono:
@@ -146,6 +150,21 @@ def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
     fade = np.clip((H * 0.98 - rows_) / (H * 0.28), 0, 1)
     own = np.clip((ph - np.arange(ph)[:, None]) / (ph * 0.3), 0, 1)     # and towards the photo's own bottom edge
     fade = np.minimum(fade, own)
+    # where the photo itself cuts the figure (shoulders running off its sides), dissolve the cut: the figure fades
+    # out over the last fifth of the photo's width on each side it touches, on a smooth curve, never a straight edge
+    a0 = a > 8
+    touch_l = a0[:, :3].mean() > 0.02
+    touch_r = a0[:, -3:].mean() > 0.02
+    xs = np.arange(pw)[None, :]
+    side = np.ones((1, pw))
+    fw = pw * 0.22
+    if touch_l:
+        side = np.minimum(side, np.clip(xs / fw, 0, 1))
+    if touch_r:
+        side = np.minimum(side, np.clip((pw - 1 - xs) / fw, 0, 1))
+    side = side * side * (3 - 2 * side)                                  # smoothstep
+    own = own * own * (3 - 2 * own)
+    fade = np.minimum(np.clip((H * 0.98 - rows_) / (H * 0.28), 0, 1), own) * side
     p.putalpha(Image.fromarray((a * fade).astype(np.uint8)))
     # a soft shadow and a faint rim of the backdrop's light around the figure
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
