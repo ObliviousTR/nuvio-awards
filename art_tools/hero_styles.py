@@ -321,10 +321,15 @@ def find_in_stills(photo, stills, thr=0.38):
     """the still in which the person of photo is seen best: their face recognised (SFace), large and clear.
     Returns (index, face box) or (None, None)."""
     import cv2
-    ref = _embeds(photo)
-    if not ref:
+    refs = []
+    for ph in (photo if isinstance(photo, (list, tuple)) else [photo]):   # several photos: a face seen in any of them
+        if ph is None:
+            continue
+        found = _embeds(ph)
+        if found:
+            refs.append(max(found, key=lambda r: (r[0][2] - r[0][0]) * (r[0][3] - r[0][1]))[1])
+    if not refs:
         return None, None
-    ref = max(ref, key=lambda r: (r[0][2] - r[0][0]) * (r[0][3] - r[0][1]))[1]
     best = None
     for i, im in enumerate(stills):
         if im is None:
@@ -335,7 +340,7 @@ def find_in_stills(photo, stills, thr=0.38):
         if (g > 0.9).mean() > 0.18:                   # a white studio ground: key art, not a film frame
             crowd += 0.6
         for box, e in found:
-            s = _REC.match(ref, e, cv2.FaceRecognizerSF_FR_COSINE)
+            s = max(_REC.match(r, e, cv2.FaceRecognizerSF_FR_COSINE) for r in refs)
             if s < thr:
                 continue
             size = box[3] - box[1]

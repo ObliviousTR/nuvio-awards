@@ -94,8 +94,8 @@ def build(spec, folder):
             stills = list(ex.map(lambda r: load(r, "w1280"), spec["stills"]))
         best = hs.best_photo(photos, min_h=0)
         k, face = (None, None)
-        if best is not None and not spec.get("director"):
-            k, face = hs.find_in_stills(load(refs[photos.index(best)]), stills)
+        if best is not None and not spec.get("director"):      # the best photo first, then the others (632 px)
+            k, face = hs.find_in_stills([best] + [p for p in photos if p is not best][:7], stills)
         def full(ref):                                    # the chosen still at full size, not the cached w1280
             _cache.pop(ref, None)
             return load(ref)

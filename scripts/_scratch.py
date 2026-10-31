@@ -24,19 +24,19 @@ def stills(item):
     if dept == "Directing":
         films = [f for f in cr.get("crew", []) if f.get("job") == "Director"]
     else:
-        films = [f for f in cr.get("cast", []) if f.get("order", 99) <= 2] or cr.get("cast", [])
-    films = sorted({f["id"]: f for f in films}.values(), key=lambda f: -f.get("vote_count", 0))[:5]
+        films = [f for f in cr.get("cast", []) if f.get("order", 99) <= 4] or cr.get("cast", [])
+    films = sorted({f["id"]: f for f in films}.values(), key=lambda f: -f.get("vote_count", 0))[:12]
     out = []
     for f in films:
         bd = [b for b in get(f"/movie/{f['id']}/images", include_image_language="null").get("backdrops", [])
               if not b.get("iso_639_1") and b.get("width", 0) >= 1280]
         bd.sort(key=lambda b: (-b.get("vote_count", 0), -b.get("vote_average", 0)))
-        out += [{"film": f["title"], "path": b["file_path"], "votes": b.get("vote_count", 0)} for b in bd[:8]]
+        out += [{"film": f["title"], "path": b["file_path"], "votes": b.get("vote_count", 0)} for b in bd[:25]]
     return name, out
 
 
 with ThreadPoolExecutor(8) as ex:
     res = dict(ex.map(stills, P.items()))
-json.dump(res, open(f"{OUT}/stills.json", "w"), ensure_ascii=False)
+json.dump(res, open(f"{OUT}/stills6.json", "w"), ensure_ascii=False)
 for n, v in res.items():
     print(n, len(v))
