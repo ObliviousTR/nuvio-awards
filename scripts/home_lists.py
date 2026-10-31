@@ -227,8 +227,13 @@ def main():
     if "--no-simkl" not in sys.argv:
         seen, seeds = simkl_history()
         print(f"Simkl: {len(seen)} titles on his lists, seeds {len(seeds['movie'])} films / {len(seeds['tv'])} shows")
-        cats += [write("home-foryou-movies", "movie", "For You · Movies", for_you("movie", seen, seeds["movie"])),
-                 write("home-foryou-series", "series", "For You · Series", for_you("tv", seen, seeds["tv"]))]
+        for cid, typ, name, kind in (("home-foryou-movies", "movie", "For You · Movies", "movie"),
+                                     ("home-foryou-series", "series", "For You · Series", "tv")):
+            try:
+                cats.append(write(cid, typ, name, for_you(kind, seen, seeds[kind])))
+            except Exception as e:          # keep yesterday's list; the refreshed Simkl token must still be saved
+                print(f"{name} failed ({type(e).__name__}: {e}); keeping the previous list")
+                cats.append({"type": typ, "id": cid, "name": name, "extra": []})
     man = json.load(open(L("manifest.json"), encoding="utf-8"))
     ids = {c["id"] for c in cats}
     man["catalogs"] = cats + [c for c in man["catalogs"] if c["id"] not in ids]
