@@ -686,7 +686,7 @@
    "glow": "#E0E0E0",
    "seed": 6,
    "shade": 0.5,
-   "logo": "keep"
+   "logo": "file:art_tools/logos/bbc.png"
   },
   "ITV": {
    "style": "wall",
