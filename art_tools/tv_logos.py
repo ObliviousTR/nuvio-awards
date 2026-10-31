@@ -282,3 +282,286 @@ def docs_logo(title, accent):
         d.rectangle((min(x, x + sx * t), min(y, y + sy * L), max(x, x + sx * t), max(y, y + sy * L)), fill=col)
     out.alpha_composite(inner, (px, py))
     return on_canvas(out)
+
+
+um.FONTS.update({
+    "fredoka": "ofl/fredoka/Fredoka%5Bwdth,wght%5D.ttf",
+    "pacifico": "ofl/pacifico/Pacifico-Regular.ttf",
+    "creepster": "ofl/creepster/Creepster-Regular.ttf",
+    "luckiest": "apache/luckiestguy/LuckiestGuy-Regular.ttf",
+    "delagothic": "ofl/delagothicone/DelaGothicOne-Regular.ttf",
+    "cormit": "ofl/cormorantgaramond/CormorantGaramond-Italic%5Bwght%5D.ttf",
+    "yellowtail": "apache/yellowtail/Yellowtail-Regular.ttf",
+    "jp": "ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
+})
+
+
+def extrude(layer, col, steps, dx=1, dy=1):
+    out = Image.new("RGBA", (layer.width + steps * abs(dx), layer.height + steps * abs(dy)), (0, 0, 0, 0))
+    s = solid(layer, col)
+    for i in range(steps, 0, -1):
+        out.alpha_composite(s, (i * dx, i * dy))
+    out.alpha_composite(layer, (0, 0))
+    return out
+
+
+def mood_kicker(accent, size=58):
+    return T("MOOD", "montit", size, tuple(accent), 18, weight=800)
+
+
+# ---------------------------------------------------------------- Anime: a title card with a hanko-style plate
+ANIME = {
+    "Seasonal & Currently Airing": ("NOW AIRING", "放送中"),
+    "Shonen & High-Octane Action": ("SHONEN", "少年"),
+    "Seinen, Dark & Psychological": ("SEINEN", "青年"),
+    "Isekai, Magic & Fantasy Worlds": ("ISEKAI", "異世界"),
+    "Romance, Comedy & Slice of Life": ("SLICE OF LIFE", "日常"),
+    "All-Time Top Rated Anime": ("TOP RATED", "名作"),
+    "Anime Movies & Feature Films": ("MOVIES", "映画"),
+    "Anime Film Collections": ("FILM SAGAS", "劇場版"),
+    "Studio Spotlight": ("STUDIOS", "スタジオ"),
+}
+
+
+def anime_logo(main, jp, accent):
+    accent = tuple(accent)
+    dark = tuple(round(c * 0.45) for c in accent)
+    rows = []
+    for t in lines_of(main, 10):
+        L = T(t, "delagothic", 190, (255, 255, 255), 4)
+        L = um.trim(L.transform(L.size, Image.AFFINE, (1, 0.18, -L.height * 0.18, 0, 1, 0), Image.BICUBIC))  # italic lean
+        L = Image.new("RGBA", (L.width + 40, L.height), (0, 0, 0, 0)) if False else L
+        rows.append(L)
+    M = stack(rows, 14)
+    M = outline(M, 6, (12, 10, 16))
+    M = extrude(M, dark, 10, 1, 1)
+    # the Japanese word on an accent plate (a hanko-like seal) beside the ANIME kicker
+    jpL = T(jp, "jp", 92, (255, 255, 255), 6, weight=900)
+    plate = Image.new("RGBA", (jpL.width + 56, jpL.height + 36), (0, 0, 0, 0))
+    d = ImageDraw.Draw(plate)
+    d.rounded_rectangle((0, 0, plate.width - 1, plate.height - 1), radius=12, fill=accent + (255,))
+    d.rounded_rectangle((7, 7, plate.width - 8, plate.height - 8), radius=8, outline=(255, 255, 255, 190), width=3)
+    plate.alpha_composite(outline(jpL, 2, dark), (28 - 4, 18 - 4))
+    k = T("ANIME", "montit", 70, accent, 24, weight=900)
+    top = Image.new("RGBA", (plate.width + 30 + k.width, plate.height), (0, 0, 0, 0))
+    top.alpha_composite(plate, (0, 0))
+    top.alpha_composite(k, (plate.width + 30, (plate.height - k.height) // 2))
+    out = stack([top, M], 22)
+    return on_canvas(out)
+
+
+# ---------------------------------------------------------------- Moods: each feeling in its own lettering
+def _feelgood(a):
+    W = T("FEEL-GOOD", "fredoka", 230, (255, 255, 255), 2, weight=700)
+    W = um.gradient_fill(W, (255, 236, 90), (255, 150, 40))
+    W = outline(W, 7, (255, 255, 255))
+    W = extrude(W, (230, 90, 40), 8)
+    # sun rays fanning out behind the top-left of the word
+    rays = Image.new("RGBA", (W.width, W.height + 60), (0, 0, 0, 0))
+    out = Image.new("RGBA", (W.width, W.height), (0, 0, 0, 0))
+    out.alpha_composite(W)
+    return stack([mood_kicker(a), out], 16)
+
+
+def _cozy(a):
+    W1 = T("Cozy &", "pacifico", 170, (255, 255, 255))
+    W2 = T("Comforting", "pacifico", 170, (255, 255, 255))
+    M = stack([W1, W2], -30)
+    M.alpha_composite(Image.new("RGBA", M.size, (0, 0, 0, 0)))
+    body = um.gradient_fill(M, (255, 232, 196), (240, 150, 80))
+    g = um.padded(body, 40)
+    gl = um.glow(g, 24, (255, 160, 70), 0.6)
+    gl.alpha_composite(g)
+    return stack([mood_kicker(a), gl], -10)
+
+
+def _adrenaline(a):
+    rows = [T(t, "montit", 200, (255, 255, 255), 0, weight=900) for t in ("ADRENALINE", "RUSH")]
+    M = stack(rows, 16)
+    M = um.trim(M.transform((M.width + 80, M.height), Image.AFFINE, (1, 0.22, -M.height * 0.22 + 0, 0, 1, 0),
+                            Image.BICUBIC))
+    body = um.gradient_fill(M, (255, 220, 60), (255, 60, 30))
+    body = outline(body, 5, (20, 8, 4))
+    # speed lines streaking off to the left
+    out = Image.new("RGBA", (body.width + 260, body.height), (0, 0, 0, 0))
+    d = ImageDraw.Draw(out)
+    import random
+    rnd = random.Random(3)
+    for i in range(9):
+        y = round((i + 0.5) * body.height / 9 + rnd.uniform(-8, 8))
+        ln = rnd.randint(140, 250)
+        d.polygon([(260 - ln, y), (270, y - 5), (270, y + 5)], fill=(255, 120 + rnd.randint(0, 100), 40, 230))
+    out.alpha_composite(body, (240, 0))
+    return stack([Image.new("RGBA", (240, 1)), ], 0) if False else stack([_indent(mood_kicker(a), 240), out], 14)
+
+
+def _indent(l, x):
+    o = Image.new("RGBA", (l.width + x, l.height), (0, 0, 0, 0))
+    o.alpha_composite(l, (x, 0))
+    return o
+
+
+def _epic(a):
+    W1 = T("EPIC", "cinzel", 230, (255, 255, 255), 30, weight=900)
+    W2 = T("& SWEEPING", "cinzel", 110, (255, 255, 255), 26, weight=700)
+    W1 = um.gradient_fill(W1, (255, 242, 200), (200, 150, 70))
+    W2 = um.gradient_fill(W2, (250, 230, 180), (210, 160, 80))
+    w = max(W1.width, W2.width)
+    # a sweeping arc between the two words
+    arc = Image.new("RGBA", (w, 60), (0, 0, 0, 0))
+    d = ImageDraw.Draw(arc)
+    for i in range(6):
+        d.arc((-w * 0.1, 10 + i * 0.6, w * 1.1, 260), 200, 340, fill=(226, 186, 110, 255 - i * 30), width=3)
+    M = stack([W1, arc, W2], 0, "center")
+    g = um.padded(M, 30)
+    gl = um.glow(g, 22, (255, 200, 110), 0.4)
+    gl.alpha_composite(g)
+    return stack([_indent(mood_kicker(a), 30), gl], 0)
+
+
+def _mind(a):
+    W = stack([T(t, "montit", 210, (255, 255, 255), 0, weight=900) for t in ("MIND-", "BENDING")], -4)
+    W = um.padded(W, 30)
+    out = Image.new("RGBA", W.size, (0, 0, 0, 0))
+    out.alpha_composite(solid(W, (0, 230, 255)), (0, 0))
+    out = ImageChops.add(out, Image.new("RGBA", W.size, (0, 0, 0, 0)))
+    m = Image.new("RGBA", W.size, (0, 0, 0, 0))
+    m.alpha_composite(solid(W, (0, 230, 255)), (-14, 0))
+    m2 = Image.new("RGBA", W.size, (0, 0, 0, 0))
+    m2.alpha_composite(solid(W, (255, 40, 200)), (14, 0))
+    m.alpha_composite(m2)
+    m.alpha_composite(W)
+    # glitch: shift a few horizontal slices
+    import random
+    rnd = random.Random(5)
+    res = m.copy()
+    for _ in range(5):
+        y = rnd.randrange(30, m.height - 40); h = rnd.randint(8, 22); dx = rnd.choice((-1, 1)) * rnd.randint(14, 34)
+        sl = m.crop((0, y, m.width, y + h))
+        res.paste((0, 0, 0, 0), (0, y, m.width, y + h))
+        res.alpha_composite(sl, (dx if dx > 0 else 0, y), (0 if dx > 0 else -dx, 0))
+    return stack([_indent(mood_kicker(a), 30), res], 4)
+
+
+def _slowburn(a):
+    W = T("Slow Burn", "cormit", 300, (255, 255, 255), 0, weight=600)
+    body = um.gradient_fill(W, (255, 236, 200), (255, 110, 30))
+    g = um.padded(body, 50)
+    ember = um.glow(g, 30, (255, 90, 20), 0.85)
+    ember2 = um.glow(g, 8, (255, 160, 60), 0.6)
+    ember.alpha_composite(ember2); ember.alpha_composite(g)
+    return stack([_indent(mood_kicker(a), 50), ember], -20)
+
+
+def _gritty(a):
+    import random
+    rnd = random.Random(11)
+    rows = [T("DARK &", "bebas", 260, (236, 230, 222), 10), T("GRITTY", "bebas", 260, (196, 34, 38), 10)]
+    M = stack(rows, 8)
+    g = Image.new("L", M.size, 255)
+    d = ImageDraw.Draw(g)
+    for _ in range(M.width * M.height // 400):
+        x, y = rnd.randrange(M.width), rnd.randrange(M.height); r = rnd.choice((1, 1, 2, 2, 3))
+        d.ellipse((x - r, y - r, x + r, y + r), fill=rnd.choice((0, 60, 120)))
+    for _ in range(8):           # scratches
+        x = rnd.randrange(M.width); y = rnd.randrange(M.height)
+        d.line((x, y, x + rnd.randint(-50, 50), y + rnd.randint(40, 120)), fill=40, width=2)
+    M.putalpha(ImageChops.multiply(M.getchannel("A"), g.filter(ImageFilter.GaussianBlur(0.6))))
+    return stack([mood_kicker(a), M], 14)
+
+
+def _spooky(a):
+    rows = [T(t, "creepster", 220, (255, 255, 255), 6) for t in ("SPOOKY &", "CREEPY")]
+    M = stack(rows, 4)
+    body = um.gradient_fill(M, (210, 255, 170), (70, 200, 90))
+    g = um.padded(body, 40)
+    gl = um.glow(g, 26, (90, 255, 110), 0.75)
+    gl.alpha_composite(outline(g, 3, (10, 30, 10)), (-5, -5))
+    return stack([_indent(mood_kicker(a), 40), gl], -10)
+
+
+def _tears(a):
+    W = T("Tearjerkers", "playfairit", 230, (255, 255, 255), 0, weight=700)
+    body = um.gradient_fill(W, (235, 245, 255), (130, 175, 230))
+    # a single tear falling from the dot of the j
+    drop = Image.new("RGBA", (70, 110), (0, 0, 0, 0))
+    d = ImageDraw.Draw(drop)
+    d.ellipse((8, 40, 62, 94), fill=(150, 200, 255, 255))
+    d.polygon([(35, 0), (10, 62), (60, 62)], fill=(150, 200, 255, 255))
+    d.ellipse((20, 56, 34, 70), fill=(235, 248, 255, 255))
+    out = Image.new("RGBA", (body.width + 90, body.height + 40), (0, 0, 0, 0))
+    out.alpha_composite(body, (0, 0))
+    out.alpha_composite(drop, (body.width + 14, body.height - 90))
+    return stack([mood_kicker(a), out], 6)
+
+
+def _retro(a):
+    N = T("80s & 90s", "montit", 210, (255, 255, 255), 0, weight=900)
+    N = um.trim(N.transform((N.width + 60, N.height), Image.AFFINE, (1, 0.2, -N.height * 0.2, 0, 1, 0), Image.BICUBIC))
+    # chrome: sky blue to white above a hard horizon, dark to pink below
+    w, h = N.size
+    g = Image.new("RGBA", (w, h))
+    for y in range(h):
+        f = y / h
+        if f < 0.55:
+            c = tuple(round(a0 + (b0 - a0) * f / 0.55) for a0, b0 in zip((60, 140, 255), (235, 250, 255)))
+        else:
+            c = tuple(round(a0 + (b0 - a0) * (f - 0.55) / 0.45) for a0, b0 in zip((60, 20, 90), (255, 120, 220)))
+        g.paste(c + (255,), (0, y, w, y + 1))
+    g.putalpha(N.getchannel("A"))
+    g = outline(g, 4, (255, 255, 255))
+    V = T("Vibes", "yellowtail", 230, (255, 70, 180))
+    V = um.trim(V.rotate(6, Image.BICUBIC, expand=True))
+    Vg = um.padded(V, 30)
+    neon = um.glow(Vg, 18, (255, 60, 170), 0.9)
+    neon.alpha_composite(Vg)
+    out = Image.new("RGBA", (max(g.width, round(g.width * 0.42) + neon.width), g.height + neon.height - 120), (0, 0, 0, 0))
+    out = Image.new("RGBA", (max(g.width, round(g.width * 0.5) + neon.width), g.height + neon.height - 70), (0, 0, 0, 0))
+    out.alpha_composite(g, (0, 0))
+    out.alpha_composite(neon, (round(g.width * 0.5), g.height - 70))
+    return stack([mood_kicker(a), out], 10)
+
+
+MOODS = {"Feel-Good": _feelgood, "Cozy & Comforting": _cozy, "Adrenaline Rush": _adrenaline,
+         "Epic & Sweeping": _epic, "Mind-Bending": _mind, "Slow Burn": _slowburn, "Dark & Gritty": _gritty,
+         "Spooky & Creepy": _spooky, "Tearjerkers": _tears, "80s & 90s Vibes": _retro}
+
+
+def mood_logo(folder, accent):
+    return on_canvas(MOODS[folder](tuple(accent)))
+
+
+# ---------------------------------------------------------------- Kids & Family: bouncy, many-coloured letters
+KIDS_COLS = [(255, 204, 40), (255, 92, 130), (70, 200, 255), (120, 222, 90), (176, 120, 255), (255, 146, 50)]
+
+
+def kids_logo(title, accent, seed=0):
+    f = um.font("luckiest", 190)
+    rows = []
+    ci = seed
+    for li, t in enumerate(lines_of(title, 10)):
+        glyphs = []
+        for j, c in enumerate(t):
+            if c == " ":
+                glyphs.append(None)
+                continue
+            g = um.trim(um.text_layer(c, f, (255, 255, 255)))
+            col = KIDS_COLS[ci % len(KIDS_COLS)]; ci += 1
+            g = um.gradient_fill(g, tuple(min(255, v + 50) for v in col), col)
+            g = outline(g, 9, (255, 255, 255))
+            g = extrude(g, (30, 30, 70), 7)
+            g = g.rotate((-5, 4, -2, 6, -4, 3)[j % 6], Image.BICUBIC, expand=True)
+            glyphs.append(g)
+        sp = round(190 * 0.3)
+        w = sum(g.width - 14 if g else sp for g in glyphs)
+        h = max(g.height for g in glyphs if g) + 24
+        row = Image.new("RGBA", (w + 20, h), (0, 0, 0, 0))
+        x = 0
+        for j, g in enumerate(glyphs):
+            if g is None:
+                x += sp; continue
+            row.alpha_composite(g, (x, 12 + (-10, 6, -4, 10, -8, 2)[j % 6] + (h - 24 - g.height) // 2))
+            x += g.width - 14
+        rows.append(um.trim(row))
+    M = stack(rows, -10)
+    return on_canvas(M)
