@@ -23,6 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 L = lambda *p: os.path.join(ROOT, "library", *p)
 TODAY = dt.date.today()
 NOISE_TV = {10763, 10766, 10767}                     # news, soap, talk
+NOT_FOR_YOU_TV = {10762, 10764}                      # kids and reality shows stay out of For You too
 SIZE = 60
 
 
@@ -144,6 +145,8 @@ def for_you(kind, seen, seeds):
             for rank, r in enumerate(res):
                 if (kind, r["id"]) in seen or anime(r) or noise(kind, r) or not r.get("backdrop_path"):
                     continue
+                if kind == "tv" and NOT_FOR_YOU_TV & set(r.get("genre_ids") or []):
+                    continue
                 if r.get("vote_count", 0) < (150 if kind == "movie" else 60) or 10770 in (r.get("genre_ids") or []):
                     continue                                  # TV movies and specials (Doctor Who specials) are not films
                 c = w * (1 - rank / 45)
@@ -162,9 +165,9 @@ def for_you(kind, seen, seeds):
             continue
         year = int(((r.get("release_date") or r.get("first_air_date") or "1900")[:4]) or 1900)
         if kind == "tv":
-            age = 1.0 if year >= 2012 else 0.75 if year >= 2005 else 0.4
+            age = 1.0 if year >= 2012 else 0.75 if year >= 2005 else 0.4 if year >= 1995 else 0.12
         else:
-            age = 1.0 if year >= 2012 else 0.8 if year >= 2000 else 0.5 if year >= 1990 else 0.3
+            age = 1.0 if year >= 2012 else 0.8 if year >= 2000 else 0.5 if year >= 1990 else 0.15
         gs = r.get("genre_ids") or []
         fit = 0.65 + 0.7 * (sum(taste.get(g, 0) for g in gs) / len(gs) if gs else 0.3)
         quality = min(1.2, max(0.15, (va - 5.8) / 1.7))
