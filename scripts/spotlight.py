@@ -745,7 +745,11 @@ def make_hero(slot, a, films):
             except Exception as e:                           # rembg or the face model unavailable: fall back
                 print(f"{slot}: portrait hero failed ({type(e).__name__}), using a scene")
     if img is None:
-        src = art.fetch(films[0]["still"], "original") if films else art.fetch(a.get("backdrop"), "original")
+        # the best-composing of the first few films' textless stills (or the card's own backdrop)
+        refs = [f["still"] for f in films[:5] if f.get("still")] or [a.get("backdrop")]
+        with ThreadPoolExecutor(4) as ex:
+            stills = list(ex.map(lambda q: art.fetch(q, "original") if q else None, refs))
+        _, src = hero_styles.pick_still(stills)
         if src is None:
             return False
         img = hero_styles.scene(src)

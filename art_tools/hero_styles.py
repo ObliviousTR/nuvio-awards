@@ -112,12 +112,14 @@ def cutout(photo):
     im = photo.convert("RGB")
     im.thumbnail((1600, 1600))
     out = remove(im, session=_RB)
-    a = out.getchannel("A").point(lambda v: 0 if v < 12 else v)
+    # rembg leaves a faint veil of the photo's own background (a pale halo on studio shots): drop the weak alpha
+    a = out.getchannel("A").point(lambda v: 0 if v < 70 else min(255, int((v - 70) * 255 / 150)))
+    a = a.filter(ImageFilter.GaussianBlur(1.2))
     out.putalpha(a)
     return out
 
 
-FACE_H = 0.27          # the face (YuNet's box, brow to chin) in every portrait hero: this share of the frame's height
+FACE_H = 0.29          # the face (YuNet's box, brow to chin) in every portrait hero: this share of the frame's height
 FACE_C = (0.72, 0.37)  # and its centre
 
 
@@ -147,6 +149,23 @@ def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
         fb = fs[0][:4]
     else:                                                     # no face found: assume a standard head-and-shoulders
         fb = (0.32, 0.18, 0.68, 0.45)
+    # a cut-out that kept the photo's background (dark or busy studio backdrops) shows as a box: the top edge is
+    # opaque across. Then blend the photo in with a soft oval around the head and shoulders instead.
+    al = np.asarray(p.getchannel("A"), np.float32) / 255
+    top, side = al[: max(2, p.height // 50), :].mean(), al[: p.height // 2, :max(2, p.width // 50)].mean()
+    side = max(side, al[: p.height // 2, -max(2, p.width // 50):].mean())
+    if os.environ.get("HERO_DEBUG"):
+        print(f"  cutout: top {top:.2f} side {side:.2f} mean {al.mean():.2f}")
+    if top > 0.6 and side > 0.6:
+        yy, xx = np.mgrid[0:p.height, 0:p.width]
+        cx, cy = (fb[0] + fb[2]) / 2 * p.width, (fb[1] + fb[3]) / 2 * p.height
+        fhh = (fb[3] - fb[1]) * p.height
+        rx, ry = fhh * 1.25, fhh * 1.9
+        dist = np.sqrt(((xx - cx) / rx) ** 2 + ((yy - cy - fhh * 0.5) / ry) ** 2)
+        oval = np.clip((1.25 - dist) / 0.55, 0, 1)
+        oval = oval * oval * (3 - 2 * oval)
+        p = photo.convert("RGB").resize(p.size, Image.LANCZOS).convert("RGBA")   # the photo itself, not the
+        p.putalpha(Image.fromarray((oval * 255).astype(np.uint8)))
     scale = (H * FACE_H) / max(1.0, (fb[3] - fb[1]) * p.height)
     pw, ph = round(p.width * scale), round(p.height * scale)
     p = p.resize((pw, ph), Image.LANCZOS)
@@ -190,6 +209,35 @@ def left_fade(im, tint=(13, 13, 16)):
     m = _hmask(W, H, [(0, 255), (0.18, 235), (0.34, 150), (0.5, 40), (0.62, 0), (1, 0)])
     m = m.filter(ImageFilter.GaussianBlur(30))
     return Image.composite(Image.new("RGB", (W, H), tint), im, m)
+
+
+def straight_edge(im):
+    """how far the longest sharp vertical step in the picture runs (share of its height): high in key art pasted
+    together from panels and in letterboxed stills, low in an ordinary film frame"""
+    g = np.asarray(im.convert("L").resize((480, 270)), np.float32)
+    m = np.abs(np.diff(g, axis=1))[:, 20:-20] > 40
+    best = 0
+    run = np.zeros(m.shape[1], int)
+    for row in m:
+        run = np.where(row, run + 1, 0)
+        best = max(best, int(run.max()))
+    return best / 270
+
+
+def pick_still(stills):
+    """of a card's film stills (in the card's order), the one that makes the best scene hero: its subject at a good
+    size without shrinking the picture (which would leave much of the frame to the blurred fill) and no hard,
+    panel-like edges. Returns (index, image)."""
+    best = None
+    for i, im in enumerate(stills):
+        if im is None:
+            continue
+        _, info = hc.compose(im)
+        score = i * 0.08 + 1.5 * max(0.0, 0.9 - info["scale"]) + 0.002 * max(0, info["offset"][0] - 350) \
+            + 4 * max(0.0, straight_edge(im) - 0.25)
+        if best is None or score < best[0]:
+            best = (score, i, im)
+    return (best[1], best[2]) if best else (None, None)
 
 
 def scene(im, subject=None):
