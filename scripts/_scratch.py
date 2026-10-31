@@ -36,7 +36,9 @@ def tagged(item):
     return name, out
 
 
-print("RAW", json.dumps(get("/person/1158/tagged_images"))[:600])
+r0 = get("/person/1158/tagged_images")
+import collections
+print("RAW", r0.get("total_pages"), r0.get("total_results"), collections.Counter((x.get("image_type"), x.get("width", 0) >= 1280) for x in r0.get("results", [])))
 with ThreadPoolExecutor(8) as ex:
     res = dict(ex.map(tagged, P.items()))
 json.dump(res, open(f"{OUT}/tagged.json", "w"), ensure_ascii=False)
