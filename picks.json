@@ -1,0 +1,77 @@
+{
+ "date": "2026-10-31",
+ "picks": [
+  {
+   "id": "trending-movies",
+   "kind": "movie",
+   "tmdb": 1283515,
+   "title": "Verity",
+   "subtitle": "#1 THIS WEEK  \u00b7  VERITY",
+   "backdrop": "/3BoHXmGAfC2qO4wnCpMYV0BzpHD.jpg"
+  },
+  {
+   "id": "trending-series",
+   "kind": "tv",
+   "tmdb": 213375,
+   "title": "VisionQuest",
+   "subtitle": "#1 THIS WEEK  \u00b7  VISIONQUEST",
+   "backdrop": "/pirfaMg7IrpyO8z1tt6VPLqvFOH.jpg"
+  },
+  {
+   "id": "new-movies",
+   "kind": "movie",
+   "tmdb": 1101412,
+   "title": "Fall 2: Deadpoint",
+   "subtitle": "NEW RELEASE  \u00b7  FALL 2: DEADPOINT",
+   "backdrop": "/yBDxqDB29kpH9VojTytjGWBgmdJ.jpg"
+  },
+  {
+   "id": "new-series",
+   "kind": "tv",
+   "tmdb": 288673,
+   "title": "Carrie",
+   "subtitle": "NEW THIS SEASON  \u00b7  CARRIE",
+   "backdrop": "/vVaNTaRHlL1i8JVsZsNtRHGBhPm.jpg"
+  },
+  {
+   "id": "box-office",
+   "kind": "movie",
+   "tmdb": 969681,
+   "title": "Spider-Man: Brand New Day",
+   "subtitle": "#1 OF THE YEAR  \u00b7  SPIDER-MAN: BRAND NEW DAY",
+   "backdrop": "/vjMvFSmGUxEtqVdaZgvFee9XkZl.jpg"
+  },
+  {
+   "id": "certified",
+   "kind": "movie",
+   "tmdb": 1368337,
+   "title": "The Odyssey",
+   "subtitle": "CRITICS' PICK  \u00b7  THE ODYSSEY",
+   "backdrop": "/twiVn9oFXOVR0uoYgawyEBlnFu8.jpg"
+  },
+  {
+   "id": "hidden-gems",
+   "kind": "movie",
+   "tmdb": 206487,
+   "title": "Predestination",
+   "subtitle": "UNDERRATED FILMS WORTH DISCOVERING",
+   "backdrop": "/fbQX0aMu6RvMWnIUE3WFJ4ddP0K.jpg"
+  },
+  {
+   "id": "prestige",
+   "kind": "movie",
+   "tmdb": 1064213,
+   "title": "Anora",
+   "subtitle": "AWARD WINNERS & CRITICS' FAVOURITES",
+   "backdrop": "/4cp40IyTpFfsT2IKpl0YlUkMBIR.jpg"
+  },
+  {
+   "id": "top-rated",
+   "kind": "movie",
+   "tmdb": 155,
+   "title": "The Dark Knight",
+   "subtitle": "THE GREATEST FILMS EVER MADE",
+   "backdrop": "/enNubozHn9pXi0ycTVYUWfpHZm.jpg"
+  }
+ ]
+}
