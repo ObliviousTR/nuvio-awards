@@ -3222,5 +3222,1562 @@
    "shade": 0.5,
    "logo": "file:art_tools/logos/studios_tv/20th-century-studios.png"
   }
+ },
+ "Iconic Actors": {
+  "Al Pacino": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/m8HAAjq1T75JypKk0v1FFQn4ysZ.jpg",
+    "tmdb:/sDcYe21O0XEaOPXKpbQWEEdvnCF.jpg",
+    "tmdb:/2dGBb1fOcNdZjtQToVPFxXjm4ke.jpg",
+    "tmdb:/qs5KH7A6oH1wVDz0K3yYOzuanE0.jpg",
+    "tmdb:/vfbfcqINRHzXNTenycHIjNO6Va7.jpg",
+    "tmdb:/cCECRgy3E1e1jE6y5xtSsThnLid.jpg",
+    "tmdb:/iqJ6g9fTKjpp1zWH9v72whXeGIK.jpg",
+    "tmdb:/3p3Lflusrkmu9FjgbE24ZgGp1d5.jpg"
+   ],
+   "src": "tmdb:/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
+   "logo": "file:art_tools/logos/people/al-pacino.png"
+  },
+  "Robert De Niro": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg",
+    "tmdb:/gBFAOYOF1qIC6Xm2LOyah9BqYaW.jpg",
+    "tmdb:/t16GxF6tYNcMPdQJfo3afwWOftW.jpg",
+    "tmdb:/ptbExd7RPFp4nKVes3FlN39iqGA.jpg",
+    "tmdb:/tSRuZjA3VIyyyHDt3LoTlna1nLB.jpg",
+    "tmdb:/bpvESs8zwPyGnzFN5ex9yr41RFC.jpg",
+    "tmdb:/plQP28L7nrezzP2T450HZTZAEPV.jpg",
+    "tmdb:/oZ0dBXubgHlNrI9T4cIiLUZaFT8.jpg"
+   ],
+   "src": "tmdb:/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
+   "logo": "file:art_tools/logos/people/robert-de-niro.png"
+  },
+  "Jack Nicholson": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/6h12pZsgj3WWjMtykUgfLkLEBWz.jpg",
+    "tmdb:/hBHcQIEa6P48HQAlLZkh0eKSSkG.jpg",
+    "tmdb:/aeCqQiVzohWwwmk8VKCXOxsjobS.jpg",
+    "tmdb:/gNMokbwBSrBEMiv3qDBomloe7jD.jpg",
+    "tmdb:/rmwgMiLjy1QgFCz1TDWDqpO6dq4.jpg",
+    "tmdb:/sX2eryfpUdlGsZOzoDlszmQYyPP.jpg",
+    "tmdb:/h2pycOqVXV1jQQGruqsWh9ktkNX.jpg",
+    "tmdb:/jYAgbLlcrhYHrqq9gydAxrbCDwf.jpg"
+   ],
+   "src": "tmdb:/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+   "logo": "file:art_tools/logos/people/jack-nicholson.png"
+  },
+  "Anthony Hopkins": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/iaf7SHSkGDpnyrDh1Jolilwk2TD.jpg",
+    "tmdb:/cbFWUHhk6pZKTEm48OKVM5awNNn.jpg",
+    "tmdb:/dYVQTK1dPrQl1mugeLEWSSmA6Im.jpg",
+    "tmdb:/u8AAGd2tF6uQcj9TXgyR4q8kn4H.jpg",
+    "tmdb:/9ukJS2QWTJ22HcwR1ktMmoJ6RSL.jpg",
+    "tmdb:/uFU4dtQthX5EffTW280eHCY5oub.jpg",
+    "tmdb:/izlT2Ndqyt1c0ZG9JVCjkL4ChL2.jpg",
+    "tmdb:/dIiua9YoyouR1hEqpKND8wZTWGt.jpg"
+   ],
+   "src": "tmdb:/aYcnDyLMnpKce1FOYUpZrXtgUye.jpg",
+   "logo": "file:art_tools/logos/people/anthony-hopkins.png"
+  },
+  "Meryl Streep": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/g5cVxQBAQ3AXt3LhdBXtbbN47Uc.jpg",
+    "tmdb:/pSyM9cteYYWUBDalJzMPLH0SLgB.jpg",
+    "tmdb:/sE4O9ENBzCVzhDh2gboFk45ZwzB.jpg",
+    "tmdb:/emAAzyK1rJ6aiMi0wsWYp51EC3h.jpg",
+    "tmdb:/mwimWeTiLoTKnYBsTy7E5P1IxDC.jpg",
+    "tmdb:/vAzKggFbilf6eG1RY2lj6pdhrKl.jpg",
+    "tmdb:/v59FjBat2WXuSYttr1O1FTAh4qZ.jpg",
+    "tmdb:/9kZ3Ckzw6HySZm6AGfETMMODxmc.jpg"
+   ],
+   "src": "tmdb:/3tWw50B1xXlCnJ9A7NX4nNzZF4j.jpg",
+   "logo": "file:art_tools/logos/people/meryl-streep.png"
+  },
+  "Tom Hanks": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/oFvZoKI6lvU03n4YoNGAll9rkas.jpg",
+    "tmdb:/eKF1sGJRrZJbfBG1KirPt1cfNd3.jpg",
+    "tmdb:/mKr8PN8sn80LzVaZMg8L52kmakm.jpg",
+    "tmdb:/xV5zba3TFMcs1ZS8lxmOlJ1S6Fo.jpg",
+    "tmdb:/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg",
+    "tmdb:/eGl2MpUqzcoAj75YoE6iTHVGhU7.jpg",
+    "tmdb:/sjzxil5RNdkeadWdcHBxkmsOjvC.jpg",
+    "tmdb:/sou8CHR4z5Mh2CpyUHxi7t0fnO4.jpg"
+   ],
+   "src": "tmdb:/ghgfzbEV7kbpbi1O8eIILKVXEA8.jpg",
+   "logo": "file:art_tools/logos/people/tom-hanks.png"
+  },
+  "Harrison Ford": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/pjBMJVPpcZK23Vt1nzr1zEBTWrP.jpg",
+    "tmdb:/zVnHagUvXkR2StdOtquEwsiwSVt.jpg",
+    "tmdb:/5M7oN3sznp99hWYQ9sX0xheswWX.jpg",
+    "tmdb:/9H8wNq5jwYKdVZTV91i7nJ4Gg7P.jpg",
+    "tmdb:/ActhM39LTxgx3tnJv3s5nM6hGD1.jpg",
+    "tmdb:/vBFKJnxx19Jsqi1EhXE4RNu3RjN.jpg",
+    "tmdb:/fPKTfCiWbjkBnM3Gbj0FV9BjdoO.jpg",
+    "tmdb:/3xyxpdbsXTmADikgN4ShHT6GCEt.jpg"
+   ],
+   "src": "tmdb:/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+   "logo": "file:art_tools/logos/people/harrison-ford.png"
+  },
+  "Denzel Washington": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/jj2Gcobpopokal0YstuCQW0ldJ4.jpg",
+    "tmdb:/9Iyt3wbsla5bM6IzbICDVnBhkER.jpg",
+    "tmdb:/47nwbyEq5KWOhrP8zkHTwXv7Vd1.jpg",
+    "tmdb:/393wX9AGWpseVqojQDPLy3bTBia.jpg",
+    "tmdb:/cEU2Vrdo83izpGmOvbVAOz5jCof.jpg",
+    "tmdb:/psYRFKEmhxXubY9LB0zY68c5bcS.jpg",
+    "tmdb:/gqWdwCoQP8aL2qL6eZgkFwghp7u.jpg",
+    "tmdb:/6sISfYKRK8aizxjOxxbSf3z6TOc.jpg"
+   ],
+   "src": "tmdb:/9vAoubhoZE8aSkUZoSfxs3UWZhO.jpg",
+   "logo": "file:art_tools/logos/people/denzel-washington.png"
+  },
+  "Daniel Day-Lewis": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/3kNA9VcmymoEwT0btQ4bvMYxzcP.jpg",
+    "tmdb:/9HI2GTfIKuT628XPK5d1AEteR05.jpg",
+    "tmdb:/rv8GwHgpLvFKf1gfSzBcXdnivHh.jpg",
+    "tmdb:/1ZQIlcZVurEXQv9SCslMtyitCrM.jpg",
+    "tmdb:/zvsIA89Y7HPC6ZXLbJoC3MXS71w.jpg",
+    "tmdb:/5J43EFBCSzbgXc46YjJBYswihTT.jpg",
+    "tmdb:/bUUX8ppRMOKOB5UB9bhev4Rq4w2.jpg",
+    "tmdb:/true2FJMdoH5o8ORu67tToqH74a.jpg"
+   ],
+   "src": "tmdb:/8LRcCJjbQI552BMCuGgYqph8USS.jpg",
+   "logo": "file:art_tools/logos/people/daniel-day-lewis.png"
+  },
+  "Morgan Freeman": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg",
+    "tmdb:/jPsLqiYGSofU4s6BjrxnefMfabb.jpg",
+    "tmdb:/iRl1tJADZhnkTcirVm21zs8kJhH.jpg",
+    "tmdb:/rB7mMlsqbuRmChKnz6mnj4dsNPp.jpg",
+    "tmdb:/1ahENoyEgKSbRUd0IsydIff7rt1.jpg",
+    "tmdb:/nhFqNPXDyWTRzHqIUqwayfvDmCn.jpg",
+    "tmdb:/iuX6R4Sfm6FK5nbfSQ8OgvWcOjy.jpg",
+    "tmdb:/8A16mBjMxfM3UFb7EHstl8bEkqH.jpg"
+   ],
+   "src": "tmdb:/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
+   "logo": "file:art_tools/logos/people/morgan-freeman.png"
+  },
+  "Robin Williams": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/lu0gIoH4Bi2CiuMc6WHF9ZIK4PS.jpg",
+    "tmdb:/iYdeP6K0qz44Wg2Nw9LPJGMBkQ5.jpg",
+    "tmdb:/3vypmub75rLItlC51uJUurNYkW0.jpg",
+    "tmdb:/A3r8K2O91XaKaTOXi5UIfIyxejf.jpg",
+    "tmdb:/pXJmeNJcKDDOmjCjFsLbsvoUgru.jpg",
+    "tmdb:/dIo5o69LoMpTFJOfLGLGKp4YWgB.jpg"
+   ],
+   "src": "tmdb:/bpV8wn48s82au37QyUJ51S7X2Vf.jpg",
+   "logo": "file:art_tools/logos/people/robin-williams.png"
+  },
+  "Gary Oldman": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/yhaSM5habNNI1Tf4ALRwRk3VvSZ.jpg",
+    "tmdb:/2v9FVVBUrrkW2m3QOcYkuhq9A6o.jpg",
+    "tmdb:/4HxoaJ8619S6eHOO901FMuxQ1FE.jpg",
+    "tmdb:/enPeXOpQJ8MEeQYHZbD33n3PCsb.jpg",
+    "tmdb:/8RI7JR6c3fZLPARmteufwaINk7Z.jpg",
+    "tmdb:/ioVNfh5m8IyoM1DXRIiOU658RXm.jpg",
+    "tmdb:/3cOTcPeJNxBjHashuZ1KFAiU2T8.jpg",
+    "tmdb:/hHP0769L7YrApkMKCOyb9cwgxBW.jpg"
+   ],
+   "src": "tmdb:/c3OHQncTAnKFhdOTX7D3LTW6son.jpg",
+   "logo": "file:art_tools/logos/people/gary-oldman.png"
+  },
+  "Samuel L. Jackson": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/AiAYAqwpM5xmiFrAIeQvUXDCVvo.jpg",
+    "tmdb:/qdfRtvPCj51C9Uy5VEgjgj69JyV.jpg",
+    "tmdb:/aF7jIjZ66M0af5c02P9Duzq1zO7.jpg",
+    "tmdb:/nCJJ3NVksYNxIzEHcyC1XziwPVj.jpg",
+    "tmdb:/1HlPCK9HgqTNo1mpYLH0Ty2kuq8.jpg",
+    "tmdb:/zH892WVnrp65Rw4dx0BOKIEwTs.jpg",
+    "tmdb:/b6ywb69BySY5f2rcpuel7093Td.jpg",
+    "tmdb:/nHa0el66nAf50XJXZwTbIIqUJwQ.jpg"
+   ],
+   "src": "tmdb:/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+   "logo": "file:art_tools/logos/people/samuel-l-jackson.png"
+  },
+  "Jim Carrey": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg",
+    "tmdb:/j4QY2GN2ZfObQbgedyV3Lihwrt.jpg",
+    "tmdb:/u0AqTz6Y7GHPCHINS01P7gPvDSb.jpg",
+    "tmdb:/bkgwGq56o5sRcwtCsqSz2wfpxNl.jpg",
+    "tmdb:/kuSlwTPsVlBMW0cvnFmbZce6PaV.jpg",
+    "tmdb:/voVRksr8micr3cuvB660KQNhT8.jpg",
+    "tmdb:/gtNAZTRUsVvOM4EUZNV1QmOFsmu.jpg",
+    "tmdb:/x9gLeFOSPk6lejulmeJxOGy9VfV.jpg"
+   ],
+   "src": "tmdb:/aCHn2TXYJfzPXQKA6r9mKPbMlUB.jpg",
+   "logo": "file:art_tools/logos/people/jim-carrey.png"
+  },
+  "Jackie Chan": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg",
+    "tmdb:/sVuTm1w5G6ofrx4lRjy64D7MRiS.jpg",
+    "tmdb:/A9D4CLjqd18Vh9ZKfXOo7cjjmw7.jpg",
+    "tmdb:/9q6w0KBj72zwNW4On8BNqAkvDZ0.jpg",
+    "tmdb:/m2jc4PYkxWp7lvKN78YXOF0Otak.jpg",
+    "tmdb:/9oCxDgiqW8rKEjVjAA6y2aq8vni.jpg",
+    "tmdb:/g3kCHby3noSNuUmrtwXag00LqJx.jpg",
+    "tmdb:/fdkJ0UsG7WuID3damcFmWvGZVP7.jpg"
+   ],
+   "src": "tmdb:/y2Cl2LBYaabgtSLlOa4VqnOiNin.jpg",
+   "logo": "file:art_tools/logos/people/jackie-chan.png"
+  },
+  "Frances McDormand": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/gBkoteKZshmQXEyEoyT6WE7N0tF.jpg",
+    "tmdb:/r0A7hZsM1zuavTr0jN7bwmBcliR.jpg",
+    "tmdb:/AskZbUslI8HkkbdmwyAXHjmQqPg.jpg",
+    "tmdb:/hFwsJFn7yIoSxdNAlN6OE81g7qj.jpg",
+    "tmdb:/3uB0Txo3d6g7NRZQDOn8VSOUGl7.jpg",
+    "tmdb:/q3KYBy3Cs4GXLjmGH64GkUi2l6.jpg",
+    "tmdb:/eyf4pGshtXfDFCfvWLBvg7Z9fMq.jpg",
+    "tmdb:/b9uQk55tWqSJ63ldSZUwkdMu5c3.jpg"
+   ],
+   "src": "tmdb:/huz4SOpcd2XjJiLVX6xmQZYiiDA.jpg",
+   "logo": "file:art_tools/logos/people/frances-mcdormand.png"
+  },
+  "Leonardo DiCaprio": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+    "tmdb:/aLUFp0zWpLVyIOgY0scIpuuKZLE.jpg",
+    "tmdb:/dmHB2IBu5DnCkNn7gMYcWCpwshd.jpg",
+    "tmdb:/vo4fltT9zZ1kH8nhLetz8MED6jp.jpg",
+    "tmdb:/c8vZzkzduYtIVPnYBYBX6NyCwz6.jpg",
+    "tmdb:/zwxeqY7AV9VS2J0nTXp3onRErBg.jpg",
+    "tmdb:/jqbqNrOIB3alGMX6Gh2MbOKMXZO.jpg",
+    "tmdb:/nb7e6caBO5BxZ8lyIp9Hzv69oNB.jpg"
+   ],
+   "src": "tmdb:/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+   "logo": "file:art_tools/logos/people/leonardo-dicaprio.png"
+  },
+  "Brad Pitt": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/ajNaPmXVVMJFg9GWmu6MJzTaXdV.jpg",
+    "tmdb:/cckcYc2v0yh1tc9QjRelptcOBko.jpg",
+    "tmdb:/kU3B75TyRiCgE270EyZnHjfivoq.jpg",
+    "tmdb:/tJiSUYst4ddIaz1zge2LqCtu9tw.jpg",
+    "tmdb:/eAOtKAc4p2C3DV8TGJQJzw8DeRv.jpg",
+    "tmdb:/1k9MVNS9M3Y4KejBHusNdbGJwRw.jpg",
+    "tmdb:/w1L55dXNi9UAmw2CURQjQI0DTf2.jpg",
+    "tmdb:/gVtRLNr7MiASuGXO6UZfFBU9Ol4.jpg"
+   ],
+   "src": "tmdb:/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+   "logo": "file:art_tools/logos/people/brad-pitt.png"
+  },
+  "Christian Bale": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg",
+    "tmdb:/v2Oks7DTbZcKzSi2Pw58C7SSLzM.jpg",
+    "tmdb:/wxt0NX2tnbAQm0eqeN1l7cXTfGX.jpg",
+    "tmdb:/AcfW3p5D6ov573fABLyGqwYdolD.jpg",
+    "tmdb:/2y4doWX4lCzDMjCL5KOA4KBz6Hn.jpg",
+    "tmdb:/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
+    "tmdb:/b7fTC9WFkgqGOv77mLQtmD4Bwjx.jpg",
+    "tmdb:/3qx2QFUbG6t6IlzR0F9k3Z6Yhf7.jpg"
+   ],
+   "src": "tmdb:/nMKdUUepR0i5zn0y1T4CsSB5chy.jpg",
+   "logo": "file:art_tools/logos/people/christian-bale.png"
+  },
+  "Tom Cruise": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg",
+    "tmdb:/eOh4ubpOm2Igdg0QH2ghj0mFtC.jpg",
+    "tmdb:/3mShHjSQR7NXOVbdTu5rT2Qd0MN.jpg",
+    "tmdb:/8qBylBsQf4llkGrWR3qAsOtOU8O.jpg",
+    "tmdb:/rZXZWW00hiZyVVBtXKBozAAq0Cf.jpg",
+    "tmdb:/cMwXD3eiUfStgVh1gpVcwCnNelv.jpg",
+    "tmdb:/bn9CwMSM3o4XPZEPZdQ3grslGup.jpg",
+    "tmdb:/2Dkx4uuGoWFrPSitxdikv9z5azR.jpg"
+   ],
+   "src": "tmdb:/4V1yIoAKPMRQwGBaSses8Bp2nsi.jpg",
+   "logo": "file:art_tools/logos/people/tom-cruise.png"
+  },
+  "Keanu Reeves": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg",
+    "tmdb:/kEoUZKEG7dzbCESDjd0CKAN1r0n.jpg",
+    "tmdb:/4D0PpNI0kmP58hgrwGC3wCjxhnm.jpg",
+    "tmdb:/tgWjOflzUXikIu3jZrWneFeDOCA.jpg",
+    "tmdb:/rRdru6REr9i3WIHv2mntpcgxnoY.jpg",
+    "tmdb:/ofJJp18c3L6FPoeBZZJfL3YmF5H.jpg",
+    "tmdb:/vWEnREfLggdaS52Go3xzp17gQD8.jpg",
+    "tmdb:/4BsAjmyIvN6ZoJMOJ4XinLqmROI.jpg"
+   ],
+   "src": "tmdb:/icmmSD4vTTDKOq2vvdulafOGw93.jpg",
+   "logo": "file:art_tools/logos/people/keanu-reeves.png"
+  },
+  "Joaquin Phoenix": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/u38k3hQBDwNX0VA22aQceDp9Iyv.jpg",
+    "tmdb:/doX17Hg7X8d1cQmryWF22oRrpP.jpg",
+    "tmdb:/1UzIGSKFH0A9ouwnMwQQWUiqV2s.jpg",
+    "tmdb:/ajw5ngSP0PURgPAz6FAeqJBcbkk.jpg",
+    "tmdb:/6Am3gD4CVdU7x8WBVNwN4KKAM0V.jpg",
+    "tmdb:/dD7hrRueEZmQgGWBp7pAOOt5gLV.jpg",
+    "tmdb:/ls72wfQl8AhRVFeBnotmnAdy3JR.jpg",
+    "tmdb:/e0tlf8wq9tZYCY96bf6gfv46Yc.jpg"
+   ],
+   "src": "tmdb:/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
+   "logo": "file:art_tools/logos/people/joaquin-phoenix.png"
+  },
+  "Matt Damon": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg",
+    "tmdb:/At3JgvaNeEN4Z4ESKlhhes85Xo3.jpg",
+    "tmdb:/elSlNgV8xVifsbHpFsqrPGxJToZ.jpg",
+    "tmdb:/4KAxONjmVq7qcItdXo38SYtnpul.jpg",
+    "tmdb:/2goD0rteX2KxIpOpz3fBw9vtSdV.jpg",
+    "tmdb:/andBr2Vvf5Gj54gFyoz7ctBKLBj.jpg",
+    "tmdb:/wmVxAinq6i280r6QwOoQNv8UcZV.jpg",
+    "tmdb:/cQanDcd6nNz2hIlJRib126feqZE.jpg"
+   ],
+   "src": "tmdb:/9pubUbDX3eKB6ZuKxbFgv4cBZrz.jpg",
+   "logo": "file:art_tools/logos/people/matt-damon.png"
+  },
+  "Robert Downey Jr.": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg",
+    "tmdb:/4SLDzrd8C0evBJTy9nVbFeogjXV.jpg",
+    "tmdb:/f9toX5MahujsDZTJoKIa5kzdhAE.jpg",
+    "tmdb:/5A7vGrVJcOLdfow1i9GoXN85Q16.jpg",
+    "tmdb:/1YjdSym1jTG7xjHSI0yGGWEsw5i.jpg",
+    "tmdb:/8qLqYvGvXewL8pU5e2IoTj6sdM8.jpg",
+    "tmdb:/57nMfnfdaI9oE9yNne8BF3PPbnH.jpg",
+    "tmdb:/pJoC25zxFmG4kP8uoMYb8LhRbNP.jpg"
+   ],
+   "src": "tmdb:/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+   "logo": "file:art_tools/logos/people/robert-downey-jr.png"
+  },
+  "Cate Blanchett": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/9ZhDs8qPwIYLDQDk9YUCo6bs5Li.jpg",
+    "tmdb:/1Rd567YFdGfkJjSlhNPR8joYkaX.jpg",
+    "tmdb:/vUuEHiAR0eD3XEJhg2DWIjymUAA.jpg",
+    "tmdb:/A3nZcGx0qUhbb9fpNK65oPgCJtC.jpg",
+    "tmdb:/vq4vuAVhYngfzVNn8SbnG0JEy15.jpg",
+    "tmdb:/9V83uemR0ra9Wd9iRXTMlfAQlTB.jpg",
+    "tmdb:/4N2IG63dd5IVaSC16PuxB47g5Lz.jpg",
+    "tmdb:/mXpe59YDxcvAJS6EtshsvsRvLZP.jpg"
+   ],
+   "src": "tmdb:/dgMdsBbGXp9h6sLsfqsM3texzym.jpg",
+   "logo": "file:art_tools/logos/people/cate-blanchett.png"
+  },
+  "Nicole Kidman": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/4KSQDodyBtTDMaREYgMdWD1LbH1.jpg",
+    "tmdb:/qwtyWXOBQaMeKEqoWxTdza8Aarn.jpg",
+    "tmdb:/lfW2cDigTcvuoe4k6UfCdGVE1R6.jpg",
+    "tmdb:/zjdybHeNvp4DFbRd97Jo2ZLakwX.jpg",
+    "tmdb:/n1xlczx1w44DqUkJvJtAGJf9fyx.jpg",
+    "tmdb:/qaO2MTBhIKcAJg2rjMmoKCIBcXF.jpg",
+    "tmdb:/xY4nj8Rz8LjCDcsfv7IS4BR72p5.jpg",
+    "tmdb:/uYJKtB1VAE80y28UXOd0TlEe0n5.jpg"
+   ],
+   "src": "tmdb:/dQ4avVp5YLwQchY2REA3eo8tXq8.jpg",
+   "logo": "file:art_tools/logos/people/nicole-kidman.png"
+  },
+  "Kate Winslet": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/surklDlLW6g2D7EqycEQwHXsoD1.jpg",
+    "tmdb:/cPRq7uH3PIFcHilP15BrMKunink.jpg",
+    "tmdb:/6qNnMsKtKz9si5rabpUEG85UfHp.jpg",
+    "tmdb:/9xDnfZrWhM67wJlQJEsOOjQzDUQ.jpg",
+    "tmdb:/e3tdop3WhseRnn8KwMVLAV25Ybv.jpg",
+    "tmdb:/ArtzyFarGJjw9brm85ZVnGcWn0F.jpg",
+    "tmdb:/zIiU5mOcinbkpHWCxuDigucsyZC.jpg",
+    "tmdb:/lC788o4YaEsa8tf0RoiYgJKgCd8.jpg"
+   ],
+   "src": "tmdb:/rzdPqYx7Um4FUZeD8wpXqjAUcEm.jpg",
+   "logo": "file:art_tools/logos/people/kate-winslet.png"
+  },
+  "Matthew McConaughey": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/lCySuYjhXix3FzQdS4oceDDrXKI.jpg",
+    "tmdb:/rUxLWWCDUF8RnDaocSqrVDJ2MS1.jpg",
+    "tmdb:/sY2mwpafcwqyYS1sOySu1MENDse.jpg",
+    "tmdb:/wJiGedOCZhwMx9DezY8uwbNxmAY.jpg",
+    "tmdb:/9d1YWLPT39Y380t9FPLUOvADR31.jpg",
+    "tmdb:/g2tIutzv1bNEHDQQMR6RZXR96bC.jpg",
+    "tmdb:/6efsJcqD1eGf3nckN0Nh5g48Lzr.jpg",
+    "tmdb:/zYFfzhwCqoziaI9JbEwzVCJ5LzX.jpg"
+   ],
+   "src": "tmdb:/vgnoBSVzWAV9sNQUORaDGvDp7wx.jpg",
+   "logo": "file:art_tools/logos/people/matthew-mcconaughey.png"
+  },
+  "Hugh Jackman": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/4Xujtewxqt6aU0Y81tsS9gkjizk.jpg",
+    "tmdb:/oX6CpXmnXCHLyqsa4NEed1DZAKx.jpg",
+    "tmdb:/jRGvUQeydg7iPeQ7BihU2vkyiWq.jpg",
+    "tmdb:/aLvTYCe8Ar3jvqNiWLdHEJFyA32.jpg",
+    "tmdb:/5Dxx0j9jOAczsTQzZ0OkA5iJBhp.jpg",
+    "tmdb:/p58twL4uNlJTj99dsnCsQwNxyYU.jpg",
+    "tmdb:/8wyCSXULzmXkmItJi1IhpCKdKJe.jpg",
+    "tmdb:/bKkbbFMTyQ2EvheAy4SbxbjkjtB.jpg"
+   ],
+   "src": "tmdb:/qTdCfGyDisY9e8BLycszlyTsPWx.jpg",
+   "logo": "file:art_tools/logos/people/hugh-jackman.png"
+  },
+  "Charlize Theron": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/gd7ShD0yt4bsR2STeQ19KQ6hvXL.jpg",
+    "tmdb:/9coVbqj35Fa5dWxlX5K9pDCqKfa.jpg",
+    "tmdb:/1HloWLLhL3iTrmDtMigiitLB9Qx.jpg",
+    "tmdb:/ghVr6dRoaN4n1KRNy91fnvIJUkm.jpg",
+    "tmdb:/1WKfLshTtawW26lqOcKZhS4lZVA.jpg",
+    "tmdb:/ryFb0JPgmS0eGCtrMpq7LJmhMZz.jpg",
+    "tmdb:/1dzKUILtBzaTMz44SBF9mxlboGf.jpg",
+    "tmdb:/iWpWg9JSt60tSnaTVhXqPBcBpEy.jpg"
+   ],
+   "src": "tmdb:/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+   "logo": "file:art_tools/logos/people/charlize-theron.png"
+  },
+  "Natalie Portman": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/edPU5HxncLWa1YkgRPNkSd68ONG.jpg",
+    "tmdb:/2YFc38KnhSlkw5tj372JdRtu5Um.jpg",
+    "tmdb:/qJ0ipMSZkIYvsOPh7e12l0AMoXl.jpg",
+    "tmdb:/mqKHKayGsEK3TOZDHs3eUAhCP6V.jpg",
+    "tmdb:/674gSZWyvh1E4XeA7gBucgRYPLU.jpg",
+    "tmdb:/7DVcTD3dWPDaunOYEP09Fdca9HG.jpg",
+    "tmdb:/uJsGHBAzLUfqA2tWW4A4qlPxYug.jpg",
+    "tmdb:/luLok04KiKqu3zq5rvKQhpiEDmx.jpg"
+   ],
+   "src": "tmdb:/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg",
+   "logo": "file:art_tools/logos/people/natalie-portman.png"
+  },
+  "Scarlett Johansson": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/tgxYh3jMs5bY2Ub4d2dcp9iaz1R.jpg",
+    "tmdb:/druW5adKddizHNSoPbI0q7Mvn0K.jpg",
+    "tmdb:/mjReG6rR7NPMEIWb1T4YWtV11ty.jpg",
+    "tmdb:/xCr7ahGmwxQEjYNDXR09QfXWgEz.jpg",
+    "tmdb:/2I2xAQmL87k5YswCnc4vHjpXxE0.jpg",
+    "tmdb:/zMHSGCTewNp2M3JbqAlu8dYdw9U.jpg",
+    "tmdb:/sRjg0DbiA5DElSr3g3SSR4EArL8.jpg",
+    "tmdb:/7ZyqGvQSXTD0NjroCpIPgwV5mdN.jpg"
+   ],
+   "src": "tmdb:/ozVwXlfxqNsariipatGwa5px3Pm.jpg",
+   "logo": "file:art_tools/logos/people/scarlett-johansson.png"
+  },
+  "Tom Hardy": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/d81K0RH8UX7tZj49tZaQhZ9ewH.jpg",
+    "tmdb:/scbbuyWX3yuMjDlm1etAljrbCr0.jpg",
+    "tmdb:/yVGF9FvDxTDPhGimTbZNfghpllA.jpg",
+    "tmdb:/32pesf3nGyLOQEVrhsFHpdbbMli.jpg",
+    "tmdb:/vLZ8AHjf4FvjwvGwyPK7ur7BIgh.jpg",
+    "tmdb:/4CR1D9VLWZcmGgh4b6kKuY2NOel.jpg",
+    "tmdb:/j1zJKn5dr3VQC3upjgHL68cnPcB.jpg",
+    "tmdb:/sGMA6pA2D6X0gun49igJT3piHs3.jpg"
+   ],
+   "src": "tmdb:/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+   "logo": "file:art_tools/logos/people/tom-hardy.png"
+  },
+  "Ryan Gosling": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg",
+    "tmdb:/k50021gkK92Lx6m99pBy6FUOvNf.jpg",
+    "tmdb:/kt35s4no5elQSo4YATI2E2sX8B0.jpg",
+    "tmdb:/3bNe1xuN3omeJKGuPbgIvhSl6AJ.jpg",
+    "tmdb:/pR2H6U7nH8lvrE02hLL6b8Ysnjm.jpg",
+    "tmdb:/s6P0SBTI7HEemOiKehARft5FWDX.jpg",
+    "tmdb:/4X1wJo5xHm3YICPWZqVCPgLBEJ7.jpg",
+    "tmdb:/3dVrtUzLYNszM4QecBhMypUPdU4.jpg"
+   ],
+   "src": "tmdb:/qJeU7KM4nT2C1WpOrwPcSDGFUWE.jpg",
+   "logo": "file:art_tools/logos/people/ryan-gosling.png"
+  },
+  "Jake Gyllenhaal": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/ct2Gh2sJSxd4yaMrSsqSt1HpIC3.jpg",
+    "tmdb:/j2Yahha9C0zN5DRaTDzYA7WtdOT.jpg",
+    "tmdb:/rJdYHYNhlcOBwbPvDZVvt1xw7bi.jpg",
+    "tmdb:/4QMZGsWMKBOg7gM1CJo8VwGbIG9.jpg",
+    "tmdb:/gWYwL7xmRqjWsH3AtYERQOh0V80.jpg",
+    "tmdb:/rRQVMj5ojWVvpmfqnzzspQ0Wrlh.jpg",
+    "tmdb:/oA6fp6SQBQQWZEzn4NfY3E8mJhV.jpg",
+    "tmdb:/92sBuFC8tWPG7IqGDJNxysT7tIF.jpg"
+   ],
+   "src": "tmdb:/ng6SSB3JhbcpKTwbPDsRwUYK8Cq.jpg",
+   "logo": "file:art_tools/logos/people/jake-gyllenhaal.png"
+  },
+  "Cillian Murphy": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/2lKs67r7FI4bPu0AXxMUJZxmUXn.jpg",
+    "tmdb:/dm6V24NjjvjMiCtbMkc8Y2WPm2e.jpg",
+    "tmdb:/ycZpLjHxsNPvsB6ndu2D9qsx94X.jpg",
+    "tmdb:/llkbyWKwpfowZ6C8peBjIV9jj99.jpg",
+    "tmdb:/hGyB38HAtu0NcQaC7ijsfcQmDoE.jpg",
+    "tmdb:/3DZAf9CwXmfV2HZOEdqeZAGTndV.jpg",
+    "tmdb:/shCqhJg4KSxcfdAbq0WJOSrcHw8.jpg",
+    "tmdb:/gUXNwadCsnFemK7OnYpw0aZW5XB.jpg"
+   ],
+   "src": "tmdb:/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg",
+   "logo": "file:art_tools/logos/people/cillian-murphy.png"
+  },
+  "Edward Norton": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg",
+    "tmdb:/5XBzD5WuTyVQZeS4VI25z2moMeY.jpg",
+    "tmdb:/nQy3rl4Ba0z7GCgZ1nVMYy2mM6p.jpg",
+    "tmdb:/uTT0r7fgsB3zptCTKtIFhuYmUsg.jpg",
+    "tmdb:/yHwEzMAPETuzH4Qcrn479YKOniL.jpg",
+    "tmdb:/w8DRrHbqWGi3gAsUDfrc8UDsZE7.jpg",
+    "tmdb:/fllX9EwS8JbH8fE1IhXEqy68xcx.jpg",
+    "tmdb:/tSHLJp3FByqzfaOiC4fQNy5pAZK.jpg"
+   ],
+   "src": "tmdb:/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+   "logo": "file:art_tools/logos/people/edward-norton.png"
+  },
+  "Philip Seymour Hoffman": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/50rqDkmvXwjwVhFH7q6ph2Rkw7S.jpg",
+    "tmdb:/qgSTZu5F7LyJTInpXVQOyRlZgbw.jpg",
+    "tmdb:/vEDJukK8CjIsA0DjNFhoT88TvzS.jpg",
+    "tmdb:/il3a4qz5KCqUD4nTsahlhh9XvhT.jpg",
+    "tmdb:/5XVBOgKpiAeJ3BZ8OX72wEwHBuL.jpg",
+    "tmdb:/p2V49IZ8QKmAfU1Npvtv68OjY8u.jpg",
+    "tmdb:/aJNpUrMAhUdHqAefGAn8pJvyLlm.jpg",
+    "tmdb:/9iG6ER6qpdcRJNxWLOlZivxrsIa.jpg"
+   ],
+   "src": "tmdb:/sjcPWJ5TXgFglsoixNxyZRyEUq3.jpg",
+   "logo": "file:art_tools/logos/people/philip-seymour-hoffman.png"
+  },
+  "Viola Davis": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/xDssw6vpYNRjsybvMPRE30e0dPN.jpg",
+    "tmdb:/bkrRMBXxqR4v3Zeygivfyi6VIfF.jpg",
+    "tmdb:/1QnmK4NBHN8tqVE3bxAzVSOUh80.jpg",
+    "tmdb:/y6Qq5FP3AlnDDQ5s0cOhOnNFrPh.jpg",
+    "tmdb:/mitXKy9caCbHexlSaDXGfcEEG4g.jpg",
+    "tmdb:/aWyjEGgUOHkp8mIz4sQ6PZVIrAj.jpg",
+    "tmdb:/7RgMIYWLD3cu3Fr7jRUORV2mIIw.jpg",
+    "tmdb:/oUJ8tGkyYrM25hHkNpN1xburIR3.jpg"
+   ],
+   "src": "tmdb:/yDwL5qAHeSyaozgXXcYnAOp4AUF.jpg",
+   "logo": "file:art_tools/logos/people/viola-davis.png"
+  },
+  "Amy Adams": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/gn0K6c6d1L6qQrRc86iL8uyIqiF.jpg",
+    "tmdb:/ygBWtUkOpUXmrpMNULAUPhtY2eT.jpg",
+    "tmdb:/1h2r2VTpoFb5QefAaBYYQgQzL9z.jpg",
+    "tmdb:/ify7UiQkVMQ0uCUX0F0AuzLK1vS.jpg",
+    "tmdb:/lub0nBRhsCu2pByvfvxt5DcW86d.jpg",
+    "tmdb:/g5PcGkAHwIW4rrOuWLgjvTiRhga.jpg",
+    "tmdb:/oee226QNLDmiwo5730gq3j7tydw.jpg",
+    "tmdb:/3tMHrVxtIEaZXLznZPEluzCF9XP.jpg"
+   ],
+   "src": "tmdb:/iTyh3hqTUjiRqQo8Uz1w1KtQti9.jpg",
+   "logo": "file:art_tools/logos/people/amy-adams.png"
+  },
+  "Anne Hathaway": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg",
+    "tmdb:/dUnrbrn2FeqfdpGRArPZeWPsS2g.jpg",
+    "tmdb:/tLelKoPNiyJCSEtQTz1FGv4TLGc.jpg",
+    "tmdb:/rv7smEIVNl7TO9JI835dXS1Yo57.jpg",
+    "tmdb:/h1hgb3GaRi7ClMJWP2QYzyn2euE.jpg",
+    "tmdb:/kRYxBuUtN3vNz5pLfqCf32ZYlw2.jpg",
+    "tmdb:/g2ozigjyCoSZmMnwo4fyhhJjslM.jpg",
+    "tmdb:/nmTNaiG6FIgPNA9v0WbzM8lSr1t.jpg"
+   ],
+   "src": "tmdb:/vgnoBSVzWAV9sNQUORaDGvDp7wx.jpg",
+   "logo": "file:art_tools/logos/people/anne-hathaway.png"
+  },
+  "Emma Stone": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/ak2Y9wOI3wi2pNQU6OWSvVvWPj5.jpg",
+    "tmdb:/mstXxlDqhoK0s0molsNpskJ1wLH.jpg",
+    "tmdb:/t7EYLBMWQiIDtCoOYZjvqXV84S5.jpg",
+    "tmdb:/cZ8a3QvAnj2cgcgVL6g4XaqPzpL.jpg",
+    "tmdb:/bKbFmFQtn1N6Utzr9Sf0E23alaL.jpg",
+    "tmdb:/6K21G4V1KTXQ0DtS0NkMmIanYaE.jpg",
+    "tmdb:/tWoSlj6TaZU5sfHYiXvexZUL5Nv.jpg",
+    "tmdb:/8NwSfyYWIIUE1cI9Xhz92b0w7WD.jpg"
+   ],
+   "src": "tmdb:/HVcza6tJtWFrLriuh3Ano4Vt46.jpg",
+   "logo": "file:art_tools/logos/people/emma-stone.png"
+  },
+  "Margot Robbie": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/euDPyqLnuwaWMHajcU3oZ9uZezR.jpg",
+    "tmdb:/8LqG2N6j98lFGMpuYsRUAhOunSd.jpg",
+    "tmdb:/au6Hq8nQXJD67mDtl34ZOm8DXrh.jpg",
+    "tmdb:/jWzN6U6gHkOSkuXfzS3P8dteJDo.jpg",
+    "tmdb:/8WC12YJltY2H0TdRs9f4Uu8T6Sx.jpg",
+    "tmdb:/utIl43qoLn2aHBpiyp2YFOQDPPp.jpg",
+    "tmdb:/6w5Cz14aOkCb4MhARrN9NuBkwsv.jpg",
+    "tmdb:/pbSz7d1aURy88HGzFWng5EoFU81.jpg"
+   ],
+   "src": "tmdb:/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg",
+   "logo": "file:art_tools/logos/people/margot-robbie.png"
+  },
+  "Bryan Cranston": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/npIIZJGSrcJIJ6yHdmbqO6Jzo5I.jpg",
+    "tmdb:/7Jahy5LZX2Fo8fGJltMreAI49hC.jpg",
+    "tmdb:/zizbtrRr1mKdiMoFPqlmybgfDHr.jpg",
+    "tmdb:/aGSvZg7uITJveQtGHDcPNI6map1.jpg",
+    "tmdb:/mnlU4FdsmZJVSV27GKmjwI7KKIi.jpg",
+    "tmdb:/yPm6uD5n7Apq00lSPuSA0cw07oh.jpg",
+    "tmdb:/1lhMtNOYbMHPKa1ERly2HtcnKUj.jpg",
+    "tmdb:/kNyTXGkiSP8W4Gs60hF7UoxZnWN.jpg"
+   ],
+   "src": "tmdb:/iVk4mVKwNE66JbBcoDwcYFvuUXM.jpg",
+   "logo": "file:art_tools/logos/people/bryan-cranston.png"
+  },
+  "Willem Dafoe": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg",
+    "tmdb:/nbv4rIpJnw0OvowBZgwEWVriH9V.jpg",
+    "tmdb:/kX7P78zqsjxj87SiAYzknzJQ3wr.jpg",
+    "tmdb:/7t8fhfaFBoS9VOo3OPXCfK516eI.jpg",
+    "tmdb:/7zWtfmM2rGeBS0T6Y8bLq0Ua1EN.jpg",
+    "tmdb:/tW2W7Y4JaDtIxZdsv105AdoRJkK.jpg",
+    "tmdb:/mGE46uB9nTNChjApmIXdZg314Td.jpg",
+    "tmdb:/efguRyUh75nXomnNQsQSzCnRQCT.jpg"
+   ],
+   "src": "tmdb:/jHxCeXnSchAuwHnmVatTgqMYdX8.jpg",
+   "logo": "file:art_tools/logos/people/willem-dafoe.png"
+  },
+  "Christoph Waltz": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/jMvLGCVXLaBqjRLf5olyvEucZob.jpg",
+    "tmdb:/hrSWzM1IGbj9OfohFPTX0HcLecz.jpg",
+    "tmdb:/2Hhztd4mUEV9Y25rfkXDwzL9QI9.jpg",
+    "tmdb:/trbJQysqlylESX5SW46XFHibPMM.jpg",
+    "tmdb:/4KHY8E8omM1UDyUX60MzXLk1Pp8.jpg",
+    "tmdb:/tXPVj6QYEDieEJgziJY2CYfLXVa.jpg",
+    "tmdb:/hfeN4x1JtXafpaNgddKGLGyWZR6.jpg",
+    "tmdb:/craM6dTnH2ELvZ1Yp0Yxu4Dch78.jpg"
+   ],
+   "src": "tmdb:/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+   "logo": "file:art_tools/logos/people/christoph-waltz.png"
+  },
+  "Mads Mikkelsen": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/AsX4bdvZ8UCayWTmAf9lAqOA8V7.jpg",
+    "tmdb:/ntwPvV4GKGGHO3I7LcHMwhXfsw9.jpg",
+    "tmdb:/j7Mkl22sy7NqjvMM1zoYpND1FXd.jpg",
+    "tmdb:/oQBzMxGTMOIVrFGUqHnWK5lB61G.jpg",
+    "tmdb:/pfZaC3X9kWBFkEVkwAhDBjCRO2.jpg",
+    "tmdb:/PB37U7oinSDQlqTTwmE0rKMjRW.jpg",
+    "tmdb:/yEwcp9FnJoIMg0cO1RP7LW9zu7G.jpg",
+    "tmdb:/oN0dzSuDjtreS0byvXOvMZBJGXD.jpg"
+   ],
+   "src": "tmdb:/7zN7m5jEyrNxFYm2EbQJAZwAG5i.jpg",
+   "logo": "file:art_tools/logos/people/mads-mikkelsen.png"
+  },
+  "Javier Bardem": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/zfRID0jx8DKBluPGU9xtk9sZWUt.jpg",
+    "tmdb:/grBOK7Ep09JBE3H5LyV5JaZZ1XZ.jpg",
+    "tmdb:/p5xjCovj1uzvA2SXrWLH78Nh1Jf.jpg",
+    "tmdb:/IShnFg6ijWhpbu29dFBd9PtqQg.jpg",
+    "tmdb:/dKArLTzGUBqRwV6MI3Atc1xN9bc.jpg",
+    "tmdb:/eCBiiPvBfIY7exDQwH0vEM6Bf3c.jpg",
+    "tmdb:/iicdZDlHS3INrt6LXtHOCcOZ9bZ.jpg",
+    "tmdb:/9c8hrcQ2fXwqgybG08jhch9REaH.jpg"
+   ],
+   "src": "tmdb:/kd9jFTTabg4xJpHDgxY0h8F9BzG.jpg",
+   "logo": "file:art_tools/logos/people/javier-bardem.png"
+  },
+  "Tilda Swinton": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/dzjT4LKgs7eOma84GsPy78DsGNH.jpg",
+    "tmdb:/9FPPOP8KEWD3PTNXJcZJYN4quU4.jpg",
+    "tmdb:/vJwKUaxQHuMxwr8FOg5OjpEwGMb.jpg",
+    "tmdb:/gWbX3a7V2MgRMRzekfITNcb27xV.jpg",
+    "tmdb:/kfI8XXVYoicM5YyT0EmzEuM4ua5.jpg",
+    "tmdb:/oe4nHPEACxpFy6xZ7OWDGTOBllr.jpg",
+    "tmdb:/73mhfjwCqoBCyQO3Y8YYgTC3q00.jpg",
+    "tmdb:/exwBo5dERSqBUSNtSdAsCACiRsJ.jpg"
+   ],
+   "src": "tmdb:/qkLZoJ1h998eJEmbuHGPCKZF0y7.jpg",
+   "logo": "file:art_tools/logos/people/tilda-swinton.png"
+  },
+  "Toni Collette": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/lzXRh16qe4HHeBN6tMyw0DHvaMn.jpg",
+    "tmdb:/y892JoUEhea7arMVXbInU1jMVSQ.jpg",
+    "tmdb:/vhIJYDc0j6wBY3TF3cmkjxmwCLE.jpg",
+    "tmdb:/wHjhp4zPHRejHYRTCpNF2C4hpXp.jpg",
+    "tmdb:/bcWWoX703nt2wkPQitEhYa1UR5r.jpg",
+    "tmdb:/61ZZdpC46JHf0WQ2wIJnNSVsRrB.jpg",
+    "tmdb:/eT1FQtQhMdFYBJjWgFNbE1NCtyr.jpg",
+    "tmdb:/p1WujHFX6QDxX06MfO9Fit52v3P.jpg"
+   ],
+   "src": "tmdb:/4DUoPZOHdPuROP4nyEIsPaMIiQl.jpg",
+   "logo": "file:art_tools/logos/people/toni-collette.png"
+  },
+  "Ethan Hawke": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/2LoTr6x0TEM7L5em4kSx1VmGDgG.jpg",
+    "tmdb:/tetqNmgcHmmtVjCag1clynK20F6.jpg",
+    "tmdb:/oojD9jSshvUT4t6AUySsBxoekHk.jpg",
+    "tmdb:/a7rgJl8TYUWAfJuM4fxbLHgD7BL.jpg",
+    "tmdb:/smtfxvgjUNHWPbcRMYfydqfCH2R.jpg",
+    "tmdb:/8rw5H5mdaIgHmHY0rRkBTaodq7M.jpg",
+    "tmdb:/m3jTuyBeaDaXe8NJqyq5qrIpeT1.jpg",
+    "tmdb:/slO6aoxA5Pwiy42yt8Fxz5bm1kH.jpg"
+   ],
+   "src": "tmdb:/9J3HHP3kQ5ZStyirJyWPWtvvrHY.jpg",
+   "logo": "file:art_tools/logos/people/ethan-hawke.png"
+  },
+  "Sam Rockwell": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/afYhNpLwpa65Yy0Q0g00FNFhzx5.jpg",
+    "tmdb:/ssbobHJCUGDG0FqNOrCr8abhOhu.jpg",
+    "tmdb:/425IJKVWvVbZ0cM5yN2gxVpk1aZ.jpg",
+    "tmdb:/v6FOxVHwfn7JxI5DWIIS7BnUFiF.jpg",
+    "tmdb:/1LvWTTwpxFjFhmNWUPWwfViOkrv.jpg",
+    "tmdb:/vYpWxV0bnUgKo7SdasfGP9HttUq.jpg",
+    "tmdb:/eoB7JWOhYqRGrEqaXqr4pCP0L5x.jpg",
+    "tmdb:/ruaUgtATy70VygkqtfHPwpJ0Gcj.jpg"
+   ],
+   "src": "tmdb:/yMmRfOGjhaw5Tz3U9UwNDdqK4Yx.jpg",
+   "logo": "file:art_tools/logos/people/sam-rockwell.png"
+  },
+  "Steve Carell": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/sSxw69G0znJuettMYGDCAXfSwSY.jpg",
+    "tmdb:/cS7Cbyff6wFVfUGem497vy9LS7A.jpg",
+    "tmdb:/dzJtsLspH5Bf8Tvw7OQC47ETNfJ.jpg",
+    "tmdb:/dA6n0qpnlMFBlTr8SBULsZbWkvn.jpg",
+    "tmdb:/glt9veZiS38FujuQmXBzjSxJ7dN.jpg",
+    "tmdb:/wqHxC2AVWF2evTYoKdUZRGYEhLb.jpg",
+    "tmdb:/4dVMB6nxmUXNSTcdl5H6rl89oCr.jpg",
+    "tmdb:/jHo6HUDgTL7j6wmipCzvjMGM0Dm.jpg"
+   ],
+   "src": "tmdb:/2XSeKDmIa2KxaiJy4J9e8FrIZhk.jpg",
+   "logo": "file:art_tools/logos/people/steve-carell.png"
+  },
+  "Simon Pegg": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg",
+    "tmdb:/7M0Bj8oncM3ICBgx565bWtlU65U.jpg",
+    "tmdb:/6ftW0kUeYno1kYfuwSTBILOtxjj.jpg",
+    "tmdb:/nOWKXxgADG98RjKyfQ7oSDfns6J.jpg",
+    "tmdb:/aKbshLCZ9e8MGfw8cPEnnooLADZ.jpg",
+    "tmdb:/zIgBBodVv71Ph1hW4511IVmdQak.jpg",
+    "tmdb:/cnGGCgIJV7CZJCQDbQj9vQcUXv9.jpg",
+    "tmdb:/3r0K0YGbFHfXcmixWVwiblfK68U.jpg"
+   ],
+   "src": "tmdb:/asoDCKpnYLrnQlroigvDXXFcTfJ.jpg",
+   "logo": "file:art_tools/logos/people/simon-pegg.png"
+  },
+  "Song Kang-ho": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/kBM9UTPYXUA2RNk210DXhztLFns.jpg",
+    "tmdb:/7dw9wIpFZ5nJZ3zqrue8t7hUUgQ.jpg",
+    "tmdb:/ks57AFrelAbogHuqmJ1NBEloSWf.jpg",
+    "tmdb:/7IVncKt6V4boIPvLBfbeKOYaWBJ.jpg",
+    "tmdb:/Ac62dYrkZ45AzubyjTUEelpAwje.jpg",
+    "tmdb:/j8ftnnGjblQreWSeX3M6UPCh91V.jpg",
+    "tmdb:/714R0wEx5SJ9o7l1Zfs37jTc8hi.jpg"
+   ],
+   "src": "tmdb:/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
+   "logo": "file:art_tools/logos/people/song-kang-ho.png"
+  },
+  "Oscar Isaac": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/dW5U5yrIIPmMjRThR9KT2xH6nTz.jpg",
+    "tmdb:/BMhVPnf8IreAIYpnHNibMcBVUz.jpg",
+    "tmdb:/i2u7K3qwMfnmNRAddSFzhAQBDFU.jpg",
+    "tmdb:/OFzTRbRxElaJUa2Kt0VDnJcgGi.jpg",
+    "tmdb:/sSLkR4AA0ELgTUYf81ZpMpVOlhJ.jpg",
+    "tmdb:/zxPthTmxFLtiTgpr5f5DKy52PzN.jpg",
+    "tmdb:/dmt0icAtGnUow7UoRtqpwJfihoc.jpg",
+    "tmdb:/5CK3N7R3OKz8loM2CNhv8BWmiQ3.jpg"
+   ],
+   "src": "tmdb:/sy7Y4jCDsGPCzoQIEmxqAgPjAgr.jpg",
+   "logo": "file:art_tools/logos/people/oscar-isaac.png"
+  },
+  "Pedro Pascal": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/oKcMbVn0NJTNzQt0ClKKvVXkm60.jpg",
+    "tmdb:/9VYK7oxcqhjd5LAH6ZFJ3XzOlID.jpg",
+    "tmdb:/cuhkTL3MezjArl80MnYl6QJQ4PQ.jpg",
+    "tmdb:/nms0d0ExYtiOke82oqr3vOb3smF.jpg",
+    "tmdb:/dBOrm29cr7NUrjiDQMTtrTyDpfy.jpg",
+    "tmdb:/k9XreOAzSshcVFdIT3wPeR8Gdzu.jpg",
+    "tmdb:/36kk559avjcuQNRIusuSiaLHXVi.jpg",
+    "tmdb:/kpaBw1oyfu2vGS2t9gGBz1Pz7vk.jpg"
+   ],
+   "src": "tmdb:/v9acaWVVFdZT5yAU7J2QjwfhXyD.jpg",
+   "logo": "file:art_tools/logos/people/pedro-pascal.png"
+  },
+  "Robert Pattinson": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg",
+    "tmdb:/sRUM2u8qLcsOaTm0jGJGlOEQhlQ.jpg",
+    "tmdb:/6RVxNlNmc0DIfZzaJKCJM43If3M.jpg",
+    "tmdb:/8A4PS5iG7GWEAVFftyqMZKl3qcr.jpg",
+    "tmdb:/aQr7LOIBe15krp0SMbtKAEVUGrT.jpg",
+    "tmdb:/9CbfQHyUhJZxWjlVqsdS3I4j9t5.jpg",
+    "tmdb:/cAyQSJFdVn7VdGXK9X7R5K8wMm5.jpg",
+    "tmdb:/ewjMaXKnh5r95iFs97MwbykEU1Z.jpg"
+   ],
+   "src": "tmdb:/7eK8FJr4fqq3J5W2xvlr2GVaep2.jpg",
+   "logo": "file:art_tools/logos/people/robert-pattinson.png"
+  },
+  "Florence Pugh": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/2URrZb95t3kY6pLroKny3Enmabp.jpg",
+    "tmdb:/1QfiLnofJFlOJOLCWaxyDpIN03v.jpg",
+    "tmdb:/nyRW28rq1PJhygm25D4gJKFfPjc.jpg",
+    "tmdb:/f8e41Oon18FiEZr4zgyJDVUqOeh.jpg",
+    "tmdb:/32bSZwIdTnq60JuJk8o9rbJewF5.jpg",
+    "tmdb:/xZtmmhOE3pq4lnm1vmn9KkaW7eT.jpg",
+    "tmdb:/qqDsryavx9rwSMhDAxW6OC7oNQg.jpg",
+    "tmdb:/421cSReX2Fktldac8SyY2k0yLwY.jpg"
+   ],
+   "src": "tmdb:/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg",
+   "logo": "file:art_tools/logos/people/florence-pugh.png"
+  },
+  "Anya Taylor-Joy": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/qYNofOjlRke2MlJVihmJmEdQI4v.jpg",
+    "tmdb:/jxAbDJWvz4p1hoFpJYG5vY2dQmq.jpg",
+    "tmdb:/gOSoqWg4zyO40DOWf9hQjzl3cBl.jpg",
+    "tmdb:/yZpghhtKM2VZHDx6JGAZqAVU4PL.jpg",
+    "tmdb:/wA1ZT3GSWvRjcJP96VRRARs9zEe.jpg",
+    "tmdb:/wqFpdXOI3AwAm3Iv6TgQqpv1JqU.jpg",
+    "tmdb:/iwxsznakIOqlJzgFiaROrbMj9V8.jpg",
+    "tmdb:/hY7BHwgFy4cdNtlvA2YMzZEqhES.jpg"
+   ],
+   "src": "tmdb:/9pkZesKMnblFfKxEhQx45YQ2kIe.jpg",
+   "logo": "file:art_tools/logos/people/anya-taylor-joy.png"
+  },
+  "Timothée Chalamet": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/dFxpwRpmzpVfP1zjluH68DeQhyj.jpg",
+    "tmdb:/c3NJxKbnKkQsttxA2XVh4pwPpIt.jpg",
+    "tmdb:/s7tLWtxTI8owGJ5xWZC8iNZdu1d.jpg",
+    "tmdb:/axENiFIrSz5B7UuWkMT7PDe7CaO.jpg",
+    "tmdb:/lXrkLckhFscXigEoWMfRByNeA60.jpg",
+    "tmdb:/98pz2MH2JT7Yw0sUJGrA5Oqtbo8.jpg",
+    "tmdb:/fI6Zwvwo0KuUMfutTyHCTuWEIrx.jpg",
+    "tmdb:/wHbKraxnDaPiXrv1bg6izchdpww.jpg"
+   ],
+   "src": "tmdb:/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg",
+   "logo": "file:art_tools/logos/people/timoth-e-chalamet.png"
+  },
+  "Zendaya": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/qGkBlyn1AwQpuFnRARMRwj0iHZp.jpg",
+    "tmdb:/1qup8tSt95HLbcy2c2xrx4iJNxv.jpg",
+    "tmdb:/3WdOloHpjtjL96uVOhFRRCcYSwq.jpg",
+    "tmdb:/6TE2AlOUqcrs7CyJiWYgodmee1r.jpg",
+    "tmdb:/5K8X89tZfjbH3mKL1kIqGt9wEOw.jpg",
+    "tmdb:/lxQBmrdX8NVin9gI5O0xbmODhbH.jpg",
+    "tmdb:/xWOU0S7AqGEkyk8scLwwz66R2GO.jpg",
+    "tmdb:/69Pm8AsGm0jmCLfal3VuATsXKIT.jpg"
+   ],
+   "src": "tmdb:/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
+   "logo": "file:art_tools/logos/people/zendaya.png"
+  },
+  "Tom Holland": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/xKBAaPIa1c7tzZD3Y0MhBLv4hPE.jpg",
+    "tmdb:/5OK84Wn1bIEIThFKcVoaN087mLj.jpg",
+    "tmdb:/l6zPRmg8NI7Y65G5GUqwvjxFdsx.jpg",
+    "tmdb:/adwEBb2sCSzqwnpVgNEG7irl1Ne.jpg",
+    "tmdb:/4eiFdjEtqb2pnWX6z98ADcYD9zV.jpg",
+    "tmdb:/bBRlrpJm9XkNSg0YT5LCaxqoFMX.jpg",
+    "tmdb:/1d67to0U8bx5jhWTanVx37k6Nd0.jpg",
+    "tmdb:/nIJj91naJI4biogqIKLSglKNfCM.jpg"
+   ],
+   "src": "tmdb:/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg",
+   "logo": "file:art_tools/logos/people/tom-holland.png"
+  },
+  "Austin Butler": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/atdAs4pFGjUQ4m2W8kJYly7N6cC.jpg",
+    "tmdb:/aGZKvPmjopFfbehunaXXzeZ8eXy.jpg",
+    "tmdb:/3nFpFd3Rt5pa9xkbF7MhwzLGbw8.jpg",
+    "tmdb:/cek4gbQzoviBKNJ2t0sb3YN7TpJ.jpg",
+    "tmdb:/tmU9jtSs6c4ySC5eiad3aXXADan.jpg",
+    "tmdb:/2gHiYPXOq7RJLs4vTz5fUmSg8cd.jpg",
+    "tmdb:/u2kLZR3NJtROrqyfbVRmFgkgsnz.jpg",
+    "tmdb:/fpbaNWLYyZku7c5jJQMQEVnPKrs.jpg"
+   ],
+   "src": "tmdb:/rLo9T9jEg67UZPq3midjLnTUYYi.jpg",
+   "logo": "file:art_tools/logos/people/austin-butler.png"
+  }
+ },
+ "Legendary Directors": {
+  "Alfred Hitchcock": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/108fiNM6poRieMg7RIqLJRxdAwG.jpg",
+    "tmdb:/osE39XteDT85B6sML8uTXFFv1sb.jpg",
+    "tmdb:/zURkJy1gwUNuVvFN8Emr0f5T2AO.jpg",
+    "tmdb:/7m3IkKteGvcAfI9m2AoZGcss8sy.jpg",
+    "tmdb:/A6YOiHQ48bxbQGFIEULGIsbJi6x.jpg",
+    "tmdb:/ujJqCav79hFf4UVFgPoPp3Lfzo4.jpg",
+    "tmdb:/yt014glA3zplTuggjcyY58IcR48.jpg",
+    "tmdb:/jNmgtflaoPzJ0YUXBoB5gwADgB5.jpg"
+   ],
+   "src": "tmdb:/k2ZDzJjZDtYZ3F4g7af4bb3eQ05.jpg",
+   "logo": "file:art_tools/logos/people/alfred-hitchcock.png"
+  },
+  "Stanley Kubrick": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/yFT0VyIelI9aegZrsAwOG5iVP4v.jpg",
+    "tmdb:/4azoknQJpwC6L0ILxgvNgXUuNOr.jpg",
+    "tmdb:/exfQ6vXXq7rMS5YWb3B88PK39a1.jpg",
+    "tmdb:/lpnyMWomTwper9duSLZCyFwJq3R.jpg",
+    "tmdb:/rjOMqEEq6cpeaHhzZfQrjUiKufC.jpg",
+    "tmdb:/uaGeHtbMmh98uhPsxpORgPdYLxz.jpg",
+    "tmdb:/9unzv4E7w6RVbHwf0ISKbdL6TNt.jpg",
+    "tmdb:/aKhak1WGdn0ou9BS0MU2wpyvNVD.jpg"
+   ],
+   "src": "tmdb:/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+   "logo": "file:art_tools/logos/people/stanley-kubrick.png"
+  },
+  "Akira Kurosawa": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/ca8fRqLDfTJTCamLKHp70up23ET.jpg",
+    "tmdb:/g2iwSho2vJxVz7cbD1FAKAmPD6A.jpg",
+    "tmdb:/lDRvdP1XTnKE5duero46TZniKMX.jpg",
+    "tmdb:/kasYbHNdzCgKHPph7Rjxzq3GVhW.jpg",
+    "tmdb:/hLli4aiZRzqBhTda3ZOoqoeCKiK.jpg",
+    "tmdb:/gyL0cPAlUGZKWUOhZXGLyeKqBrs.jpg",
+    "tmdb:/hB9QuSDL0chXOVRS7mobNKu97l.jpg"
+   ],
+   "src": "tmdb:/mzI1JXm8sX5fia3ifPS2jGPUh2n.jpg",
+   "logo": "file:art_tools/logos/people/akira-kurosawa.png"
+  },
+  "Francis Ford Coppola": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/IwGgkmW6IoJ9vuNF0T9CU3FYUX.jpg",
+    "tmdb:/3Pblihd6KjXliie9vj4iQJwbNPU.jpg",
+    "tmdb:/aKu99RyqE6Hoxu3d65YPqqG1fvW.jpg",
+    "tmdb:/upUXDqV1lbpuPoVFYd4FUaXoqQY.jpg",
+    "tmdb:/iMTQSdJ5R37IWC9ZRDIv06vvYMU.jpg",
+    "tmdb:/9pJukK4ry4cweaRozSOW7d8uHvx.jpg",
+    "tmdb:/2A3IiWdFgomPoBnMXBHVIWwD18C.jpg",
+    "tmdb:/iJ1dav4YDOWIDQhf8vRGOYZxJR6.jpg"
+   ],
+   "src": "tmdb:/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
+   "logo": "file:art_tools/logos/people/francis-ford-coppola.png"
+  },
+  "Steven Spielberg": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/tZxcg19YQ3e8fJ0pOs7hjlnmmr6.jpg",
+    "tmdb:/4W580fEQP29mdWW9jkpvgzOLgTU.jpg",
+    "tmdb:/ocpX8txWpxWn6g79OnMMtlhHtDO.jpg",
+    "tmdb:/ldOTG7LOzwAkEjb3GzPEUzW3GjW.jpg",
+    "tmdb:/zISw37YXM9vUKlmjy97fPP0YWxt.jpg",
+    "tmdb:/6refVw7T45fOR5MVMtrbkNeTrFK.jpg",
+    "tmdb:/7YFtvjFy6Y7W1gmR1HyY6rnkgv6.jpg",
+    "tmdb:/oQAFN9JvO4CCvOKcinud00RjTxe.jpg"
+   ],
+   "src": "tmdb:/o7LzVmlOSYc3EspyVMC9bsTTARc.jpg",
+   "logo": "file:art_tools/logos/people/steven-spielberg.png"
+  },
+  "Martin Scorsese": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/g3DjfKsgZQWZiw30I20hZVk1oMX.jpg",
+    "tmdb:/9U9Y5GQuWX3EZy39B8nkk4NY01S.jpg",
+    "tmdb:/tPQ6oziPA7rjc58JZyx0O9jwqzJ.jpg",
+    "tmdb:/8KlPVWc91TruU0M9urCGqbf1ils.jpg",
+    "tmdb:/4Xwx5XL1RJj0JQmEo8Fhr6nkpOg.jpg",
+    "tmdb:/tkN78z6p4yJmoZiX6n98dPyttdU.jpg",
+    "tmdb:/plky4Xt7FEQ7YdhPpCVfLoRC7pY.jpg",
+    "tmdb:/ixaF5f1lWhWy7aKr21KpX2SiI7S.jpg"
+   ],
+   "src": "tmdb:/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
+   "logo": "file:art_tools/logos/people/martin-scorsese.png"
+  },
+  "Sergio Leone": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/2576qoW8l9Z1nKGM10ar60aIwUu.jpg",
+    "tmdb:/ufmrt45oBeimYjgNRWtZdSrwyJR.jpg",
+    "tmdb:/5LsHPXYnix6TVxRgbHGhLVu84rH.jpg",
+    "tmdb:/xF5CF2S7bdGbNQ2tGmGtB0Q2H8m.jpg"
+   ],
+   "src": "tmdb:/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+   "logo": "file:art_tools/logos/people/sergio-leone.png"
+  },
+  "Billy Wilder": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/nWV9BDDCbRegP7etiPjl3vYnJEq.jpg",
+    "tmdb:/o7S105zoYtmgCgcv8RlQjhl7ko8.jpg",
+    "tmdb:/cP7x9cOGhao8YqBhQXegDAgiCae.jpg",
+    "tmdb:/5fQah3bnihoZ9zfqBlzM9ZLpeHh.jpg",
+    "tmdb:/gtYM7hlplQbICnW570wnmZjXQfJ.jpg",
+    "tmdb:/zsk7gRbBG12LY6LYD9PI3JWpEJ1.jpg",
+    "tmdb:/7Uuspd7KFFFCuAw3n329TpMRATm.jpg",
+    "tmdb:/2pbh9ScnZrDE9b2kQjaN5Uqb8Gs.jpg"
+   ],
+   "src": "tmdb:/5zTwAcnI3zCJ0mucPPnoBtkSWEV.jpg",
+   "logo": "file:art_tools/logos/people/billy-wilder.png"
+  },
+  "David Lynch": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/wwBzRDoIW6Ld64h6OkQ6ImCZKsR.jpg",
+    "tmdb:/9xRmptsf4kuEbDpCwl80VpnGg4K.jpg",
+    "tmdb:/4LaFAmZZ1yG2yG3pxzD6TyW7Vb5.jpg",
+    "tmdb:/ees5JuDA5oUgzm4Ua6gUiYGirew.jpg",
+    "tmdb:/y7JOEu10EE7Jdoax3VqIxIFrrbO.jpg",
+    "tmdb:/tCSjnqvbPtGDRkL0uPYIvIZMQqn.jpg",
+    "tmdb:/bOanIF2vZgpCNyj1QX5yEcDSyqw.jpg",
+    "tmdb:/fwTjyH65ER19TEMAlSX4433vEPV.jpg"
+   ],
+   "src": "tmdb:/1P4vCGTvJc13VxejbRLbHA1dT6f.jpg",
+   "logo": "file:art_tools/logos/people/david-lynch.png"
+  },
+  "Hayao Miyazaki": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/ouhjt9KugzhWtdEyBPipihB3ic8.jpg",
+    "tmdb:/tTG5ytGyz2MtkbxD73WAupyjxAD.jpg"
+   ],
+   "src": "tmdb:/Ab8mkHmkYADjU7wQiOkia9BzGvS.jpg",
+   "logo": "file:art_tools/logos/people/hayao-miyazaki.png"
+  },
+  "Ridley Scott": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/zABJmN9opmqD4orWl3KSdCaSo7Q.jpg",
+    "tmdb:/97SO7H0UlS3racqjeW5JTy8c6GM.jpg",
+    "tmdb:/thyiLmsgSSEPSIzjA7jSTrx43QY.jpg",
+    "tmdb:/vqTNPSnE2d6gQb9Py9v5wy1cu3K.jpg"
+   ],
+   "src": "tmdb:/9pubUbDX3eKB6ZuKxbFgv4cBZrz.jpg",
+   "logo": "file:art_tools/logos/people/ridley-scott.png"
+  },
+  "James Cameron": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/9NAZnTjBQ9WcXAQEzZpKy4vdQto.jpg",
+    "tmdb:/2Hh4Jos62luf90CCglP5K32qaWO.jpg",
+    "tmdb:/1yRagvLKRVI34bjH2UyWj03BWOl.jpg",
+    "tmdb:/qFUplZijUTbRk25ISwb5Y42wBE4.jpg",
+    "tmdb:/qDMfWcHlvYAA73caCzqjmtXtePu.jpg",
+    "tmdb:/5tXGxsQyp05biKpq99NKyGRuFHX.jpg",
+    "tmdb:/kR81EItH4SAlp853Grsf8LmuRMo.jpg",
+    "tmdb:/hhAEMatJVynSX9nbArQXCkuujqG.jpg"
+   ],
+   "src": "tmdb:/vL5LR6WdxWPjLPFRLe133jXWsh5.jpg",
+   "logo": "file:art_tools/logos/people/james-cameron.png"
+  },
+  "Clint Eastwood": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/8TwdCfeOZH7ucRlfLZ6wObxa7cO.jpg",
+    "tmdb:/jnaqpuEx636YUwmPJASYOmqGA0b.jpg",
+    "tmdb:/iGgljl8yozXF5WoGQy5zQD97i9Z.jpg",
+    "tmdb:/qbULP0F4gOlnQGxFSE51KWeKtPA.jpg",
+    "tmdb:/wJosJW9DNWHOA8h63bQr2HgHC48.jpg",
+    "tmdb:/e0kbQQwpinfV6R4dQOsnmqqDOLe.jpg",
+    "tmdb:/5YJsrm2PPU0Zsrdly4IvGWtrZMz.jpg",
+    "tmdb:/558etizblWNXDZlmPvpyaIy9dJT.jpg"
+   ],
+   "src": "tmdb:/smAnf46gZL1jXuP9nZvkM3Uynav.jpg",
+   "logo": "file:art_tools/logos/people/clint-eastwood.png"
+  },
+  "Peter Jackson": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/bNc908d59Ba8VDNr4eCcm4G1cR.jpg",
+    "tmdb:/4hh7hips4xc6kgpNDQKQH3goRvJ.jpg",
+    "tmdb:/kHNsP1SOZ2LfqqoGUm7Icwheai7.jpg",
+    "tmdb:/mSUq2pe1g7j2aAf03k6bIbeLB56.jpg",
+    "tmdb:/pZfTbckf915zwOTMGNkntL3YkY2.jpg",
+    "tmdb:/nhbILpv5BPvIgLsLvEbRv4sF9Mk.jpg"
+   ],
+   "src": "tmdb:/ua5EHfleb44L5hfHPs2BPqRAove.jpg",
+   "logo": "file:art_tools/logos/people/peter-jackson.png"
+  },
+  "Tim Burton": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/yHEHAHQpN9PfSEQx1UxZPczhcAi.jpg",
+    "tmdb:/wcjuY5vD1nlfwWNbvvTGg5dGoRR.jpg",
+    "tmdb:/Af2EVgrDvr9diM3xmBf5dItV9ey.jpg",
+    "tmdb:/pPacPCBKZz8D0yqI0F9oSXPr2o1.jpg",
+    "tmdb:/rttSm1kGEa0AB1Q5nCCQM1nc9S2.jpg",
+    "tmdb:/d44Daj87K37frWSFuazCv9oONj9.jpg"
+   ],
+   "src": "tmdb:/bSvUW4JQ6g4QiKvwejcfcPRd4Ke.jpg",
+   "logo": "file:art_tools/logos/people/tim-burton.png"
+  },
+  "Michael Mann": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/gxhquWenkJTLuZpeWEKFzxCKXxz.jpg",
+    "tmdb:/syowcptZIOosLMwVWbXFOU8jVvd.jpg",
+    "tmdb:/kEYrCk6y6siUOxUlMD2KyFuRBQK.jpg",
+    "tmdb:/akT8cpMYW3KrLlgEWcsuDt3mAep.jpg",
+    "tmdb:/1nRqwMyQuCkvNPAzDY5oOSfGZ6b.jpg",
+    "tmdb:/zaiiWgIyO1mbftNF1yQxHDLsZFE.jpg"
+   ],
+   "src": "tmdb:/kMRdsjSHifqGZPfHdZIS8YfNMk0.jpg",
+   "logo": "file:art_tools/logos/people/michael-mann.png"
+  },
+  "George Miller": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/35NQ8HjFXQlGYDz9UkhT08lKl5C.jpg",
+    "tmdb:/izqU0cQ24ECNfbmt91FxZ6c0s3V.jpg",
+    "tmdb:/vhjkYCcfihzQUxU5iOCnaJBgrk9.jpg",
+    "tmdb:/xL5cT2wqyeyjmXrTYXNYzjhNI9H.jpg"
+   ],
+   "src": "tmdb:/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+   "logo": "file:art_tools/logos/people/george-miller.png"
+  },
+  "Christopher Nolan": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/xuAIuYSmsUzKlUMBFGVZaWsY3DZ.jpg",
+    "tmdb:/7DFBDkrlEsXn9MxUQblLTdkHAYH.jpg",
+    "tmdb:/kWogkBJKzXFJSY8cZpuzanfsaFi.jpg",
+    "tmdb:/6kJBoNiogwdcXgcRn88kDkdFNKR.jpg",
+    "tmdb:/liKOi4aHywQh9UguLgf6wFyGFMU.jpg",
+    "tmdb:/62gmVhxnamAtZkhVWw1t2QHK9dL.jpg",
+    "tmdb:/7cCtkOBjVRvUm7AWUZrCZLw4yQy.jpg",
+    "tmdb:/3PbLuwfTUXhGz2gZojkbSpuPTeY.jpg"
+   ],
+   "src": "tmdb:/vgnoBSVzWAV9sNQUORaDGvDp7wx.jpg",
+   "logo": "file:art_tools/logos/people/christopher-nolan.png"
+  },
+  "Quentin Tarantino": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/1gjcpAa99FAOWGnrUvHEXXsRs7o.jpg",
+    "tmdb:/f00gwMDBfJh6D5c7KQan6eek9h6.jpg",
+    "tmdb:/kQtMm80lFzJFgVj2DR33xFPETX8.jpg",
+    "tmdb:/xFbTLwipt7rGwpGraJ8DpNBnBiP.jpg",
+    "tmdb:/gLVE4Q6FUdkOmZ0jvGOS9PQwFoE.jpg",
+    "tmdb:/hY1g8MN3WXPhutN2ZkmpuyTANow.jpg",
+    "tmdb:/u6CCDu1k64ZrH7Mu0hgh8yWFjxk.jpg",
+    "tmdb:/loaDiikyolJ4Oy15ytJGep68lIq.jpg"
+   ],
+   "src": "tmdb:/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+   "logo": "file:art_tools/logos/people/quentin-tarantino.png"
+  },
+  "David Fincher": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/tpEczFclQZeKAiCeKZZ0adRvtfz.jpg",
+    "tmdb:/wlyTYR3KNKQ3NtVojtbO8QIXSSS.jpg",
+    "tmdb:/nbHYGRk61Z39QGvGeHGMuIAYCj7.jpg",
+    "tmdb:/poWPf0OMlNbubTpM2SX1rfHk9aO.jpg",
+    "tmdb:/xDRQkOOkoXFa3z6VBPAsSm0WksO.jpg",
+    "tmdb:/ofxzDcuvHO3QykzZruikmwL3GpM.jpg",
+    "tmdb:/kf7XqimV9PuMEKGX7BOem3Ua2h0.jpg"
+   ],
+   "src": "tmdb:/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+   "logo": "file:art_tools/logos/people/david-fincher.png"
+  },
+  "Denis Villeneuve": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/xzQYqb4nR8xT7Zdw5itbEL9K3fd.jpg",
+    "tmdb:/zdDx9Xs93UIrJFWYApYR28J8M6b.jpg",
+    "tmdb:/433lXlkdMGXzrpwnKM4Ul1sln15.jpg",
+    "tmdb:/c9vs3EJpx555US89I975csyf5js.jpg",
+    "tmdb:/kONSAseROvM4B455vLFV6Gtx8o0.jpg",
+    "tmdb:/5elBsz5hIGiZBICB7GumW2jlGnk.jpg",
+    "tmdb:/bHnwL3IBDnKCrPovK5L4SIzoJYf.jpg"
+   ],
+   "src": "tmdb:/iTyh3hqTUjiRqQo8Uz1w1KtQti9.jpg",
+   "logo": "file:art_tools/logos/people/denis-villeneuve.png"
+  },
+  "Paul Thomas Anderson": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/wKAs2LtLYSUzt3ZZ8pnxMwuEWuR.jpg",
+    "tmdb:/29DHpRKddqTwo2NU162Y49JoQYa.jpg",
+    "tmdb:/Ath5cNOxxFIljBeqQeMyySHHkaX.jpg",
+    "tmdb:/yuUbVRzMLSlL7OSEEbbIV3bI9Tm.jpg",
+    "tmdb:/zXQXly4p8xevgjbfMedmcP1UNuc.jpg",
+    "tmdb:/psR7fGTuE5X9eoBs29jk681bEmF.jpg",
+    "tmdb:/xoM0A6mgnmkc8PeMwdNVw8jqHhs.jpg",
+    "tmdb:/gtzjDUQz5HB1c4aQqawHbWk1Dad.jpg"
+   ],
+   "src": "tmdb:/8LRcCJjbQI552BMCuGgYqph8USS.jpg",
+   "logo": "file:art_tools/logos/people/paul-thomas-anderson.png"
+  },
+  "Joel & Ethan Coen": {
+   "style": "scene",
+   "src": "tmdb:/kd9jFTTabg4xJpHDgxY0h8F9BzG.jpg",
+   "logo": "file:art_tools/logos/people/joel-ethan-coen.png"
+  },
+  "Wes Anderson": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/s03CeUeC5yAXyB1acqP0zGNo2SC.jpg",
+    "tmdb:/nqdzCM3D149kzjn5Mqk4DEc98Cm.jpg",
+    "tmdb:/dfhay5ryMKh2XToCdvB2utTUWhD.jpg",
+    "tmdb:/oKDlhTjORiTQriqoUFJMTgGiwPg.jpg",
+    "tmdb:/b1LH059EGnU01rsZwcqYzNjY7w9.jpg",
+    "tmdb:/32MHNRsDWjj82sEB1AVNTnxxshG.jpg",
+    "tmdb:/5z2WroP0CgQ5vI17M0hzi8o5NAn.jpg",
+    "tmdb:/qVAPXTpa7wkZCmkoBdrdDsCaWyc.jpg"
+   ],
+   "src": "tmdb:/9udCLTxTFl28RxnK8Q05E154ZGa.jpg",
+   "logo": "file:art_tools/logos/people/wes-anderson.png"
+  },
+  "Guillermo del Toro": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/gldeyCtKcaqnK1v4Vu9vqayhzUQ.jpg",
+    "tmdb:/wpnPWMRasECq6DxtZjSVTZNeGja.jpg",
+    "tmdb:/cWvt8FdPAH0j3QtLzAN1j7ZJJrr.jpg",
+    "tmdb:/yZeTEOfPYFlVV1hvZJmrJkv4Oqc.jpg",
+    "tmdb:/q6IiOcTaaQN554kysBDt8VfPtRp.jpg"
+   ],
+   "src": "tmdb:/ig7qUy7drkEFZNCK7gi0hMn1WMN.jpg",
+   "logo": "file:art_tools/logos/people/guillermo-del-toro.png"
+  },
+  "Bong Joon-ho": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/stwnTvZAoD8gEJEDHpDQyLCyDy5.jpg",
+    "tmdb:/tKLJBqbdH6HFj2QxLA5o8Zk7IVs.jpg",
+    "tmdb:/mVqNtTuPaKVe6il2GTvOaAGnmD4.jpg",
+    "tmdb:/1GTJHcgJ0uJdGvrBLCXwJ604uP6.jpg",
+    "tmdb:/kTthaQ1jOIqTCssRySTSmlc4JSE.jpg",
+    "tmdb:/bNPwLqSg5N1cAeM8hW74JW9SSwU.jpg",
+    "tmdb:/x8VJ1JFFMuo9fJcWhxxzAwx8AYk.jpg",
+    "tmdb:/h35x951t1MPuV61OJKJbtyQACvt.jpg"
+   ],
+   "src": "tmdb:/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
+   "logo": "file:art_tools/logos/people/bong-joon-ho.png"
+  },
+  "Park Chan-wook": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/jsSFCVB7MhuVbSLwTgESiXEiNjt.jpg",
+    "tmdb:/huKN49tXRx03R7a3xV5ycZJyV4w.jpg",
+    "tmdb:/fJbKy442rqXsnhN98UdmISD1edo.jpg",
+    "tmdb:/dS1Xh9dr5HgTZTEzPPvoRMifhDA.jpg",
+    "tmdb:/jP8HebJFjRPhljc8hoBJ6ai8DuX.jpg",
+    "tmdb:/18IzoyBWMI3ZvxndpBNLSzXFpyK.jpg",
+    "tmdb:/znX34BsGgGPgXTrkNE5eOzudQOH.jpg",
+    "tmdb:/fA1EexvwVgO2yxHLrwgHngn0hr9.jpg"
+   ],
+   "src": "tmdb:/sdwjQEM869JFwMytTmvr6ggvaUl.jpg",
+   "logo": "file:art_tools/logos/people/park-chan-wook.png"
+  },
+  "Alfonso Cuarón": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/gaHhrzPfxfc3cbQLkDt54gtP3n1.jpg",
+    "tmdb:/eoCHiXaQzGgx9RiwXnt3k239FLc.jpg",
+    "tmdb:/ckBU795Gs2qHdDaOLTWRoa3fKr9.jpg",
+    "tmdb:/sKpIHDEKmCDBs4O9sljW99FLVnt.jpg",
+    "tmdb:/5qZJI7lb2tH2cttPKLtLpZT7L5G.jpg",
+    "tmdb:/i5VSQjBxGHHhQzE4osLaUlajKl3.jpg",
+    "tmdb:/zJr1nV2t0DHsVcY8eGg9bd9coft.jpg"
+   ],
+   "src": "tmdb:/vbk5CfaAHOjQPSAcYm6AoRRz2Af.jpg",
+   "logo": "file:art_tools/logos/people/alfonso-cuar-n.png"
+  },
+  "Alejandro González Iñárritu": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/opRQx3XlOoXH5EFlm0v8Q3O1ccn.jpg",
+    "tmdb:/5Mx0RilUcVjXzmeKYAZJJ0WXZMQ.jpg",
+    "tmdb:/Av0jewh8wltCl1CB8MfEIrvgfMZ.jpg",
+    "tmdb:/4SG9faTgiKSWoRqWatmoHWWY0by.jpg"
+   ],
+   "src": "tmdb:/mNQtUJv1F3u0uSKILFrGjIHqkxx.jpg",
+   "logo": "file:art_tools/logos/people/alejandro-gonz-lez-i-rritu.png"
+  },
+  "Darren Aronofsky": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/tOjz8mVI2HeQBvU6KNjIExMBsXL.jpg",
+    "tmdb:/sjcLM5iuF9ArlU4iv532tjmFmYN.jpg",
+    "tmdb:/AtBEqPkWw5txAuMJ5vk4dFhmMrR.jpg",
+    "tmdb:/dz14XMzcX08xVbnxGive9Q080FX.jpg"
+   ],
+   "src": "tmdb:/qxTw8OKJLRX1Xb5nR5CcIDnLKoq.jpg",
+   "logo": "file:art_tools/logos/people/darren-aronofsky.png"
+  },
+  "Kathryn Bigelow": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/ee1zr5G7L54lvtjGCD2JUyyk4UX.jpg",
+    "tmdb:/llfsTIvItT7IEmX5qK1qUX0dbqc.jpg",
+    "tmdb:/P4mC54xIOIAiUdLphk6B9yPiDO.jpg",
+    "tmdb:/7wiMnFR6WP9SK870AvNQ3LccLi7.jpg",
+    "tmdb:/IODNm2XtD61c7CNxjCXgRKtRP.jpg",
+    "tmdb:/fw8inxQTkRr3ABVJNvFCIUTEq.jpg",
+    "tmdb:/suj43HDG3mRxUyRHuiSSxKMIeip.jpg",
+    "tmdb:/95pTV3ta5MhGff3NuyW7iYfl16n.jpg"
+   ],
+   "src": "tmdb:/off0xgvtfHY82l3MC4mDpCk1APY.jpg",
+   "logo": "file:art_tools/logos/people/kathryn-bigelow.png"
+  },
+  "Edgar Wright": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/3BqgbeAkNnDcIVtrDvG6LJnEkZK.jpg",
+    "tmdb:/dQzv5Ml2SkelS33hgl7E2oh0a9S.jpg",
+    "tmdb:/912vB9enhaErCSMpJpyWAB4yOOH.jpg",
+    "tmdb:/2Qg8YKzTMfbUPJ5yUcmhbqg9yD2.jpg",
+    "tmdb:/iEd3NRUUzKvKYEvUc80vkP83pXB.jpg",
+    "tmdb:/1gO55XaEucoTOtSYi9jfTbVR7qk.jpg",
+    "tmdb:/gVbn2dWDfNUi4LERbhXpPEgJaCE.jpg",
+    "tmdb:/4xlCtuqaDSQu8suHvaYfq5rtlnh.jpg"
+   ],
+   "src": "tmdb:/goCvLSUFz0p7k8R10Hv4CVh3EQv.jpg",
+   "logo": "file:art_tools/logos/people/edgar-wright.png"
+  },
+  "Guy Ritchie": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/9pLUnjMgIEWXi0mlHYzie9cKUTD.jpg",
+    "tmdb:/yrWmxapB0CbFtm8tkfJkHkXsmtr.jpg",
+    "tmdb:/4xqliTF6v7jXwlcRA9j33OsHhm.jpg",
+    "tmdb:/d3GqXvKlcOzcVqMveqi9WbROcxD.jpg",
+    "tmdb:/ewfGrrgW1q11wQdv8AQObCx08jW.jpg"
+   ],
+   "src": "tmdb:/veXdzn7LL0bFIDGmE7tTkvRg0qV.jpg",
+   "logo": "file:art_tools/logos/people/guy-ritchie.png"
+  },
+  "Sofia Coppola": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/dzHC2LxmarkBxWLhjp2DRa5oCev.jpg",
+    "tmdb:/fMnX9ZkbNol6SgIFIKncG07WQr4.jpg",
+    "tmdb:/ck0lov91OIXSyKOiYPwC3jQ1G4Q.jpg",
+    "tmdb:/3yaEyABaV995tcdemP4kZmw8Ozq.jpg",
+    "tmdb:/bGvunYQNNLMLMVAyjSucGKdIuDw.jpg"
+   ],
+   "src": "tmdb:/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg",
+   "logo": "file:art_tools/logos/people/sofia-coppola.png"
+  },
+  "Yorgos Lanthimos": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/dvtv8eV1O8Fl385ctOu3sqO2PbD.jpg",
+    "tmdb:/8pqwSOhJDS9Om9xHeaW2ab5uXLS.jpg",
+    "tmdb:/itlsnstj1ES0L8wuQdMsg0MGCkn.jpg",
+    "tmdb:/eK2RB0nSEmB6RVSbHB2b6v0Nuip.jpg",
+    "tmdb:/38c8308Lvts3JJtIo7toJOxuHtX.jpg",
+    "tmdb:/mJQVGyhT1VkBT0jqyQo6lMJbb7A.jpg",
+    "tmdb:/z3rbvSVUFEK3HwA0jDA1LQNVurd.jpg",
+    "tmdb:/8eeU5qg3qMenv07g8FEHnUB78uw.jpg"
+   ],
+   "src": "tmdb:/wrrA1xzZq7z84hacSsSTbJoPaUx.jpg",
+   "logo": "file:art_tools/logos/people/yorgos-lanthimos.png"
+  },
+  "Alex Garland": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/qSWzYnDw68xm4i5xprH9BwQ6q25.jpg",
+    "tmdb:/iUfl9UtspM6fvHpoTBK6zTL8qvV.jpg",
+    "tmdb:/oZJtFkxtdaqQBjx7bhYUy0WoNmQ.jpg",
+    "tmdb:/wk7PLIZqxljsiPNhhPTQj9r9VMY.jpg",
+    "tmdb:/nDCkPeWFVcvXrRAJuXNxVCTJEXe.jpg",
+    "tmdb:/iMHWxkJf7n8GK9M8HUb0E7OUUvK.jpg"
+   ],
+   "src": "tmdb:/dfzyELOXqzWYH5LnfgQl3io1oS4.jpg",
+   "logo": "file:art_tools/logos/people/alex-garland.png"
+  },
+  "Jordan Peele": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/kFUKn5g3ebpyZ3CSZZZo2HFWRNQ.jpg",
+    "tmdb:/wPcXsgt2GdFMTaH0h2OuXr4UoPz.jpg",
+    "tmdb:/hQzDPiMQtO4GqtKj4CcuUBoYaJD.jpg",
+    "tmdb:/9rOEfvKUInuUpJ6MMhiC8Tch1WM.jpg",
+    "tmdb:/h7TS8Jgimk1cPN0CRwzz9txggCj.jpg",
+    "tmdb:/8c5f7pWsYmpkfAnD4VnzS54l4X2.jpg",
+    "tmdb:/yituxFz20fM5crmI8Ga1oc5N5L3.jpg",
+    "tmdb:/tzW9zvPCogJa0wpwZa9sRsNrpZw.jpg"
+   ],
+   "src": "tmdb:/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+   "logo": "file:art_tools/logos/people/jordan-peele.png"
+  },
+  "Robert Eggers": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/8Mbq0G8FguELKC8zNFunapPpkt5.jpg",
+    "tmdb:/v9ukVIUGT1vQ3KuPVLSua7FfS9s.jpg",
+    "tmdb:/xdN30BowN6uLjeNXYWWZINeht12.jpg",
+    "tmdb:/bZimaGzpcAvWlnX4UAStzkivWFx.jpg",
+    "tmdb:/xePz75emhu1dbdRIp3g52S4E2lC.jpg",
+    "tmdb:/mLszN6cra7KZomzZI3CU6k8X0Zl.jpg"
+   ],
+   "src": "tmdb:/dEY6lCgiODGMDPY3Oo2j09ngPiq.jpg",
+   "logo": "file:art_tools/logos/people/robert-eggers.png"
+  },
+  "Ari Aster": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/3j6cVjnqTjx8TJbbTdBlLXYy5yU.jpg",
+    "tmdb:/7ycICw9yVpk6bzTKLRiPd9eSfHA.jpg",
+    "tmdb:/4Erwmb2PTBcYJyy9idECymL5s5i.jpg",
+    "tmdb:/sbMiZJrM7Ln9T7PhSP52ewswqYi.jpg",
+    "tmdb:/g8NZ90vK1wxfz7cUknkn6nQhd4e.jpg",
+    "tmdb:/vVQai1yKGStv4x7TZdZS4X8MEyP.jpg",
+    "tmdb:/ucJtVUAqLkaBNGxaLyY7IBOvAEC.jpg",
+    "tmdb:/13q96VSNFsGG6G7hoxpAMlcdxWA.jpg"
+   ],
+   "src": "tmdb:/4DUoPZOHdPuROP4nyEIsPaMIiQl.jpg",
+   "logo": "file:art_tools/logos/people/ari-aster.png"
+  },
+  "Greta Gerwig": {
+   "style": "portrait",
+   "photos": [
+    "tmdb:/dxKAhpkz4XNwmRzMG5QOpXjPZ1N.jpg",
+    "tmdb:/nHrWXL1VFaV4a3wRNlhp5NfO98m.jpg",
+    "tmdb:/3H0xzU12GTNJyQTpGysEuI9KyiQ.jpg",
+    "tmdb:/6MwQ2GstYr0wnhp1eTOAbVMNBGN.jpg",
+    "tmdb:/iOl1tjdLIGXeGGF73eAq6cE4Tmp.jpg",
+    "tmdb:/x98gWUtz5LnU0Tw5z18eCGt6uKf.jpg",
+    "tmdb:/to1QFsQ0W5TA61CpVh960o9aKfh.jpg",
+    "tmdb:/fd7EGCbERVDNCcloE0ugDV7pVbh.jpg"
+   ],
+   "src": "tmdb:/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg",
+   "logo": "file:art_tools/logos/people/greta-gerwig.png"
+  }
+ },
+ "Awards & Festivals": {
+  "The Oscars": {
+   "style": "scene",
+   "src": "tmdb:/fga95w01nU0UVUSHpeeNz92zv8M.jpg",
+   "logo": "file:art_tools/logos/awards_tv/the-oscars.png"
+  },
+  "Golden Globes & BAFTA": {
+   "style": "scene",
+   "src": "tmdb:/hMHrXJhOvMklbc5ICkFbxWtoU6c.jpg",
+   "logo": "file:art_tools/logos/awards_tv/golden-globes-bafta.png"
+  },
+  "Cannes, Venice & Sundance": {
+   "style": "scene",
+   "src": "tmdb:/xqHDb4LQ8PNzqILyujkaYqT7Amq.jpg",
+   "logo": "file:art_tools/logos/awards_tv/cannes-venice-sundance.png"
+  },
+  "The Emmy Awards": {
+   "style": "scene",
+   "src": "tmdb:/nyGJjd9ALDpGFHEaGoZ1DLB0zUE.jpg",
+   "logo": "file:art_tools/logos/awards_tv/the-emmy-awards.png"
+  },
+  "Criterion Collection & Arthouse": {
+   "style": "wall",
+   "posters": [
+    "tmdb:/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg",
+    "tmdb:/wcZ21zrOsy0b52AfAF50XpTiv75.jpg",
+    "tmdb:/23VIf7zNxAgaXwIlvzd3IvOd9sY.jpg",
+    "tmdb:/cl0HEZT8UfzLqaMrYTvGNHOfPYj.jpg",
+    "tmdb:/g2YbTYKpY7N2yDSk7BfXZ18I5QV.jpg",
+    "tmdb:/9Wx0Wdn2EOqeCZU4SP6tlS3LOml.jpg",
+    "tmdb:/12PuU23kkDLvTd0nb8hMlE3oShB.jpg",
+    "tmdb:/8BgGbbWiLNhPtkMkN0gGTnbtvBv.jpg",
+    "tmdb:/1qhOyf5C4s9ZdvY8d5JDx9DFMeT.jpg",
+    "tmdb:/ijWibsAU1iBcCD8tuIZfTmDzMVE.jpg",
+    "tmdb:/iPdVqIpmR3bRvOQJPrn4pr2KR3q.jpg",
+    "tmdb:/dZ2v0DAX4aCZartCzZdg4ZinSW2.jpg",
+    "tmdb:/sP27Qm4THyRZyHjHYMfIDtJP6YE.jpg",
+    "tmdb:/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg",
+    "tmdb:/vPvpBWFWDvEXuQBkoYgA6A89GVp.jpg",
+    "tmdb:/2w09J0KUnVtJvqPYu8N63XjAyCR.jpg",
+    "tmdb:/5konZnIbcAxZjP616Cz5o9bKEfW.jpg",
+    "tmdb:/iZQs2vUeCzvS1KfZJ6uYNCGJBBV.jpg",
+    "tmdb:/q8jlA3Wc1Z987hNKRFA44g5OugC.jpg",
+    "tmdb:/JHmsBiX1tjCKqAul1lzC20WcAW.jpg",
+    "tmdb:/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg",
+    "tmdb:/lkLO1HDzzaXpTXtAgnGpVqIQkvF.jpg",
+    "tmdb:/kQOrS0DLUXYsqPMedM2G6NJcJBq.jpg",
+    "tmdb:/x7A59t6ySylr1L7aubOQEA480vM.jpg"
+   ],
+   "glow": "#E8E8E8",
+   "seed": 21,
+   "shade": 0.5,
+   "logo": "file:art_tools/logos/awards_tv/criterion-collection-arthouse.png"
+  }
  }
 }
