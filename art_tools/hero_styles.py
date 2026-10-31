@@ -337,6 +337,8 @@ def find_in_stills(photo, stills, thr=0.38):
                 continue
             size = box[3] - box[1]
             score = s + 1.5 * min(size, 0.35) - 0.02 * i - crowd
+            if box[1] < 0.07 or box[0] < 0.03 or box[2] > 0.97:   # the head at the still's edge: it would be cut
+                score -= 1.0
             if best is None or score > best[0]:
                 best = (score, i, box)
     return (best[1], best[2]) if best else (None, None)
