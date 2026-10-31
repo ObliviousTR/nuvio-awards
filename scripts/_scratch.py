@@ -48,7 +48,7 @@ for name, (reg, names, nets) in [(k, v) for k, v in P.items() if k == "Discovery
                 items.append({"kind": kind, "id": r["id"], "title": r.get("title") or r.get("name"),
                               "poster": r["poster_path"], "pop": r.get("popularity", 0),
                               "votes": r.get("vote_count", 0)})
-    vmin = 3 if reg == "TR" else 150
+    vmin = 3 if reg == "TR" else 25
     for n in nets:
         print(name, "network", n, get(f"/network/{n}").get("name"))
         for page in (1, 2):
