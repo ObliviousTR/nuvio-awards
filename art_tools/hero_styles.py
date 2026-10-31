@@ -290,3 +290,59 @@ def photo_panel(photo, tint=(13, 13, 16)):
     layer.paste(bp, (x, y), bp)
     out = out.convert("RGBA"); out.alpha_composite(layer)
     return left_fade(out.convert("RGB"))
+
+
+SFACE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models", "face_recognition_sface_2021dec.onnx")
+_REC = None
+
+
+def _embeds(im):
+    """(box fractions, embedding) for every face YuNet finds in im"""
+    global _REC
+    import cv2
+    if _REC is None:
+        _REC = cv2.FaceRecognizerSF.create(SFACE, "")
+    small = im.convert("RGB").copy()
+    small.thumbnail((1280, 1280))
+    a = cv2.cvtColor(np.asarray(small), cv2.COLOR_RGB2BGR)
+    det = cv2.FaceDetectorYN.create(hc.YUNET, "", (a.shape[1], a.shape[0]), 0.7, 0.3, 50)
+    _, found = det.detect(a)
+    out = []
+    for f in (found if found is not None else []):
+        if f[2] * f[3] < a.shape[0] * a.shape[1] * 0.001:
+            continue
+        e = _REC.feature(_REC.alignCrop(a, f))
+        x, y, w, h = f[:4]
+        out.append(((x / a.shape[1], y / a.shape[0], (x + w) / a.shape[1], (y + h) / a.shape[0]), e))
+    return out
+
+
+def find_in_stills(photo, stills, thr=0.38):
+    """the still in which the person of photo is seen best: their face recognised (SFace), large and clear.
+    Returns (index, face box) or (None, None)."""
+    import cv2
+    ref = _embeds(photo)
+    if not ref:
+        return None, None
+    ref = max(ref, key=lambda r: (r[0][2] - r[0][0]) * (r[0][3] - r[0][1]))[1]
+    best = None
+    for i, im in enumerate(stills):
+        if im is None:
+            continue
+        for box, e in _embeds(im):
+            s = _REC.match(ref, e, cv2.FaceRecognizerSF_FR_COSINE)
+            if s < thr:
+                continue
+            size = box[3] - box[1]
+            score = s + 1.5 * min(size, 0.35) - 0.02 * i
+            if best is None or score > best[0]:
+                best = (score, i, box)
+    return (best[1], best[2]) if best else (None, None)
+
+
+def person_scene(still, face):
+    """a film still with the person in it, laid out like every hero: their face (and a body's room) is the subject"""
+    x0, y0, x1, y1 = face
+    fh, fw = y1 - y0, x1 - x0
+    box = (x0 - fw * 0.9, y0 - fh * 0.35, x1 + fw * 0.9, min(1.0, y1 + fh * 1.6))
+    return scene(still, box)
