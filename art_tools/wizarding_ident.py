@@ -107,7 +107,7 @@ class Mark:
             self.wand_ang.append(math.degrees(math.atan2(-(cc[i][1] - self.pivot[1]), cc[i][0] - self.pivot[0])))
         self.rest_a = np.clip(self.a - taken, 0, 1)
         # left to right: wand 0 is Voldemort's (largest angle)
-        col = spaced(os.path.join(src, "Cinzel.ttf"), 40, "THE COLLECTION", 16)
+        col = spaced(os.path.join(src, "Cinzel.ttf"), 40, "COLLECTION", 16)
         self.col = np.zeros((H, W), np.float32)
         cy = top + lh + 22; cx = (W - col.shape[1]) // 2
         self.col[cy:cy + col.shape[0], cx:cx + col.shape[1]] = col
