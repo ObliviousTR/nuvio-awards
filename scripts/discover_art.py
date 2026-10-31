@@ -21,6 +21,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(os.path.dirname(HERE), "art_tools"))
 import universe_motion as um
+import hero_styles
 import spotlight_art as art
 import folder_art as fa
 from spotlight import tmdb
@@ -210,7 +211,8 @@ def render(fid, kicker, word, split, accent, spec, out, today, used):
     d = os.path.join(out, fid)
     os.makedirs(d, exist_ok=True)
     frame(1.0, 0.5).save(os.path.join(d, "cover.jpg"), quality=88)
-    art.graded(img, 0.95, 1.03, (W, H)).save(os.path.join(d, "backdrop.jpg"), quality=86)
+    # Nuvio TV's hero: the subject placed where the TV shows it whole, the left melting into the title side
+    hero_styles.scene(art.graded(img, 0.95, 1.03, img.size)).save(os.path.join(d, "backdrop.jpg"), quality=86)
     um.trim(logo).save(os.path.join(d, "logo.png"))
     B, HD = 42, 34
     frames, dur = [], []

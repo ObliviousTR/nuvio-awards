@@ -86,6 +86,8 @@ def compose(src, subject=None, zoom_limit=1.35):
     im = src.convert("RGB")
     box, how = (subject, "given") if subject else subject_box(im)
     bx0, by0, bx1, by1 = [min(1.0, max(0.0, v)) for v in box]
+    if how == "saliency":                      # a guess, not a face: move and zoom the picture only a little
+        zoom_limit = min(zoom_limit, 1.1)
     # base scale: the image covers the frame's height
     s0 = H / im.height
     if im.width * s0 < W:
@@ -104,6 +106,9 @@ def compose(src, subject=None, zoom_limit=1.35):
     # never leave a gap at the top or the right: those are the edges both layouts show
     ox = max(ox, W - iw)
     oy = min(oy, 0)
+    oy = max(oy, min(0.0, 0.03 * H - by0 * ih))  # never lift the subject's top (a head) out of the frame
+    if how == "saliency":
+        oy = max(oy, -0.05 * H)
     ox = min(ox, W * 0.5)                      # at most half the frame comes from the fill
     oy = max(oy, H - ih - H * 0.0) if ih >= H else oy
     # the fill: the picture itself, covering the frame, blurred and darkened
