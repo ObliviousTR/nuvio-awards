@@ -86,6 +86,8 @@ def build(spec, folder):
             ps = [p for p in ex.map(lambda r: load(r, "w342"), refs) if p is not None]
         return hs.wall(ps, glow=hex_rgb(spec["glow"]) if spec.get("glow") else None, seed=spec.get("seed", 1),
                        shade=spec.get("shade", 1.0))
+    if st == "film" and spec.get("pick"):                  # a still picked by hand (key art crowded the automatic one)
+        return hs.person_scene(load(spec["pick"]["still"]), tuple(spec["pick"]["face"]))
     if st == "film":                                      # the person in a still of their own films (or the film)
         refs = [r for r, wh in zip(spec["photos"], spec.get("sizes") or [[0, 9999]] * len(spec["photos"]))
                 if wh[1] >= 700][:20] or spec["photos"][:6]

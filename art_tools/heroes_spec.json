@@ -6476,7 +6476,17 @@
     "tmdb:/wjklF1KOHUcKezUjjyAnG5Hi6bK.jpg"
    ],
    "director": false,
-   "logo": "file:art_tools/logos/people_tv/robert-downey-jr.png"
+   "logo": "file:art_tools/logos/people_tv/robert-downey-jr.png",
+   "pick": {
+    "still": "tmdb:/hsohQritwEVNxEYDsKs7XytBDH0.jpg",
+    "face": [
+     0.356,
+     0.1782,
+     0.4778,
+     0.4877
+    ],
+    "film": "Iron Man 3"
+   }
   },
   "Cate Blanchett": {
    "style": "film",
@@ -8101,7 +8111,17 @@
     "tmdb:/aeG9FCywAXBUD7KNFaSlWxrIz6p.jpg"
    ],
    "director": false,
-   "logo": "file:art_tools/logos/people_tv/jake-gyllenhaal.png"
+   "logo": "file:art_tools/logos/people_tv/jake-gyllenhaal.png",
+   "pick": {
+    "still": "tmdb:/yFPaqqXMGsdOKit3fsAJ9tqPJRP.jpg",
+    "face": [
+     0.4592,
+     0.1307,
+     0.5591,
+     0.3837
+    ],
+    "film": "Nightcrawler"
+   }
   },
   "Cillian Murphy": {
    "style": "film",
@@ -8499,7 +8519,17 @@
     "tmdb:/3I3In4EOwlCYKsFT5J8JExHm3J6.jpg"
    ],
    "director": false,
-   "logo": "file:art_tools/logos/people_tv/philip-seymour-hoffman.png"
+   "logo": "file:art_tools/logos/people_tv/philip-seymour-hoffman.png",
+   "pick": {
+    "still": "tmdb:/eyRz6WmwryZ2NwS3BmqxWEjCmgJ.jpg",
+    "face": [
+     0.6368,
+     0.3648,
+     0.6848,
+     0.4754
+    ],
+    "film": "The Master"
+   }
   },
   "Viola Davis": {
    "style": "film",
@@ -9048,7 +9078,17 @@
     "tmdb:/2IzdwA5Sx90MyseDVkdjNK51xb6.jpg"
    ],
    "director": false,
-   "logo": "file:art_tools/logos/people_tv/emma-stone.png"
+   "logo": "file:art_tools/logos/people_tv/emma-stone.png",
+   "pick": {
+    "still": "tmdb:/jL6B8mm9TR8vmh9VtgEg0GC7jPy.jpg",
+    "face": [
+     0.5407,
+     0.241,
+     0.6022,
+     0.3836
+    ],
+    "film": "La La Land"
+   }
   },
   "Margot Robbie": {
    "style": "film",
@@ -11598,7 +11638,17 @@
     "tmdb:/7F76OyU7Al83XpgjISm2Tkrp6Ab.jpg"
    ],
    "director": false,
-   "logo": "file:art_tools/logos/people_tv/zendaya.png"
+   "logo": "file:art_tools/logos/people_tv/zendaya.png",
+   "pick": {
+    "still": "tmdb:/8L4mdjd9Zuxju3cDB3spgJ8AOPw.jpg",
+    "face": [
+     0.2444,
+     0.4233,
+     0.3409,
+     0.6294
+    ],
+    "film": "Spider-Man: No Way Home"
+   }
   },
   "Tom Holland": {
    "style": "film",
@@ -11749,7 +11799,17 @@
     "tmdb:/zFwPz6OwqpWhiXM45lIsZBQwGIM.jpg"
    ],
    "director": false,
-   "logo": "file:art_tools/logos/people_tv/tom-holland.png"
+   "logo": "file:art_tools/logos/people_tv/tom-holland.png",
+   "pick": {
+    "still": "tmdb:/9iFpsmj1jvdq7DYdRCCZQmldo74.jpg",
+    "face": [
+     0.5046,
+     0.0865,
+     0.5744,
+     0.2417
+    ],
+    "film": "Spider-Man: Homecoming"
+   }
   },
   "Austin Butler": {
    "style": "film",
