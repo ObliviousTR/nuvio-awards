@@ -70,7 +70,7 @@ class Title:
         self.rgb = np.zeros((H, W, 3), np.float32); self.a = np.zeros((H, W), np.float32)
         self.rgb[y0:y0 + lh, self.x0:self.x0 + lw] = lg[..., :3]; self.a[y0:y0 + lh, self.x0:self.x0 + lw] = lg[..., 3]
         f = ImageFont.truetype(os.path.join(src, "Montserrat-VF.ttf"), 60); f.set_variation_by_axes([800])
-        txt = "COLLECTION"; track = 10
+        txt = "THE COLLECTION"; track = 10
         tw = round(sum(f.getlength(c) for c in txt) + track * len(txt)) + 80
         fill = Image.new("L", (tw, 120), 0); edge = Image.new("L", (tw, 120), 0)
         d1, d2 = ImageDraw.Draw(fill), ImageDraw.Draw(edge); x = 40
