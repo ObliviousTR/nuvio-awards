@@ -1,9 +1,9 @@
 import os, json, urllib.request, urllib.parse
 from concurrent.futures import ThreadPoolExecutor
-# People heroes: each actor's / director's TMDB photos and a textless still from their best-known film.
+# People heroes, take 2: stills from films in which the person is tagged on TMDB (a scene of them, not a cut-out).
 OUT = "refs/hero"; os.makedirs(OUT, exist_ok=True)
 K = os.environ["TMDB_API_KEY"]
-SRC = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))
+P = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))      # name -> person id
 
 
 def get(p, **q):
@@ -18,38 +18,26 @@ def get(p, **q):
     return {}
 
 
-def person(job):
-    row, name = job
-    dept = "Directing" if row == "Legendary Directors" else "Acting"
-    rs = get("/search/person", query={"Joel & Ethan Coen": "Joel Coen"}.get(name, name)).get("results", [])
-    rs = [r for r in rs if r.get("known_for_department") == dept] or rs
-    if not rs:
-        return name, None
-    p = max(rs[:3], key=lambda r: r.get("popularity", 0))
-    ims = get(f"/person/{p['id']}/images").get("profiles", [])
-    ims.sort(key=lambda x: (-x.get("vote_average", 0), -x.get("height", 0)))
-    cr = get(f"/person/{p['id']}/movie_credits")
-    films = cr.get("crew", []) if dept == "Directing" else cr.get("cast", [])
-    if dept == "Directing":
-        films = [f for f in films if f.get("job") == "Director"]
-    if dept == "Acting":                     # films they lead, not cameos and supporting turns in blockbusters
-        films = [f for f in films if f.get("order", 99) <= 1] or films
-    films = sorted({f["id"]: f for f in films}.values(), key=lambda f: -f.get("vote_count", 0))
-    still, film = None, None
-    for f in films[:4]:
-        bd = [b for b in get(f"/movie/{f['id']}/images", include_image_language="null").get("backdrops", [])
-              if not b.get("iso_639_1")]
-        bd.sort(key=lambda b: (-b.get("vote_count", 0), -b.get("width", 0)))
-        if bd:
-            still, film = bd[0]["file_path"], f["title"]
+def tagged(item):
+    name, pid = item
+    out = []
+    for page in (1, 2, 3):
+        r = get(f"/person/{pid}/tagged_images", page=page)
+        for x in r.get("results", []):
+            if x.get("image_type") != "backdrop" or x.get("width", 0) < 1280:
+                continue
+            m = x.get("media") or {}
+            out.append({"path": x["file_path"], "w": x["width"], "h": x["height"], "lang": x.get("iso_639_1"),
+                        "votes": x.get("vote_count", 0), "avg": x.get("vote_average", 0),
+                        "title": m.get("title") or m.get("name"), "pop": m.get("popularity", 0),
+                        "mvotes": m.get("vote_count", 0)})
+        if page >= r.get("total_pages", 1):
             break
-    return name, {"id": p["id"], "photos": [x["file_path"] for x in ims[:20]], "sizes": [[x["width"], x["height"]] for x in ims[:20]], "still": still, "film": film,
-                  "films": [f["title"] for f in films[:5]]}
+    return name, out
 
 
-jobs = [(row, n) for row, ns in SRC.items() for n in ns]
 with ThreadPoolExecutor(8) as ex:
-    res = dict(ex.map(person, jobs))
-json.dump(res, open(f"{OUT}/people_all.json", "w"), ensure_ascii=False, indent=1)
+    res = dict(ex.map(tagged, P.items()))
+json.dump(res, open(f"{OUT}/tagged.json", "w"), ensure_ascii=False)
 for n, v in res.items():
-    print(n, v and (len(v["photos"]), v["film"]))
+    print(n, len(v), sorted({x["title"] for x in v if x["title"]})[:6])
