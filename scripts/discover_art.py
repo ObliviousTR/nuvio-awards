@@ -125,7 +125,7 @@ def fit_text(text, fnt_fn, size, maxw, tr):
     return um.text_layer(text, fnt_fn(size), (255, 255, 255), tr), size
 
 
-def make(img, kicker, word, split, accent, sub):
+def make(img, kicker, word, split, accent, sub, tag=None):
     full, size = fit_text(word, fa.black, 300, W * 0.8, 6)
     fnt = fa.black(size)
     K = um.text_layer(kicker, fa.semi(40), accent, 14)
@@ -200,14 +200,35 @@ def make(img, kicker, word, split, accent, sub):
 
     logo = Image.new("RGBA", full.size, (0, 0, 0, 0))
     logo.alpha_composite(fa.textured(full, texsrc))
+    if tag:
+        logo = tagged(logo, tag, accent)
     return frame, logo
+
+
+def tagged(logo, tag, accent):
+    """the TV title logo with a tag at its end (MOVIES / SERIES), for folders whose word is the same: an accent pill
+    with dark lettering under the word's last letters. Under, not beside it: the TV draws the logo at most 220x100 dp,
+    and a wider logo would shrink the word"""
+    ph = round(logo.height * 0.62)
+    T = um.text_layer(tag, fa.black(round(ph * 0.56)), (16, 16, 20), 6)
+    pad = round(ph * 0.38)
+    pill = Image.new("RGBA", (T.width + 2 * pad, ph), (0, 0, 0, 0))
+    ImageDraw.Draw(pill).rounded_rectangle((0, 0, pill.width - 1, ph - 1), radius=round(ph * 0.2), fill=accent + (255,))
+    pill.alpha_composite(T, (pad, (ph - T.height) // 2))
+    gap = round(logo.height * 0.16)
+    out = Image.new("RGBA", (logo.width, logo.height + gap + ph), (0, 0, 0, 0))
+    out.alpha_composite(logo)
+    out.alpha_composite(pill, (logo.width - pill.width, logo.height + gap))
+    return out
 
 
 def render(fid, kicker, word, split, accent, spec, out, today, used):
     kind, tid, name, path = pick(spec, today, used)
     img = art.fetch(path).convert("RGB")
     sub = subtitle(spec, name)
-    frame, logo = make(img, kicker, word, split, accent, sub)
+    # Trending Movies and Trending Series share their word: their TV logos carry the kicker as a tag
+    same = sum(f[3] == word for f in FOLDERS) > 1
+    frame, logo = make(img, kicker, word, split, accent, sub, tag=kicker if same else None)
     d = os.path.join(out, fid)
     os.makedirs(d, exist_ok=True)
     frame(1.0, 0.5).save(os.path.join(d, "cover.jpg"), quality=88)
