@@ -36,27 +36,35 @@ def _hmask(w, h, stops):
     return m.resize((w, h))
 
 
-def wall(posters, tint=(20, 20, 26), glow=None, seed=1, angle=-9.0, cols=7, rows=4):
-    """posters: PIL images (2:3). A tilted wall of them on the right, rows offset like bricks, fading left and down."""
+def wall(posters, tint=(20, 20, 26), glow=None, seed=1, angle=-9.0, cols=7, rows=4, shade=1.0):
+    """posters: PIL images (2:3). A tilted wall of them on the right, rows offset like bricks, fading left and down.
+    shade: how much the wall itself is darkened (1 = the Favourites look; lower = brighter posters)."""
     rnd = random.Random(seed)
     pw, ph = 230, 345
     gap = 16
     cw, chh = cols * (pw + gap) + pw, rows * (ph + gap) + ph
     sheet = Image.new("RGB", (cw, chh), tint)
     ps = list(posters)
-    k = 0
+    scale = 1.18
+    # the posters go best first into the slots nearest the spot both TV layouts show clearly (right, upper half), so
+    # a platform's best-known titles are the ones in view, not those lost off the frame's edge or in the fade
+    th = math.radians(angle)
+    slots = []
     for r in range(rows + 1):
         off = (pw + gap) // 2 if r % 2 else 0
         for c in range(cols + 1):
-            if not ps:
-                break
-            p = ps[k % len(ps)]
-            k += 1
-            p = _cover(p.convert("RGB"), pw, ph, cy=0.0)
-            sheet.paste(p, (c * (pw + gap) - off, r * (ph + gap) - ph // 3))
+            sx, sy = c * (pw + gap) - off, r * (ph + gap) - ph // 3
+            dx, dy = sx + pw / 2 - cw / 2, sy + ph / 2 - chh / 2
+            fx = W * 0.70 + scale * (math.cos(th) * dx + math.sin(th) * dy)
+            fy = H * 0.42 + scale * (-math.sin(th) * dx + math.cos(th) * dy)
+            slots.append((math.hypot((fx - W * 0.76) / W, (fy - H * 0.32) / H * 0.8), sx, sy))
+    slots.sort()
+    for k, (_, sx, sy) in enumerate(slots):
+        if not ps:
+            break
+        sheet.paste(_cover(ps[k % len(ps)].convert("RGB"), pw, ph, cy=0.0), (sx, sy))
     sheet = sheet.rotate(angle, resample=Image.BICUBIC, expand=True, fillcolor=tint)
     # place: the wall's centre right of the frame's centre, a little high
-    scale = 1.18
     sheet = sheet.resize((round(sheet.width * scale), round(sheet.height * scale)), Image.LANCZOS)
     canvas = Image.new("RGB", (W, H), tint)
     x = round(W * 0.70 - sheet.width / 2)
@@ -66,9 +74,10 @@ def wall(posters, tint=(20, 20, 26), glow=None, seed=1, angle=-9.0, cols=7, rows
     soft = canvas.filter(ImageFilter.GaussianBlur(3))
     canvas = Image.composite(canvas, soft, _hmask(W, H, [(0, 0), (0.45, 120), (0.7, 255), (1, 255)]))
     dark = Image.new("RGB", (W, H), tint)
-    canvas = Image.composite(dark, canvas, _hmask(W, H, [(0, 235), (0.35, 150), (0.62, 40), (1, 0)]))
+    canvas = Image.composite(dark, canvas, _hmask(W, H, [(0, 235), (0.35, round(150 * shade)), (0.62, round(40 * shade)),
+                                                         (1, 0)]))
     vg = Image.radial_gradient("L").resize((W, H)).point(lambda v: int(min(255, v * 0.9)))
-    canvas = Image.composite(dark, canvas, vg.point(lambda v: int(v * 0.55)))
+    canvas = Image.composite(dark, canvas, vg.point(lambda v: int(v * 0.55 * shade)))
     if glow:
         g = Image.new("RGB", (W, H), glow)
         canvas = Image.composite(g, canvas, _hmask(W, H, [(0, 0), (0.6, 0), (1, 46)]))

@@ -79,7 +79,8 @@ def build(spec, folder):
         refs = poster_refs(spec["posters"])[:36]
         with ThreadPoolExecutor(12) as ex:
             ps = [p for p in ex.map(lambda r: load(r, "w342"), refs) if p is not None]
-        return hs.wall(ps, glow=hex_rgb(spec["glow"]) if spec.get("glow") else None, seed=spec.get("seed", 1))
+        return hs.wall(ps, glow=hex_rgb(spec["glow"]) if spec.get("glow") else None, seed=spec.get("seed", 1),
+                       shade=spec.get("shade", 1.0))
     if st == "portrait":
         with ThreadPoolExecutor(6) as ex:
             photos = list(ex.map(load, spec["photos"][:6]))
