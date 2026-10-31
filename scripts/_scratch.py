@@ -60,7 +60,7 @@ with ThreadPoolExecutor(8) as ex:
     outs = list(ex.map(lambda j: run(j[3]), jobs))
 for (row, folder, i, s), items in zip(jobs, outs):
     res.setdefault(row, {}).setdefault(folder, []).append({"source": s["title"], "items": items})
-json.dump(res, open(f"{OUT}/rows.json", "w"), ensure_ascii=False)
+json.dump(res, open(f"{OUT}/rows_extra.json", "w"), ensure_ascii=False)
 for row, fs in res.items():
     for folder, lists in fs.items():
         print(row, "/", folder, [len(l["items"]) for l in lists])
