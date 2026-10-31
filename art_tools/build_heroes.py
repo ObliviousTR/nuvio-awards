@@ -88,9 +88,16 @@ def build(spec, folder):
                        shade=spec.get("shade", 1.0))
     if st == "portrait":
         with ThreadPoolExecutor(6) as ex:
-            photos = list(ex.map(load, spec["photos"][:6]))
+            refs = [r for r, wh in zip(spec["photos"], spec.get("sizes") or [[0, 9999]] * len(spec["photos"]))
+                    if wh[1] >= 700][:20] or spec["photos"][:6]                    # sharp enough for the TV
+            photos = list(ex.map(lambda r: load(r, "h632"), refs))                # 632 px tall is plenty to choose by
+        spec = dict(spec, photos=refs)
+        best = hs.best_photo(photos, min_h=0)
+        i = photos.index(best) if best is not None else 0
+        _cache.pop(spec["photos"][i], None)
+        photos[i] = load(spec["photos"][i])                                       # the chosen one at full size
         still = load(spec["src"], "w1280") if spec.get("src") else None
-        return hs.portrait(hs.best_photo(photos), still, mono=spec.get("mono", False))
+        return hs.portrait(photos[i], still, mono=spec.get("mono", False))
     raise ValueError(st)
 
 

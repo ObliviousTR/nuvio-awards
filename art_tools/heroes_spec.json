@@ -3234,10 +3234,104 @@
     "tmdb:/vfbfcqINRHzXNTenycHIjNO6Va7.jpg",
     "tmdb:/cCECRgy3E1e1jE6y5xtSsThnLid.jpg",
     "tmdb:/iqJ6g9fTKjpp1zWH9v72whXeGIK.jpg",
-    "tmdb:/3p3Lflusrkmu9FjgbE24ZgGp1d5.jpg"
+    "tmdb:/3p3Lflusrkmu9FjgbE24ZgGp1d5.jpg",
+    "tmdb:/jZjzU3wHXThL6J0eCzrm9pNvOLV.jpg",
+    "tmdb:/fOxM5sPIzJyM9LPG2GNFiRqCfbN.jpg",
+    "tmdb:/8659cdumFKdn3zQHZBFlvEAsAo7.jpg",
+    "tmdb:/79EtnEvy3CbgIrn6YyqfpYFjJtZ.jpg",
+    "tmdb:/a5Sy6s900mewhuRFl7TZQ2wvFlX.jpg",
+    "tmdb:/mZF9Qto63b84LeWnQ57JVN3OOFD.jpg",
+    "tmdb:/lNK0BtzeJpwhd9MQFMiwE05dqd4.jpg",
+    "tmdb:/uShTjBweoSbaoEPxcsk9XM5wNcv.jpg",
+    "tmdb:/pj45V86zcQqMeOj1oSGPkUDogXv.jpg",
+    "tmdb:/ejwqd4zinvugbInnYexieUEJ6yj.jpg",
+    "tmdb:/wOfwWgaG1AIfXljb0EObMJWHQN2.jpg",
+    "tmdb:/4AH8o0c0oKF0AstlAeersMYFTRt.jpg"
    ],
    "src": "tmdb:/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
-   "logo": "file:art_tools/logos/people/al-pacino.png"
+   "logo": "file:art_tools/logos/people_tv/al-pacino.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     633,
+     950
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     473,
+     710
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     966,
+     1440
+    ],
+    [
+     561,
+     842
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1997,
+     2995
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     700,
+     1050
+    ],
+    [
+     1284,
+     1921
+    ],
+    [
+     466,
+     699
+    ],
+    [
+     853,
+     1280
+    ],
+    [
+     766,
+     1150
+    ]
+   ]
   },
   "Robert De Niro": {
    "style": "portrait",
@@ -3249,10 +3343,74 @@
     "tmdb:/tSRuZjA3VIyyyHDt3LoTlna1nLB.jpg",
     "tmdb:/bpvESs8zwPyGnzFN5ex9yr41RFC.jpg",
     "tmdb:/plQP28L7nrezzP2T450HZTZAEPV.jpg",
-    "tmdb:/oZ0dBXubgHlNrI9T4cIiLUZaFT8.jpg"
+    "tmdb:/oZ0dBXubgHlNrI9T4cIiLUZaFT8.jpg",
+    "tmdb:/iWqYYOyQ8nPRu8KofaUqFXSo5rv.jpg",
+    "tmdb:/lY4qFhh7YuOE9jHWgFHwfd2PGud.jpg",
+    "tmdb:/tuWZD6IX9r7Hf1Xp4X7tnPRQ42U.jpg",
+    "tmdb:/eOgVxgmxCvR1NAK1T8amsxtfYEF.jpg",
+    "tmdb:/dKnFkOdlMQTCjpPX7rys82Yy9v2.jpg",
+    "tmdb:/j31BJvd2mqFqC5aI1vLJUkSq7IH.jpg"
    ],
    "src": "tmdb:/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
-   "logo": "file:art_tools/logos/people/robert-de-niro.png"
+   "logo": "file:art_tools/logos/people_tv/robert-de-niro.png",
+   "sizes": [
+    [
+     800,
+     1200
+    ],
+    [
+     1770,
+     2655
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1996,
+     2994
+    ],
+    [
+     725,
+     1088
+    ],
+    [
+     691,
+     1036
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1642,
+     2463
+    ],
+    [
+     705,
+     1060
+    ],
+    [
+     857,
+     1285
+    ],
+    [
+     699,
+     1049
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1626,
+     2438
+    ],
+    [
+     620,
+     930
+    ]
+   ]
   },
   "Jack Nicholson": {
    "style": "portrait",
@@ -3264,10 +3422,84 @@
     "tmdb:/rmwgMiLjy1QgFCz1TDWDqpO6dq4.jpg",
     "tmdb:/sX2eryfpUdlGsZOzoDlszmQYyPP.jpg",
     "tmdb:/h2pycOqVXV1jQQGruqsWh9ktkNX.jpg",
-    "tmdb:/jYAgbLlcrhYHrqq9gydAxrbCDwf.jpg"
+    "tmdb:/jYAgbLlcrhYHrqq9gydAxrbCDwf.jpg",
+    "tmdb:/di4unPvyShz0KsaZTQ6jFp8KrnH.jpg",
+    "tmdb:/4aaZ3DzNkRw44AoxGVY0pJqMVFr.jpg",
+    "tmdb:/vo7tawpIHI0YmGrZFrvOZa1gyeN.jpg",
+    "tmdb:/l0kca3XYpQktyJTwZJ6bpd9LNbF.jpg",
+    "tmdb:/b8Osw0y0T3wQuoVLztG38HoF5kk.jpg",
+    "tmdb:/h9A91nMrI0E2nDDsxMiHMmCWvBi.jpg",
+    "tmdb:/jmnHGv5x5bICXuGNF1uaKskUNC6.jpg",
+    "tmdb:/9p30okgObQv3c1UUSwMNvOUsyZK.jpg"
    ],
    "src": "tmdb:/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
-   "logo": "file:art_tools/logos/people/jack-nicholson.png"
+   "logo": "file:art_tools/logos/people_tv/jack-nicholson.png",
+   "sizes": [
+    [
+     897,
+     1345
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     854,
+     1281
+    ],
+    [
+     677,
+     1016
+    ],
+    [
+     1070,
+     1600
+    ],
+    [
+     321,
+     482
+    ],
+    [
+     795,
+     1193
+    ],
+    [
+     350,
+     525
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     531,
+     797
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     640,
+     960
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     593,
+     889
+    ]
+   ]
   },
   "Anthony Hopkins": {
    "style": "portrait",
@@ -3279,10 +3511,84 @@
     "tmdb:/9ukJS2QWTJ22HcwR1ktMmoJ6RSL.jpg",
     "tmdb:/uFU4dtQthX5EffTW280eHCY5oub.jpg",
     "tmdb:/izlT2Ndqyt1c0ZG9JVCjkL4ChL2.jpg",
-    "tmdb:/dIiua9YoyouR1hEqpKND8wZTWGt.jpg"
+    "tmdb:/dIiua9YoyouR1hEqpKND8wZTWGt.jpg",
+    "tmdb:/yiutS5KPddCJ7hScRk9zfsh1vz8.jpg",
+    "tmdb:/9pizqAeWKUdzyzbX6L6YgKzNpll.jpg",
+    "tmdb:/xMpfOn7IHjvRdeiuU79WrRGKyd1.jpg",
+    "tmdb:/iehVUf9U3erYg94hrQMI6KxWXYZ.jpg",
+    "tmdb:/w07SOxoiq4GRy6i6YTuPAFBl0pP.jpg",
+    "tmdb:/vQ8VDVoJH9YZasD6b0SRDs413QH.jpg",
+    "tmdb:/hJOjyvrHHYZuNs4TMjmofNGW8tD.jpg",
+    "tmdb:/zUvM3WSxE47jtknTghfjnZwSMXg.jpg"
    ],
    "src": "tmdb:/aYcnDyLMnpKce1FOYUpZrXtgUye.jpg",
-   "logo": "file:art_tools/logos/people/anthony-hopkins.png"
+   "logo": "file:art_tools/logos/people_tv/anthony-hopkins.png",
+   "sizes": [
+    [
+     1500,
+     2250
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     666,
+     1000
+    ],
+    [
+     567,
+     850
+    ],
+    [
+     1244,
+     1866
+    ],
+    [
+     1740,
+     2610
+    ],
+    [
+     683,
+     1024
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     467,
+     700
+    ],
+    [
+     516,
+     774
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     800,
+     1200
+    ]
+   ]
   },
   "Meryl Streep": {
    "style": "portrait",
@@ -3294,10 +3600,84 @@
     "tmdb:/mwimWeTiLoTKnYBsTy7E5P1IxDC.jpg",
     "tmdb:/vAzKggFbilf6eG1RY2lj6pdhrKl.jpg",
     "tmdb:/v59FjBat2WXuSYttr1O1FTAh4qZ.jpg",
-    "tmdb:/9kZ3Ckzw6HySZm6AGfETMMODxmc.jpg"
+    "tmdb:/9kZ3Ckzw6HySZm6AGfETMMODxmc.jpg",
+    "tmdb:/vkYVP9SubmLZSywTtGxgQyR6CLx.jpg",
+    "tmdb:/eq7E6jnCP0DEb48KrIvhA9VJAP9.jpg",
+    "tmdb:/wLq1qv2d4h5P3FmF9lcOja8p1Dw.jpg",
+    "tmdb:/m8rV9Escg7HWBf7FnLyx3ACIAE0.jpg",
+    "tmdb:/sQpFhPBuIkuCGjpVpDwYUVdhsTZ.jpg",
+    "tmdb:/7GJt1NLAkhnmTQDMWFm1UTIJRFg.jpg",
+    "tmdb:/p8JpWcTmpIssmZl6P1t10C844JB.jpg",
+    "tmdb:/wHre7gUrrwqOcS35opWVT6aPvt1.jpg"
    ],
    "src": "tmdb:/3tWw50B1xXlCnJ9A7NX4nNzZF4j.jpg",
-   "logo": "file:art_tools/logos/people/meryl-streep.png"
+   "logo": "file:art_tools/logos/people_tv/meryl-streep.png",
+   "sizes": [
+    [
+     460,
+     690
+    ],
+    [
+     1270,
+     1905
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     379,
+     569
+    ],
+    [
+     1199,
+     1800
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     394,
+     592
+    ],
+    [
+     378,
+     568
+    ],
+    [
+     854,
+     1280
+    ],
+    [
+     474,
+     710
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     581,
+     872
+    ]
+   ]
   },
   "Tom Hanks": {
    "style": "portrait",
@@ -3309,10 +3689,104 @@
     "tmdb:/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg",
     "tmdb:/eGl2MpUqzcoAj75YoE6iTHVGhU7.jpg",
     "tmdb:/sjzxil5RNdkeadWdcHBxkmsOjvC.jpg",
-    "tmdb:/sou8CHR4z5Mh2CpyUHxi7t0fnO4.jpg"
+    "tmdb:/sou8CHR4z5Mh2CpyUHxi7t0fnO4.jpg",
+    "tmdb:/1QZRIBynhcbf2vAl3ZvvFUFfDCV.jpg",
+    "tmdb:/2gY92j2lkNHL2cThBhPmgXLd5PL.jpg",
+    "tmdb:/nMycpQMTNp2aUisZ0qzcGD4LJts.jpg",
+    "tmdb:/tAyAXPLnR9Sgi7x2lMV4PUPitai.jpg",
+    "tmdb:/g0JvDnfap6WnNvCgYUu79RGtyDO.jpg",
+    "tmdb:/t6kFuln1OsSk6Kwywm6SI3dCBBO.jpg",
+    "tmdb:/2lKOiGgbLVtbeycKDr4vXqC7DLB.jpg",
+    "tmdb:/uklsCQmpBaDFQQpwMNlEiCVBSyX.jpg",
+    "tmdb:/zGU5tg7fR9WCu8yULudO23l301m.jpg",
+    "tmdb:/5h5L1YG5VVTdNGYmJGfI9qU6wEq.jpg",
+    "tmdb:/2zuXv6kguyMjBbNqr7Chxx5upVD.jpg",
+    "tmdb:/lv20WQMfg7aGqw4M44XScx9URuV.jpg"
    ],
    "src": "tmdb:/ghgfzbEV7kbpbi1O8eIILKVXEA8.jpg",
-   "logo": "file:art_tools/logos/people/tom-hanks.png"
+   "logo": "file:art_tools/logos/people_tv/tom-hanks.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     625,
+     937
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     874,
+     1311
+    ],
+    [
+     635,
+     953
+    ],
+    [
+     446,
+     669
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     345,
+     517
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     626,
+     939
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1144,
+     1713
+    ],
+    [
+     640,
+     962
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     703,
+     1054
+    ],
+    [
+     1279,
+     1919
+    ],
+    [
+     400,
+     600
+    ]
+   ]
   },
   "Harrison Ford": {
    "style": "portrait",
@@ -3324,10 +3798,79 @@
     "tmdb:/ActhM39LTxgx3tnJv3s5nM6hGD1.jpg",
     "tmdb:/vBFKJnxx19Jsqi1EhXE4RNu3RjN.jpg",
     "tmdb:/fPKTfCiWbjkBnM3Gbj0FV9BjdoO.jpg",
-    "tmdb:/3xyxpdbsXTmADikgN4ShHT6GCEt.jpg"
+    "tmdb:/3xyxpdbsXTmADikgN4ShHT6GCEt.jpg",
+    "tmdb:/wvDa1dlrADpvpOOwokSJMlKGC3T.jpg",
+    "tmdb:/rMKjZLwGPx6HzQv2IM0keHja6Zj.jpg",
+    "tmdb:/bs6JP5bWulzc1kIFPSMJNgfcIlk.jpg",
+    "tmdb:/k04jACTaKe5b3RFEvxv6rHkHtzo.jpg",
+    "tmdb:/20XPRZthyp3JMVW83WhjaPRmbPq.jpg",
+    "tmdb:/uXcmbl2sM7A6t6pKGyeLbrsxbjM.jpg",
+    "tmdb:/zIJfEXRh8dGIS3FHD0v5a1QFByv.jpg"
    ],
    "src": "tmdb:/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
-   "logo": "file:art_tools/logos/people/harrison-ford.png"
+   "logo": "file:art_tools/logos/people_tv/harrison-ford.png",
+   "sizes": [
+    [
+     727,
+     1091
+    ],
+    [
+     559,
+     838
+    ],
+    [
+     1373,
+     2060
+    ],
+    [
+     993,
+     1488
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     446,
+     668
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     864,
+     1296
+    ],
+    [
+     479,
+     717
+    ],
+    [
+     699,
+     1048
+    ],
+    [
+     1712,
+     2568
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1590,
+     2385
+    ],
+    [
+     682,
+     1024
+    ]
+   ]
   },
   "Denzel Washington": {
    "style": "portrait",
@@ -3339,10 +3882,104 @@
     "tmdb:/cEU2Vrdo83izpGmOvbVAOz5jCof.jpg",
     "tmdb:/psYRFKEmhxXubY9LB0zY68c5bcS.jpg",
     "tmdb:/gqWdwCoQP8aL2qL6eZgkFwghp7u.jpg",
-    "tmdb:/6sISfYKRK8aizxjOxxbSf3z6TOc.jpg"
+    "tmdb:/6sISfYKRK8aizxjOxxbSf3z6TOc.jpg",
+    "tmdb:/semwsON3dN3np6cyzlCw7F2YDGe.jpg",
+    "tmdb:/AHUnhGbnWnjin4M2sNdZYAei9h.jpg",
+    "tmdb:/8osNHZW1ZlBVp50xVdWH0fGu9Dx.jpg",
+    "tmdb:/tRYHzK6WmxOCrqeO3OnEUAF5ied.jpg",
+    "tmdb:/eIAsUqUdq4x9qZNvQKA1NWKlzNj.jpg",
+    "tmdb:/8bSw5zpBYFo6zjazSIt4aZmiEjx.jpg",
+    "tmdb:/oQJhfHAHkl8rED52irjP0ECCfI3.jpg",
+    "tmdb:/bO8idh7mZ6GZRmXyFQ0k8ooxFkK.jpg",
+    "tmdb:/5P2nGubsxWxnQB71J4pLpDCs83M.jpg",
+    "tmdb:/isWhzExzS9wUTgJqqkDvltRvYcx.jpg",
+    "tmdb:/nB9vstAVqp9wlx1ZcwHxzIn5oGD.jpg",
+    "tmdb:/8gRY9TlpV70vsRbUXYSme4UYoWP.jpg"
    ],
    "src": "tmdb:/9vAoubhoZE8aSkUZoSfxs3UWZhO.jpg",
-   "logo": "file:art_tools/logos/people/denzel-washington.png"
+   "logo": "file:art_tools/logos/people_tv/denzel-washington.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     484,
+     725
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     677,
+     1016
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     662,
+     993
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     645,
+     968
+    ],
+    [
+     602,
+     902
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     945,
+     1417
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     728,
+     1092
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     680,
+     1020
+    ],
+    [
+     420,
+     630
+    ]
+   ]
   },
   "Daniel Day-Lewis": {
    "style": "portrait",
@@ -3354,10 +3991,89 @@
     "tmdb:/zvsIA89Y7HPC6ZXLbJoC3MXS71w.jpg",
     "tmdb:/5J43EFBCSzbgXc46YjJBYswihTT.jpg",
     "tmdb:/bUUX8ppRMOKOB5UB9bhev4Rq4w2.jpg",
-    "tmdb:/true2FJMdoH5o8ORu67tToqH74a.jpg"
+    "tmdb:/true2FJMdoH5o8ORu67tToqH74a.jpg",
+    "tmdb:/3CghmDL7V3w5NYjJUkiqWLIQv8Q.jpg",
+    "tmdb:/jdEbEzHCaEGo0RkamvkjokzNtDS.jpg",
+    "tmdb:/yKkMb7eteaHA01acmMXuiRVE322.jpg",
+    "tmdb:/8h27d18Dvz78PfiXcZtWFUoVQ31.jpg",
+    "tmdb:/bUMJ4bJqRFWU0uhqVX4vXV4k3jK.jpg",
+    "tmdb:/7ifYaSZ0X8EVhS08JnhbfP1xb9U.jpg",
+    "tmdb:/aAySeL8Jgwa2kNapI0js9zPeA5m.jpg",
+    "tmdb:/tWf7ASvlGDzV0LdGBN2osWk9JDw.jpg",
+    "tmdb:/9qUVqOfRoMJKueEabs0ciQe9PDK.jpg"
    ],
    "src": "tmdb:/8LRcCJjbQI552BMCuGgYqph8USS.jpg",
-   "logo": "file:art_tools/logos/people/daniel-day-lewis.png"
+   "logo": "file:art_tools/logos/people_tv/daniel-day-lewis.png",
+   "sizes": [
+    [
+     800,
+     1200
+    ],
+    [
+     491,
+     736
+    ],
+    [
+     615,
+     922
+    ],
+    [
+     760,
+     1140
+    ],
+    [
+     1515,
+     2273
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     374,
+     561
+    ],
+    [
+     577,
+     866
+    ],
+    [
+     532,
+     798
+    ],
+    [
+     468,
+     702
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     737,
+     1105
+    ],
+    [
+     694,
+     1042
+    ],
+    [
+     582,
+     873
+    ],
+    [
+     582,
+     872
+    ],
+    [
+     475,
+     712
+    ]
+   ]
   },
   "Morgan Freeman": {
    "style": "portrait",
@@ -3369,10 +4085,104 @@
     "tmdb:/1ahENoyEgKSbRUd0IsydIff7rt1.jpg",
     "tmdb:/nhFqNPXDyWTRzHqIUqwayfvDmCn.jpg",
     "tmdb:/iuX6R4Sfm6FK5nbfSQ8OgvWcOjy.jpg",
-    "tmdb:/8A16mBjMxfM3UFb7EHstl8bEkqH.jpg"
+    "tmdb:/8A16mBjMxfM3UFb7EHstl8bEkqH.jpg",
+    "tmdb:/1IJitSMAQjgi6FOvuPptMyHmYCJ.jpg",
+    "tmdb:/b1BHmOAxMMB7KRIZZauwZb1AFtz.jpg",
+    "tmdb:/g2n87hnxD0w2suSBMv0BMoB4gef.jpg",
+    "tmdb:/drsddWSFunSJJDV467TD7S9cZON.jpg",
+    "tmdb:/x8zEprbEN1I0OTHIbYyaxdc4msz.jpg",
+    "tmdb:/ttkWK0DgBkL7FEMS396HMAt1l0F.jpg",
+    "tmdb:/mZSqy8yRO7xHtne9aM7YO6cFNGk.jpg",
+    "tmdb:/5dgYqJR2CH8KV8EtWrs7GquQ4wc.jpg",
+    "tmdb:/lKORNoSPdNH9BvvJqQp9Nu7gTw9.jpg",
+    "tmdb:/6zrburasB0CTZmr2cYRmxibCslZ.jpg",
+    "tmdb:/jSBy7nfRxr8zgBZ7ysFEPO7gqKD.jpg",
+    "tmdb:/4upFBJKdD5o9by558In0thP5v5h.jpg"
    ],
    "src": "tmdb:/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
-   "logo": "file:art_tools/logos/people/morgan-freeman.png"
+   "logo": "file:art_tools/logos/people_tv/morgan-freeman.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     1800,
+     2700
+    ],
+    [
+     666,
+     999
+    ],
+    [
+     747,
+     1120
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     725,
+     1088
+    ],
+    [
+     683,
+     1025
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     584,
+     877
+    ]
+   ]
   },
   "Robin Williams": {
    "style": "portrait",
@@ -3385,7 +4195,33 @@
     "tmdb:/dIo5o69LoMpTFJOfLGLGKp4YWgB.jpg"
    ],
    "src": "tmdb:/bpV8wn48s82au37QyUJ51S7X2Vf.jpg",
-   "logo": "file:art_tools/logos/people/robin-williams.png"
+   "logo": "file:art_tools/logos/people_tv/robin-williams.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1120,
+     1680
+    ],
+    [
+     1296,
+     1944
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     666,
+     1000
+    ]
+   ]
   },
   "Gary Oldman": {
    "style": "portrait",
@@ -3397,10 +4233,84 @@
     "tmdb:/8RI7JR6c3fZLPARmteufwaINk7Z.jpg",
     "tmdb:/ioVNfh5m8IyoM1DXRIiOU658RXm.jpg",
     "tmdb:/3cOTcPeJNxBjHashuZ1KFAiU2T8.jpg",
-    "tmdb:/hHP0769L7YrApkMKCOyb9cwgxBW.jpg"
+    "tmdb:/hHP0769L7YrApkMKCOyb9cwgxBW.jpg",
+    "tmdb:/7DKdzGtFDbE84Pf96IQ2HDDilCd.jpg",
+    "tmdb:/3mr77nrZ1sUFBZrhuNyIQG4giYf.jpg",
+    "tmdb:/6g9Qvefb5zvhg3j6vFZUrkrhVTK.jpg",
+    "tmdb:/pp21unPsFDSE3uGs5x9J65AaqMn.jpg",
+    "tmdb:/peKJ7hFHE0Z7YaO9dUmCChI2iHA.jpg",
+    "tmdb:/j5eCpaDiZaROR2d73gQmhc4rz5s.jpg",
+    "tmdb:/yu2w0xqwhX6IBoZOoxboZkSbPSB.jpg",
+    "tmdb:/fUnHz2iHF51bU90U5tanqXR09i4.jpg"
    ],
    "src": "tmdb:/c3OHQncTAnKFhdOTX7D3LTW6son.jpg",
-   "logo": "file:art_tools/logos/people/gary-oldman.png"
+   "logo": "file:art_tools/logos/people_tv/gary-oldman.png",
+   "sizes": [
+    [
+     1440,
+     2160
+    ],
+    [
+     656,
+     984
+    ],
+    [
+     1363,
+     2048
+    ],
+    [
+     656,
+     984
+    ],
+    [
+     877,
+     1315
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     433,
+     650
+    ],
+    [
+     415,
+     622
+    ],
+    [
+     1506,
+     2259
+    ],
+    [
+     683,
+     1024
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     666,
+     1000
+    ],
+    [
+     633,
+     949
+    ],
+    [
+     557,
+     835
+    ],
+    [
+     598,
+     895
+    ],
+    [
+     434,
+     652
+    ]
+   ]
   },
   "Samuel L. Jackson": {
    "style": "portrait",
@@ -3412,10 +4322,104 @@
     "tmdb:/1HlPCK9HgqTNo1mpYLH0Ty2kuq8.jpg",
     "tmdb:/zH892WVnrp65Rw4dx0BOKIEwTs.jpg",
     "tmdb:/b6ywb69BySY5f2rcpuel7093Td.jpg",
-    "tmdb:/nHa0el66nAf50XJXZwTbIIqUJwQ.jpg"
+    "tmdb:/nHa0el66nAf50XJXZwTbIIqUJwQ.jpg",
+    "tmdb:/qjYcO8jKNlb7lnJ05vh2U7lNt8r.jpg",
+    "tmdb:/gNTKmHT8s7TgRe9kf8MB6xRg5YO.jpg",
+    "tmdb:/9kpa7bHyulYFe6pVq3WQTJI45AU.jpg",
+    "tmdb:/nu2A0q74nHFdG7tTmBJuBoe6juA.jpg",
+    "tmdb:/jv4zXZmZZonC3ub6f2SSLGI048s.jpg",
+    "tmdb:/yYpPvzdEKud48En8wbtGXs4C9Kk.jpg",
+    "tmdb:/aMLJ1g84ykkxFnylEHUipY15yaF.jpg",
+    "tmdb:/q5CtA4VZ4JiAz8gxlQ4fIgPdojA.jpg",
+    "tmdb:/99dMdw68s4MAtTqLCXBpXQzISAN.jpg",
+    "tmdb:/gljmgJAfi8bCj9jTbnyIVMlndEB.jpg",
+    "tmdb:/lGulk5CSmILmQ0QGnrI8xv92D4P.jpg",
+    "tmdb:/r9ntltFlXHGPiPZr9AHjJJSqsS8.jpg"
    ],
    "src": "tmdb:/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
-   "logo": "file:art_tools/logos/people/samuel-l-jackson.png"
+   "logo": "file:art_tools/logos/people_tv/samuel-l-jackson.png",
+   "sizes": [
+    [
+     1125,
+     1688
+    ],
+    [
+     1897,
+     2846
+    ],
+    [
+     509,
+     764
+    ],
+    [
+     1022,
+     1533
+    ],
+    [
+     607,
+     911
+    ],
+    [
+     1002,
+     1502
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     352,
+     528
+    ],
+    [
+     1059,
+     1589
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     722,
+     1083
+    ],
+    [
+     640,
+     960
+    ],
+    [
+     1264,
+     1896
+    ],
+    [
+     1198,
+     1796
+    ],
+    [
+     1183,
+     1775
+    ],
+    [
+     910,
+     1365
+    ],
+    [
+     888,
+     1333
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     574,
+     860
+    ]
+   ]
   },
   "Jim Carrey": {
    "style": "portrait",
@@ -3427,10 +4431,69 @@
     "tmdb:/kuSlwTPsVlBMW0cvnFmbZce6PaV.jpg",
     "tmdb:/voVRksr8micr3cuvB660KQNhT8.jpg",
     "tmdb:/gtNAZTRUsVvOM4EUZNV1QmOFsmu.jpg",
-    "tmdb:/x9gLeFOSPk6lejulmeJxOGy9VfV.jpg"
+    "tmdb:/x9gLeFOSPk6lejulmeJxOGy9VfV.jpg",
+    "tmdb:/3rvrjpTI1EihiNnp0XSUpVMSgm8.jpg",
+    "tmdb:/go1dX1cA2q3CTuW2i7klrm3rgUz.jpg",
+    "tmdb:/zk6VDRIdIuioCK8feZNXnojuL8J.jpg",
+    "tmdb:/7StkDBzjRKPLF9BKVKCe1gN4aVU.jpg",
+    "tmdb:/pM7hcpnw78rWEwL2c8b5FRTgFEb.jpg"
    ],
    "src": "tmdb:/aCHn2TXYJfzPXQKA6r9mKPbMlUB.jpg",
-   "logo": "file:art_tools/logos/people/jim-carrey.png"
+   "logo": "file:art_tools/logos/people_tv/jim-carrey.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1480,
+     2220
+    ],
+    [
+     331,
+     497
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     533,
+     799
+    ],
+    [
+     853,
+     1280
+    ],
+    [
+     1735,
+     2603
+    ],
+    [
+     770,
+     1155
+    ],
+    [
+     666,
+     999
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     300,
+     450
+    ]
+   ]
   },
   "Jackie Chan": {
    "style": "portrait",
@@ -3442,10 +4505,64 @@
     "tmdb:/m2jc4PYkxWp7lvKN78YXOF0Otak.jpg",
     "tmdb:/9oCxDgiqW8rKEjVjAA6y2aq8vni.jpg",
     "tmdb:/g3kCHby3noSNuUmrtwXag00LqJx.jpg",
-    "tmdb:/fdkJ0UsG7WuID3damcFmWvGZVP7.jpg"
+    "tmdb:/fdkJ0UsG7WuID3damcFmWvGZVP7.jpg",
+    "tmdb:/pd5n3l9MutC5tEyXgisuOvF9pNy.jpg",
+    "tmdb:/71JR0hOop7EnPAVqDaXVbNISGfQ.jpg",
+    "tmdb:/enEyZ01Z3PF9uBeDmt8hWJaVbCz.jpg",
+    "tmdb:/2SrhNWOYM9sz3kTQMebwRFj7CpH.jpg"
    ],
    "src": "tmdb:/y2Cl2LBYaabgtSLlOa4VqnOiNin.jpg",
-   "logo": "file:art_tools/logos/people/jackie-chan.png"
+   "logo": "file:art_tools/logos/people_tv/jackie-chan.png",
+   "sizes": [
+    [
+     1335,
+     2002
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Frances McDormand": {
    "style": "portrait",
@@ -3460,7 +4577,41 @@
     "tmdb:/b9uQk55tWqSJ63ldSZUwkdMu5c3.jpg"
    ],
    "src": "tmdb:/huz4SOpcd2XjJiLVX6xmQZYiiDA.jpg",
-   "logo": "file:art_tools/logos/people/frances-mcdormand.png"
+   "logo": "file:art_tools/logos/people_tv/frances-mcdormand.png",
+   "sizes": [
+    [
+     483,
+     725
+    ],
+    [
+     872,
+     1307
+    ],
+    [
+     1587,
+     2380
+    ],
+    [
+     766,
+     1149
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     600,
+     900
+    ]
+   ]
   },
   "Leonardo DiCaprio": {
    "style": "portrait",
@@ -3472,10 +4623,104 @@
     "tmdb:/c8vZzkzduYtIVPnYBYBX6NyCwz6.jpg",
     "tmdb:/zwxeqY7AV9VS2J0nTXp3onRErBg.jpg",
     "tmdb:/jqbqNrOIB3alGMX6Gh2MbOKMXZO.jpg",
-    "tmdb:/nb7e6caBO5BxZ8lyIp9Hzv69oNB.jpg"
+    "tmdb:/nb7e6caBO5BxZ8lyIp9Hzv69oNB.jpg",
+    "tmdb:/x0BACB5PaA2hdapdNo7FN2rVHUD.jpg",
+    "tmdb:/pQ0EwV0JrCavFCBml4Ac4EIiBoi.jpg",
+    "tmdb:/d0UDE9PjJYcEMHtT9KCBxXBVZDq.jpg",
+    "tmdb:/529ZE3FMOu9crAbTcaCnK21m7Kz.jpg",
+    "tmdb:/dM6SjunEYdiMyWXMAlDyylxOPmD.jpg",
+    "tmdb:/h5JnhncKehZuzRXOdGKYTH6zVWX.jpg",
+    "tmdb:/dIUG8zUX5WJmnL0F2PVpfaenCrt.jpg",
+    "tmdb:/2cMjPA5MnzWvy9FaMTFCTZ39Uau.jpg",
+    "tmdb:/qQM2YysLxAGghdGgwH65slDe74t.jpg",
+    "tmdb:/Ac4W9ZTieJjeYZLeBFTJS29OjTc.jpg",
+    "tmdb:/2HO4yzgbl8mM5jfSNBiIbQNKvS5.jpg",
+    "tmdb:/xbpWdG8iOyQr6zy6D8PPvFNq01D.jpg"
    ],
    "src": "tmdb:/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
-   "logo": "file:art_tools/logos/people/leonardo-dicaprio.png"
+   "logo": "file:art_tools/logos/people_tv/leonardo-dicaprio.png",
+   "sizes": [
+    [
+     1042,
+     1563
+    ],
+    [
+     1460,
+     2190
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     957,
+     1435
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     1093,
+     1640
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     849,
+     1274
+    ],
+    [
+     660,
+     990
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     578,
+     867
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     846,
+     1266
+    ],
+    [
+     1244,
+     1866
+    ],
+    [
+     517,
+     775
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Brad Pitt": {
    "style": "portrait",
@@ -3487,10 +4732,104 @@
     "tmdb:/eAOtKAc4p2C3DV8TGJQJzw8DeRv.jpg",
     "tmdb:/1k9MVNS9M3Y4KejBHusNdbGJwRw.jpg",
     "tmdb:/w1L55dXNi9UAmw2CURQjQI0DTf2.jpg",
-    "tmdb:/gVtRLNr7MiASuGXO6UZfFBU9Ol4.jpg"
+    "tmdb:/gVtRLNr7MiASuGXO6UZfFBU9Ol4.jpg",
+    "tmdb:/9DKttGh4CVamibODXqQ33a64aDU.jpg",
+    "tmdb:/dtjUmQPplX7O9QBjBnRWwK0zCGw.jpg",
+    "tmdb:/nWyL0YMgsBOsvX4gVSFB16VfnPU.jpg",
+    "tmdb:/n7HMim8RVpwsDqECprpeYzZggrR.jpg",
+    "tmdb:/uGlfGvB9DzmDaDYErPOZ9071sqt.jpg",
+    "tmdb:/r9DzKQLNbh5QfXlrFGHoVNKER7X.jpg",
+    "tmdb:/tBZoijrOG6gxrjjbTTzOPzWoceS.jpg",
+    "tmdb:/oL1KfFHc76aSckCaxDJ7vajmi8d.jpg",
+    "tmdb:/ldc3BcJuDUI1AG8RhzyrHLvfyqh.jpg",
+    "tmdb:/8dS6WLU32PlJX2j5pztq20lAHM7.jpg",
+    "tmdb:/9OfnD7lxgIj3BNQpJFnwxnwl6w5.jpg",
+    "tmdb:/3UmLRKzI9fXONhyad2wdQ3JAKDO.jpg"
    ],
    "src": "tmdb:/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
-   "logo": "file:art_tools/logos/people/brad-pitt.png"
+   "logo": "file:art_tools/logos/people_tv/brad-pitt.png",
+   "sizes": [
+    [
+     481,
+     721
+    ],
+    [
+     653,
+     980
+    ],
+    [
+     1047,
+     1572
+    ],
+    [
+     918,
+     1377
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     421,
+     631
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1978,
+     2967
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     540,
+     810
+    ],
+    [
+     1333,
+     2000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1495,
+     2244
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     567,
+     850
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     600,
+     900
+    ]
+   ]
   },
   "Christian Bale": {
    "style": "portrait",
@@ -3502,10 +4841,104 @@
     "tmdb:/2y4doWX4lCzDMjCL5KOA4KBz6Hn.jpg",
     "tmdb:/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
     "tmdb:/b7fTC9WFkgqGOv77mLQtmD4Bwjx.jpg",
-    "tmdb:/3qx2QFUbG6t6IlzR0F9k3Z6Yhf7.jpg"
+    "tmdb:/3qx2QFUbG6t6IlzR0F9k3Z6Yhf7.jpg",
+    "tmdb:/gbcLQi7lQVaIF3WXNjW9Fqi84xZ.jpg",
+    "tmdb:/aRV0OntBgQZR0lqAekOx3Zuirml.jpg",
+    "tmdb:/lkPCm3x3pserOaUzWUH0dknsk3H.jpg",
+    "tmdb:/2ocrTd8ChuUyJOzMuD4PsQw8eCB.jpg",
+    "tmdb:/4xydbSbAutKqXJwXtKlTIVU9qXA.jpg",
+    "tmdb:/3remtBKTBsbRpPtJgGlz1uJgidh.jpg",
+    "tmdb:/aqcH9PGT8zAnl04ROrvqi7r41kG.jpg",
+    "tmdb:/azhZ0B3FZGagTv86KWnxDDJg3Jh.jpg",
+    "tmdb:/bo5Z1yA7nC6qZRlGlMoCznrLsZe.jpg",
+    "tmdb:/mJdH3sD8z3K6wTpaH9MvD8oQOKZ.jpg",
+    "tmdb:/h9AdANYr05pWtqYJfyxQnDN9W93.jpg",
+    "tmdb:/8Vivq607guVdhRfD9Zkcz32yI37.jpg"
    ],
    "src": "tmdb:/nMKdUUepR0i5zn0y1T4CsSB5chy.jpg",
-   "logo": "file:art_tools/logos/people/christian-bale.png"
+   "logo": "file:art_tools/logos/people_tv/christian-bale.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1363,
+     2048
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     652,
+     978
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     843,
+     1266
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1143,
+     1714
+    ],
+    [
+     1268,
+     1904
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     882,
+     1324
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     567,
+     850
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     340,
+     510
+    ],
+    [
+     1198,
+     1798
+    ]
+   ]
   },
   "Tom Cruise": {
    "style": "portrait",
@@ -3517,10 +4950,104 @@
     "tmdb:/rZXZWW00hiZyVVBtXKBozAAq0Cf.jpg",
     "tmdb:/cMwXD3eiUfStgVh1gpVcwCnNelv.jpg",
     "tmdb:/bn9CwMSM3o4XPZEPZdQ3grslGup.jpg",
-    "tmdb:/2Dkx4uuGoWFrPSitxdikv9z5azR.jpg"
+    "tmdb:/2Dkx4uuGoWFrPSitxdikv9z5azR.jpg",
+    "tmdb:/t5jC5DiXFRDBi1rzLy7ARh5RM5D.jpg",
+    "tmdb:/9pTIJwjH3Wg8JAxt0TNTpu0cXK0.jpg",
+    "tmdb:/h6ShtVkFKOaBaWhAAUbdmHIpkak.jpg",
+    "tmdb:/kAGJbnKf8QSdmPxfi1EejktDmsE.jpg",
+    "tmdb:/gyHJ5nrFBkfYBKLX8U8X0k8VgI.jpg",
+    "tmdb:/pJetAUyfEesoEqg1uabXSXkEDMV.jpg",
+    "tmdb:/ovE7O89GzjWN6fohDanbhONChWK.jpg",
+    "tmdb:/cdyVmTdlaX7hQZCyIysShg860sS.jpg",
+    "tmdb:/wQeQ72hdKK4tyuuNn10vEiCOCbg.jpg",
+    "tmdb:/s5oos4yX3lyId5Caed4dFSoh4vm.jpg",
+    "tmdb:/wTtHsQIwbmb3hfDyO7nzF01Ycrq.jpg",
+    "tmdb:/A1pSJlh0XqU00Vkia7cFNonVHtf.jpg"
    ],
    "src": "tmdb:/4V1yIoAKPMRQwGBaSses8Bp2nsi.jpg",
-   "logo": "file:art_tools/logos/people/tom-cruise.png"
+   "logo": "file:art_tools/logos/people_tv/tom-cruise.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     574,
+     861
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     2000,
+     2999
+    ],
+    [
+     560,
+     840
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     1362,
+     2048
+    ],
+    [
+     1781,
+     2672
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     495,
+     742
+    ],
+    [
+     473,
+     710
+    ],
+    [
+     462,
+     693
+    ],
+    [
+     1000,
+     1500
+    ]
+   ]
   },
   "Keanu Reeves": {
    "style": "portrait",
@@ -3532,10 +5059,104 @@
     "tmdb:/rRdru6REr9i3WIHv2mntpcgxnoY.jpg",
     "tmdb:/ofJJp18c3L6FPoeBZZJfL3YmF5H.jpg",
     "tmdb:/vWEnREfLggdaS52Go3xzp17gQD8.jpg",
-    "tmdb:/4BsAjmyIvN6ZoJMOJ4XinLqmROI.jpg"
+    "tmdb:/4BsAjmyIvN6ZoJMOJ4XinLqmROI.jpg",
+    "tmdb:/72pFL1sbHt8hZUtN6SrpthgdN2M.jpg",
+    "tmdb:/bOlYWhVuOiU6azC4Bw6zlXZ5QTC.jpg",
+    "tmdb:/d9HyjGMCt4wgJIOxAGlaYWhKsiN.jpg",
+    "tmdb:/gvZa55c23VdK2Ohr0TyiOxonv0x.jpg",
+    "tmdb:/8nLu5EvzOHJP2QG322asLERv5BT.jpg",
+    "tmdb:/3xNcgBw9THriGZ0WualllGqioAf.jpg",
+    "tmdb:/yo7prtYUXk6TfQnvnDMTNmLoZW8.jpg",
+    "tmdb:/Apn0hBhgbUccOG4GaO5fSmLYWVC.jpg",
+    "tmdb:/b09UgA9Qw687ACQEZbxlSH1EF4g.jpg",
+    "tmdb:/kaoY9Ddm9QPc4AXuZjJ0kY2Avmd.jpg",
+    "tmdb:/2pvRo9bkTOovd88XQC4BqlVGLIm.jpg",
+    "tmdb:/qVS4Y3emBIfxqvlTFjFZOFb4kkK.jpg"
    ],
    "src": "tmdb:/icmmSD4vTTDKOq2vvdulafOGw93.jpg",
-   "logo": "file:art_tools/logos/people/keanu-reeves.png"
+   "logo": "file:art_tools/logos/people_tv/keanu-reeves.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1920,
+     2880
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     848,
+     1272
+    ],
+    [
+     817,
+     1226
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     648,
+     972
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     848,
+     1272
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1867,
+     2800
+    ]
+   ]
   },
   "Joaquin Phoenix": {
    "style": "portrait",
@@ -3547,10 +5168,89 @@
     "tmdb:/6Am3gD4CVdU7x8WBVNwN4KKAM0V.jpg",
     "tmdb:/dD7hrRueEZmQgGWBp7pAOOt5gLV.jpg",
     "tmdb:/ls72wfQl8AhRVFeBnotmnAdy3JR.jpg",
-    "tmdb:/e0tlf8wq9tZYCY96bf6gfv46Yc.jpg"
+    "tmdb:/e0tlf8wq9tZYCY96bf6gfv46Yc.jpg",
+    "tmdb:/cK0BTrAM1xcsto8kVvHhd9AV8dW.jpg",
+    "tmdb:/3qOKaEj0rxxeJbbFlTbwxZvJgLR.jpg",
+    "tmdb:/oZQsSpAEYLMdfMI3PPL6QkzVkV7.jpg",
+    "tmdb:/jfQWDtxBxJTaSZoJ5vPZBa34s4h.jpg",
+    "tmdb:/xYeB3N25UwDrLb1eXPw6zArUiUt.jpg",
+    "tmdb:/zixTWuMZ1D8EopgOhLVZ6Js2ux3.jpg",
+    "tmdb:/h23pcua6sLnmQ9NHpwQBfwVZS6e.jpg",
+    "tmdb:/bxQRHNOhW2p0oYuN54o7Gx83HTE.jpg",
+    "tmdb:/j5rZlyquoOvuxVSBsY7K5l6PXRO.jpg"
    ],
    "src": "tmdb:/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
-   "logo": "file:art_tools/logos/people/joaquin-phoenix.png"
+   "logo": "file:art_tools/logos/people_tv/joaquin-phoenix.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     685,
+     1024
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     1105,
+     1657
+    ],
+    [
+     643,
+     965
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     766,
+     1149
+    ],
+    [
+     1980,
+     2970
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     700,
+     1050
+    ],
+    [
+     452,
+     678
+    ],
+    [
+     847,
+     1271
+    ],
+    [
+     1080,
+     1619
+    ],
+    [
+     755,
+     1132
+    ],
+    [
+     725,
+     1088
+    ]
+   ]
   },
   "Matt Damon": {
    "style": "portrait",
@@ -3562,10 +5262,104 @@
     "tmdb:/2goD0rteX2KxIpOpz3fBw9vtSdV.jpg",
     "tmdb:/andBr2Vvf5Gj54gFyoz7ctBKLBj.jpg",
     "tmdb:/wmVxAinq6i280r6QwOoQNv8UcZV.jpg",
-    "tmdb:/cQanDcd6nNz2hIlJRib126feqZE.jpg"
+    "tmdb:/cQanDcd6nNz2hIlJRib126feqZE.jpg",
+    "tmdb:/hGZI4Qtu2GX9yLCG5Bx3UmBxOTh.jpg",
+    "tmdb:/jzUcQ7ybe92DUvns955pPaYUMYp.jpg",
+    "tmdb:/xsh5r71GqXCfNPfLhH4G1k7pkLq.jpg",
+    "tmdb:/2o1x0zvL8AgssJeRkl3zrOX9Usa.jpg",
+    "tmdb:/efF1yFI6HV2M3s8ZGrtlIElLhdU.jpg",
+    "tmdb:/vgqgSZvrIrhY5yngVIg1R1KZQWQ.jpg",
+    "tmdb:/t0RR0N5KCyE7TCqimkz5GhDPlrW.jpg",
+    "tmdb:/8436WEbs0qbV5OUvCHhXrsPiPSz.jpg",
+    "tmdb:/rprLy4nwlmehTw2hO5E9asxCRSM.jpg",
+    "tmdb:/z6Y2gqnLzjDOOW4x5VYjYZuBaUM.jpg",
+    "tmdb:/sQ1AWM8qbhvQlAphzf0DthrzqbI.jpg",
+    "tmdb:/mDN6M7aaRyxwPTkPV5DOZq9X1Th.jpg"
    ],
    "src": "tmdb:/9pubUbDX3eKB6ZuKxbFgv4cBZrz.jpg",
-   "logo": "file:art_tools/logos/people/matt-damon.png"
+   "logo": "file:art_tools/logos/people_tv/matt-damon.png",
+   "sizes": [
+    [
+     682,
+     1024
+    ],
+    [
+     780,
+     1170
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     732,
+     1097
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     733,
+     1100
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     427,
+     640
+    ],
+    [
+     500,
+     749
+    ],
+    [
+     587,
+     880
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1282,
+     1923
+    ],
+    [
+     714,
+     1071
+    ],
+    [
+     1386,
+     2080
+    ],
+    [
+     1285,
+     1927
+    ],
+    [
+     1066,
+     1600
+    ],
+    [
+     470,
+     705
+    ],
+    [
+     320,
+     480
+    ],
+    [
+     1400,
+     2100
+    ]
+   ]
   },
   "Robert Downey Jr.": {
    "style": "portrait",
@@ -3577,10 +5371,104 @@
     "tmdb:/1YjdSym1jTG7xjHSI0yGGWEsw5i.jpg",
     "tmdb:/8qLqYvGvXewL8pU5e2IoTj6sdM8.jpg",
     "tmdb:/57nMfnfdaI9oE9yNne8BF3PPbnH.jpg",
-    "tmdb:/pJoC25zxFmG4kP8uoMYb8LhRbNP.jpg"
+    "tmdb:/pJoC25zxFmG4kP8uoMYb8LhRbNP.jpg",
+    "tmdb:/dRLSoufWtc16F5fliK4ECIVs56p.jpg",
+    "tmdb:/fAKPVauSp0xOJKqknI2cjwD9npE.jpg",
+    "tmdb:/3CYU0ztERq7jOSMdICkUBibYo2j.jpg",
+    "tmdb:/pQldID4avQxwusNybt7vJLKiCA0.jpg",
+    "tmdb:/oCgUwGNCgOOnFBzRnbMd7cXWzVy.jpg",
+    "tmdb:/u144QxU0Z57E3dVQojTweUPNQPO.jpg",
+    "tmdb:/m7kBCnWLTUpB34s2lUx2AbrgbC5.jpg",
+    "tmdb:/nLyFDpfvGBxMimxEmw5ibJjfD2o.jpg",
+    "tmdb:/7or0ZqBbAbpud8CezkbeyMKilZw.jpg",
+    "tmdb:/h6gGjzb2mqqNb3w8DHqgq8ArGvR.jpg",
+    "tmdb:/i6LNGZNOYF2I1DiqhDIiQtk26Ov.jpg",
+    "tmdb:/3CrShdDQp6aR1GYy8T8zNthrUIW.jpg"
    ],
    "src": "tmdb:/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
-   "logo": "file:art_tools/logos/people/robert-downey-jr.png"
+   "logo": "file:art_tools/logos/people_tv/robert-downey-jr.png",
+   "sizes": [
+    [
+     853,
+     1280
+    ],
+    [
+     1600,
+     2400
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     700,
+     1050
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1500,
+     2250
+    ],
+    [
+     481,
+     722
+    ],
+    [
+     1067,
+     1600
+    ],
+    [
+     1600,
+     2400
+    ],
+    [
+     1046,
+     1569
+    ],
+    [
+     1015,
+     1523
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     758,
+     1138
+    ],
+    [
+     526,
+     790
+    ],
+    [
+     1333,
+     2000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Cate Blanchett": {
    "style": "portrait",
@@ -3592,10 +5480,104 @@
     "tmdb:/vq4vuAVhYngfzVNn8SbnG0JEy15.jpg",
     "tmdb:/9V83uemR0ra9Wd9iRXTMlfAQlTB.jpg",
     "tmdb:/4N2IG63dd5IVaSC16PuxB47g5Lz.jpg",
-    "tmdb:/mXpe59YDxcvAJS6EtshsvsRvLZP.jpg"
+    "tmdb:/mXpe59YDxcvAJS6EtshsvsRvLZP.jpg",
+    "tmdb:/eE98pTm0Q2xIn0710VBC603IE5Q.jpg",
+    "tmdb:/pNjhgBTleBapOR04g6OHfmFPKcC.jpg",
+    "tmdb:/20wnxjAUPCfXcUEmPSqIePH3e1k.jpg",
+    "tmdb:/kqXc7a5YB8N6zK3nYnJzbfux3It.jpg",
+    "tmdb:/4XoWD92R0EARXRGJFycnpSYOXIO.jpg",
+    "tmdb:/wFj8iJOOgVGkJHnzLkP9Yp9ogSv.jpg",
+    "tmdb:/58oTO70A7PLQMY8beSkiRooSwKg.jpg",
+    "tmdb:/ba7H3PLPWi4PB1o0TaSChjOQE0F.jpg",
+    "tmdb:/7MfAVA5LvM8qoR3eNUl0eYUSnRl.jpg",
+    "tmdb:/kXnv9Hy8XnNSHxQ13M7eEYaRWeb.jpg",
+    "tmdb:/xF990SvgFgg8QbX3p6SRzCg76p0.jpg",
+    "tmdb:/lhhNEHwbKVgO0hsvAW71V98urgW.jpg"
    ],
    "src": "tmdb:/dgMdsBbGXp9h6sLsfqsM3texzym.jpg",
-   "logo": "file:art_tools/logos/people/cate-blanchett.png"
+   "logo": "file:art_tools/logos/people_tv/cate-blanchett.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     1615,
+     2423
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     750,
+     1125
+    ],
+    [
+     680,
+     1020
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1254,
+     1881
+    ],
+    [
+     1338,
+     2007
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1431,
+     2146
+    ],
+    [
+     1364,
+     2046
+    ],
+    [
+     1052,
+     1578
+    ],
+    [
+     1046,
+     1569
+    ],
+    [
+     906,
+     1359
+    ],
+    [
+     799,
+     1199
+    ],
+    [
+     791,
+     1186
+    ],
+    [
+     302,
+     453
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1126,
+     1689
+    ]
+   ]
   },
   "Nicole Kidman": {
    "style": "portrait",
@@ -3607,10 +5589,104 @@
     "tmdb:/n1xlczx1w44DqUkJvJtAGJf9fyx.jpg",
     "tmdb:/qaO2MTBhIKcAJg2rjMmoKCIBcXF.jpg",
     "tmdb:/xY4nj8Rz8LjCDcsfv7IS4BR72p5.jpg",
-    "tmdb:/uYJKtB1VAE80y28UXOd0TlEe0n5.jpg"
+    "tmdb:/uYJKtB1VAE80y28UXOd0TlEe0n5.jpg",
+    "tmdb:/z2Lrp68bGIqKBXjsJmbzhjlgpeA.jpg",
+    "tmdb:/t93uBtJwMEFCL7jHPCsqcKhJUPB.jpg",
+    "tmdb:/6qzHC5iYB4oB0v8FWSerWvXdwPQ.jpg",
+    "tmdb:/nhlhadtJNaYh4bIPF6JnFFs8R1d.jpg",
+    "tmdb:/bDiiFFk1dFeLxQ17R9LjvlRWyRf.jpg",
+    "tmdb:/qNHXB7lWXcIX16N2WVb1cSvUO0V.jpg",
+    "tmdb:/e2AegvfNRQRU9y7iDTxQodEYh8R.jpg",
+    "tmdb:/eCoIiF2Ug8QXAkKQ0S0J682X95d.jpg",
+    "tmdb:/xuZ6ngMoFcAVJhqpbUZPKr1RMUs.jpg",
+    "tmdb:/p6m3q72yELGUGSic18IDQqtrNXN.jpg",
+    "tmdb:/AjVPME1ayZ6UXkq975xIFdhRlGp.jpg",
+    "tmdb:/cSuJs2yLjZmd634ai6MDQ1ZlOxA.jpg"
    ],
    "src": "tmdb:/dQ4avVp5YLwQchY2REA3eo8tXq8.jpg",
-   "logo": "file:art_tools/logos/people/nicole-kidman.png"
+   "logo": "file:art_tools/logos/people_tv/nicole-kidman.png",
+   "sizes": [
+    [
+     695,
+     1043
+    ],
+    [
+     1365,
+     2048
+    ],
+    [
+     1176,
+     1764
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1809,
+     2713
+    ],
+    [
+     1044,
+     1566
+    ],
+    [
+     1365,
+     2048
+    ],
+    [
+     800,
+     1199
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     666,
+     1000
+    ],
+    [
+     616,
+     924
+    ],
+    [
+     455,
+     681
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     517,
+     776
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     413,
+     619
+    ],
+    [
+     666,
+     1000
+    ]
+   ]
   },
   "Kate Winslet": {
    "style": "portrait",
@@ -3622,10 +5698,99 @@
     "tmdb:/e3tdop3WhseRnn8KwMVLAV25Ybv.jpg",
     "tmdb:/ArtzyFarGJjw9brm85ZVnGcWn0F.jpg",
     "tmdb:/zIiU5mOcinbkpHWCxuDigucsyZC.jpg",
-    "tmdb:/lC788o4YaEsa8tf0RoiYgJKgCd8.jpg"
+    "tmdb:/lC788o4YaEsa8tf0RoiYgJKgCd8.jpg",
+    "tmdb:/6KrUTIWSoy2GsESqjN79LDaf1Dw.jpg",
+    "tmdb:/dcXVtI66VpW8vSRdfjNx2swnaWT.jpg",
+    "tmdb:/8QG40cPp31IA94sLllpMGpFe2cA.jpg",
+    "tmdb:/Ae6Y5EEP74GcnGaBJweLa6jaaZq.jpg",
+    "tmdb:/f5QI06XZWRPETQsrAyweF9I14Ei.jpg",
+    "tmdb:/k2secRoStRCbWaauAlo2BP3N5jS.jpg",
+    "tmdb:/iHbKlmH4C7fqCRGNzwERktuz1LW.jpg",
+    "tmdb:/f1vyhxt6EVzhlQqiFZu5At1dw0u.jpg",
+    "tmdb:/88wv6X7d9ngVL89RXML0E52Uoax.jpg",
+    "tmdb:/bhMLJ0gpmQIvdS7fiNjvvGNCwc0.jpg",
+    "tmdb:/618aJ06vzxiJswNt7vZrDMjwpcZ.jpg"
    ],
    "src": "tmdb:/rzdPqYx7Um4FUZeD8wpXqjAUcEm.jpg",
-   "logo": "file:art_tools/logos/people/kate-winslet.png"
+   "logo": "file:art_tools/logos/people_tv/kate-winslet.png",
+   "sizes": [
+    [
+     1023,
+     1535
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     646,
+     969
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     1480,
+     2220
+    ],
+    [
+     1034,
+     1550
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     892,
+     1338
+    ],
+    [
+     1800,
+     2700
+    ],
+    [
+     518,
+     776
+    ],
+    [
+     1996,
+     3000
+    ],
+    [
+     1166,
+     1750
+    ],
+    [
+     1067,
+     1600
+    ],
+    [
+     912,
+     1368
+    ],
+    [
+     794,
+     1192
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     1202,
+     1804
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     706,
+     1060
+    ]
+   ]
   },
   "Matthew McConaughey": {
    "style": "portrait",
@@ -3637,10 +5802,99 @@
     "tmdb:/9d1YWLPT39Y380t9FPLUOvADR31.jpg",
     "tmdb:/g2tIutzv1bNEHDQQMR6RZXR96bC.jpg",
     "tmdb:/6efsJcqD1eGf3nckN0Nh5g48Lzr.jpg",
-    "tmdb:/zYFfzhwCqoziaI9JbEwzVCJ5LzX.jpg"
+    "tmdb:/zYFfzhwCqoziaI9JbEwzVCJ5LzX.jpg",
+    "tmdb:/e9ZHRY5toiBZCIPEEyvOG9A8ers.jpg",
+    "tmdb:/g8DrKe6FxmK7nXk1btIeKOE4xNn.jpg",
+    "tmdb:/a6rlkxjOmoZll0SLPGYLcXSKLBK.jpg",
+    "tmdb:/93wBLMIHA0fmXZzP5qzn1hVdmBA.jpg",
+    "tmdb:/5KhhJSSuVufL90mHpReQ1L5iVeW.jpg",
+    "tmdb:/2UU8mbl4dRyZ5KLPJfhETRsCwNt.jpg",
+    "tmdb:/eOrbHMjUvs3LLbz3O4anX0lRjdC.jpg",
+    "tmdb:/mVSKwt56k2mlt2XJlpOyBOSTYgh.jpg",
+    "tmdb:/t0DIWdthwvo50cKBvfFACyZY098.jpg",
+    "tmdb:/a5XdKmSuivLVnrGkBDGIr4eLB6D.jpg",
+    "tmdb:/io961gfvZZAt2v43WyVwcI3rbEP.jpg"
    ],
    "src": "tmdb:/vgnoBSVzWAV9sNQUORaDGvDp7wx.jpg",
-   "logo": "file:art_tools/logos/people/matthew-mcconaughey.png"
+   "logo": "file:art_tools/logos/people_tv/matthew-mcconaughey.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     613,
+     920
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     806,
+     1208
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     664,
+     996
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     958,
+     1438
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     598,
+     898
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ]
+   ]
   },
   "Hugh Jackman": {
    "style": "portrait",
@@ -3652,10 +5906,79 @@
     "tmdb:/5Dxx0j9jOAczsTQzZ0OkA5iJBhp.jpg",
     "tmdb:/p58twL4uNlJTj99dsnCsQwNxyYU.jpg",
     "tmdb:/8wyCSXULzmXkmItJi1IhpCKdKJe.jpg",
-    "tmdb:/bKkbbFMTyQ2EvheAy4SbxbjkjtB.jpg"
+    "tmdb:/bKkbbFMTyQ2EvheAy4SbxbjkjtB.jpg",
+    "tmdb:/uhzrAyV7UCKdEkxyjz2bqCWAKgt.jpg",
+    "tmdb:/9bJ1gUSoa7JosQ85BZWGTIs759W.jpg",
+    "tmdb:/aUVXyvixBwMkzjbCiV6NuJ8ShA9.jpg",
+    "tmdb:/x5OfDr0wrpaK7NY4DAqjcM960Gi.jpg",
+    "tmdb:/ukLovkR0AGi0kVuBO6c3HbQF8cb.jpg",
+    "tmdb:/syuwbmbnwRJthxCAYhlZYK3DIJ4.jpg",
+    "tmdb:/rONqBrEH4A0LSdxAnOJloSWIDfQ.jpg"
    ],
    "src": "tmdb:/qTdCfGyDisY9e8BLycszlyTsPWx.jpg",
-   "logo": "file:art_tools/logos/people/hugh-jackman.png"
+   "logo": "file:art_tools/logos/people_tv/hugh-jackman.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     653,
+     979
+    ],
+    [
+     671,
+     1007
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     665,
+     1000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     472,
+     708
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     860,
+     1290
+    ],
+    [
+     1152,
+     1728
+    ],
+    [
+     1000,
+     1500
+    ]
+   ]
   },
   "Charlize Theron": {
    "style": "portrait",
@@ -3667,10 +5990,104 @@
     "tmdb:/1WKfLshTtawW26lqOcKZhS4lZVA.jpg",
     "tmdb:/ryFb0JPgmS0eGCtrMpq7LJmhMZz.jpg",
     "tmdb:/1dzKUILtBzaTMz44SBF9mxlboGf.jpg",
-    "tmdb:/iWpWg9JSt60tSnaTVhXqPBcBpEy.jpg"
+    "tmdb:/iWpWg9JSt60tSnaTVhXqPBcBpEy.jpg",
+    "tmdb:/qFNeAxsqlA6FEQiDVFR1lNoOa3i.jpg",
+    "tmdb:/zrUT5XNPaJwGFo6WzOnIzbJ28qa.jpg",
+    "tmdb:/6FO2tu2Oxcu1lme8N4XlgpwMn4D.jpg",
+    "tmdb:/At0CTQ37ohzX6KgAcZqfhHDZDDX.jpg",
+    "tmdb:/hHgzaAa5LaTFnr6tI0MYIRPXqhM.jpg",
+    "tmdb:/joFVqPRmkX3PSurRBdO9xc16WI5.jpg",
+    "tmdb:/rQeOwnWyAjUgMTzHpYMZviyVwQt.jpg",
+    "tmdb:/4nW2HXZXt2NQjnZWj6dl4hY0BNO.jpg",
+    "tmdb:/vHpGg5zx5FLNM7gLAkHH7pNAjdX.jpg",
+    "tmdb:/jdE2prV9XML91PxUskSt2gGzXGC.jpg",
+    "tmdb:/uG3lossYA3P35U6oGyh90ZR78iF.jpg",
+    "tmdb:/qDndTCn8iYqypwGMMhFUgeNgf5y.jpg"
    ],
    "src": "tmdb:/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
-   "logo": "file:art_tools/logos/people/charlize-theron.png"
+   "logo": "file:art_tools/logos/people_tv/charlize-theron.png",
+   "sizes": [
+    [
+     900,
+     1350
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     408,
+     612
+    ],
+    [
+     1203,
+     1805
+    ],
+    [
+     683,
+     1025
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     866,
+     1299
+    ],
+    [
+     889,
+     1333
+    ],
+    [
+     706,
+     1059
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     370,
+     555
+    ],
+    [
+     1791,
+     2687
+    ],
+    [
+     798,
+     1196
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1166,
+     1748
+    ],
+    [
+     1140,
+     1710
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1600,
+     2406
+    ],
+    [
+     1400,
+     2100
+    ]
+   ]
   },
   "Natalie Portman": {
    "style": "portrait",
@@ -3682,10 +6099,104 @@
     "tmdb:/674gSZWyvh1E4XeA7gBucgRYPLU.jpg",
     "tmdb:/7DVcTD3dWPDaunOYEP09Fdca9HG.jpg",
     "tmdb:/uJsGHBAzLUfqA2tWW4A4qlPxYug.jpg",
-    "tmdb:/luLok04KiKqu3zq5rvKQhpiEDmx.jpg"
+    "tmdb:/luLok04KiKqu3zq5rvKQhpiEDmx.jpg",
+    "tmdb:/p7uJlOGac68qOSyI1y7TDG7A65a.jpg",
+    "tmdb:/zE90yInhhU8fLz1HgWpB9KPvGnE.jpg",
+    "tmdb:/6F7MQbzD9LJYeRHm7GN2iVKW99B.jpg",
+    "tmdb:/yBlYPhlrLyq38ftGHHtqGpCZwq3.jpg",
+    "tmdb:/j2QymoyJwYumzQ65o6mFhAe2lE5.jpg",
+    "tmdb:/oXXlHgFo9DZv71QfWBcfv15wCuk.jpg",
+    "tmdb:/qh8NgEHBoJleP3tLwSQ0y76VMtw.jpg",
+    "tmdb:/bFesvlC7R7cPZT2OCkEK9Hpx1Kg.jpg",
+    "tmdb:/8cl2k9lG2U0AS3EqwM2lyYzGVJA.jpg",
+    "tmdb:/ureyIDA33PdPgmJtGx1c638rmgx.jpg",
+    "tmdb:/yEgK8A1llxJIxIamPwFCDTvPt77.jpg",
+    "tmdb:/dLIjjVTGYSq8A5ccpoM702U8Ua4.jpg"
    ],
    "src": "tmdb:/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg",
-   "logo": "file:art_tools/logos/people/natalie-portman.png"
+   "logo": "file:art_tools/logos/people_tv/natalie-portman.png",
+   "sizes": [
+    [
+     724,
+     1086
+    ],
+    [
+     401,
+     602
+    ],
+    [
+     483,
+     724
+    ],
+    [
+     565,
+     848
+    ],
+    [
+     1084,
+     1627
+    ],
+    [
+     525,
+     787
+    ],
+    [
+     382,
+     574
+    ],
+    [
+     758,
+     1137
+    ],
+    [
+     968,
+     1452
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     863,
+     1295
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1009,
+     1514
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1066,
+     1600
+    ],
+    [
+     564,
+     846
+    ],
+    [
+     1026,
+     1540
+    ],
+    [
+     1779,
+     2669
+    ]
+   ]
   },
   "Scarlett Johansson": {
    "style": "portrait",
@@ -3697,10 +6208,104 @@
     "tmdb:/2I2xAQmL87k5YswCnc4vHjpXxE0.jpg",
     "tmdb:/zMHSGCTewNp2M3JbqAlu8dYdw9U.jpg",
     "tmdb:/sRjg0DbiA5DElSr3g3SSR4EArL8.jpg",
-    "tmdb:/7ZyqGvQSXTD0NjroCpIPgwV5mdN.jpg"
+    "tmdb:/7ZyqGvQSXTD0NjroCpIPgwV5mdN.jpg",
+    "tmdb:/6bBCPmc55gzP7TR9Th4WbykrYd0.jpg",
+    "tmdb:/kcGQvyJZdOQFjw1RHTePnX5gxmB.jpg",
+    "tmdb:/9cFuXISrk0jRfPCUCD4qOJGwYpV.jpg",
+    "tmdb:/opEemSnjnN4hbwymHz5P0VVuk4F.jpg",
+    "tmdb:/1dCKesZ179ykt5Wf5WRDLNqutSH.jpg",
+    "tmdb:/nhc7u29o6ZRbhDQng3js4ybrYL.jpg",
+    "tmdb:/gxnBaEaCNShBiQXRNICsljONIAO.jpg",
+    "tmdb:/vfPiCQba8WM9gTv7uSGJ1Wrftr5.jpg",
+    "tmdb:/yoqbLyGlabwn2a2a9wRWAPTDmLR.jpg",
+    "tmdb:/j8d1Znl93pd3W2tS5irGCdBcCvr.jpg",
+    "tmdb:/pUYkuIhXQWjMTDVejs2aN48nq7L.jpg",
+    "tmdb:/9t4CIXaNPkCB1BRivCVPej1SZGf.jpg"
    ],
    "src": "tmdb:/ozVwXlfxqNsariipatGwa5px3Pm.jpg",
-   "logo": "file:art_tools/logos/people/scarlett-johansson.png"
+   "logo": "file:art_tools/logos/people_tv/scarlett-johansson.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     1875,
+     2813
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1492,
+     2238
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     892,
+     1338
+    ],
+    [
+     929,
+     1394
+    ],
+    [
+     1050,
+     1575
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1600,
+     2400
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1367,
+     2050
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Tom Hardy": {
    "style": "portrait",
@@ -3712,10 +6317,104 @@
     "tmdb:/vLZ8AHjf4FvjwvGwyPK7ur7BIgh.jpg",
     "tmdb:/4CR1D9VLWZcmGgh4b6kKuY2NOel.jpg",
     "tmdb:/j1zJKn5dr3VQC3upjgHL68cnPcB.jpg",
-    "tmdb:/sGMA6pA2D6X0gun49igJT3piHs3.jpg"
+    "tmdb:/sGMA6pA2D6X0gun49igJT3piHs3.jpg",
+    "tmdb:/mHSmt9qu2JzEPqnVWCGViv9Stnn.jpg",
+    "tmdb:/9bXUMLOBCcnhcUGtfw0pdqbvpiH.jpg",
+    "tmdb:/sOi4UZxflV07E7QXUaJTHROGlPU.jpg",
+    "tmdb:/yQZKb2ED7muJJmwghlGzgDRAVVr.jpg",
+    "tmdb:/9MCdyZJkwyXmymMIrA1uvEWzaWU.jpg",
+    "tmdb:/nGKfhAkAaJFYnxqLvNYuApeon.jpg",
+    "tmdb:/ctAwXSpL0rWycE60SgA3Hv8F1il.jpg",
+    "tmdb:/nzRrzjh1RVWWTAitOM1KaN94qji.jpg",
+    "tmdb:/rgG5VOkp7oY6zL8gkK8muQPTL0O.jpg",
+    "tmdb:/12PP1EmuuzsyfYlGPzl5CI6KyTn.jpg",
+    "tmdb:/5cVYa1Bndjso4fdIjLRMldIQCnq.jpg",
+    "tmdb:/aJRSpLdIIIs2sKz5ale10mdYmUY.jpg"
    ],
    "src": "tmdb:/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
-   "logo": "file:art_tools/logos/people/tom-hardy.png"
+   "logo": "file:art_tools/logos/people_tv/tom-hardy.png",
+   "sizes": [
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     867,
+     1301
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     900,
+     1350
+    ],
+    [
+     1280,
+     1918
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1600,
+     2400
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ]
+   ]
   },
   "Ryan Gosling": {
    "style": "portrait",
@@ -3727,10 +6426,104 @@
     "tmdb:/pR2H6U7nH8lvrE02hLL6b8Ysnjm.jpg",
     "tmdb:/s6P0SBTI7HEemOiKehARft5FWDX.jpg",
     "tmdb:/4X1wJo5xHm3YICPWZqVCPgLBEJ7.jpg",
-    "tmdb:/3dVrtUzLYNszM4QecBhMypUPdU4.jpg"
+    "tmdb:/3dVrtUzLYNszM4QecBhMypUPdU4.jpg",
+    "tmdb:/1HOO3rWK1jkXogP39yqV3P86AHA.jpg",
+    "tmdb:/1Zn3M4dk1aQYwL0qmUiBznwKwA1.jpg",
+    "tmdb:/cWkAikhcXEr0eLGZrvszjOSl7oS.jpg",
+    "tmdb:/L8kTRXBmUec1eRWMrhZkNIGYV4.jpg",
+    "tmdb:/8q9lfuv1tdF3JxMm5hEo6Ie0QPY.jpg",
+    "tmdb:/hrAxohfT5CwETuOdcGfxktbN4Zx.jpg",
+    "tmdb:/oP7OXevBxAHYiSGFeaN1QNOvdK8.jpg",
+    "tmdb:/d7kOoghwilfQcH3pQMfX1JiPPsu.jpg",
+    "tmdb:/foVMDU4NKh3UDRIjfiiALtUwxnN.jpg",
+    "tmdb:/8CgToybPebAMDLuHVOOUq5itvlW.jpg",
+    "tmdb:/2IIGAk7jYQEFaFXRBqGhbunAaXg.jpg",
+    "tmdb:/9VNFtyuhEe1yx2uG5ZIjF4EFbLS.jpg"
    ],
    "src": "tmdb:/qJeU7KM4nT2C1WpOrwPcSDGFUWE.jpg",
-   "logo": "file:art_tools/logos/people/ryan-gosling.png"
+   "logo": "file:art_tools/logos/people_tv/ryan-gosling.png",
+   "sizes": [
+    [
+     583,
+     874
+    ],
+    [
+     580,
+     870
+    ],
+    [
+     1205,
+     1808
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1383,
+     2075
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     396,
+     594
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     839,
+     1258
+    ],
+    [
+     698,
+     1048
+    ],
+    [
+     1417,
+     2123
+    ],
+    [
+     343,
+     515
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     684,
+     1018
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Jake Gyllenhaal": {
    "style": "portrait",
@@ -3742,10 +6535,104 @@
     "tmdb:/gWYwL7xmRqjWsH3AtYERQOh0V80.jpg",
     "tmdb:/rRQVMj5ojWVvpmfqnzzspQ0Wrlh.jpg",
     "tmdb:/oA6fp6SQBQQWZEzn4NfY3E8mJhV.jpg",
-    "tmdb:/92sBuFC8tWPG7IqGDJNxysT7tIF.jpg"
+    "tmdb:/92sBuFC8tWPG7IqGDJNxysT7tIF.jpg",
+    "tmdb:/eCwnzlFzFuCm88jAe7OBtfvxL7f.jpg",
+    "tmdb:/btORQRDyGCF0KNweGGYpmQXZK3P.jpg",
+    "tmdb:/ayiKCzcDGJlyvEyAZul3HE7uyjn.jpg",
+    "tmdb:/qkaCBSx84cBZ9o5S1CTDUF0qlWY.jpg",
+    "tmdb:/l4aiaoBTU9EM091X0EZuD2Tl1AR.jpg",
+    "tmdb:/ad7GXdYT9a8LXKQhjO4DqaFVBcJ.jpg",
+    "tmdb:/5lAbctokDVyNLr9tA8crRqLm6Y0.jpg",
+    "tmdb:/5BQtOleqpazRN2Dw65RYddkFpH.jpg",
+    "tmdb:/jnJjFFZ3XIoje4htwGjD5Iq6EgF.jpg",
+    "tmdb:/pGIMhIziUmXqDUEHmb8pbiM78Ea.jpg",
+    "tmdb:/dCNeYj5ChSd6kCuhI7XhG9HA8cS.jpg",
+    "tmdb:/hDo5qXHe07mLBaBUMgVrHp1HsXt.jpg"
    ],
    "src": "tmdb:/ng6SSB3JhbcpKTwbPDsRwUYK8Cq.jpg",
-   "logo": "file:art_tools/logos/people/jake-gyllenhaal.png"
+   "logo": "file:art_tools/logos/people_tv/jake-gyllenhaal.png",
+   "sizes": [
+    [
+     895,
+     1343
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     1725,
+     2587
+    ],
+    [
+     666,
+     1000
+    ],
+    [
+     1365,
+     2048
+    ],
+    [
+     528,
+     792
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     747,
+     1120
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1250,
+     1875
+    ],
+    [
+     993,
+     1489
+    ],
+    [
+     827,
+     1242
+    ],
+    [
+     1260,
+     1891
+    ],
+    [
+     1175,
+     1763
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1100,
+     1650
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     987,
+     1481
+    ]
+   ]
   },
   "Cillian Murphy": {
    "style": "portrait",
@@ -3757,10 +6644,104 @@
     "tmdb:/hGyB38HAtu0NcQaC7ijsfcQmDoE.jpg",
     "tmdb:/3DZAf9CwXmfV2HZOEdqeZAGTndV.jpg",
     "tmdb:/shCqhJg4KSxcfdAbq0WJOSrcHw8.jpg",
-    "tmdb:/gUXNwadCsnFemK7OnYpw0aZW5XB.jpg"
+    "tmdb:/gUXNwadCsnFemK7OnYpw0aZW5XB.jpg",
+    "tmdb:/i8dOTC0w6V274ev5iAAvo4Ahhpr.jpg",
+    "tmdb:/iskfBLuf2nWvzqEFySrhGUAhGIG.jpg",
+    "tmdb:/esl5nXgnwyFYRhcstjSBPaKwLRY.jpg",
+    "tmdb:/pRH0jAFfJuBIicxKXGMugjvDWWV.jpg",
+    "tmdb:/kdM57DCx3RPq1WxfwPAUlTnuKnd.jpg",
+    "tmdb:/iHCjYYZPBR65Y32eCCX4is0ZUr3.jpg",
+    "tmdb:/94k99rIVIfymxOY9R44ETwS8g7G.jpg",
+    "tmdb:/dMPzwPyWPpIs0BfE2jMJi2lNbPO.jpg",
+    "tmdb:/mmG2eSGAEaCqCQB5hmvyTL712wW.jpg",
+    "tmdb:/rmD7KSksGk7li4E55JB8gVOu12r.jpg",
+    "tmdb:/9zx8YcH5BLrG8GedHjlI5PAy0Qc.jpg",
+    "tmdb:/kNyxX7VIxC7RH2ienFCg99y7s4m.jpg"
    ],
    "src": "tmdb:/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg",
-   "logo": "file:art_tools/logos/people/cillian-murphy.png"
+   "logo": "file:art_tools/logos/people_tv/cillian-murphy.png",
+   "sizes": [
+    [
+     474,
+     711
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     502,
+     753
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     835,
+     1253
+    ],
+    [
+     432,
+     648
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     409,
+     613
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1640,
+     2460
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     563,
+     845
+    ],
+    [
+     320,
+     480
+    ],
+    [
+     487,
+     731
+    ],
+    [
+     1776,
+     2664
+    ],
+    [
+     1257,
+     1884
+    ],
+    [
+     719,
+     1080
+    ],
+    [
+     563,
+     845
+    ],
+    [
+     464,
+     696
+    ],
+    [
+     1000,
+     1501
+    ]
+   ]
   },
   "Edward Norton": {
    "style": "portrait",
@@ -3772,10 +6753,99 @@
     "tmdb:/yHwEzMAPETuzH4Qcrn479YKOniL.jpg",
     "tmdb:/w8DRrHbqWGi3gAsUDfrc8UDsZE7.jpg",
     "tmdb:/fllX9EwS8JbH8fE1IhXEqy68xcx.jpg",
-    "tmdb:/tSHLJp3FByqzfaOiC4fQNy5pAZK.jpg"
+    "tmdb:/tSHLJp3FByqzfaOiC4fQNy5pAZK.jpg",
+    "tmdb:/4eV9diwXRfNm6LhQw3DaHp8E5X1.jpg",
+    "tmdb:/akAG6A22GLIOxJI1QZuzjjr4RqL.jpg",
+    "tmdb:/aUi0qusCEvIpw1prZlA54vkX0ze.jpg",
+    "tmdb:/mPVH50u7UhJi7PHG8STIdN1LJNL.jpg",
+    "tmdb:/zT93q5uJjaomlEudcOebVbmsvYp.jpg",
+    "tmdb:/fSAEyguCxlsVzbEBS1dGeoXvDpU.jpg",
+    "tmdb:/mHLDHresCQBsGjQU0IunfMaMjIi.jpg",
+    "tmdb:/4wcTq2EKKIco0l5HRc0Fb3z6GR0.jpg",
+    "tmdb:/pE0vRUD6FHDowEV6ikDEeFC7N4t.jpg",
+    "tmdb:/wnvS4nDO3FPjHWp0fwtjLdS34ES.jpg",
+    "tmdb:/dDxuJ2GKfTV0Qltxv2gyq6VqxQw.jpg"
    ],
    "src": "tmdb:/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
-   "logo": "file:art_tools/logos/people/edward-norton.png"
+   "logo": "file:art_tools/logos/people_tv/edward-norton.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     514,
+     771
+    ],
+    [
+     900,
+     1350
+    ],
+    [
+     566,
+     849
+    ],
+    [
+     408,
+     612
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     423,
+     634
+    ],
+    [
+     589,
+     884
+    ],
+    [
+     319,
+     478
+    ],
+    [
+     585,
+     878
+    ],
+    [
+     496,
+     744
+    ],
+    [
+     420,
+     630
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     731,
+     1097
+    ],
+    [
+     452,
+     678
+    ],
+    [
+     408,
+     612
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     740,
+     1110
+    ],
+    [
+     731,
+     1098
+    ]
+   ]
   },
   "Philip Seymour Hoffman": {
    "style": "portrait",
@@ -3787,10 +6857,54 @@
     "tmdb:/5XVBOgKpiAeJ3BZ8OX72wEwHBuL.jpg",
     "tmdb:/p2V49IZ8QKmAfU1Npvtv68OjY8u.jpg",
     "tmdb:/aJNpUrMAhUdHqAefGAn8pJvyLlm.jpg",
-    "tmdb:/9iG6ER6qpdcRJNxWLOlZivxrsIa.jpg"
+    "tmdb:/9iG6ER6qpdcRJNxWLOlZivxrsIa.jpg",
+    "tmdb:/xk4neN0LXEvcWMWeDZDb2sGWE0a.jpg",
+    "tmdb:/dW6Y6aF8CyRO4cHUfkJRy0Seod8.jpg"
    ],
    "src": "tmdb:/sjcPWJ5TXgFglsoixNxyZRyEUq3.jpg",
-   "logo": "file:art_tools/logos/people/philip-seymour-hoffman.png"
+   "logo": "file:art_tools/logos/people_tv/philip-seymour-hoffman.png",
+   "sizes": [
+    [
+     993,
+     1489
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     509,
+     763
+    ],
+    [
+     850,
+     1275
+    ],
+    [
+     1365,
+     2047
+    ],
+    [
+     1067,
+     1600
+    ],
+    [
+     633,
+     950
+    ],
+    [
+     599,
+     900
+    ],
+    [
+     533,
+     800
+    ]
+   ]
   },
   "Viola Davis": {
    "style": "portrait",
@@ -3802,10 +6916,49 @@
     "tmdb:/mitXKy9caCbHexlSaDXGfcEEG4g.jpg",
     "tmdb:/aWyjEGgUOHkp8mIz4sQ6PZVIrAj.jpg",
     "tmdb:/7RgMIYWLD3cu3Fr7jRUORV2mIIw.jpg",
-    "tmdb:/oUJ8tGkyYrM25hHkNpN1xburIR3.jpg"
+    "tmdb:/oUJ8tGkyYrM25hHkNpN1xburIR3.jpg",
+    "tmdb:/wPmOK3wGJxtfoAYmPBopL3yiInY.jpg"
    ],
    "src": "tmdb:/yDwL5qAHeSyaozgXXcYnAOp4AUF.jpg",
-   "logo": "file:art_tools/logos/people/viola-davis.png"
+   "logo": "file:art_tools/logos/people_tv/viola-davis.png",
+   "sizes": [
+    [
+     1249,
+     1873
+    ],
+    [
+     1325,
+     1988
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     530,
+     796
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1679,
+     2519
+    ],
+    [
+     809,
+     1212
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Amy Adams": {
    "style": "portrait",
@@ -3817,10 +6970,104 @@
     "tmdb:/lub0nBRhsCu2pByvfvxt5DcW86d.jpg",
     "tmdb:/g5PcGkAHwIW4rrOuWLgjvTiRhga.jpg",
     "tmdb:/oee226QNLDmiwo5730gq3j7tydw.jpg",
-    "tmdb:/3tMHrVxtIEaZXLznZPEluzCF9XP.jpg"
+    "tmdb:/3tMHrVxtIEaZXLznZPEluzCF9XP.jpg",
+    "tmdb:/1bJUW9KPefhBfAS0UxbM05OL3lG.jpg",
+    "tmdb:/jkMGu8ngOIb9Z1M4zzDmQlPOUHz.jpg",
+    "tmdb:/jwcfRD6n0rzBZAa6633vSSY3JqM.jpg",
+    "tmdb:/chjMOiuydU9frF95qcUhlC6fWG3.jpg",
+    "tmdb:/yf3ReBCtCHo062JIqizXtzPd9GA.jpg",
+    "tmdb:/9CTgaGtyI5uAyW8P2a848xxhUyI.jpg",
+    "tmdb:/sl66XK1vdYyWQrmcMTbkXmXFQ4y.jpg",
+    "tmdb:/bvBGclMs2fbMFH1EPpQK02zbIGv.jpg",
+    "tmdb:/h2iZ3w6zTkq7dxwaSjr4vknIk6p.jpg",
+    "tmdb:/8y7XT8NMIPNcpC6O5qmH2VL8rZH.jpg",
+    "tmdb:/9qRuQDneOtIgsYEGDRrNFUgy514.jpg",
+    "tmdb:/3gcRfmAOOHA39UWnA3Uul1cChR0.jpg"
    ],
    "src": "tmdb:/iTyh3hqTUjiRqQo8Uz1w1KtQti9.jpg",
-   "logo": "file:art_tools/logos/people/amy-adams.png"
+   "logo": "file:art_tools/logos/people_tv/amy-adams.png",
+   "sizes": [
+    [
+     1600,
+     2400
+    ],
+    [
+     611,
+     917
+    ],
+    [
+     590,
+     885
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1500,
+     2250
+    ],
+    [
+     485,
+     727
+    ],
+    [
+     644,
+     966
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     1800,
+     2700
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1771,
+     2657
+    ],
+    [
+     682,
+     1024
+    ],
+    [
+     682,
+     1024
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1133,
+     1700
+    ],
+    [
+     647,
+     970
+    ],
+    [
+     614,
+     921
+    ]
+   ]
   },
   "Anne Hathaway": {
    "style": "portrait",
@@ -3832,10 +7079,104 @@
     "tmdb:/h1hgb3GaRi7ClMJWP2QYzyn2euE.jpg",
     "tmdb:/kRYxBuUtN3vNz5pLfqCf32ZYlw2.jpg",
     "tmdb:/g2ozigjyCoSZmMnwo4fyhhJjslM.jpg",
-    "tmdb:/nmTNaiG6FIgPNA9v0WbzM8lSr1t.jpg"
+    "tmdb:/nmTNaiG6FIgPNA9v0WbzM8lSr1t.jpg",
+    "tmdb:/bWjGahMMHkFIhYBXzqBN4WREeyl.jpg",
+    "tmdb:/7T9D9NJ9hREke3GyFEZyAaznpIZ.jpg",
+    "tmdb:/jLU31yQIo1qB7IdFKskwMXQJLia.jpg",
+    "tmdb:/eMRQurjytL2f23mkmfN251Py2SP.jpg",
+    "tmdb:/8Ms3ObgRZwuIHF7kAwZLcTajyA9.jpg",
+    "tmdb:/2gDVElycvaaKc2lWbpePIhDGpVy.jpg",
+    "tmdb:/yxonUjheNliiwkXKsy6BTONtyCx.jpg",
+    "tmdb:/tkC9clap8v5U3gwKrgO7Tk1XPTs.jpg",
+    "tmdb:/35rNSDDgDBoBayb8tQHWqhH4mzk.jpg",
+    "tmdb:/lHJBY7c17oWtsbN7NgQdqe29tjv.jpg",
+    "tmdb:/uZoIcKYtjxrk5ItlJyUtKcGDZkH.jpg",
+    "tmdb:/c9JzqmCiV0kk8vVYbQNek3BMvw8.jpg"
    ],
    "src": "tmdb:/vgnoBSVzWAV9sNQUORaDGvDp7wx.jpg",
-   "logo": "file:art_tools/logos/people/anne-hathaway.png"
+   "logo": "file:art_tools/logos/people_tv/anne-hathaway.png",
+   "sizes": [
+    [
+     1911,
+     2870
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1033,
+     1551
+    ],
+    [
+     731,
+     1096
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     1100,
+     1650
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     1604,
+     2407
+    ],
+    [
+     995,
+     1492
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1600,
+     2400
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1327,
+     1991
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Emma Stone": {
    "style": "portrait",
@@ -3847,10 +7188,104 @@
     "tmdb:/bKbFmFQtn1N6Utzr9Sf0E23alaL.jpg",
     "tmdb:/6K21G4V1KTXQ0DtS0NkMmIanYaE.jpg",
     "tmdb:/tWoSlj6TaZU5sfHYiXvexZUL5Nv.jpg",
-    "tmdb:/8NwSfyYWIIUE1cI9Xhz92b0w7WD.jpg"
+    "tmdb:/8NwSfyYWIIUE1cI9Xhz92b0w7WD.jpg",
+    "tmdb:/9wRt3XkxwoIoRjvnrc3LKWGHnI9.jpg",
+    "tmdb:/eWjkPYeXxPhE2F9J3Ui6E9OWVXy.jpg",
+    "tmdb:/aovYGvXPnhUQtAa7CkC6qlcPuvC.jpg",
+    "tmdb:/6n3aRnB1tM7Bx42RGejqhNiSaAA.jpg",
+    "tmdb:/erYRVpgj0XfIOeHXijDBIl2hBgN.jpg",
+    "tmdb:/3tzzG6utqe331wwFTsZ9OwslXFn.jpg",
+    "tmdb:/dkDHFn0a391dUzoNzvYZ7S4Mp6i.jpg",
+    "tmdb:/2hwXbPW2ffnXUe1Um0WXHG0cTwb.jpg",
+    "tmdb:/3UaYw9KF4fEXRMRWhf25aGJpAW2.jpg",
+    "tmdb:/ltYgUCq2Y63wiyiPp0ROUV4QqDn.jpg",
+    "tmdb:/s7PVcnnA05JcRiMtplwgK49Z2UU.jpg",
+    "tmdb:/elDuP7PNuJTT0nmhzJz4jcrVR1R.jpg"
    ],
    "src": "tmdb:/HVcza6tJtWFrLriuh3Ano4Vt46.jpg",
-   "logo": "file:art_tools/logos/people/emma-stone.png"
+   "logo": "file:art_tools/logos/people_tv/emma-stone.png",
+   "sizes": [
+    [
+     1284,
+     1926
+    ],
+    [
+     828,
+     1242
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     825,
+     1237
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1284,
+     1926
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1094,
+     1641
+    ],
+    [
+     1401,
+     2100
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     607,
+     911
+    ],
+    [
+     447,
+     670
+    ],
+    [
+     1301,
+     1952
+    ],
+    [
+     508,
+     762
+    ],
+    [
+     825,
+     1237
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     821,
+     1232
+    ],
+    [
+     633,
+     950
+    ]
+   ]
   },
   "Margot Robbie": {
    "style": "portrait",
@@ -3862,10 +7297,104 @@
     "tmdb:/8WC12YJltY2H0TdRs9f4Uu8T6Sx.jpg",
     "tmdb:/utIl43qoLn2aHBpiyp2YFOQDPPp.jpg",
     "tmdb:/6w5Cz14aOkCb4MhARrN9NuBkwsv.jpg",
-    "tmdb:/pbSz7d1aURy88HGzFWng5EoFU81.jpg"
+    "tmdb:/pbSz7d1aURy88HGzFWng5EoFU81.jpg",
+    "tmdb:/mzwuoK7i418q28KI8cQIFzKcWjg.jpg",
+    "tmdb:/c9gFn0cRnvdfJePxQ9RLZVDjcbR.jpg",
+    "tmdb:/ecv9SBN9m1cEZFfSopph6wf8fk.jpg",
+    "tmdb:/3mq2fhZ6IkiQnhx430EuS5wHJvI.jpg",
+    "tmdb:/kIWyhpBvgB9PwJ45QiHoUENd8W3.jpg",
+    "tmdb:/oOcNqHYZnZJFf4hkOYXQGQnKg1B.jpg",
+    "tmdb:/b7d4HkAK1QtCBX3onhSzVljb10v.jpg",
+    "tmdb:/2Vql5yNdzXXHnPoFyHI7loW19y.jpg",
+    "tmdb:/pON9RH88G3Gn8j84lw51CHS9CFz.jpg",
+    "tmdb:/u6L3peoLlqeAa63qcCVYYhbMK2r.jpg",
+    "tmdb:/tN5jVaEYV52zNC8e5MJAXjvti3w.jpg",
+    "tmdb:/51LnjSdszOnccBuwTTu4aUiGwDt.jpg"
    ],
    "src": "tmdb:/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg",
-   "logo": "file:art_tools/logos/people/margot-robbie.png"
+   "logo": "file:art_tools/logos/people_tv/margot-robbie.png",
+   "sizes": [
+    [
+     1333,
+     2000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     510,
+     765
+    ],
+    [
+     1050,
+     1575
+    ],
+    [
+     460,
+     690
+    ],
+    [
+     1059,
+     1588
+    ],
+    [
+     1275,
+     1913
+    ],
+    [
+     1266,
+     1900
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1325,
+     1988
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     800,
+     1200
+    ]
+   ]
   },
   "Bryan Cranston": {
    "style": "portrait",
@@ -3877,10 +7406,49 @@
     "tmdb:/mnlU4FdsmZJVSV27GKmjwI7KKIi.jpg",
     "tmdb:/yPm6uD5n7Apq00lSPuSA0cw07oh.jpg",
     "tmdb:/1lhMtNOYbMHPKa1ERly2HtcnKUj.jpg",
-    "tmdb:/kNyTXGkiSP8W4Gs60hF7UoxZnWN.jpg"
+    "tmdb:/kNyTXGkiSP8W4Gs60hF7UoxZnWN.jpg",
+    "tmdb:/crkUMGo7qNfVAt1k5WhN8moVhGx.jpg"
    ],
    "src": "tmdb:/iVk4mVKwNE66JbBcoDwcYFvuUXM.jpg",
-   "logo": "file:art_tools/logos/people/bryan-cranston.png"
+   "logo": "file:art_tools/logos/people_tv/bryan-cranston.png",
+   "sizes": [
+    [
+     1369,
+     2048
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     666,
+     1000
+    ],
+    [
+     1333,
+     2000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     408,
+     612
+    ]
+   ]
   },
   "Willem Dafoe": {
    "style": "portrait",
@@ -3892,10 +7460,69 @@
     "tmdb:/7zWtfmM2rGeBS0T6Y8bLq0Ua1EN.jpg",
     "tmdb:/tW2W7Y4JaDtIxZdsv105AdoRJkK.jpg",
     "tmdb:/mGE46uB9nTNChjApmIXdZg314Td.jpg",
-    "tmdb:/efguRyUh75nXomnNQsQSzCnRQCT.jpg"
+    "tmdb:/efguRyUh75nXomnNQsQSzCnRQCT.jpg",
+    "tmdb:/50lnMhWUaDmcg4N7vfawlowpAky.jpg",
+    "tmdb:/xVIHyUVAVZTEpw35PHXwBXXi8XK.jpg",
+    "tmdb:/xaJpjpOXeS6Qs6QVZ6YjmufFoVq.jpg",
+    "tmdb:/j2uBgRxfYKSHWBDjbUv001EEaPo.jpg",
+    "tmdb:/7qXJI6af9HGNAtbCNd0aHwwH47.jpg"
    ],
    "src": "tmdb:/jHxCeXnSchAuwHnmVatTgqMYdX8.jpg",
-   "logo": "file:art_tools/logos/people/willem-dafoe.png"
+   "logo": "file:art_tools/logos/people_tv/willem-dafoe.png",
+   "sizes": [
+    [
+     1400,
+     2100
+    ],
+    [
+     1053,
+     1580
+    ],
+    [
+     687,
+     1030
+    ],
+    [
+     804,
+     1206
+    ],
+    [
+     320,
+     480
+    ],
+    [
+     443,
+     665
+    ],
+    [
+     402,
+     603
+    ],
+    [
+     324,
+     485
+    ],
+    [
+     626,
+     940
+    ],
+    [
+     626,
+     940
+    ],
+    [
+     1257,
+     1886
+    ],
+    [
+     804,
+     1206
+    ],
+    [
+     744,
+     1116
+    ]
+   ]
   },
   "Christoph Waltz": {
    "style": "portrait",
@@ -3907,10 +7534,49 @@
     "tmdb:/4KHY8E8omM1UDyUX60MzXLk1Pp8.jpg",
     "tmdb:/tXPVj6QYEDieEJgziJY2CYfLXVa.jpg",
     "tmdb:/hfeN4x1JtXafpaNgddKGLGyWZR6.jpg",
-    "tmdb:/craM6dTnH2ELvZ1Yp0Yxu4Dch78.jpg"
+    "tmdb:/craM6dTnH2ELvZ1Yp0Yxu4Dch78.jpg",
+    "tmdb:/qZHn8SGLVM6BruuObQ7zWI1jbRd.jpg"
    ],
    "src": "tmdb:/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
-   "logo": "file:art_tools/logos/people/christoph-waltz.png"
+   "logo": "file:art_tools/logos/people_tv/christoph-waltz.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     440,
+     660
+    ],
+    [
+     476,
+     714
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     626,
+     940
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1734,
+     2600
+    ],
+    [
+     700,
+     1050
+    ]
+   ]
   },
   "Mads Mikkelsen": {
    "style": "portrait",
@@ -3922,10 +7588,84 @@
     "tmdb:/pfZaC3X9kWBFkEVkwAhDBjCRO2.jpg",
     "tmdb:/PB37U7oinSDQlqTTwmE0rKMjRW.jpg",
     "tmdb:/yEwcp9FnJoIMg0cO1RP7LW9zu7G.jpg",
-    "tmdb:/oN0dzSuDjtreS0byvXOvMZBJGXD.jpg"
+    "tmdb:/oN0dzSuDjtreS0byvXOvMZBJGXD.jpg",
+    "tmdb:/oXjItjhhCAP4AA2UBwMsojrO3jy.jpg",
+    "tmdb:/4zjRLgw0SC6Wp1qs3QXoKCnACOh.jpg",
+    "tmdb:/nItEqNQKoxNUgXifHweDTAI3iE2.jpg",
+    "tmdb:/1tU39PD0xnDoo4NS39f21sg1UWh.jpg",
+    "tmdb:/4gPgdIlGE7D7Y9d8r55erlagtMp.jpg",
+    "tmdb:/gfi11ZFSNFItOtP01gECHBETtJ6.jpg",
+    "tmdb:/psnhNv8JwkFgZzZ4AXtcIkaYIUI.jpg",
+    "tmdb:/67hVCtKwyBXV4g9SPeNx2j9qABd.jpg"
    ],
    "src": "tmdb:/7zN7m5jEyrNxFYm2EbQJAZwAG5i.jpg",
-   "logo": "file:art_tools/logos/people/mads-mikkelsen.png"
+   "logo": "file:art_tools/logos/people_tv/mads-mikkelsen.png",
+   "sizes": [
+    [
+     800,
+     1200
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     527,
+     790
+    ],
+    [
+     962,
+     1442
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     716,
+     1074
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     491,
+     736
+    ],
+    [
+     1080,
+     1620
+    ],
+    [
+     1039,
+     1558
+    ],
+    [
+     1031,
+     1547
+    ],
+    [
+     913,
+     1370
+    ],
+    [
+     683,
+     1024
+    ],
+    [
+     542,
+     813
+    ],
+    [
+     520,
+     780
+    ],
+    [
+     425,
+     637
+    ]
+   ]
   },
   "Javier Bardem": {
    "style": "portrait",
@@ -3937,10 +7677,94 @@
     "tmdb:/dKArLTzGUBqRwV6MI3Atc1xN9bc.jpg",
     "tmdb:/eCBiiPvBfIY7exDQwH0vEM6Bf3c.jpg",
     "tmdb:/iicdZDlHS3INrt6LXtHOCcOZ9bZ.jpg",
-    "tmdb:/9c8hrcQ2fXwqgybG08jhch9REaH.jpg"
+    "tmdb:/9c8hrcQ2fXwqgybG08jhch9REaH.jpg",
+    "tmdb:/uHn6lgO5q8SKCQ4LS8lSn1zsuob.jpg",
+    "tmdb:/iQnY4JYe7mFoaO2IH1pFNIDL0MH.jpg",
+    "tmdb:/iRtsE7SZaJOn8cyg7CGOBtbqKrD.jpg",
+    "tmdb:/gB2hGiHyLGfN3V0R5OAXthmQOhz.jpg",
+    "tmdb:/kovVf85pc3bm86VLjJFpyBZYnUi.jpg",
+    "tmdb:/4x44qEdUGiTc7feL7wIH7N9cewn.jpg",
+    "tmdb:/kXADXHxLCYxPjvbpxEy7l3rRj4s.jpg",
+    "tmdb:/6GOQW4mnHMRVEhUQNxa8JEdbKSA.jpg",
+    "tmdb:/zzjHt4VcAOFmXv8R8EzGI4UClWJ.jpg",
+    "tmdb:/3uX8bbCV54zl2cjykq7lV6JTPM6.jpg"
    ],
    "src": "tmdb:/kd9jFTTabg4xJpHDgxY0h8F9BzG.jpg",
-   "logo": "file:art_tools/logos/people/javier-bardem.png"
+   "logo": "file:art_tools/logos/people_tv/javier-bardem.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     455,
+     683
+    ],
+    [
+     359,
+     539
+    ],
+    [
+     1138,
+     1707
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     683,
+     1024
+    ],
+    [
+     739,
+     1108
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1611,
+     2415
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     683,
+     1024
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     900,
+     1350
+    ],
+    [
+     736,
+     1104
+    ]
+   ]
   },
   "Tilda Swinton": {
    "style": "portrait",
@@ -3952,10 +7776,74 @@
     "tmdb:/kfI8XXVYoicM5YyT0EmzEuM4ua5.jpg",
     "tmdb:/oe4nHPEACxpFy6xZ7OWDGTOBllr.jpg",
     "tmdb:/73mhfjwCqoBCyQO3Y8YYgTC3q00.jpg",
-    "tmdb:/exwBo5dERSqBUSNtSdAsCACiRsJ.jpg"
+    "tmdb:/exwBo5dERSqBUSNtSdAsCACiRsJ.jpg",
+    "tmdb:/zQO2f3PhiCqKjxbP8DPLVoKIUX.jpg",
+    "tmdb:/zIY43ucxYEesUH92OIS0FHVqnu6.jpg",
+    "tmdb:/tCI4X0oE5QhbRkPTIhkoJZV7vSn.jpg",
+    "tmdb:/ubLJfO2UCUUK6SNPlEfaQakxzKR.jpg",
+    "tmdb:/gDj8W5px92rkf1twDyNCZhPeGc5.jpg",
+    "tmdb:/a2PiezjJQ81FBzxAF7MUtkYto3q.jpg"
    ],
    "src": "tmdb:/qkLZoJ1h998eJEmbuHGPCKZF0y7.jpg",
-   "logo": "file:art_tools/logos/people/tilda-swinton.png"
+   "logo": "file:art_tools/logos/people_tv/tilda-swinton.png",
+   "sizes": [
+    [
+     720,
+     1080
+    ],
+    [
+     751,
+     1127
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     489,
+     735
+    ],
+    [
+     947,
+     1420
+    ],
+    [
+     1051,
+     1576
+    ],
+    [
+     885,
+     1328
+    ],
+    [
+     504,
+     756
+    ],
+    [
+     627,
+     941
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1312,
+     1968
+    ],
+    [
+     1340,
+     2011
+    ],
+    [
+     544,
+     816
+    ],
+    [
+     952,
+     1427
+    ]
+   ]
   },
   "Toni Collette": {
    "style": "portrait",
@@ -3967,10 +7855,79 @@
     "tmdb:/bcWWoX703nt2wkPQitEhYa1UR5r.jpg",
     "tmdb:/61ZZdpC46JHf0WQ2wIJnNSVsRrB.jpg",
     "tmdb:/eT1FQtQhMdFYBJjWgFNbE1NCtyr.jpg",
-    "tmdb:/p1WujHFX6QDxX06MfO9Fit52v3P.jpg"
+    "tmdb:/p1WujHFX6QDxX06MfO9Fit52v3P.jpg",
+    "tmdb:/lMaGgmbYpUilrpivCMHjPCAauPY.jpg",
+    "tmdb:/uB7But9pdeMbctSguvbZCK5qnnv.jpg",
+    "tmdb:/8ulOwVdVYcIvM6vdKEkOcqEn6z5.jpg",
+    "tmdb:/bzd9vVlQd7FrmHxEr7E5uLIJ7n2.jpg",
+    "tmdb:/gTjgyiDd5yrr28Uqxo6PB4fMYCR.jpg",
+    "tmdb:/6JXmRn5mrfLVyyA0e17mh2gfXuy.jpg",
+    "tmdb:/2L5r6HqTKXrPsKkCKPdQStM71ns.jpg"
    ],
    "src": "tmdb:/4DUoPZOHdPuROP4nyEIsPaMIiQl.jpg",
-   "logo": "file:art_tools/logos/people/toni-collette.png"
+   "logo": "file:art_tools/logos/people_tv/toni-collette.png",
+   "sizes": [
+    [
+     1719,
+     2579
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     763,
+     1144
+    ],
+    [
+     580,
+     870
+    ],
+    [
+     765,
+     1147
+    ],
+    [
+     1068,
+     1601
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     995,
+     1492
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     617,
+     926
+    ],
+    [
+     523,
+     783
+    ],
+    [
+     416,
+     624
+    ]
+   ]
   },
   "Ethan Hawke": {
    "style": "portrait",
@@ -3982,10 +7939,79 @@
     "tmdb:/smtfxvgjUNHWPbcRMYfydqfCH2R.jpg",
     "tmdb:/8rw5H5mdaIgHmHY0rRkBTaodq7M.jpg",
     "tmdb:/m3jTuyBeaDaXe8NJqyq5qrIpeT1.jpg",
-    "tmdb:/slO6aoxA5Pwiy42yt8Fxz5bm1kH.jpg"
+    "tmdb:/slO6aoxA5Pwiy42yt8Fxz5bm1kH.jpg",
+    "tmdb:/vGroElCcnqjPlDMH65QkJGcJSkb.jpg",
+    "tmdb:/mkcZ8QtFOS1wWQAvwkAm8vPTkyy.jpg",
+    "tmdb:/eUKRbGUd0CieFz7NMjwA1Fuitbm.jpg",
+    "tmdb:/stvjh2swRjetFeNk50JS07vBCyU.jpg",
+    "tmdb:/kThYeJG5L11bdYjmEa8x1N4KBjJ.jpg",
+    "tmdb:/7BzD9E9Ci95MH8yR4ou27vunahP.jpg",
+    "tmdb:/hFNB2M2RJNSZyzZwKFM1oykxF2a.jpg"
    ],
    "src": "tmdb:/9J3HHP3kQ5ZStyirJyWPWtvvrHY.jpg",
-   "logo": "file:art_tools/logos/people/ethan-hawke.png"
+   "logo": "file:art_tools/logos/people_tv/ethan-hawke.png",
+   "sizes": [
+    [
+     645,
+     968
+    ],
+    [
+     1199,
+     1799
+    ],
+    [
+     1100,
+     1651
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1163,
+     1744
+    ],
+    [
+     876,
+     1314
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     890,
+     1336
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     771,
+     1157
+    ],
+    [
+     693,
+     1040
+    ],
+    [
+     711,
+     1066
+    ],
+    [
+     1059,
+     1589
+    ],
+    [
+     1365,
+     2048
+    ],
+    [
+     1296,
+     1944
+    ]
+   ]
   },
   "Sam Rockwell": {
    "style": "portrait",
@@ -3997,10 +8023,79 @@
     "tmdb:/1LvWTTwpxFjFhmNWUPWwfViOkrv.jpg",
     "tmdb:/vYpWxV0bnUgKo7SdasfGP9HttUq.jpg",
     "tmdb:/eoB7JWOhYqRGrEqaXqr4pCP0L5x.jpg",
-    "tmdb:/ruaUgtATy70VygkqtfHPwpJ0Gcj.jpg"
+    "tmdb:/ruaUgtATy70VygkqtfHPwpJ0Gcj.jpg",
+    "tmdb:/mEH7nCaG75XNkoFbp3MIwCbIZb6.jpg",
+    "tmdb:/4zjUldl3ykbgcLO7FxWppR6s7Ck.jpg",
+    "tmdb:/sDfytcBx33E5pMgCVdmSCtMltWQ.jpg",
+    "tmdb:/chxQ5CTEw6EYi9QBS4IwwPcFcr0.jpg",
+    "tmdb:/cxCVi780A2wGmNhKBYLHeYbQ9uj.jpg",
+    "tmdb:/pOEbXBU9ewu6CnkoeOdLcJcThWS.jpg",
+    "tmdb:/zrCS7DAEEm8tSTFEAi2SOz3VzUV.jpg"
    ],
    "src": "tmdb:/yMmRfOGjhaw5Tz3U9UwNDdqK4Yx.jpg",
-   "logo": "file:art_tools/logos/people/sam-rockwell.png"
+   "logo": "file:art_tools/logos/people_tv/sam-rockwell.png",
+   "sizes": [
+    [
+     600,
+     900
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     684,
+     1024
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     373,
+     560
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1013,
+     1519
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     320,
+     480
+    ],
+    [
+     800,
+     1199
+    ],
+    [
+     853,
+     1280
+    ]
+   ]
   },
   "Steve Carell": {
    "style": "portrait",
@@ -4012,10 +8107,59 @@
     "tmdb:/glt9veZiS38FujuQmXBzjSxJ7dN.jpg",
     "tmdb:/wqHxC2AVWF2evTYoKdUZRGYEhLb.jpg",
     "tmdb:/4dVMB6nxmUXNSTcdl5H6rl89oCr.jpg",
-    "tmdb:/jHo6HUDgTL7j6wmipCzvjMGM0Dm.jpg"
+    "tmdb:/jHo6HUDgTL7j6wmipCzvjMGM0Dm.jpg",
+    "tmdb:/otscxwcWSPXTAN3ceQbnZwFVMyl.jpg",
+    "tmdb:/e3xqgp515d6TwW6ScfT1dStmDoz.jpg",
+    "tmdb:/2SImH9PcRPhZCLvxZIiPuqd0n7l.jpg"
    ],
    "src": "tmdb:/2XSeKDmIa2KxaiJy4J9e8FrIZhk.jpg",
-   "logo": "file:art_tools/logos/people/steve-carell.png"
+   "logo": "file:art_tools/logos/people_tv/steve-carell.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     494,
+     740
+    ],
+    [
+     942,
+     1413
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     1365,
+     2048
+    ],
+    [
+     516,
+     774
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1010,
+     1515
+    ],
+    [
+     643,
+     964
+    ]
+   ]
   },
   "Simon Pegg": {
    "style": "portrait",
@@ -4027,10 +8171,64 @@
     "tmdb:/aKbshLCZ9e8MGfw8cPEnnooLADZ.jpg",
     "tmdb:/zIgBBodVv71Ph1hW4511IVmdQak.jpg",
     "tmdb:/cnGGCgIJV7CZJCQDbQj9vQcUXv9.jpg",
-    "tmdb:/3r0K0YGbFHfXcmixWVwiblfK68U.jpg"
+    "tmdb:/3r0K0YGbFHfXcmixWVwiblfK68U.jpg",
+    "tmdb:/oDtEDlxcvlAK2iZAaBaL9kxM6Ft.jpg",
+    "tmdb:/kIMnWkZciXXHYyD8GxMYvDLD29x.jpg",
+    "tmdb:/vLxuNoPlBJ1qAUqTqHOtoU8sYiY.jpg",
+    "tmdb:/aotiync3EjRNNXgJhXwdIA0UbSo.jpg"
    ],
    "src": "tmdb:/asoDCKpnYLrnQlroigvDXXFcTfJ.jpg",
-   "logo": "file:art_tools/logos/people/simon-pegg.png"
+   "logo": "file:art_tools/logos/people_tv/simon-pegg.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     357,
+     535
+    ],
+    [
+     1044,
+     1566
+    ],
+    [
+     749,
+     1124
+    ],
+    [
+     810,
+     1215
+    ],
+    [
+     735,
+     1103
+    ],
+    [
+     832,
+     1249
+    ],
+    [
+     629,
+     943
+    ],
+    [
+     899,
+     1349
+    ],
+    [
+     679,
+     1018
+    ]
+   ]
   },
   "Song Kang-ho": {
    "style": "portrait",
@@ -4044,7 +8242,37 @@
     "tmdb:/714R0wEx5SJ9o7l1Zfs37jTc8hi.jpg"
    ],
    "src": "tmdb:/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
-   "logo": "file:art_tools/logos/people/song-kang-ho.png"
+   "logo": "file:art_tools/logos/people_tv/song-kang-ho.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     346,
+     519
+    ],
+    [
+     971,
+     1457
+    ],
+    [
+     372,
+     558
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     377,
+     566
+    ]
+   ]
   },
   "Oscar Isaac": {
    "style": "portrait",
@@ -4056,10 +8284,64 @@
     "tmdb:/sSLkR4AA0ELgTUYf81ZpMpVOlhJ.jpg",
     "tmdb:/zxPthTmxFLtiTgpr5f5DKy52PzN.jpg",
     "tmdb:/dmt0icAtGnUow7UoRtqpwJfihoc.jpg",
-    "tmdb:/5CK3N7R3OKz8loM2CNhv8BWmiQ3.jpg"
+    "tmdb:/5CK3N7R3OKz8loM2CNhv8BWmiQ3.jpg",
+    "tmdb:/nWUwhomJcL210QurxuFuVwxKLI4.jpg",
+    "tmdb:/divih4Q9Mo8giy1Nl6uS0IBLJty.jpg",
+    "tmdb:/B1gSgbPQniC0pOnYeMn3Uw7sTR.jpg",
+    "tmdb:/c1LJ19UdS8FkxoOk8e0spcL5knY.jpg"
    ],
    "src": "tmdb:/sy7Y4jCDsGPCzoQIEmxqAgPjAgr.jpg",
-   "logo": "file:art_tools/logos/people/oscar-isaac.png"
+   "logo": "file:art_tools/logos/people_tv/oscar-isaac.png",
+   "sizes": [
+    [
+     763,
+     1144
+    ],
+    [
+     850,
+     1278
+    ],
+    [
+     2000,
+     2998
+    ],
+    [
+     1939,
+     2908
+    ],
+    [
+     750,
+     1125
+    ],
+    [
+     930,
+     1396
+    ],
+    [
+     796,
+     1194
+    ],
+    [
+     969,
+     1454
+    ],
+    [
+     980,
+     1471
+    ],
+    [
+     1212,
+     1818
+    ],
+    [
+     1129,
+     1694
+    ],
+    [
+     673,
+     1010
+    ]
+   ]
   },
   "Pedro Pascal": {
    "style": "portrait",
@@ -4071,10 +8353,104 @@
     "tmdb:/dBOrm29cr7NUrjiDQMTtrTyDpfy.jpg",
     "tmdb:/k9XreOAzSshcVFdIT3wPeR8Gdzu.jpg",
     "tmdb:/36kk559avjcuQNRIusuSiaLHXVi.jpg",
-    "tmdb:/kpaBw1oyfu2vGS2t9gGBz1Pz7vk.jpg"
+    "tmdb:/kpaBw1oyfu2vGS2t9gGBz1Pz7vk.jpg",
+    "tmdb:/hoP3vT6OBMNCUFTqlTDcd2X3y77.jpg",
+    "tmdb:/qmn0YWkmm39cpU4O3YlJoD9EZlT.jpg",
+    "tmdb:/jF5oCkC7VMKKVB6kGlcPUjRWGK6.jpg",
+    "tmdb:/4f76nenCp8TwLqWbemp6zAAULLv.jpg",
+    "tmdb:/a9YXk6TCe77JDXiz5k91OI8gu9p.jpg",
+    "tmdb:/x47BZYKJihZJPViEvWqcyfLK8vQ.jpg",
+    "tmdb:/wROJBhRvazeFl1SIWfzwMcKrYYn.jpg",
+    "tmdb:/9ZmYEyjcwWuF0F32MQ5txtpw9qH.jpg",
+    "tmdb:/tMHbe0f80yG1gVqJqCDayFlGLJq.jpg",
+    "tmdb:/benKFZIumYJ9mvlasYpiVyzKb8Q.jpg",
+    "tmdb:/vikukxfzdAhZm8oh4oBLt9PF55D.jpg",
+    "tmdb:/fPNTb2gSEW2pBHlDMSDZOFweSMq.jpg"
    ],
    "src": "tmdb:/v9acaWVVFdZT5yAU7J2QjwfhXyD.jpg",
-   "logo": "file:art_tools/logos/people/pedro-pascal.png"
+   "logo": "file:art_tools/logos/people_tv/pedro-pascal.png",
+   "sizes": [
+    [
+     799,
+     1199
+    ],
+    [
+     460,
+     690
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     740,
+     1110
+    ],
+    [
+     599,
+     898
+    ],
+    [
+     345,
+     518
+    ],
+    [
+     450,
+     675
+    ],
+    [
+     501,
+     752
+    ],
+    [
+     740,
+     1110
+    ],
+    [
+     1860,
+     2791
+    ],
+    [
+     857,
+     1285
+    ],
+    [
+     447,
+     671
+    ],
+    [
+     443,
+     664
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     2999
+    ],
+    [
+     915,
+     1373
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Robert Pattinson": {
    "style": "portrait",
@@ -4086,10 +8462,104 @@
     "tmdb:/aQr7LOIBe15krp0SMbtKAEVUGrT.jpg",
     "tmdb:/9CbfQHyUhJZxWjlVqsdS3I4j9t5.jpg",
     "tmdb:/cAyQSJFdVn7VdGXK9X7R5K8wMm5.jpg",
-    "tmdb:/ewjMaXKnh5r95iFs97MwbykEU1Z.jpg"
+    "tmdb:/ewjMaXKnh5r95iFs97MwbykEU1Z.jpg",
+    "tmdb:/sCn0rwrTJjpAdorjgEdOkbksni4.jpg",
+    "tmdb:/wNcm8RiMYlWvneAkqQepkqI6r7L.jpg",
+    "tmdb:/cptSJJ2WEAPxiYAFWkNctHzYit.jpg",
+    "tmdb:/7kdpjFRXKnbsogBqzeAgfzlRojx.jpg",
+    "tmdb:/xCTK5hZ41QzLvdNS5OAC0XhWekU.jpg",
+    "tmdb:/4Z31djC1eDTylvWxJyGdDRi5e04.jpg",
+    "tmdb:/8hrHpZlUuTc6Zkz9uXHZCuNnVSC.jpg",
+    "tmdb:/zMrkA6YwhmORcoZEerSbeb25moQ.jpg",
+    "tmdb:/4QjUnjlvHbxc0Q00inNGumzkPIX.jpg",
+    "tmdb:/5Ef6n8xIFkacWNSRvtuMKHWqmNR.jpg",
+    "tmdb:/cyzRERgdQO1qXDRN8vWnaDXdIi4.jpg",
+    "tmdb:/UDjMV5zbJgcHg22uXEMvLEEjqt.jpg"
    ],
    "src": "tmdb:/7eK8FJr4fqq3J5W2xvlr2GVaep2.jpg",
-   "logo": "file:art_tools/logos/people/robert-pattinson.png"
+   "logo": "file:art_tools/logos/people_tv/robert-pattinson.png",
+   "sizes": [
+    [
+     1975,
+     2963
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1851,
+     2777
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1012,
+     1518
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1600,
+     2400
+    ],
+    [
+     1956,
+     2926
+    ],
+    [
+     1034,
+     1551
+    ],
+    [
+     1687,
+     2531
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     2997
+    ],
+    [
+     670,
+     1005
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1005,
+     1508
+    ],
+    [
+     800,
+     1200
+    ]
+   ]
   },
   "Florence Pugh": {
    "style": "portrait",
@@ -4101,10 +8571,104 @@
     "tmdb:/32bSZwIdTnq60JuJk8o9rbJewF5.jpg",
     "tmdb:/xZtmmhOE3pq4lnm1vmn9KkaW7eT.jpg",
     "tmdb:/qqDsryavx9rwSMhDAxW6OC7oNQg.jpg",
-    "tmdb:/421cSReX2Fktldac8SyY2k0yLwY.jpg"
+    "tmdb:/421cSReX2Fktldac8SyY2k0yLwY.jpg",
+    "tmdb:/6Sjz9teWjrMY9lF2o9FCo4XmoRh.jpg",
+    "tmdb:/1Uvfh7xL4U2evkhs0M3C7BbBYFf.jpg",
+    "tmdb:/nuRLGEBCfUVXTjq9guz9OlTGjtL.jpg",
+    "tmdb:/ogoAeJyLzam5m3JvBFg6vwI8p0I.jpg",
+    "tmdb:/mY8oXEblek4scXejTVBRFyyRWTM.jpg",
+    "tmdb:/75PvULemW8BvheSKtPMoBBsvPLh.jpg",
+    "tmdb:/cfOSYSPxUdtbVJOYETM6djBQ5Ph.jpg",
+    "tmdb:/tjO6sR5FlFlGb6MPIHbPNk6bbgV.jpg",
+    "tmdb:/dBC4tZU2gYEnzCu764IgEjQMA8M.jpg",
+    "tmdb:/v06H7af46ClPgPdTA8klaO0DpLi.jpg",
+    "tmdb:/wcDXv5Oc8w01QfxJMla96xIDROT.jpg",
+    "tmdb:/c03E1GI4lCQ19WqZ4G4Da9CUFNH.jpg"
    ],
    "src": "tmdb:/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg",
-   "logo": "file:art_tools/logos/people/florence-pugh.png"
+   "logo": "file:art_tools/logos/people_tv/florence-pugh.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1272,
+     1908
+    ],
+    [
+     919,
+     1378
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     709,
+     1063
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     962,
+     1442
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     513,
+     767
+    ],
+    [
+     563,
+     842
+    ],
+    [
+     1133,
+     1700
+    ],
+    [
+     747,
+     1121
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     529,
+     794
+    ],
+    [
+     590,
+     886
+    ]
+   ]
   },
   "Anya Taylor-Joy": {
    "style": "portrait",
@@ -4116,10 +8680,104 @@
     "tmdb:/wA1ZT3GSWvRjcJP96VRRARs9zEe.jpg",
     "tmdb:/wqFpdXOI3AwAm3Iv6TgQqpv1JqU.jpg",
     "tmdb:/iwxsznakIOqlJzgFiaROrbMj9V8.jpg",
-    "tmdb:/hY7BHwgFy4cdNtlvA2YMzZEqhES.jpg"
+    "tmdb:/hY7BHwgFy4cdNtlvA2YMzZEqhES.jpg",
+    "tmdb:/l4iCvDhSpF16KnXX7xJpjSmkWhu.jpg",
+    "tmdb:/8YUcwFAOBK3Yt5jnj9G2U8IffD.jpg",
+    "tmdb:/qaOlnmpE0vjYDywaZvDlO5R2Fq2.jpg",
+    "tmdb:/hwpqQBzL3vVSppnMIINc2RCHXgn.jpg",
+    "tmdb:/cQ5RL0aKDyjLfsM6RFy9oOtmLSe.jpg",
+    "tmdb:/5zrrdhkaqY1hbbXvTbVUYBZtVgG.jpg",
+    "tmdb:/zG0kTCmmo3NWVVUCC5IeJeoT1UM.jpg",
+    "tmdb:/20XDLhZC8vunBF3aMYzDwzMd61Q.jpg",
+    "tmdb:/uVZ0mnJpBrTBDgrDQqsC6uiXTAW.jpg",
+    "tmdb:/2WhtRYOX0QNrc1P24WFpturFo7a.jpg",
+    "tmdb:/kTy1kVpVLjEH3rXZ0zE3bvBhvIh.jpg",
+    "tmdb:/78goCTnwhvEKfYFQ17Pex4Qw2bM.jpg"
    ],
    "src": "tmdb:/9pkZesKMnblFfKxEhQx45YQ2kIe.jpg",
-   "logo": "file:art_tools/logos/people/anya-taylor-joy.png"
+   "logo": "file:art_tools/logos/people_tv/anya-taylor-joy.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1508,
+     2262
+    ],
+    [
+     648,
+     973
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     908,
+     1363
+    ],
+    [
+     620,
+     930
+    ],
+    [
+     1884,
+     2826
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     681,
+     1022
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     700,
+     1050
+    ],
+    [
+     916,
+     1373
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     1366,
+     2048
+    ],
+    [
+     726,
+     1089
+    ],
+    [
+     727,
+     1090
+    ]
+   ]
   },
   "Timothée Chalamet": {
    "style": "portrait",
@@ -4131,10 +8789,104 @@
     "tmdb:/lXrkLckhFscXigEoWMfRByNeA60.jpg",
     "tmdb:/98pz2MH2JT7Yw0sUJGrA5Oqtbo8.jpg",
     "tmdb:/fI6Zwvwo0KuUMfutTyHCTuWEIrx.jpg",
-    "tmdb:/wHbKraxnDaPiXrv1bg6izchdpww.jpg"
+    "tmdb:/wHbKraxnDaPiXrv1bg6izchdpww.jpg",
+    "tmdb:/An7ilq46gLDEDxSCbQItkhGLldy.jpg",
+    "tmdb:/BE2sdjpgsa2rNTFa66f7upkaOP.jpg",
+    "tmdb:/g8T0YZTdbflRMNf6Wk7avmjyOPV.jpg",
+    "tmdb:/7nNdD5K9egTzXntXWyoiPBqwlcm.jpg",
+    "tmdb:/6Fk1DjtOJ3UckoXi6KtCaiRWPCC.jpg",
+    "tmdb:/phSALdB5EwWbDp2bsrYe5i6PlYP.jpg",
+    "tmdb:/8jNFfNmqHVqLHnGnxgu7y8xgRIa.jpg",
+    "tmdb:/eNZRAbArxck5PGxKp6zzCeaTKwH.jpg",
+    "tmdb:/c2olhQqQYWDob5iEj4B2n7Wd2mc.jpg",
+    "tmdb:/mQLFtTpb7hJxSxcrTReSXKmByt.jpg",
+    "tmdb:/cc0kXVI82iosBRA7HoG7lVuUeRh.jpg",
+    "tmdb:/7LxpKM9tQLRMoDYHpGNCLtaeKME.jpg"
    ],
    "src": "tmdb:/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg",
-   "logo": "file:art_tools/logos/people/timoth-e-chalamet.png"
+   "logo": "file:art_tools/logos/people_tv/timoth-e-chalamet.png",
+   "sizes": [
+    [
+     709,
+     1063
+    ],
+    [
+     1750,
+     2625
+    ],
+    [
+     453,
+     679
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     808,
+     1213
+    ],
+    [
+     745,
+     1117
+    ],
+    [
+     871,
+     1307
+    ],
+    [
+     1035,
+     1552
+    ],
+    [
+     1231,
+     1845
+    ],
+    [
+     1490,
+     2234
+    ],
+    [
+     793,
+     1190
+    ],
+    [
+     1122,
+     1685
+    ],
+    [
+     453,
+     680
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     923,
+     1385
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     560,
+     840
+    ],
+    [
+     1072,
+     1608
+    ],
+    [
+     855,
+     1282
+    ],
+    [
+     442,
+     663
+    ]
+   ]
   },
   "Zendaya": {
    "style": "portrait",
@@ -4146,10 +8898,104 @@
     "tmdb:/5K8X89tZfjbH3mKL1kIqGt9wEOw.jpg",
     "tmdb:/lxQBmrdX8NVin9gI5O0xbmODhbH.jpg",
     "tmdb:/xWOU0S7AqGEkyk8scLwwz66R2GO.jpg",
-    "tmdb:/69Pm8AsGm0jmCLfal3VuATsXKIT.jpg"
+    "tmdb:/69Pm8AsGm0jmCLfal3VuATsXKIT.jpg",
+    "tmdb:/3mBb2craX3adj73FJZpslqV61v7.jpg",
+    "tmdb:/1Pltj013GbluuBnijbul7KhG32y.jpg",
+    "tmdb:/tylFh0K48CZIIhvKlA7WA1XBAtE.jpg",
+    "tmdb:/uD5a0CsVbR0phlUvHXLlKntAIXS.jpg",
+    "tmdb:/9Jed1yWB8boYnrkYRSC5lPeigeQ.jpg",
+    "tmdb:/w1SXOfsLzo5heKLCKLIPGN9hDaf.jpg",
+    "tmdb:/6WPolY7Wd3GMiuN1dPxYZX7liik.jpg",
+    "tmdb:/pdzU95iZZbJnaXTkpjrSusJJy0x.jpg",
+    "tmdb:/ddw6afWaqwfxMgEsCGjBxmOCalP.jpg",
+    "tmdb:/q6rAzfb7bths7jLKRsE4BeHahNA.jpg",
+    "tmdb:/lAxs0Qgl9X48ayTlG2h7ASDQTKd.jpg",
+    "tmdb:/nO16XkATzCZLN0biZYrL6Hhwkcz.jpg"
    ],
    "src": "tmdb:/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
-   "logo": "file:art_tools/logos/people/zendaya.png"
+   "logo": "file:art_tools/logos/people_tv/zendaya.png",
+   "sizes": [
+    [
+     1253,
+     1879
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     1046,
+     1570
+    ],
+    [
+     640,
+     960
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     1875,
+     2813
+    ],
+    [
+     1067,
+     1600
+    ],
+    [
+     1067,
+     1600
+    ],
+    [
+     825,
+     1238
+    ],
+    [
+     825,
+     1238
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     1523,
+     2285
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     809,
+     1213
+    ],
+    [
+     2000,
+     3000
+    ]
+   ]
   },
   "Tom Holland": {
    "style": "portrait",
@@ -4161,10 +9007,104 @@
     "tmdb:/4eiFdjEtqb2pnWX6z98ADcYD9zV.jpg",
     "tmdb:/bBRlrpJm9XkNSg0YT5LCaxqoFMX.jpg",
     "tmdb:/1d67to0U8bx5jhWTanVx37k6Nd0.jpg",
-    "tmdb:/nIJj91naJI4biogqIKLSglKNfCM.jpg"
+    "tmdb:/nIJj91naJI4biogqIKLSglKNfCM.jpg",
+    "tmdb:/hMp5y4Nro5pv4Nawyt3Ld9TsKfO.jpg",
+    "tmdb:/2qhIDp44cAqP2clOgt2afQI07X8.jpg",
+    "tmdb:/ip7aXVH8s6wXv8cY6KI14OZgCI8.jpg",
+    "tmdb:/lVd9ffRzJGDSCL96R8E5z0yqTfc.jpg",
+    "tmdb:/uHGU5fpcYpuMmfY7bPeEV6pHuih.jpg",
+    "tmdb:/dtileT3VcAM5nCxfRhw59yKecwR.jpg",
+    "tmdb:/tH8bNDcjiS399DlcnC5oubxNh23.jpg",
+    "tmdb:/C0ffi4aLWZwnQ17y2WItczQ9ss.jpg",
+    "tmdb:/v8XswHtSvEscinZVxhTpYZ1KgIS.jpg",
+    "tmdb:/vVH0t5scDaY5WN7VbJSk2kNmi3c.jpg",
+    "tmdb:/6ZCeGtdrat1n74K7WHpQ90HaZ5Y.jpg",
+    "tmdb:/cX2Ye5DUfrOM18YGdEvQ7KqNg6e.jpg"
    ],
    "src": "tmdb:/fn4n6uOYcB6Uh89nbNPoU2w80RV.jpg",
-   "logo": "file:art_tools/logos/people/tom-holland.png"
+   "logo": "file:art_tools/logos/people_tv/tom-holland.png",
+   "sizes": [
+    [
+     1127,
+     1690
+    ],
+    [
+     899,
+     1349
+    ],
+    [
+     1500,
+     2250
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     888,
+     1332
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     550,
+     825
+    ],
+    [
+     1500,
+     2250
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     1667,
+     2500
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     510,
+     765
+    ],
+    [
+     1206,
+     1809
+    ],
+    [
+     1206,
+     1797
+    ],
+    [
+     910,
+     1365
+    ],
+    [
+     840,
+     1260
+    ],
+    [
+     821,
+     1235
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ]
+   ]
   },
   "Austin Butler": {
    "style": "portrait",
@@ -4176,10 +9116,69 @@
     "tmdb:/tmU9jtSs6c4ySC5eiad3aXXADan.jpg",
     "tmdb:/2gHiYPXOq7RJLs4vTz5fUmSg8cd.jpg",
     "tmdb:/u2kLZR3NJtROrqyfbVRmFgkgsnz.jpg",
-    "tmdb:/fpbaNWLYyZku7c5jJQMQEVnPKrs.jpg"
+    "tmdb:/fpbaNWLYyZku7c5jJQMQEVnPKrs.jpg",
+    "tmdb:/jn63A9goIetyvJt5DTHypjk33ip.jpg",
+    "tmdb:/nANlr54DWityk6DAOY2gtoRZCmV.jpg",
+    "tmdb:/b8KjLRT4Lb3gtf7wkw0jsFlKyyX.jpg",
+    "tmdb:/n6H8A55fb3dclRmiyLSzvB0UwhY.jpg",
+    "tmdb:/b2BLo7a61hA47Hul5vOF6JDobf6.jpg"
    ],
    "src": "tmdb:/rLo9T9jEg67UZPq3midjLnTUYYi.jpg",
-   "logo": "file:art_tools/logos/people/austin-butler.png"
+   "logo": "file:art_tools/logos/people_tv/austin-butler.png",
+   "sizes": [
+    [
+     735,
+     1103
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     645,
+     967
+    ],
+    [
+     1050,
+     1575
+    ],
+    [
+     475,
+     712
+    ],
+    [
+     1857,
+     2785
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1816,
+     2724
+    ],
+    [
+     1440,
+     2160
+    ],
+    [
+     961,
+     1441
+    ],
+    [
+     557,
+     835
+    ],
+    [
+     1842,
+     2763
+    ],
+    [
+     981,
+     1471
+    ]
+   ]
   }
  },
  "Legendary Directors": {
@@ -4193,10 +9192,79 @@
     "tmdb:/A6YOiHQ48bxbQGFIEULGIsbJi6x.jpg",
     "tmdb:/ujJqCav79hFf4UVFgPoPp3Lfzo4.jpg",
     "tmdb:/yt014glA3zplTuggjcyY58IcR48.jpg",
-    "tmdb:/jNmgtflaoPzJ0YUXBoB5gwADgB5.jpg"
+    "tmdb:/jNmgtflaoPzJ0YUXBoB5gwADgB5.jpg",
+    "tmdb:/bb729rOQ2mP9KIdBJ9y6waX0RCr.jpg",
+    "tmdb:/1FQqeRCJJuGy0zZPIhs7Yj6YVUW.jpg",
+    "tmdb:/wWFGuNz6TssMq645b7EuVcaPZb4.jpg",
+    "tmdb:/3iagGcefSz6kAKEVD0xRvM6NZ0G.jpg",
+    "tmdb:/kXPa8mIfFoy9110s1k6hra4mCfu.jpg",
+    "tmdb:/jaF3IpHXQEiOdurz8SNnjhlqPbO.jpg",
+    "tmdb:/aFUJ6YsK1La8g7rjhADouisNtQU.jpg"
    ],
    "src": "tmdb:/k2ZDzJjZDtYZ3F4g7af4bb3eQ05.jpg",
-   "logo": "file:art_tools/logos/people/alfred-hitchcock.png"
+   "logo": "file:art_tools/logos/people_tv/alfred-hitchcock.png",
+   "sizes": [
+    [
+     861,
+     1291
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1535,
+     2303
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     365,
+     547
+    ],
+    [
+     691,
+     1036
+    ],
+    [
+     613,
+     919
+    ],
+    [
+     585,
+     877
+    ],
+    [
+     504,
+     756
+    ],
+    [
+     450,
+     675
+    ],
+    [
+     375,
+     563
+    ],
+    [
+     309,
+     464
+    ]
+   ]
   },
   "Stanley Kubrick": {
    "style": "portrait",
@@ -4208,10 +9276,59 @@
     "tmdb:/rjOMqEEq6cpeaHhzZfQrjUiKufC.jpg",
     "tmdb:/uaGeHtbMmh98uhPsxpORgPdYLxz.jpg",
     "tmdb:/9unzv4E7w6RVbHwf0ISKbdL6TNt.jpg",
-    "tmdb:/aKhak1WGdn0ou9BS0MU2wpyvNVD.jpg"
+    "tmdb:/aKhak1WGdn0ou9BS0MU2wpyvNVD.jpg",
+    "tmdb:/GdVTMARcxQLjkb1iTQ8kZyxDDu.jpg",
+    "tmdb:/6K3ycyLeadkwMUPOCCOUr6OYY13.jpg",
+    "tmdb:/hLxkbf3InEtpn1ZECurMmjV5JXD.jpg"
    ],
    "src": "tmdb:/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
-   "logo": "file:art_tools/logos/people/stanley-kubrick.png"
+   "logo": "file:art_tools/logos/people_tv/stanley-kubrick.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     802,
+     1203
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     822,
+     1232
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     1750,
+     2625
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1105,
+     1657
+    ],
+    [
+     681,
+     1024
+    ],
+    [
+     1750,
+     2625
+    ]
+   ]
   },
   "Akira Kurosawa": {
    "style": "portrait",
@@ -4225,7 +9342,37 @@
     "tmdb:/hB9QuSDL0chXOVRS7mobNKu97l.jpg"
    ],
    "src": "tmdb:/mzI1JXm8sX5fia3ifPS2jGPUh2n.jpg",
-   "logo": "file:art_tools/logos/people/akira-kurosawa.png"
+   "logo": "file:art_tools/logos/people_tv/akira-kurosawa.png",
+   "sizes": [
+    [
+     500,
+     750
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     555,
+     832
+    ],
+    [
+     616,
+     923
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     300,
+     451
+    ]
+   ]
   },
   "Francis Ford Coppola": {
    "style": "portrait",
@@ -4240,7 +9387,41 @@
     "tmdb:/iJ1dav4YDOWIDQhf8vRGOYZxJR6.jpg"
    ],
    "src": "tmdb:/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
-   "logo": "file:art_tools/logos/people/francis-ford-coppola.png"
+   "logo": "file:art_tools/logos/people_tv/francis-ford-coppola.png",
+   "sizes": [
+    [
+     800,
+     1200
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     905,
+     1357
+    ],
+    [
+     981,
+     1471
+    ],
+    [
+     533,
+     800
+    ],
+    [
+     1400,
+     2100
+    ],
+    [
+     666,
+     999
+    ],
+    [
+     600,
+     900
+    ]
+   ]
   },
   "Steven Spielberg": {
    "style": "portrait",
@@ -4252,10 +9433,89 @@
     "tmdb:/zISw37YXM9vUKlmjy97fPP0YWxt.jpg",
     "tmdb:/6refVw7T45fOR5MVMtrbkNeTrFK.jpg",
     "tmdb:/7YFtvjFy6Y7W1gmR1HyY6rnkgv6.jpg",
-    "tmdb:/oQAFN9JvO4CCvOKcinud00RjTxe.jpg"
+    "tmdb:/oQAFN9JvO4CCvOKcinud00RjTxe.jpg",
+    "tmdb:/mt0bQJPu3dMJUyVCdJopMZllA1Q.jpg",
+    "tmdb:/vU6ezewkCvI82lgOc0Sv8KCrtW6.jpg",
+    "tmdb:/iLS9dNAoaCkNv2bFTW6NaYG9uaK.jpg",
+    "tmdb:/5KkTCmjmE9p4SWa7j50RgrHJSrf.jpg",
+    "tmdb:/xSz2KsyKHsn8XuMBbrbN6DpNgxz.jpg",
+    "tmdb:/8RlUJCqmZGKeeaBarul4ZoUWcHG.jpg",
+    "tmdb:/tP1ZFnZ5EmjldaAlwtbGnThTXKw.jpg",
+    "tmdb:/os5ZxUXR3TnLXZek9zZ5Cjw9ZqG.jpg",
+    "tmdb:/w9YOTuClA4LxeSWFhaik4juHyst.jpg"
    ],
    "src": "tmdb:/o7LzVmlOSYc3EspyVMC9bsTTARc.jpg",
-   "logo": "file:art_tools/logos/people/steven-spielberg.png"
+   "logo": "file:art_tools/logos/people_tv/steven-spielberg.png",
+   "sizes": [
+    [
+     599,
+     898
+    ],
+    [
+     861,
+     1291
+    ],
+    [
+     910,
+     1365
+    ],
+    [
+     640,
+     960
+    ],
+    [
+     515,
+     773
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     567,
+     850
+    ],
+    [
+     962,
+     1442
+    ],
+    [
+     445,
+     667
+    ],
+    [
+     777,
+     1166
+    ],
+    [
+     1024,
+     1535
+    ],
+    [
+     724,
+     1087
+    ],
+    [
+     2000,
+     2985
+    ],
+    [
+     1600,
+     2400
+    ],
+    [
+     769,
+     1152
+    ],
+    [
+     492,
+     737
+    ],
+    [
+     400,
+     600
+    ]
+   ]
   },
   "Martin Scorsese": {
    "style": "portrait",
@@ -4267,10 +9527,104 @@
     "tmdb:/4Xwx5XL1RJj0JQmEo8Fhr6nkpOg.jpg",
     "tmdb:/tkN78z6p4yJmoZiX6n98dPyttdU.jpg",
     "tmdb:/plky4Xt7FEQ7YdhPpCVfLoRC7pY.jpg",
-    "tmdb:/ixaF5f1lWhWy7aKr21KpX2SiI7S.jpg"
+    "tmdb:/ixaF5f1lWhWy7aKr21KpX2SiI7S.jpg",
+    "tmdb:/4n7OFcZRecJkh7go2jU1uZMvjlA.jpg",
+    "tmdb:/h1QOWZ6g9dZLFozShsoaXjgZfZf.jpg",
+    "tmdb:/wZXdrqnItRxcFHlGDJxeUTBvGKb.jpg",
+    "tmdb:/rwisqfC5m3r9G1f6OBnUGXE8JwH.jpg",
+    "tmdb:/9V55HG50Vv837Y1lBlZjcSkP894.jpg",
+    "tmdb:/mN49M9y74NZgMVKN35Qan5cfxrP.jpg",
+    "tmdb:/2ejl6nxW7lavN0kxJT4dAMVa7m4.jpg",
+    "tmdb:/sO2UHE2DQ2bgheeX5wSWeXjxPiU.jpg",
+    "tmdb:/mU0VGy7hBQrNbOQRgXi1BSnTzJS.jpg",
+    "tmdb:/8i01lJkLXPBW4UXEjmBbb9GPQUk.jpg",
+    "tmdb:/zuno8opiWtSxDnGDDinSFIQhq7N.jpg",
+    "tmdb:/sM9Ww1ASQ3I0pZPbz6ldJ4J5iD4.jpg"
    ],
    "src": "tmdb:/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
-   "logo": "file:art_tools/logos/people/martin-scorsese.png"
+   "logo": "file:art_tools/logos/people_tv/martin-scorsese.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     516,
+     774
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     378,
+     567
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1296,
+     1944
+    ],
+    [
+     959,
+     1439
+    ],
+    [
+     950,
+     1425
+    ],
+    [
+     625,
+     936
+    ],
+    [
+     1623,
+     2435
+    ],
+    [
+     889,
+     1333
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1305,
+     1958
+    ],
+    [
+     1093,
+     1640
+    ],
+    [
+     582,
+     872
+    ],
+    [
+     1000,
+     1500
+    ]
+   ]
   },
   "Sergio Leone": {
    "style": "portrait",
@@ -4281,7 +9635,25 @@
     "tmdb:/xF5CF2S7bdGbNQ2tGmGtB0Q2H8m.jpg"
    ],
    "src": "tmdb:/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
-   "logo": "file:art_tools/logos/people/sergio-leone.png"
+   "logo": "file:art_tools/logos/people_tv/sergio-leone.png",
+   "sizes": [
+    [
+     400,
+     600
+    ],
+    [
+     623,
+     935
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     589,
+     883
+    ]
+   ]
   },
   "Billy Wilder": {
    "style": "portrait",
@@ -4296,7 +9668,41 @@
     "tmdb:/2pbh9ScnZrDE9b2kQjaN5Uqb8Gs.jpg"
    ],
    "src": "tmdb:/5zTwAcnI3zCJ0mucPPnoBtkSWEV.jpg",
-   "logo": "file:art_tools/logos/people/billy-wilder.png"
+   "logo": "file:art_tools/logos/people_tv/billy-wilder.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     988,
+     1482
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     557,
+     836
+    ],
+    [
+     443,
+     665
+    ],
+    [
+     1044,
+     1567
+    ],
+    [
+     961,
+     1440
+    ]
+   ]
   },
   "David Lynch": {
    "style": "portrait",
@@ -4308,10 +9714,104 @@
     "tmdb:/y7JOEu10EE7Jdoax3VqIxIFrrbO.jpg",
     "tmdb:/tCSjnqvbPtGDRkL0uPYIvIZMQqn.jpg",
     "tmdb:/bOanIF2vZgpCNyj1QX5yEcDSyqw.jpg",
-    "tmdb:/fwTjyH65ER19TEMAlSX4433vEPV.jpg"
+    "tmdb:/fwTjyH65ER19TEMAlSX4433vEPV.jpg",
+    "tmdb:/k9vllyOw0Af6rV2Ku0PA6WeETFt.jpg",
+    "tmdb:/hrPasPBX0xN49eZGRHuBHN5N5az.jpg",
+    "tmdb:/4pT1X5Fr6Xq5i48NPYmRbHYorat.jpg",
+    "tmdb:/nhSDkuWxfYAXiKNo5v5CZvKgEzD.jpg",
+    "tmdb:/tn3MQYx7Gaw69FdDxYjnbxRxIbU.jpg",
+    "tmdb:/6WcepgciXd3dOrDTd4RMeUifxzk.jpg",
+    "tmdb:/1Z42g0oAaM7e6wm6e6XcpVrDZCe.jpg",
+    "tmdb:/80wnwnUBIH15yDK1G6SMwQK9qpC.jpg",
+    "tmdb:/oP7aT01s5YXtD9ROz2idFxQdwvL.jpg",
+    "tmdb:/mHZnoLGDn0dviGn0WTs63dYX0jQ.jpg",
+    "tmdb:/tA50RfgPPHMheqeskX8G2tIhG8u.jpg",
+    "tmdb:/32XOSC84WdsUhU4aPvGsOeuWluX.jpg"
    ],
    "src": "tmdb:/1P4vCGTvJc13VxejbRLbHA1dT6f.jpg",
-   "logo": "file:art_tools/logos/people/david-lynch.png"
+   "logo": "file:art_tools/logos/people_tv/david-lynch.png",
+   "sizes": [
+    [
+     647,
+     970
+    ],
+    [
+     700,
+     1050
+    ],
+    [
+     828,
+     1242
+    ],
+    [
+     480,
+     720
+    ],
+    [
+     700,
+     1050
+    ],
+    [
+     640,
+     960
+    ],
+    [
+     650,
+     975
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     898,
+     1347
+    ],
+    [
+     1334,
+     2000
+    ],
+    [
+     1590,
+     2385
+    ],
+    [
+     1055,
+     1582
+    ],
+    [
+     715,
+     1073
+    ],
+    [
+     481,
+     720
+    ],
+    [
+     1396,
+     2094
+    ],
+    [
+     761,
+     1142
+    ],
+    [
+     728,
+     1092
+    ],
+    [
+     721,
+     1082
+    ],
+    [
+     693,
+     1039
+    ],
+    [
+     385,
+     577
+    ]
+   ]
   },
   "Hayao Miyazaki": {
    "style": "portrait",
@@ -4320,7 +9820,17 @@
     "tmdb:/tTG5ytGyz2MtkbxD73WAupyjxAD.jpg"
    ],
    "src": "tmdb:/Ab8mkHmkYADjU7wQiOkia9BzGvS.jpg",
-   "logo": "file:art_tools/logos/people/hayao-miyazaki.png"
+   "logo": "file:art_tools/logos/people_tv/hayao-miyazaki.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ]
+   ]
   },
   "Ridley Scott": {
    "style": "portrait",
@@ -4331,7 +9841,25 @@
     "tmdb:/vqTNPSnE2d6gQb9Py9v5wy1cu3K.jpg"
    ],
    "src": "tmdb:/9pubUbDX3eKB6ZuKxbFgv4cBZrz.jpg",
-   "logo": "file:art_tools/logos/people/ridley-scott.png"
+   "logo": "file:art_tools/logos/people_tv/ridley-scott.png",
+   "sizes": [
+    [
+     2000,
+     2999
+    ],
+    [
+     1800,
+     2700
+    ],
+    [
+     662,
+     992
+    ],
+    [
+     639,
+     959
+    ]
+   ]
   },
   "James Cameron": {
    "style": "portrait",
@@ -4343,10 +9871,49 @@
     "tmdb:/qDMfWcHlvYAA73caCzqjmtXtePu.jpg",
     "tmdb:/5tXGxsQyp05biKpq99NKyGRuFHX.jpg",
     "tmdb:/kR81EItH4SAlp853Grsf8LmuRMo.jpg",
-    "tmdb:/hhAEMatJVynSX9nbArQXCkuujqG.jpg"
+    "tmdb:/hhAEMatJVynSX9nbArQXCkuujqG.jpg",
+    "tmdb:/7rKvLZQ1h3TTK6sIr4Q2wqSXYbo.jpg"
    ],
    "src": "tmdb:/vL5LR6WdxWPjLPFRLe133jXWsh5.jpg",
-   "logo": "file:art_tools/logos/people/james-cameron.png"
+   "logo": "file:art_tools/logos/people_tv/james-cameron.png",
+   "sizes": [
+    [
+     666,
+     1000
+    ],
+    [
+     700,
+     1050
+    ],
+    [
+     1577,
+     2365
+    ],
+    [
+     934,
+     1400
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1047,
+     1572
+    ],
+    [
+     980,
+     1473
+    ],
+    [
+     1707,
+     2561
+    ],
+    [
+     1645,
+     2468
+    ]
+   ]
   },
   "Clint Eastwood": {
    "style": "portrait",
@@ -4358,10 +9925,104 @@
     "tmdb:/wJosJW9DNWHOA8h63bQr2HgHC48.jpg",
     "tmdb:/e0kbQQwpinfV6R4dQOsnmqqDOLe.jpg",
     "tmdb:/5YJsrm2PPU0Zsrdly4IvGWtrZMz.jpg",
-    "tmdb:/558etizblWNXDZlmPvpyaIy9dJT.jpg"
+    "tmdb:/558etizblWNXDZlmPvpyaIy9dJT.jpg",
+    "tmdb:/vEV4rTA8kB27ilr7O0ldY5ec5Yd.jpg",
+    "tmdb:/mv1DXl4sW5gs4rY78zF6BJIx93i.jpg",
+    "tmdb:/bU3oDF4zWeDSBKAJBlbw6uSlyC5.jpg",
+    "tmdb:/cZWi2qjNrvB9G8hu5ymYg2Iduu1.jpg",
+    "tmdb:/4bxu2zViUmbaaPGqsKbBrHcXqwK.jpg",
+    "tmdb:/tphaDw3WOWetygIxMl5VtBtp5Xh.jpg",
+    "tmdb:/GMbPiaFm8Qqt77BCedu2jR6Cw0.jpg",
+    "tmdb:/kCzQmc8sJqlopeouSnINsC5Qzn1.jpg",
+    "tmdb:/7uQ3vjJ3pTpQzN961JVqV5obbjl.jpg",
+    "tmdb:/2Bps01oCPgXpmVHieT96tlfPkJI.jpg",
+    "tmdb:/rflCrhixsWjJBatHHTNdV81nWPf.jpg",
+    "tmdb:/u1soeTqD48CNq2M1GkBZ6uYVZWA.jpg"
    ],
    "src": "tmdb:/smAnf46gZL1jXuP9nZvkM3Uynav.jpg",
-   "logo": "file:art_tools/logos/people/clint-eastwood.png"
+   "logo": "file:art_tools/logos/people_tv/clint-eastwood.png",
+   "sizes": [
+    [
+     1171,
+     1757
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     817,
+     1225
+    ],
+    [
+     1280,
+     1922
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     440,
+     660
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     577,
+     866
+    ],
+    [
+     320,
+     480
+    ],
+    [
+     831,
+     1247
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     648,
+     972
+    ],
+    [
+     312,
+     468
+    ],
+    [
+     1179,
+     1769
+    ]
+   ]
   },
   "Peter Jackson": {
    "style": "portrait",
@@ -4374,7 +10035,33 @@
     "tmdb:/nhbILpv5BPvIgLsLvEbRv4sF9Mk.jpg"
    ],
    "src": "tmdb:/ua5EHfleb44L5hfHPs2BPqRAove.jpg",
-   "logo": "file:art_tools/logos/people/peter-jackson.png"
+   "logo": "file:art_tools/logos/people_tv/peter-jackson.png",
+   "sizes": [
+    [
+     700,
+     1050
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     364,
+     546
+    ],
+    [
+     1532,
+     2299
+    ],
+    [
+     1010,
+     1515
+    ]
+   ]
   },
   "Tim Burton": {
    "style": "portrait",
@@ -4387,7 +10074,33 @@
     "tmdb:/d44Daj87K37frWSFuazCv9oONj9.jpg"
    ],
    "src": "tmdb:/bSvUW4JQ6g4QiKvwejcfcPRd4Ke.jpg",
-   "logo": "file:art_tools/logos/people/tim-burton.png"
+   "logo": "file:art_tools/logos/people_tv/tim-burton.png",
+   "sizes": [
+    [
+     839,
+     1260
+    ],
+    [
+     1600,
+     2400
+    ],
+    [
+     458,
+     687
+    ],
+    [
+     452,
+     679
+    ],
+    [
+     960,
+     1440
+    ],
+    [
+     452,
+     679
+    ]
+   ]
   },
   "Michael Mann": {
    "style": "portrait",
@@ -4400,7 +10113,33 @@
     "tmdb:/zaiiWgIyO1mbftNF1yQxHDLsZFE.jpg"
    ],
    "src": "tmdb:/kMRdsjSHifqGZPfHdZIS8YfNMk0.jpg",
-   "logo": "file:art_tools/logos/people/michael-mann.png"
+   "logo": "file:art_tools/logos/people_tv/michael-mann.png",
+   "sizes": [
+    [
+     1799,
+     2698
+    ],
+    [
+     833,
+     1250
+    ],
+    [
+     750,
+     1125
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     1000,
+     1500
+    ]
+   ]
   },
   "George Miller": {
    "style": "portrait",
@@ -4411,7 +10150,25 @@
     "tmdb:/xL5cT2wqyeyjmXrTYXNYzjhNI9H.jpg"
    ],
    "src": "tmdb:/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
-   "logo": "file:art_tools/logos/people/george-miller.png"
+   "logo": "file:art_tools/logos/people_tv/george-miller.png",
+   "sizes": [
+    [
+     2000,
+     3000
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     425,
+     638
+    ],
+    [
+     300,
+     450
+    ]
+   ]
   },
   "Christopher Nolan": {
    "style": "portrait",
@@ -4423,10 +10180,74 @@
     "tmdb:/liKOi4aHywQh9UguLgf6wFyGFMU.jpg",
     "tmdb:/62gmVhxnamAtZkhVWw1t2QHK9dL.jpg",
     "tmdb:/7cCtkOBjVRvUm7AWUZrCZLw4yQy.jpg",
-    "tmdb:/3PbLuwfTUXhGz2gZojkbSpuPTeY.jpg"
+    "tmdb:/3PbLuwfTUXhGz2gZojkbSpuPTeY.jpg",
+    "tmdb:/3ZpqX9gNLfIXLeIJUIBm0lp0IdG.jpg",
+    "tmdb:/a8896MClhnNDFVUnK02l3bA5ikQ.jpg",
+    "tmdb:/nO2eckea2iWYLEFwDovWq3O6yiP.jpg",
+    "tmdb:/qj1TnqFlxO71tR7bx1RSKoxmzSs.jpg",
+    "tmdb:/juvvdvu5HiPF6LAsUSbIEezFXog.jpg",
+    "tmdb:/5SdvwZtcPWsO2Ymo6AheYBZyhrY.jpg"
    ],
    "src": "tmdb:/vgnoBSVzWAV9sNQUORaDGvDp7wx.jpg",
-   "logo": "file:art_tools/logos/people/christopher-nolan.png"
+   "logo": "file:art_tools/logos/people_tv/christopher-nolan.png",
+   "sizes": [
+    [
+     1018,
+     1527
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1051,
+     1577
+    ],
+    [
+     867,
+     1300
+    ],
+    [
+     396,
+     594
+    ],
+    [
+     617,
+     925
+    ],
+    [
+     1365,
+     2048
+    ],
+    [
+     336,
+     504
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     1179,
+     1768
+    ],
+    [
+     867,
+     1300
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     1678,
+     2516
+    ],
+    [
+     898,
+     1347
+    ]
+   ]
   },
   "Quentin Tarantino": {
    "style": "portrait",
@@ -4438,10 +10259,49 @@
     "tmdb:/gLVE4Q6FUdkOmZ0jvGOS9PQwFoE.jpg",
     "tmdb:/hY1g8MN3WXPhutN2ZkmpuyTANow.jpg",
     "tmdb:/u6CCDu1k64ZrH7Mu0hgh8yWFjxk.jpg",
-    "tmdb:/loaDiikyolJ4Oy15ytJGep68lIq.jpg"
+    "tmdb:/loaDiikyolJ4Oy15ytJGep68lIq.jpg",
+    "tmdb:/iyxH0pAbwwxCXZOmhiS1XOCksDS.jpg"
    ],
    "src": "tmdb:/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
-   "logo": "file:art_tools/logos/people/quentin-tarantino.png"
+   "logo": "file:art_tools/logos/people_tv/quentin-tarantino.png",
+   "sizes": [
+    [
+     840,
+     1260
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     1047,
+     1572
+    ],
+    [
+     657,
+     985
+    ],
+    [
+     554,
+     832
+    ],
+    [
+     920,
+     1380
+    ],
+    [
+     615,
+     923
+    ],
+    [
+     658,
+     987
+    ],
+    [
+     460,
+     690
+    ]
+   ]
   },
   "David Fincher": {
    "style": "portrait",
@@ -4455,7 +10315,37 @@
     "tmdb:/kf7XqimV9PuMEKGX7BOem3Ua2h0.jpg"
    ],
    "src": "tmdb:/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
-   "logo": "file:art_tools/logos/people/david-fincher.png"
+   "logo": "file:art_tools/logos/people_tv/david-fincher.png",
+   "sizes": [
+    [
+     890,
+     1335
+    ],
+    [
+     1072,
+     1608
+    ],
+    [
+     1997,
+     2996
+    ],
+    [
+     897,
+     1345
+    ],
+    [
+     1663,
+     2500
+    ],
+    [
+     580,
+     872
+    ],
+    [
+     480,
+     721
+    ]
+   ]
   },
   "Denis Villeneuve": {
    "style": "portrait",
@@ -4469,7 +10359,37 @@
     "tmdb:/bHnwL3IBDnKCrPovK5L4SIzoJYf.jpg"
    ],
    "src": "tmdb:/iTyh3hqTUjiRqQo8Uz1w1KtQti9.jpg",
-   "logo": "file:art_tools/logos/people/denis-villeneuve.png"
+   "logo": "file:art_tools/logos/people_tv/denis-villeneuve.png",
+   "sizes": [
+    [
+     666,
+     999
+    ],
+    [
+     472,
+     708
+    ],
+    [
+     824,
+     1236
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     1023,
+     1535
+    ],
+    [
+     330,
+     495
+    ],
+    [
+     1705,
+     2560
+    ]
+   ]
   },
   "Paul Thomas Anderson": {
    "style": "portrait",
@@ -4481,15 +10401,89 @@
     "tmdb:/zXQXly4p8xevgjbfMedmcP1UNuc.jpg",
     "tmdb:/psR7fGTuE5X9eoBs29jk681bEmF.jpg",
     "tmdb:/xoM0A6mgnmkc8PeMwdNVw8jqHhs.jpg",
-    "tmdb:/gtzjDUQz5HB1c4aQqawHbWk1Dad.jpg"
+    "tmdb:/gtzjDUQz5HB1c4aQqawHbWk1Dad.jpg",
+    "tmdb:/eEVauco4LVwu1LixmZGUddAnghy.jpg",
+    "tmdb:/5cPA32gkkrbKYijEwcFKkpYsaT7.jpg",
+    "tmdb:/XxYAePy40GlmhtFpc80LpBmQQO.jpg",
+    "tmdb:/6rLvsIWodgOiUN1tJnhnNYFY9zm.jpg",
+    "tmdb:/jNd6OiSdPpsARvL5sMyRXGFZkLf.jpg",
+    "tmdb:/anO6PX8513zJSdUBgUWZ55r1yR0.jpg",
+    "tmdb:/1mMEcM4naLz2HlfWen70cArVCgp.jpg",
+    "tmdb:/fJOdMLbGuhg3Jc0oDnX1s8BwhjE.jpg"
    ],
    "src": "tmdb:/8LRcCJjbQI552BMCuGgYqph8USS.jpg",
-   "logo": "file:art_tools/logos/people/paul-thomas-anderson.png"
+   "logo": "file:art_tools/logos/people_tv/paul-thomas-anderson.png",
+   "sizes": [
+    [
+     666,
+     1000
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     1014,
+     1522
+    ],
+    [
+     1707,
+     2560
+    ],
+    [
+     1333,
+     2000
+    ],
+    [
+     911,
+     1367
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     1822,
+     2733
+    ],
+    [
+     1176,
+     1763
+    ],
+    [
+     1059,
+     1589
+    ],
+    [
+     841,
+     1261
+    ],
+    [
+     841,
+     1261
+    ],
+    [
+     1258,
+     1887
+    ],
+    [
+     579,
+     869
+    ],
+    [
+     533,
+     800
+    ],
+    [
+     397,
+     595
+    ]
+   ]
   },
   "Joel & Ethan Coen": {
    "style": "scene",
    "src": "tmdb:/kd9jFTTabg4xJpHDgxY0h8F9BzG.jpg",
-   "logo": "file:art_tools/logos/people/joel-ethan-coen.png"
+   "logo": "file:art_tools/logos/people_tv/joel-ethan-coen.png"
   },
   "Wes Anderson": {
    "style": "portrait",
@@ -4501,10 +10495,74 @@
     "tmdb:/b1LH059EGnU01rsZwcqYzNjY7w9.jpg",
     "tmdb:/32MHNRsDWjj82sEB1AVNTnxxshG.jpg",
     "tmdb:/5z2WroP0CgQ5vI17M0hzi8o5NAn.jpg",
-    "tmdb:/qVAPXTpa7wkZCmkoBdrdDsCaWyc.jpg"
+    "tmdb:/qVAPXTpa7wkZCmkoBdrdDsCaWyc.jpg",
+    "tmdb:/fvNb40RDWP2FilkVWg3ffvU8lxp.jpg",
+    "tmdb:/kPecpudx6Vh0AzgJaSVdcRaWRQ5.jpg",
+    "tmdb:/tW9SEJiRmlLVsayWQ7i5A0YnUlL.jpg",
+    "tmdb:/yxmdOK1kKGXMtcZwWDW3N02y240.jpg",
+    "tmdb:/h6O6XmQjN72V2g9CuQ2SRP6jjE9.jpg",
+    "tmdb:/tQdTrUmEtHsVeRObTh95AgwyXS.jpg"
    ],
    "src": "tmdb:/9udCLTxTFl28RxnK8Q05E154ZGa.jpg",
-   "logo": "file:art_tools/logos/people/wes-anderson.png"
+   "logo": "file:art_tools/logos/people_tv/wes-anderson.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     798,
+     1200
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     385,
+     577
+    ],
+    [
+     400,
+     600
+    ],
+    [
+     376,
+     564
+    ],
+    [
+     640,
+     960
+    ],
+    [
+     363,
+     544
+    ],
+    [
+     356,
+     534
+    ],
+    [
+     660,
+     990
+    ],
+    [
+     646,
+     969
+    ],
+    [
+     1138,
+     1707
+    ],
+    [
+     706,
+     1069
+    ]
+   ]
   },
   "Guillermo del Toro": {
    "style": "portrait",
@@ -4516,7 +10574,29 @@
     "tmdb:/q6IiOcTaaQN554kysBDt8VfPtRp.jpg"
    ],
    "src": "tmdb:/ig7qUy7drkEFZNCK7gi0hMn1WMN.jpg",
-   "logo": "file:art_tools/logos/people/guillermo-del-toro.png"
+   "logo": "file:art_tools/logos/people_tv/guillermo-del-toro.png",
+   "sizes": [
+    [
+     1278,
+     1917
+    ],
+    [
+     820,
+     1230
+    ],
+    [
+     444,
+     666
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     600,
+     900
+    ]
+   ]
   },
   "Bong Joon-ho": {
    "style": "portrait",
@@ -4531,7 +10611,41 @@
     "tmdb:/h35x951t1MPuV61OJKJbtyQACvt.jpg"
    ],
    "src": "tmdb:/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
-   "logo": "file:art_tools/logos/people/bong-joon-ho.png"
+   "logo": "file:art_tools/logos/people_tv/bong-joon-ho.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     791,
+     1187
+    ],
+    [
+     492,
+     738
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     367,
+     551
+    ],
+    [
+     490,
+     735
+    ],
+    [
+     423,
+     635
+    ],
+    [
+     1582,
+     2372
+    ]
+   ]
   },
   "Park Chan-wook": {
    "style": "portrait",
@@ -4543,10 +10657,59 @@
     "tmdb:/jP8HebJFjRPhljc8hoBJ6ai8DuX.jpg",
     "tmdb:/18IzoyBWMI3ZvxndpBNLSzXFpyK.jpg",
     "tmdb:/znX34BsGgGPgXTrkNE5eOzudQOH.jpg",
-    "tmdb:/fA1EexvwVgO2yxHLrwgHngn0hr9.jpg"
+    "tmdb:/fA1EexvwVgO2yxHLrwgHngn0hr9.jpg",
+    "tmdb:/6ulofT9VizWXBxXor0XDgJAw52M.jpg",
+    "tmdb:/m0LYGUsfUEjS0th4dOTHqOBqk9U.jpg",
+    "tmdb:/wO817lu3A2w1raDwXKvFIO6DNmP.jpg"
    ],
    "src": "tmdb:/sdwjQEM869JFwMytTmvr6ggvaUl.jpg",
-   "logo": "file:art_tools/logos/people/park-chan-wook.png"
+   "logo": "file:art_tools/logos/people_tv/park-chan-wook.png",
+   "sizes": [
+    [
+     323,
+     485
+    ],
+    [
+     1466,
+     2200
+    ],
+    [
+     1216,
+     1824
+    ],
+    [
+     1180,
+     1771
+    ],
+    [
+     1026,
+     1539
+    ],
+    [
+     1919,
+     2879
+    ],
+    [
+     910,
+     1365
+    ],
+    [
+     1466,
+     2200
+    ],
+    [
+     1466,
+     2200
+    ],
+    [
+     1466,
+     2200
+    ],
+    [
+     661,
+     992
+    ]
+   ]
   },
   "Alfonso Cuarón": {
    "style": "portrait",
@@ -4560,7 +10723,37 @@
     "tmdb:/zJr1nV2t0DHsVcY8eGg9bd9coft.jpg"
    ],
    "src": "tmdb:/vbk5CfaAHOjQPSAcYm6AoRRz2Af.jpg",
-   "logo": "file:art_tools/logos/people/alfonso-cuar-n.png"
+   "logo": "file:art_tools/logos/people_tv/alfonso-cuar-n.png",
+   "sizes": [
+    [
+     683,
+     1025
+    ],
+    [
+     683,
+     1024
+    ],
+    [
+     480,
+     720
+    ],
+    [
+     683,
+     1024
+    ],
+    [
+     563,
+     844
+    ],
+    [
+     559,
+     838
+    ],
+    [
+     1320,
+     1973
+    ]
+   ]
   },
   "Alejandro González Iñárritu": {
    "style": "portrait",
@@ -4571,7 +10764,25 @@
     "tmdb:/4SG9faTgiKSWoRqWatmoHWWY0by.jpg"
    ],
    "src": "tmdb:/mNQtUJv1F3u0uSKILFrGjIHqkxx.jpg",
-   "logo": "file:art_tools/logos/people/alejandro-gonz-lez-i-rritu.png"
+   "logo": "file:art_tools/logos/people_tv/alejandro-gonz-lez-i-rritu.png",
+   "sizes": [
+    [
+     1000,
+     1500
+    ],
+    [
+     586,
+     879
+    ],
+    [
+     452,
+     678
+    ],
+    [
+     682,
+     1024
+    ]
+   ]
   },
   "Darren Aronofsky": {
    "style": "portrait",
@@ -4582,7 +10793,25 @@
     "tmdb:/dz14XMzcX08xVbnxGive9Q080FX.jpg"
    ],
    "src": "tmdb:/qxTw8OKJLRX1Xb5nR5CcIDnLKoq.jpg",
-   "logo": "file:art_tools/logos/people/darren-aronofsky.png"
+   "logo": "file:art_tools/logos/people_tv/darren-aronofsky.png",
+   "sizes": [
+    [
+     833,
+     1250
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1200,
+     1800
+    ],
+    [
+     450,
+     675
+    ]
+   ]
   },
   "Kathryn Bigelow": {
    "style": "portrait",
@@ -4594,10 +10823,104 @@
     "tmdb:/IODNm2XtD61c7CNxjCXgRKtRP.jpg",
     "tmdb:/fw8inxQTkRr3ABVJNvFCIUTEq.jpg",
     "tmdb:/suj43HDG3mRxUyRHuiSSxKMIeip.jpg",
-    "tmdb:/95pTV3ta5MhGff3NuyW7iYfl16n.jpg"
+    "tmdb:/95pTV3ta5MhGff3NuyW7iYfl16n.jpg",
+    "tmdb:/niuEl9Jdjd3DCq8rxdLJrErBN1V.jpg",
+    "tmdb:/Ajco3gMGpajuhgcb7XMTLfystuv.jpg",
+    "tmdb:/fic7KYlDTTPA8Ess8ginR5ixztH.jpg",
+    "tmdb:/Akjzl8ZnIJg2W9CfJe7v5q8EuPM.jpg",
+    "tmdb:/jSuPh9mdPkpjhBCRdDalT7lZ16m.jpg",
+    "tmdb:/f1ZlZK7IS0L4f3pJmRcoO0jvlhk.jpg",
+    "tmdb:/gM0zlGWQeYDSgNwEjphODetvRsk.jpg",
+    "tmdb:/sRWHbWwBgG0RoYysboIg3uBSDpT.jpg",
+    "tmdb:/uKXsDeraYO90c5nEcZ7xEFYzcys.jpg",
+    "tmdb:/iPzpNC65YOKTtvoLHnrp28GBTyu.jpg",
+    "tmdb:/zLuF8Q8a2RFXG3SiIBhfEJda1rU.jpg",
+    "tmdb:/jpovDK9fotW9UODEUYcPymbQXQs.jpg"
    ],
    "src": "tmdb:/off0xgvtfHY82l3MC4mDpCk1APY.jpg",
-   "logo": "file:art_tools/logos/people/kathryn-bigelow.png"
+   "logo": "file:art_tools/logos/people_tv/kathryn-bigelow.png",
+   "sizes": [
+    [
+     1043,
+     1565
+    ],
+    [
+     1480,
+     2220
+    ],
+    [
+     461,
+     692
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     551,
+     827
+    ],
+    [
+     488,
+     732
+    ],
+    [
+     1280,
+     1920
+    ],
+    [
+     580,
+     870
+    ],
+    [
+     777,
+     1165
+    ],
+    [
+     738,
+     1107
+    ],
+    [
+     553,
+     829
+    ],
+    [
+     439,
+     659
+    ],
+    [
+     675,
+     1013
+    ],
+    [
+     612,
+     918
+    ],
+    [
+     603,
+     904
+    ],
+    [
+     453,
+     680
+    ],
+    [
+     300,
+     450
+    ],
+    [
+     1375,
+     2062
+    ],
+    [
+     561,
+     842
+    ],
+    [
+     534,
+     801
+    ]
+   ]
   },
   "Edgar Wright": {
    "style": "portrait",
@@ -4612,7 +10935,41 @@
     "tmdb:/4xlCtuqaDSQu8suHvaYfq5rtlnh.jpg"
    ],
    "src": "tmdb:/goCvLSUFz0p7k8R10Hv4CVh3EQv.jpg",
-   "logo": "file:art_tools/logos/people/edgar-wright.png"
+   "logo": "file:art_tools/logos/people_tv/edgar-wright.png",
+   "sizes": [
+    [
+     959,
+     1438
+    ],
+    [
+     653,
+     980
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     779,
+     1168
+    ],
+    [
+     1013,
+     1520
+    ],
+    [
+     1544,
+     2316
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     1191,
+     1786
+    ]
+   ]
   },
   "Guy Ritchie": {
    "style": "portrait",
@@ -4624,7 +10981,29 @@
     "tmdb:/ewfGrrgW1q11wQdv8AQObCx08jW.jpg"
    ],
    "src": "tmdb:/veXdzn7LL0bFIDGmE7tTkvRg0qV.jpg",
-   "logo": "file:art_tools/logos/people/guy-ritchie.png"
+   "logo": "file:art_tools/logos/people_tv/guy-ritchie.png",
+   "sizes": [
+    [
+     675,
+     1012
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     551,
+     827
+    ],
+    [
+     973,
+     1459
+    ],
+    [
+     892,
+     1338
+    ]
+   ]
   },
   "Sofia Coppola": {
    "style": "portrait",
@@ -4636,7 +11015,29 @@
     "tmdb:/bGvunYQNNLMLMVAyjSucGKdIuDw.jpg"
    ],
    "src": "tmdb:/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg",
-   "logo": "file:art_tools/logos/people/sofia-coppola.png"
+   "logo": "file:art_tools/logos/people_tv/sofia-coppola.png",
+   "sizes": [
+    [
+     453,
+     680
+    ],
+    [
+     1000,
+     1500
+    ],
+    [
+     641,
+     962
+    ],
+    [
+     1974,
+     2961
+    ],
+    [
+     800,
+     1200
+    ]
+   ]
   },
   "Yorgos Lanthimos": {
    "style": "portrait",
@@ -4648,10 +11049,74 @@
     "tmdb:/38c8308Lvts3JJtIo7toJOxuHtX.jpg",
     "tmdb:/mJQVGyhT1VkBT0jqyQo6lMJbb7A.jpg",
     "tmdb:/z3rbvSVUFEK3HwA0jDA1LQNVurd.jpg",
-    "tmdb:/8eeU5qg3qMenv07g8FEHnUB78uw.jpg"
+    "tmdb:/8eeU5qg3qMenv07g8FEHnUB78uw.jpg",
+    "tmdb:/8ZPeTspitvqMlEwh6qo2VDGpYqh.jpg",
+    "tmdb:/aKZseqSCr6aZKjSusk4OLN22tSC.jpg",
+    "tmdb:/6T6WxeQt5mSwQpm37Km80vCyDe5.jpg",
+    "tmdb:/z35w5fZxRQ97D5HBJ5C3ZEihrOv.jpg",
+    "tmdb:/nZRQt7dLYSae1GwOt7d8bItCLje.jpg",
+    "tmdb:/zn2pq2w4K8rR0vbZW2nPbDI9MtH.jpg"
    ],
    "src": "tmdb:/wrrA1xzZq7z84hacSsSTbJoPaUx.jpg",
-   "logo": "file:art_tools/logos/people/yorgos-lanthimos.png"
+   "logo": "file:art_tools/logos/people_tv/yorgos-lanthimos.png",
+   "sizes": [
+    [
+     1365,
+     2048
+    ],
+    [
+     800,
+     1200
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     512,
+     768
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     1013,
+     1519
+    ],
+    [
+     649,
+     974
+    ],
+    [
+     385,
+     577
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     674,
+     1011
+    ],
+    [
+     773,
+     1159
+    ],
+    [
+     600,
+     900
+    ]
+   ]
   },
   "Alex Garland": {
    "style": "portrait",
@@ -4664,7 +11129,33 @@
     "tmdb:/iMHWxkJf7n8GK9M8HUb0E7OUUvK.jpg"
    ],
    "src": "tmdb:/dfzyELOXqzWYH5LnfgQl3io1oS4.jpg",
-   "logo": "file:art_tools/logos/people/alex-garland.png"
+   "logo": "file:art_tools/logos/people_tv/alex-garland.png",
+   "sizes": [
+    [
+     451,
+     676
+    ],
+    [
+     828,
+     1242
+    ],
+    [
+     1475,
+     2213
+    ],
+    [
+     1101,
+     1652
+    ],
+    [
+     935,
+     1403
+    ],
+    [
+     1528,
+     2293
+    ]
+   ]
   },
   "Jordan Peele": {
    "style": "portrait",
@@ -4676,10 +11167,74 @@
     "tmdb:/h7TS8Jgimk1cPN0CRwzz9txggCj.jpg",
     "tmdb:/8c5f7pWsYmpkfAnD4VnzS54l4X2.jpg",
     "tmdb:/yituxFz20fM5crmI8Ga1oc5N5L3.jpg",
-    "tmdb:/tzW9zvPCogJa0wpwZa9sRsNrpZw.jpg"
+    "tmdb:/tzW9zvPCogJa0wpwZa9sRsNrpZw.jpg",
+    "tmdb:/aApFqSQ4m8rQd5yb4rrEm3Zaiu1.jpg",
+    "tmdb:/4NfvawbHGzzxtEadbDnj0YB85CB.jpg",
+    "tmdb:/hR08fqzEIgirJufzVq252iNpGfG.jpg",
+    "tmdb:/aQBcuu910fEHIzz0h2P9A37deRI.jpg",
+    "tmdb:/cWtofAoCScyHPsSGiB0YYGRF4zh.jpg",
+    "tmdb:/rk6e4TXzC33zwaoaVX3slJsXey5.jpg"
    ],
    "src": "tmdb:/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
-   "logo": "file:art_tools/logos/people/jordan-peele.png"
+   "logo": "file:art_tools/logos/people_tv/jordan-peele.png",
+   "sizes": [
+    [
+     414,
+     621
+    ],
+    [
+     739,
+     1109
+    ],
+    [
+     1221,
+     1832
+    ],
+    [
+     372,
+     559
+    ],
+    [
+     812,
+     1217
+    ],
+    [
+     934,
+     1402
+    ],
+    [
+     1462,
+     2193
+    ],
+    [
+     680,
+     1020
+    ],
+    [
+     850,
+     1275
+    ],
+    [
+     680,
+     1020
+    ],
+    [
+     722,
+     1083
+    ],
+    [
+     567,
+     850
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     493,
+     739
+    ]
+   ]
   },
   "Robert Eggers": {
    "style": "portrait",
@@ -4692,7 +11247,33 @@
     "tmdb:/mLszN6cra7KZomzZI3CU6k8X0Zl.jpg"
    ],
    "src": "tmdb:/dEY6lCgiODGMDPY3Oo2j09ngPiq.jpg",
-   "logo": "file:art_tools/logos/people/robert-eggers.png"
+   "logo": "file:art_tools/logos/people_tv/robert-eggers.png",
+   "sizes": [
+    [
+     1216,
+     1826
+    ],
+    [
+     639,
+     959
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     667,
+     1000
+    ],
+    [
+     1413,
+     2121
+    ],
+    [
+     1080,
+     1620
+    ]
+   ]
   },
   "Ari Aster": {
    "style": "portrait",
@@ -4704,10 +11285,49 @@
     "tmdb:/g8NZ90vK1wxfz7cUknkn6nQhd4e.jpg",
     "tmdb:/vVQai1yKGStv4x7TZdZS4X8MEyP.jpg",
     "tmdb:/ucJtVUAqLkaBNGxaLyY7IBOvAEC.jpg",
-    "tmdb:/13q96VSNFsGG6G7hoxpAMlcdxWA.jpg"
+    "tmdb:/13q96VSNFsGG6G7hoxpAMlcdxWA.jpg",
+    "tmdb:/fADxhTWB7eVyEthc0QZLbPduy0w.jpg"
    ],
    "src": "tmdb:/4DUoPZOHdPuROP4nyEIsPaMIiQl.jpg",
-   "logo": "file:art_tools/logos/people/ari-aster.png"
+   "logo": "file:art_tools/logos/people_tv/ari-aster.png",
+   "sizes": [
+    [
+     753,
+     1130
+    ],
+    [
+     753,
+     1130
+    ],
+    [
+     486,
+     730
+    ],
+    [
+     1800,
+     2700
+    ],
+    [
+     753,
+     1130
+    ],
+    [
+     600,
+     900
+    ],
+    [
+     959,
+     1439
+    ],
+    [
+     700,
+     1050
+    ],
+    [
+     300,
+     450
+    ]
+   ]
   },
   "Greta Gerwig": {
    "style": "portrait",
@@ -4719,10 +11339,89 @@
     "tmdb:/iOl1tjdLIGXeGGF73eAq6cE4Tmp.jpg",
     "tmdb:/x98gWUtz5LnU0Tw5z18eCGt6uKf.jpg",
     "tmdb:/to1QFsQ0W5TA61CpVh960o9aKfh.jpg",
-    "tmdb:/fd7EGCbERVDNCcloE0ugDV7pVbh.jpg"
+    "tmdb:/fd7EGCbERVDNCcloE0ugDV7pVbh.jpg",
+    "tmdb:/loJ7PFCD8FtMNj8xQPardAfGuHL.jpg",
+    "tmdb:/24MMLpoUtOh9wYxI0Q7B73AbGYd.jpg",
+    "tmdb:/kldbECNPsW8zmY7c6pjTJ5iMBC9.jpg",
+    "tmdb:/1W0ZOqQBWSxA7YH0N92zfhgJTBK.jpg",
+    "tmdb:/qbhD8qmwj2JHT9jEW8htoaYpYo7.jpg",
+    "tmdb:/ccC39AnWfw7yxwQvZRAQQac97RG.jpg",
+    "tmdb:/v8IqQ904grjBtCEWYMNCXcRropt.jpg",
+    "tmdb:/3roD8J2nYsy0ltK9ixsvgH2GcV7.jpg",
+    "tmdb:/nvdDILF8PEXNOg6xFfMIxRsC4LL.jpg"
    ],
    "src": "tmdb:/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg",
-   "logo": "file:art_tools/logos/people/greta-gerwig.png"
+   "logo": "file:art_tools/logos/people_tv/greta-gerwig.png",
+   "sizes": [
+    [
+     1666,
+     2500
+    ],
+    [
+     664,
+     996
+    ],
+    [
+     902,
+     1353
+    ],
+    [
+     1057,
+     1585
+    ],
+    [
+     404,
+     606
+    ],
+    [
+     500,
+     750
+    ],
+    [
+     1228,
+     1842
+    ],
+    [
+     918,
+     1376
+    ],
+    [
+     850,
+     1276
+    ],
+    [
+     699,
+     1049
+    ],
+    [
+     666,
+     999
+    ],
+    [
+     921,
+     1382
+    ],
+    [
+     666,
+     999
+    ],
+    [
+     2000,
+     3000
+    ],
+    [
+     675,
+     1012
+    ],
+    [
+     1483,
+     2225
+    ],
+    [
+     800,
+     1200
+    ]
+   ]
   }
  },
  "Awards & Festivals": {

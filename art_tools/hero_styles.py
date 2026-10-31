@@ -87,12 +87,12 @@ def wall(posters, tint=(20, 20, 26), glow=None, seed=1, angle=-9.0, cols=7, rows
 _RB = None
 
 
-def best_photo(photos):
+def best_photo(photos, min_h=700):
     """of a person's photos (best voted first), the one that frames them best for the hero: the face well inside the
     photo (not at an edge, where a cut would run through it), shoulders below the chin, sharp enough"""
     scored = []
     for i, im in enumerate(photos):
-        if im is None or im.height < 700:
+        if im is None or im.height < min_h:
             continue
         fs = hc.faces(im.convert("RGB"))
         if not fs:
@@ -104,6 +104,9 @@ def best_photo(photos):
         fit += 0.6 * max(0.0, abs(cx - 0.5) - 0.12)          # face pushed towards a side of the photo
         if y1 > 0.72:                                         # the chin near the bottom: nothing below the head
             fit += 0.3
+        # room below the chin, in face heights: a head and shoulders needs about 1.3; less leaves a floating head
+        room = (1 - y1) / max(0.05, frac)
+        fit += 1.5 * max(0.0, 1.3 - room)
         if x0 < 0.08 or x1 > 0.92 or y0 < 0.04:              # the face touches an edge: never usable
             fit += 2
         scored.append((fit + i * 0.02, i))
@@ -165,7 +168,8 @@ def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
     side = max(side, al[: p.height // 2, -max(2, p.width // 50):].mean())
     if os.environ.get("HERO_DEBUG"):
         print(f"  cutout: top {top:.2f} side {side:.2f} mean {al.mean():.2f}")
-    if top > 0.6 and side > 0.6:
+    room = (1 - fb[3]) / max(0.05, fb[3] - fb[1])           # face heights of figure below the chin
+    if (top > 0.6 and side > 0.6) or room < 0.9:            # a box, or a bare head: show the photo, softly framed
         yy, xx = np.mgrid[0:p.height, 0:p.width]
         cx, cy = (fb[0] + fb[2]) / 2 * p.width, (fb[1] + fb[3]) / 2 * p.height
         fhh = (fb[3] - fb[1]) * p.height
@@ -195,7 +199,8 @@ def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
         m *= _edge_ramp(ph, max(24, min(ph * 0.2, fy0 - marg)))[:, None]
     # the bottom: the photo's own lower edge, or the frame's, whichever comes first
     bottom = min(ph, H - y)
-    ramp_h = max(60, min(ph * 0.35, bottom - fy1 - marg))
+    # the fade starts below the shoulders (about a face height under the chin), never at the neck
+    ramp_h = max(0.6 * (fy1 - fy0), min(ph * 0.35, bottom - fy1 - 0.9 * (fy1 - fy0)))
     rows_ = np.arange(ph)[:, None]
     m *= np.clip((bottom - rows_) / ramp_h, 0, 1) ** 1.5
     p.putalpha(Image.fromarray((a * m).astype(np.uint8)))
