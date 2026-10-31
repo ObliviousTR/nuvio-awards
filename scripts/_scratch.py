@@ -30,7 +30,9 @@ for folder, titles in SRC.items():
         if not rs:
             print("MISS", folder, t)
             continue
-        r = max(rs[:5], key=lambda r: r.get("vote_count", 0))
+        exact = [r for r in rs if (r.get("title") or r.get("name") or "").lower() == name.lower()
+                 or (r.get("original_title") or r.get("original_name") or "").lower() == name.lower()]
+        r = max(exact or rs[:1], key=lambda r: r.get("vote_count", 0))
         out.append({"title": r.get("title") or r.get("name"), "poster": r["poster_path"], "votes": r.get("vote_count", 0)})
     res[folder] = out
     print(folder, [x["title"] for x in out])
