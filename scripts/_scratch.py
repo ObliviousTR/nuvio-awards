@@ -25,7 +25,7 @@ P = {
     "GAİN": ("TR", ["Gain", "GAİN", "GAIN"], []),
     "Crunchyroll": ("US", ["Crunchyroll"], [1112]),
     "Mubi": ("US", ["MUBI", "Mubi"], []),
-    "Discovery+": ("US", ["Discovery+", "discovery+"], [4353]),
+    "Discovery+": ("US", ["Discovery+", "discovery+"], [4353, 64, 84, 91, 210, 244]),
     "Hulu": ("US", ["Hulu"], [453]),
     "Paramount+": ("US", ["Paramount Plus", "Paramount+"], [4330]),
     "Shudder": ("US", ["Shudder"], [1830]),
@@ -37,7 +37,7 @@ for reg in ("US", "TR"):
         for r in get(f"/watch/providers/{kind}", watch_region=reg).get("results", []):
             prov.setdefault(reg, {}).setdefault(r["provider_name"].lower(), r["provider_id"])
 res = {"_providers": {k: sorted(v.items())[:400] for k, v in prov.items()}}
-for name, (reg, names, nets) in P.items():
+for name, (reg, names, nets) in [(k, v) for k, v in P.items() if k == "Discovery+"]:
     ids = sorted({prov.get(reg, {}).get(n.lower()) for n in names} - {None})
     items, seen = [], set()
 
@@ -62,4 +62,4 @@ for name, (reg, names, nets) in P.items():
                               sort_by="popularity.desc", page=page, **{"vote_count.gte": vmin}).get("results", []))
     res[name] = {"providers": ids, "items": items}
     print(name, ids, len(items), [i["title"] for i in items[:12]])
-json.dump(res, open(f"{OUT}/streaming.json", "w"), indent=1, ensure_ascii=False)
+json.dump(res, open(f"{OUT}/streaming2.json", "w"), indent=1, ensure_ascii=False)
