@@ -106,7 +106,7 @@ def best_photo(photos, min_h=700):
             fit += 0.3
         # room below the chin, in face heights: a head and shoulders needs about 1.3; less leaves a floating head
         room = (1 - y1) / max(0.05, frac)
-        fit += 1.5 * max(0.0, 1.3 - room)
+        fit += 3.0 * max(0.0, 1.3 - room)
         if x0 < 0.08 or x1 > 0.92 or y0 < 0.04:              # the face touches an edge: never usable
             fit += 2
         scored.append((fit + i * 0.02, i))
@@ -169,7 +169,7 @@ def portrait(photo, film_still=None, tint=(14, 14, 18), mono=False):
     if os.environ.get("HERO_DEBUG"):
         print(f"  cutout: top {top:.2f} side {side:.2f} mean {al.mean():.2f}")
     room = (1 - fb[3]) / max(0.05, fb[3] - fb[1])           # face heights of figure below the chin
-    if (top > 0.6 and side > 0.6) or room < 0.9:            # a box, or a bare head: show the photo, softly framed
+    if top > 0.6 and side > 0.6:                            # the cut-out kept the photo's box
         yy, xx = np.mgrid[0:p.height, 0:p.width]
         cx, cy = (fb[0] + fb[2]) / 2 * p.width, (fb[1] + fb[3]) / 2 * p.height
         fhh = (fb[3] - fb[1]) * p.height

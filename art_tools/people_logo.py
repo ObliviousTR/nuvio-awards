@@ -18,9 +18,10 @@ um.FONTS.setdefault("cormorant", "ofl/cormorantgaramond/CormorantGaramond%5Bwght
 um.FONTS.setdefault("norican", "ofl/norican/Norican-Regular.ttf")
 um.FONTS.setdefault("yellowtail", "apache/yellowtail/Yellowtail-Regular.ttf")
 um.FONTS.setdefault("greatvibes", "ofl/greatvibes/GreatVibes-Regular.ttf")
-CW, CH = 1320, 600              # the canvas: the TV's logo box (220 x 100 dp) at 6x
 SIZE = 170                      # the name's type size, the same for everyone
-MAXW = 1300
+CH = round(SIZE * 2.75)         # room for two lines and the mark
+CW = round(CH * 2.2)            # the TV's logo box is 220 x 100 dp: a canvas of that shape is scaled by both sides
+MAXW = CW - 20                  # alike, so every name shows at the same size; longer names take two lines
 
 
 def silver(mask, top=(255, 255, 255), bottom=(186, 192, 202)):
@@ -46,9 +47,13 @@ def people_logo(name, sub="CINEMATIC COLLECTION", face="norican", weight=None, s
     size = size or SIZE
     fnt = um.font(face, size, weight=weight)
     ls = lines_of(name, fnt)
+    probe = ImageDraw.Draw(Image.new("L", (1, 1)))
+    while max(probe.textlength(t, font=fnt) for t in ls) > MAXW and size > 100:   # a very long line (Iñárritu)
+        size -= 6
+        fnt = um.font(face, size, weight=weight)
     asc, desc = fnt.getmetrics()
     lh = round(size * 0.98)
-    m = Image.new("L", (CW + 200, lh * len(ls) + desc + 80), 0)
+    m = Image.new("L", (CW + 400, lh * len(ls) + desc + 80), 0)
     d = ImageDraw.Draw(m)
     lw = max(d.textlength(t, font=fnt) for t in ls)
     for i, t in enumerate(ls):                      # two-line names are centred on each other
@@ -56,7 +61,7 @@ def people_logo(name, sub="CINEMATIC COLLECTION", face="norican", weight=None, s
     m = m.crop(m.getbbox())
     name_im = silver(m)
     # the mark: one type size for everyone; its rules reach out to the name's width (at least a fixed span)
-    mark = cm.mark(min(CW, max(name_im.width + 160, 1050)), "fade", (228, 230, 236), sub, size=36)
+    mark = cm.mark(min(CW, max(name_im.width + 120, 820)), "fade", (228, 230, 236), sub, size=34)
     gap = round(size * 0.16)
     out = Image.new("RGBA", (CW, CH), (0, 0, 0, 0))
     bw = max(name_im.width, mark.width)
