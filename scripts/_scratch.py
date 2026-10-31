@@ -21,7 +21,7 @@ def get(p, **q):
 def person(job):
     row, name = job
     dept = "Directing" if row == "Legendary Directors" else "Acting"
-    rs = get("/search/person", query=name).get("results", [])
+    rs = get("/search/person", query={"Joel & Ethan Coen": "Joel Coen"}.get(name, name)).get("results", [])
     rs = [r for r in rs if r.get("known_for_department") == dept] or rs
     if not rs:
         return name, None
@@ -32,6 +32,8 @@ def person(job):
     films = cr.get("crew", []) if dept == "Directing" else cr.get("cast", [])
     if dept == "Directing":
         films = [f for f in films if f.get("job") == "Director"]
+    if dept == "Acting":                     # films they lead, not cameos and supporting turns in blockbusters
+        films = [f for f in films if f.get("order", 99) <= 1] or films
     films = sorted({f["id"]: f for f in films}.values(), key=lambda f: -f.get("vote_count", 0))
     still, film = None, None
     for f in films[:4]:
