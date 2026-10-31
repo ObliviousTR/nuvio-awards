@@ -96,10 +96,13 @@ def build(spec, folder):
         k, face = (None, None)
         if best is not None and not spec.get("director"):
             k, face = hs.find_in_stills(load(refs[photos.index(best)]), stills)
+        def full(ref):                                    # the chosen still at full size, not the cached w1280
+            _cache.pop(ref, None)
+            return load(ref)
         if k is not None:
-            return hs.person_scene(load(spec["stills"][k]), face)
+            return hs.person_scene(full(spec["stills"][k]), face)
         k, _ = hs.pick_still(stills[:12])
-        return hs.scene(load(spec["stills"][k if k is not None else 0]))
+        return hs.scene(full(spec["stills"][k if k is not None else 0]))
     if st == "portrait":
         with ThreadPoolExecutor(6) as ex:
             refs = [r for r, wh in zip(spec["photos"], spec.get("sizes") or [[0, 9999]] * len(spec["photos"]))
