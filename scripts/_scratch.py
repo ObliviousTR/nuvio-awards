@@ -36,6 +36,7 @@ def tagged(item):
     return name, out
 
 
+print("RAW", json.dumps(get("/person/1158/tagged_images"))[:600])
 with ThreadPoolExecutor(8) as ex:
     res = dict(ex.map(tagged, P.items()))
 json.dump(res, open(f"{OUT}/tagged.json", "w"), ensure_ascii=False)
