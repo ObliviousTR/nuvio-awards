@@ -1,9 +1,9 @@
 import os, json, urllib.request, urllib.parse
 from concurrent.futures import ThreadPoolExecutor
-# People heroes, take 2: stills from films in which the person is tagged on TMDB (a scene of them, not a cut-out).
+# People heroes, option B: several textless backdrops from each person's best-known films (lead roles / directed).
 OUT = "refs/hero"; os.makedirs(OUT, exist_ok=True)
 K = os.environ["TMDB_API_KEY"]
-P = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))      # name -> person id
+P = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))      # name -> [person id, dept]
 
 
 def get(p, **q):
@@ -18,29 +18,25 @@ def get(p, **q):
     return {}
 
 
-def tagged(item):
-    name, pid = item
+def stills(item):
+    name, (pid, dept) = item
+    cr = get(f"/person/{pid}/movie_credits")
+    if dept == "Directing":
+        films = [f for f in cr.get("crew", []) if f.get("job") == "Director"]
+    else:
+        films = [f for f in cr.get("cast", []) if f.get("order", 99) <= 2] or cr.get("cast", [])
+    films = sorted({f["id"]: f for f in films}.values(), key=lambda f: -f.get("vote_count", 0))[:5]
     out = []
-    for page in (1, 2, 3):
-        r = get(f"/person/{pid}/tagged_images", page=page)
-        for x in r.get("results", []):
-            if x.get("image_type") != "backdrop" or x.get("width", 0) < 1280:
-                continue
-            m = x.get("media") or {}
-            out.append({"path": x["file_path"], "w": x["width"], "h": x["height"], "lang": x.get("iso_639_1"),
-                        "votes": x.get("vote_count", 0), "avg": x.get("vote_average", 0),
-                        "title": m.get("title") or m.get("name"), "pop": m.get("popularity", 0),
-                        "mvotes": m.get("vote_count", 0)})
-        if page >= r.get("total_pages", 1):
-            break
+    for f in films:
+        bd = [b for b in get(f"/movie/{f['id']}/images", include_image_language="null").get("backdrops", [])
+              if not b.get("iso_639_1") and b.get("width", 0) >= 1280]
+        bd.sort(key=lambda b: (-b.get("vote_count", 0), -b.get("vote_average", 0)))
+        out += [{"film": f["title"], "path": b["file_path"], "votes": b.get("vote_count", 0)} for b in bd[:8]]
     return name, out
 
 
-r0 = get("/person/1158/tagged_images")
-import collections
-print("RAW", r0.get("total_pages"), r0.get("total_results"), collections.Counter((x.get("image_type"), x.get("width", 0) >= 1280) for x in r0.get("results", [])))
 with ThreadPoolExecutor(8) as ex:
-    res = dict(ex.map(tagged, P.items()))
-json.dump(res, open(f"{OUT}/tagged.json", "w"), ensure_ascii=False)
+    res = dict(ex.map(stills, P.items()))
+json.dump(res, open(f"{OUT}/stills.json", "w"), ensure_ascii=False)
 for n, v in res.items():
-    print(n, len(v), sorted({x["title"] for x in v if x["title"]})[:6])
+    print(n, len(v))
