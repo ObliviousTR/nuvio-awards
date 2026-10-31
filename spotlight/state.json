@@ -3,16 +3,16 @@
     "boxoffice": "static",
     "certified": "static",
     "fresh": "static",
-    "headliner": "Brad Pitt | hover left-2",
-    "legend": "Boris Karloff | hover left-2",
-    "powerhouse": "Hammer Film Productions | hover left-2",
-    "prestige": "Jack Nicholson | hover left-2",
-    "pulse": "Halloween Night | hover left-2",
-    "retro": "Golden Age of Slashers | hover left-2",
-    "saga": "Rocky & Creed | hover left-2",
+    "headliner": "Brad Pitt | hover left-2 | hero tv-1",
+    "legend": "Boris Karloff | hover left-2 | hero tv-1",
+    "powerhouse": "Hammer Film Productions | hover left-2 | hero tv-1",
+    "prestige": "Jack Nicholson | hover left-2 | hero tv-1",
+    "pulse": "Halloween Night | hover left-2 | hero tv-1",
+    "retro": "Golden Age of Slashers | hover left-2 | hero tv-1",
+    "saga": "Rocky & Creed | hover left-2 | hero tv-1",
     "simkl": "poster-wall-1",
-    "visionary": "Ari Aster | hover left-2",
-    "yerli": "Haluk Bilginer | hover left-2"
+    "visionary": "Ari Aster | hover left-2 | hero tv-1",
+    "yerli": "Haluk Bilginer | hover left-2 | hero tv-1"
   },
   "backdrops": {
     "boxoffice": "/lgotja3xMoJZbynwHfcQcJAEMWH.jpg",
@@ -155,5 +155,5 @@
     }
   },
   "pin": {},
-  "updated": "2026-10-30"
+  "updated": "2026-10-31"
 }
