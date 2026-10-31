@@ -1,7 +1,8 @@
 import os, json, urllib.request, urllib.parse
-# Awards heroes: textless backdrops of the ceremonies on TMDB.
+# Hand-picked titles for mood heroes: resolve to TMDB posters.
 OUT = "refs/hero"; os.makedirs(OUT, exist_ok=True)
 K = os.environ["TMDB_API_KEY"]
+SRC = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))
 
 
 def get(p, **q):
@@ -15,15 +16,24 @@ def get(p, **q):
 
 
 res = {}
-ids = {"oscars": ("tv", 27023), "globes": ("tv", 71494), "bafta": ("tv", 26183)}
-for q in ("Emmy Awards", "Primetime Emmy Awards", "Cannes", "Festival de Cannes", "Venice Film Festival", "Sundance",
-          "Criterion", "Academy Awards"):
-    for kind in ("tv", "movie"):
-        for r in get(f"/search/{kind}", query=q).get("results", [])[:4]:
-            ids[f"{q}|{kind}|{r.get('name') or r.get('title')}"] = (kind, r["id"])
-for k, (kind, i) in ids.items():
-    bd = get(f"/{kind}/{i}/images", include_image_language="null,en").get("backdrops", [])
-    bd.sort(key=lambda b: (b.get("iso_639_1") is not None, -b.get("vote_count", 0)))
-    res[k] = [(b["file_path"], b.get("iso_639_1"), b["width"]) for b in bd[:10]]
-    print(k, kind, i, len(bd))
-json.dump(res, open(f"{OUT}/awards.json", "w"), ensure_ascii=False, indent=1)
+for folder, titles in SRC.items():
+    out = []
+    for t in titles:
+        kind = "tv" if t.startswith("tv:") else "movie"
+        t = t[3:] if kind == "tv" else t
+        name, _, year = t.partition("|")
+        q = {"query": name}
+        if year:
+            q["year" if kind == "movie" else "first_air_date_year"] = year
+        rs = get(f"/search/{kind}", **q).get("results", [])
+        rs = [r for r in rs if r.get("poster_path")]
+        if not rs:
+            print("MISS", folder, t)
+            continue
+        exact = [r for r in rs if (r.get("title") or r.get("name") or "").lower() == name.lower()
+                 or (r.get("original_title") or r.get("original_name") or "").lower() == name.lower()]
+        r = max(exact or rs[:1], key=lambda r: r.get("vote_count", 0))
+        out.append({"title": r.get("title") or r.get("name"), "poster": r["poster_path"], "votes": r.get("vote_count", 0)})
+    res[folder] = out
+    print(folder, [x["title"] for x in out])
+json.dump(res, open(f"{OUT}/picked_criterion.json", "w"), ensure_ascii=False)
