@@ -1,26 +1,19 @@
-import os, sys, json, datetime as dt
-# Spotlight hovers: for each card's current subject, the cover arguments and the hover films (TMDB paths only).
-sys.path.insert(0, "scripts")
-import spotlight as S
-OUT = "refs/spotlight"; os.makedirs(OUT, exist_ok=True)
-S.IMDB = S.ImdbCache(); S.AUTO = json.load(open("spotlight/pool_auto.json"))
-today = dt.datetime.utcnow().date()
-pool = json.load(open("spotlight/pool.json", encoding="utf-8")); pool["prestige"] = S.prestige_pool()
-for slot in S.ROTATING:
-    pool[slot] = pool[slot] + S.AUTO.get(slot, [])
-state = json.load(open("spotlight/state.json"))
+import os, json, urllib.request, urllib.parse
+# Hero samples: textless backdrops and English logos for a few titles (TMDB paths only).
+OUT = "refs/hero"; os.makedirs(OUT, exist_ok=True)
+K = os.environ["TMDB_API_KEY"]
+def get(p, **q):
+    q["api_key"] = K
+    return json.loads(urllib.request.urlopen(f"https://api.themoviedb.org/3{p}?{urllib.parse.urlencode(q)}", timeout=60).read())
+want = [("movie", 120467), ("tv", 66732), ("movie", 1891), ("movie", 11), ("tv", 57243), ("tv", 1399), ("movie", 9806)]
 res = {}
-for slot in S.ROTATING:
-    subj = state["cards"][slot]["subject"]
-    _, m, s, a, notes = S.build_rotating(slot, pool, state, today, state["cards"][slot]["period"], [], False, subj)
-    a["backdrop"] = state["backdrops"][slot]
-    films = S.hover_films(slot, a, m, s)
-    a.pop("picks", None)
-    res[slot] = dict(a=a, films=films)
-    print(slot, subj, [f["title"] for f in films])
-t = S.pulse_theme(pool, today, state.get("pulse_override"))
-m, s, a, notes = S.pulse_card(t, today)
-a["backdrop"] = state["backdrops"]["pulse"]
-res["pulse"] = dict(a=a, films=S.hover_films("pulse", a, m, s))
-print("pulse", [f["title"] for f in res["pulse"]["films"]])
-json.dump(res, open(f"{OUT}/hover_inputs.json", "w"), ensure_ascii=False, indent=1)
+for kind, i in want:
+    im = get(f"/{kind}/{i}/images", include_image_language="en,null")
+    bd = sorted([b for b in im.get("backdrops", []) if not b.get("iso_639_1") and b["width"] >= 1920],
+                key=lambda b: (-b.get("vote_average", 0), -b.get("vote_count", 0)))[:8]
+    lg = sorted([l for l in im.get("logos", []) if l.get("iso_639_1") == "en"],
+                key=lambda l: (-l.get("vote_average", 0), -l.get("vote_count", 0)))[:4]
+    res[f"{kind}/{i}"] = dict(backdrops=[(b["file_path"], b["width"], b.get("vote_average")) for b in bd],
+                              logos=[(l["file_path"], l["width"], l["height"]) for l in lg])
+json.dump(res, open(f"{OUT}/samples.json", "w"), indent=1)
+print(json.dumps(res)[:3000])
