@@ -1,5 +1,5 @@
 import os, json, urllib.request, urllib.parse
-# Hand-picked titles for mood heroes: resolve to TMDB posters.
+# Universe title logos: English/neutral logos of each franchise's collection, key film or studio.
 OUT = "refs/hero"; os.makedirs(OUT, exist_ok=True)
 K = os.environ["TMDB_API_KEY"]
 SRC = json.load(open("scripts/_scratch_in.json", encoding="utf-8"))
@@ -16,24 +16,28 @@ def get(p, **q):
 
 
 res = {}
-for folder, titles in SRC.items():
-    out = []
-    for t in titles:
-        kind = "tv" if t.startswith("tv:") else "movie"
-        t = t[3:] if kind == "tv" else t
-        name, _, year = t.partition("|")
-        q = {"query": name}
+for u, qs in SRC.items():
+    cands = []
+    for kind, q in qs:
+        name, _, year = q.partition("|")
+        p = {"query": name}
         if year:
-            q["year" if kind == "movie" else "first_air_date_year"] = year
-        rs = get(f"/search/{kind}", **q).get("results", [])
-        rs = [r for r in rs if r.get("poster_path")]
+            p["year"] = year
+        rs = get(f"/search/{kind}", **p).get("results", [])
         if not rs:
-            print("MISS", folder, t)
+            print("MISS", u, kind, q)
             continue
-        exact = [r for r in rs if (r.get("title") or r.get("name") or "").lower() == name.lower()
-                 or (r.get("original_title") or r.get("original_name") or "").lower() == name.lower()]
-        r = max(exact or rs[:1], key=lambda r: r.get("vote_count", 0))
-        out.append({"title": r.get("title") or r.get("name"), "poster": r["poster_path"], "votes": r.get("vote_count", 0)})
-    res[folder] = out
-    print(folder, [x["title"] for x in out])
-json.dump(res, open(f"{OUT}/picked.json", "w"), ensure_ascii=False)
+        exact = [r for r in rs if (r.get("name") or r.get("title") or "").lower() == name.lower()]
+        r = (exact or rs)[0]
+        if kind == "company":
+            ls = get(f"/company/{r['id']}/images").get("logos", [])
+        else:
+            ls = get(f"/{kind}/{r['id']}/images", include_image_language="en,null").get("logos", [])
+            ls = [l for l in ls if l.get("iso_639_1") in ("en", None)]
+        ls.sort(key=lambda l: (-l.get("vote_average", 0), -l.get("vote_count", 0)))
+        for l in ls[:4]:
+            cands.append({"src": f"{kind}:{r.get('name') or r.get('title')}", "path": l["file_path"],
+                          "w": l["width"], "h": l["height"], "lang": l.get("iso_639_1")})
+    res[u] = cands
+    print(u, len(cands))
+json.dump(res, open(f"{OUT}/univ_logos.json", "w"), ensure_ascii=False, indent=1)
