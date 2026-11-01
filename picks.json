@@ -1,0 +1,201 @@
+{
+ "date": "2026-11-01",
+ "picks": {
+  "Action & Adventure": [
+   [
+    245891,
+    "John Wick"
+   ],
+   [
+    562,
+    "Die Hard"
+   ],
+   [
+    98,
+    "Gladiator"
+   ]
+  ],
+  "Sci-Fi & Fantasy": [
+   [
+    335984,
+    "Blade Runner 2049"
+   ],
+   [
+    603,
+    "The Matrix"
+   ],
+   [
+    11,
+    "Star Wars"
+   ]
+  ],
+  "Comedy": [
+   [
+    771,
+    "Home Alone"
+   ],
+   [
+    8363,
+    "Superbad"
+   ],
+   [
+    9377,
+    "Ferris Bueller's Day Off"
+   ]
+  ],
+  "Animation": [
+   [
+    8587,
+    "The Lion King"
+   ],
+   [
+    14160,
+    "Up"
+   ],
+   [
+    324857,
+    "Spider-Man: Into the Spider-Verse"
+   ]
+  ],
+  "Drama": [
+   [
+    550,
+    "Fight Club"
+   ],
+   [
+    244786,
+    "Whiplash"
+   ],
+   [
+    489,
+    "Good Will Hunting"
+   ]
+  ],
+  "Crime": [
+   [
+    769,
+    "GoodFellas"
+   ],
+   [
+    949,
+    "Heat"
+   ],
+   [
+    111,
+    "Scarface"
+   ]
+  ],
+  "Horror": [
+   [
+    9552,
+    "The Exorcist"
+   ],
+   [
+    948,
+    "Halloween"
+   ],
+   [
+    419430,
+    "Get Out"
+   ]
+  ],
+  "Mystery & Thriller": [
+   [
+    274,
+    "The Silence of the Lambs"
+   ],
+   [
+    539,
+    "Psycho"
+   ],
+   [
+    210577,
+    "Gone Girl"
+   ]
+  ],
+  "Romance & Rom-Com": [
+   [
+    11036,
+    "The Notebook"
+   ],
+   [
+    313369,
+    "La La Land"
+   ],
+   [
+    76,
+    "Before Sunrise"
+   ]
+  ],
+  "Superhero": [
+   [
+    557,
+    "Spider-Man"
+   ],
+   [
+    1726,
+    "Iron Man"
+   ],
+   [
+    284054,
+    "Black Panther"
+   ]
+  ],
+  "Martial Arts": [
+   [
+    14756,
+    "Ip Man"
+   ],
+   [
+    94329,
+    "The Raid"
+   ],
+   [
+    79,
+    "Hero"
+   ]
+  ],
+  "History & War": [
+   [
+    600,
+    "Full Metal Jacket"
+   ],
+   [
+    530915,
+    "1917"
+   ],
+   [
+    374720,
+    "Dunkirk"
+   ]
+  ],
+  "Western": [
+   [
+    68718,
+    "Django Unchained"
+   ],
+   [
+    33,
+    "Unforgiven"
+   ],
+   [
+    44264,
+    "True Grit"
+   ]
+  ],
+  "Stand-Up Comedy": [
+   [
+    17159,
+    "Eddie Murphy Raw"
+   ],
+   [
+    823754,
+    "Bo Burnham: Inside"
+   ],
+   [
+    624932,
+    "Dave Chappelle: Sticks & Stones"
+   ]
+  ]
+ }
+}
