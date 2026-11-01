@@ -6,47 +6,33 @@
    "title": "Alien Agent (2007)"
   },
   {
+   "key": "movie:57011",
+   "signals": "title",
+   "title": "Alien vs. Ninja (2010)"
+  },
+  {
    "key": "tv:86269",
    "signals": "title",
    "title": "Alien News Desk (2019)"
   }
  ],
- "batman": [
+ "jurassic": [
   {
-   "key": "tv:297214",
+   "key": "movie:848278",
    "signals": "title",
-   "title": "Gotham Stories (2016)"
-  }
- ],
- "matrix": [
-  {
-   "key": "tv:11393",
-   "signals": "title",
-   "title": "Matrix (1993)"
+   "title": "Jurassic Hunt (2021)"
   }
  ],
  "transformers": [
   {
-   "key": "tv:125574",
+   "key": "tv:20469",
    "signals": "title",
-   "title": "Transformers: BotBots (2022)"
+   "title": "Transformers: Robots in Disguise (2000)"
   },
   {
    "key": "tv:19237",
    "signals": "title",
    "title": "Transformers: The Headmasters (1987)"
-  },
-  {
-   "key": "tv:20469",
-   "signals": "title",
-   "title": "Transformers: Robots in Disguise (2000)"
-  }
- ],
- "xmen": [
-  {
-   "key": "tv:117657",
-   "signals": "title",
-   "title": "Astonishing X-Men (2009)"
   }
  ]
 }

@@ -1,4 +1,4 @@
-# Library report — 2026-10-28
+# Library report — 2026-11-01
 
 648 catalogs
 
@@ -11,7 +11,7 @@
 - **Classic Batman** (2): Batman, Batman
 - **Live-Action Series** (6): Batman, Gotham, Pennyworth: The Origin of Batman's Butler, Batwoman, Gotham Knights, The Penguin
 - **Batman: The Animated Series Films** (4): Batman: Mask of the Phantasm, Batman & Mr. Freeze: SubZero, Batman Beyond: Return of the Joker, Batman: Mystery of the Batwoman
-- **DC Animated Movies** (18): Batman: Gotham Knight, Batman: Under the Red Hood, Batman: Year One, Batman: The Dark Knight Returns, Part 1, Batman: The Dark Knight Returns, Part 2, Son of Batman, Batman: Assault on Arkham, Batman: Bad Blood, Batman: The Killing Joke, Batman: Gotham by Gaslight, Batman Ninja, Batman: Hush, Batman: The Long Halloween, Part One, Batman: The Long Halloween, Part Two, Batman and Superman: Battle of the Super Sons, Batman: The Doom That Came to Gotham, Aztec Batman: Clash of Empires, Batman: Knightfall Part 1: Knightfall
+- **DC Animated Movies** (20): Batman: Gotham Knight, Batman: Under the Red Hood, Batman: Year One, Batman: The Dark Knight Returns, Part 1, Batman: The Dark Knight Returns, Part 2, Son of Batman, Batman: Assault on Arkham, Batman: Bad Blood, Batman: The Killing Joke, Batman and Harley Quinn, Batman: Gotham by Gaslight, Batman Ninja, Batman: Hush, Batman: The Long Halloween, Part One, Batman: The Long Halloween, Part Two, Batman and Superman: Battle of the Super Sons, Batman: The Doom That Came to Gotham, Batman Ninja vs. Yakuza League, Aztec Batman: Clash of Empires, Batman: Knightfall Part 1: Knightfall
 - **LEGO Batman** (2): LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout, The Lego Batman Movie
 - **Animated Series** (11): The Adventures of Batman, The New Adventures of Batman, Batman: The Animated Series, The New Batman Adventures, Batman Beyond, Gotham Girls, The Batman, Batman: The Brave and the Bold, Beware the Batman, Harley Quinn, Batman: Caped Crusader
 
@@ -168,7 +168,7 @@
 ## Genre collection folders
 - **Action Collections**: 29 rails — Bad Boys (4), Die Hard (5), Kingsman (3), Lethal Weapon (4), The Bourne (5), The Equalizer (3), The Expendables (4), The Karate Kid (6), The Transporter (3), Top Gun (2), xXx (3), G.I. Joe (Live-Action) (2), Ride Along (2), Taken (3), The Hitman's Bodyguard (2), The Raid (2), Has Fallen (3), Extraction (2), Escape Plan (3), Death Wish (5), Speed (2), The Meg (2), Ip Man (4), Police Story (6), Tomb Raider (2), Kick-Ass (2), The Crow (4), Ong Bak (3), Jack Reacher (2)
 - **Comedy Collections**: 32 rails — Ace Ventura (3), American Pie (4), Anchorman (2), Austin Powers (3), Big Momma's House (3), Bridget Jones (4), Clerks (3), Daddy's Home (2), Jump Street (2), Legally Blonde (3), Meet the Parents (3), National Lampoon's Vacation (4), Pitch Perfect (3), Rush Hour (3), Scary Movie (6), The Hangover (3), Wayne's World (2), Zoolander (2), Bring It On (7), Grown Ups (2), Horrible Bosses (2), Major League (3), Johnny English (3), The Pink Panther (Original) (9), The Pink Panther (Reboot) (2), Dumb and Dumber (3), The Naked Gun (4), Police Academy (7), Harold & Kumar (3), Bill & Ted (3), Look Who's Talking (3), Ted (2)
-- **Crime Collections**: 10 rails — Ocean's (3), Beverly Hills Cop (4), The Boondock Saints (2), Shaft (5), The Godfather (3), Dirty Harry (5), Sin City (2), Den of Thieves (2), Wall Street (2), Get Shorty (2)
+- **Crime Collections**: 10 rails — Ocean's (3), Beverly Hills Cop (4), The Boondock Saints (2), Shaft (3), The Godfather (3), Dirty Harry (5), Sin City (2), Den of Thieves (2), Wall Street (2), Get Shorty (2)
 - **Drama Collections**: 9 rails — Creed (3), Magic Mike (3), Step Up (5), Fifty Shades (3), Rocky (6), Goal! (3), The Before (3), After (5), The Best Exotic Marigold Hotel (2)
 - **Family & Animation Collections**: 37 rails — Alvin and the Chipmunks (4), Cars (3), Despicable Me (4), Diary of a Wimpy Kid (4), Finding Nemo (2), Home Alone (4), Hotel Transylvania (4), How to Train Your Dragon (3), Ice Age (6), Kung Fu Panda (4), Madagascar (3), Monsters, Inc. (2), Paddington (3), Scooby-Doo (2), Shrek (4), Sing (2), The Addams Family (Animated) (2), The Boss Baby (2), The Incredibles (2), The Lego Movie (2), The Secret Life of Pets (2), Toy Story (5), Trolls Holiday (2), Wreck-It Ralph (2), Cloudy with a Chance of Meatballs (2), Inside Out (2), Minions (3), Spy Kids (4), The Lion King (3), Aladdin (3), Beauty and the Beast (3), The Little Mermaid (3), Mulan (2), The Land Before Time (14), Teenage Mutant Ninja Turtles (3), Open Season (4), The Mighty Ducks (3)
 - **Fantasy Collections**: 14 rails — Ghostbusters (4), Jumanji (3), National Treasure (2), Night at the Museum (3), Percy Jackson (2), Pirates of the Caribbean (5), The Chronicles of Narnia (3), The Mummy (3), The Twilight (5), Clash of the Titans (2), Highlander (5), Mortal Kombat (2), Hellboy (2), Conan the Barbarian (2)
@@ -247,15 +247,15 @@
 - Alfred Hitchcock: Best Of 44; Recent 61; Series 6
 - Stanley Kubrick: Best Of 16; Recent 16
 - Christopher Nolan: Best Of 13; Recent 17
-- Martin Scorsese: Best Of 33; Recent 55; Series 3
+- Martin Scorsese: Best Of 33; Recent 53; Series 3
 - Quentin Tarantino: Best Of 14; Recent 14; Series 3
 - Denis Villeneuve: Best Of 12; Recent 16
 - David Fincher: Best Of 12; Recent 17; Series 3
 - Steven Spielberg: Best Of 35; Recent 42; Series 10
 - Akira Kurosawa: Best Of 25; Recent 32
-- Hayao Miyazaki: Best Of 12; Recent 25; Series 3
+- Hayao Miyazaki: Best Of 12; Recent 26; Series 3
 - Bong Joon-ho: Best Of 9; Recent 15
-- Park Chan-wook: Best Of 11; Recent 20; Series 2
+- Park Chan-wook: Best Of 11; Recent 21; Series 2
 - Francis Ford Coppola: Best Of 22; Recent 32; Series 2
 - Ridley Scott: Best Of 30; Recent 35; Series 7
 - James Cameron: Best Of 11; Recent 17
@@ -273,7 +273,7 @@
 - David Lynch: Best Of 16; Recent 46; Series 4
 - Sergio Leone: Filmography 8
 - Edgar Wright: Best Of 8; Recent 13; Series 7
-- Guy Ritchie: Best Of 18; Recent 20; Series 4
+- Guy Ritchie: Best Of 18; Recent 19; Series 4
 - Greta Gerwig: Filmography 4
 - Kathryn Bigelow: Best Of 10; Recent 15; Series 3
 - Sofia Coppola: Best Of 9; Recent 13
@@ -286,17 +286,13 @@
 - Billy Wilder: Best Of 24; Recent 27
 
 ## Candidates (one signal — approve or reject)
-- Batman & Gotham → Gotham Stories (2016) `tv:297214` [title]
-- X-Men & Mutants → Astonishing X-Men (2009) `tv:117657` [title]
 - Alien & Predator → Alien Agent (2007) `movie:19279` [title]
+- Alien & Predator → Alien vs. Ninja (2010) `movie:57011` [title]
 - Alien & Predator → Alien News Desk (2019) `tv:86269` [title]
-- The Matrix → Matrix (1993) `tv:11393` [title]
-- Transformers → Transformers: BotBots (2022) `tv:125574` [title]
-- Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
+- Jurassic Park → Jurassic Hunt (2021) `movie:848278` [title]
 - Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
+- Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
 
 ## Log
-- Batman & Gotham: added Batman and Superman: Battle of the Super Sons (2022) [co+title]
-- DC Universe: added Batman and Superman: Battle of the Super Sons (2022) [co+title]
-- DC Universe: added Teen Titans: The Judas Contract (2017) [co+title]
-- DC Universe: added Justice League: Crisis on Infinite Earths Part Two (2024) [co+title]
+- Batman & Gotham: added Batman and Harley Quinn (2017) [co+title]
+- Batman & Gotham: added Batman Ninja vs. Yakuza League (2025) [co+title]
