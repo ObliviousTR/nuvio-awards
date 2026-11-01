@@ -1,0 +1,145 @@
+{
+ "date": "2026-11-01",
+ "picks": {
+  "Feel-Good": [
+   [
+    116745,
+    "The Secret Life of Walter Mitty"
+   ],
+   [
+    773,
+    "Little Miss Sunshine"
+   ],
+   [
+    11631,
+    "Mamma Mia!"
+   ]
+  ],
+  "Cozy & Comforting": [
+   [
+    1581,
+    "The Holiday"
+   ],
+   [
+    122906,
+    "About Time"
+   ],
+   [
+    331482,
+    "Little Women"
+   ]
+  ],
+  "Adrenaline Rush": [
+   [
+    339403,
+    "Baby Driver"
+   ],
+   [
+    1089,
+    "Point Break"
+   ],
+   [
+    359724,
+    "Ford v Ferrari"
+   ]
+  ],
+  "Epic & Sweeping": [
+   [
+    665,
+    "Ben-Hur"
+   ],
+   [
+    1495,
+    "Kingdom of Heaven"
+   ],
+   [
+    652,
+    "Troy"
+   ]
+  ],
+  "Mind-Bending": [
+   [
+    329865,
+    "Arrival"
+   ],
+   [
+    141,
+    "Donnie Darko"
+   ],
+   [
+    1124,
+    "The Prestige"
+   ]
+  ],
+  "Slow Burn": [
+   [
+    64690,
+    "Drive"
+   ],
+   [
+    273481,
+    "Sicario"
+   ],
+   [
+    4512,
+    "The Assassination of Jesse James by the Coward Robert Ford"
+   ]
+  ],
+  "Dark & Gritty": [
+   [
+    187,
+    "Sin City"
+   ],
+   [
+    2034,
+    "Training Day"
+   ],
+   [
+    9693,
+    "Children of Men"
+   ]
+  ],
+  "Spooky & Creepy": [
+   [
+    1091,
+    "The Thing"
+   ],
+   [
+    242224,
+    "The Babadook"
+   ],
+   [
+    1933,
+    "The Others"
+   ]
+  ],
+  "Tearjerkers": [
+   [
+    14306,
+    "Marley & Me"
+   ],
+   [
+    222935,
+    "The Fault in Our Stars"
+   ],
+   [
+    70,
+    "Million Dollar Baby"
+   ]
+  ],
+  "80s & 90s Vibes": [
+   [
+    2108,
+    "The Breakfast Club"
+   ],
+   [
+    601,
+    "E.T. the Extra-Terrestrial"
+   ],
+   [
+    620,
+    "Ghostbusters"
+   ]
+  ]
+ }
+}
