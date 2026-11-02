@@ -1,0 +1,77 @@
+{
+ "date": "2026-11-02",
+ "picks": [
+  {
+   "id": "trending-movies",
+   "kind": "movie",
+   "tmdb": 1283515,
+   "title": "Verity",
+   "subtitle": "#1 THIS WEEK  \u00b7  VERITY",
+   "backdrop": "/3BoHXmGAfC2qO4wnCpMYV0BzpHD.jpg"
+  },
+  {
+   "id": "trending-series",
+   "kind": "tv",
+   "tmdb": 259909,
+   "title": "Dexter: Resurrection",
+   "subtitle": "#1 THIS WEEK  \u00b7  DEXTER: RESURRECTION",
+   "backdrop": "/UI2S7dJdGylqp9xK3GwRt7zz68.jpg"
+  },
+  {
+   "id": "new-movies",
+   "kind": "movie",
+   "tmdb": 1101412,
+   "title": "Fall 2: Deadpoint",
+   "subtitle": "NEW RELEASE  \u00b7  FALL 2: DEADPOINT",
+   "backdrop": "/yBDxqDB29kpH9VojTytjGWBgmdJ.jpg"
+  },
+  {
+   "id": "new-series",
+   "kind": "tv",
+   "tmdb": 213375,
+   "title": "VisionQuest",
+   "subtitle": "NEW THIS SEASON  \u00b7  VISIONQUEST",
+   "backdrop": "/pirfaMg7IrpyO8z1tt6VPLqvFOH.jpg"
+  },
+  {
+   "id": "box-office",
+   "kind": "movie",
+   "tmdb": 969681,
+   "title": "Spider-Man: Brand New Day",
+   "subtitle": "#1 OF THE YEAR  \u00b7  SPIDER-MAN: BRAND NEW DAY",
+   "backdrop": "/vjMvFSmGUxEtqVdaZgvFee9XkZl.jpg"
+  },
+  {
+   "id": "certified",
+   "kind": "movie",
+   "tmdb": 687163,
+   "title": "Project Hail Mary",
+   "subtitle": "CRITICS' PICK  \u00b7  PROJECT HAIL MARY",
+   "backdrop": "/2I1OFQJ0L9T0dpU6FobKFWV2PxX.jpg"
+  },
+  {
+   "id": "hidden-gems",
+   "kind": "movie",
+   "tmdb": 220289,
+   "title": "Coherence",
+   "subtitle": "UNDERRATED FILMS WORTH DISCOVERING",
+   "backdrop": "/utghtkDDOhwEDS7r9hhRhn7Wneg.jpg"
+  },
+  {
+   "id": "prestige",
+   "kind": "movie",
+   "tmdb": 545611,
+   "title": "Everything Everywhere All at Once",
+   "subtitle": "AWARD WINNERS & CRITICS' FAVOURITES",
+   "backdrop": "/xYxLYHnGXhgWyoHvXjpRLSuJ2LW.jpg"
+  },
+  {
+   "id": "top-rated",
+   "kind": "movie",
+   "tmdb": 389,
+   "title": "12 Angry Men",
+   "subtitle": "THE GREATEST FILMS EVER MADE",
+   "backdrop": "/qqHQsStV6exghCM7zbObuYBiYxw.jpg"
+  }
+ ]
+}
