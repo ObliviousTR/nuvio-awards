@@ -7,7 +7,7 @@
     "legend": "Boris Karloff | hover left-2 | hero tv-2",
     "powerhouse": "Hammer Film Productions | hover left-2 | hero tv-2",
     "prestige": "Jack Nicholson | hover left-2 | hero tv-2",
-    "pulse": "Halloween Night | hover left-2 | hero tv-2",
+    "pulse": "Based on a True Story | hover left-2 | hero tv-2",
     "retro": "Golden Age of Slashers | hover left-2 | hero tv-2",
     "saga": "Rocky & Creed | hover left-2 | hero tv-2",
     "simkl": "poster-wall-1",
@@ -22,7 +22,7 @@
     "legend": "/hrED8MSOn4xJP9Cpk7WomUcFKGI.jpg",
     "powerhouse": "/jJ3yFKs6xeVGxtmm7GXZYQ3XAvz.jpg",
     "prestige": "/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
-    "pulse": "/qVGpxnjrGlHaSTCqTQI6viBDSfp.jpg",
+    "pulse": "/sCzcYW9h55WcesOqA12cgEr9Exw.jpg",
     "retro": "/nzSjTiecdosBfwMGAdpt9CxltCI.jpg",
     "saga": "/yaXXemxz3ePNSrqNtc4ZAbuxJRv.jpg",
     "visionary": "/pS9Aub8MPyQbENblGD8mHeaqMuv.jpg",
@@ -50,8 +50,8 @@
       "subject": "Jack Nicholson"
     },
     "pulse": {
-      "since": "10-25",
-      "subject": "Halloween Night"
+      "since": "11-03",
+      "subject": "Based on a True Story"
     },
     "retro": {
       "period": 21,
@@ -119,7 +119,7 @@
     "The Terminator Collection": 528,
     "X-Men Collection": 748
   },
-  "grown": "2026-10-27",
+  "grown": "2026-11-03",
   "history": {
     "headliner": {
       "Brad Pitt": "2026-10-26",
@@ -155,5 +155,5 @@
     }
   },
   "pin": {},
-  "updated": "2026-11-02"
+  "updated": "2026-11-03"
 }

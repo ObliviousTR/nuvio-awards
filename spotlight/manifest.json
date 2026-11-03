@@ -1,6 +1,6 @@
 {
   "id": "community.oblivioustr.nuvio-spotlight",
-  "version": "1.21.20261102",
+  "version": "1.21.20261103",
   "name": "Nuvio Spotlight",
   "description": "Rotating spotlights (actor, director, studio, saga, season, Oscar talent, legends, eras, Turkish stars) and daily charts, rebuilt from TMDB.",
   "resources": [
@@ -257,7 +257,7 @@
     {
       "type": "movie",
       "id": "spotlight-pulse-movies",
-      "name": "Halloween Night · Movies",
+      "name": "Based on a True Story · Movies",
       "extra": [
         {
           "name": "search",
@@ -272,7 +272,7 @@
     {
       "type": "series",
       "id": "spotlight-pulse-series",
-      "name": "Halloween Night · Series",
+      "name": "Based on a True Story · Series",
       "extra": [
         {
           "name": "search",

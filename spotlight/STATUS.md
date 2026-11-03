@@ -1,7 +1,7 @@
-# Spotlight status — 2026-11-02
+# Spotlight status — 2026-11-03
 
 Next rotation (all rotating cards): **2026-11-09**
-Next Cultural Pulse theme starts: **2026-11-03**
+Next Cultural Pulse theme starts: **2026-11-20**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
@@ -13,10 +13,10 @@ Next Cultural Pulse theme starts: **2026-11-03**
 | The Living Legend | Boris Karloff | 68 | 1 |  |
 | Retro Rewind | Golden Age of Slashers | 50 | 0 |  |
 | Yerli Yıldız | Haluk Bilginer | 44 | 22 |  |
-| The Cultural Pulse | Halloween Night | 100 | 38 |  |
+| The Cultural Pulse | Based on a True Story | 100 | 96 | ✓ |
 | Fresh Out of Theaters | daily | 50 | 41 |  |
-| Box Office Champions | daily | 36 | 99 |  |
-| Certified Fresh & Must-See | daily | 57 | 51 |  |
+| Box Office Champions | daily | 37 | 99 |  |
+| Certified Fresh & Must-See | daily | 58 | 51 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 287 Brad Pitt (Acting)
@@ -30,4 +30,8 @@ Next Cultural Pulse theme starts: **2026-11-03**
 - **The Living Legend**: TMDB person 2922 Boris Karloff (Acting)
 - **Retro Rewind**: 1978–1989; keywords=12339
 - **Yerli Yıldız**: TMDB person 117640 Haluk Bilginer (Acting)
-- **The Cultural Pulse**: keywords movie=3335 series=3335
+- **The Cultural Pulse**: keywords movie=9672|5565|33722 series=9672|5565|33722
+- headliner: added to the auto pool: Dakota Johnson, Anne Hathaway, Robert Downey Jr.
+- visionary: added to the auto pool: Michael Showalter, Casper Kelly, James Watkins
+- saga: added to the auto pool: The Avengers
+- yerli: added to the auto pool: Ozan Akbaba, Murat Yildirim, Cemre Baysel
