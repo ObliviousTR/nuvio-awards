@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-07
+# Spotlight status — 2026-11-08
 
 Next rotation (all rotating cards): **2026-11-09**
 Next Cultural Pulse theme starts: **2026-11-20**
