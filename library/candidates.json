@@ -4,35 +4,39 @@
    "key": "movie:19279",
    "signals": "title",
    "title": "Alien Agent (2007)"
-  },
+  }
+ ],
+ "batman": [
   {
-   "key": "movie:57011",
+   "key": "movie:133792",
    "signals": "title",
-   "title": "Alien vs. Ninja (2010)"
-  },
-  {
-   "key": "tv:86269",
-   "signals": "title",
-   "title": "Alien News Desk (2019)"
+   "title": "The Joker is Wild (1957)"
   }
  ],
  "jurassic": [
   {
-   "key": "movie:848278",
+   "key": "movie:540247",
    "signals": "title",
-   "title": "Jurassic Hunt (2021)"
+   "title": "Jurassic Galaxy (2018)"
+  }
+ ],
+ "starwars": [
+  {
+   "key": "tv:61513",
+   "signals": "title",
+   "title": "LEGO Star Wars: The Yoda Chronicles (2013)"
   }
  ],
  "transformers": [
   {
-   "key": "tv:20469",
-   "signals": "title",
-   "title": "Transformers: Robots in Disguise (2000)"
-  },
-  {
    "key": "tv:19237",
    "signals": "title",
    "title": "Transformers: The Headmasters (1987)"
+  },
+  {
+   "key": "tv:20469",
+   "signals": "title",
+   "title": "Transformers: Robots in Disguise (2000)"
   }
  ]
 }

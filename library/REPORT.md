@@ -1,4 +1,4 @@
-# Library report — 2026-11-01
+# Library report — 2026-11-08
 
 648 catalogs
 
@@ -193,7 +193,7 @@
 - Willem Dafoe: Essential Films 100; Top Rated 76; Latest 100
 - Christoph Waltz: Essential Films 32; Top Rated 25; Latest 32; Series 3
 - Philip Seymour Hoffman: Essential Films 49; Top Rated 40; Latest 49
-- Bryan Cranston: Essential Films 41; Top Rated 30; Latest 41; Series 10
+- Bryan Cranston: Essential Films 42; Top Rated 30; Latest 42; Series 10
 - Edward Norton: Essential Films 31; Top Rated 31; Latest 31
 - Al Pacino: Essential Films 63; Top Rated 46; Latest 63; Series 3
 - Robert De Niro: Essential Films 100; Top Rated 84; Latest 100; Series 3
@@ -220,14 +220,14 @@
 - Simon Pegg: Essential Films 39; Top Rated 31; Latest 39; Series 8
 - Jackie Chan: Essential Films 100; Top Rated 61; Latest 100
 - Song Kang-ho: Essential Films 32; Top Rated 16; Latest 32; Series 2
-- Robert Pattinson: Essential Films 33; Top Rated 26; Latest 33
+- Robert Pattinson: Essential Films 34; Top Rated 27; Latest 34
 - Meryl Streep: Essential Films 63; Top Rated 53; Latest 63; Series 4
 - Anne Hathaway: Essential Films 42; Top Rated 39; Latest 42
 - Tilda Swinton: Essential Films 67; Top Rated 43; Latest 67
 - Javier Bardem: Essential Films 49; Top Rated 33; Latest 49
 - Oscar Isaac: Essential Films 41; Top Rated 30; Latest 41; Series 4
 - Frances McDormand: Essential Films 41; Top Rated 31; Latest 41; Series 3
-- Sam Rockwell: Essential Films 66; Top Rated 46; Latest 66; Series 2
+- Sam Rockwell: Essential Films 66; Top Rated 47; Latest 66; Series 2
 - Ethan Hawke: Essential Films 73; Top Rated 53; Latest 73; Series 4
 - Viola Davis: Essential Films 50; Top Rated 41; Latest 50; Series 4
 - Tom Hanks: Essential Films 58; Top Rated 50; Latest 58; Series 2
@@ -253,18 +253,18 @@
 - David Fincher: Best Of 12; Recent 17; Series 3
 - Steven Spielberg: Best Of 35; Recent 42; Series 10
 - Akira Kurosawa: Best Of 25; Recent 32
-- Hayao Miyazaki: Best Of 12; Recent 26; Series 3
+- Hayao Miyazaki: Best Of 12; Recent 25; Series 3
 - Bong Joon-ho: Best Of 9; Recent 15
-- Park Chan-wook: Best Of 11; Recent 21; Series 2
+- Park Chan-wook: Best Of 11; Recent 20; Series 2
 - Francis Ford Coppola: Best Of 22; Recent 32; Series 2
 - Ridley Scott: Best Of 30; Recent 35; Series 7
 - James Cameron: Best Of 11; Recent 17
 - Paul Thomas Anderson: Best Of 11; Recent 20
 - Joel & Ethan Coen: Best Of 23; Recent 24
-- Wes Anderson: Best Of 19; Recent 19
+- Wes Anderson: Best Of 19; Recent 20
 - Guillermo del Toro: Best Of 12; Recent 14; Series 3
 - Yorgos Lanthimos: Best Of 10; Recent 15
-- Alfonso Cuarón: Best Of 8; Recent 13; Series 4
+- Alfonso Cuarón: Best Of 8; Recent 14; Series 4
 - Alejandro González Iñárritu: Best Of 9; Recent 15; Series 2
 - Alex Garland: Filmography 5
 - Jordan Peele: Filmography 3; Series 4
@@ -286,13 +286,12 @@
 - Billy Wilder: Best Of 24; Recent 27
 
 ## Candidates (one signal — approve or reject)
+- Batman & Gotham → The Joker is Wild (1957) `movie:133792` [title]
+- Star Wars → LEGO Star Wars: The Yoda Chronicles (2013) `tv:61513` [title]
 - Alien & Predator → Alien Agent (2007) `movie:19279` [title]
-- Alien & Predator → Alien vs. Ninja (2010) `movie:57011` [title]
-- Alien & Predator → Alien News Desk (2019) `tv:86269` [title]
-- Jurassic Park → Jurassic Hunt (2021) `movie:848278` [title]
-- Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
+- Jurassic Park → Jurassic Galaxy (2018) `movie:540247` [title]
 - Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
+- Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
 
 ## Log
-- Batman & Gotham: added Batman and Harley Quinn (2017) [co+title]
-- Batman & Gotham: added Batman Ninja vs. Yakuza League (2025) [co+title]
+- Godzilla & Kong: added Godzilla Minus Zero (2026) [co+kw+title]
