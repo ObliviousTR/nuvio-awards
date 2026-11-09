@@ -1,33 +1,36 @@
-# Spotlight status — 2026-11-08
+# Spotlight status — 2026-11-09
 
-Next rotation (all rotating cards): **2026-11-09**
+Next rotation (all rotating cards): **2026-11-23**
 Next Cultural Pulse theme starts: **2026-11-20**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
-| The Headliner | Brad Pitt | 55 | 0 |  |
-| The Visionary | Ari Aster | 7 | 0 |  |
-| The Powerhouse | Hammer Horror | 71 | 3 |  |
-| The Saga | Rocky & Creed Saga | 9 | 0 |  |
-| The Prestige Darling | Jack Nicholson | 55 | 0 |  |
-| The Living Legend | Boris Karloff | 68 | 1 |  |
-| Retro Rewind | Golden Age of Slashers | 51 | 0 |  |
-| Yerli Yıldız | Haluk Bilginer | 44 | 22 |  |
+| The Headliner | Timothée Chalamet | 23 | 2 | ✓ |
+| The Visionary | Christopher Nolan | 17 | 0 | ✓ |
+| The Powerhouse | A24 | 78 | 22 | ✓ |
+| The Saga | Meet the Parents Saga | 3 | 0 | ✓ |
+| The Prestige Darling | Daniel Day-Lewis | 19 | 0 | ✓ |
+| The Living Legend | Audrey Hepburn | 23 | 0 | ✓ |
+| Retro Rewind | Film Noir | 100 | 0 | ✓ |
+| Yerli Yıldız | Cem Yılmaz | 22 | 1 | ✓ |
 | The Cultural Pulse | Based on a True Story | 100 | 96 |  |
-| Fresh Out of Theaters | daily | 50 | 36 |  |
+| Fresh Out of Theaters | daily | 50 | 35 |  |
 | Box Office Champions | daily | 37 | 99 |  |
 | Certified Fresh & Must-See | daily | 56 | 51 |  |
 
 ## Notes
-- **The Headliner**: TMDB person 287 Brad Pitt (Acting)
-- **The Headliner**: topical pick: In theaters now: Once Upon a Time... in Hollywood
-- **The Visionary**: TMDB person 1145520 Ari Aster (Directing)
-- **The Powerhouse**: company 1314 = Hammer Film Productions
-- **The Saga**: collection 1575 = Rocky Collection
-- **The Saga**: collection 553717 = Creed Collection
-- **The Saga**: topical pick: New chapter · Rocky
-- **The Prestige Darling**: TMDB person 514 Jack Nicholson (Acting)
-- **The Living Legend**: TMDB person 2922 Boris Karloff (Acting)
-- **Retro Rewind**: 1978–1989; keywords=12339
-- **Yerli Yıldız**: TMDB person 117640 Haluk Bilginer (Acting)
+- **The Headliner**: TMDB person 1190668 Timothée Chalamet (Acting)
+- **The Headliner**: topical pick: In theaters now: Dune: Part Two
+- **The Visionary**: TMDB person 525 Christopher Nolan (Directing)
+- **The Powerhouse**: company 41077 = A24
+- **The Saga**: collection 51509 = Meet the Parents Collection
+- **The Saga**: topical pick: New chapter · Focker-in-Law
+- **The Prestige Darling**: TMDB person 11856 Daniel Day-Lewis (Acting)
+- **The Living Legend**: TMDB person 1932 Audrey Hepburn (Acting)
+- **Retro Rewind**: 1940–1958; keywords=9807|207268
+- **Yerli Yıldız**: TMDB person 74376 Cem Yılmaz (Acting)
 - **The Cultural Pulse**: keywords movie=9672|5565|33722 series=9672|5565|33722
+- headliner: topical: Lucas Leach (In theaters now: Drummer Boy); Timothée Chalamet (In theaters now: Dune: Part Two); Zendaya (In theaters now: Dune: Part Two); Rebecca Ferguson (In theaters now: Dune); Johnny Depp (Coming to theaters: Ebenezer)
+- headliner: skipped Lucas Leach: only 0 movies / 1 series
+- saga: topical: Dune (New chapter · Dune: Part Two); Meet the Parents (New chapter · Focker-in-Law)
+- saga: skipped Dune: only 2 movies / 1 series

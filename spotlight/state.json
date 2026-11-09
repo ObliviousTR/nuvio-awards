@@ -3,75 +3,75 @@
     "boxoffice": "static",
     "certified": "static",
     "fresh": "static",
-    "headliner": "Brad Pitt | hover left-2 | hero tv-2",
-    "legend": "Boris Karloff | hover left-2 | hero tv-2",
-    "powerhouse": "Hammer Film Productions | hover left-2 | hero tv-2",
-    "prestige": "Jack Nicholson | hover left-2 | hero tv-2",
+    "headliner": "Timothée Chalamet | hover left-2 | hero tv-2",
+    "legend": "Audrey Hepburn | hover left-2 | hero tv-2",
+    "powerhouse": "A24 | hover left-2 | hero tv-2",
+    "prestige": "Daniel Day Lewis | hover left-2 | hero tv-2",
     "pulse": "Based on a True Story | hover left-2 | hero tv-2",
-    "retro": "Golden Age of Slashers | hover left-2 | hero tv-2",
-    "saga": "Rocky & Creed | hover left-2 | hero tv-2",
+    "retro": "Film Noir | hover left-2 | hero tv-2",
+    "saga": "Meet the Parents | hover left-2 | hero tv-2",
     "simkl": "poster-wall-1",
-    "visionary": "Ari Aster | hover left-2 | hero tv-2",
-    "yerli": "Haluk Bilginer | hover left-2 | hero tv-2"
+    "visionary": "Christopher Nolan | hover left-2 | hero tv-2",
+    "yerli": "Cem Yılmaz | hover left-2 | hero tv-2"
   },
   "backdrops": {
     "boxoffice": "/lgotja3xMoJZbynwHfcQcJAEMWH.jpg",
     "certified": "/8Tfys3mDZVp4tNoH2ktm06a0Tau.jpg",
     "fresh": "/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg",
-    "headliner": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
-    "legend": "/hrED8MSOn4xJP9Cpk7WomUcFKGI.jpg",
-    "powerhouse": "/jJ3yFKs6xeVGxtmm7GXZYQ3XAvz.jpg",
-    "prestige": "/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+    "headliner": "/qVgZu5BTx6pu4owCvVOm4zjTfOi.jpg",
+    "legend": "/jXZ2tyJl44yKvh22I6ooQwU5rFM.jpg",
+    "powerhouse": "/fIwiFha3WPu5nHkBeMQ4GzEk0Hv.jpg",
+    "prestige": "/9UAKA6ceZi6TgQwTAAMt7DWwYPI.jpg",
     "pulse": "/sCzcYW9h55WcesOqA12cgEr9Exw.jpg",
-    "retro": "/nzSjTiecdosBfwMGAdpt9CxltCI.jpg",
-    "saga": "/yaXXemxz3ePNSrqNtc4ZAbuxJRv.jpg",
-    "visionary": "/pS9Aub8MPyQbENblGD8mHeaqMuv.jpg",
-    "yerli": "/4JuoO0XywrCDeHLy4kTB9FU5U2C.jpg"
+    "retro": "/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
+    "saga": "/9mNfoET5NlXDVqW2UhJAJp6DR7k.jpg",
+    "visionary": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+    "yerli": "/g90Hlbaj8OofowG9hDg9ScD5fqG.jpg"
   },
   "cards": {
     "headliner": {
-      "period": 21,
-      "reason": "In theaters now: Once Upon a Time... in Hollywood",
-      "subject": "Brad Pitt"
+      "period": 22,
+      "reason": "In theaters now: Dune: Part Two",
+      "subject": "Timothée Chalamet"
     },
     "legend": {
-      "period": 21,
+      "period": 22,
       "reason": null,
-      "subject": "Boris Karloff"
+      "subject": "Audrey Hepburn"
     },
     "powerhouse": {
-      "period": 21,
+      "period": 22,
       "reason": null,
-      "subject": "Hammer Film Productions"
+      "subject": "A24"
     },
     "prestige": {
-      "period": 21,
+      "period": 22,
       "reason": null,
-      "subject": "Jack Nicholson"
+      "subject": "Daniel Day Lewis"
     },
     "pulse": {
       "since": "11-03",
       "subject": "Based on a True Story"
     },
     "retro": {
-      "period": 21,
+      "period": 22,
       "reason": null,
-      "subject": "Golden Age of Slashers"
+      "subject": "Film Noir"
     },
     "saga": {
-      "period": 21,
-      "reason": "New chapter · Rocky",
-      "subject": "Rocky & Creed"
+      "period": 22,
+      "reason": "New chapter · Focker-in-Law",
+      "subject": "Meet the Parents"
     },
     "visionary": {
-      "period": 21,
+      "period": 22,
       "reason": null,
-      "subject": "Ari Aster"
+      "subject": "Christopher Nolan"
     },
     "yerli": {
-      "period": 21,
+      "period": 22,
       "reason": null,
-      "subject": "Haluk Bilginer"
+      "subject": "Cem Yılmaz"
     }
   },
   "collection_ids": {
@@ -123,37 +123,45 @@
   "history": {
     "headliner": {
       "Brad Pitt": "2026-10-26",
-      "Jenna Ortega": "2026-10-20"
+      "Jenna Ortega": "2026-10-20",
+      "Timothée Chalamet": "2026-11-09"
     },
     "legend": {
+      "Audrey Hepburn": "2026-11-09",
       "Boris Karloff": "2026-10-26",
       "Vincent Price": "2026-10-20"
     },
     "powerhouse": {
+      "A24": "2026-11-09",
       "Blumhouse Productions": "2026-10-20",
       "Hammer Film Productions": "2026-10-26"
     },
     "prestige": {
+      "Daniel Day Lewis": "2026-11-09",
       "Jack Nicholson": "2026-10-26",
       "Meryl Streep": "2026-10-20"
     },
     "retro": {
+      "Film Noir": "2026-11-09",
       "Golden Age of Slashers": "2026-10-26",
       "Universal & Hammer Monsters": "2026-10-20"
     },
     "saga": {
       "Alien": "2026-10-20",
+      "Meet the Parents": "2026-11-09",
       "Rocky & Creed": "2026-10-26"
     },
     "visionary": {
       "Ari Aster": "2026-10-26",
+      "Christopher Nolan": "2026-11-09",
       "Jordan Peele": "2026-10-20"
     },
     "yerli": {
+      "Cem Yılmaz": "2026-11-09",
       "Haluk Bilginer": "2026-10-26",
       "Kıvanç Tatlıtuğ": "2026-10-20"
     }
   },
   "pin": {},
-  "updated": "2026-11-08"
+  "updated": "2026-11-09"
 }
