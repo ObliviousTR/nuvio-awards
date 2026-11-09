@@ -1,0 +1,77 @@
+{
+ "date": "2026-11-09",
+ "picks": [
+  {
+   "id": "trending-movies",
+   "kind": "movie",
+   "tmdb": 1368337,
+   "title": "The Odyssey",
+   "subtitle": "#1 THIS WEEK  \u00b7  THE ODYSSEY",
+   "backdrop": "/twiVn9oFXOVR0uoYgawyEBlnFu8.jpg"
+  },
+  {
+   "id": "trending-series",
+   "kind": "tv",
+   "tmdb": 225385,
+   "title": "Black Doves",
+   "subtitle": "#1 THIS WEEK  \u00b7  BLACK DOVES",
+   "backdrop": "/hP5pMJfxbY9p72LgEY6j9qGidtE.jpg"
+  },
+  {
+   "id": "new-movies",
+   "kind": "movie",
+   "tmdb": 1423191,
+   "title": "Resident Evil",
+   "subtitle": "NEW RELEASE  \u00b7  RESIDENT EVIL",
+   "backdrop": "/1CIaRYKf3zg2Xyce1CSfCMg2Vfw.jpg"
+  },
+  {
+   "id": "new-series",
+   "kind": "tv",
+   "tmdb": 213375,
+   "title": "VisionQuest",
+   "subtitle": "NEW THIS SEASON  \u00b7  VISIONQUEST",
+   "backdrop": "/31o1Ufd7bStD5dGEcpzapOjwaqx.jpg"
+  },
+  {
+   "id": "box-office",
+   "kind": "movie",
+   "tmdb": 969681,
+   "title": "Spider-Man: Brand New Day",
+   "subtitle": "#1 OF THE YEAR  \u00b7  SPIDER-MAN: BRAND NEW DAY",
+   "backdrop": "/sYsaVy047cfGTLMfcRihee3ShnM.jpg"
+  },
+  {
+   "id": "certified",
+   "kind": "movie",
+   "tmdb": 936075,
+   "title": "Michael",
+   "subtitle": "CRITICS' PICK  \u00b7  MICHAEL",
+   "backdrop": "/ufSwlnECLoUbBjPrFqEQcWBzHwc.jpg"
+  },
+  {
+   "id": "hidden-gems",
+   "kind": "movie",
+   "tmdb": 220289,
+   "title": "Coherence",
+   "subtitle": "UNDERRATED FILMS WORTH DISCOVERING",
+   "backdrop": "/utghtkDDOhwEDS7r9hhRhn7Wneg.jpg"
+  },
+  {
+   "id": "prestige",
+   "kind": "movie",
+   "tmdb": 545611,
+   "title": "Everything Everywhere All at Once",
+   "subtitle": "AWARD WINNERS & CRITICS' FAVOURITES",
+   "backdrop": "/xYxLYHnGXhgWyoHvXjpRLSuJ2LW.jpg"
+  },
+  {
+   "id": "top-rated",
+   "kind": "movie",
+   "tmdb": 389,
+   "title": "12 Angry Men",
+   "subtitle": "THE GREATEST FILMS EVER MADE",
+   "backdrop": "/qqHQsStV6exghCM7zbObuYBiYxw.jpg"
+  }
+ ]
+}
