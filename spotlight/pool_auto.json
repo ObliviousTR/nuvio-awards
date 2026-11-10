@@ -45,6 +45,21 @@
    "name": "Robert Downey Jr.",
    "auto": true,
    "added": "2026-11-03"
+  },
+  {
+   "name": "Austin Abrams",
+   "auto": true,
+   "added": "2026-11-10"
+  },
+  {
+   "name": "Anne Hathaway",
+   "auto": true,
+   "added": "2026-11-10"
+  },
+  {
+   "name": "Robert Pattinson",
+   "auto": true,
+   "added": "2026-11-10"
   }
  ],
  "visionary": [
@@ -92,6 +107,21 @@
    "name": "James Watkins",
    "auto": true,
    "added": "2026-11-03"
+  },
+  {
+   "name": "Zach Cregger",
+   "auto": true,
+   "added": "2026-11-10"
+  },
+  {
+   "name": "David Ayer",
+   "auto": true,
+   "added": "2026-11-10"
+  },
+  {
+   "name": "Michael Showalter",
+   "auto": true,
+   "added": "2026-11-10"
   }
  ],
  "saga": [
@@ -150,6 +180,14 @@
    ],
    "auto": true,
    "added": "2026-11-09"
+  },
+  {
+   "name": "The Avengers",
+   "collections": [
+    86311
+   ],
+   "auto": true,
+   "added": "2026-11-10"
   }
  ],
  "yerli": [
@@ -182,6 +220,21 @@
    "name": "Cemre Baysel",
    "auto": true,
    "added": "2026-11-03"
+  },
+  {
+   "name": "Ozan Akbaba",
+   "auto": true,
+   "added": "2026-11-10"
+  },
+  {
+   "name": "Murat Yildirim",
+   "auto": true,
+   "added": "2026-11-10"
+  },
+  {
+   "name": "Cemre Baysel",
+   "auto": true,
+   "added": "2026-11-10"
   }
  ]
 }
