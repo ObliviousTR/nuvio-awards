@@ -1,6 +1,6 @@
 {
  "id": "community.oblivioustr.nuvio-library",
- "version": "1.0.20261110",
+ "version": "1.0.20261111",
  "name": "Nuvio Library",
  "description": "Film universes & franchises, collection folders, iconic actors and legendary directors, rebuilt weekly from TMDB.",
  "resources": [
@@ -161,6 +161,7 @@
       "Heist",
       "Superhero",
       "Disaster",
+      "Car Chase",
       "Revenge",
       "Military",
       "Classics",
@@ -187,6 +188,7 @@
     "Heist",
     "Superhero",
     "Disaster",
+    "Car Chase",
     "Revenge",
     "Military",
     "Classics",
