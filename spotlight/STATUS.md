@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-10
+# Spotlight status — 2026-11-11
 
 Next rotation (all rotating cards): **2026-11-23**
 Next Cultural Pulse theme starts: **2026-11-20**
@@ -30,7 +30,3 @@ Next Cultural Pulse theme starts: **2026-11-20**
 - **Retro Rewind**: 1940–1958; keywords=9807|207268
 - **Yerli Yıldız**: TMDB person 74376 Cem Yılmaz (Acting)
 - **The Cultural Pulse**: keywords movie=9672|5565|33722 series=9672|5565|33722
-- headliner: added to the auto pool: Austin Abrams, Anne Hathaway, Robert Pattinson
-- visionary: added to the auto pool: Zach Cregger, David Ayer, Michael Showalter
-- saga: added to the auto pool: The Avengers
-- yerli: added to the auto pool: Ozan Akbaba, Murat Yildirim, Cemre Baysel
