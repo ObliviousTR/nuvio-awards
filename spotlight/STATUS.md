@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-13
+# Spotlight status — 2026-11-14
 
 Next rotation (all rotating cards): **2026-11-23**
 Next Cultural Pulse theme starts: **2026-11-20**
@@ -16,7 +16,7 @@ Next Cultural Pulse theme starts: **2026-11-20**
 | The Cultural Pulse | Based on a True Story | 100 | 96 |  |
 | Fresh Out of Theaters | daily | 50 | 34 |  |
 | Box Office Champions | daily | 38 | 99 |  |
-| Certified Fresh & Must-See | daily | 57 | 51 |  |
+| Certified Fresh & Must-See | daily | 57 | 52 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 1190668 Timothée Chalamet (Acting)
