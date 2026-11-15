@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-14
+# Spotlight status — 2026-11-15
 
 Next rotation (all rotating cards): **2026-11-23**
 Next Cultural Pulse theme starts: **2026-11-20**
@@ -15,7 +15,7 @@ Next Cultural Pulse theme starts: **2026-11-20**
 | Yerli Yıldız | Cem Yılmaz | 22 | 1 |  |
 | The Cultural Pulse | Based on a True Story | 100 | 96 |  |
 | Fresh Out of Theaters | daily | 50 | 34 |  |
-| Box Office Champions | daily | 38 | 99 |  |
+| Box Office Champions | daily | 39 | 100 |  |
 | Certified Fresh & Must-See | daily | 57 | 52 |  |
 
 ## Notes
