@@ -1,4 +1,4 @@
-# Library report — 2026-11-08
+# Library report — 2026-11-15
 
 648 catalogs
 
@@ -11,7 +11,7 @@
 - **Classic Batman** (2): Batman, Batman
 - **Live-Action Series** (6): Batman, Gotham, Pennyworth: The Origin of Batman's Butler, Batwoman, Gotham Knights, The Penguin
 - **Batman: The Animated Series Films** (4): Batman: Mask of the Phantasm, Batman & Mr. Freeze: SubZero, Batman Beyond: Return of the Joker, Batman: Mystery of the Batwoman
-- **DC Animated Movies** (20): Batman: Gotham Knight, Batman: Under the Red Hood, Batman: Year One, Batman: The Dark Knight Returns, Part 1, Batman: The Dark Knight Returns, Part 2, Son of Batman, Batman: Assault on Arkham, Batman: Bad Blood, Batman: The Killing Joke, Batman and Harley Quinn, Batman: Gotham by Gaslight, Batman Ninja, Batman: Hush, Batman: The Long Halloween, Part One, Batman: The Long Halloween, Part Two, Batman and Superman: Battle of the Super Sons, Batman: The Doom That Came to Gotham, Batman Ninja vs. Yakuza League, Aztec Batman: Clash of Empires, Batman: Knightfall Part 1: Knightfall
+- **DC Animated Movies** (22): Batman: Gotham Knight, Batman: Under the Red Hood, Superman/Batman: Apocalypse, Batman: Year One, Batman: The Dark Knight Returns, Part 1, Batman: The Dark Knight Returns, Part 2, Son of Batman, Batman: Assault on Arkham, Batman vs. Robin, Batman: Bad Blood, Batman: The Killing Joke, Batman and Harley Quinn, Batman: Gotham by Gaslight, Batman Ninja, Batman: Hush, Batman: The Long Halloween, Part One, Batman: The Long Halloween, Part Two, Batman and Superman: Battle of the Super Sons, Batman: The Doom That Came to Gotham, Batman Ninja vs. Yakuza League, Aztec Batman: Clash of Empires, Batman: Knightfall Part 1: Knightfall
 - **LEGO Batman** (2): LEGO DC Comics Super Heroes: Justice League - Gotham City Breakout, The Lego Batman Movie
 - **Animated Series** (11): The Adventures of Batman, The New Adventures of Batman, Batman: The Animated Series, The New Batman Adventures, Batman Beyond, Gotham Girls, The Batman, Batman: The Brave and the Bold, Beware the Batman, Harley Quinn, Batman: Caped Crusader
 
@@ -184,7 +184,7 @@
 - Gary Oldman: Essential Films 66; Top Rated 51; Latest 66
 - Daniel Day-Lewis: Essential Films 19; Top Rated 16; Latest 19
 - Leonardo DiCaprio: Essential Films 33; Top Rated 31; Latest 33
-- Brad Pitt: Essential Films 55; Top Rated 47; Latest 55
+- Brad Pitt: Essential Films 56; Top Rated 48; Latest 56
 - Joaquin Phoenix: Essential Films 38; Top Rated 35; Latest 38
 - Matthew McConaughey: Essential Films 49; Top Rated 42; Latest 49; Series 3
 - Jake Gyllenhaal: Essential Films 44; Top Rated 38; Latest 44
@@ -194,7 +194,7 @@
 - Christoph Waltz: Essential Films 32; Top Rated 25; Latest 32; Series 3
 - Philip Seymour Hoffman: Essential Films 49; Top Rated 40; Latest 49
 - Bryan Cranston: Essential Films 42; Top Rated 30; Latest 42; Series 10
-- Edward Norton: Essential Films 31; Top Rated 31; Latest 31
+- Edward Norton: Essential Films 32; Top Rated 32; Latest 32
 - Al Pacino: Essential Films 63; Top Rated 46; Latest 63; Series 3
 - Robert De Niro: Essential Films 100; Top Rated 84; Latest 100; Series 3
 - Denzel Washington: Essential Films 54; Top Rated 46; Latest 54
@@ -238,7 +238,7 @@
 - Charlize Theron: Essential Films 50; Top Rated 47; Latest 50
 - Hugh Jackman: Essential Films 40; Top Rated 35; Latest 40; Series 2
 - Matt Damon: Essential Films 67; Top Rated 66; Latest 67
-- Robert Downey Jr.: Essential Films 64; Top Rated 43; Latest 64; Series 3
+- Robert Downey Jr.: Essential Films 64; Top Rated 44; Latest 64; Series 3
 - Timothée Chalamet: Essential Films 23; Top Rated 21; Latest 23; Series 2
 - Zendaya: Essential Films 13; Top Rated 12; Latest 13; Series 4
 - Tom Holland: Essential Films 22; Top Rated 19; Latest 22; Series 2
@@ -261,7 +261,7 @@
 - James Cameron: Best Of 11; Recent 17
 - Paul Thomas Anderson: Best Of 11; Recent 20
 - Joel & Ethan Coen: Best Of 23; Recent 24
-- Wes Anderson: Best Of 19; Recent 20
+- Wes Anderson: Best Of 19; Recent 19
 - Guillermo del Toro: Best Of 12; Recent 14; Series 3
 - Yorgos Lanthimos: Best Of 10; Recent 15
 - Alfonso Cuarón: Best Of 8; Recent 14; Series 4
@@ -286,12 +286,16 @@
 - Billy Wilder: Best Of 24; Recent 27
 
 ## Candidates (one signal — approve or reject)
-- Batman & Gotham → The Joker is Wild (1957) `movie:133792` [title]
 - Star Wars → LEGO Star Wars: The Yoda Chronicles (2013) `tv:61513` [title]
+- Godzilla & Kong → Curling King (2011) `movie:75227` [title]
 - Alien & Predator → Alien Agent (2007) `movie:19279` [title]
-- Jurassic Park → Jurassic Galaxy (2018) `movie:540247` [title]
+- Alien & Predator → Alien Raiders (2008) `movie:13954` [title]
+- Jurassic Park → Jurassic Hunt (2021) `movie:848278` [title]
 - Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
 - Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
+- Indiana Jones → The Adventures of Young Indiana Jones: Attack of the Hawkmen (1995) `movie:222054` [title]
 
 ## Log
-- Godzilla & Kong: added Godzilla Minus Zero (2026) [co+kw+title]
+- Batman & Gotham: added Batman vs. Robin (2015) [co+title]
+- Batman & Gotham: added Superman/Batman: Apocalypse (2010) [co+title]
+- X-Men & Mutants: added X-Men: The Legend of Wolverine (2003) [co+title]

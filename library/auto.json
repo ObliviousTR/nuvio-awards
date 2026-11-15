@@ -42,6 +42,11 @@
    "title": "Son of Batman (2014)",
    "why": "co+title"
   },
+  "movie:321528": {
+   "added": "2026-11-15",
+   "title": "Batman vs. Robin (2015)",
+   "why": "co+title"
+  },
   "movie:366924": {
    "added": "2026-10-21",
    "title": "Batman: Bad Blood (2016)",
@@ -55,6 +60,11 @@
   "movie:408648": {
    "added": "2026-11-01",
    "title": "Batman and Harley Quinn (2017)",
+   "why": "co+title"
+  },
+  "movie:45162": {
+   "added": "2026-11-15",
+   "title": "Superman/Batman: Apocalypse (2010)",
    "why": "co+title"
   },
   "movie:485942": {
@@ -799,6 +809,11 @@
   }
  },
  "xmen": {
+  "movie:121133": {
+   "added": "2026-11-15",
+   "title": "X-Men: The Legend of Wolverine (2003)",
+   "why": "co+title"
+  },
   "movie:567604": {
    "added": "2026-10-21",
    "title": "Once Upon a Deadpool (2018)",

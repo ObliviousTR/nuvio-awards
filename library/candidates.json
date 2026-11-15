@@ -4,20 +4,32 @@
    "key": "movie:19279",
    "signals": "title",
    "title": "Alien Agent (2007)"
+  },
+  {
+   "key": "movie:13954",
+   "signals": "title",
+   "title": "Alien Raiders (2008)"
   }
  ],
- "batman": [
+ "godzillakong": [
   {
-   "key": "movie:133792",
+   "key": "movie:75227",
    "signals": "title",
-   "title": "The Joker is Wild (1957)"
+   "title": "Curling King (2011)"
+  }
+ ],
+ "indiana": [
+  {
+   "key": "movie:222054",
+   "signals": "title",
+   "title": "The Adventures of Young Indiana Jones: Attack of the Hawkmen (1995)"
   }
  ],
  "jurassic": [
   {
-   "key": "movie:540247",
+   "key": "movie:848278",
    "signals": "title",
-   "title": "Jurassic Galaxy (2018)"
+   "title": "Jurassic Hunt (2021)"
   }
  ],
  "starwars": [
