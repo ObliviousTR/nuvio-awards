@@ -60,6 +60,21 @@
    "name": "Robert Pattinson",
    "auto": true,
    "added": "2026-11-10"
+  },
+  {
+   "name": "Jessica Chastain",
+   "auto": true,
+   "added": "2026-11-17"
+  },
+  {
+   "name": "Tom Holland",
+   "auto": true,
+   "added": "2026-11-17"
+  },
+  {
+   "name": "Sadie Sink",
+   "auto": true,
+   "added": "2026-11-17"
   }
  ],
  "visionary": [
@@ -122,6 +137,21 @@
    "name": "Michael Showalter",
    "auto": true,
    "added": "2026-11-10"
+  },
+  {
+   "name": "David Ayer",
+   "auto": true,
+   "added": "2026-11-17"
+  },
+  {
+   "name": "Zach Cregger",
+   "auto": true,
+   "added": "2026-11-17"
+  },
+  {
+   "name": "Rob Savage",
+   "auto": true,
+   "added": "2026-11-17"
   }
  ],
  "saga": [
@@ -188,6 +218,14 @@
    ],
    "auto": true,
    "added": "2026-11-10"
+  },
+  {
+   "name": "The Avengers",
+   "collections": [
+    86311
+   ],
+   "auto": true,
+   "added": "2026-11-17"
   }
  ],
  "yerli": [
@@ -235,6 +273,21 @@
    "name": "Cemre Baysel",
    "auto": true,
    "added": "2026-11-10"
+  },
+  {
+   "name": "Murat Yildirim",
+   "auto": true,
+   "added": "2026-11-17"
+  },
+  {
+   "name": "Cemre Baysel",
+   "auto": true,
+   "added": "2026-11-17"
+  },
+  {
+   "name": "Deniz Can Aktaş",
+   "auto": true,
+   "added": "2026-11-17"
   }
  ]
 }
