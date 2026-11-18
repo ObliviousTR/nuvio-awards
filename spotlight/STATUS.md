@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-17
+# Spotlight status — 2026-11-18
 
 Next rotation (all rotating cards): **2026-11-23**
 Next Cultural Pulse theme starts: **2026-11-20**
@@ -30,7 +30,3 @@ Next Cultural Pulse theme starts: **2026-11-20**
 - **Retro Rewind**: 1940–1958; keywords=9807|207268
 - **Yerli Yıldız**: TMDB person 74376 Cem Yılmaz (Acting)
 - **The Cultural Pulse**: keywords movie=9672|5565|33722 series=9672|5565|33722
-- headliner: added to the auto pool: Jessica Chastain, Tom Holland, Sadie Sink
-- visionary: added to the auto pool: David Ayer, Zach Cregger, Rob Savage
-- saga: added to the auto pool: The Avengers
-- yerli: added to the auto pool: Murat Yildirim, Cemre Baysel, Deniz Can Aktaş
