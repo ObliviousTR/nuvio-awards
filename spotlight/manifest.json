@@ -1,6 +1,6 @@
 {
   "id": "community.oblivioustr.nuvio-spotlight",
-  "version": "1.22.20261119",
+  "version": "1.22.20261120",
   "name": "Nuvio Spotlight",
   "description": "Rotating spotlights (actor, director, studio, saga, season, Oscar talent, legends, eras, Turkish stars) and daily charts, rebuilt from TMDB.",
   "resources": [
@@ -257,7 +257,7 @@
     {
       "type": "movie",
       "id": "spotlight-pulse-movies",
-      "name": "Based on a True Story · Movies",
+      "name": "Family Gatherings · Movies",
       "extra": [
         {
           "name": "search",
@@ -272,7 +272,7 @@
     {
       "type": "series",
       "id": "spotlight-pulse-series",
-      "name": "Based on a True Story · Series",
+      "name": "Family Gatherings · Series",
       "extra": [
         {
           "name": "search",

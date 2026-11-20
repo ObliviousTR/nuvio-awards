@@ -7,7 +7,7 @@
     "legend": "Audrey Hepburn | hover left-2 | hero tv-2",
     "powerhouse": "A24 | hover left-2 | hero tv-2",
     "prestige": "Daniel Day Lewis | hover left-2 | hero tv-2",
-    "pulse": "Based on a True Story | hover left-2 | hero tv-2",
+    "pulse": "Family Gatherings | hover left-2 | hero tv-2",
     "retro": "Film Noir | hover left-2 | hero tv-2",
     "saga": "Meet the Parents | hover left-2 | hero tv-2",
     "simkl": "poster-wall-1",
@@ -22,7 +22,7 @@
     "legend": "/jXZ2tyJl44yKvh22I6ooQwU5rFM.jpg",
     "powerhouse": "/fIwiFha3WPu5nHkBeMQ4GzEk0Hv.jpg",
     "prestige": "/9UAKA6ceZi6TgQwTAAMt7DWwYPI.jpg",
-    "pulse": "/sCzcYW9h55WcesOqA12cgEr9Exw.jpg",
+    "pulse": "/kJsPVzdyBrYHLomuNv5SJDXUQ2f.jpg",
     "retro": "/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
     "saga": "/9mNfoET5NlXDVqW2UhJAJp6DR7k.jpg",
     "visionary": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
@@ -50,8 +50,8 @@
       "subject": "Daniel Day Lewis"
     },
     "pulse": {
-      "since": "11-03",
-      "subject": "Based on a True Story"
+      "since": "11-20",
+      "subject": "Family Gatherings"
     },
     "retro": {
       "period": 22,
@@ -163,5 +163,5 @@
     }
   },
   "pin": {},
-  "updated": "2026-11-19"
+  "updated": "2026-11-20"
 }

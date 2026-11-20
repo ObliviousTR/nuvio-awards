@@ -1,7 +1,7 @@
-# Spotlight status — 2026-11-19
+# Spotlight status — 2026-11-20
 
 Next rotation (all rotating cards): **2026-11-23**
-Next Cultural Pulse theme starts: **2026-11-20**
+Next Cultural Pulse theme starts: **2026-12-01**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
@@ -13,10 +13,10 @@ Next Cultural Pulse theme starts: **2026-11-20**
 | The Living Legend | Audrey Hepburn | 23 | 0 |  |
 | Retro Rewind | Film Noir | 100 | 0 |  |
 | Yerli Yıldız | Cem Yılmaz | 22 | 1 |  |
-| The Cultural Pulse | Based on a True Story | 100 | 96 |  |
+| The Cultural Pulse | Family Gatherings | 100 | 55 | ✓ |
 | Fresh Out of Theaters | daily | 50 | 31 |  |
 | Box Office Champions | daily | 38 | 100 |  |
-| Certified Fresh & Must-See | daily | 58 | 51 |  |
+| Certified Fresh & Must-See | daily | 58 | 52 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 1190668 Timothée Chalamet (Acting)
@@ -29,4 +29,4 @@ Next Cultural Pulse theme starts: **2026-11-20**
 - **The Living Legend**: TMDB person 1932 Audrey Hepburn (Acting)
 - **Retro Rewind**: 1940–1958; keywords=9807|207268
 - **Yerli Yıldız**: TMDB person 74376 Cem Yılmaz (Acting)
-- **The Cultural Pulse**: keywords movie=9672|5565|33722 series=9672|5565|33722
+- **The Cultural Pulse**: keywords movie=4543|18187|10041|33694 series=4543|18187|10041|33694
