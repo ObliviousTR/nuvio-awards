@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-20
+# Spotlight status — 2026-11-21
 
 Next rotation (all rotating cards): **2026-11-23**
 Next Cultural Pulse theme starts: **2026-12-01**
@@ -13,10 +13,10 @@ Next Cultural Pulse theme starts: **2026-12-01**
 | The Living Legend | Audrey Hepburn | 23 | 0 |  |
 | Retro Rewind | Film Noir | 100 | 0 |  |
 | Yerli Yıldız | Cem Yılmaz | 22 | 1 |  |
-| The Cultural Pulse | Family Gatherings | 100 | 55 | ✓ |
-| Fresh Out of Theaters | daily | 50 | 31 |  |
+| The Cultural Pulse | Family Gatherings | 100 | 55 |  |
+| Fresh Out of Theaters | daily | 50 | 30 |  |
 | Box Office Champions | daily | 38 | 100 |  |
-| Certified Fresh & Must-See | daily | 58 | 52 |  |
+| Certified Fresh & Must-See | daily | 58 | 51 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 1190668 Timothée Chalamet (Acting)
