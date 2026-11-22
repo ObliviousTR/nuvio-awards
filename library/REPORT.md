@@ -1,4 +1,4 @@
-# Library report — 2026-11-15
+# Library report — 2026-11-22
 
 648 catalogs
 
@@ -177,10 +177,10 @@
 - **Sci-Fi Collections**: 13 rails — Back to the Future (3), Blade Runner (2), Divergent (3), Pacific Rim (2), RoboCop (3), Starship Troopers (3), The Hunger Games (4), TRON (3), Avatar (3), Cloverfield (3), The Chronicles of Riddick (3), Men in Black (3), The Maze Runner (3)
 - **Thriller Collections**: 7 rails — Hannibal Lecter (3), Escape Room (2), Don't Breathe (2), Sicario (2), Eastrail 177 (3), The Jack Ryan (3), Basic Instinct (2)
 - **War Collections**: 8 rails — Rambo (5), Sniper (12), Jarhead (4), Behind Enemy Lines (4), Missing in Action (3), The Dirty Dozen (4), The Guns of Navarone (2), Iron Eagle (4)
-- **Anime Film Collections**: 8 rails — Detective Conan (28), Dragon Ball (4), Evangelion (4), My Hero Academia (4), Naruto (11), One Piece (14), Demon Slayer (2), Pokémon (5)
+- **Anime Film Collections**: 8 rails — Detective Conan (29), Dragon Ball (4), Evangelion (4), My Hero Academia (4), Naruto (11), One Piece (14), Demon Slayer (2), Pokémon (5)
 
 ## People
-- Christian Bale: Essential Films 49; Top Rated 42; Latest 49
+- Christian Bale: Essential Films 50; Top Rated 42; Latest 50
 - Gary Oldman: Essential Films 66; Top Rated 51; Latest 66
 - Daniel Day-Lewis: Essential Films 19; Top Rated 16; Latest 19
 - Leonardo DiCaprio: Essential Films 33; Top Rated 31; Latest 33
@@ -201,7 +201,7 @@
 - Anthony Hopkins: Essential Films 88; Top Rated 60; Latest 88; Series 2
 - Jack Nicholson: Essential Films 55; Top Rated 35; Latest 55
 - Morgan Freeman: Essential Films 87; Top Rated 74; Latest 87; Series 2
-- Samuel L. Jackson: Essential Films 100; Top Rated 87; Latest 100; Series 5
+- Samuel L. Jackson: Essential Films 100; Top Rated 86; Latest 100; Series 5
 - Emma Stone: Essential Films 29; Top Rated 28; Latest 29; Series 3
 - Cate Blanchett: Essential Films 58; Top Rated 48; Latest 58; Series 3
 - Amy Adams: Essential Films 45; Top Rated 38; Latest 45; Series 3
@@ -220,9 +220,9 @@
 - Simon Pegg: Essential Films 39; Top Rated 31; Latest 39; Series 8
 - Jackie Chan: Essential Films 100; Top Rated 61; Latest 100
 - Song Kang-ho: Essential Films 32; Top Rated 16; Latest 32; Series 2
-- Robert Pattinson: Essential Films 34; Top Rated 27; Latest 34
+- Robert Pattinson: Essential Films 35; Top Rated 28; Latest 35
 - Meryl Streep: Essential Films 63; Top Rated 53; Latest 63; Series 4
-- Anne Hathaway: Essential Films 42; Top Rated 39; Latest 42
+- Anne Hathaway: Essential Films 43; Top Rated 40; Latest 43
 - Tilda Swinton: Essential Films 67; Top Rated 43; Latest 67
 - Javier Bardem: Essential Films 49; Top Rated 33; Latest 49
 - Oscar Isaac: Essential Films 41; Top Rated 30; Latest 41; Series 4
@@ -235,22 +235,22 @@
 - Scarlett Johansson: Essential Films 54; Top Rated 47; Latest 54
 - Kate Winslet: Essential Films 41; Top Rated 36; Latest 41; Series 3
 - Nicole Kidman: Essential Films 67; Top Rated 61; Latest 67; Series 10
-- Charlize Theron: Essential Films 50; Top Rated 47; Latest 50
+- Charlize Theron: Essential Films 51; Top Rated 48; Latest 51
 - Hugh Jackman: Essential Films 40; Top Rated 35; Latest 40; Series 2
-- Matt Damon: Essential Films 67; Top Rated 66; Latest 67
+- Matt Damon: Essential Films 68; Top Rated 67; Latest 68
 - Robert Downey Jr.: Essential Films 64; Top Rated 44; Latest 64; Series 3
 - Timothée Chalamet: Essential Films 23; Top Rated 21; Latest 23; Series 2
-- Zendaya: Essential Films 13; Top Rated 12; Latest 13; Series 4
-- Tom Holland: Essential Films 22; Top Rated 19; Latest 22; Series 2
+- Zendaya: Essential Films 14; Top Rated 13; Latest 14; Series 4
+- Tom Holland: Essential Films 23; Top Rated 20; Latest 23; Series 2
 - Pedro Pascal: Essential Films 23; Top Rated 20; Latest 23; Series 8
 - Austin Butler: Essential Films 13; Top Rated 12; Latest 13; Series 7
 - Alfred Hitchcock: Best Of 44; Recent 61; Series 6
 - Stanley Kubrick: Best Of 16; Recent 16
-- Christopher Nolan: Best Of 13; Recent 17
-- Martin Scorsese: Best Of 33; Recent 53; Series 3
-- Quentin Tarantino: Best Of 14; Recent 14; Series 3
+- Christopher Nolan: Best Of 14; Recent 18
+- Martin Scorsese: Best Of 33; Recent 54; Series 3
+- Quentin Tarantino: Best Of 14; Recent 15; Series 3
 - Denis Villeneuve: Best Of 12; Recent 16
-- David Fincher: Best Of 12; Recent 17; Series 3
+- David Fincher: Best Of 12; Recent 19; Series 3
 - Steven Spielberg: Best Of 35; Recent 42; Series 10
 - Akira Kurosawa: Best Of 25; Recent 32
 - Hayao Miyazaki: Best Of 12; Recent 25; Series 3
@@ -264,16 +264,16 @@
 - Wes Anderson: Best Of 19; Recent 19
 - Guillermo del Toro: Best Of 12; Recent 14; Series 3
 - Yorgos Lanthimos: Best Of 10; Recent 15
-- Alfonso Cuarón: Best Of 8; Recent 14; Series 4
+- Alfonso Cuarón: Best Of 8; Recent 13; Series 4
 - Alejandro González Iñárritu: Best Of 9; Recent 15; Series 2
 - Alex Garland: Filmography 5
 - Jordan Peele: Filmography 3; Series 4
 - Robert Eggers: Filmography 7
 - Ari Aster: Filmography 7
-- David Lynch: Best Of 16; Recent 46; Series 4
+- David Lynch: Best Of 16; Recent 47; Series 4
 - Sergio Leone: Filmography 8
 - Edgar Wright: Best Of 8; Recent 13; Series 7
-- Guy Ritchie: Best Of 18; Recent 19; Series 4
+- Guy Ritchie: Best Of 18; Recent 20; Series 4
 - Greta Gerwig: Filmography 4
 - Kathryn Bigelow: Best Of 10; Recent 15; Series 3
 - Sofia Coppola: Best Of 9; Recent 13
@@ -291,11 +291,6 @@
 - Alien & Predator → Alien Agent (2007) `movie:19279` [title]
 - Alien & Predator → Alien Raiders (2008) `movie:13954` [title]
 - Jurassic Park → Jurassic Hunt (2021) `movie:848278` [title]
-- Transformers → Transformers: The Headmasters (1987) `tv:19237` [title]
-- Transformers → Transformers: Robots in Disguise (2000) `tv:20469` [title]
 - Indiana Jones → The Adventures of Young Indiana Jones: Attack of the Hawkmen (1995) `movie:222054` [title]
 
 ## Log
-- Batman & Gotham: added Batman vs. Robin (2015) [co+title]
-- Batman & Gotham: added Superman/Batman: Apocalypse (2010) [co+title]
-- X-Men & Mutants: added X-Men: The Legend of Wolverine (2003) [co+title]
