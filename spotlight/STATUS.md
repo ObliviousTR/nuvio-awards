@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-21
+# Spotlight status — 2026-11-22
 
 Next rotation (all rotating cards): **2026-11-23**
 Next Cultural Pulse theme starts: **2026-12-01**
@@ -14,7 +14,7 @@ Next Cultural Pulse theme starts: **2026-12-01**
 | Retro Rewind | Film Noir | 100 | 0 |  |
 | Yerli Yıldız | Cem Yılmaz | 22 | 1 |  |
 | The Cultural Pulse | Family Gatherings | 100 | 55 |  |
-| Fresh Out of Theaters | daily | 50 | 30 |  |
+| Fresh Out of Theaters | daily | 50 | 29 |  |
 | Box Office Champions | daily | 38 | 100 |  |
 | Certified Fresh & Must-See | daily | 58 | 51 |  |
 
