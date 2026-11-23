@@ -1,32 +1,37 @@
-# Spotlight status — 2026-11-22
+# Spotlight status — 2026-11-23
 
-Next rotation (all rotating cards): **2026-11-23**
+Next rotation (all rotating cards): **2026-12-07**
 Next Cultural Pulse theme starts: **2026-12-01**
 
 | Card | Subject | Movies | Series | New art |
 |---|---|---:|---:|:-:|
-| The Headliner | Timothée Chalamet | 23 | 2 |  |
-| The Visionary | Christopher Nolan | 18 | 0 |  |
-| The Powerhouse | A24 | 78 | 22 |  |
-| The Saga | Meet the Parents Saga | 3 | 0 |  |
-| The Prestige Darling | Daniel Day-Lewis | 19 | 0 |  |
-| The Living Legend | Audrey Hepburn | 23 | 0 |  |
-| Retro Rewind | Film Noir | 100 | 0 |  |
-| Yerli Yıldız | Cem Yılmaz | 22 | 1 |  |
+| The Headliner | Jesse Plemons | 31 | 7 | ✓ |
+| The Visionary | Denis Villeneuve | 16 | 0 | ✓ |
+| The Powerhouse | Legendary Pictures | 70 | 0 | ✓ |
+| The Saga | Spider-Man Saga | 9 | 0 | ✓ |
+| The Prestige Darling | Frances McDormand | 41 | 3 | ✓ |
+| The Living Legend | Humphrey Bogart | 58 | 0 | ✓ |
+| Retro Rewind | Screwball Comedies | 100 | 0 | ✓ |
+| Yerli Yıldız | Beren Saat | 5 | 7 | ✓ |
 | The Cultural Pulse | Family Gatherings | 100 | 55 |  |
-| Fresh Out of Theaters | daily | 50 | 29 |  |
-| Box Office Champions | daily | 38 | 100 |  |
+| Fresh Out of Theaters | daily | 50 | 25 |  |
+| Box Office Champions | daily | 37 | 100 |  |
 | Certified Fresh & Must-See | daily | 58 | 51 |  |
 
 ## Notes
-- **The Headliner**: TMDB person 1190668 Timothée Chalamet (Acting)
-- **The Headliner**: topical pick: In theaters now: Dune: Part Two
-- **The Visionary**: TMDB person 525 Christopher Nolan (Directing)
-- **The Powerhouse**: company 41077 = A24
-- **The Saga**: collection 51509 = Meet the Parents Collection
-- **The Saga**: topical pick: New chapter · Focker-in-Law
-- **The Prestige Darling**: TMDB person 11856 Daniel Day-Lewis (Acting)
-- **The Living Legend**: TMDB person 1932 Audrey Hepburn (Acting)
-- **Retro Rewind**: 1940–1958; keywords=9807|207268
-- **Yerli Yıldız**: TMDB person 74376 Cem Yılmaz (Acting)
+- **The Headliner**: TMDB person 88124 Jesse Plemons (Acting)
+- **The Headliner**: topical pick: In theaters now: The Hunger Games: Sunrise on the Reaping
+- **The Visionary**: TMDB person 137427 Denis Villeneuve (Directing)
+- **The Powerhouse**: company 923 = Legendary Pictures
+- **The Saga**: collection 556 = Spider-Man Collection
+- **The Saga**: collection 125574 = The Amazing Spider-Man Collection
+- **The Saga**: collection 531241 = Spider-Man (MCU) Collection  (WARNING: not an exact name match)
+- **The Saga**: topical pick: New chapter · Spider-Man: Brand New Day
+- **The Prestige Darling**: TMDB person 3910 Frances McDormand (Acting)
+- **The Living Legend**: TMDB person 4110 Humphrey Bogart (Acting)
+- **Retro Rewind**: 1934–1949; keywords=-
+- **Yerli Yıldız**: TMDB person 145499 Beren Saat (Acting)
 - **The Cultural Pulse**: keywords movie=4543|18187|10041|33694 series=4543|18187|10041|33694
+- headliner: topical: Joseph Zada (In theaters now: The Hunger Games: Sunrise on the Reaping); Jesse Plemons (In theaters now: The Hunger Games: Sunrise on the Reaping); Tom Holland (In theaters now: Spider-Man: Brand New Day); Sadie Sink (In theaters now: Spider-Man: Brand New Day); Nicolas Cage (In theaters now: Madden)
+- headliner: skipped Joseph Zada: only 0 movies / 3 series
+- saga: topical: Spider-Man (New chapter · Spider-Man: Brand New Day)

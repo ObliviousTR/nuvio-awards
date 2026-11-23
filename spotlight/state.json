@@ -3,75 +3,75 @@
     "boxoffice": "static",
     "certified": "static",
     "fresh": "static",
-    "headliner": "Timothée Chalamet | hover left-2 | hero tv-2",
-    "legend": "Audrey Hepburn | hover left-2 | hero tv-2",
-    "powerhouse": "A24 | hover left-2 | hero tv-2",
-    "prestige": "Daniel Day Lewis | hover left-2 | hero tv-2",
+    "headliner": "Jesse Plemons | hover left-2 | hero tv-2",
+    "legend": "Humphrey Bogart | hover left-2 | hero tv-2",
+    "powerhouse": "Legendary Pictures | hover left-2 | hero tv-2",
+    "prestige": "Frances McDormand | hover left-2 | hero tv-2",
     "pulse": "Family Gatherings | hover left-2 | hero tv-2",
-    "retro": "Film Noir | hover left-2 | hero tv-2",
-    "saga": "Meet the Parents | hover left-2 | hero tv-2",
+    "retro": "Screwball Comedies | hover left-2 | hero tv-2",
+    "saga": "Spider-Man | hover left-2 | hero tv-2",
     "simkl": "poster-wall-1",
-    "visionary": "Christopher Nolan | hover left-2 | hero tv-2",
-    "yerli": "Cem Yılmaz | hover left-2 | hero tv-2"
+    "visionary": "Denis Villeneuve | hover left-2 | hero tv-2",
+    "yerli": "Beren Saat | hover left-2 | hero tv-2"
   },
   "backdrops": {
     "boxoffice": "/lgotja3xMoJZbynwHfcQcJAEMWH.jpg",
     "certified": "/8Tfys3mDZVp4tNoH2ktm06a0Tau.jpg",
     "fresh": "/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg",
-    "headliner": "/qVgZu5BTx6pu4owCvVOm4zjTfOi.jpg",
-    "legend": "/jXZ2tyJl44yKvh22I6ooQwU5rFM.jpg",
-    "powerhouse": "/fIwiFha3WPu5nHkBeMQ4GzEk0Hv.jpg",
-    "prestige": "/9UAKA6ceZi6TgQwTAAMt7DWwYPI.jpg",
+    "headliner": "/uLXK1LQM28XovWHPao3ViTeggXA.jpg",
+    "legend": "/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg",
+    "powerhouse": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+    "prestige": "/oQHF0Y4gCw6VdPmapjsbZoxY2ht.jpg",
     "pulse": "/kJsPVzdyBrYHLomuNv5SJDXUQ2f.jpg",
-    "retro": "/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
-    "saga": "/9mNfoET5NlXDVqW2UhJAJp6DR7k.jpg",
-    "visionary": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
-    "yerli": "/g90Hlbaj8OofowG9hDg9ScD5fqG.jpg"
+    "retro": "/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+    "saga": "/waZqriYTuBE3WqXI3SDGi3kfDQE.jpg",
+    "visionary": "/8MUZz7oPXQftFTslZpRP3CVMOoq.jpg",
+    "yerli": "/wEwE7WtkoQSW7ZmlRI8fRz3C0LQ.jpg"
   },
   "cards": {
     "headliner": {
-      "period": 22,
-      "reason": "In theaters now: Dune: Part Two",
-      "subject": "Timothée Chalamet"
+      "period": 23,
+      "reason": "In theaters now: The Hunger Games: Sunrise on the Reaping",
+      "subject": "Jesse Plemons"
     },
     "legend": {
-      "period": 22,
+      "period": 23,
       "reason": null,
-      "subject": "Audrey Hepburn"
+      "subject": "Humphrey Bogart"
     },
     "powerhouse": {
-      "period": 22,
+      "period": 23,
       "reason": null,
-      "subject": "A24"
+      "subject": "Legendary Pictures"
     },
     "prestige": {
-      "period": 22,
+      "period": 23,
       "reason": null,
-      "subject": "Daniel Day Lewis"
+      "subject": "Frances McDormand"
     },
     "pulse": {
       "since": "11-20",
       "subject": "Family Gatherings"
     },
     "retro": {
-      "period": 22,
+      "period": 23,
       "reason": null,
-      "subject": "Film Noir"
+      "subject": "Screwball Comedies"
     },
     "saga": {
-      "period": 22,
-      "reason": "New chapter · Focker-in-Law",
-      "subject": "Meet the Parents"
+      "period": 23,
+      "reason": "New chapter · Spider-Man: Brand New Day",
+      "subject": "Spider-Man"
     },
     "visionary": {
-      "period": 22,
+      "period": 23,
       "reason": null,
-      "subject": "Christopher Nolan"
+      "subject": "Denis Villeneuve"
     },
     "yerli": {
-      "period": 22,
+      "period": 23,
       "reason": null,
-      "subject": "Cem Yılmaz"
+      "subject": "Beren Saat"
     }
   },
   "collection_ids": {
@@ -124,44 +124,52 @@
     "headliner": {
       "Brad Pitt": "2026-10-26",
       "Jenna Ortega": "2026-10-20",
+      "Jesse Plemons": "2026-11-23",
       "Timothée Chalamet": "2026-11-09"
     },
     "legend": {
       "Audrey Hepburn": "2026-11-09",
       "Boris Karloff": "2026-10-26",
+      "Humphrey Bogart": "2026-11-23",
       "Vincent Price": "2026-10-20"
     },
     "powerhouse": {
       "A24": "2026-11-09",
       "Blumhouse Productions": "2026-10-20",
-      "Hammer Film Productions": "2026-10-26"
+      "Hammer Film Productions": "2026-10-26",
+      "Legendary Pictures": "2026-11-23"
     },
     "prestige": {
       "Daniel Day Lewis": "2026-11-09",
+      "Frances McDormand": "2026-11-23",
       "Jack Nicholson": "2026-10-26",
       "Meryl Streep": "2026-10-20"
     },
     "retro": {
       "Film Noir": "2026-11-09",
       "Golden Age of Slashers": "2026-10-26",
+      "Screwball Comedies": "2026-11-23",
       "Universal & Hammer Monsters": "2026-10-20"
     },
     "saga": {
       "Alien": "2026-10-20",
       "Meet the Parents": "2026-11-09",
-      "Rocky & Creed": "2026-10-26"
+      "Rocky & Creed": "2026-10-26",
+      "Spider-Man": "2026-11-23"
     },
     "visionary": {
       "Ari Aster": "2026-10-26",
       "Christopher Nolan": "2026-11-09",
+      "Denis Villeneuve": "2026-11-23",
       "Jordan Peele": "2026-10-20"
     },
     "yerli": {
+      "Beren Saat": "2026-11-23",
       "Cem Yılmaz": "2026-11-09",
       "Haluk Bilginer": "2026-10-26",
       "Kıvanç Tatlıtuğ": "2026-10-20"
     }
   },
   "pin": {},
-  "updated": "2026-11-22"
+  "updated": "2026-11-23"
 }
