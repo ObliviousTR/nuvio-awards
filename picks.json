@@ -1,0 +1,77 @@
+{
+ "date": "2026-11-23",
+ "picks": [
+  {
+   "id": "trending-movies",
+   "kind": "movie",
+   "tmdb": 1300968,
+   "title": "The Hunger Games: Sunrise on the Reaping",
+   "subtitle": "#1 THIS WEEK  \u00b7  THE HUNGER GAMES: SUNRISE ON THE REAPING",
+   "backdrop": "/aqFZcr2dxSZ2UwWSo1WC6C0rwDf.jpg"
+  },
+  {
+   "id": "trending-series",
+   "kind": "tv",
+   "tmdb": 84773,
+   "title": "The Lord of the Rings: The Rings of Power",
+   "subtitle": "#1 THIS WEEK  \u00b7  THE LORD OF THE RINGS: THE RINGS OF POWER",
+   "backdrop": "/pdfCr8W0wBCpdjbZXSxnKhZtosP.jpg"
+  },
+  {
+   "id": "new-movies",
+   "kind": "movie",
+   "tmdb": 1263337,
+   "title": "Heart of the Beast",
+   "subtitle": "NEW RELEASE  \u00b7  HEART OF THE BEAST",
+   "backdrop": "/kpqsljPQtWqPKJBTAEtoXtQZ9Ko.jpg"
+  },
+  {
+   "id": "new-series",
+   "kind": "tv",
+   "tmdb": 291507,
+   "title": "The Body",
+   "subtitle": "NEW THIS SEASON  \u00b7  THE BODY",
+   "backdrop": "/9QikZzqqx85hKElvGwCiw5EJoEe.jpg"
+  },
+  {
+   "id": "box-office",
+   "kind": "movie",
+   "tmdb": 969681,
+   "title": "Spider-Man: Brand New Day",
+   "subtitle": "#1 OF THE YEAR  \u00b7  SPIDER-MAN: BRAND NEW DAY",
+   "backdrop": "/sYsaVy047cfGTLMfcRihee3ShnM.jpg"
+  },
+  {
+   "id": "certified",
+   "kind": "movie",
+   "tmdb": 1339713,
+   "title": "Obsession",
+   "subtitle": "CRITICS' PICK  \u00b7  OBSESSION",
+   "backdrop": "/u5BkYDM5gfK4wINfoIFMAcEUKhx.jpg"
+  },
+  {
+   "id": "hidden-gems",
+   "kind": "movie",
+   "tmdb": 220289,
+   "title": "Coherence",
+   "subtitle": "UNDERRATED FILMS WORTH DISCOVERING",
+   "backdrop": "/utghtkDDOhwEDS7r9hhRhn7Wneg.jpg"
+  },
+  {
+   "id": "prestige",
+   "kind": "movie",
+   "tmdb": 545611,
+   "title": "Everything Everywhere All at Once",
+   "subtitle": "AWARD WINNERS & CRITICS' FAVOURITES",
+   "backdrop": "/xYxLYHnGXhgWyoHvXjpRLSuJ2LW.jpg"
+  },
+  {
+   "id": "top-rated",
+   "kind": "movie",
+   "tmdb": 389,
+   "title": "12 Angry Men",
+   "subtitle": "THE GREATEST FILMS EVER MADE",
+   "backdrop": "/qqHQsStV6exghCM7zbObuYBiYxw.jpg"
+  }
+ ]
+}
