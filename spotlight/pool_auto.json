@@ -80,6 +80,21 @@
    "name": "Jesse Plemons",
    "auto": true,
    "added": "2026-11-23"
+  },
+  {
+   "name": "Jesse Plemons",
+   "auto": true,
+   "added": "2026-11-24"
+  },
+  {
+   "name": "Tom Holland",
+   "auto": true,
+   "added": "2026-11-24"
+  },
+  {
+   "name": "Sadie Sink",
+   "auto": true,
+   "added": "2026-11-24"
   }
  ],
  "visionary": [
@@ -157,6 +172,21 @@
    "name": "Rob Savage",
    "auto": true,
    "added": "2026-11-17"
+  },
+  {
+   "name": "David Ayer",
+   "auto": true,
+   "added": "2026-11-24"
+  },
+  {
+   "name": "Francis Lawrence",
+   "auto": true,
+   "added": "2026-11-24"
+  },
+  {
+   "name": "Destin Daniel Cretton",
+   "auto": true,
+   "added": "2026-11-24"
   }
  ],
  "saga": [
@@ -231,6 +261,22 @@
    ],
    "auto": true,
    "added": "2026-11-17"
+  },
+  {
+   "name": "The Avengers",
+   "collections": [
+    86311
+   ],
+   "auto": true,
+   "added": "2026-11-24"
+  },
+  {
+   "name": "Meet the Parents",
+   "collections": [
+    51509
+   ],
+   "auto": true,
+   "added": "2026-11-24"
   }
  ],
  "yerli": [
@@ -293,6 +339,21 @@
    "name": "Deniz Can Aktaş",
    "auto": true,
    "added": "2026-11-17"
+  },
+  {
+   "name": "Helin Kandemir",
+   "auto": true,
+   "added": "2026-11-24"
+  },
+  {
+   "name": "Murat Yildirim",
+   "auto": true,
+   "added": "2026-11-24"
+  },
+  {
+   "name": "Cemre Baysel",
+   "auto": true,
+   "added": "2026-11-24"
   }
  ]
 }
