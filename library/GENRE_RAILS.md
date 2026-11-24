@@ -9,19 +9,19 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 ## Netflix · Action & Adventure Movies (movie) - 300 kept of 400 looked at
 - kept (not its first genre): Allen (2026) - Sci-Fi, Adventure, Comedy
 - kept (not its first genre): Animals (2026) - Thriller, Drama, Action, Crime
+- kept (not its first genre): Fury (2014) - War, Drama, Action
 - kept (not its first genre): Jurassic World Rebirth (2025) - Sci-Fi, Adventure, Action
 - kept (not its first genre): Facing El Chapo (2026) - Crime, Action, Thriller
-- kept (not its first genre): Fury (2014) - War, Drama, Action
 - kept (not its first genre): How to Train Your Dragon (2025) - Fantasy, Family, Action, Adventure
 - kept (not its first genre): Heat (1995) - Crime, Drama, Action
 - kept (not its first genre): The Equalizer (2014) - Thriller, Action, Crime
 - kept (not its first genre): Venom: The Last Dance (2024) - Sci-Fi, Action, Adventure
+- kept (not its first genre): Rebel Ridge (2024) - Crime, Action, Thriller, Drama
 - kept (not its first genre): The Christmas Chronicles (2018) - Comedy, Adventure, Family, Fantasy
 - kept (not its first genre): Wicked: For Good (2025) - Fantasy, Adventure, Romance
-- kept (not its first genre): Baththa (2026) - Drama, Comedy, Action
-- kept (not its first genre): The Great Flood (2025) - Sci-Fi, Adventure, Drama
-- kept (not its first genre): Rebel Ridge (2024) - Crime, Action, Thriller, Drama
 - kept (not its first genre): Battleship (2012) - Thriller, Action, Adventure, Sci-Fi
+- kept (not its first genre): Humint (2026) - Thriller, Action, Drama
+- kept (not its first genre): Baththa (2026) - Drama, Comedy, Action
 - left out: Jaws (1975) [movie:578] - Horror, Thriller, Adventure
 - left out: The Day After Tomorrow (2004) [movie:435] - Sci-Fi, Thriller, Adventure
 - left out: Resident Evil (2002) [movie:1576] - Horror, Action, Sci-Fi
@@ -47,16 +47,16 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Hawaii Five-0 (2010) - Crime, Drama, Action & Adventure
 - kept (not its first genre): S.W.A.T. (2017) - Crime, Action & Adventure, Drama
 - kept (not its first genre): Stargate SG-1 (1997) - Sci-Fi & Fantasy, Action & Adventure
-- kept (not its first genre): The Witcher (2019) - Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Supergirl (2015) - Drama, Sci-Fi & Fantasy, Action & Adventure
+- kept (not its first genre): The Witcher (2019) - Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Alice in Borderland (2020) - Mystery, Drama, Action & Adventure
-- kept (not its first genre): Fauda (2015) - Drama, Action & Adventure, War & Politics
 - kept (not its first genre): Bloodhounds (2023) - Drama, Action & Adventure, Crime
+- kept (not its first genre): Fauda (2015) - Drama, Action & Adventure, War & Politics
 - kept (not its first genre): The Sandman (2022) - Sci-Fi & Fantasy, Drama, Action & Adventure
-- kept (not its first genre): Pursuit of Jade (2026) - Drama, Action & Adventure, War & Politics
 - kept (not its first genre): The Walking Dead: Daryl Dixon (2023) - Sci-Fi & Fantasy, Action & Adventure, Drama
-- kept (not its first genre): The Uncanny Counter (2020) - Drama, Mystery, Action & Adventure
+- kept (not its first genre): Pursuit of Jade (2026) - Drama, Action & Adventure, War & Politics
 - kept (not its first genre): Sweet Home (2020) - Sci-Fi & Fantasy, Action & Adventure
+- kept (not its first genre): The Uncanny Counter (2020) - Drama, Mystery, Action & Adventure
 - kept (not its first genre): Alchemy of Souls (2022) - Drama, Sci-Fi & Fantasy, Action & Adventure, Mystery
 - left out: Mako: Island of Secrets (2013) [tv:42025] - Comedy, Sci-Fi & Fantasy, Drama, Action & Adventure
 - left out: The Tick (2016) [tv:67487] - Comedy, Sci-Fi & Fantasy, Action & Adventure
@@ -72,15 +72,15 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Ice Age: Collision Course (2016) - Adventure, Animation, Family, Comedy, Sci-Fi
 - kept (not its first genre): The Bad Guys 2 (2025) - Family, Comedy, Crime, Adventure, Animation, Action
 - kept (not its first genre): The Bad Guys (2022) - Action, Adventure, Animation, Comedy, Crime, Family
-- kept (not its first genre): Despicable Me 3 (2017) - Action, Animation, Comedy, Family, Adventure
 - kept (not its first genre): The Prince of Egypt (1998) - Adventure, Animation, Drama, Family
+- kept (not its first genre): Despicable Me 3 (2017) - Action, Animation, Comedy, Family, Adventure
 - kept (not its first genre): Flushed Away (2006) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): Gabby's Dollhouse: The Movie (2025) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Chicken Run: Dawn of the Nugget (2023) - Family, Animation, Adventure, Comedy
 - kept (not its first genre): Smurfs: The Lost Village (2017) - Family, Comedy, Adventure, Animation, Fantasy
-- kept (not its first genre): Plankton: The Movie (2025) - Family, Comedy, Adventure, Animation, Sci-Fi
 - kept (not its first genre): In Your Dreams (2025) - Adventure, Animation, Comedy, Family, Fantasy
-- kept (not its first genre): Back to the Outback (2021) - Family, Animation, Adventure, Comedy
+- kept (not its first genre): A Shaun the Sheep Movie: Farmageddon (2019) - Family, Comedy, Adventure, Animation, Sci-Fi
+- kept (not its first genre): Plankton: The Movie (2025) - Family, Comedy, Adventure, Animation, Sci-Fi
 
 ## Netflix · Animation Series (series) - 208 kept of 210 looked at
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2012) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy, Comedy
@@ -90,40 +90,40 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Batwheels (2022) - Kids, Animation, Comedy
 - kept (not its first genre): Sonic Boom (2014) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family
 - kept (not its first genre): Trollhunters: Tales of Arcadia (2016) - Family, Animation, Action & Adventure, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): Oddballs (2022) - Action & Adventure, Comedy, Animation
-- kept (not its first genre): Numberblocks (2017) - Kids, Animation, Family
 - kept (not its first genre): Danger Mouse (2015) - Comedy, Animation, Family, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Numberblocks (2017) - Kids, Animation, Family
 - kept (not its first genre): Gabby's Dollhouse (2021) - Kids, Comedy, Animation, Sci-Fi & Fantasy
-- kept (not its first genre): Green Eggs and Ham (2019) - Kids, Family, Animation, Comedy, Action & Adventure
 - kept (not its first genre): Inside Job (2021) - Comedy, Animation
+- kept (not its first genre): Green Eggs and Ham (2019) - Kids, Family, Animation, Comedy, Action & Adventure
+- kept (not its first genre): My Dad the Bounty Hunter (2023) - Action & Adventure, Comedy, Animation, Family, Kids
 - kept (not its first genre): F is for Family (2015) - Comedy, Animation
-- kept (not its first genre): The Creature Cases (2022) - Kids, Animation
+- kept (not its first genre): Oddballs (2022) - Action & Adventure, Comedy, Animation
 
 ## Netflix · Anime Movies (movie) - 89 kept of 89 looked at
 - kept (not its first genre): Resident Evil: Death Island (2023) - Action, Animation, Sci-Fi, Horror
 - kept (not its first genre): Resident Evil: Vendetta (2017) - Action, Animation, Adventure, Sci-Fi, Horror
 - kept (not its first genre): OVERLORD: The Sacred Kingdom (2024) - Action, Adventure, Animation, Fantasy
 - kept (not its first genre): Violet Evergarden: Eternity and the Auto Memory Doll (2019) - Drama, Fantasy, Animation
-- kept (not its first genre): Resident Evil: Damnation (2012) - Action, Animation, Sci-Fi, Horror
 - kept (not its first genre): Naruto the Movie: Ninja Clash in the Land of Snow (2004) - Comedy, Action, Animation, Adventure
-- kept (not its first genre): Naruto the Movie: Guardians of the Crescent Moon Kingdom (2006) - Adventure, Animation, Action
-- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
-- kept (not its first genre): One Piece Film: GOLD (2016) - Action, Animation, Adventure, Comedy
+- kept (not its first genre): Resident Evil: Damnation (2012) - Action, Animation, Sci-Fi, Horror
 - kept (not its first genre): Naruto Shippuden the Movie: The Will of Fire (2009) - Action, Adventure, Comedy, Drama, Fantasy, Animation
 - kept (not its first genre): Naruto Shippuden the Movie: Bonds (2008) - Fantasy, Animation, Action
-- kept (not its first genre): Naruto Shippuden the Movie: The Lost Tower (2010) - Adventure, Action, Animation
+- kept (not its first genre): One Piece Film: GOLD (2016) - Action, Animation, Adventure, Comedy
+- kept (not its first genre): Naruto the Movie: Guardians of the Crescent Moon Kingdom (2006) - Adventure, Animation, Action
+- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
 - kept (not its first genre): One Piece: The Desert Princess and the Pirates: Adventure in Alabasta (2007) - Action, Adventure, Animation, Comedy, Fantasy
-- kept (not its first genre): One Piece: Episode of Chopper Plus: Bloom in the Winter, Miracle Cherry Blossom (2008) - Action, Animation, Adventure, Comedy
+- kept (not its first genre): Naruto Shippuden the Movie: The Lost Tower (2010) - Adventure, Action, Animation
 - kept (not its first genre): BLAME! (2017) - Action, Drama, Sci-Fi, Animation
+- kept (not its first genre): One Piece: Episode of Chopper Plus: Bloom in the Winter, Miracle Cherry Blossom (2008) - Action, Animation, Adventure, Comedy
 
-## Netflix · Anime Series (series) - 192 kept of 192 looked at
+## Netflix · Anime Series (series) - 191 kept of 191 looked at
 - kept (not its first genre): One Piece (1999) - Action & Adventure, Comedy, Animation
 - kept (not its first genre): Mobile Suit Gundam SEED (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy, War & Politics
 - kept (not its first genre): Neon Genesis Evangelion (1995) - Sci-Fi & Fantasy, Animation, Drama
 - kept (not its first genre): Kenichi: The Mightiest Disciple (2006) - Action & Adventure, Animation, Comedy
 - kept (not its first genre): Shangri-La Frontier (2023) - Sci-Fi & Fantasy, Action & Adventure, Comedy, Animation
-- kept (not its first genre): TIGER & BUNNY (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): My Hero Academia (2016) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): TIGER & BUNNY (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Record of Ragnarok (2021) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): LAST HOPE (2018) - Drama, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Hi Score Girl (2018) - Comedy, Animation
@@ -137,18 +137,18 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Guarding Stars (2026) - Romance, Comedy
 - kept (not its first genre): Allen (2026) - Sci-Fi, Adventure, Comedy
 - kept (not its first genre): The Christmas Switch (2026) - Romance, Comedy
-- kept (not its first genre): The Devil Wears Prada (2006) - Drama, Comedy
 - kept (not its first genre): Brawlers (2026) - Action, Adventure, Comedy
-- kept (not its first genre): Voicemails for Isabelle (2026) - Romance, Comedy, Drama
+- kept (not its first genre): The Devil Wears Prada (2006) - Drama, Comedy
 - kept (not its first genre): Anaconda (2025) - Adventure, Comedy, Horror
-- kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
+- kept (not its first genre): Voicemails for Isabelle (2026) - Romance, Comedy, Drama
 - kept (not its first genre): The Ministry of Ungentlemanly Warfare (2024) - Action, Comedy, War
+- kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
 - kept (not its first genre): Red Notice (2021) - Action, Comedy, Crime
-- kept (not its first genre): Dungeons & Dragons: Honor Among Thieves (2023) - Adventure, Fantasy, Comedy
-- kept (not its first genre): Sacrifice (2026) - Adventure, Comedy, Action
-- kept (not its first genre): 21 Jump Street (2012) - Action, Comedy, Crime
 - kept (not its first genre): Violent Night (2022) - Action, Comedy, Fantasy
-- kept (not its first genre): The Blues Brothers (1980) - Music, Comedy, Action, Adventure
+- kept (not its first genre): Dungeons & Dragons: Honor Among Thieves (2023) - Adventure, Fantasy, Comedy
+- kept (not its first genre): 21 Jump Street (2012) - Action, Comedy, Crime
+- kept (not its first genre): Sacrifice (2026) - Adventure, Comedy, Action
+- kept (not its first genre): 22 Jump Street (2014) - Crime, Comedy, Action
 - left out: Green Book (2018) [movie:490132] - Drama, Comedy, History
 - left out: Ready or Not (2019) [movie:567609] - Horror, Comedy
 - left out: T2 Trainspotting (2017) [movie:180863] - Drama, Comedy, Crime
@@ -172,8 +172,8 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Dangal (2016) [movie:360814] - Drama, Family, Comedy
 - left out: Caught Stealing (2025) [movie:1245993] - Crime, Thriller, Comedy
 - left out: Veronica Mars (2014) [movie:177494] - Crime, Drama, Comedy
-- left out: Little Evil (2017) [movie:346671] - Horror, Comedy
 - left out: Through My Window: Across the Sea (2023) [movie:988078] - Romance, Drama, Comedy
+- left out: Drinking Buddies (2013) [movie:172533] - Romance, Drama, Comedy
 
 ## Netflix · Comedy Series (series) - 300 kept of 520 looked at
 - kept (not its first genre): Shameless (2011) - Drama, Comedy
@@ -185,11 +185,11 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Emily in Paris (2020) - Drama, Comedy
 - kept (not its first genre): Goosebumps (1995) - Sci-Fi & Fantasy, Mystery, Kids, Comedy
 - kept (not its first genre): The Thundermans (2013) - Action & Adventure, Comedy, Family, Sci-Fi & Fantasy
-- kept (not its first genre): Take Charge of My Heart (2026) - Sci-Fi & Fantasy, Comedy, Drama
 - kept (not its first genre): Nicky, Ricky, Dicky & Dawn (2014) - Family, Kids, Comedy
+- kept (not its first genre): Take Charge of My Heart (2026) - Sci-Fi & Fantasy, Comedy, Drama
 - kept (not its first genre): Atypical (2017) - Drama, Comedy
-- kept (not its first genre): Find Me in Paris (2018) - Drama, Sci-Fi & Fantasy, Comedy, Family
 - kept (not its first genre): A Series of Unfortunate Events (2017) - Action & Adventure, Family, Comedy, Mystery
+- kept (not its first genre): Find Me in Paris (2018) - Drama, Sci-Fi & Fantasy, Comedy, Family
 - kept (not its first genre): The WONDERfools (2026) - Action & Adventure, Comedy, Sci-Fi & Fantasy, Drama
 - left out: Cobra Kai (2018) [tv:77169] - Action & Adventure, Drama, Comedy
 - left out: Teen Wolf (2011) [tv:34524] - Sci-Fi & Fantasy, Drama, Comedy
@@ -215,14 +215,14 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Gilmore Girls: A Year in the Life (2016) [tv:68799] - Drama, Comedy
 - left out: Summertime (2020) [tv:100333] - Drama, Comedy
 - left out: Start-Up (2020) [tv:99048] - Drama, Comedy
-- left out: Doctors (2016) [tv:66329] - Drama, Comedy
+- left out: The Search (2020) [tv:18712] - Crime, Drama, Comedy
 
 ## Netflix · Romantic Comedy Movies (movie) - 296 kept of 361 looked at
 - kept (not its first genre): Are We There Yet? (2005) - Family, Adventure, Comedy, Romance
 - kept (not its first genre): The Princess Switch: Switched Again (2020) - Family, Romance, Comedy, TV Movie
 - kept (not its first genre): I'm Your Man (2021) - Sci-Fi, Comedy, Romance
-- kept (not its first genre): Ta Ra Rum Pum (2007) - Family, Comedy, Romance
 - kept (not its first genre): The Family Holiday (2007) - Family, Comedy, Romance
+- kept (not its first genre): Ta Ra Rum Pum (2007) - Family, Comedy, Romance
 - kept (not its first genre): Our Times (2025) - Sci-Fi, Romance, Comedy
 - kept (not its first genre): Kick (2014) - Action, Romance, Comedy, Crime
 - left out: Murder Mystery (2019) [movie:514999] - Comedy, Mystery, Crime, Romance
@@ -260,9 +260,9 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Miss Night and Day (2024) - Sci-Fi & Fantasy, Comedy, Mystery
 - kept (not its first genre): No Tail to Tell (2026) - Sci-Fi & Fantasy, Comedy, Drama
 - kept (not its first genre): Feel Good (2020) - Drama, Comedy
-- kept (not its first genre): Master's Sun (2013) - Sci-Fi & Fantasy, Comedy, Drama
 - kept (not its first genre): Once Upon a Small Town (2022) - Drama, Comedy
 - kept (not its first genre): Possessed (2019) - Mystery, Crime, Comedy, Drama
+- kept (not its first genre): Master's Sun (2013) - Sci-Fi & Fantasy, Comedy, Drama
 - kept (not its first genre): Mad for Each Other (2021) - Drama, Comedy
 - left out: I Am Not Okay with This (2020) [tv:90260] - Drama, Comedy, Sci-Fi & Fantasy
 - left out: It's Okay to Not Be Okay (2020) [tv:96462] - Drama, Comedy
@@ -298,14 +298,14 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Scarface (1983) - Action, Crime, Drama
 - kept (not its first genre): White Chicks (2004) - Comedy, Crime
 - kept (not its first genre): The Equalizer (2014) - Thriller, Action, Crime
-- kept (not its first genre): The Rip (2026) - Action, Thriller, Crime
 - kept (not its first genre): UNABOMBER (2026) - Thriller, Drama, Crime
+- kept (not its first genre): The Rip (2026) - Action, Thriller, Crime
 - kept (not its first genre): Glass Onion: A Knives Out Mystery (2022) - Comedy, Crime, Mystery
-- kept (not its first genre): xXx (2002) - Action, Adventure, Thriller, Crime, Drama
 - kept (not its first genre): The Gentlemen (2020) - Comedy, Crime
 - kept (not its first genre): Nobody 2 (2025) - Action, Thriller, Crime
-- kept (not its first genre): Dhurandhar (2025) - Action, Crime, Thriller
-- kept (not its first genre): Red Notice (2021) - Action, Comedy, Crime
+- kept (not its first genre): xXx (2002) - Action, Adventure, Thriller, Crime, Drama
+- kept (not its first genre): The Debt Collector (2026) - Action, Thriller, Crime
+- kept (not its first genre): Shoplifters (2018) - Drama, Crime, Thriller
 - left out: 365 Days (2020) [movie:664413] - Romance, Drama, Crime
 - left out: Snowden (2016) [movie:302401] - Drama, History, Crime, Thriller
 - left out: Scream VI (2023) [movie:934433] - Horror, Thriller, Crime
@@ -330,21 +330,21 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Hoax: The Kidnapping of Sherri Papini (2023) [movie:1074896] - TV Movie, Drama, Crime
 
 ## Netflix · Crime Series (series) - 300 kept of 420 looked at
+- kept (not its first genre): The Queen of Flow (2018) - Drama, Crime
 - kept (not its first genre): C.I.D. (1998) - Action & Adventure, Crime, Drama, Mystery
+- kept (not its first genre): MINDHUNTER (2017) - Drama, Crime
 - kept (not its first genre): The Blacklist (2013) - Drama, Crime, Mystery
 - kept (not its first genre): Breaking Bad (2008) - Drama, Crime
-- kept (not its first genre): MINDHUNTER (2017) - Drama, Crime
 - kept (not its first genre): Peaky Blinders (2013) - Drama, Crime
-- kept (not its first genre): You (2018) - Mystery, Crime, Drama
 - kept (not its first genre): Mayor of Kingstown (2021) - Drama, Crime
+- kept (not its first genre): You (2018) - Mystery, Crime, Drama
 - kept (not its first genre): The Lincoln Lawyer (2022) - Drama, Crime
+- kept (not its first genre): Fire Country (2022) - Drama, Crime
 - kept (not its first genre): Black Doves (2024) - Action & Adventure, Drama, Mystery, Crime
 - kept (not its first genre): Doctor X: Mafia in White (2026) - Mystery, Drama, Crime
 - kept (not its first genre): The Glory (2022) - Drama, Crime
-- kept (not its first genre): Fire Country (2022) - Drama, Crime
 - kept (not its first genre): Hannibal (2013) - Drama, Crime
 - kept (not its first genre): Gordon (2026) - Drama, Crime
-- kept (not its first genre): Bloodhounds (2023) - Drama, Action & Adventure, Crime
 - left out: Brooklyn Nine-Nine (2013) [tv:48891] - Comedy, Crime
 - left out: Orange Is the New Black (2013) [tv:1424] - Drama, Comedy, Crime
 - left out: Homeland (2011) [tv:1407] - Drama, War & Politics, Crime
@@ -375,18 +375,18 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Collision Course (2026) - Thriller, Drama, Crime
 - kept (not its first genre): Top Gun: Maverick (2022) - Action, Drama
 - kept (not its first genre): Animals (2026) - Thriller, Drama, Action, Crime
-- kept (not its first genre): Gladiator (2000) - Action, Drama, Adventure
 - kept (not its first genre): Twilight (2008) - Fantasy, Drama, Romance
+- kept (not its first genre): Gladiator (2000) - Action, Drama, Adventure
 - kept (not its first genre): Fury (2014) - War, Drama, Action
 - kept (not its first genre): Scarface (1983) - Action, Crime, Drama
+- kept (not its first genre): The Twilight Saga: New Moon (2009) - Adventure, Fantasy, Drama, Romance
 - kept (not its first genre): Heat (1995) - Crime, Drama, Action
+- kept (not its first genre): 365 Days: This Day (2022) - Romance, Drama
+- kept (not its first genre): Gladiator II (2024) - Action, Adventure, Drama
 - kept (not its first genre): One Year to Live, Buy a Man (2026) - Romance, Drama, Comedy
 - kept (not its first genre): The Good Lawyer (2026) - Thriller, Drama
-- kept (not its first genre): Gladiator II (2024) - Action, Adventure, Drama
-- kept (not its first genre): The Twilight Saga: New Moon (2009) - Adventure, Fantasy, Drama, Romance
-- kept (not its first genre): 365 Days: This Day (2022) - Romance, Drama
-- kept (not its first genre): The Twilight Saga: Breaking Dawn - Part 2 (2012) - Fantasy, Drama, Romance
 - kept (not its first genre): The Sixth Sense (1999) - Mystery, Thriller, Drama
+- kept (not its first genre): The Twilight Saga: Breaking Dawn - Part 2 (2012) - Fantasy, Drama, Romance
 - left out: Bird Box (2018) [movie:405774] - Horror, Thriller, Drama
 - left out: Don't Look Up (2021) [movie:646380] - Comedy, Sci-Fi, Drama
 - left out: Love Actually (2003) [movie:508] - Comedy, Romance, Drama
@@ -407,16 +407,17 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Frances Ha (2013) [movie:121986] - Comedy, Drama
 - left out: I Love You Phillip Morris (2010) [movie:8952] - Comedy, Crime, Drama, Romance
 - left out: Beast (2022) [movie:760741] - Action, Adventure, Horror, Thriller, Drama
+- left out: Frank (2014) [movie:171372] - Comedy, Drama, Mystery
 - left out: The Silence (2019) [movie:527261] - Horror, Drama, Thriller, Fantasy
 - left out: Eighth Grade (2018) [movie:489925] - Comedy, Drama
 - left out: Here Comes the Boom (2012) [movie:87826] - Comedy, Action, Drama
 - left out: The Half of It (2020) [movie:597219] - Comedy, Romance, Drama
-- left out: The Wonderful Story of Henry Sugar (2023) [movie:923939] - Fantasy, Comedy, Adventure, Drama
 
 ## Netflix · Drama Series (series) - 300 kept of 440 looked at
 - kept (not its first genre): Black Mirror (2011) - Sci-Fi & Fantasy, Drama, Mystery
-- kept (not its first genre): NCIS (2003) - Crime, Drama, Action & Adventure
+- kept (not its first genre): Ozark (2017) - Crime, Drama
 - kept (not its first genre): Law & Order (1990) - Crime, Drama
+- kept (not its first genre): NCIS (2003) - Crime, Drama, Action & Adventure
 - kept (not its first genre): C.I.D. (1998) - Action & Adventure, Crime, Drama, Mystery
 - kept (not its first genre): FROM (2022) - Mystery, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Hawaii Five-0 (2010) - Crime, Drama, Action & Adventure
@@ -425,10 +426,9 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): S.W.A.T. (2017) - Crime, Action & Adventure, Drama
 - kept (not its first genre): Better Call Saul (2015) - Crime, Drama
 - kept (not its first genre): Vikings (2013) - Action & Adventure, Drama, War & Politics
-- kept (not its first genre): Lupin (2021) - Crime, Drama, Mystery
-- kept (not its first genre): SEAL Team (2017) - Action & Adventure, Drama, War & Politics
-- kept (not its first genre): Will Trent (2023) - Crime, Drama, Comedy
 - kept (not its first genre): DC's Legends of Tomorrow (2016) - Action & Adventure, Sci-Fi & Fantasy, Drama
+- kept (not its first genre): SEAL Team (2017) - Action & Adventure, Drama, War & Politics
+- kept (not its first genre): The Closer (2005) - Crime, Drama, Mystery
 - left out: Sex Education (2019) [tv:81356] - Comedy, Drama
 - left out: Young Sheldon (2017) [tv:71728] - Comedy, Family, Drama
 - left out: True Beauty (2020) [tv:112888] - Comedy, Drama
@@ -451,26 +451,26 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Mako: Island of Secrets (2013) [tv:42025] - Comedy, Sci-Fi & Fantasy, Drama, Action & Adventure
 - left out: Master of None (2015) [tv:64254] - Comedy, Drama
 - left out: Derry Girls (2018) [tv:76148] - Comedy, Drama
+- left out: Hi Bye, Mama! (2020) [tv:97219] - Sci-Fi & Fantasy, Comedy, Drama
 - left out: GLOW (2017) [tv:70573] - Comedy, Drama
 - left out: Grace and Frankie (2015) [tv:62320] - Comedy, Drama
-- left out: The Sex Lives of College Girls (2021) [tv:134373] - Comedy, Drama
 
 ## Netflix · Family Movies (movie) - 130 kept of 133 looked at
 - kept (not its first genre): The Gospel of Christmas (2026) - Music, Family, Drama
 - kept (not its first genre): How to Train Your Dragon (2025) - Fantasy, Family, Action, Adventure
-- kept (not its first genre): The Karate Kid (2010) - Action, Adventure, Drama, Family
-- kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
 - kept (not its first genre): The Christmas Chronicles (2018) - Comedy, Adventure, Family, Fantasy
+- kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
+- kept (not its first genre): The Karate Kid (2010) - Action, Adventure, Drama, Family
 - kept (not its first genre): The Karate Kid (1984) - Drama, Family
-- kept (not its first genre): Dangal (2016) - Drama, Family, Comedy
-- kept (not its first genre): The Flintstones (1994) - Fantasy, Comedy, Family
-- kept (not its first genre): Zathura: A Space Adventure (2005) - Sci-Fi, Adventure, Family
 - kept (not its first genre): Annie (2014) - Comedy, Drama, Family
+- kept (not its first genre): The Flintstones (1994) - Fantasy, Comedy, Family
+- kept (not its first genre): Dangal (2016) - Drama, Family, Comedy
+- kept (not its first genre): Zathura: A Space Adventure (2005) - Sci-Fi, Adventure, Family
 - kept (not its first genre): The Karate Kid Part II (1986) - Adventure, Drama, Action, Romance, Family
 - kept (not its first genre): Deck the Halls (2006) - Comedy, Family
 - kept (not its first genre): The Karate Kid Part III (1989) - Action, Family, Drama
-- kept (not its first genre): Uncle Buck (1989) - Comedy, Drama, Family
 - kept (not its first genre): Love the Coopers (2015) - Comedy, Family, Drama
+- kept (not its first genre): Uncle Buck (1989) - Comedy, Drama, Family
 - left out: Goosebumps 2: Haunted Halloween (2018) [movie:442062] - Comedy, Fantasy, Horror, Family
 - left out: Nightbooks (2021) [movie:739990] - Fantasy, Horror, Family
 - left out: Holiday in Santa Fe (2021) [movie:881239] - TV Movie, Comedy, Drama, Family
@@ -478,18 +478,18 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 ## Netflix · Family Series (series) - 79 kept of 83 looked at
 - kept (not its first genre): Percy Jackson and the Olympians (2023) - Action & Adventure, Sci-Fi & Fantasy, Drama, Family
 - kept (not its first genre): Young Sheldon (2017) - Comedy, Family, Drama
-- kept (not its first genre): Henry Danger (2014) - Comedy, Family, Kids, Sci-Fi & Fantasy
 - kept (not its first genre): Touched by an Angel (1994) - Sci-Fi & Fantasy, Drama, Family
-- kept (not its first genre): Avatar: The Last Airbender (2024) - Action & Adventure, Sci-Fi & Fantasy, Drama, Family
+- kept (not its first genre): Henry Danger (2014) - Comedy, Family, Kids, Sci-Fi & Fantasy
 - kept (not its first genre): A Different World (1987) - Comedy, Family
-- kept (not its first genre): The Thundermans (2013) - Action & Adventure, Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): Avatar: The Last Airbender (2024) - Action & Adventure, Sci-Fi & Fantasy, Drama, Family
 - kept (not its first genre): The Jamie Foxx Show (1996) - Comedy, Family
+- kept (not its first genre): The Thundermans (2013) - Action & Adventure, Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Anne with an E (2017) - Drama, Family
-- kept (not its first genre): Find Me in Paris (2018) - Drama, Sci-Fi & Fantasy, Comedy, Family
-- kept (not its first genre): H2O: Just Add Water (2006) - Drama, Family, Sci-Fi & Fantasy
 - kept (not its first genre): A Series of Unfortunate Events (2017) - Action & Adventure, Family, Comedy, Mystery
-- kept (not its first genre): The Ranch (2016) - Comedy, Family, Western
+- kept (not its first genre): Find Me in Paris (2018) - Drama, Sci-Fi & Fantasy, Comedy, Family
 - kept (not its first genre): The Upshaws (2021) - Comedy, Family, Drama
+- kept (not its first genre): H2O: Just Add Water (2006) - Drama, Family, Sci-Fi & Fantasy
+- kept (not its first genre): The Ranch (2016) - Comedy, Family, Western
 - kept (not its first genre): Sam & Cat (2013) - Comedy, Kids, Family
 - left out: The A List (2018) [tv:85427] - Drama, Mystery, Family
 - left out: Little House on the Prairie (2026) [tv:283304] - Drama, Western, Family
@@ -499,18 +499,18 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 ## Netflix · Sci-Fi & Fantasy Movies (movie) - 248 kept of 265 looked at
 - kept (not its first genre): War Machine (2026) - Action, Sci-Fi, Thriller
 - kept (not its first genre): Alien (1979) - Horror, Sci-Fi
-- kept (not its first genre): The Prestige (2006) - Drama, Mystery, Sci-Fi
-- kept (not its first genre): Aliens (1986) - Action, Thriller, Sci-Fi
 - kept (not its first genre): The Twilight Saga: New Moon (2009) - Adventure, Fantasy, Drama, Romance
 - kept (not its first genre): 28 Years Later (2025) - Horror, Thriller, Sci-Fi
+- kept (not its first genre): The Prestige (2006) - Drama, Mystery, Sci-Fi
+- kept (not its first genre): Aliens (1986) - Action, Thriller, Sci-Fi
 - kept (not its first genre): Frankenstein (2025) - Drama, Fantasy, Horror
-- kept (not its first genre): 28 Years Later: The Bone Temple (2026) - Horror, Thriller, Sci-Fi
 - kept (not its first genre): Jurassic World Dominion (2022) - Adventure, Sci-Fi, Thriller
-- kept (not its first genre): The Last House (2026) - Horror, Sci-Fi
+- kept (not its first genre): 28 Years Later: The Bone Temple (2026) - Horror, Thriller, Sci-Fi
 - kept (not its first genre): The Twilight Saga: Breaking Dawn - Part 1 (2011) - Adventure, Fantasy, Romance
+- kept (not its first genre): The Last House (2026) - Horror, Sci-Fi
 - kept (not its first genre): About Time (2013) - Drama, Romance, Fantasy
-- kept (not its first genre): Don't Look Up (2021) - Comedy, Sci-Fi, Drama
 - kept (not its first genre): The Twilight Saga: Eclipse (2010) - Adventure, Fantasy, Drama, Romance
+- kept (not its first genre): Don't Look Up (2021) - Comedy, Sci-Fi, Drama
 - kept (not its first genre): A Quiet Place: Day One (2024) - Horror, Sci-Fi, Thriller
 - left out: Battleship (2012) [movie:44833] - Thriller, Action, Adventure, Sci-Fi
 - left out: Resident Evil: Afterlife (2010) [movie:35791] - Action, Adventure, Horror, Sci-Fi
@@ -536,6 +536,7 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): The Walking Dead (2010) - Action & Adventure, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Percy Jackson and the Olympians (2023) - Action & Adventure, Sci-Fi & Fantasy, Drama, Family
 - kept (not its first genre): Stranger Things (2016) - Action & Adventure, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): The Order (2019) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Lucifer (2016) - Crime, Sci-Fi & Fantasy
 - kept (not its first genre): Outlander (2014) - Drama, Sci-Fi & Fantasy
 - kept (not its first genre): DC's Legends of Tomorrow (2016) - Action & Adventure, Sci-Fi & Fantasy, Drama
@@ -545,7 +546,6 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Dark (2017) - Crime, Drama, Sci-Fi & Fantasy, Mystery
 - kept (not its first genre): Power Rangers (1993) - Action & Adventure, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): The Umbrella Academy (2019) - Action & Adventure, Sci-Fi & Fantasy, Drama
-- kept (not its first genre): Falling Skies (2011) - Action & Adventure, Sci-Fi & Fantasy, Drama
 - left out: Henry Danger (2014) [tv:61852] - Comedy, Family, Kids, Sci-Fi & Fantasy
 - left out: The Thundermans (2013) [tv:58981] - Action & Adventure, Comedy, Family, Sci-Fi & Fantasy
 - left out: Green Frontier (2019) [tv:91699] - Crime, Mystery, Drama, Sci-Fi & Fantasy
@@ -554,22 +554,22 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Rugal (2020) [tv:97766] - Action & Adventure, Crime, Mystery, Sci-Fi & Fantasy, Drama
 - left out: Odd Squad (2014) [tv:73549] - Comedy, Crime, Family, Sci-Fi & Fantasy, Mystery, Kids
 
-## Netflix · History & War Movies (movie) - 145 kept of 171 looked at
+## Netflix · History & War Movies (movie) - 144 kept of 170 looked at
 - kept (not its first genre): I Swear (2025) - Drama, History
 - kept (not its first genre): RRR (2022) - Action, History, Drama
 - kept (not its first genre): The Irishman (2019) - Crime, Drama, History
 - kept (not its first genre): Pearl Harbor (2001) - Drama, War
 - kept (not its first genre): Lawrence of Arabia (1962) - Adventure, History, War
-- kept (not its first genre): The Impossible (2012) - Drama, Thriller, History
 - kept (not its first genre): Society of the Snow (2023) - Drama, History
 - kept (not its first genre): The Deer Hunter (1978) - Drama, War
-- kept (not its first genre): Sisu: Road to Revenge (2025) - Action, War, Thriller
+- kept (not its first genre): The Impossible (2012) - Drama, Thriller, History
 - kept (not its first genre): Dallas Buyers Club (2013) - Drama, History
-- kept (not its first genre): The Founder (2016) - Drama, History
 - kept (not its first genre): Brothers (2009) - Drama, Thriller, War
-- kept (not its first genre): Marie Antoinette (2006) - Drama, History
+- kept (not its first genre): Sisu: Road to Revenge (2025) - Action, War, Thriller
+- kept (not its first genre): The Founder (2016) - Drama, History
+- kept (not its first genre): Cover-Up (2025) - Documentary, History
 - kept (not its first genre): The Guns of Navarone (1961) - Adventure, Drama, War
-- kept (not its first genre): Midway (1976) - Action, Drama, History, War
+- kept (not its first genre): Marie Antoinette (2006) - Drama, History
 - left out: Green Book (2018) [movie:490132] - Drama, Comedy, History
 - left out: Straight Outta Compton (2015) [movie:277216] - Drama, Music, History
 - left out: The Ministry of Ungentlemanly Warfare (2024) [movie:799583] - Action, Comedy, War
@@ -607,11 +607,11 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Pursuit of Jade (2026) - Drama, Action & Adventure, War & Politics
 - kept (not its first genre): Vikings: Valhalla (2022) - Action & Adventure, Drama, War & Politics
 - kept (not its first genre): Strategist KANBE (2014) - Drama, War & Politics
-- kept (not its first genre): Bodyguard (2018) - Crime, Drama, War & Politics, Mystery
-- kept (not its first genre): Amend: The Fight for America (2021) - Documentary, War & Politics
 - kept (not its first genre): Zero Day (2025) - Drama, War & Politics
+- kept (not its first genre): Hostage (2025) - Drama, War & Politics
+- kept (not its first genre): The Princess Weiyoung (2016) - Drama, War & Politics
 - kept (not its first genre): Sandokan (2025) - Action & Adventure, Drama, War & Politics
-- kept (not its first genre): The Law According to Lidia Poët (2023) - Drama, Crime, War & Politics
+- kept (not its first genre): Bodyguard (2018) - Crime, Drama, War & Politics, Mystery
 - left out: Boots (2025) [tv:225647] - Comedy, Drama, War & Politics
 - left out: The Barrier (2020) [tv:93522] - Drama, Sci-Fi & Fantasy, War & Politics, Mystery
 - left out: Crime Diaries: The Candidate (2019) [tv:87820] - Drama, Crime, Mystery, War & Politics
@@ -620,22 +620,22 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Dope (2017) [tv:75892] - Documentary, Crime, War & Politics
 - left out: JAPAN SINKS: People of Hope (2021) [tv:135144] - Sci-Fi & Fantasy, Drama, War & Politics
 
-## Netflix · Horror Movies (movie) - 229 kept of 261 looked at
+## Netflix · Horror Movies (movie) - 230 kept of 262 looked at
 - kept (not its first genre): Godzilla Minus One (2023) - Sci-Fi, Horror, Action
 - kept (not its first genre): Frankenstein (2025) - Drama, Fantasy, Horror
 - kept (not its first genre): M3GAN (2022) - Sci-Fi, Horror
+- kept (not its first genre): Army of the Dead (2021) - Crime, Action, Horror
 - kept (not its first genre): Thrash (2026) - Thriller, Horror
 - kept (not its first genre): #Alive (2020) - Action, Horror, Sci-Fi
+- kept (not its first genre): Becky (2020) - Thriller, Horror, Action
 - kept (not its first genre): Anaconda (1997) - Adventure, Horror, Thriller
-- kept (not its first genre): Army of the Dead (2021) - Crime, Action, Horror
-- kept (not its first genre): Underworld: Blood Wars (2016) - Fantasy, Action, Thriller, Horror
-- kept (not its first genre): The Wrath of Becky (2023) - Action, Horror, Thriller
 - kept (not its first genre): Hellboy (2019) - Fantasy, Horror, Action, Adventure
 - kept (not its first genre): Knock at the Cabin (2023) - Thriller, Horror, Mystery
-- kept (not its first genre): Becky (2020) - Thriller, Horror, Action
-- kept (not its first genre): Pride and Prejudice and Zombies (2016) - Romance, Horror, Comedy, Thriller
+- kept (not its first genre): Underworld: Blood Wars (2016) - Fantasy, Action, Thriller, Horror
+- kept (not its first genre): The Wrath of Becky (2023) - Action, Horror, Thriller
 - kept (not its first genre): The Platform 2 (2024) - Sci-Fi, Horror, Thriller
-- kept (not its first genre): Flatliners (2017) - Drama, Horror, Thriller
+- kept (not its first genre): The Pale Blue Eye (2022) - Thriller, Crime, Horror, Mystery
+- kept (not its first genre): Under Paris (2024) - Action, Horror
 - left out: The Mummy (2017) [movie:282035] - Fantasy, Thriller, Action, Adventure, Horror
 - left out: The Menu (2022) [movie:593643] - Comedy, Horror
 - left out: Resident Evil: Afterlife (2010) [movie:35791] - Action, Adventure, Horror, Sci-Fi
@@ -669,15 +669,15 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): War Machine (2026) - Action, Sci-Fi, Thriller
 - kept (not its first genre): Facing El Chapo (2026) - Crime, Action, Thriller
 - kept (not its first genre): Leave the World Behind (2023) - Drama, Mystery, Thriller
+- kept (not its first genre): 28 Years Later (2025) - Horror, Thriller, Sci-Fi
 - kept (not its first genre): The Prestige (2006) - Drama, Mystery, Sci-Fi
 - kept (not its first genre): Aliens (1986) - Action, Thriller, Sci-Fi
-- kept (not its first genre): 28 Years Later (2025) - Horror, Thriller, Sci-Fi
 - kept (not its first genre): Psycho (1960) - Horror, Thriller, Mystery
-- kept (not its first genre): Jaws (1975) - Horror, Thriller, Adventure
+- kept (not its first genre): Jurassic World Dominion (2022) - Adventure, Sci-Fi, Thriller
 - kept (not its first genre): Apex (2026) - Action, Thriller
-- kept (not its first genre): 28 Years Later: The Bone Temple (2026) - Horror, Thriller, Sci-Fi
+- kept (not its first genre): Jaws (1975) - Horror, Thriller, Adventure
+- kept (not its first genre): Bugonia (2025) - Sci-Fi, Thriller, Comedy
 - kept (not its first genre): The Rip (2026) - Action, Thriller, Crime
-- kept (not its first genre): The Whisper Man (2026) - Crime, Drama, Thriller
 - left out: Whiplash (2014) [movie:244786] - Drama, Music, Thriller
 - left out: Glass Onion: A Knives Out Mystery (2022) [movie:661374] - Comedy, Crime, Mystery
 - left out: Murder Mystery (2019) [movie:514999] - Comedy, Mystery, Crime, Romance
@@ -702,24 +702,24 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: They Cloned Tyrone (2023) [movie:736769] - Comedy, Sci-Fi, Mystery
 - left out: The Photographer of Mauthausen (2018) [movie:528949] - Drama, History, Thriller
 - left out: Poison (2023) [movie:1172676] - Comedy, Drama, Thriller
-- left out: Kill Me Three Times (2015) [movie:237756] - Comedy, Thriller, Mystery
+- left out: How I Became a Superhero (2020) [movie:641501] - Sci-Fi, Adventure, Action, Comedy, Thriller
 
 ## Netflix · Mystery & Thriller Series (series) - 300 kept of 386 looked at
 - kept (not its first genre): Black Mirror (2011) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): C.I.D. (1998) - Action & Adventure, Crime, Drama, Mystery
 - kept (not its first genre): The Blacklist (2013) - Drama, Crime, Mystery
 - kept (not its first genre): Stranger Things (2016) - Action & Adventure, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): The Order (2019) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Yellowjackets (2021) - Drama, Mystery
+- kept (not its first genre): The Closer (2005) - Crime, Drama, Mystery
 - kept (not its first genre): Lupin (2021) - Crime, Drama, Mystery
 - kept (not its first genre): The Blue Road (2026) - Crime, Mystery
-- kept (not its first genre): The Closer (2005) - Crime, Drama, Mystery
 - kept (not its first genre): Riverdale (2017) - Crime, Drama, Mystery
-- kept (not its first genre): Squid Game (2021) - Action & Adventure, Mystery, Drama
 - kept (not its first genre): Rizzoli & Isles (2010) - Crime, Drama, Mystery, Comedy
+- kept (not its first genre): Squid Game (2021) - Action & Adventure, Mystery, Drama
 - kept (not its first genre): Wednesday (2022) - Sci-Fi & Fantasy, Mystery, Comedy
 - kept (not its first genre): Ancient Aliens (2010) - Documentary, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Black Doves (2024) - Action & Adventure, Drama, Mystery, Crime
-- kept (not its first genre): The Innocent (2021) - Crime, Mystery, Drama
 - left out: Bodyguard (2018) [tv:80307] - Crime, Drama, War & Politics, Mystery
 - left out: A Series of Unfortunate Events (2017) [tv:65294] - Action & Adventure, Family, Comedy, Mystery
 - left out: Crime Scene: The Vanishing at the Cecil Hotel (2021) [tv:116989] - Documentary, Crime, Mystery
@@ -737,24 +737,24 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Captivating the King (2024) [tv:233205] - Drama, War & Politics, Mystery
 - left out: Where Is Marta? (2021) [tv:137899] - Documentary, Crime, Mystery
 - left out: Exhibit A (2019) [tv:90725] - Crime, Documentary, Mystery
-- left out: Light of My Lion (2024) [tv:271336] - Drama, Family, Mystery
 - left out: Ties of Shooting Stars (2008) [tv:7803] - Comedy, Family, Mystery
+- left out: Light of My Lion (2024) [tv:271336] - Drama, Family, Mystery
 
 ## Netflix · Romance Movies (movie) - 300 kept of 420 looked at
 - kept (not its first genre): Twilight (2008) - Fantasy, Drama, Romance
 - kept (not its first genre): The Twilight Saga: New Moon (2009) - Adventure, Fantasy, Drama, Romance
 - kept (not its first genre): The Twilight Saga: Breaking Dawn - Part 2 (2012) - Fantasy, Drama, Romance
 - kept (not its first genre): The Twilight Saga: Breaking Dawn - Part 1 (2011) - Adventure, Fantasy, Romance
-- kept (not its first genre): Love Actually (2003) - Comedy, Romance, Drama
 - kept (not its first genre): About Time (2013) - Drama, Romance, Fantasy
+- kept (not its first genre): Love Actually (2003) - Comedy, Romance, Drama
 - kept (not its first genre): The Twilight Saga: Eclipse (2010) - Adventure, Fantasy, Drama, Romance
+- kept (not its first genre): Hamnet (2025) - Drama, Romance
+- kept (not its first genre): Wicked: For Good (2025) - Fantasy, Adventure, Romance
 - kept (not its first genre): Vishwanath & Sons (2026) - Drama, Romance, Comedy
 - kept (not its first genre): Dilwale Dulhania Le Jayenge (1995) - Comedy, Drama, Romance
-- kept (not its first genre): Wicked: For Good (2025) - Fantasy, Adventure, Romance
-- kept (not its first genre): Hamnet (2025) - Drama, Romance
-- kept (not its first genre): People We Meet on Vacation (2026) - Comedy, Romance
 - kept (not its first genre): To All the Boys I've Loved Before (2018) - Comedy, Romance
-- kept (not its first genre): Cruel Intentions (1999) - Drama, Romance
+- kept (not its first genre): Bridesmaids (2011) - Comedy, Romance
+- kept (not its first genre): People We Meet on Vacation (2026) - Comedy, Romance
 - kept (not its first genre): After We Fell (2021) - Drama, Romance
 - left out: Crimson Peak (2015) [movie:201085] - Horror, Romance
 - left out: Murder Mystery (2019) [movie:514999] - Comedy, Mystery, Crime, Romance
@@ -785,19 +785,19 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 ## Netflix · Documentary Movies (movie) - 300 kept of 380 looked at
 - kept (not its first genre): The Perfect Neighbor (2025) - Crime, Documentary
 - kept (not its first genre): Skyscraper Live (2026) - Adventure, Documentary
-- kept (not its first genre): Lorne (2026) - Comedy, Documentary
-- kept (not its first genre): My Father, the BTK Killer (2025) - Crime, Documentary
 - kept (not its first genre): American Murder: The Family Next Door (2020) - Crime, Documentary
-- kept (not its first genre): Norm Macdonald: Nothing Special (2022) - Comedy, Documentary
-- kept (not its first genre): Jackass 4.5 (2022) - Comedy, Action, Documentary
+- kept (not its first genre): Lorne (2026) - Comedy, Documentary
 - kept (not its first genre): Untold UK: Vinnie Jones (2026) - History, Documentary
+- kept (not its first genre): Norm Macdonald: Nothing Special (2022) - Comedy, Documentary
+- kept (not its first genre): My Father, the BTK Killer (2025) - Crime, Documentary
 - kept (not its first genre): ariana grande: excuse me, i love you (2020) - Music, Documentary
+- kept (not its first genre): Jackass 4.5 (2022) - Comedy, Action, Documentary
 - kept (not its first genre): Jailbreak: Love on the Run (2024) - Crime, Documentary
-- kept (not its first genre): Death to 2021 (2021) - Comedy, Documentary
-- kept (not its first genre): Avicii - My Last Show (2024) - Music, Documentary
-- kept (not its first genre): Trevor Noah: Where Was I (2023) - Comedy, Documentary, TV Movie
-- kept (not its first genre): Jamie Foxx: What Had Happened Was... (2024) - Comedy, Documentary
 - kept (not its first genre): Gaga: Five Foot Two (2017) - Music, Documentary
+- kept (not its first genre): Best of Stand-Up 2020 (2020) - Comedy, Documentary
+- kept (not its first genre): Ben Platt: Live from Radio City Music Hall (2020) - Music, Documentary
+- kept (not its first genre): Death to 2021 (2021) - Comedy, Documentary
+- kept (not its first genre): Kevin Hart: What Now? (2016) - Comedy, Documentary, TV Movie
 
 ## Netflix · Docuseries (series) - 300 kept of 380 looked at
 - kept (not its first genre): Cunk on Cinema (2026) - Comedy, Documentary
@@ -806,15 +806,15 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Roman Empire (2016) - Drama, Documentary
 - kept (not its first genre): Dirty Money (2018) - Crime, Documentary
 - kept (not its first genre): Reality Check: Inside America's Next Top Model (2026) - Reality, Documentary
-- kept (not its first genre): Worst Neighbor Ever (2026) - Crime, Documentary
-- kept (not its first genre): Ashley Madison: Sex, Lies & Scandal (2024) - Crime, Documentary
 - kept (not its first genre): Jeffrey Epstein: Filthy Rich (2020) - Crime, Documentary
+- kept (not its first genre): Ashley Madison: Sex, Lies & Scandal (2024) - Crime, Documentary
 - kept (not its first genre): Worst Ex Ever (2024) - Crime, Documentary
-- kept (not its first genre): Don't F**k with Cats: Hunting an Internet Killer (2019) - Crime, Documentary
 - kept (not its first genre): Inside the World's Toughest Prisons (2016) - Crime, Documentary
+- kept (not its first genre): Don't F**k with Cats: Hunting an Internet Killer (2019) - Crime, Documentary
 - kept (not its first genre): Murder Comes To Town (2014) - Crime, Documentary
-- kept (not its first genre): Hurts Like Hell (2022) - Drama, Documentary
+- kept (not its first genre): Worst Neighbor Ever (2026) - Crime, Documentary
 - kept (not its first genre): Depp V Heard (2023) - Reality, Documentary
+- kept (not its first genre): Grant (2020) - War & Politics, Documentary
 
 ## Netflix · Nature Documentary Movies (movie) - 17 kept of 17 looked at
 
@@ -823,33 +823,33 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 ## Netflix · Reality Series (series) - 200 kept of 201 looked at
 - kept (not its first genre): WWE Superstars (2009) - Action & Adventure, Drama, Reality
 - kept (not its first genre): Hoarders (2009) - Documentary, Reality, Drama
-- kept (not its first genre): This Is a Gardening Show (2026) - Comedy, Documentary, Reality
 - kept (not its first genre): Somebody Feed Phil (2018) - Documentary, Reality
+- kept (not its first genre): This Is a Gardening Show (2026) - Comedy, Documentary, Reality
 - kept (not its first genre): Starting 5 (2024) - Documentary, Reality
 - kept (not its first genre): Love on the Spectrum (2022) - Documentary, Reality
 - kept (not its first genre): Magic for Humans (2018) - Comedy, Reality
 - kept (not its first genre): Ultimate Beastmaster (2017) - Action & Adventure, Reality
 - kept (not its first genre): Rust Valley Restorers (2018) - Documentary, Reality
-- kept (not its first genre): The Clubhouse: A Year with the Red Sox (2025) - Documentary, Reality
 - kept (not its first genre): Six Nations: Full Contact (2024) - Documentary, Reality
+- kept (not its first genre): The Clubhouse: A Year with the Red Sox (2025) - Documentary, Reality
 - kept (not its first genre): Jack Whitehall: Travels with My Father (2017) - Comedy, Reality
-- kept (not its first genre): Bake Squad (2021) - Family, Reality
-- kept (not its first genre): Queer Eye: We're in Japan! (2019) - Comedy, Reality
 - kept (not its first genre): 100 Humans: Life's Questions. Answered. (2020) - Documentary, Reality
+- kept (not its first genre): Queer Eye: We're in Japan! (2019) - Comedy, Reality
+- kept (not its first genre): Bake Squad (2021) - Family, Reality
 
 ## Netflix · Western Movies (movie) - 14 kept of 15 looked at
 - kept (not its first genre): Cowboys & Aliens (2011) - Sci-Fi, Western
 - kept (not its first genre): The Power of the Dog (2021) - Drama, Western
 - kept (not its first genre): Cry Macho (2021) - Drama, Western
 - kept (not its first genre): East of Wall (2025) - Drama, Western
-- kept (not its first genre): Concrete Cowboy (2020) - Drama, Western
 - kept (not its first genre): Pedro Páramo (2024) - Drama, Fantasy, Western
+- kept (not its first genre): Concrete Cowboy (2020) - Drama, Western
 - kept (not its first genre): The Killer (2017) - Action, Western
 - left out: Gold Rush Gang (2025) [movie:1429739] - Action, Comedy, Drama, Western
 
 ## Netflix · Western Series (series) - 6 kept of 7 looked at
-- kept (not its first genre): Little House on the Prairie (2026) - Drama, Western, Family
 - kept (not its first genre): Ransom Canyon (2025) - Drama, Western
+- kept (not its first genre): Little House on the Prairie (2026) - Drama, Western, Family
 - kept (not its first genre): The Abandons (2025) - Drama, Western
 - left out: The Ranch (2016) [tv:65493] - Comedy, Family, Western
 
@@ -862,17 +862,17 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Dune (2021) - Sci-Fi, Adventure
 - kept (not its first genre): Superman (2025) - Sci-Fi, Adventure, Action
 - kept (not its first genre): Barbie (2023) - Comedy, Adventure, Fantasy
-- kept (not its first genre): A Minecraft Movie (2025) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Batman Begins (2005) - Drama, Crime, Action
-- kept (not its first genre): The Cat in the Hat (2003) - Fantasy, Adventure, Family, Comedy
+- kept (not its first genre): A Minecraft Movie (2025) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Mickey 17 (2025) - Sci-Fi, Comedy, Adventure
-- kept (not its first genre): The Hobbit: The Desolation of Smaug (2013) - Fantasy, Adventure, Action
+- kept (not its first genre): The Cat in the Hat (2003) - Fantasy, Adventure, Family, Comedy
 - kept (not its first genre): The Revenant (2015) - Western, Drama, Adventure
+- kept (not its first genre): The Hobbit: The Desolation of Smaug (2013) - Fantasy, Adventure, Action
 - kept (not its first genre): Constantine (2005) - Fantasy, Action, Horror
 - kept (not its first genre): Fantastic Beasts and Where to Find Them (2016) - Fantasy, Adventure
+- kept (not its first genre): Dawn of the Planet of the Apes (2014) - Sci-Fi, Action, Drama, Thriller
 - kept (not its first genre): Kingdom of the Planet of the Apes (2024) - Sci-Fi, Adventure, Action
-- kept (not its first genre): Superman (1978) - Sci-Fi, Action, Adventure
-- kept (not its first genre): Greenland (2020) - Thriller, Action, Sci-Fi
+- kept (not its first genre): Fantastic Beasts: The Secrets of Dumbledore (2022) - Fantasy, Adventure
 - left out: 2001: A Space Odyssey (1968) [movie:62] - Sci-Fi, Mystery, Adventure
 - left out: Sinners (2025) [movie:1233413] - Horror, Action, Thriller
 - left out: Open Water (2004) [movie:83] - Horror, Thriller, Adventure
@@ -885,9 +885,9 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Game of Thrones (2011) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): House of the Dragon (2022) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): Titans (2018) - Drama, Action & Adventure, Sci-Fi & Fantasy
-- kept (not its first genre): Dune: Prophecy (2024) - Sci-Fi & Fantasy, Drama, Action & Adventure
-- kept (not its first genre): A Knight of the Seven Kingdoms (2026) - Drama, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): His Dark Materials (2019) - Sci-Fi & Fantasy, Drama, Action & Adventure
+- kept (not its first genre): A Knight of the Seven Kingdoms (2026) - Drama, Sci-Fi & Fantasy, Action & Adventure
+- kept (not its first genre): Dune: Prophecy (2024) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): DC's Stargirl (2020) - Sci-Fi & Fantasy, Action & Adventure, Drama
 - kept (not its first genre): Walker (2021) - Crime, Drama, Action & Adventure
 - kept (not its first genre): Warrior (2019) - Crime, Drama, Action & Adventure, Western
@@ -904,33 +904,33 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Rise of the Guardians (2012) - Action, Adventure, Animation, Family, Fantasy
 - kept (not its first genre): Isle of Dogs (2018) - Adventure, Comedy, Animation
 - kept (not its first genre): Space Jam (1996) - Family, Sci-Fi, Fantasy, Comedy, Animation
-- kept (not its first genre): ParaNorman (2012) - Family, Animation, Adventure, Comedy
 - kept (not its first genre): Space Jam: A New Legacy (2021) - Family, Comedy, Adventure, Sci-Fi, Animation
+- kept (not its first genre): ParaNorman (2012) - Family, Animation, Adventure, Comedy
 - kept (not its first genre): DC League of Super-Pets (2022) - Family, Comedy, Adventure, Animation, Sci-Fi, Action
-- kept (not its first genre): Smallfoot (2018) - Family, Comedy, Adventure, Animation, Fantasy
 - kept (not its first genre): The Day the Earth Blew Up: A Looney Tunes Movie (2024) - Family, Comedy, Adventure, Animation, Sci-Fi
-- kept (not its first genre): Green Lantern: Emerald Knights (2011) - Action, Adventure, Animation, Sci-Fi
+- kept (not its first genre): Smallfoot (2018) - Family, Comedy, Adventure, Animation, Fantasy
 - kept (not its first genre): Justice League: Throne of Atlantis (2015) - Sci-Fi, Action, Animation, Adventure
-- kept (not its first genre): Justice League vs. Teen Titans (2016) - Sci-Fi, Action, Animation
 - kept (not its first genre): Teen Titans Go! vs. Teen Titans (2019) - Action, Animation, Comedy, Family, Fantasy, Sci-Fi
-- kept (not its first genre): Green Lantern: First Flight (2009) - Action, Adventure, Sci-Fi, Animation
+- kept (not its first genre): Green Lantern: Emerald Knights (2011) - Action, Adventure, Animation, Sci-Fi
+- kept (not its first genre): Justice League vs. Teen Titans (2016) - Sci-Fi, Action, Animation
 - kept (not its first genre): Trick or Treat Scooby-Doo! (2022) - Mystery, Animation, Family
+- kept (not its first genre): Green Lantern: First Flight (2009) - Action, Adventure, Sci-Fi, Animation
 
 ## HBO Max · Animation Series (series) - 71 kept of 71 looked at
 - kept (not its first genre): Robot Chicken (2005) - Comedy, Animation
 - kept (not its first genre): Batman: The Animated Series (1992) - Action & Adventure, Animation, Drama, Mystery
-- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): The Boondocks (2005) - Action & Adventure, Comedy, Animation
+- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Batwheels (2022) - Kids, Animation, Comedy
 - kept (not its first genre): Lazarus (2025) - Sci-Fi & Fantasy, Action & Adventure, Animation
 - kept (not its first genre): Primal (2019) - Action & Adventure, Animation
 - kept (not its first genre): Justice League (2001) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Harvey Birdman, Attorney at Law (2000) - Sci-Fi & Fantasy, Animation, Comedy, Action & Adventure, Crime
 - kept (not its first genre): Gremlins: Secrets of the Mogwai (2023) - Sci-Fi & Fantasy, Comedy, Animation, Family
-- kept (not its first genre): Scavengers Reign (2023) - Sci-Fi & Fantasy, Drama, Animation, Action & Adventure
-- kept (not its first genre): Spawn (1997) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Royal Crackers (2023) - Comedy, Animation
+- kept (not its first genre): Scavengers Reign (2023) - Sci-Fi & Fantasy, Drama, Animation, Action & Adventure
 - kept (not its first genre): Tuca & Bertie (2019) - Comedy, Animation
+- kept (not its first genre): Spawn (1997) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Teenage Euthanasia (2021) - Comedy, Animation
 
 ## HBO Max · Anime Movies (movie) - 49 kept of 49 looked at
@@ -950,17 +950,17 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 
 ## HBO Max · Comedy Movies (movie) - 248 kept of 281 looked at
 - kept (not its first genre): A Minecraft Movie (2025) - Family, Fantasy, Comedy, Adventure
-- kept (not its first genre): The Drama (2026) - Romance, Comedy, Drama
 - kept (not its first genre): Deadpool 2 (2018) - Action, Comedy, Adventure
-- kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
-- kept (not its first genre): The Cat in the Hat (2003) - Fantasy, Adventure, Family, Comedy
+- kept (not its first genre): The Drama (2026) - Romance, Comedy, Drama
 - kept (not its first genre): Mickey 17 (2025) - Sci-Fi, Comedy, Adventure
+- kept (not its first genre): The Cat in the Hat (2003) - Fantasy, Adventure, Family, Comedy
+- kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
 - kept (not its first genre): The Suicide Squad (2021) - Action, Comedy, Adventure
-- kept (not its first genre): Anyone but You (2023) - Romance, Comedy
-- kept (not its first genre): They Will Kill You (2026) - Action, Comedy, Horror
 - kept (not its first genre): Practical Magic (1998) - Romance, Fantasy, Comedy
-- kept (not its first genre): Ocean's Eight (2018) - Crime, Comedy, Action
+- kept (not its first genre): Anyone but You (2023) - Romance, Comedy
 - kept (not its first genre): Shazam! (2019) - Action, Comedy, Fantasy
+- kept (not its first genre): Ocean's Eight (2018) - Crime, Comedy, Action
+- kept (not its first genre): They Will Kill You (2026) - Action, Comedy, Horror
 - kept (not its first genre): Willy Wonka & the Chocolate Factory (1971) - Family, Fantasy, Comedy
 - kept (not its first genre): Paddington 2 (2017) - Adventure, Comedy, Family
 - kept (not its first genre): Police Story (1985) - Action, Crime, Comedy
@@ -1003,8 +1003,8 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Conan O'Brien Must Go (2024) - Documentary, Comedy
 - kept (not its first genre): Perfect Life (2019) - Drama, Comedy
 - kept (not its first genre): The No. 1 Ladies' Detective Agency (2009) - Mystery, Crime, Comedy, Drama
-- kept (not its first genre): Baby Assassins Everyday! (2024) - Action & Adventure, Comedy, Drama
 - kept (not its first genre): Passenger (2024) - Mystery, Comedy, Crime
+- kept (not its first genre): Baby Assassins Everyday! (2024) - Action & Adventure, Comedy, Drama
 - kept (not its first genre): Oh Hell! (2022) - Drama, Comedy
 - left out: Succession (2018) [tv:76331] - Drama, Comedy
 - left out: Ballers (2015) [tv:62704] - Drama, Comedy
@@ -1040,17 +1040,17 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): One Battle After Another (2025) - Thriller, Crime, Comedy
 - kept (not its first genre): The Dark Knight Rises (2012) - Action, Crime, Thriller
 - kept (not its first genre): Batman Begins (2005) - Drama, Crime, Action
-- kept (not its first genre): Ballerina (2025) - Action, Thriller, Crime
 - kept (not its first genre): Ocean's Eleven (2001) - Thriller, Crime
+- kept (not its first genre): Ballerina (2025) - Action, Thriller, Crime
+- kept (not its first genre): Sicario (2015) - Action, Crime, Thriller
 - kept (not its first genre): Fuze (2025) - Action, Crime, Thriller
 - kept (not its first genre): The Usual Suspects (1995) - Drama, Crime, Thriller
-- kept (not its first genre): A Clockwork Orange (1971) - Sci-Fi, Crime
-- kept (not its first genre): Sicario (2015) - Action, Crime, Thriller
-- kept (not its first genre): How to Make a Killing (2026) - Comedy, Thriller, Crime
-- kept (not its first genre): Anatomy of a Fall (2023) - Thriller, Mystery, Crime
 - kept (not its first genre): Normal (2026) - Action, Crime, Thriller
+- kept (not its first genre): A Clockwork Orange (1971) - Sci-Fi, Crime
+- kept (not its first genre): Anatomy of a Fall (2023) - Thriller, Mystery, Crime
+- kept (not its first genre): How to Make a Killing (2026) - Comedy, Thriller, Crime
 - kept (not its first genre): The Equalizer 3 (2023) - Action, Thriller, Crime
-- kept (not its first genre): Murder on the Orient Express (2017) - Mystery, Drama, Crime
+- kept (not its first genre): Taken 2 (2012) - Action, Crime, Thriller
 - left out: Batman (1989) [movie:268] - Fantasy, Action, Crime
 - left out: Catwoman (2004) [movie:314] - Action, Fantasy, Crime
 - left out: Knock Knock (2015) [movie:263472] - Horror, Thriller, Crime
@@ -1069,16 +1069,16 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): All Rise (2019) - Drama, Crime
 - kept (not its first genre): The Penguin (2024) - Drama, Crime
 - kept (not its first genre): The Deuce (2017) - Drama, Crime
-- kept (not its first genre): Vivant (2023) - Drama, Crime
 - kept (not its first genre): Pennyworth: The Origin of Batman's Butler (2019) - Drama, Crime
+- kept (not its first genre): Vivant (2023) - Drama, Crime
 - kept (not its first genre): Perry Mason (2020) - Drama, Mystery, Crime
 - kept (not its first genre): Watchmen (2019) - Drama, Crime, Sci-Fi & Fantasy, Mystery
 - kept (not its first genre): The Outsider (2020) - Drama, Mystery, Crime
 - kept (not its first genre): Mare of Easttown (2021) - Drama, Crime, Mystery
-- kept (not its first genre): Homicide Hunter: Lt Joe Kenda (2011) - Documentary, Crime
 - kept (not its first genre): The Staircase (2022) - Drama, Crime
-- kept (not its first genre): La jauría (2020) - Drama, Crime
 - kept (not its first genre): The Undoing (2020) - Drama, Crime, Mystery
+- kept (not its first genre): Homicide Hunter: Lt Joe Kenda (2011) - Documentary, Crime
+- kept (not its first genre): Jett (2019) - Drama, Crime
 - left out: Barry (2018) [tv:73107] - Comedy, Crime, Drama
 - left out: Bored to Death (2009) [tv:31078] - Comedy, Crime, Mystery, Drama
 - left out: Landscapers (2021) [tv:113987] - Comedy, Crime, Drama
@@ -1093,18 +1093,18 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Joker (2019) - Crime, Thriller, Drama
 - kept (not its first genre): The Death of Robin Hood (2026) - Adventure, Drama, Action
 - kept (not its first genre): Seven Samurai (1954) - Action, Drama
-- kept (not its first genre): “Wuthering Heights” (2026) - Romance, Drama
 - kept (not its first genre): The Revenant (2015) - Western, Drama, Adventure
+- kept (not its first genre): “Wuthering Heights” (2026) - Romance, Drama
 - kept (not its first genre): Dawn of the Planet of the Apes (2014) - Sci-Fi, Action, Drama, Thriller
 - kept (not its first genre): Rise of the Planet of the Apes (2011) - Thriller, Action, Drama, Sci-Fi
 - kept (not its first genre): Life of Pi (2012) - Adventure, Drama
 - kept (not its first genre): Murder on the Orient Express (2017) - Mystery, Drama, Crime
-- kept (not its first genre): Rashomon (1950) - Crime, Drama, Mystery
-- kept (not its first genre): Three Billboards Outside Ebbing, Missouri (2017) - Crime, Drama
 - kept (not its first genre): Les Misérables (2012) - History, Drama
-- kept (not its first genre): Mother Mary (2026) - Music, Thriller, Drama
-- kept (not its first genre): Stalker (1979) - Sci-Fi, Drama
+- kept (not its first genre): Three Billboards Outside Ebbing, Missouri (2017) - Crime, Drama
+- kept (not its first genre): Rashomon (1950) - Crime, Drama, Mystery
 - kept (not its first genre): The Age of Adaline (2015) - Romance, Fantasy, Drama
+- kept (not its first genre): Stalker (1979) - Sci-Fi, Drama
+- kept (not its first genre): Mother Mary (2026) - Music, Thriller, Drama
 - left out: It (2017) [movie:346364] - Horror, Thriller, Drama
 - left out: It Chapter Two (2019) [movie:474350] - Horror, Thriller, Drama
 - left out: Crazy, Stupid, Love. (2011) [movie:50646] - Comedy, Drama, Romance
@@ -1131,9 +1131,9 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: The Shop Around the Corner (1940) [movie:20334] - Comedy, Drama, Romance
 - left out: The Roses (2025) [movie:1267905] - Comedy, Drama, Romance
 
-## HBO Max · Drama Series (series) - 225 kept of 271 looked at
-- kept (not its first genre): Banshee (2013) - Crime, Drama
+## HBO Max · Drama Series (series) - 227 kept of 273 looked at
 - kept (not its first genre): The Wire (2002) - Crime, Drama
+- kept (not its first genre): Banshee (2013) - Crime, Drama
 - kept (not its first genre): Luther (2010) - Crime, Drama, Mystery
 - kept (not its first genre): Game of Thrones (2011) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): The Sopranos (1999) - Crime, Drama
@@ -1144,9 +1144,9 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Oz (1997) - Crime, Drama
 - kept (not its first genre): The Leftovers (2014) - Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Doom Patrol (2019) - Sci-Fi & Fantasy, Drama
-- kept (not its first genre): Dune: Prophecy (2024) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): Deadwood (2004) - Western, Crime, Drama
-- kept (not its first genre): Rome (2005) - Action & Adventure, Drama
+- kept (not its first genre): His Dark Materials (2019) - Sci-Fi & Fantasy, Drama, Action & Adventure
+- kept (not its first genre): Dune: Prophecy (2024) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - left out: Young Sheldon (2017) [tv:71728] - Comedy, Family, Drama
 - left out: True Beauty (2020) [tv:112888] - Comedy, Drama
 - left out: The White Lotus (2021) [tv:111803] - Comedy, Drama, Mystery
@@ -1174,13 +1174,13 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: A Haunting (2005) [tv:4038] - Documentary, Mystery, Drama
 
 ## HBO Max · Family Movies (movie) - 27 kept of 28 looked at
-- kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
 - kept (not its first genre): The Cat in the Hat (2003) - Fantasy, Adventure, Family, Comedy
+- kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
 - kept (not its first genre): The Wizard of Oz (1939) - Adventure, Fantasy, Family
 - kept (not its first genre): Elf (2003) - Comedy, Family, Fantasy
 - kept (not its first genre): Wonka (2023) - Comedy, Family, Fantasy
-- kept (not its first genre): Paddington 2 (2017) - Adventure, Comedy, Family
 - kept (not its first genre): Christmas with the Kranks (2004) - Comedy, Family
+- kept (not its first genre): Paddington 2 (2017) - Adventure, Comedy, Family
 - kept (not its first genre): Nanny McPhee and the Big Bang (2010) - Comedy, Fantasy, Family
 - kept (not its first genre): A Christmas Story (1983) - Comedy, Family
 - kept (not its first genre): Diary of a Wimpy Kid: Dog Days (2012) - Comedy, Family
@@ -1194,12 +1194,12 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 ## HBO Max · Family Series (series) - 18 kept of 20 looked at
 - kept (not its first genre): Young Sheldon (2017) - Comedy, Family, Drama
 - kept (not its first genre): 7 Little Johnstons (2015) - Comedy, Family, Reality
-- kept (not its first genre): Planet Earth II (2016) - Documentary, Family
 - kept (not its first genre): Cake Boss (2009) - Reality, Family
+- kept (not its first genre): Planet Earth II (2016) - Documentary, Family
 - kept (not its first genre): Planet Earth III (2023) - Documentary, Family
 - kept (not its first genre): Dynasties (2018) - Documentary, Family
-- kept (not its first genre): Alaskan Bush People (2014) - Reality, Family
 - kept (not its first genre): Blue Planet II (2017) - Documentary, Family
+- kept (not its first genre): Alaskan Bush People (2014) - Reality, Family
 - kept (not its first genre): Seven Worlds, One Planet (2019) - Documentary, Family
 - kept (not its first genre): Los Espookys (2019) - Comedy, Drama, Family
 - kept (not its first genre): Light of My Lion (2024) - Drama, Family, Mystery
@@ -1220,12 +1220,12 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Harry Potter and the Prisoner of Azkaban (2004) - Adventure, Fantasy
 - kept (not its first genre): Harry Potter and the Chamber of Secrets (2002) - Adventure, Fantasy
 - kept (not its first genre): The Lord of the Rings: The Two Towers (2002) - Adventure, Fantasy, Action
-- kept (not its first genre): Supergirl (2026) - Action, Adventure, Sci-Fi
 - kept (not its first genre): Harry Potter and the Deathly Hallows: Part 2 (2011) - Adventure, Fantasy
-- kept (not its first genre): Harry Potter and the Order of the Phoenix (2007) - Adventure, Fantasy
+- kept (not its first genre): Supergirl (2026) - Action, Adventure, Sci-Fi
 - kept (not its first genre): Harry Potter and the Half-Blood Prince (2009) - Adventure, Fantasy
-- kept (not its first genre): The Hobbit: The Battle of the Five Armies (2014) - Action, Adventure, Fantasy
+- kept (not its first genre): Harry Potter and the Order of the Phoenix (2007) - Adventure, Fantasy
 - kept (not its first genre): Godzilla x Kong: The New Empire (2024) - Action, Adventure, Sci-Fi
+- kept (not its first genre): Greenland 2: Migration (2026) - Adventure, Thriller, Sci-Fi
 - left out: Charlie and the Chocolate Factory (2005) [movie:118] - Adventure, Comedy, Family, Fantasy
 - left out: Rise of the Planet of the Apes (2011) [movie:61791] - Thriller, Action, Drama, Sci-Fi
 - left out: The Red Balloon (1956) [movie:15265] - Comedy, Drama, Family, Fantasy
@@ -1234,12 +1234,12 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 
 ## HBO Max · Sci-Fi & Fantasy Series (series) - 40 kept of 40 looked at
 - kept (not its first genre): The Vampire Diaries (2009) - Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Lanterns (2026) - Drama, Mystery, Sci-Fi & Fantasy
-- kept (not its first genre): Superman & Lois (2021) - Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Titans (2018) - Drama, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Superman & Lois (2021) - Drama, Sci-Fi & Fantasy
+- kept (not its first genre): Lanterns (2026) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Peacemaker (2022) - Action & Adventure, Sci-Fi & Fantasy, Comedy
-- kept (not its first genre): A Knight of the Seven Kingdoms (2026) - Drama, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Orphan Black (2013) - Drama, Sci-Fi & Fantasy
+- kept (not its first genre): A Knight of the Seven Kingdoms (2026) - Drama, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Stuart Fails to Save the Universe (2026) - Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Nancy Drew (2019) - Mystery, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Watchmen (2019) - Drama, Crime, Sci-Fi & Fantasy, Mystery
@@ -1255,15 +1255,15 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Gone with the Wind (1939) - Drama, War, Romance
 - kept (not its first genre): Robin Hood (2010) - Action, Adventure, History
 - kept (not its first genre): Taking Chance (2009) - Drama, War, TV Movie
-- kept (not its first genre): The Last Emperor (1987) - Drama, History
 - kept (not its first genre): The Smashing Machine (2025) - Drama, History, Action
+- kept (not its first genre): The Last Emperor (1987) - Drama, History
 - kept (not its first genre): The Post (2017) - Drama, History
+- kept (not its first genre): The Battle of Algiers (1966) - Drama, War, History
 - kept (not its first genre): Born on the Fourth of July (1989) - Drama, War
 - kept (not its first genre): Throne of Blood (1957) - Drama, History
-- kept (not its first genre): Night and Fog (1956) - Documentary, History
-- kept (not its first genre): The Battle of Algiers (1966) - Drama, War, History
-- kept (not its first genre): Band of Brothers: Legacy (2026) - Documentary, War
 - kept (not its first genre): The Man Who Invented Christmas (2017) - Drama, History, Comedy, Family
+- kept (not its first genre): Night and Fog (1956) - Documentary, History
+- kept (not its first genre): Band of Brothers: Legacy (2026) - Documentary, War
 - kept (not its first genre): The Tin Drum (1979) - Drama, History, War
 - left out: War for the Planet of the Apes (2017) [movie:281338] - Drama, Sci-Fi, War
 - left out: The Great Dictator (1940) [movie:914] - Comedy, War
@@ -1306,18 +1306,18 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Shin Godzilla (2016) - Action, Sci-Fi, Horror
 - kept (not its first genre): Constantine (2005) - Fantasy, Action, Horror
 - kept (not its first genre): Scream (1996) - Crime, Horror, Mystery
-- kept (not its first genre): Gremlins (1984) - Fantasy, Horror, Comedy
 - kept (not its first genre): The Meg (2018) - Action, Sci-Fi, Horror
-- kept (not its first genre): The Bride! (2026) - Sci-Fi, Horror, Fantasy
+- kept (not its first genre): Gremlins (1984) - Fantasy, Horror, Comedy
 - kept (not its first genre): Meg 2: The Trench (2023) - Action, Sci-Fi, Horror
 - kept (not its first genre): The Long Walk (2025) - Sci-Fi, Thriller, Horror
-- kept (not its first genre): Godzilla (1954) - Thriller, Horror, Sci-Fi
+- kept (not its first genre): The Bride! (2026) - Sci-Fi, Horror, Fantasy
 - kept (not its first genre): Trap (2024) - Thriller, Crime, Horror
+- kept (not its first genre): Godzilla (1954) - Thriller, Horror, Sci-Fi
 - kept (not its first genre): Twin Peaks: Fire Walk with Me (1992) - Drama, Mystery, Horror
 - kept (not its first genre): The Watchers (2024) - Fantasy, Horror, Mystery
 - kept (not its first genre): The First Purge (2018) - Action, Horror, Thriller
-- kept (not its first genre): Dust Bunny (2025) - Fantasy, Horror
-- kept (not its first genre): Godzilla vs. Biollante (1989) - Action, Horror, Sci-Fi
+- kept (not its first genre): Godzilla Raids Again (1955) - Sci-Fi, Horror, Action
+- kept (not its first genre): Funny Games (1997) - Drama, Horror, Thriller
 - left out: Zombieland (2009) [movie:19908] - Comedy, Horror
 - left out: Happy Death Day (2017) [movie:440021] - Comedy, Horror, Mystery
 - left out: Beetlejuice Beetlejuice (2024) [movie:917496] - Comedy, Fantasy, Horror
@@ -1336,20 +1336,20 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 
 ## HBO Max · Mystery & Thriller Movies (movie) - 186 kept of 210 looked at
 - kept (not its first genre): The End of Oak Street (2026) - Sci-Fi, Mystery, Thriller
-- kept (not its first genre): The Dark Knight (2008) - Action, Thriller, Crime
 - kept (not its first genre): Backrooms (2026) - Horror, Mystery, Sci-Fi
+- kept (not its first genre): The Dark Knight (2008) - Action, Thriller, Crime
 - kept (not its first genre): The Batman (2022) - Crime, Mystery, Thriller
 - kept (not its first genre): Joker (2019) - Crime, Thriller, Drama
 - kept (not its first genre): Weapons (2025) - Horror, Mystery
-- kept (not its first genre): Sinners (2025) - Horror, Action, Thriller
 - kept (not its first genre): Greenland 2: Migration (2026) - Adventure, Thriller, Sci-Fi
+- kept (not its first genre): Sinners (2025) - Horror, Action, Thriller
 - kept (not its first genre): The Dark Knight Rises (2012) - Action, Crime, Thriller
 - kept (not its first genre): 2001: A Space Odyssey (1968) - Sci-Fi, Mystery, Adventure
 - kept (not its first genre): The Conjuring (2013) - Horror, Thriller
 - kept (not its first genre): Lee Cronin's The Mummy (2026) - Horror, Mystery
 - kept (not its first genre): Final Destination Bloodlines (2025) - Horror, Mystery
 - kept (not its first genre): Ballerina (2025) - Action, Thriller, Crime
-- kept (not its first genre): Fuze (2025) - Action, Crime, Thriller
+- kept (not its first genre): Sicario (2015) - Action, Crime, Thriller
 - left out: Sherlock Holmes: A Game of Shadows (2011) [movie:58574] - Action, Adventure, Mystery
 - left out: Happy Death Day (2017) [movie:440021] - Comedy, Horror, Mystery
 - left out: Saltburn (2023) [movie:930564] - Drama, Comedy, Thriller
@@ -1374,22 +1374,22 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: The Iceman Tapes: Conversations with a Killer (1992) [movie:118424] - Documentary, Crime, Thriller, Horror
 - left out: Two Monks (1934) [movie:170296] - Drama, Romance, Mystery
 
-## HBO Max · Mystery & Thriller Series (series) - 60 kept of 65 looked at
+## HBO Max · Mystery & Thriller Series (series) - 61 kept of 66 looked at
 - kept (not its first genre): Luther (2010) - Crime, Drama, Mystery
-- kept (not its first genre): The White Lotus (2021) - Comedy, Drama, Mystery
 - kept (not its first genre): Pretty Little Liars (2010) - Drama, Mystery
+- kept (not its first genre): Yellowjackets (2021) - Drama, Mystery
+- kept (not its first genre): The White Lotus (2021) - Comedy, Drama, Mystery
 - kept (not its first genre): The Thaw (2022) - Drama, Crime, Mystery
-- kept (not its first genre): True Detective (2014) - Drama, Mystery
 - kept (not its first genre): True Blood (2008) - Sci-Fi & Fantasy, Drama, Mystery
+- kept (not its first genre): True Detective (2014) - Drama, Mystery
 - kept (not its first genre): IT: Welcome to Derry (2025) - Drama, Mystery
 - kept (not its first genre): Lanterns (2026) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Strike (2017) - Crime, Drama, Mystery
 - kept (not its first genre): The Flight Attendant (2020) - Drama, Mystery, Comedy
 - kept (not its first genre): Perry Mason (2020) - Drama, Mystery, Crime
+- kept (not its first genre): Sharp Objects (2018) - Crime, Drama, Mystery
 - kept (not its first genre): Carnivàle (2003) - Sci-Fi & Fantasy, Mystery, Drama
 - kept (not its first genre): Watchmen (2019) - Drama, Crime, Sci-Fi & Fantasy, Mystery
-- kept (not its first genre): Sharp Objects (2018) - Crime, Drama, Mystery
-- kept (not its first genre): The Night Of (2016) - Crime, Drama, Mystery
 - left out: The Eastern Gate (2025) [tv:253370] - War & Politics, Action & Adventure, Mystery
 - left out: Murder on Middle Beach (2020) [tv:112111] - Documentary, Crime, Mystery
 - left out: Light of My Lion (2024) [tv:271336] - Drama, Family, Mystery
@@ -1399,19 +1399,19 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 ## HBO Max · Romance Movies (movie) - 138 kept of 159 looked at
 - kept (not its first genre): The Invite (2026) - Comedy, Drama, Romance
 - kept (not its first genre): In the Mood for Love (2000) - Drama, Romance
-- kept (not its first genre): Portrait of a Lady on Fire (2019) - Drama, Romance
 - kept (not its first genre): Chungking Express (1994) - Drama, Comedy, Romance
+- kept (not its first genre): Portrait of a Lady on Fire (2019) - Drama, Romance
 - kept (not its first genre): The Piano Teacher (2001) - Drama, Romance
 - kept (not its first genre): Casablanca (1943) - Drama, Romance
-- kept (not its first genre): Little Fockers (2010) - Comedy, Romance
 - kept (not its first genre): Crazy, Stupid, Love. (2011) - Comedy, Drama, Romance
+- kept (not its first genre): Little Fockers (2010) - Comedy, Romance
 - kept (not its first genre): The Shape of Water (2017) - Drama, Fantasy, Romance
 - kept (not its first genre): Fallen Angels (1995) - Action, Romance, Crime
-- kept (not its first genre): Modern Times (1936) - Comedy, Drama, Romance
-- kept (not its first genre): Romeo + Juliet (1996) - Drama, Romance
 - kept (not its first genre): Singin' in the Rain (1952) - Comedy, Romance
+- kept (not its first genre): Modern Times (1936) - Comedy, Drama, Romance
 - kept (not its first genre): Crazy Rich Asians (2018) - Comedy, Romance
-- kept (not its first genre): The Lobster (2015) - Comedy, Drama, Romance
+- kept (not its first genre): Romeo + Juliet (1996) - Drama, Romance
+- kept (not its first genre): Jerry Maguire (1996) - Comedy, Drama, Romance
 - left out: Gone with the Wind (1939) [movie:770] - Drama, War, Romance
 - left out: Breathless (1960) [movie:269] - Drama, Crime, Romance
 - left out: Three Colors: Red (1994) [movie:110] - Drama, Mystery, Romance
@@ -1435,37 +1435,37 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - left out: Young Bess (1953) [movie:44711] - Drama, History, Romance
 
 ## HBO Max · Documentary Movies (movie) - 198 kept of 199 looked at
-- kept (not its first genre): The Weeknd: Live at SoFi Stadium (2023) - Music, Documentary
 - kept (not its first genre): The Bee Gees: How Can You Mend a Broken Heart (2020) - Music, Documentary
+- kept (not its first genre): The Weeknd: Live at SoFi Stadium (2023) - Music, Documentary
 - kept (not its first genre): David Bowie: The Last Five Years (2017) - Music, Documentary, TV Movie
-- kept (not its first genre): David Byrne's American Utopia (2020) - Music, Documentary
-- kept (not its first genre): Once Were Brothers: Robbie Robertson and the Band (2020) - History, Music, Documentary
 - kept (not its first genre): Mommy Dead and Dearest (2017) - Crime, Documentary
+- kept (not its first genre): David Byrne's American Utopia (2020) - Music, Documentary
 - kept (not its first genre): Mike Tyson: Undisputed Truth (2013) - Comedy, Drama, Documentary, TV Movie
+- kept (not its first genre): Once Were Brothers: Robbie Robertson and the Band (2020) - History, Music, Documentary
+- kept (not its first genre): Jagged (2021) - Music, Documentary
 - kept (not its first genre): Jackass Shark Week (2021) - Comedy, Action, Documentary, TV Movie
 - kept (not its first genre): December 7th (1943) - History, War, Action, Documentary
-- kept (not its first genre): Jagged (2021) - Music, Documentary
 - kept (not its first genre): Martin Lawrence: You So Crazy (1994) - Comedy, Documentary
 - kept (not its first genre): Michelle Wolf: Nice Lady (2017) - Comedy, Documentary
-- kept (not its first genre): Saving Face (2012) - Crime, Documentary
 - kept (not its first genre): Ferrell Takes the Field (2015) - TV Movie, Comedy, Documentary
+- kept (not its first genre): Saving Face (2012) - Crime, Documentary
 - kept (not its first genre): Jerrod Carmichael: Rothaniel (2022) - Comedy, Documentary, TV Movie
 
 ## HBO Max · Docuseries (series) - 218 kept of 218 looked at
 - kept (not its first genre): On the Case with Paula Zahn (2009) - Crime, Documentary
 - kept (not its first genre): Wheeler Dealers (2003) - Reality, Documentary
-- kept (not its first genre): Nathan for You (2013) - Comedy, Documentary
 - kept (not its first genre): Man vs. Wild (2006) - Action & Adventure, Documentary
 - kept (not its first genre): Salvage Hunters (2011) - Reality, Documentary
+- kept (not its first genre): Nathan for You (2013) - Comedy, Documentary
 - kept (not its first genre): Evil Lives Here (2016) - Crime, Documentary
 - kept (not its first genre): Good Eats (1999) - Comedy, Documentary
 - kept (not its first genre): The Rehearsal (2022) - Comedy, Documentary
-- kept (not its first genre): Fear Thy Neighbor (2014) - Crime, Documentary
 - kept (not its first genre): Web of Lies (2014) - Crime, Documentary
+- kept (not its first genre): Fear Thy Neighbor (2014) - Crime, Documentary
 - kept (not its first genre): See No Evil (2015) - Crime, Documentary
+- kept (not its first genre): American Monster (2016) - Crime, Documentary
 - kept (not its first genre): People Magazine Investigates (2016) - Crime, Documentary
 - kept (not its first genre): How To with John Wilson (2020) - Comedy, Documentary
-- kept (not its first genre): American Monster (2016) - Crime, Documentary
 - kept (not its first genre): The Murder Tapes (2019) - Crime, Documentary
 
 ## HBO Max · Nature Docuseries (series) - 21 kept of 21 looked at
@@ -1475,12 +1475,12 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Expedition Unknown (2015) - Documentary, Reality, Action & Adventure
 - kept (not its first genre): Untold Stories of the ER (2004) - Action & Adventure, Drama, Reality
 - kept (not its first genre): Bering Sea Gold (2012) - Documentary, Reality
-- kept (not its first genre): Holiday Baking Championship (2014) - Family, Reality
 - kept (not its first genre): Hard Knocks (2001) - Documentary, Reality
-- kept (not its first genre): 7 Little Johnstons (2015) - Comedy, Family, Reality
+- kept (not its first genre): Holiday Baking Championship (2014) - Family, Reality
 - kept (not its first genre): Overhaulin' (2004) - Documentary, Reality
-- kept (not its first genre): Paranormal Caught on Camera (2019) - Documentary, Reality
+- kept (not its first genre): 7 Little Johnstons (2015) - Comedy, Family, Reality
 - kept (not its first genre): Pit Bulls and Parolees (2009) - Documentary, Reality, Drama
+- kept (not its first genre): Paranormal Caught on Camera (2019) - Documentary, Reality
 - kept (not its first genre): Halloween Baking Championship (2015) - Family, Reality
 - kept (not its first genre): Expedition X (2020) - Mystery, Reality
 - kept (not its first genre): River Monsters (2009) - Documentary, Action & Adventure, Reality
@@ -1498,28 +1498,28 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 
 ## Apple TV+ · Action & Adventure Movies (movie) - 19 kept of 19 looked at
 - kept (not its first genre): Tenzing (2026) - Drama, History, Adventure
-- kept (not its first genre): The Nice Guys (2016) - Comedy, Crime, Action
 - kept (not its first genre): Minority Report (2002) - Sci-Fi, Action, Thriller
+- kept (not its first genre): The Nice Guys (2016) - Comedy, Crime, Action
 - kept (not its first genre): Greyhound (2020) - War, Action, Drama
 - kept (not its first genre): Finch (2021) - Sci-Fi, Drama, Adventure
 
 ## Apple TV+ · Action & Adventure Series (series) - 12 kept of 13 looked at
 - kept (not its first genre): See (2019) - Drama, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Monarch: Legacy of Monsters (2023) - Sci-Fi & Fantasy, Drama, Action & Adventure
-- kept (not its first genre): Time Bandits (2024) - Sci-Fi & Fantasy, Action & Adventure, Comedy
 - kept (not its first genre): The Mosquito Coast (2021) - Drama, Action & Adventure
+- kept (not its first genre): Time Bandits (2024) - Sci-Fi & Fantasy, Action & Adventure, Comedy
 - kept (not its first genre): Shantaram (2022) - Crime, Drama, Action & Adventure
 - kept (not its first genre): Amazing Stories (2020) - Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Prime Target (2025) - Drama, Action & Adventure
-- kept (not its first genre): The Completely Made-Up Adventures of Dick Turpin (2024) - Comedy, Action & Adventure
 - kept (not its first genre): Echo 3 (2022) - Drama, Action & Adventure
+- kept (not its first genre): The Completely Made-Up Adventures of Dick Turpin (2024) - Comedy, Action & Adventure
 - kept (not its first genre): Liaison (2023) - Drama, Action & Adventure
 - kept (not its first genre): The Wild Ones (2025) - Documentary, Action & Adventure
 - left out: Ghostwriter (2019) [tv:93520] - Kids, Sci-Fi & Fantasy, Action & Adventure
 
 ## Apple TV+ · Animation Movies (movie) - 27 kept of 27 looked at
-- kept (not its first genre): Who Are You, Charlie Brown? (2021) - Documentary, Animation
 - kept (not its first genre): Snoopy Presents: Lucy's School (2022) - Family, Animation, Comedy
+- kept (not its first genre): Who Are You, Charlie Brown? (2021) - Documentary, Animation
 - kept (not its first genre): A Charlie Brown Valentine (2002) - Family, Animation, Romance, TV Movie, Comedy
 - kept (not its first genre): It's the Easter Beagle, Charlie Brown (1974) - Family, Animation, TV Movie, Comedy
 - kept (not its first genre): Happy New Year, Charlie Brown (1986) - Family, Animation, Comedy, TV Movie
@@ -1527,8 +1527,8 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 ## Apple TV+ · Animation Series (series) - 19 kept of 19 looked at
 - kept (not its first genre): Yo Gabba Gabba! (2007) - Family, Animation, Kids
 - kept (not its first genre): Shape Island (2023) - Kids, Family, Animation
-- kept (not its first genre): The Sisters Grimm (2025) - Action & Adventure, Sci-Fi & Fantasy, Animation
 - kept (not its first genre): Frog and Toad (2023) - Kids, Animation, Family
+- kept (not its first genre): The Sisters Grimm (2025) - Action & Adventure, Sci-Fi & Fantasy, Animation
 - kept (not its first genre): Fraggle Rock: Back to the Rock (2022) - Kids, Animation, Comedy
 - kept (not its first genre): Stillwater (2020) - Kids, Animation
 - kept (not its first genre): Wolfboy and the Everything Factory (2021) - Kids, Animation
@@ -1539,14 +1539,14 @@ The best-known titles each rail leaves out (by vote count). To keep one, add its
 - kept (not its first genre): Mayday (2026) - Action, Comedy
 - kept (not its first genre): The Family Plan (2023) - Action, Comedy, Adventure
 - kept (not its first genre): Bad Boys (1995) - Action, Comedy, Crime
-- kept (not its first genre): Eternity (2025) - Romance, Comedy, Drama
 - kept (not its first genre): The Family Plan 2 (2025) - Action, Comedy
+- kept (not its first genre): Eternity (2025) - Romance, Comedy, Drama
 - kept (not its first genre): Argylle (2024) - Action, Adventure, Comedy
-- kept (not its first genre): Big (1988) - Fantasy, Drama, Comedy
 - kept (not its first genre): Ghosted (2023) - Action, Comedy, Romance
+- kept (not its first genre): Big (1988) - Fantasy, Drama, Comedy
 - kept (not its first genre): Wolfs (2024) - Crime, Comedy
-- kept (not its first genre): Get Smart (2008) - Action, Comedy, Thriller
 - kept (not its first genre): Fly Me to the Moon (2024) - Romance, Comedy
+- kept (not its first genre): Get Smart (2008) - Action, Comedy, Thriller
 - kept (not its first genre): The Instigators (2024) - Crime, Comedy
 - kept (not its first genre): Flora and Son (2023) - Music, Comedy, Drama
 - left out: Pulp Fiction (1994) [movie:680] - Thriller, Crime, Comedy
@@ -1593,10 +1593,10 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Smoke (2025) - Drama, Crime
 - kept (not its first genre): The Last Frontier (2025) - Drama, Crime
 - kept (not its first genre): Bad Sisters (2022) - Drama, Crime
-- kept (not its first genre): The Crowded Room (2023) - Drama, Crime, Mystery
 - kept (not its first genre): Defending Jacob (2020) - Drama, Mystery, Crime
-- kept (not its first genre): Imperfect Women (2026) - Drama, Mystery, Crime
+- kept (not its first genre): The Crowded Room (2023) - Drama, Crime, Mystery
 - kept (not its first genre): Manhunt (2024) - Drama, Crime
+- kept (not its first genre): Imperfect Women (2026) - Drama, Mystery, Crime
 - kept (not its first genre): Shining Girls (2022) - Drama, Mystery, Crime
 - kept (not its first genre): Down Cemetery Road (2025) - Drama, Mystery, Crime
 - kept (not its first genre): Lady in the Lake (2024) - Drama, Crime
@@ -1609,16 +1609,16 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): F1 (2025) - Action, Drama
 - kept (not its first genre): Killers of the Flower Moon (2023) - Crime, History, Drama
 - kept (not its first genre): Napoleon (2023) - History, War, Drama
-- kept (not its first genre): Big (1988) - Fantasy, Drama, Comedy
 - kept (not its first genre): Greyhound (2020) - War, Action, Drama
+- kept (not its first genre): Big (1988) - Fantasy, Drama, Comedy
 - kept (not its first genre): Master and Commander: The Far Side of the World (2003) - Adventure, Drama, War
 - kept (not its first genre): Finch (2021) - Sci-Fi, Drama, Adventure
-- kept (not its first genre): Highest 2 Lowest (2025) - Crime, Drama
 - kept (not its first genre): Body of Lies (2008) - Action, Drama, Thriller
 - kept (not its first genre): Tetris (2023) - Thriller, History, Drama
+- kept (not its first genre): Highest 2 Lowest (2025) - Crime, Drama
 - kept (not its first genre): Julie & Julia (2009) - Romance, Drama
-- kept (not its first genre): Propeller One-Way Night Coach (2026) - Adventure, Drama, Family
 - kept (not its first genre): Fingernails (2023) - Romance, Sci-Fi, Drama
+- kept (not its first genre): Propeller One-Way Night Coach (2026) - Adventure, Drama, Family
 - kept (not its first genre): Echo Valley (2025) - Thriller, Drama
 - left out: Forrest Gump (1994) [movie:13] - Comedy, Drama, Romance
 - left out: Eternity (2025) [movie:1259102] - Romance, Comedy, Drama
@@ -1639,12 +1639,12 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Monarch: Legacy of Monsters (2023) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): Invasion (2021) - Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Cape Fear (2026) - Crime, Drama
-- kept (not its first genre): Criminal Record (2024) - Crime, Drama
 - kept (not its first genre): The Last Thing He Told Me (2023) - Mystery, Drama
+- kept (not its first genre): Criminal Record (2024) - Crime, Drama
 - kept (not its first genre): Last Seen (2026) - Crime, Drama, Mystery
-- kept (not its first genre): Dope Thief (2025) - Crime, Drama
 - kept (not its first genre): Constellation (2024) - Sci-Fi & Fantasy, Mystery, Drama
-- kept (not its first genre): Shantaram (2022) - Crime, Drama, Action & Adventure
+- kept (not its first genre): Dope Thief (2025) - Crime, Drama
+- kept (not its first genre): Sunny (2024) - Mystery, Drama, Comedy
 - left out: Dickinson (2019) [tv:89901] - Comedy, Drama
 - left out: Murderbot (2025) [tv:241554] - Comedy, Drama, Sci-Fi & Fantasy
 - left out: The Studio (2025) [tv:247767] - Comedy, Drama
@@ -1679,8 +1679,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Extrapolations (2023) - Drama, Sci-Fi & Fantasy
 - kept (not its first genre): The Big Door Prize (2023) - Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Lisey's Story (2021) - Mystery, Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Calls (2021) - Mystery, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): The Changeling (2023) - Mystery, Drama, Sci-Fi & Fantasy
+- kept (not its first genre): Calls (2021) - Mystery, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Ghostwriter (2019) - Kids, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Circuit Breakers (2022) - Family, Sci-Fi & Fantasy
 - kept (not its first genre): Me (2024) - Family, Sci-Fi & Fantasy
@@ -1726,18 +1726,18 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Presumed Innocent (2024) - Drama, Mystery
 - kept (not its first genre): Small Prophets (2026) - Comedy, Drama, Mystery
 - kept (not its first genre): Disclaimer (2024) - Drama, Mystery
-- kept (not its first genre): Last Seen (2026) - Crime, Drama, Mystery
 - kept (not its first genre): Surface (2022) - Drama, Mystery
-- kept (not its first genre): The Crowded Room (2023) - Drama, Crime, Mystery
-- kept (not its first genre): Defending Jacob (2020) - Drama, Mystery, Crime
+- kept (not its first genre): Before (2024) - Drama, Mystery
+- kept (not its first genre): Last Seen (2026) - Crime, Drama, Mystery
 - kept (not its first genre): Constellation (2024) - Sci-Fi & Fantasy, Mystery, Drama
+- kept (not its first genre): Defending Jacob (2020) - Drama, Mystery, Crime
 
 ## Apple TV+ · Romance Movies (movie) - 13 kept of 14 looked at
 - kept (not its first genre): Forrest Gump (1994) - Comedy, Drama, Romance
 - kept (not its first genre): CODA (2021) - Drama, Music, Romance
 - kept (not its first genre): Clueless (1995) - Comedy, Romance
-- kept (not its first genre): Definitely, Maybe (2008) - Comedy, Romance
 - kept (not its first genre): Eat Pray Love (2010) - Drama, Romance
+- kept (not its first genre): Definitely, Maybe (2008) - Comedy, Romance
 - kept (not its first genre): Cha Cha Real Smooth (2022) - Comedy, Drama, Romance
 - kept (not its first genre): The Sky Is Everywhere (2022) - Drama, Romance, Music
 - left out: Ghosted (2023) [movie:868759] - Action, Comedy, Romance
@@ -1760,18 +1760,17 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Superman (2025) - Sci-Fi, Adventure, Action
 - kept (not its first genre): Heat (1995) - Crime, Drama, Action
 - kept (not its first genre): The Runner (2026) - Thriller, Action
-- kept (not its first genre): Guy Ritchie's The Covenant (2023) - War, Action, Thriller
 - kept (not its first genre): Apocalypse Z: The Beginning of the End (2024) - Drama, Action, Horror
-- kept (not its first genre): Immortals (2011) - Fantasy, Action, Drama
-- kept (not its first genre): Minority Report (2002) - Sci-Fi, Action, Thriller
-- kept (not its first genre): Battle Royale (2000) - Drama, Thriller, Action
+- kept (not its first genre): Guy Ritchie's The Covenant (2023) - War, Action, Thriller
 - kept (not its first genre): The Naked Gun (2025) - Comedy, Crime, Action
+- kept (not its first genre): Battle Royale (2000) - Drama, Thriller, Action
+- kept (not its first genre): Minority Report (2002) - Sci-Fi, Action, Thriller
+- kept (not its first genre): Immortals (2011) - Fantasy, Action, Drama
 - kept (not its first genre): Baywatch (2017) - Comedy, Action, Crime
 - kept (not its first genre): Jingle All the Way (1996) - Family, Adventure, Comedy
-- kept (not its first genre): Infinite (2021) - Sci-Fi, Action, Adventure
 - kept (not its first genre): Creed II (2018) - Drama, Action
 - kept (not its first genre): Lone Survivor (2013) - War, Action, Drama
-- left out: Underwater (2020) [movie:443791] - Horror, Sci-Fi, Action, Adventure
+- kept (not its first genre): Infinite (2021) - Sci-Fi, Action, Adventure
 - left out: Midway (2019) [movie:522162] - War, History, Action
 - left out: Peninsula (2020) [movie:581392] - Horror, Action, Thriller, Adventure
 - left out: The Pink Panther (2006) [movie:12096] - Comedy, Mystery, Crime, Adventure, Family
@@ -1787,24 +1786,23 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Chernobyl: Abyss (2021) [movie:589761] - Drama, History, Action
 - left out: A Sound of Thunder (2005) [movie:10077] - Thriller, Sci-Fi, Adventure
 - left out: Kraken (2026) [movie:1110034] - Horror, Action, Thriller
-- left out: Battle of Britain (1969) [movie:11463] - War, History, Action, Drama
 - left out: The Eight Hundred (2020) [movie:508935] - War, History, Drama, Action
-- left out: The Taking of Tiger Mountain (2014) [movie:294992] - Thriller, War, Adventure
 - left out: The Great Battle (2018) [movie:535389] - War, History, Action
 - left out: Forgive Us All (2025) [movie:1443894] - Horror, Western, Thriller, Action
+- left out: Gator Lake (2024) [movie:1381216] - Horror, Comedy, Adventure
 
 ## Prime Video · Action & Adventure Series (series) - 244 kept of 258 looked at
 - kept (not its first genre): S.W.A.T. (2017) - Crime, Action & Adventure, Drama
-- kept (not its first genre): Stargate SG-1 (1997) - Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): JAG (1995) - Drama, Action & Adventure, Crime
 - kept (not its first genre): Arrow (2012) - Crime, Drama, Action & Adventure
+- kept (not its first genre): Stargate SG-1 (1997) - Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): The Boys (2019) - Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Jason and the Argonauts (2000) - Family, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Stargate Atlantis (2004) - Sci-Fi & Fantasy, Action & Adventure, Drama
 - kept (not its first genre): The Shield (2002) - Crime, Drama, Action & Adventure
 - kept (not its first genre): Spooks (2002) - Drama, Action & Adventure, Crime
-- kept (not its first genre): Farscape (1999) - Sci-Fi & Fantasy, Action & Adventure, Drama
 - kept (not its first genre): Highlander: The Series (1992) - Sci-Fi & Fantasy, Drama, Action & Adventure
+- kept (not its first genre): Farscape (1999) - Sci-Fi & Fantasy, Action & Adventure, Drama
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
 - kept (not its first genre): Earth: Final Conflict (1997) - Sci-Fi & Fantasy, Drama, Action & Adventure, Mystery
 - kept (not its first genre): Route 66 (1960) - Drama, Crime, Action & Adventure, Mystery
@@ -1829,49 +1827,49 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Migration (2023) - Family, Comedy, Adventure, Animation
 - kept (not its first genre): The Addams Family (2019) - Family, Animation, Comedy, Fantasy
 - kept (not its first genre): Shaun the Sheep Movie (2015) - Family, Animation, Comedy, Adventure
-- kept (not its first genre): TMNT (2007) - Adventure, Animation, Comedy, Family
-- kept (not its first genre): All Dogs Go to Heaven (1989) - Drama, Animation, Family, Comedy, Fantasy
 - kept (not its first genre): My Little Pony: The Movie (2017) - Family, Animation, Adventure, Fantasy
+- kept (not its first genre): All Dogs Go to Heaven (1989) - Drama, Animation, Family, Comedy, Fantasy
+- kept (not its first genre): TMNT (2007) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): The Wild (2006) - Action, Adventure, Animation, Comedy, Family
-- kept (not its first genre): Osmosis Jones (2001) - Action, Adventure, Animation, Comedy, Family, Sci-Fi
-- kept (not its first genre): PAW Patrol: Mighty Pups (2018) - Adventure, Animation, Family, Action
 - kept (not its first genre): Barbie: A Fashion Fairytale (2010) - Family, Animation
+- kept (not its first genre): Osmosis Jones (2001) - Action, Adventure, Animation, Comedy, Family, Sci-Fi
 - kept (not its first genre): The Son of Bigfoot (2017) - Family, Animation, Comedy, Adventure, Sci-Fi
 - kept (not its first genre): The Last Unicorn (1982) - Fantasy, Animation, Family, Adventure
-- kept (not its first genre): Maya the Bee Movie (2014) - Family, Animation
+- kept (not its first genre): PAW Patrol: Mighty Pups (2018) - Adventure, Animation, Family, Action
+- kept (not its first genre): The House of Magic (2013) - Family, Fantasy, Animation, Adventure
 
 ## Prime Video · Animation Series (series) - 146 kept of 146 looked at
 - kept (not its first genre): Batman: The Animated Series (1992) - Action & Adventure, Animation, Drama, Mystery
 - kept (not its first genre): Mr. Bean: The Animated Series (2002) - Kids, Animation, Comedy, Family
 - kept (not its first genre): Kid vs. Kat (2008) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family, Kids
 - kept (not its first genre): Shaun the Sheep (2007) - Kids, Animation, Family, Comedy
-- kept (not its first genre): He-Man and the Masters of the Universe (1983) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Transformers: Prime (2010) - Action & Adventure, Animation, Kids
+- kept (not its first genre): He-Man and the Masters of the Universe (1983) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): The Care Bears (1985) - Kids, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Numberblocks (2017) - Kids, Animation, Family
-- kept (not its first genre): Rolie Polie Olie (1998) - Kids, Animation, Sci-Fi & Fantasy
-- kept (not its first genre): She-Ra: Princess of Power (1985) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Over the Garden Wall (2014) - Mystery, Sci-Fi & Fantasy, Animation, Family, Comedy
-- kept (not its first genre): Transformers: Robots In Disguise (2015) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Thunderbirds (1965) - Family, Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): Rolie Polie Olie (1998) - Kids, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Slugterra (2012) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family
+- kept (not its first genre): She-Ra: Princess of Power (1985) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
+- kept (not its first genre): Transformers: Robots In Disguise (2015) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Thunderbirds Are Go! (2015) - Family, Action & Adventure, Animation, Sci-Fi & Fantasy
 
 ## Prime Video · Anime Movies (movie) - 44 kept of 44 looked at
 - kept (not its first genre): Memories (1995) - Fantasy, Animation, Sci-Fi
 - kept (not its first genre): Yu-Gi-Oh!: The Dark Side of Dimensions (2016) - Adventure, Animation, Action, Fantasy
-- kept (not its first genre): Little Nemo: Adventures in Slumberland (1989) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): Ghost in the Shell: The New Movie (2015) - Sci-Fi, Animation
-- kept (not its first genre): Appleseed (1988) - Crime, Animation, Sci-Fi
+- kept (not its first genre): Little Nemo: Adventures in Slumberland (1989) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): Demon City Shinjuku (1988) - Action, Fantasy, Animation, Horror
 - kept (not its first genre): Hans Christian Andersen's The Little Mermaid (1975) - Family, Fantasy, Animation, Drama, Romance
-- kept (not its first genre): Digimon Adventure tri. Part 3: Confession (2016) - Adventure, Action, Animation, Family, Fantasy, Sci-Fi
-- kept (not its first genre): Kimagure Orange Road: I Want to Return to That Day (1988) - Romance, Animation, Drama, Comedy
 - kept (not its first genre): Digimon Adventure tri. Part 1: Reunion (2015) - Adventure, Action, Animation, Drama, Family, Fantasy, Sci-Fi
+- kept (not its first genre): Appleseed (1988) - Crime, Animation, Sci-Fi
+- kept (not its first genre): Digimon Adventure tri. Part 3: Confession (2016) - Adventure, Action, Animation, Family, Fantasy, Sci-Fi
 - kept (not its first genre): Metal Skin Panic MADOX-01 (1987) - Sci-Fi, Action, Comedy, Animation
-- kept (not its first genre): Project A-Ko (1986) - Action, Animation, Comedy, Sci-Fi
+- kept (not its first genre): Kimagure Orange Road: I Want to Return to That Day (1988) - Romance, Animation, Drama, Comedy
 - kept (not its first genre): Mega Monster Battle: Ultra Galaxy Legends The Movie (2009) - Action, Adventure, Sci-Fi, Animation
 - kept (not its first genre): Digimon Adventure tri. Part 2: Determination (2016) - Adventure, Action, Animation, Family, Fantasy, Sci-Fi
+- kept (not its first genre): Project A-Ko (1986) - Action, Animation, Comedy, Sci-Fi
 - kept (not its first genre): Digimon Adventure tri. Part 5: Coexistence (2017) - Adventure, Action, Animation, Family, Fantasy, Sci-Fi
 
 ## Prime Video · Anime Series (series) - 94 kept of 95 looked at
@@ -1884,27 +1882,27 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Karakuri Circus (2018) - Action & Adventure, Mystery, Crime, Animation, Drama
 - kept (not its first genre): Fist of the North Star: HOKUTO NO KEN (2026) - Action & Adventure, Animation
 - kept (not its first genre): Ninja Scroll: The Series (2003) - Sci-Fi & Fantasy, Action & Adventure, Animation
+- kept (not its first genre): Thus Spoke Kishibe Rohan (2017) - Mystery, Animation
 - kept (not its first genre): Ronja, the Robber's Daughter (2014) - Comedy, Animation, Family, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Iria: Zeiram the Animation (1994) - Action & Adventure, Animation, Sci-Fi & Fantasy
-- kept (not its first genre): Thus Spoke Kishibe Rohan (2017) - Mystery, Animation
 - kept (not its first genre): Love Hina Again (2002) - Comedy, Animation, Drama
 
 ## Prime Video · Comedy Movies (movie) - 300 kept of 460 looked at
 - kept (not its first genre): Jailer 2 (2026) - Action, Comedy, Drama
 - kept (not its first genre): The Love Hypothesis (2026) - Romance, Comedy
 - kept (not its first genre): The Wrecking Crew (2026) - Action, Comedy, Crime, Mystery
-- kept (not its first genre): Sonic the Hedgehog 3 (2024) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): Red One (2024) - Action, Adventure, Comedy, Fantasy
+- kept (not its first genre): Sonic the Hedgehog 3 (2024) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): Mean Girls (2004) - Drama, Comedy
 - kept (not its first genre): Mr. & Mrs. Smith (2005) - Action, Comedy, Drama, Thriller
-- kept (not its first genre): They Will Kill You (2026) - Action, Comedy, Horror
 - kept (not its first genre): Jingle All the Way (1996) - Family, Adventure, Comedy
+- kept (not its first genre): They Will Kill You (2026) - Action, Comedy, Horror
 - kept (not its first genre): Roofman (2025) - Crime, Comedy, Drama
+- kept (not its first genre): Casino Royale (1967) - Adventure, Action, Comedy
 - kept (not its first genre): Scrooged (1988) - Fantasy, Comedy, Drama
 - kept (not its first genre): Monty Python and the Holy Grail (1975) - Adventure, Comedy, Fantasy
-- kept (not its first genre): Casino Royale (1967) - Adventure, Action, Comedy
-- kept (not its first genre): O Brother, Where Art Thou? (2000) - Adventure, Comedy, Crime
 - kept (not its first genre): Playdate (2025) - Action, Comedy
+- kept (not its first genre): O Brother, Where Art Thou? (2000) - Adventure, Comedy, Crime
 - left out: Warm Bodies (2013) [movie:82654] - Horror, Comedy, Romance, Sci-Fi
 - left out: One Battle After Another (2025) [movie:1054867] - Thriller, Crime, Comedy
 - left out: The Artist (2011) [movie:74643] - Drama, Comedy, Romance
@@ -1933,20 +1931,20 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Prime Video · Comedy Series (series) - 300 kept of 440 looked at
 - kept (not its first genre): Desperate Housewives (2004) - Mystery, Drama, Comedy
-- kept (not its first genre): Monk (2002) - Drama, Comedy, Crime, Mystery
 - kept (not its first genre): What's My Line? (1950) - Family, Comedy
+- kept (not its first genre): Monk (2002) - Drama, Comedy, Crime, Mystery
 - kept (not its first genre): Psych (2006) - Drama, Comedy, Crime
 - kept (not its first genre): Lassie (1954) - Action & Adventure, Drama, Family, Comedy
-- kept (not its first genre): Dimension 20 (2018) - Sci-Fi & Fantasy, Comedy, Reality, Action & Adventure
 - kept (not its first genre): Hogan's Heroes (1965) - War & Politics, Comedy
+- kept (not its first genre): Dimension 20 (2018) - Sci-Fi & Fantasy, Comedy, Reality, Action & Adventure
 - kept (not its first genre): The Good Place (2016) - Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Goosebumps (1995) - Sci-Fi & Fantasy, Mystery, Kids, Comedy
-- kept (not its first genre): Monsters (1988) - Sci-Fi & Fantasy, Mystery, Comedy, Drama
 - kept (not its first genre): Saved by the Bell: The New Class (1993) - Family, Comedy
 - kept (not its first genre): Horrible Histories (2009) - Family, Comedy
 - kept (not its first genre): Chucky (2021) - Crime, Comedy, Mystery
 - kept (not its first genre): Shake It Up (2010) - Family, Kids, Comedy, Drama
-- kept (not its first genre): My Favorite Martian (1963) - Sci-Fi & Fantasy, Comedy, Family
+- kept (not its first genre): Monsters (1988) - Sci-Fi & Fantasy, Mystery, Comedy, Drama
+- kept (not its first genre): Leverage: Redemption (2021) - Action & Adventure, Comedy, Drama
 - left out: Teen Wolf (2011) [tv:34524] - Sci-Fi & Fantasy, Drama, Comedy
 - left out: Freaks and Geeks (1999) [tv:2382] - Drama, Comedy
 - left out: Lethal Weapon (2016) [tv:67116] - Action & Adventure, Crime, Drama, Comedy
@@ -1975,18 +1973,20 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Prime Video · Romantic Comedy Movies (movie) - 300 kept of 520 looked at
 - kept (not its first genre): Cinderella (2021) - Fantasy, Romance, Comedy
-- kept (not its first genre): First Daughter (2004) - Family, Comedy, Drama, Romance
 - kept (not its first genre): Another Cinderella Story (2008) - Music, Comedy, Romance, Family
-- kept (not its first genre): The Purple Rose of Cairo (1985) - Fantasy, Comedy, Romance
+- kept (not its first genre): First Daughter (2004) - Family, Comedy, Drama, Romance
 - kept (not its first genre): Memoirs of an Invisible Man (1992) - Sci-Fi, Comedy, Romance
+- kept (not its first genre): The Purple Rose of Cairo (1985) - Fantasy, Comedy, Romance
 - kept (not its first genre): Chances Are (1989) - Fantasy, Comedy, Romance
 - kept (not its first genre): S1m0ne (2002) - Sci-Fi, Comedy, Drama, Romance
 - kept (not its first genre): Time Freak (2018) - Sci-Fi, Comedy, Romance
 - kept (not its first genre): Fame (2009) - Music, Comedy, Drama, Romance
-- kept (not its first genre): Song for Marion (2012) - Music, Comedy, Romance, Drama
-- kept (not its first genre): The Family Holiday (2007) - Family, Comedy, Romance
+- kept (not its first genre): The Pajama Game (1957) - Music, Comedy, Romance
 - kept (not its first genre): Dear Santa (2011) - Family, Comedy, Drama, Romance, TV Movie
-- kept (not its first genre): Timestalker (2024) - Sci-Fi, Romance, Fantasy, Comedy
+- kept (not its first genre): The Family Holiday (2007) - Family, Comedy, Romance
+- kept (not its first genre): Song for Marion (2012) - Music, Comedy, Romance, Drama
+- kept (not its first genre): Flower Drum Song (1961) - Music, Romance, Comedy
+- kept (not its first genre): Faraway Eyes (2021) - Fantasy, Comedy, Romance
 - left out: Warm Bodies (2013) [movie:82654] - Horror, Comedy, Romance, Sci-Fi
 - left out: The Artist (2011) [movie:74643] - Drama, Comedy, Romance
 - left out: We Are Your Friends (2015) [movie:301351] - Drama, Music, Romance, Comedy
@@ -2043,16 +2043,16 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): John Wick: Chapter 4 (2023) - Action, Thriller, Crime
 - kept (not its first genre): The Wrecking Crew (2026) - Action, Comedy, Crime, Mystery
 - kept (not its first genre): A Working Man (2025) - Action, Crime, Thriller
-- kept (not its first genre): The Sheep Detectives (2026) - Comedy, Crime, Mystery
 - kept (not its first genre): American Psycho (2000) - Thriller, Drama, Crime
 - kept (not its first genre): John Wick: Chapter 2 (2017) - Action, Thriller, Crime
-- kept (not its first genre): John Wick: Chapter 3 - Parabellum (2019) - Action, Thriller, Crime
 - kept (not its first genre): Wrath of Man (2021) - Thriller, Crime, Drama
+- kept (not its first genre): John Wick: Chapter 3 - Parabellum (2019) - Action, Thriller, Crime
 - kept (not its first genre): Once Upon a Time in America (1984) - Drama, Crime
 - kept (not its first genre): xXx: Return of Xander Cage (2017) - Action, Adventure, Crime
 - kept (not its first genre): Sin City: A Dame to Kill For (2014) - Action, Crime, Thriller
-- kept (not its first genre): Shoplifters (2018) - Drama, Crime, Thriller
 - kept (not its first genre): The Naked Gun (2025) - Comedy, Crime, Action
+- kept (not its first genre): Shoplifters (2018) - Drama, Crime, Thriller
+- kept (not its first genre): The Prosecutor (2024) - Action, Drama, Crime, Thriller
 - left out: Some Like It Hot (1959) [movie:239] - Comedy, Romance, Crime
 - left out: The Next Three Days (2010) [movie:43539] - Romance, Drama, Thriller, Crime
 - left out: Mercy (2026) [movie:1236153] - Sci-Fi, Thriller, Crime, Mystery
@@ -2065,6 +2065,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: The Poughkeepsie Tapes (2007) [movie:38410] - Horror, Mystery, Crime, Thriller
 - left out: Argentina 1985 (2022) [movie:714888] - Drama, History, Crime
 - left out: D-Tox (2002) [movie:10375] - Thriller, Horror, Crime
+- left out: My Friend Dahmer (2017) [movie:445040] - History, Drama, Crime
 - left out: The Butterfly Effect 3: Revelations (2009) [movie:16258] - Sci-Fi, Thriller, Drama, Crime
 - left out: Maniac Cop (1988) [movie:14240] - Action, Horror, Mystery, Crime
 - left out: Project Wolf Hunting (2022) [movie:799379] - Action, Thriller, Horror, Crime
@@ -2072,8 +2073,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Split Second (1992) [movie:13006] - Sci-Fi, Action, Crime, Thriller, Horror
 - left out: Freejack (1992) [movie:9278] - Sci-Fi, Action, Crime, Drama
 - left out: Bullet in the Head (1990) [movie:11909] - Action, War, Crime
-- left out: Wedlock (1991) [movie:2125] - Action, Sci-Fi, Thriller, Crime, TV Movie
-- left out: The Strange Vice of Mrs. Wardh (1971) [movie:30903] - Horror, Mystery, Crime
+- left out: Alice, Sweet Alice (1976) [movie:23761] - Horror, Mystery, Crime, Drama, Thriller
 - left out: 12.12: The Day (2023) [movie:919207] - Drama, Thriller, Action, War, History, Crime
 - left out: Frank and Penelope (2022) [movie:899294] - Thriller, Horror, Crime
 - left out: Like Minds (2006) [movie:15714] - Thriller, Mystery, Horror, Crime
@@ -2087,14 +2087,14 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Castle (2009) - Drama, Crime
 - kept (not its first genre): JAG (1995) - Drama, Action & Adventure, Crime
 - kept (not its first genre): Elementary (2012) - Drama, Mystery, Crime
-- kept (not its first genre): Bosch (2015) - Mystery, Drama, Crime
 - kept (not its first genre): Mannix (1967) - Action & Adventure, Crime, Mystery, Drama
-- kept (not its first genre): Father Brown (2013) - Drama, Crime, Mystery
+- kept (not its first genre): Bosch (2015) - Mystery, Drama, Crime
 - kept (not its first genre): The Avengers (1961) - Action & Adventure, Crime, Sci-Fi & Fantasy
+- kept (not its first genre): Father Brown (2013) - Drama, Crime, Mystery
 - kept (not its first genre): The Lincoln Lawyer (2022) - Drama, Crime
 - kept (not its first genre): The Saint (1962) - Action & Adventure, Crime, Drama, Mystery
 - kept (not its first genre): Spooks (2002) - Drama, Action & Adventure, Crime
-- kept (not its first genre): Hannibal (2013) - Drama, Crime
+- kept (not its first genre): Damages (2007) - Mystery, Drama, Crime
 - left out: Monk (2002) [tv:1695] - Drama, Comedy, Crime, Mystery
 - left out: Psych (2006) [tv:1447] - Drama, Comedy, Crime
 - left out: Leverage (2008) [tv:7482] - Drama, Comedy, Action & Adventure, Crime
@@ -2123,20 +2123,20 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Prime Video · Drama Movies (movie) - 300 kept of 460 looked at
 - kept (not its first genre): Blade Runner 2049 (2017) - Sci-Fi, Drama
-- kept (not its first genre): Premonition (2007) - Thriller, Drama, Mystery
 - kept (not its first genre): The Handmaiden (2016) - Thriller, Drama, Romance
-- kept (not its first genre): The Last Sunrise (2026) - Romance, Drama
+- kept (not its first genre): Premonition (2007) - Thriller, Drama, Mystery
 - kept (not its first genre): Love of Your Life (2026) - Romance, Drama
+- kept (not its first genre): The Last Sunrise (2026) - Romance, Drama
 - kept (not its first genre): Heat (1995) - Crime, Drama, Action
-- kept (not its first genre): You+Me - Against the World (2026) - Romance, Drama
 - kept (not its first genre): Hunting Season (2025) - Action, Drama, Thriller
+- kept (not its first genre): You+Me - Against the World (2026) - Romance, Drama
+- kept (not its first genre): Our Fault (2025) - Romance, Drama
 - kept (not its first genre): Unfaithful (2002) - Thriller, Drama, Romance
 - kept (not its first genre): American Psycho (2000) - Thriller, Drama, Crime
-- kept (not its first genre): “Wuthering Heights” (2026) - Romance, Drama
-- kept (not its first genre): Our Fault (2025) - Romance, Drama
-- kept (not its first genre): Apocalypto (2006) - Action, Drama, History
 - kept (not its first genre): Wrath of Man (2021) - Thriller, Crime, Drama
-- kept (not its first genre): Donnie Darko (2001) - Fantasy, Drama, Mystery
+- kept (not its first genre): Apocalypto (2006) - Action, Drama, History
+- kept (not its first genre): “Wuthering Heights” (2026) - Romance, Drama
+- kept (not its first genre): Road House (2024) - Action, Thriller, Drama
 - left out: Once Upon a Time in... Hollywood (2019) [movie:466272] - Comedy, Drama, Thriller
 - left out: Mr. & Mrs. Smith (2005) [movie:787] - Action, Comedy, Drama, Thriller
 - left out: Midsommar (2019) [movie:530385] - Horror, Drama, Mystery
@@ -2150,6 +2150,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: The Big Sick (2017) [movie:416477] - Comedy, Drama, Romance
 - left out: Manhattan (1979) [movie:696] - Comedy, Drama, Romance
 - left out: Hairspray (2007) [movie:2976] - Comedy, Romance, Drama
+- left out: Welcome to the Sticks (2008) [movie:8265] - Comedy, Drama, Romance
 - left out: City Lights (1931) [movie:901] - Comedy, Drama, Romance
 - left out: Hunt for the Wilderpeople (2016) [movie:371645] - Adventure, Comedy, Drama
 - left out: Garden State (2004) [movie:401] - Comedy, Drama, Romance
@@ -2161,24 +2162,23 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Scrooged (1988) [movie:9647] - Fantasy, Comedy, Drama
 - left out: August: Osage County (2013) [movie:152737] - Comedy, Drama
 - left out: Never Been Kissed (1999) [movie:11355] - Romance, Comedy, Drama
-- left out: The Possession of Hannah Grace (2018) [movie:434555] - Horror, Drama
 
 ## Prime Video · Drama Series (series) - 300 kept of 440 looked at
 - kept (not its first genre): Slow Horses (2022) - Crime, Drama, Mystery
 - kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
-- kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
 - kept (not its first genre): Baywatch (1989) - Action & Adventure, Drama, Crime
+- kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
 - kept (not its first genre): Perry Mason (1957) - Mystery, Drama, Crime
 - kept (not its first genre): Bones (2005) - Crime, Drama
-- kept (not its first genre): Blue Bloods (2010) - Crime, Drama
 - kept (not its first genre): Chicago P.D. (2014) - Crime, Drama
 - kept (not its first genre): Desperate Housewives (2004) - Mystery, Drama, Comedy
-- kept (not its first genre): Columbo (1971) - Crime, Drama, Mystery
+- kept (not its first genre): Blue Bloods (2010) - Crime, Drama
 - kept (not its first genre): S.W.A.T. (2017) - Crime, Action & Adventure, Drama
 - kept (not its first genre): Arrow (2012) - Crime, Drama, Action & Adventure
-- kept (not its first genre): The Terminal List (2022) - Action & Adventure, Drama
+- kept (not its first genre): Columbo (1971) - Crime, Drama, Mystery
 - kept (not its first genre): Fringe (2008) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Silent Witness (1996) - Crime, Drama
+- kept (not its first genre): The Terminal List (2022) - Action & Adventure, Drama
 - left out: Charmed (1998) [tv:1981] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Good Omens (2019) [tv:71915] - Comedy, Drama, Sci-Fi & Fantasy
 - left out: Fleabag (2016) [tv:67070] - Comedy, Drama
@@ -2202,8 +2202,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Newtopia (2025) [tv:233742] - Sci-Fi & Fantasy, Action & Adventure, Comedy, Drama
 - left out: Patriot (2015) [tv:64396] - Comedy, Drama
 - left out: Good Boy (2025) [tv:231280] - Crime, Comedy, Action & Adventure, Drama
-- left out: The Colour of Magic (2008) [tv:5885] - Action & Adventure, Sci-Fi & Fantasy, Comedy, Drama
 - left out: Because This Is My First Life (2017) [tv:74074] - Comedy, Drama
+- left out: Hustle (2004) [tv:3764] - Comedy, Crime, Drama, Mystery
 
 ## Prime Video · Family Movies (movie) - 300 kept of 420 looked at
 - kept (not its first genre): Sonic the Hedgehog 3 (2024) - Action, Sci-Fi, Comedy, Family
@@ -2216,18 +2216,17 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Eight Below (2006) - Adventure, Drama, Family
 - kept (not its first genre): Zookeeper (2011) - Comedy, Romance, Family
 - kept (not its first genre): MouseHunt (1997) - Comedy, Family
-- kept (not its first genre): My Spy The Eternal City (2024) - Action, Comedy, Family
 - kept (not its first genre): Love Don't Co$t a Thing (2003) - Comedy, Drama, Family, Romance
-- kept (not its first genre): A Cinderella Story: Once Upon a Song (2011) - Comedy, Family, Romance, Drama
-- kept (not its first genre): Meet Dave (2008) - Comedy, Sci-Fi, Adventure, Family
+- kept (not its first genre): My Spy The Eternal City (2024) - Action, Comedy, Family
 - kept (not its first genre): Another Cinderella Story (2008) - Music, Comedy, Romance, Family
+- kept (not its first genre): Secret Headquarters (2022) - Action, Comedy, Sci-Fi, Family
+- kept (not its first genre): A Cinderella Story: Once Upon a Song (2011) - Comedy, Family, Romance, Drama
 - left out: The Pink Panther (2006) [movie:12096] - Comedy, Mystery, Crime, Adventure, Family
 - left out: The Sheep Detectives (2026) [movie:1301421] - Comedy, Crime, Mystery
 - left out: Toast (2010) [movie:52850] - Drama, Comedy, History, Family
 - left out: The Cokeville Miracle (2015) [movie:339060] - Mystery, Drama, History, Family, Thriller
 - left out: The Canterville Ghost (1996) [movie:48358] - TV Movie, Fantasy, Drama, Family
 - left out: White Fang (1973) [movie:58061] - Western, Adventure, Family
-- left out: Seasons (2016) [movie:352342] - Documentary, Adventure, Family
 - left out: A Christmas Reunion (2015) [movie:369061] - Comedy, TV Movie, Family, Romance
 - left out: Annabelle Hooper and the Ghosts of Nantucket (2016) [movie:410284] - TV Movie, Mystery, Family
 - left out: Twinkle All the Way (2019) [movie:627470] - TV Movie, Romance, Family
@@ -2235,17 +2234,18 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Mr. Boogedy (1986) [movie:365351] - TV Movie, Horror, Family
 - left out: Your Love Never Fails (2011) [movie:61014] - Comedy, TV Movie, Family, Romance
 - left out: Savannah (2013) [movie:207871] - Romance, History, Drama, Family
-- left out: Home (2016) [movie:381507] - Horror, Drama, Family
 - left out: Snowed in for Christmas (2021) [movie:838184] - TV Movie, Comedy, Romance, Family
 - left out: Lease on Love (2022) [movie:971184] - TV Movie, Comedy, Romance, Family
 - left out: Cider and Sunsets (2022) [movie:892869] - TV Movie, Comedy, Romance, Family
 - left out: My Family and Other Animals (2005) [movie:44746] - TV Movie, Comedy, Drama, Family
 - left out: Sweet as Pie (2022) [movie:925850] - TV Movie, Romance, Comedy, Family
 - left out: Fixing Up Christmas (2021) [movie:849452] - TV Movie, Comedy, Romance, Family
-- left out: One of a Kind Love (2021) [movie:814777] - Romance, TV Movie, Family
 - left out: The Princess and the Bodyguard (2023) [movie:950905] - TV Movie, Comedy, Romance, Family
+- left out: One of a Kind Love (2021) [movie:814777] - Romance, TV Movie, Family
 - left out: Christmas Town (2008) [movie:26381] - Fantasy, Drama, Action, Comedy, Thriller, Family, TV Movie
 - left out: The Clue to Love (2021) [movie:793442] - TV Movie, Comedy, Romance, Family
+- left out: Match Made in Mistletoe (2021) [movie:854199] - TV Movie, Comedy, Romance, Family, Drama
+- left out: The Attraction Test (2022) [movie:942578] - TV Movie, Comedy, Romance, Family
 
 ## Prime Video · Family Series (series) - 78 kept of 83 looked at
 - kept (not its first genre): The Chosen (2019) - Action & Adventure, Family, Drama
@@ -2254,15 +2254,15 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Nanny (1993) - Comedy, Family
 - kept (not its first genre): Family Ties (1982) - Comedy, Drama, Family
 - kept (not its first genre): The Beverly Hillbillies (1962) - Comedy, Family
-- kept (not its first genre): Everwood (2002) - Drama, Family
 - kept (not its first genre): Petticoat Junction (1963) - Comedy, Family
+- kept (not its first genre): Everwood (2002) - Drama, Family
 - kept (not its first genre): The Carol Burnett Show (1967) - Comedy, Family
 - kept (not its first genre): The Donna Reed Show (1958) - Comedy, Family
+- kept (not its first genre): ALF (1986) - Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Barney & Friends (1992) - Comedy, Family, Kids
 - kept (not its first genre): Leave It to Beaver (1957) - Comedy, Family
-- kept (not its first genre): ALF (1986) - Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): The Adventures of Ozzie and Harriet (1952) - Comedy, Family
-- kept (not its first genre): The Wiggles (1998) - Kids, Family
+- kept (not its first genre): The Munsters (1964) - Comedy, Sci-Fi & Fantasy, Family
 - left out: Little House on the Prairie (1974) [tv:1781] - Western, Drama, Family
 - left out: Tin Star (2017) [tv:70384] - Crime, Drama, Family
 - left out: The Rifleman (1958) [tv:13859] - Action & Adventure, Western, Family
@@ -2279,12 +2279,12 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
 - kept (not its first genre): Elf (2003) - Comedy, Family, Fantasy
 - kept (not its first genre): The Running Man (2025) - Action, Thriller, Sci-Fi
-- kept (not its first genre): The Tomorrow War (2021) - Action, Sci-Fi, Adventure
-- kept (not its first genre): Contact (1997) - Drama, Sci-Fi, Mystery
 - kept (not its first genre): The Abyss (1989) - Adventure, Thriller, Sci-Fi
-- kept (not its first genre): A Quiet Place: Day One (2024) - Horror, Sci-Fi, Thriller
 - kept (not its first genre): The Witch (2016) - Horror, Fantasy, Mystery
-- kept (not its first genre): Idiocracy (2006) - Comedy, Sci-Fi
+- kept (not its first genre): The Tomorrow War (2021) - Action, Sci-Fi, Adventure
+- kept (not its first genre): A Quiet Place: Day One (2024) - Horror, Sci-Fi, Thriller
+- kept (not its first genre): Transformers: The Last Knight (2017) - Action, Adventure, Sci-Fi
+- kept (not its first genre): Krampus (2015) - Horror, Comedy, Fantasy
 - left out: Warm Bodies (2013) [movie:82654] - Horror, Comedy, Romance, Sci-Fi
 - left out: Red One (2024) [movie:845781] - Action, Adventure, Comedy, Fantasy
 - left out: Moonraker (1979) [movie:698] - Action, Adventure, Thriller, Sci-Fi
@@ -2316,17 +2316,17 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): American Horror Story (2011) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): The Lord of the Rings: The Rings of Power (2022) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
-- kept (not its first genre): Airwolf (1984) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Grimm (2011) - Drama, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Airwolf (1984) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Jason and the Argonauts (2000) - Family, Action & Adventure, Sci-Fi & Fantasy
-- kept (not its first genre): The Expanse (2015) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): The Avengers (1961) - Action & Adventure, Crime, Sci-Fi & Fantasy
+- kept (not its first genre): The Expanse (2015) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Ancient Aliens (2010) - Documentary, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Fallout (2024) - Action & Adventure, Sci-Fi & Fantasy, Drama
-- kept (not its first genre): Carrie (2026) - Mystery, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Power Rangers (1993) - Action & Adventure, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Haven (2010) - Drama, Sci-Fi & Fantasy, Mystery
-- kept (not its first genre): Merlin (2008) - Action & Adventure, Drama, Sci-Fi & Fantasy
+- kept (not its first genre): Carrie (2026) - Mystery, Drama, Sci-Fi & Fantasy
+- kept (not its first genre): The Outer Limits (1995) - Drama, Sci-Fi & Fantasy
 - left out: Charmed (1998) [tv:1981] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Life on Mars (2006) [tv:2973] - Crime, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Masters of Horror (2005) [tv:3470] - Drama, Mystery, Crime, Sci-Fi & Fantasy
@@ -2346,16 +2346,16 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Three Musketeers: D'Artagnan (2023) - Adventure, Action, Drama, History
 - kept (not its first genre): Air (2023) - Drama, History
 - kept (not its first genre): The Count of Monte Cristo (2002) - Adventure, Drama, History, Action
-- kept (not its first genre): The Treacherous (2015) - Drama, History, Crime
 - kept (not its first genre): Robin Hood (2010) - Action, Adventure, History
-- kept (not its first genre): King Arthur (2004) - Adventure, War, History, Action, Drama
-- kept (not its first genre): Invincible (2006) - Drama, History
-- kept (not its first genre): Darkest Hour (2017) - Drama, History
 - kept (not its first genre): Brothers (2009) - Drama, Thriller, War
+- kept (not its first genre): The Treacherous (2015) - Drama, History, Crime
 - kept (not its first genre): Only the Brave (2017) - Drama, History
-- kept (not its first genre): The 13th Warrior (1999) - Adventure, History, Action
-- kept (not its first genre): The Dirty Dozen (1967) - Action, Adventure, War
+- kept (not its first genre): Darkest Hour (2017) - Drama, History
+- kept (not its first genre): King Arthur (2004) - Adventure, War, History, Action, Drama
 - kept (not its first genre): JFK (1991) - Drama, Thriller, History
+- kept (not its first genre): Invincible (2006) - Drama, History
+- kept (not its first genre): Tom Clancy's Without Remorse (2021) - Action, Thriller, War
+- kept (not its first genre): A Taxi Driver (2017) - Action, Drama, History
 - left out: The Great Dictator (1940) [movie:914] - Comedy, War
 - left out: Legends of the Fall (1994) [movie:4476] - Drama, Western, Romance, War
 - left out: Brotherhood of the Wolf (2001) [movie:6312] - Adventure, Horror, History
@@ -2364,7 +2364,6 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Radioactive (2020) [movie:480857] - Drama, Romance, History
 - left out: Duck Soup (1933) [movie:3063] - Comedy, War
 - left out: The Last Legion (2007) [movie:9703] - Action, Adventure, Fantasy, War
-- left out: Max & Leon (2016) [movie:392142] - Comedy, War, Adventure
 - left out: Love & Mercy (2015) [movie:271714] - Drama, Music, History
 - left out: The Best Years of Our Lives (1946) [movie:887] - Drama, Romance, War
 - left out: Ghosts of War (2020) [movie:608195] - Horror, Thriller, War, Sci-Fi
@@ -2381,6 +2380,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Miles Ahead (2016) [movie:316000] - Drama, Music, History
 - left out: The Chinese Widow (2017) [movie:528210] - Drama, Romance, History, War
 - left out: The Lucky Ones (2008) [movie:16005] - Comedy, Drama, History
+- left out: The Flying Deuces (1939) [movie:22999] - Comedy, War
 
 ## Prime Video · History & War Series (series) - 43 kept of 47 looked at
 - kept (not its first genre): 'Allo 'Allo! (1984) - Comedy, War & Politics
@@ -2389,15 +2389,15 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Manhattan (2014) - Drama, War & Politics
 - kept (not its first genre): The White Queen (2013) - Drama, War & Politics
 - kept (not its first genre): Troy: Fall of a City (2018) - Action & Adventure, War & Politics, Drama
-- kept (not its first genre): Our Girl (2014) - Drama, War & Politics
 - kept (not its first genre): Awaiting Kirin (2020) - Drama, War & Politics
-- kept (not its first genre): Occupied (2015) - Drama, War & Politics
 - kept (not its first genre): Napoleon (2002) - Drama, War & Politics, Action & Adventure
-- kept (not its first genre): King & Conqueror (2025) - Drama, Action & Adventure, War & Politics
-- kept (not its first genre): A Small Light (2023) - Drama, War & Politics
 - kept (not its first genre): The Sandbaggers (1978) - Drama, War & Politics
+- kept (not its first genre): Our Girl (2014) - Drama, War & Politics
+- kept (not its first genre): Occupied (2015) - Drama, War & Politics
+- kept (not its first genre): A Small Light (2023) - Drama, War & Politics
+- kept (not its first genre): King & Conqueror (2025) - Drama, Action & Adventure, War & Politics
 - kept (not its first genre): The Narrow Road to the Deep North (2025) - Drama, War & Politics
-- kept (not its first genre): WWII in HD (2009) - Documentary, War & Politics
+- kept (not its first genre): The Legend of El Cid (2020) - Action & Adventure, Drama, War & Politics
 - left out: Rise of the Nazis (2019) [tv:93192] - Documentary, Drama, War & Politics
 - left out: Legend of Fuyao (2018) [tv:76814] - Action & Adventure, Sci-Fi & Fantasy, Drama, War & Politics
 - left out: Bluestone 42 (2013) [tv:46844] - Comedy, Drama, War & Politics
@@ -2407,18 +2407,18 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Apocalypse Z: New World (2026) - Action, Thriller, Horror
 - kept (not its first genre): Apocalypse Z: The Beginning of the End (2024) - Drama, Action, Horror
 - kept (not its first genre): Pretty Lethal (2026) - Action, Thriller, Horror
-- kept (not its first genre): The Bride! (2026) - Sci-Fi, Horror, Fantasy
 - kept (not its first genre): Exhuma (2024) - Mystery, Horror, Thriller
-- kept (not its first genre): Trap (2024) - Thriller, Crime, Horror
+- kept (not its first genre): The Bride! (2026) - Sci-Fi, Horror, Fantasy
 - kept (not its first genre): Good Boy (2026) - Drama, Mystery, Horror
-- kept (not its first genre): Stonehearst Asylum (2014) - Thriller, Mystery, Horror
+- kept (not its first genre): Trap (2024) - Thriller, Crime, Horror
 - kept (not its first genre): Carrie (2013) - Drama, Horror
-- kept (not its first genre): Project Wolf Hunting (2022) - Action, Thriller, Horror, Crime
+- kept (not its first genre): Stonehearst Asylum (2014) - Thriller, Mystery, Horror
 - kept (not its first genre): Legion (2010) - Action, Fantasy, Horror
-- kept (not its first genre): Species (1995) - Sci-Fi, Horror, Action
 - kept (not its first genre): Silent Hill: Revelation 3D (2012) - Thriller, Horror, Mystery
 - kept (not its first genre): Brotherhood of the Wolf (2001) - Adventure, Horror, History
-- kept (not its first genre): Pride and Prejudice and Zombies (2016) - Romance, Horror, Comedy, Thriller
+- kept (not its first genre): Project Wolf Hunting (2022) - Action, Thriller, Horror, Crime
+- kept (not its first genre): Species (1995) - Sci-Fi, Horror, Action
+- kept (not its first genre): Dreamcatcher (2003) - Drama, Horror, Sci-Fi, Thriller
 - left out: Death Becomes Her (1992) [movie:9374] - Comedy, Fantasy, Horror
 - left out: An American Werewolf in London (1981) [movie:814] - Comedy, Horror
 - left out: The Return of the Living Dead (1985) [movie:10925] - Comedy, Horror, Sci-Fi
@@ -2447,20 +2447,20 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Prime Video · Mystery & Thriller Movies (movie) - 300 kept of 420 looked at
 - kept (not its first genre): Apocalypse Z: New World (2026) - Action, Thriller, Horror
-- kept (not its first genre): War of the Worlds (2025) - Sci-Fi, Thriller
 - kept (not its first genre): Drive - The Pretenders (2026) - Romance, Thriller
+- kept (not its first genre): War of the Worlds (2025) - Sci-Fi, Thriller
 - kept (not its first genre): Memoir of a Murderer (2017) - Crime, Mystery, Thriller
 - kept (not its first genre): Masterplan (2026) - Action, Thriller
-- kept (not its first genre): Casino Royale (2006) - Adventure, Action, Thriller
 - kept (not its first genre): The Beekeeper (2024) - Action, Crime, Thriller
 - kept (not its first genre): Terminator 2: Judgment Day (1991) - Action, Thriller, Sci-Fi
-- kept (not its first genre): Mission: Impossible - The Final Reckoning (2025) - Action, Thriller, Adventure
+- kept (not its first genre): Casino Royale (2006) - Adventure, Action, Thriller
 - kept (not its first genre): No Time to Die (2021) - Action, Thriller, Adventure
-- kept (not its first genre): John Wick: Chapter 4 (2023) - Action, Thriller, Crime
-- kept (not its first genre): Kraken (2026) - Horror, Action, Thriller
-- kept (not its first genre): The Terminator (1984) - Action, Thriller, Sci-Fi
 - kept (not its first genre): Crime 101 (2026) - Crime, Thriller
-- kept (not its first genre): Drawn Together (2026) - Romance, Thriller
+- kept (not its first genre): Mission: Impossible - The Final Reckoning (2025) - Action, Thriller, Adventure
+- kept (not its first genre): John Wick: Chapter 4 (2023) - Action, Thriller, Crime
+- kept (not its first genre): The Terminator (1984) - Action, Thriller, Sci-Fi
+- kept (not its first genre): Scream 7 (2026) - Horror, Mystery, Crime
+- kept (not its first genre): A Working Man (2025) - Action, Crime, Thriller
 - left out: Once Upon a Time in... Hollywood (2019) [movie:466272] - Comedy, Drama, Thriller
 - left out: Mr. & Mrs. Smith (2005) [movie:787] - Action, Comedy, Drama, Thriller
 - left out: Match Point (2005) [movie:116] - Drama, Romance, Thriller
@@ -2488,27 +2488,27 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: A Shot in the Dark (1964) [movie:1594] - Comedy, Mystery, Crime
 
 ## Prime Video · Mystery & Thriller Series (series) - 297 kept of 301 looked at
-- kept (not its first genre): Supernatural (2005) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Slow Horses (2022) - Crime, Drama, Mystery
+- kept (not its first genre): Supernatural (2005) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): American Horror Story (2011) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
-- kept (not its first genre): Columbo (1971) - Crime, Drama, Mystery
 - kept (not its first genre): Charmed (1998) - Comedy, Drama, Mystery, Sci-Fi & Fantasy
-- kept (not its first genre): Monk (2002) - Drama, Comedy, Crime, Mystery
 - kept (not its first genre): Grimm (2011) - Drama, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Columbo (1971) - Crime, Drama, Mystery
+- kept (not its first genre): Monk (2002) - Drama, Comedy, Crime, Mystery
 - kept (not its first genre): Fringe (2008) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Elementary (2012) - Drama, Mystery, Crime
 - kept (not its first genre): Yellowjackets (2021) - Drama, Mystery
-- kept (not its first genre): Ghost Whisperer (2005) - Sci-Fi & Fantasy, Mystery, Drama
+- kept (not its first genre): The Alfred Hitchcock Hour (1962) - Crime, Mystery, Drama
 - kept (not its first genre): Mannix (1967) - Action & Adventure, Crime, Mystery, Drama
-- kept (not its first genre): Beyond Belief: Fact or Fiction (1997) - Documentary, Mystery, Reality
+- kept (not its first genre): Ghost Whisperer (2005) - Sci-Fi & Fantasy, Mystery, Drama
 - left out: God Friended Me (2018) [tv:81114] - Drama, Family, Mystery, Comedy
 - left out: Just Add Magic (2016) [tv:62904] - Family, Kids, Sci-Fi & Fantasy, Comedy, Mystery
 - left out: YAGA (2026) [tv:314360] - Drama, Sci-Fi & Fantasy
 - left out: Kamen Rider Ryuki (2002) [tv:261321] - Action & Adventure, Sci-Fi & Fantasy, Drama, Kids, Mystery
 
-## Prime Video · Romance Movies (movie) - 300 kept of 440 looked at
+## Prime Video · Romance Movies (movie) - 300 kept of 460 looked at
 - kept (not its first genre): Perfect Liars (2026) - Drama, Romance, Thriller
 - kept (not its first genre): My Fault (2023) - Drama, Romance, Thriller
 - kept (not its first genre): Lolita (1997) - Drama, Romance
@@ -2520,10 +2520,10 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Red, White & Royal Blue (2023) - Comedy, Romance
 - kept (not its first genre): Some Like It Hot (1959) - Comedy, Romance, Crime
 - kept (not its first genre): Modern Times (1936) - Comedy, Drama, Romance
-- kept (not its first genre): A Guy Thing (2003) - Comedy, Romance
 - kept (not its first genre): Secretary (2002) - Drama, Comedy, Romance
-- kept (not its first genre): National Lampoon's Van Wilder (2002) - Comedy, Romance
+- kept (not its first genre): A Guy Thing (2003) - Comedy, Romance
 - kept (not its first genre): City of Angels (1998) - Drama, Fantasy, Romance
+- kept (not its first genre): After We Collided (2020) - Drama, Romance
 - left out: Warm Bodies (2013) [movie:82654] - Horror, Comedy, Romance, Sci-Fi
 - left out: The Handmaiden (2016) [movie:290098] - Thriller, Drama, Romance
 - left out: Legends of the Fall (1994) [movie:4476] - Drama, Western, Romance, War
@@ -2540,6 +2540,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: All Good Things (2010) [movie:46503] - Mystery, Thriller, Romance
 - left out: Return of the Living Dead III (1993) [movie:28260] - Horror, Romance
 - left out: The Curse of the Jade Scorpion (2001) [movie:2779] - Comedy, Crime, Romance
+- left out: Frantz (2016) [movie:377263] - History, Drama, Romance
 - left out: Jeanne du Barry (2023) [movie:921452] - Drama, History, Romance
 - left out: Sea of Love (1989) [movie:12150] - Crime, Drama, Romance
 - left out: Role Play (2023) [movie:848187] - Action, Comedy, Romance
@@ -2548,7 +2549,6 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Antwone Fisher (2002) [movie:13435] - Drama, History, Romance
 - left out: Battle for Sevastopol (2015) [movie:332270] - War, Drama, Romance
 - left out: Voice from the Stone (2017) [movie:301372] - Mystery, Thriller, Drama, Romance
-- left out: Skin (2019) [movie:542417] - Drama, Crime, Romance
 
 ## Prime Video · Documentary Movies (movie) - 300 kept of 380 looked at
 - kept (not its first genre): American Animals (2018) - Drama, Crime, Documentary
@@ -2556,32 +2556,32 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Aristocrats (2005) - Comedy, Documentary
 - kept (not its first genre): Score: A Film Music Documentary (2017) - Music, Documentary
 - kept (not its first genre): Rite Here Rite Now (2024) - Music, Documentary
-- kept (not its first genre): Kevin Hart: What Now? (2016) - Comedy, Documentary, TV Movie
-- kept (not its first genre): Prince: Sign 'o' the Times (1987) - Music, Documentary
-- kept (not its first genre): Justin Bieber: Our World (2021) - Music, Documentary
 - kept (not its first genre): George Carlin: It's Bad for Ya! (2008) - Comedy, Documentary
-- kept (not its first genre): Monty Python Live (Mostly) (2014) - Comedy, Music, Documentary
-- kept (not its first genre): Zappa (2020) - Music, Documentary
-- kept (not its first genre): Lessons of Darkness (1992) - War, Documentary, TV Movie
+- kept (not its first genre): Cartel Land (2015) - Drama, Documentary
+- kept (not its first genre): Kevin Hart: What Now? (2016) - Comedy, Documentary, TV Movie
 - kept (not its first genre): An Honest Liar (2014) - History, Comedy, Documentary
-- kept (not its first genre): George Carlin: Doin' It Again (1990) - TV Movie, Comedy, Documentary
-- kept (not its first genre): Z Channel: A Magnificent Obsession (2004) - History, Documentary
+- kept (not its first genre): Prince: Sign 'o' the Times (1987) - Music, Documentary
+- kept (not its first genre): Hired Gun (2017) - Music, Documentary
+- kept (not its first genre): Zappa (2020) - Music, Documentary
+- kept (not its first genre): Monty Python Live (Mostly) (2014) - Comedy, Music, Documentary
+- kept (not its first genre): Lessons of Darkness (1992) - War, Documentary, TV Movie
+- kept (not its first genre): Justin Bieber: Our World (2021) - Music, Documentary
 - left out: George Carlin: You Are All Diseased (1999) [movie:34513] - Comedy, TV Movie
 
-## Prime Video · Docuseries (series) - 207 kept of 208 looked at
+## Prime Video · Docuseries (series) - 208 kept of 209 looked at
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
 - kept (not its first genre): On the Case with Paula Zahn (2009) - Crime, Documentary
 - kept (not its first genre): Forensic Files (1996) - Crime, Documentary
 - kept (not its first genre): Wheeler Dealers (2003) - Reality, Documentary
 - kept (not its first genre): Mountain Men (2012) - Reality, Documentary
-- kept (not its first genre): The Secret of Skinwalker Ranch (2020) - Reality, Documentary
 - kept (not its first genre): The Joy of Painting (1983) - Family, Documentary
 - kept (not its first genre): Court Cam (2019) - Reality, Crime, Documentary
-- kept (not its first genre): 7 vs. Wild (2021) - Reality, Documentary
+- kept (not its first genre): The Secret of Skinwalker Ranch (2020) - Reality, Documentary
 - kept (not its first genre): Travel Man: 48 Hours in... (2015) - Comedy, Documentary
+- kept (not its first genre): 7 vs. Wild (2021) - Reality, Documentary
 - kept (not its first genre): Accidentally Famous (2024) - Comedy, Drama, Documentary
-- kept (not its first genre): Highway Thru Hell (2012) - Reality, Documentary
 - kept (not its first genre): World's Most Dangerous Roads (2011) - Reality, Documentary
+- kept (not its first genre): Highway Thru Hell (2012) - Reality, Documentary
 - kept (not its first genre): Cold Case Files (2017) - Crime, Mystery, Documentary
 - kept (not its first genre): Gloria Trevi: Ellas soy yo (2023) - Drama, Documentary
 
@@ -2589,22 +2589,22 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Prime Video · Nature Docuseries (series) - 4 kept of 4 looked at
 
-## Prime Video · Reality Series (series) - 155 kept of 156 looked at
-- kept (not its first genre): Beyond Belief: Fact or Fiction (1997) - Documentary, Mystery, Reality
+## Prime Video · Reality Series (series) - 156 kept of 157 looked at
 - kept (not its first genre): This Old House (1979) - Documentary, Reality
 - kept (not its first genre): Dimension 20 (2018) - Sci-Fi & Fantasy, Comedy, Reality, Action & Adventure
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
+- kept (not its first genre): Beyond Belief: Fact or Fiction (1997) - Documentary, Mystery, Reality
 - kept (not its first genre): Game Changer (2019) - Comedy, Reality
 - kept (not its first genre): Ghost Hunters (2004) - Sci-Fi & Fantasy, Reality
 - kept (not its first genre): On Patrol: Live (2022) - Documentary, Crime, Reality
 - kept (not its first genre): Untold Stories of the ER (2004) - Action & Adventure, Drama, Reality
 - kept (not its first genre): Most Haunted (2002) - Documentary, Mystery, Reality
-- kept (not its first genre): Grand Designs (1999) - Documentary, Reality
-- kept (not its first genre): Deal or No Deal (2005) - Comedy, Family, Reality
 - kept (not its first genre): Dog Whisperer (2004) - Family, Reality
 - kept (not its first genre): Make Some Noise (2022) - Comedy, Reality
-- kept (not its first genre): Intervention (2005) - Documentary, Reality
+- kept (not its first genre): Deal or No Deal (2005) - Comedy, Family, Reality
 - kept (not its first genre): MXC (2003) - Comedy, Family, Reality
+- kept (not its first genre): Intervention (2005) - Documentary, Reality
+- kept (not its first genre): Hoarders (2009) - Documentary, Reality, Drama
 
 ## Prime Video · Western Movies (movie) - 192 kept of 207 looked at
 - kept (not its first genre): Dances with Wolves (1990) - Adventure, Drama, Western
@@ -2617,10 +2617,10 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Misfits (1961) - Drama, Romance, Western
 - kept (not its first genre): Ravenous (1999) - Adventure, Western, Horror, Comedy, Drama
 - kept (not its first genre): The Old Way (2023) - Action, Drama, Western
-- kept (not its first genre): BloodRayne II: Deliverance (2007) - Action, Fantasy, Western
 - kept (not its first genre): Breakheart Pass (1975) - Thriller, Western, Mystery
-- kept (not its first genre): Lone Star (1996) - Drama, Mystery, Western
+- kept (not its first genre): BloodRayne II: Deliverance (2007) - Action, Fantasy, Western
 - kept (not its first genre): The Quick and the Dead (1987) - Action, Drama, Western, TV Movie
+- kept (not its first genre): Lone Star (1996) - Drama, Mystery, Western
 - kept (not its first genre): Apache (1954) - Action, Western
 - left out: The Warrior's Way (2010) [movie:46528] - Adventure, Fantasy, Action, Western, Thriller
 - left out: Sukiyaki Western Django (2007) [movie:13637] - Adventure, Action, Comedy, Western, Thriller
@@ -2648,8 +2648,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Lonesome Dove (1989) - Drama, Western
 - kept (not its first genre): The English (2022) - Drama, Western
 - kept (not its first genre): Texas Rising (2015) - Drama, Western
-- kept (not its first genre): Return to Lonesome Dove (1993) - Drama, Western
 - kept (not its first genre): Jericho (2016) - Drama, Western
+- kept (not its first genre): Return to Lonesome Dove (1993) - Drama, Western
 - kept (not its first genre): The Pinkertons (2014) - Action & Adventure, Western, Crime
 - kept (not its first genre): The Head of Joaquín Murrieta (2023) - Drama, Western, Action & Adventure
 - left out: Wynonna Earp (2016) [tv:65988] - Action & Adventure, Sci-Fi & Fantasy, Western
@@ -2667,10 +2667,10 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Guardians of the Galaxy Vol. 2 (2017) - Sci-Fi, Adventure, Action
 - kept (not its first genre): Doctor Strange (2016) - Fantasy, Adventure, Action
 - kept (not its first genre): The Incredible Hulk (2008) - Sci-Fi, Action, Adventure
-- kept (not its first genre): Venom: The Last Dance (2024) - Sci-Fi, Action, Adventure
 - kept (not its first genre): Thor: Love and Thunder (2022) - Fantasy, Action, Comedy
-- kept (not its first genre): Ant-Man (2015) - Sci-Fi, Adventure, Action
-- kept (not its first genre): Alice in Wonderland (2010) - Family, Fantasy, Adventure
+- kept (not its first genre): Maleficent (2014) - Fantasy, Adventure, Action, Family, Romance
+- kept (not its first genre): Eternals (2021) - Sci-Fi, Action, Adventure
+- kept (not its first genre): Venom: The Last Dance (2024) - Sci-Fi, Action, Adventure
 - left out: The Pacifier (2005) [movie:10022] - Comedy, Family, Action
 - left out: Descendants 2 (2017) [movie:417320] - Family, Fantasy, TV Movie, Adventure
 - left out: Descendants 3 (2019) [movie:506574] - Family, TV Movie, Adventure, Fantasy
@@ -2689,16 +2689,16 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Marvel's Daredevil (2015) - Crime, Drama, Action & Adventure
 - kept (not its first genre): Daredevil: Born Again (2025) - Drama, Action & Adventure, Crime
 - kept (not its first genre): Andor (2022) - Sci-Fi & Fantasy, Action & Adventure, War & Politics
-- kept (not its first genre): 9-1-1: Nashville (2025) - Drama, Action & Adventure
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
+- kept (not its first genre): 9-1-1: Nashville (2025) - Drama, Action & Adventure
 - kept (not its first genre): Zorro (1957) - Western, Action & Adventure
 - kept (not its first genre): Moon Knight (2022) - Sci-Fi & Fantasy, Mystery, Action & Adventure
 - kept (not its first genre): Marvel's Luke Cage (2016) - Drama, Action & Adventure, Crime
-- kept (not its first genre): Kickin' It (2011) - Family, Action & Adventure, Comedy
 - kept (not its first genre): Marvel Studios Legends (2021) - Documentary, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Kickin' It (2011) - Family, Action & Adventure, Comedy
 - kept (not its first genre): A Shop for Killers (2024) - Drama, Action & Adventure, Mystery
-- kept (not its first genre): Moving (2023) - Mystery, Drama, Action & Adventure
 - kept (not its first genre): Ahsoka (2023) - Sci-Fi & Fantasy, Action & Adventure, Drama, War & Politics
+- kept (not its first genre): Moving (2023) - Mystery, Drama, Action & Adventure
 - left out: Hawkeye (2021) [tv:88329] - Drama, Comedy, Action & Adventure
 - left out: American Born Chinese (2023) [tv:135615] - Comedy, Sci-Fi & Fantasy, Action & Adventure
 - left out: Expedition Unknown (2015) [tv:61833] - Documentary, Reality, Action & Adventure
@@ -2711,34 +2711,34 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Zootopia 2 (2025) - Adventure, Animation, Comedy, Mystery, Family
 - kept (not its first genre): Toy Story (1995) - Family, Comedy, Animation, Adventure
 - kept (not its first genre): The Nightmare Before Christmas (1993) - Fantasy, Animation, Family
-- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): Beauty and the Beast (1991) - Romance, Family, Animation, Fantasy
+- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): The Incredibles (2004) - Action, Adventure, Animation, Family
 - kept (not its first genre): Moana 2 (2024) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Frozen II (2019) - Family, Animation, Adventure, Comedy, Fantasy
-- kept (not its first genre): The Lion King (2019) - Adventure, Drama, Family, Animation
 - kept (not its first genre): Wreck-It Ralph (2012) - Family, Animation, Comedy, Adventure
-- kept (not its first genre): The Emperor's New Groove (2000) - Adventure, Animation, Comedy, Family, Fantasy
+- kept (not its first genre): The Lion King (2019) - Adventure, Drama, Family, Animation
 - kept (not its first genre): Toy Story 4 (2019) - Family, Comedy, Animation, Adventure
 - kept (not its first genre): The Good Dinosaur (2015) - Adventure, Animation, Family
 - kept (not its first genre): Cinderella (1950) - Family, Fantasy, Animation, Romance
+- kept (not its first genre): Brave (2012) - Adventure, Animation, Family, Fantasy
 
 ## Disney+ · Animation Series (series) - 176 kept of 177 looked at
 - kept (not its first genre): Star Wars: The Clone Wars (2008) - Action & Adventure, Sci-Fi & Fantasy, Animation
 - kept (not its first genre): Star vs. the Forces of Evil (2015) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family
 - kept (not its first genre): Mickey Mouse Clubhouse (2006) - Kids, Animation, Comedy, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Big City Greens (2018) - Family, Animation, Comedy
-- kept (not its first genre): DuckTales (2017) - Family, Comedy, Animation
 - kept (not its first genre): Star Wars Rebels (2014) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): DuckTales (2017) - Family, Comedy, Animation
 - kept (not its first genre): Solar Opposites (2020) - Comedy, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Sofia the First (2013) - Family, Animation, Kids
 - kept (not its first genre): Marvel's Avengers (2013) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): 101 Dalmatians: The Series (1997) - Kids, Animation, Action & Adventure
 - kept (not its first genre): My Friends Tigger & Pooh (2007) - Kids, Animation, Drama, Mystery, Action & Adventure
-- kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Big Hero 6 The Series (2017) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): X-Men (1992) - Kids, Sci-Fi & Fantasy, Animation, Action & Adventure
-- kept (not its first genre): Star Wars Resistance (2018) - Sci-Fi & Fantasy, Animation, Action & Adventure
+- kept (not its first genre): Hercules (1998) - Comedy, Kids, Animation, Action & Adventure
 
 ## Disney+ · Anime Movies (movie) - 1 kept of 1 looked at
 
@@ -2747,19 +2747,19 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 ## Disney+ · Comedy Movies (movie) - 290 kept of 330 looked at
 - kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Deadpool & Wolverine (2024) - Action, Comedy, Sci-Fi
-- kept (not its first genre): The Devil Wears Prada (2006) - Drama, Comedy
 - kept (not its first genre): Deadpool (2016) - Action, Adventure, Comedy
-- kept (not its first genre): Deadpool 2 (2018) - Action, Comedy, Adventure
+- kept (not its first genre): The Devil Wears Prada (2006) - Drama, Comedy
 - kept (not its first genre): Thor: Ragnarok (2017) - Action, Adventure, Comedy, Sci-Fi
+- kept (not its first genre): Deadpool 2 (2018) - Action, Comedy, Adventure
 - kept (not its first genre): Thor: Love and Thunder (2022) - Fantasy, Action, Comedy
 - kept (not its first genre): Lilo & Stitch (2025) - Family, Sci-Fi, Comedy
 - kept (not its first genre): Night at the Museum (2006) - Fantasy, Family, Comedy
 - kept (not its first genre): Night at the Museum: Secret of the Tomb (2014) - Adventure, Comedy, Fantasy, Family
-- kept (not its first genre): Jungle Cruise (2021) - Fantasy, Comedy, Adventure
 - kept (not its first genre): Jingle All the Way (1996) - Family, Adventure, Comedy
-- kept (not its first genre): 101 Dalmatians (1996) - Family, Comedy
-- kept (not its first genre): Big (1988) - Fantasy, Drama, Comedy
+- kept (not its first genre): Jungle Cruise (2021) - Fantasy, Comedy, Adventure
 - kept (not its first genre): Mary Poppins Returns (2018) - Fantasy, Family, Comedy
+- kept (not its first genre): 101 Dalmatians (1996) - Family, Comedy
+- kept (not its first genre): Hocus Pocus (1993) - Fantasy, Comedy, Family
 - left out: We Bought a Zoo (2011) [movie:74465] - Drama, Comedy, Family
 - left out: The Santa Clause (1994) [movie:11395] - Fantasy, Drama, Comedy, Family
 - left out: The Haunted Mansion (2003) [movie:10756] - Thriller, Fantasy, Comedy, Family, Mystery
@@ -2789,18 +2789,18 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 ## Disney+ · Comedy Series (series) - 105 kept of 119 looked at
 - kept (not its first genre): The Bear (2022) - Drama, Comedy
 - kept (not its first genre): Boy Meets World (1993) - Drama, Comedy, Family
-- kept (not its first genre): Raven's Home (2017) - Family, Comedy, Drama
 - kept (not its first genre): Dinosaurs (1991) - Sci-Fi & Fantasy, Comedy, Family
+- kept (not its first genre): Raven's Home (2017) - Family, Comedy, Drama
 - kept (not its first genre): Doogie Howser, M.D. (1989) - Drama, Comedy
-- kept (not its first genre): K.C. Undercover (2015) - Kids, Comedy, Family, Drama
 - kept (not its first genre): Shake It Up (2010) - Family, Kids, Comedy, Drama
+- kept (not its first genre): K.C. Undercover (2015) - Kids, Comedy, Family, Drama
 - kept (not its first genre): Kickin' It (2011) - Family, Action & Adventure, Comedy
-- kept (not its first genre): Worst Cooks in America (2010) - Reality, Comedy
 - kept (not its first genre): High School Musical: The Musical: The Series (2019) - Family, Comedy, Drama
-- kept (not its first genre): Scream Queens (2015) - Mystery, Comedy
+- kept (not its first genre): Worst Cooks in America (2010) - Reality, Comedy
 - kept (not its first genre): Pair of Kings (2010) - Family, Action & Adventure, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): Phil of the Future (2004) - Sci-Fi & Fantasy, Comedy, Family, Kids
+- kept (not its first genre): Scream Queens (2015) - Mystery, Comedy
 - kept (not its first genre): Ms. Marvel (2022) - Sci-Fi & Fantasy, Action & Adventure, Comedy
+- kept (not its first genre): Phil of the Future (2004) - Sci-Fi & Fantasy, Comedy, Family, Kids
 - kept (not its first genre): Bizaardvark (2016) - Family, Comedy
 - left out: Hawkeye (2021) [tv:88329] - Drama, Comedy, Action & Adventure
 - left out: Doogie Kamealoha, M.D. (2021) [tv:130372] - Drama, Family, Comedy
@@ -2818,12 +2818,12 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Everything Is Fine (2023) [tv:208920] - Drama, Comedy
 
 ## Disney+ · Romantic Comedy Movies (movie) - 39 kept of 49 looked at
-- kept (not its first genre): George of the Jungle (1997) - Adventure, Comedy, Family, Romance
-- kept (not its first genre): Lady and the Tramp (2019) - Family, Romance, Comedy
 - kept (not its first genre): Z-O-M-B-I-E-S 4: Dawn of the Vampires (2025) - Fantasy, Music, Romance, Adventure, Family, Comedy, TV Movie
+- kept (not its first genre): Lady and the Tramp (2019) - Family, Romance, Comedy
+- kept (not its first genre): George of the Jungle (1997) - Adventure, Comedy, Family, Romance
 - kept (not its first genre): Bedtime Stories (2008) - Fantasy, Comedy, Family, Romance
-- kept (not its first genre): Aquamarine (2006) - Fantasy, Romance, Family, Comedy
 - kept (not its first genre): Z-O-M-B-I-E-S (2018) - Fantasy, Comedy, Romance, TV Movie
+- kept (not its first genre): Aquamarine (2006) - Fantasy, Romance, Family, Comedy
 - left out: High School Musical (2006) [movie:10947] - Comedy, Family, TV Movie, Music, Romance
 - left out: EverAfter (1998) [movie:9454] - Drama, Romance, Comedy
 - left out: Drumline (2002) [movie:13497] - Drama, Romance, Comedy, Music
@@ -2831,8 +2831,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Newsies (2017) [movie:462477] - Music, Comedy, Drama, History, Romance
 - left out: Motocrossed (2001) [movie:71885] - TV Movie, Family, Comedy, Drama, Romance
 - left out: The Enchanted Christmas Cake (2021) [movie:881853] - TV Movie, Comedy, Romance
-- left out: Christmas Love Letter (2019) [movie:639424] - TV Movie, Comedy, Romance
 - left out: Christmas Plus One (2022) [movie:993030] - TV Movie, Romance, Family, Comedy
+- left out: Christmas Love Letter (2019) [movie:639424] - TV Movie, Comedy, Romance
 - left out: Match Made in Mistletoe (2021) [movie:854199] - TV Movie, Comedy, Romance, Family, Drama
 
 ## Disney+ · Romantic Comedy Series (series) - 4 kept of 5 looked at
@@ -2843,8 +2843,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Punisher: One Last Kill (2026) - Action, Drama, Crime
 - kept (not its first genre): Cruella (2021) - Comedy, Crime
 - kept (not its first genre): Girl in the Basement (2021) - Thriller, Crime, TV Movie
-- kept (not its first genre): The Girl Who Escaped: The Kara Robinson Story (2023) - Thriller, Drama, Crime, TV Movie
 - kept (not its first genre): Muppets Most Wanted (2014) - Comedy, Adventure, Crime, Family
+- kept (not its first genre): The Girl Who Escaped: The Kara Robinson Story (2023) - Thriller, Drama, Crime, TV Movie
 - kept (not its first genre): Turner & Hooch (1989) - Action, Comedy, Thriller, Crime, Family
 - kept (not its first genre): The Great Muppet Caper (1981) - Comedy, Crime, Family, Mystery
 - kept (not its first genre): Millions (2005) - Comedy, Crime, Drama, Family
@@ -2870,12 +2870,12 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Big Mouth (2022) - Mystery, Drama, Crime
 - kept (not its first genre): Ironheart (2025) - Sci-Fi & Fantasy, Crime, Action & Adventure
 - kept (not its first genre): Echo (2024) - Action & Adventure, Crime, Drama
-- kept (not its first genre): Flex X Cop (2024) - Drama, Crime, Mystery, Action & Adventure
 - kept (not its first genre): Marvel's The Defenders (2017) - Sci-Fi & Fantasy, Action & Adventure, Crime
+- kept (not its first genre): Flex X Cop (2024) - Drama, Crime, Mystery, Action & Adventure
 - kept (not its first genre): Good American Family (2025) - Drama, Crime, Mystery
 - kept (not its first genre): Court Cam (2019) - Reality, Crime, Documentary
 - kept (not its first genre): Live PD (2016) - Documentary, Crime, Reality
-- kept (not its first genre): Homicide Hunter: Lt Joe Kenda (2011) - Documentary, Crime
+- kept (not its first genre): Big Bet (2022) - Drama, Action & Adventure, Crime
 - left out: Only Murders in the Building (2021) [tv:107113] - Comedy, Mystery, Crime
 - left out: To Catch a Smuggler (2015) [tv:101129] - Documentary, Reality, Crime, Drama
 - left out: The First 48 (2004) [tv:5146] - Documentary, Drama, Crime
@@ -2892,8 +2892,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Edward Scissorhands (1990) - Fantasy, Drama, Romance
 - kept (not its first genre): Bridge to Terabithia (2007) - Adventure, Drama, Family
 - kept (not its first genre): The Santa Clause (1994) - Fantasy, Drama, Comedy, Family
-- kept (not its first genre): Big (1988) - Fantasy, Drama, Comedy
 - kept (not its first genre): The Fault in Our Stars (2014) - Romance, Drama
+- kept (not its first genre): Big (1988) - Fantasy, Drama, Comedy
 - kept (not its first genre): Miracle on 34th Street (1994) - Fantasy, Drama, Family
 - kept (not its first genre): Hamilton (2025) - History, Drama
 - kept (not its first genre): Eight Below (2006) - Adventure, Drama, Family
@@ -2938,11 +2938,11 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Marvel's Jessica Jones (2015) - Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Doctor Who (2024) - Action & Adventure, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): The Falcon and the Winter Soldier (2021) - Action & Adventure, Sci-Fi & Fantasy, Drama
-- kept (not its first genre): Coven Academy (2026) - Mystery, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): The First 48 (2004) - Documentary, Drama, Crime
-- kept (not its first genre): Moving (2023) - Mystery, Drama, Action & Adventure
 - kept (not its first genre): Alien: Earth (2025) - Sci-Fi & Fantasy, Drama
+- kept (not its first genre): Coven Academy (2026) - Mystery, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Ahsoka (2023) - Sci-Fi & Fantasy, Action & Adventure, Drama, War & Politics
+- kept (not its first genre): Moving (2023) - Mystery, Drama, Action & Adventure
 - kept (not its first genre): Obi-Wan Kenobi (2022) - Sci-Fi & Fantasy, Action & Adventure, Drama, War & Politics
 - left out: Buffy the Vampire Slayer (1997) [tv:95] - Comedy, Drama, Sci-Fi & Fantasy
 - left out: Love, Victor (2020) [tv:97186] - Comedy, Drama
@@ -2972,20 +2972,20 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Disney+ · Family Movies (movie) - 300 kept of 376 looked at
 - kept (not its first genre): Home Alone 2: Lost in New York (1992) - Comedy, Family, Adventure
+- kept (not its first genre): Home Alone (1990) - Comedy, Family
 - kept (not its first genre): The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005) - Adventure, Family, Fantasy
 - kept (not its first genre): Cinderella (2015) - Romance, Fantasy, Family, Drama
 - kept (not its first genre): Maleficent (2014) - Fantasy, Adventure, Action, Family, Romance
+- kept (not its first genre): Home Alone 3 (1997) - Comedy, Family
 - kept (not its first genre): Alice Through the Looking Glass (2016) - Adventure, Family, Fantasy
 - kept (not its first genre): Percy Jackson & the Olympians: The Lightning Thief (2010) - Adventure, Fantasy, Family
-- kept (not its first genre): Home Alone 3 (1997) - Comedy, Family
-- kept (not its first genre): Night at the Museum (2006) - Fantasy, Family, Comedy
-- kept (not its first genre): The Parent Trap (1998) - Comedy, Family, Romance
 - kept (not its first genre): Aladdin (2019) - Adventure, Fantasy, Romance, Family
-- kept (not its first genre): The Princess Diaries (2001) - Comedy, Family, Romance
-- kept (not its first genre): The Sound of Music (1965) - Drama, Family, Music, Romance
-- kept (not its first genre): Bridge to Terabithia (2007) - Adventure, Drama, Family
-- kept (not its first genre): The Jungle Book (2016) - Adventure, Family, Fantasy
+- kept (not its first genre): Night at the Museum (2006) - Fantasy, Family, Comedy
 - kept (not its first genre): Night at the Museum: Secret of the Tomb (2014) - Adventure, Comedy, Fantasy, Family
+- kept (not its first genre): The Parent Trap (1998) - Comedy, Family, Romance
+- kept (not its first genre): The Sound of Music (1965) - Drama, Family, Music, Romance
+- kept (not its first genre): The Jungle Book (2016) - Adventure, Family, Fantasy
+- kept (not its first genre): Enchanted (2007) - Comedy, Family, Fantasy, Romance
 - left out: The Haunted Mansion (2003) [movie:10756] - Thriller, Fantasy, Comedy, Family, Mystery
 - left out: Turner & Hooch (1989) [movie:6951] - Action, Comedy, Thriller, Crime, Family
 - left out: Muppets Most Wanted (2014) [movie:145220] - Comedy, Adventure, Crime, Family
@@ -3017,14 +3017,14 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Good Luck Charlie (2010) - Comedy, Family, Kids
 - kept (not its first genre): Hannah Montana (2006) - Comedy, Family
 - kept (not its first genre): Boy Meets World (1993) - Drama, Comedy, Family
-- kept (not its first genre): The Suite Life of Zack & Cody (2005) - Comedy, Family, Kids
 - kept (not its first genre): Dinosaurs (1991) - Sci-Fi & Fantasy, Comedy, Family
+- kept (not its first genre): The Suite Life of Zack & Cody (2005) - Comedy, Family, Kids
 - kept (not its first genre): Jessie (2011) - Comedy, Kids, Drama, Family
 - kept (not its first genre): Girl Meets World (2014) - Comedy, Family
 - kept (not its first genre): K.C. Undercover (2015) - Kids, Comedy, Family, Drama
 - kept (not its first genre): The Suite Life on Deck (2008) - Comedy, Family, Kids
-- kept (not its first genre): Liv and Maddie (2013) - Comedy, Family, Drama
 - kept (not its first genre): The Muppet Show (1976) - Comedy, Family
+- kept (not its first genre): Liv and Maddie (2013) - Comedy, Family, Drama
 - kept (not its first genre): Lizzie McGuire (2001) - Comedy, Kids, Family
 - kept (not its first genre): Wizards Beyond Waverly Place (2024) - Comedy, Sci-Fi & Fantasy, Family
 - left out: Tierra Incognita (2022) [tv:128384] - Mystery, Sci-Fi & Fantasy, Family
@@ -3036,17 +3036,17 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Avengers: Endgame (2019) - Adventure, Sci-Fi, Action
 - kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Avengers: Infinity War (2018) - Adventure, Action, Sci-Fi
-- kept (not its first genre): Deadpool & Wolverine (2024) - Action, Comedy, Sci-Fi
 - kept (not its first genre): Spider-Man: No Way Home (2021) - Action, Adventure, Sci-Fi
+- kept (not its first genre): Deadpool & Wolverine (2024) - Action, Comedy, Sci-Fi
 - kept (not its first genre): Avengers: Age of Ultron (2015) - Action, Adventure, Sci-Fi
-- kept (not its first genre): Star Wars (1977) - Adventure, Action, Sci-Fi
 - kept (not its first genre): Thunderbolts* (2025) - Action, Sci-Fi, Adventure
 - kept (not its first genre): Spider-Man (2002) - Action, Sci-Fi
+- kept (not its first genre): Star Wars (1977) - Adventure, Action, Sci-Fi
 - kept (not its first genre): The Mandalorian and Grogu (2026) - Action, Adventure, Sci-Fi
-- kept (not its first genre): Spider-Man: Homecoming (2017) - Action, Adventure, Sci-Fi
-- kept (not its first genre): Iron Man 2 (2010) - Adventure, Action, Sci-Fi
-- kept (not its first genre): Captain America: Civil War (2016) - Adventure, Action, Sci-Fi
 - kept (not its first genre): Shang-Chi and the Legend of the Ten Rings (2021) - Action, Adventure, Fantasy
+- kept (not its first genre): Spider-Man: Homecoming (2017) - Action, Adventure, Sci-Fi
+- kept (not its first genre): Captain America: Civil War (2016) - Adventure, Action, Sci-Fi
+- kept (not its first genre): Avatar: The Way of Water (2022) - Action, Adventure, Sci-Fi
 - left out: Thor: Ragnarok (2017) [movie:284053] - Action, Adventure, Comedy, Sci-Fi
 - left out: Tomorrowland (2015) [movie:158852] - Adventure, Family, Mystery, Sci-Fi
 - left out: Honey, I Shrunk the Kids (1989) [movie:9354] - Adventure, Comedy, Family, Sci-Fi
@@ -3079,16 +3079,16 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Percy Jackson and the Olympians (2023) - Action & Adventure, Sci-Fi & Fantasy, Drama, Family
 - kept (not its first genre): The X-Files (1993) - Mystery, Sci-Fi & Fantasy, Crime
 - kept (not its first genre): Once Upon a Time (2011) - Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Marvel's Agents of S.H.I.E.L.D. (2013) - Drama, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Buffy the Vampire Slayer (1997) - Comedy, Drama, Sci-Fi & Fantasy
+- kept (not its first genre): Marvel's Agents of S.H.I.E.L.D. (2013) - Drama, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Loki (2021) - Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Ancient Aliens (2010) - Documentary, Mystery, Sci-Fi & Fantasy
-- kept (not its first genre): Wizards of Waverly Place (2007) - Comedy, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): That's So Raven (2003) - Comedy, Sci-Fi & Fantasy
+- kept (not its first genre): Wizards of Waverly Place (2007) - Comedy, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Doctor Who (2024) - Action & Adventure, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): The Falcon and the Winter Soldier (2021) - Action & Adventure, Sci-Fi & Fantasy, Drama
+- kept (not its first genre): Marvel Studios Legends (2021) - Documentary, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Lab Rats (2012) - Comedy, Sci-Fi & Fantasy, Kids
-- kept (not its first genre): Coven Academy (2026) - Mystery, Drama, Sci-Fi & Fantasy
 - left out: Secrets of Sulphur Springs (2021) [tv:114547] - Family, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Pair of Kings (2010) [tv:31628] - Family, Action & Adventure, Comedy, Sci-Fi & Fantasy
 
@@ -3097,13 +3097,13 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Flamin' Hot (2023) - Drama, History
 - kept (not its first genre): The Finest Hours (2016) - Action, Drama, History, Thriller
 - kept (not its first genre): Glory Road (2006) - Drama, History
-- kept (not its first genre): Newsies (1992) - Drama, History
-- kept (not its first genre): Miracle (2004) - Drama, History
 - kept (not its first genre): Prayers for Bobby (2009) - Drama, History, TV Movie
 - kept (not its first genre): Red Tails (2012) - Drama, History, War
+- kept (not its first genre): Miracle (2004) - Drama, History
+- kept (not its first genre): Newsies (1992) - Drama, History
 - kept (not its first genre): Squanto: A Warrior's Tale (1994) - Adventure, History
-- kept (not its first genre): Titanic: 20 Years Later with James Cameron (2017) - Documentary, History, TV Movie
 - kept (not its first genre): Apollo: Missions to the Moon (2019) - Documentary, History
+- kept (not its first genre): Titanic: 20 Years Later with James Cameron (2017) - Documentary, History, TV Movie
 - kept (not its first genre): Cleopatra's Final Secret (2025) - Documentary, History
 - left out: Saving Mr. Banks (2013) [movie:140823] - Comedy, Drama, History
 - left out: Summer of Soul (...Or, When the Revolution Could Not Be Televised) (2021) [movie:776527] - Music, Documentary, History
@@ -3167,9 +3167,9 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): A Shop for Killers (2024) - Drama, Action & Adventure, Mystery
 - kept (not its first genre): Phony (2026) - Comedy, Drama, Mystery
 - kept (not its first genre): Flex X Cop (2024) - Drama, Crime, Mystery, Action & Adventure
-- kept (not its first genre): History's Greatest Mysteries (2020) - Documentary, Mystery
-- kept (not its first genre): Good American Family (2025) - Drama, Crime, Mystery
 - kept (not its first genre): Goosebumps (2023) - Sci-Fi & Fantasy, Action & Adventure, Mystery
+- kept (not its first genre): Good American Family (2025) - Drama, Crime, Mystery
+- kept (not its first genre): History's Greatest Mysteries (2020) - Documentary, Mystery
 - kept (not its first genre): Tempest (2025) - Drama, Mystery
 - kept (not its first genre): Nine Puzzles (2025) - Crime, Mystery
 - left out: Secrets of Sulphur Springs (2021) [tv:114547] - Family, Drama, Mystery, Sci-Fi & Fantasy
@@ -3179,18 +3179,18 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Beauty and the Beast (2017) - Family, Fantasy, Romance
 - kept (not its first genre): 10 Things I Hate About You (1999) - Comedy, Romance, Drama
 - kept (not its first genre): Edward Scissorhands (1990) - Fantasy, Drama, Romance
-- kept (not its first genre): The Parent Trap (1998) - Comedy, Family, Romance
 - kept (not its first genre): Aladdin (2019) - Adventure, Fantasy, Romance, Family
-- kept (not its first genre): The Princess Diaries (2001) - Comedy, Family, Romance
+- kept (not its first genre): The Parent Trap (1998) - Comedy, Family, Romance
 - kept (not its first genre): The Sound of Music (1965) - Drama, Family, Music, Romance
 - kept (not its first genre): Enchanted (2007) - Comedy, Family, Fantasy, Romance
 - kept (not its first genre): The Little Mermaid (2023) - Adventure, Family, Fantasy, Romance
+- kept (not its first genre): The Princess Diaries (2001) - Comedy, Family, Romance
 - kept (not its first genre): The Princess Diaries 2: Royal Engagement (2004) - Comedy, Drama, Family, Romance
 - kept (not its first genre): The Art of Racing in the Rain (2019) - Drama, Romance
-- kept (not its first genre): Herbie Fully Loaded (2005) - Comedy, Family, Adventure, Fantasy, Romance
+- kept (not its first genre): Z-O-M-B-I-E-S 4: Dawn of the Vampires (2025) - Fantasy, Music, Romance, Adventure, Family, Comedy, TV Movie
 - kept (not its first genre): 27 Dresses (2008) - Comedy, Romance
-- kept (not its first genre): Confessions of a Shopaholic (2009) - Comedy, Romance
-- kept (not its first genre): George of the Jungle (1997) - Adventure, Comedy, Family, Romance
+- kept (not its first genre): Lady and the Tramp (2019) - Family, Romance, Comedy
+- kept (not its first genre): Herbie Fully Loaded (2005) - Comedy, Family, Adventure, Fantasy, Romance
 - left out: Maleficent (2014) [movie:102651] - Fantasy, Adventure, Action, Family, Romance
 - left out: High School Musical (2006) [movie:10947] - Comedy, Family, TV Movie, Music, Romance
 - left out: Newsies (2017) [movie:462477] - Music, Comedy, Drama, History, Romance
@@ -3203,38 +3203,38 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Match Made in Mistletoe (2021) [movie:854199] - TV Movie, Comedy, Romance, Family, Drama
 
 ## Disney+ · Documentary Movies (movie) - 132 kept of 132 looked at
-- kept (not its first genre): Summer of Soul (...Or, When the Revolution Could Not Be Televised) (2021) - Music, Documentary, History
 - kept (not its first genre): Encanto at the Hollywood Bowl (2022) - Music, Documentary
-- kept (not its first genre): OLIVIA RODRIGO: driving home 2 u (a SOUR film) (2022) - Music, Documentary
+- kept (not its first genre): Summer of Soul (...Or, When the Revolution Could Not Be Televised) (2021) - Music, Documentary, History
 - kept (not its first genre): Happier Than Ever: A Love Letter to Los Angeles (2021) - Music, Documentary
 - kept (not its first genre): Hocus Pocus 25th Anniversary Halloween Bash (2018) - Music, Documentary, Family
 - kept (not its first genre): Folklore: The Long Pond Studio Sessions (2020) - Music, Documentary
 - kept (not its first genre): BTS: Permission to Dance on Stage - LA (2022) - Music, Documentary
+- kept (not its first genre): OLIVIA RODRIGO: driving home 2 u (a SOUR film) (2022) - Music, Documentary
 - kept (not its first genre): High School Musical: The Musical: The Holiday Special (2020) - Music, Documentary
-- kept (not its first genre): MARS: Inside SpaceX (2018) - History, TV Movie, Documentary
 - kept (not its first genre): Star Wars Biomes (2021) - Sci-Fi, Documentary
-- kept (not its first genre): The Two Escobars (2010) - Crime, Documentary
 - kept (not its first genre): Just Love and a Thousand Songs (2022) - Music, Documentary
+- kept (not its first genre): MARS: Inside SpaceX (2018) - History, TV Movie, Documentary
+- kept (not its first genre): The Two Escobars (2010) - Crime, Documentary
 - kept (not its first genre): Man in Space (1955) - Sci-Fi, Documentary, TV Movie
 
 ## Disney+ · Docuseries (series) - 160 kept of 161 looked at
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
 - kept (not its first genre): Mountain Men (2012) - Reality, Documentary
-- kept (not its first genre): The Secret of Skinwalker Ranch (2020) - Reality, Documentary
 - kept (not its first genre): Court Cam (2019) - Reality, Crime, Documentary
+- kept (not its first genre): The Secret of Skinwalker Ranch (2020) - Reality, Documentary
 - kept (not its first genre): Evil Lives Here (2016) - Crime, Documentary
 - kept (not its first genre): Life Below Zero (2013) - Reality, Documentary
-- kept (not its first genre): See No Evil (2015) - Crime, Documentary
 - kept (not its first genre): House Hunters (1999) - Reality, Documentary
-- kept (not its first genre): The Proof Is Out There (2021) - Sci-Fi & Fantasy, Documentary
-- kept (not its first genre): The Incredible Dr. Pol (2011) - Reality, Documentary
+- kept (not its first genre): See No Evil (2015) - Crime, Documentary
 - kept (not its first genre): American Monster (2016) - Crime, Documentary
-- kept (not its first genre): The Murder Tapes (2019) - Crime, Documentary
+- kept (not its first genre): The Incredible Dr. Pol (2011) - Reality, Documentary
+- kept (not its first genre): The Proof Is Out There (2021) - Sci-Fi & Fantasy, Documentary
 - kept (not its first genre): Cold Case Files (2017) - Crime, Mystery, Documentary
+- kept (not its first genre): The Murder Tapes (2019) - Crime, Documentary
 - kept (not its first genre): Cold Case Files (1999) - Crime, Mystery, Documentary
 - kept (not its first genre): Nightmare Next Door (2011) - Crime, Documentary
 
-## Disney+ · Nature Documentary Movies (movie) - 23 kept of 23 looked at
+## Disney+ · Nature Documentary Movies (movie) - 24 kept of 24 looked at
 
 ## Disney+ · Nature Docuseries (series) - 17 kept of 17 looked at
 
@@ -3243,24 +3243,24 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
 - kept (not its first genre): Expedition Unknown (2015) - Documentary, Reality, Action & Adventure
 - kept (not its first genre): Ghost Hunters (2004) - Sci-Fi & Fantasy, Reality
-- kept (not its first genre): Holiday Baking Championship (2014) - Family, Reality
-- kept (not its first genre): Intervention (2005) - Documentary, Reality
 - kept (not its first genre): Running Wild with Bear Grylls (2014) - Action & Adventure, Reality
-- kept (not its first genre): 7 Little Johnstons (2015) - Comedy, Family, Reality
+- kept (not its first genre): Intervention (2005) - Documentary, Reality
 - kept (not its first genre): Hoarders (2009) - Documentary, Reality, Drama
+- kept (not its first genre): Holiday Baking Championship (2014) - Family, Reality
 - kept (not its first genre): Live PD (2016) - Documentary, Crime, Reality
 - kept (not its first genre): Brain Games (2011) - Documentary, Comedy, Reality
+- kept (not its first genre): 7 Little Johnstons (2015) - Comedy, Family, Reality
 - kept (not its first genre): Halloween Baking Championship (2015) - Family, Reality
 - kept (not its first genre): Expedition X (2020) - Mystery, Reality
 - kept (not its first genre): Bizarre Foods with Andrew Zimmern (2007) - Documentary, Reality
-- kept (not its first genre): Ice Road Rescue (2015) - Documentary, Reality, Drama
+- kept (not its first genre): Walk the Prank (2016) - Family, Comedy, Reality
 
 ## Disney+ · Western Movies (movie) - 6 kept of 10 looked at
 - kept (not its first genre): The Apple Dumpling Gang (1975) - Comedy, Family, Western
+- kept (not its first genre): Davy Crockett, King of the Wild Frontier (1955) - Adventure, Family, Western
 - kept (not its first genre): Tall Tale: The Unbelievable Adventure (1995) - Adventure, Family, Western
 - kept (not its first genre): The Apple Dumpling Gang Rides Again (1979) - Comedy, Family, Western
 - kept (not its first genre): Davy Crockett and the River Pirates (1956) - Adventure, Family, Western
-- kept (not its first genre): Davy Crockett, King of the Wild Frontier (1955) - Adventure, Family, Western
 - left out: Old Yeller (1957) [movie:22660] - Adventure, Drama, Family, Western
 - left out: The Adventures of Bullwhip Griffin (1967) [movie:20237] - Action, Comedy, Drama, Family, Western
 - left out: Treasure of Matecumbe (1976) [movie:63438] - Action, Adventure, Family, Western
@@ -3268,22 +3268,22 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Disney+ · Western Series (series) - 1 kept of 1 looked at
 
-## Hulu · Action & Adventure Movies (movie) - 193 kept of 209 looked at
+## Hulu · Action & Adventure Movies (movie) - 195 kept of 211 looked at
 - kept (not its first genre): The Hunger Games: Mockingjay - Part 1 (2014) - Sci-Fi, Adventure, Thriller
 - kept (not its first genre): The Hunger Games: The Ballad of Songbirds & Snakes (2023) - Sci-Fi, Action, Adventure
 - kept (not its first genre): The Hunger Games (2012) - Sci-Fi, Adventure, Action, Thriller
 - kept (not its first genre): Lucky Strike (2026) - War, Action
 - kept (not its first genre): Good Luck, Have Fun, Don't Die (2026) - Sci-Fi, Action, Comedy
 - kept (not its first genre): Prey (2022) - Thriller, Action, Sci-Fi
-- kept (not its first genre): Ghostbusters: Frozen Empire (2024) - Fantasy, Adventure, Comedy
-- kept (not its first genre): Ghostbusters: Afterlife (2021) - Fantasy, Comedy, Adventure
-- kept (not its first genre): Jingle All the Way (1996) - Family, Adventure, Comedy
 - kept (not its first genre): The Creator (2023) - Sci-Fi, Action, Adventure
-- kept (not its first genre): Mike & Nick & Nick & Alice (2026) - Comedy, Sci-Fi, Action
+- kept (not its first genre): Jingle All the Way (1996) - Family, Adventure, Comedy
+- kept (not its first genre): Ghostbusters: Frozen Empire (2024) - Fantasy, Adventure, Comedy
 - kept (not its first genre): Bad Boys for Life (2020) - Thriller, Action, Crime
-- kept (not its first genre): Osiris (2025) - Sci-Fi, Action, Horror
+- kept (not its first genre): Ghostbusters: Afterlife (2021) - Fantasy, Comedy, Adventure
+- kept (not its first genre): Mike & Nick & Nick & Alice (2026) - Comedy, Sci-Fi, Action
 - kept (not its first genre): Nirvanna the Band the Show the Movie (2026) - Comedy, Sci-Fi, Adventure
-- kept (not its first genre): Pizza Movie (2026) - Comedy, Adventure, Fantasy
+- kept (not its first genre): Osiris (2025) - Sci-Fi, Action, Horror
+- kept (not its first genre): Code 3 (2025) - Comedy, Action, Drama
 - left out: The Princess Bride (1987) [movie:2493] - Fantasy, Comedy, Romance, Adventure
 - left out: Ace Ventura: When Nature Calls (1995) [movie:9273] - Crime, Comedy, Adventure
 - left out: Willy's Wonderland (2021) [movie:643586] - Horror, Thriller, Action
@@ -3309,8 +3309,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Shield (2002) - Crime, Drama, Action & Adventure
 - kept (not its first genre): Station 19 (2018) - Drama, Action & Adventure
 - kept (not its first genre): 9-1-1: Lone Star (2020) - Drama, Action & Adventure, Crime
-- kept (not its first genre): 9-1-1: Nashville (2025) - Drama, Action & Adventure
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
+- kept (not its first genre): 9-1-1: Nashville (2025) - Drama, Action & Adventure
 - kept (not its first genre): Firefly (2002) - Drama, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): The Gifted (2017) - Sci-Fi & Fantasy, Action & Adventure, Drama
 - kept (not its first genre): The Glades (2010) - Crime, Drama, Action & Adventure
@@ -3328,7 +3328,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Swan Princess (1994) - Family, Animation, Fantasy, Adventure, Comedy
 - kept (not its first genre): Frosty the Snowman (1969) - Family, Animation, TV Movie
 
-## Hulu · Animation Series (series) - 79 kept of 79 looked at
+## Hulu · Animation Series (series) - 80 kept of 80 looked at
 - kept (not its first genre): Archer (2009) - Comedy, Action & Adventure, Animation
 - kept (not its first genre): Big City Greens (2018) - Family, Animation, Comedy
 - kept (not its first genre): Uncle Grandpa (2013) - Comedy, Animation, Sci-Fi & Fantasy, Family
@@ -3340,10 +3340,10 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): T.O.T.S. (2019) - Kids, Family, Animation
 - kept (not its first genre): Over the Garden Wall (2014) - Mystery, Sci-Fi & Fantasy, Animation, Family, Comedy
 - kept (not its first genre): Harvey Birdman, Attorney at Law (2000) - Sci-Fi & Fantasy, Animation, Comedy, Action & Adventure, Crime
-- kept (not its first genre): Brickleberry (2012) - Comedy, Animation
 - kept (not its first genre): Duncanville (2020) - Comedy, Animation
-- kept (not its first genre): Bless the Harts (2019) - Comedy, Animation
+- kept (not its first genre): Brickleberry (2012) - Comedy, Animation
 - kept (not its first genre): Universal Basic Guys (2024) - Comedy, Animation
+- kept (not its first genre): Bless the Harts (2019) - Comedy, Animation
 
 ## Hulu · Anime Movies (movie) - 13 kept of 13 looked at
 - kept (not its first genre): Fate/stay night: Heaven's Feel I. Presage Flower (2017) - Action, Animation, Drama, Fantasy, Romance
@@ -3363,27 +3363,27 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Durarara!! (2010) - Action & Adventure, Animation, Drama, Mystery, Crime
 - kept (not its first genre): Kenichi: The Mightiest Disciple (2006) - Action & Adventure, Animation, Comedy
 - kept (not its first genre): Shangri-La Frontier (2023) - Sci-Fi & Fantasy, Action & Adventure, Comedy, Animation
-- kept (not its first genre): Yu-Gi-Oh! VRAINS (2017) - Sci-Fi & Fantasy, Animation, Action & Adventure
-- kept (not its first genre): My Hero Academia (2016) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Kill la Kill (2013) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): YAIBA: Samurai Legend (2025) - Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
+- kept (not its first genre): My Hero Academia (2016) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): Yu-Gi-Oh! VRAINS (2017) - Sci-Fi & Fantasy, Animation, Action & Adventure
+- kept (not its first genre): Mobile Suit Gundam 00 (2007) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, War & Politics
 
-## Hulu · Comedy Movies (movie) - 230 kept of 278 looked at
+## Hulu · Comedy Movies (movie) - 234 kept of 282 looked at
 - kept (not its first genre): The Devil Wears Prada (2006) - Drama, Comedy
-- kept (not its first genre): Bullet Train (2022) - Action, Comedy, Thriller
 - kept (not its first genre): Poor Things (2023) - Sci-Fi, Romance, Comedy
-- kept (not its first genre): Jumanji: The Next Level (2019) - Adventure, Comedy, Fantasy
+- kept (not its first genre): Bullet Train (2022) - Action, Comedy, Thriller
 - kept (not its first genre): Good Luck, Have Fun, Don't Die (2026) - Sci-Fi, Action, Comedy
+- kept (not its first genre): Jumanji: The Next Level (2019) - Adventure, Comedy, Fantasy
 - kept (not its first genre): Bad Boys: Ride or Die (2024) - Action, Comedy, Crime
 - kept (not its first genre): Jumanji: Welcome to the Jungle (2017) - Adventure, Comedy, Fantasy
-- kept (not its first genre): The Secret Life of Walter Mitty (2013) - Adventure, Comedy, Drama, Fantasy
 - kept (not its first genre): The Princess Bride (1987) - Fantasy, Comedy, Romance, Adventure
 - kept (not its first genre): Night at the Museum (2006) - Fantasy, Family, Comedy
-- kept (not its first genre): Anyone but You (2023) - Romance, Comedy
 - kept (not its first genre): Night at the Museum: Secret of the Tomb (2014) - Adventure, Comedy, Fantasy, Family
+- kept (not its first genre): Anyone but You (2023) - Romance, Comedy
+- kept (not its first genre): The Secret Life of Walter Mitty (2013) - Adventure, Comedy, Drama, Fantasy
+- kept (not its first genre): Jingle All the Way (1996) - Family, Adventure, Comedy
 - kept (not its first genre): Ghostbusters: Frozen Empire (2024) - Fantasy, Adventure, Comedy
 - kept (not its first genre): Ghostbusters: Afterlife (2021) - Fantasy, Comedy, Adventure
-- kept (not its first genre): Jingle All the Way (1996) - Family, Adventure, Comedy
 - left out: Babylon (2022) [movie:615777] - Drama, Comedy
 - left out: The Banshees of Inisherin (2022) [movie:674324] - Drama, Comedy
 - left out: Anora (2024) [movie:1064213] - Drama, Comedy, Romance
@@ -3414,16 +3414,16 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Desperate Housewives (2004) - Mystery, Drama, Comedy
 - kept (not its first genre): Bewitched (1964) - Sci-Fi & Fantasy, Comedy, Family, Drama
 - kept (not its first genre): The Bear (2022) - Drama, Comedy
-- kept (not its first genre): Impractical Jokers (2011) - Reality, Comedy
 - kept (not its first genre): I Dream of Jeannie (1965) - Sci-Fi & Fantasy, Comedy, Family
+- kept (not its first genre): Impractical Jokers (2011) - Reality, Comedy
 - kept (not its first genre): The Good Place (2016) - Sci-Fi & Fantasy, Comedy
-- kept (not its first genre): The Great (2020) - Drama, Comedy
 - kept (not its first genre): Match Game (2016) - Reality, Comedy
+- kept (not its first genre): The Great (2020) - Drama, Comedy
+- kept (not its first genre): Find Me in Paris (2018) - Drama, Sci-Fi & Fantasy, Comedy, Family
 - kept (not its first genre): The Last Man on Earth (2015) - Drama, Comedy
 - kept (not its first genre): Worst Cooks in America (2010) - Reality, Comedy
-- kept (not its first genre): Find Me in Paris (2018) - Drama, Sci-Fi & Fantasy, Comedy, Family
-- kept (not its first genre): Melissa & Joey (2010) - Drama, Comedy, Family
 - kept (not its first genre): Scream Queens (2015) - Mystery, Comedy
+- kept (not its first genre): Melissa & Joey (2010) - Drama, Comedy, Family
 - kept (not its first genre): Crash (2024) - Action & Adventure, Comedy, Crime
 - kept (not its first genre): The Fiery Priest (2019) - Crime, Comedy, Drama
 - left out: The Rookie (2018) [tv:79744] - Crime, Drama, Comedy
@@ -3468,8 +3468,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: I'm Glad It's Christmas (2022) [movie:1022685] - TV Movie, Comedy, Romance, Drama
 - left out: Christmas Perfection (2018) [movie:550652] - Comedy, TV Movie, Romance, Fantasy
 - left out: Aisha (2010) [movie:44248] - Drama, Comedy, Romance
-- left out: Christmas Love Letter (2019) [movie:639424] - TV Movie, Comedy, Romance
 - left out: Christmas Plus One (2022) [movie:993030] - TV Movie, Romance, Family, Comedy
+- left out: Christmas Love Letter (2019) [movie:639424] - TV Movie, Comedy, Romance
 - left out: Operation Mistletoe (2024) [movie:1380956] - TV Movie, Romance, Comedy
 
 ## Hulu · Romantic Comedy Series (series) - 9 kept of 13 looked at
@@ -3484,18 +3484,18 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Bad Boys: Ride or Die (2024) - Action, Comedy, Crime
 - kept (not its first genre): No Other Choice (2025) - Comedy, Crime, Thriller
 - kept (not its first genre): The Equalizer 3 (2023) - Action, Thriller, Crime
-- kept (not its first genre): Death on the Nile (2022) - Mystery, Crime, Thriller
 - kept (not its first genre): Girl in the Basement (2021) - Thriller, Crime, TV Movie
 - kept (not its first genre): Bad Boys for Life (2020) - Thriller, Action, Crime
+- kept (not its first genre): Death on the Nile (2022) - Mystery, Crime, Thriller
 - kept (not its first genre): The Accountant² (2025) - Mystery, Crime, Thriller
-- kept (not its first genre): Ace Ventura: Pet Detective (1994) - Comedy, Crime, Mystery
 - kept (not its first genre): The Secret Agent (2025) - Thriller, Drama, Crime
-- kept (not its first genre): Pineapple Express (2008) - Action, Comedy, Crime
-- kept (not its first genre): Super Troopers 3 (2026) - Comedy, Crime, Mystery
-- kept (not its first genre): The Boondock Saints (1999) - Action, Thriller, Crime
 - kept (not its first genre): High Rollers (2025) - Action, Crime, Thriller, TV Movie
+- kept (not its first genre): Ace Ventura: Pet Detective (1994) - Comedy, Crime, Mystery
+- kept (not its first genre): Super Troopers 3 (2026) - Comedy, Crime, Mystery
+- kept (not its first genre): Pineapple Express (2008) - Action, Comedy, Crime
+- kept (not its first genre): The Boondock Saints (1999) - Action, Thriller, Crime
+- kept (not its first genre): Hustlers (2019) - Drama, Comedy, Crime
 - kept (not its first genre): The Gentleman Thief (2026) - Action, Crime, Thriller
-- kept (not its first genre): The Roundup: No Way Out (2023) - Action, Crime, Thriller
 - left out: Believe Me: The Abduction of Lisa McVey (2018) [movie:550776] - Drama, TV Movie, Crime
 - left out: Strange Harvest (2025) [movie:1330443] - Horror, Crime, Mystery
 - left out: Assassin (2023) [movie:921355] - Action, Thriller, Sci-Fi, Crime
@@ -3504,19 +3504,19 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 ## Hulu · Crime Series (series) - 200 kept of 216 looked at
 - kept (not its first genre): CSI: Miami (2002) - Drama, Mystery, Crime
 - kept (not its first genre): The X-Files (1993) - Mystery, Sci-Fi & Fantasy, Crime
-- kept (not its first genre): 9-1-1 (2018) - Drama, Crime, Action & Adventure
 - kept (not its first genre): Castle (2009) - Drama, Crime
 - kept (not its first genre): 24 (2001) - Action & Adventure, Drama, Crime
+- kept (not its first genre): 9-1-1 (2018) - Drama, Crime, Action & Adventure
 - kept (not its first genre): Prison Break (2005) - Action & Adventure, Crime, Drama
-- kept (not its first genre): Elementary (2012) - Drama, Mystery, Crime
 - kept (not its first genre): Tracker (2024) - Drama, Crime
+- kept (not its first genre): Elementary (2012) - Drama, Mystery, Crime
 - kept (not its first genre): High Potential (2024) - Drama, Crime, Mystery
-- kept (not its first genre): Snowfall (2017) - Drama, Crime
 - kept (not its first genre): Burn Notice (2007) - Action & Adventure, Drama, Crime
+- kept (not its first genre): Snowfall (2017) - Drama, Crime
 - kept (not its first genre): Damages (2007) - Mystery, Drama, Crime
 - kept (not its first genre): 9-1-1: Lone Star (2020) - Drama, Action & Adventure, Crime
 - kept (not its first genre): Agatha Christie's Marple (2004) - Drama, Crime, Mystery
-- kept (not its first genre): Godfather of Harlem (2019) - Drama, Crime
+- kept (not its first genre): All Rise (2019) - Drama, Crime
 - left out: Homeland (2011) [tv:1407] - Drama, War & Politics, Crime
 - left out: Only Murders in the Building (2021) [tv:107113] - Comedy, Mystery, Crime
 - left out: HIP - High Intellectual Potential (2021) [tv:112738] - Comedy, Mystery, Crime, Family
@@ -3527,29 +3527,29 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Unmasked (2025) [tv:239006] - Comedy, Crime, Mystery, Drama
 - left out: Seoul Busters (2024) [tv:239005] - Comedy, Crime, Drama
 - left out: Crash (2024) [tv:226102] - Action & Adventure, Comedy, Crime
-- left out: Body Cam (2018) [tv:91183] - Documentary, Reality, Crime
 - left out: Sunny Nights (2025) [tv:258918] - Comedy, Crime, Drama
+- left out: Body Cam (2018) [tv:91183] - Documentary, Reality, Crime
 - left out: A Crime to Remember (2013) [tv:68549] - Documentary, Drama, Crime, Reality
 - left out: Cleaning Up (2022) [tv:195745] - Comedy, Crime, Drama
 - left out: Obsession: Dark Desires (2014) [tv:47986] - Drama, Documentary, Crime, Reality
 - left out: Nightwatch (2015) [tv:64559] - Reality, Documentary, Crime
 
-## Hulu · Drama Movies (movie) - 224 kept of 311 looked at
+## Hulu · Drama Movies (movie) - 225 kept of 315 looked at
 - kept (not its first genre): Apocalypto (2006) - Action, Drama, History
 - kept (not its first genre): Edward Scissorhands (1990) - Fantasy, Drama, Romance
 - kept (not its first genre): Road House (2024) - Action, Thriller, Drama
 - kept (not its first genre): The Woman King (2022) - Action, Drama, History, War
-- kept (not its first genre): In the Blink of an Eye (2026) - Sci-Fi, Drama
 - kept (not its first genre): Brothers Under Fire (2026) - Action, Thriller, Mystery, Drama
 - kept (not its first genre): The Secret Agent (2025) - Thriller, Drama, Crime
-- kept (not its first genre): Bāhubali: The Beginning (2015) - Action, Drama
 - kept (not its first genre): Miracle on 34th Street (1994) - Fantasy, Drama, Family
-- kept (not its first genre): Good Luck to You, Leo Grande (2022) - Romance, Drama
+- kept (not its first genre): In the Blink of an Eye (2026) - Sci-Fi, Drama
+- kept (not its first genre): The Promised Land (2023) - Action, Drama, History
+- kept (not its first genre): Nightmare Alley (2021) - Crime, Drama, Thriller
+- kept (not its first genre): Bāhubali: The Beginning (2015) - Action, Drama
 - kept (not its first genre): The Hand That Rocks the Cradle (2025) - Thriller, Drama
 - kept (not its first genre): The Green Knight (2021) - Adventure, Drama, Fantasy
+- kept (not its first genre): Good Luck to You, Leo Grande (2022) - Romance, Drama
 - kept (not its first genre): All of Us Strangers (2023) - Romance, Drama, Fantasy
-- kept (not its first genre): Nightmare Alley (2021) - Crime, Drama, Thriller
-- kept (not its first genre): Lee (2024) - History, Drama, War
 - left out: The Secret Life of Walter Mitty (2013) [movie:116745] - Adventure, Comedy, Drama, Fantasy
 - left out: Mrs. Doubtfire (1993) [movie:788] - Comedy, Drama, Family
 - left out: A Man Called Otto (2022) [movie:937278] - Comedy, Drama
@@ -3562,8 +3562,10 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Risky Business (1983) [movie:9346] - Romance, Comedy, Drama
 - left out: The Upside (2019) [movie:440472] - Comedy, Drama
 - left out: The Ugly Stepsister (2025) [movie:1284120] - Horror, Comedy, Drama
+- left out: Jack Frost (1998) [movie:9745] - Comedy, Family, Drama, Fantasy
 - left out: The Family Stone (2005) [movie:9043] - Comedy, Drama, Romance
 - left out: Rental Family (2025) [movie:1208348] - Comedy, Drama
+- left out: Fred Claus (2007) [movie:5375] - Action, Comedy, Drama
 - left out: Dumb Money (2023) [movie:792293] - History, Comedy, Drama
 - left out: Presence (2025) [movie:1140535] - Horror, Drama
 - left out: The Roses (2025) [movie:1267905] - Comedy, Drama, Romance
@@ -3573,17 +3575,15 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Hick (2012) [movie:94363] - Comedy, Drama
 - left out: Saturday Night (2024) [movie:1120911] - Comedy, Drama
 - left out: Almost Christmas (2016) [movie:340402] - Comedy, Drama
-- left out: Big Time Adolescence (2020) [movie:539617] - Comedy, Drama
-- left out: Code 3 (2025) [movie:1161617] - Comedy, Action, Drama
 
 ## Hulu · Drama Series (series) - 300 kept of 440 looked at
 - kept (not its first genre): The Mentalist (2008) - Crime, Drama, Mystery
 - kept (not its first genre): Law & Order: Special Victims Unit (1999) - Crime, Drama, Mystery
 - kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
+- kept (not its first genre): The Rookie (2018) - Crime, Drama, Comedy
 - kept (not its first genre): Luther (2010) - Crime, Drama, Mystery
 - kept (not its first genre): Law & Order (1990) - Crime, Drama
 - kept (not its first genre): CSI: Crime Scene Investigation (2000) - Crime, Drama, Mystery
-- kept (not its first genre): The Rookie (2018) - Crime, Drama, Comedy
 - kept (not its first genre): Bones (2005) - Crime, Drama
 - kept (not its first genre): Desperate Housewives (2004) - Mystery, Drama, Comedy
 - kept (not its first genre): Smallville (2001) - Sci-Fi & Fantasy, Action & Adventure, Drama
@@ -3591,7 +3591,7 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Lost (2004) - Mystery, Action & Adventure, Drama
 - kept (not its first genre): 24 (2001) - Action & Adventure, Drama, Crime
 - kept (not its first genre): Prison Break (2005) - Action & Adventure, Crime, Drama
-- kept (not its first genre): Sons of Anarchy (2008) - Crime, Drama
+- kept (not its first genre): Fringe (2008) - Sci-Fi & Fantasy, Drama, Mystery
 - left out: Charmed (1998) [tv:1981] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Buffy the Vampire Slayer (1997) [tv:95] - Comedy, Drama, Sci-Fi & Fantasy
 - left out: Love, Victor (2020) [tv:97186] - Comedy, Drama
@@ -3618,22 +3618,22 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Shameless (2004) [tv:1906] - Comedy, Drama
 - left out: Ramy (2019) [tv:87382] - Comedy, Drama
 
-## Hulu · Family Movies (movie) - 31 kept of 33 looked at
+## Hulu · Family Movies (movie) - 33 kept of 35 looked at
 - kept (not its first genre): Night at the Museum (2006) - Fantasy, Family, Comedy
 - kept (not its first genre): Night at the Museum: Secret of the Tomb (2014) - Adventure, Comedy, Fantasy, Family
 - kept (not its first genre): The Chronicles of Narnia: The Voyage of the Dawn Treader (2010) - Adventure, Family, Fantasy
 - kept (not its first genre): Mrs. Doubtfire (1993) - Comedy, Drama, Family
-- kept (not its first genre): Paddington in Peru (2024) - Adventure, Comedy, Family
 - kept (not its first genre): Night at the Museum: Battle of the Smithsonian (2009) - Adventure, Fantasy, Action, Comedy, Family
+- kept (not its first genre): Paddington in Peru (2024) - Adventure, Comedy, Family
 - kept (not its first genre): Miracle on 34th Street (1994) - Fantasy, Drama, Family
+- kept (not its first genre): A Christmas Story (1983) - Comedy, Family
 - kept (not its first genre): Cheaper by the Dozen (2003) - Comedy, Family
 - kept (not its first genre): Lyle, Lyle, Crocodile (2022) - Comedy, Family, Music
 - kept (not its first genre): The Forge (2024) - Drama, Family
+- kept (not its first genre): Jack Frost (1998) - Comedy, Family, Drama, Fantasy
 - kept (not its first genre): Muppets Haunted Mansion (2021) - Comedy, Family, TV Movie
 - kept (not its first genre): The Tiger Rising (2022) - Adventure, Family, Drama
 - kept (not its first genre): The Present (2024) - Comedy, Fantasy, Family
-- kept (not its first genre): Hridayapoorvam (2025) - Romance, Comedy, Drama, Family
-- kept (not its first genre): March of the Penguins 2: The Next Step (2017) - Documentary, Family, Adventure
 - left out: A Christmas Switch (2018) [movie:559337] - Comedy, TV Movie, Drama, Family
 - left out: Christmas Plus One (2022) [movie:993030] - TV Movie, Romance, Family, Comedy
 
@@ -3643,38 +3643,39 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Frasier (1993) - Comedy, Family
 - kept (not its first genre): Dancing with the Stars (2005) - Reality, Family
 - kept (not its first genre): Bewitched (1964) - Sci-Fi & Fantasy, Comedy, Family, Drama
-- kept (not its first genre): The Nanny (1993) - Comedy, Family
 - kept (not its first genre): Full House (1987) - Comedy, Family
 - kept (not its first genre): Sabrina, the Teenage Witch (1996) - Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): The Nanny (1993) - Comedy, Family
 - kept (not its first genre): Family Matters (1989) - Comedy, Family
 - kept (not its first genre): The Wonder Years (1988) - Comedy, Drama, Family
 - kept (not its first genre): I Dream of Jeannie (1965) - Sci-Fi & Fantasy, Comedy, Family
 - kept (not its first genre): The Fresh Prince of Bel-Air (1990) - Comedy, Family
-- kept (not its first genre): Switched at Birth (2011) - Drama, Family
 - kept (not its first genre): Raising Hope (2010) - Comedy, Family
+- kept (not its first genre): Switched at Birth (2011) - Drama, Family
 - kept (not its first genre): Mahabharat (2013) - Drama, Family
 - left out: HIP - High Intellectual Potential (2021) [tv:112738] - Comedy, Mystery, Crime, Family
 - left out: Sister Wives (2010) [tv:34045] - Reality, Drama, Family
 - left out: Homestead Rescue (2016) [tv:68975] - Reality, Drama, Family
 
-## Hulu · Sci-Fi & Fantasy Movies (movie) - 119 kept of 130 looked at
+## Hulu · Sci-Fi & Fantasy Movies (movie) - 120 kept of 132 looked at
 - kept (not its first genre): The Hunger Games: Catching Fire (2013) - Adventure, Action, Sci-Fi
 - kept (not its first genre): The Hunger Games: Mockingjay - Part 2 (2015) - Action, Adventure, Sci-Fi
 - kept (not its first genre): Predator: Badlands (2025) - Action, Sci-Fi, Adventure
 - kept (not its first genre): The Substance (2024) - Horror, Sci-Fi
+- kept (not its first genre): Wicked (2024) - Drama, Romance, Fantasy
 - kept (not its first genre): Aliens (1986) - Action, Thriller, Sci-Fi
 - kept (not its first genre): Alien: Romulus (2024) - Horror, Sci-Fi
 - kept (not its first genre): Jumanji: The Next Level (2019) - Adventure, Comedy, Fantasy
-- kept (not its first genre): Wicked (2024) - Drama, Romance, Fantasy
-- kept (not its first genre): Ghostbusters (1984) - Comedy, Fantasy
-- kept (not its first genre): Jumanji: Welcome to the Jungle (2017) - Adventure, Comedy, Fantasy
-- kept (not its first genre): Resident Evil: Welcome to Raccoon City (2021) - Action, Horror, Sci-Fi
-- kept (not its first genre): Nosferatu (2024) - Horror, Fantasy
-- kept (not its first genre): Companion (2025) - Horror, Sci-Fi, Thriller
-- kept (not its first genre): War for the Planet of the Apes (2017) - Drama, Sci-Fi, War
 - kept (not its first genre): Prey (2022) - Thriller, Action, Sci-Fi
+- kept (not its first genre): Ghostbusters (1984) - Comedy, Fantasy
+- kept (not its first genre): Nosferatu (2024) - Horror, Fantasy
+- kept (not its first genre): War for the Planet of the Apes (2017) - Drama, Sci-Fi, War
+- kept (not its first genre): Companion (2025) - Horror, Sci-Fi, Thriller
+- kept (not its first genre): Jumanji: Welcome to the Jungle (2017) - Adventure, Comedy, Fantasy
+- kept (not its first genre): The Meg (2018) - Action, Sci-Fi, Horror
 - left out: The Secret Life of Walter Mitty (2013) [movie:116745] - Adventure, Comedy, Drama, Fantasy
 - left out: The Family Man (2000) [movie:5994] - Comedy, Drama, Romance, Fantasy
+- left out: Jack Frost (1998) [movie:9745] - Comedy, Family, Drama, Fantasy
 - left out: Primitive War (2025) [movie:1257009] - Action, Horror, War, Sci-Fi
 - left out: Werewolves (2024) [movie:970450] - Action, Horror, Thriller, Sci-Fi
 - left out: Harold and the Purple Crayon (2024) [movie:826510] - Family, Comedy, Adventure, Fantasy
@@ -3706,22 +3707,22 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Connect (2022) [tv:137043] - Mystery, Drama, Crime, Sci-Fi & Fantasy
 - left out: Class of '09 (2023) [tv:127948] - Drama, Mystery, Crime, Sci-Fi & Fantasy
 
-## Hulu · History & War Movies (movie) - 38 kept of 44 looked at
+## Hulu · History & War Movies (movie) - 39 kept of 45 looked at
 - kept (not its first genre): Apocalypto (2006) - Action, Drama, History
-- kept (not its first genre): The Last Duel (2021) - Drama, History
 - kept (not its first genre): The Woman King (2022) - Action, Drama, History, War
+- kept (not its first genre): The Last Duel (2021) - Drama, History
 - kept (not its first genre): Land of Bad (2024) - Action, War, Thriller
 - kept (not its first genre): The Voice of Hind Rajab (2025) - Drama, History
+- kept (not its first genre): I'm Still Here (2024) - Drama, History
+- kept (not its first genre): The Promised Land (2023) - Action, Drama, History
 - kept (not its first genre): Kandahar (2023) - Action, Thriller, War
 - kept (not its first genre): Flamin' Hot (2023) - Drama, History
-- kept (not its first genre): The Promised Land (2023) - Action, Drama, History
 - kept (not its first genre): Small Things Like These (2024) - Drama, History
 - kept (not its first genre): William Tell (2025) - Action, Adventure, Drama, History
-- kept (not its first genre): Miracle (2004) - Drama, History
 - kept (not its first genre): Harbin (2024) - Action, Thriller, History, War
-- kept (not its first genre): Mr. Jones (2019) - Thriller, Drama, History
+- kept (not its first genre): Miracle (2004) - Drama, History
 - kept (not its first genre): One Shot (2021) - Action, Thriller, Crime, War
-- kept (not its first genre): The Luckiest Man in America (2025) - Drama, History, Comedy
+- kept (not its first genre): Mr. Jones (2019) - Thriller, Drama, History
 - left out: War for the Planet of the Apes (2017) [movie:281338] - Drama, Sci-Fi, War
 - left out: Boston Strangler (2023) [movie:881164] - Crime, Mystery, Thriller, History
 - left out: Primitive War (2025) [movie:1257009] - Action, Horror, War, Sci-Fi
@@ -3741,21 +3742,21 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Whiskey on the Rocks (2024) [tv:274061] - Drama, Comedy, War & Politics
 
 ## Hulu · Horror Movies (movie) - 159 kept of 170 looked at
-- kept (not its first genre): Resident Evil: Welcome to Raccoon City (2021) - Action, Horror, Sci-Fi
 - kept (not its first genre): Longlegs (2024) - Crime, Horror, Mystery
 - kept (not its first genre): The Meg (2018) - Action, Sci-Fi, Horror
+- kept (not its first genre): Resident Evil: Welcome to Raccoon City (2021) - Action, Horror, Sci-Fi
 - kept (not its first genre): Meg 2: The Trench (2023) - Action, Sci-Fi, Horror
 - kept (not its first genre): Heretic (2024) - Thriller, Horror
 - kept (not its first genre): Osiris (2025) - Sci-Fi, Action, Horror
 - kept (not its first genre): Primitive War (2025) - Action, Horror, War, Sci-Fi
+- kept (not its first genre): Unhinged (2020) - Action, Thriller, Horror
 - kept (not its first genre): Run (2020) - Thriller, Horror, Drama
 - kept (not its first genre): Psycho Killer (2026) - Crime, Horror, Mystery
-- kept (not its first genre): Unhinged (2020) - Action, Thriller, Horror
 - kept (not its first genre): Don't Breathe 2 (2021) - Thriller, Horror
-- kept (not its first genre): Werewolves (2024) - Action, Horror, Thriller, Sci-Fi
-- kept (not its first genre): The Rajasaab (2026) - Fantasy, Horror, Comedy
 - kept (not its first genre): Arcadian (2024) - Action, Horror, Sci-Fi
 - kept (not its first genre): Azrael (2024) - Action, Horror, Thriller
+- kept (not its first genre): Werewolves (2024) - Action, Horror, Thriller, Sci-Fi
+- kept (not its first genre): No Way Up (2024) - Thriller, Horror, Action
 - left out: Fantasy Island (2020) [movie:539537] - Adventure, Fantasy, Horror, Mystery
 - left out: In the Lost Lands (2025) [movie:324544] - Action, Adventure, Fantasy, Horror
 - left out: Nightbitch (2024) [movie:728949] - Comedy, Horror
@@ -3774,15 +3775,15 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Die Hard (1988) - Action, Thriller
 - kept (not its first genre): Aliens (1986) - Action, Thriller, Sci-Fi
 - kept (not its first genre): Return to Silent Hill (2026) - Horror, Mystery
-- kept (not its first genre): Hereditary (2018) - Horror, Mystery, Thriller
-- kept (not its first genre): Die Hard: With a Vengeance (1995) - Action, Thriller
-- kept (not its first genre): Send Help (2026) - Horror, Thriller, Comedy
 - kept (not its first genre): Companion (2025) - Horror, Sci-Fi, Thriller
-- kept (not its first genre): Road House (2024) - Action, Thriller, Drama
+- kept (not its first genre): Hereditary (2018) - Horror, Mystery, Thriller
+- kept (not its first genre): Send Help (2026) - Horror, Thriller, Comedy
 - kept (not its first genre): Longlegs (2024) - Crime, Horror, Mystery
-- kept (not its first genre): Soulm8te (2026) - Horror, Sci-Fi, Thriller
+- kept (not its first genre): Road House (2024) - Action, Thriller, Drama
+- kept (not its first genre): Die Hard: With a Vengeance (1995) - Action, Thriller
 - kept (not its first genre): The Equalizer 3 (2023) - Action, Thriller, Crime
-- kept (not its first genre): Die Hard 2 (1990) - Action, Thriller
+- kept (not its first genre): Soulm8te (2026) - Horror, Sci-Fi, Thriller
+- kept (not its first genre): Barbarian (2022) - Horror, Mystery, Thriller
 - left out: Bullet Train (2022) [movie:718930] - Action, Comedy, Thriller
 - left out: Uncharted (2022) [movie:335787] - Action, Adventure, Mystery
 - left out: Ace Ventura: Pet Detective (1994) [movie:3049] - Comedy, Crime, Mystery
@@ -3810,8 +3811,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Siruthai (2011) [movie:63448] - Action, Comedy, Drama, Thriller
 
 ## Hulu · Mystery & Thriller Series (series) - 124 kept of 124 looked at
-- kept (not its first genre): American Horror Story (2011) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): The Mentalist (2008) - Crime, Drama, Mystery
+- kept (not its first genre): American Horror Story (2011) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Law & Order: Special Victims Unit (1999) - Crime, Drama, Mystery
 - kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
 - kept (not its first genre): Luther (2010) - Crime, Drama, Mystery
@@ -3827,19 +3828,19 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): How to Get Away with Murder (2014) - Crime, Drama, Mystery
 
 ## Hulu · Romance Movies (movie) - 107 kept of 124 looked at
-- kept (not its first genre): Little Women (2019) - Drama, Romance
-- kept (not its first genre): Anora (2024) - Drama, Comedy, Romance
-- kept (not its first genre): Poor Things (2023) - Sci-Fi, Romance, Comedy
 - kept (not its first genre): Wicked (2024) - Drama, Romance, Fantasy
+- kept (not its first genre): Little Women (2019) - Drama, Romance
+- kept (not its first genre): Poor Things (2023) - Sci-Fi, Romance, Comedy
+- kept (not its first genre): Anora (2024) - Drama, Comedy, Romance
 - kept (not its first genre): Edward Scissorhands (1990) - Fantasy, Drama, Romance
 - kept (not its first genre): The Holiday (2006) - Comedy, Romance
 - kept (not its first genre): The Princess Bride (1987) - Fantasy, Comedy, Romance, Adventure
 - kept (not its first genre): No Hard Feelings (2023) - Comedy, Romance
+- kept (not its first genre): Palm Springs (2020) - Comedy, Romance, Sci-Fi
 - kept (not its first genre): Romeo + Juliet (1996) - Drama, Romance
 - kept (not its first genre): It Ends with Us (2024) - Drama, Romance
-- kept (not its first genre): Palm Springs (2020) - Comedy, Romance, Sci-Fi
-- kept (not its first genre): Cruel Intentions (1999) - Drama, Romance
 - kept (not its first genre): The Family Man (2000) - Comedy, Drama, Romance, Fantasy
+- kept (not its first genre): Cruel Intentions (1999) - Drama, Romance
 - kept (not its first genre): The Roses (2025) - Comedy, Drama, Romance
 - kept (not its first genre): Last Christmas (2019) - Comedy, Drama, Romance
 - left out: Where the Crawdads Sing (2022) [movie:682507] - Drama, Mystery, Romance
@@ -3865,22 +3866,22 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Stray Kids: The dominATE Experience (2026) - Music, Documentary
 - kept (not its first genre): Derek DelGaudio's In & of Itself (2020) - Drama, Documentary
 
-## Hulu · Docuseries (series) - 150 kept of 150 looked at
+## Hulu · Docuseries (series) - 151 kept of 151 looked at
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
 - kept (not its first genre): Snapped (2004) - Crime, Documentary
 - kept (not its first genre): Forensic Files (1996) - Crime, Documentary
 - kept (not its first genre): Mountain Men (2012) - Reality, Documentary
 - kept (not its first genre): The Secret Lives of Mormon Wives (2024) - Reality, Documentary
-- kept (not its first genre): The Secret of Skinwalker Ranch (2020) - Reality, Documentary
 - kept (not its first genre): The Joy of Painting (1983) - Family, Documentary
 - kept (not its first genre): Court Cam (2019) - Reality, Crime, Documentary
+- kept (not its first genre): The Secret of Skinwalker Ranch (2020) - Reality, Documentary
 - kept (not its first genre): Evil Lives Here (2016) - Crime, Documentary
 - kept (not its first genre): Life Below Zero (2013) - Reality, Documentary
-- kept (not its first genre): See No Evil (2015) - Crime, Documentary
 - kept (not its first genre): House Hunters (1999) - Reality, Documentary
-- kept (not its first genre): The Proof Is Out There (2021) - Sci-Fi & Fantasy, Documentary
-- kept (not its first genre): The Incredible Dr. Pol (2011) - Reality, Documentary
+- kept (not its first genre): See No Evil (2015) - Crime, Documentary
 - kept (not its first genre): American Monster (2016) - Crime, Documentary
+- kept (not its first genre): The Incredible Dr. Pol (2011) - Reality, Documentary
+- kept (not its first genre): The Proof Is Out There (2021) - Sci-Fi & Fantasy, Documentary
 
 ## Hulu · Nature Documentary Movies (movie) - 5 kept of 5 looked at
 
@@ -3892,21 +3893,21 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Curse of Oak Island (2014) - Mystery, Action & Adventure, Reality, Documentary
 - kept (not its first genre): Welcome to Wrexham (2022) - Documentary, Reality
 - kept (not its first genre): Expedition Unknown (2015) - Documentary, Reality, Action & Adventure
-- kept (not its first genre): Holiday Baking Championship (2014) - Family, Reality
 - kept (not its first genre): Intervention (2005) - Documentary, Reality
-- kept (not its first genre): 7 Little Johnstons (2015) - Comedy, Family, Reality
 - kept (not its first genre): Hoarders (2009) - Documentary, Reality, Drama
+- kept (not its first genre): Holiday Baking Championship (2014) - Family, Reality
 - kept (not its first genre): Live PD (2016) - Documentary, Crime, Reality
-- kept (not its first genre): LEGO Masters (2020) - Family, Reality
 - kept (not its first genre): Taskmaster Australia (2023) - Comedy, Reality
+- kept (not its first genre): LEGO Masters (2020) - Family, Reality
+- kept (not its first genre): 7 Little Johnstons (2015) - Comedy, Family, Reality
 - kept (not its first genre): Halloween Baking Championship (2015) - Family, Reality
 - kept (not its first genre): Expedition X (2020) - Mystery, Reality
-- kept (not its first genre): Ice Road Rescue (2015) - Documentary, Reality, Drama
+- kept (not its first genre): Battle of Fates (2026) - Mystery, Reality
 
 ## Hulu · Western Movies (movie) - 8 kept of 8 looked at
+- kept (not its first genre): Thieves Highway (2025) - Crime, Thriller, Western, Action
 - kept (not its first genre): Americana (2025) - Crime, Western, Comedy
 - kept (not its first genre): Killing Faith (2025) - Thriller, Western
-- kept (not its first genre): Thieves Highway (2025) - Crime, Thriller, Western, Action
 - kept (not its first genre): Tornado (2025) - Drama, Action, Western
 - kept (not its first genre): The Old Way (2023) - Action, Drama, Western
 - kept (not its first genre): Butcher's Crossing (2023) - Adventure, Drama, Western
@@ -3920,17 +3921,17 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Dunkirk (2017) - War, Action, History
 - kept (not its first genre): Transformers: Rise of the Beasts (2023) - Sci-Fi, Adventure, Action
 - kept (not its first genre): Transformers: Age of Extinction (2014) - Sci-Fi, Action, Adventure
-- kept (not its first genre): Shooter (2007) - Drama, Action, Thriller
 - kept (not its first genre): Terminator Genisys (2015) - Sci-Fi, Action, Thriller
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2014) - Sci-Fi, Action, Adventure, Comedy
-- kept (not its first genre): Star Trek (2009) - Sci-Fi, Action, Adventure
-- kept (not its first genre): A.I. Artificial Intelligence (2001) - Drama, Sci-Fi, Adventure
-- kept (not its first genre): Minority Report (2002) - Sci-Fi, Action, Thriller
-- kept (not its first genre): Jack Reacher (2012) - Crime, Drama, Thriller, Action
+- kept (not its first genre): Shooter (2007) - Drama, Action, Thriller
 - kept (not its first genre): Ghost in the Shell (2017) - Sci-Fi, Drama, Action
-- kept (not its first genre): Terminator: Dark Fate (2019) - Sci-Fi, Action, Adventure, Thriller
+- kept (not its first genre): Star Trek (2009) - Sci-Fi, Action, Adventure
+- kept (not its first genre): Jack Reacher (2012) - Crime, Drama, Thriller, Action
+- kept (not its first genre): A.I. Artificial Intelligence (2001) - Drama, Sci-Fi, Adventure
 - kept (not its first genre): The Naked Gun (2025) - Comedy, Crime, Action
+- kept (not its first genre): Terminator: Dark Fate (2019) - Sci-Fi, Action, Adventure, Thriller
 - kept (not its first genre): Tropic Thunder (2008) - Comedy, War, Action, Adventure
+- kept (not its first genre): Minority Report (2002) - Sci-Fi, Action, Thriller
 - left out: Braveheart (1995) [movie:197] - History, Drama, War, Action
 - left out: Hansel & Gretel: Witch Hunters (2013) [movie:60304] - Fantasy, Horror, Action
 - left out: Resident Evil: Apocalypse (2004) [movie:1577] - Horror, Action, Sci-Fi
@@ -3949,15 +3950,15 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Paramount+ · Action & Adventure Series (series) - 33 kept of 34 looked at
 - kept (not its first genre): NCIS (2003) - Crime, Drama, Action & Adventure
+- kept (not its first genre): Marshals (2026) - Drama, Crime, Action & Adventure
 - kept (not its first genre): Hawaii Five-0 (2010) - Crime, Drama, Action & Adventure
 - kept (not its first genre): FBI (2018) - Crime, Action & Adventure, Drama
-- kept (not its first genre): Star Trek: The Next Generation (1987) - Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery
 - kept (not its first genre): JAG (1995) - Drama, Action & Adventure, Crime
-- kept (not its first genre): Star Trek: Voyager (1995) - Sci-Fi & Fantasy, Drama, Action & Adventure
+- kept (not its first genre): Star Trek: The Next Generation (1987) - Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery
 - kept (not its first genre): Star Trek: Deep Space Nine (1993) - Sci-Fi & Fantasy, Action & Adventure, Drama
-- kept (not its first genre): Marshals (2026) - Drama, Crime, Action & Adventure
-- kept (not its first genre): MacGyver (1985) - Drama, Action & Adventure, Crime
+- kept (not its first genre): Star Trek: Voyager (1995) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): Star Trek: Enterprise (2001) - Sci-Fi & Fantasy, Action & Adventure, Drama
+- kept (not its first genre): MacGyver (1985) - Drama, Action & Adventure, Crime
 - kept (not its first genre): Star Trek: Discovery (2017) - Sci-Fi & Fantasy, Action & Adventure, Drama
 - kept (not its first genre): Battlestar Galactica (2004) - Sci-Fi & Fantasy, Action & Adventure, Drama
 - kept (not its first genre): MacGyver (2016) - Drama, Action & Adventure
@@ -3968,16 +3969,16 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 ## Paramount+ · Animation Movies (movie) - 79 kept of 79 looked at
 - kept (not its first genre): How to Train Your Dragon (2010) - Fantasy, Adventure, Animation, Family
 - kept (not its first genre): How to Train Your Dragon 2 (2014) - Fantasy, Action, Adventure, Animation, Family
-- kept (not its first genre): The SpongeBob Movie: Search for SquarePants (2025) - Adventure, Family, Animation, Comedy, Fantasy
 - kept (not its first genre): PAW Patrol: The Mighty Movie (2023) - Adventure, Animation, Comedy, Sci-Fi, Family, Action
+- kept (not its first genre): The SpongeBob Movie: Search for SquarePants (2025) - Adventure, Family, Animation, Comedy, Fantasy
+- kept (not its first genre): The Adventures of Tintin (2011) - Adventure, Animation, Mystery
 - kept (not its first genre): The SpongeBob SquarePants Movie (2004) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): The Smurfs 2 (2013) - Fantasy, Family, Comedy, Animation
-- kept (not its first genre): The Adventures of Tintin (2011) - Adventure, Animation, Mystery
 - kept (not its first genre): The SpongeBob Movie: Sponge Out of Water (2015) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): PAW Patrol: The Movie (2021) - Action, Adventure, Animation, Comedy, Family
 - kept (not its first genre): The SpongeBob Movie: Sponge on the Run (2020) - Adventure, Animation, Comedy, Family, Fantasy
-- kept (not its first genre): Smurfs: The Lost Village (2017) - Family, Comedy, Adventure, Animation, Fantasy
 - kept (not its first genre): The Little Prince (2015) - Adventure, Animation, Fantasy, Family
+- kept (not its first genre): Smurfs: The Lost Village (2017) - Family, Comedy, Adventure, Animation, Fantasy
 - kept (not its first genre): Jimmy Neutron: Boy Genius (2001) - Family, Comedy, Adventure, Animation, Sci-Fi
 - kept (not its first genre): The King of Kings (2025) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): Frosty the Snowman (1969) - Family, Animation, TV Movie
@@ -3989,32 +3990,32 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Teenage Mutant Ninja Turtles (1987) - Action & Adventure, Animation, Comedy, Kids
 - kept (not its first genre): Blaze and the Monster Machines (2014) - Kids, Animation, Family, Comedy
 - kept (not its first genre): Dora the Explorer (2000) - Action & Adventure, Animation, Family, Kids
-- kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
 - kept (not its first genre): Star Trek: Lower Decks (2020) - Sci-Fi & Fantasy, Animation, Comedy
-- kept (not its first genre): Blue's Clues (1996) - Kids, Comedy, Animation, Family
+- kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
 - kept (not its first genre): Caroline in the City (1995) - Comedy, Drama, Animation
+- kept (not its first genre): Blue's Clues (1996) - Kids, Comedy, Animation, Family
 - kept (not its first genre): The Backyardigans (2004) - Kids, Animation
 - kept (not its first genre): Daria (1997) - Comedy, Animation
 - kept (not its first genre): Team Umizoomi (2010) - Action & Adventure, Animation, Kids, Sci-Fi & Fantasy
-- kept (not its first genre): Sonic Underground (1999) - Action & Adventure, Animation, Kids
 - kept (not its first genre): Everybody Still Hates Chris (2024) - Comedy, Animation
+- kept (not its first genre): Sonic Underground (1999) - Action & Adventure, Animation, Kids
 
 ## Paramount+ · Comedy Movies (movie) - 300 kept of 341 looked at
 - kept (not its first genre): Sonic the Hedgehog 3 (2024) - Action, Sci-Fi, Comedy, Family
-- kept (not its first genre): Rush Hour (1998) - Action, Comedy, Crime
 - kept (not its first genre): Mean Girls (2004) - Drama, Comedy
 - kept (not its first genre): Men in Black (1997) - Action, Adventure, Comedy, Sci-Fi
-- kept (not its first genre): Jumanji: Welcome to the Jungle (2017) - Adventure, Comedy, Fantasy
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2014) - Sci-Fi, Action, Adventure, Comedy
+- kept (not its first genre): Jumanji: Welcome to the Jungle (2017) - Adventure, Comedy, Fantasy
+- kept (not its first genre): Rush Hour (1998) - Action, Comedy, Crime
+- kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
 - kept (not its first genre): Sonic the Hedgehog (2020) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): Jackass: Best and Last (2026) - Action, Comedy, Documentary
-- kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
-- kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
-- kept (not its first genre): Men in Black II (2002) - Action, Comedy, Sci-Fi
 - kept (not its first genre): Dungeons & Dragons: Honor Among Thieves (2023) - Adventure, Fantasy, Comedy
-- kept (not its first genre): Rush Hour 2 (2001) - Action, Comedy, Crime
-- kept (not its first genre): 21 Jump Street (2012) - Action, Comedy, Crime
+- kept (not its first genre): Men in Black II (2002) - Action, Comedy, Sci-Fi
+- kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
 - kept (not its first genre): Men in Black 3 (2012) - Action, Comedy, Sci-Fi
+- kept (not its first genre): 21 Jump Street (2012) - Action, Comedy, Crime
+- kept (not its first genre): Roofman (2025) - Crime, Comedy, Drama
 - left out: Pulp Fiction (1994) [movie:680] - Thriller, Crime, Comedy
 - left out: The Wolf of Wall Street (2013) [movie:106646] - Crime, Drama, Comedy
 - left out: Goosebumps (2015) [movie:257445] - Adventure, Horror, Comedy
@@ -4046,9 +4047,9 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): The Thundermans (2013) - Action & Adventure, Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Kenan & Kel (1996) - Family, Comedy, Kids
 - kept (not its first genre): Wildboyz (2003) - Reality, Comedy
-- kept (not its first genre): Undercover Boss (2010) - Reality, Comedy
 - kept (not its first genre): Knuckles (2024) - Action & Adventure, Family, Comedy
 - kept (not its first genre): Tyler Perry's Zatima (2022) - Drama, Comedy
+- kept (not its first genre): Undercover Boss (2010) - Reality, Comedy
 - kept (not its first genre): Hey Dude (1989) - Western, Comedy, Family
 - kept (not its first genre): Noah's Arc (2005) - Drama, Comedy
 - kept (not its first genre): The Naked Brothers Band (2007) - Documentary, Comedy, Kids, Family
@@ -4070,13 +4071,13 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Paramount+ · Romantic Comedy Movies (movie) - 79 kept of 92 looked at
 - kept (not its first genre): The Brady Bunch Movie (1995) - Family, Comedy, Romance
-- kept (not its first genre): Down to Earth (2001) - Fantasy, Comedy, Romance
 - kept (not its first genre): The Butcher's Wife (1991) - Fantasy, Comedy, Romance
+- kept (not its first genre): Down to Earth (2001) - Fantasy, Comedy, Romance
 - kept (not its first genre): Blue Hawaii (1961) - Music, Comedy, Romance
 - kept (not its first genre): G.I. Blues (1960) - Music, Comedy, Romance
 - kept (not its first genre): Fun in Acapulco (1963) - Music, Comedy, Romance
-- kept (not its first genre): Comet (2014) - Sci-Fi, Comedy, Romance
 - kept (not its first genre): Paradise, Hawaiian Style (1966) - Music, Comedy, Romance
+- kept (not its first genre): Comet (2014) - Sci-Fi, Comedy, Romance
 - left out: Shakespeare in Love (1998) [movie:1934] - Romance, History, Comedy, Drama
 - left out: Bridget Jones's Baby (2016) [movie:95610] - Drama, Comedy, Romance
 - left out: Something's Gotta Give (2003) [movie:6964] - Drama, Comedy, Romance
@@ -4099,17 +4100,17 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Pulp Fiction (1994) - Thriller, Crime, Comedy
 - kept (not its first genre): The Godfather Part II (1974) - Drama, Crime
 - kept (not its first genre): Catch Me If You Can (2002) - Drama, Crime
-- kept (not its first genre): Rush Hour (1998) - Action, Comedy, Crime
 - kept (not its first genre): Baby Driver (2017) - Action, Crime
 - kept (not its first genre): The Equalizer 2 (2018) - Action, Thriller, Crime
+- kept (not its first genre): Rush Hour (1998) - Action, Comedy, Crime
 - kept (not its first genre): The Naked Gun (2025) - Comedy, Crime, Action
-- kept (not its first genre): Rush Hour 2 (2001) - Action, Comedy, Crime
-- kept (not its first genre): 21 Jump Street (2012) - Action, Comedy, Crime
 - kept (not its first genre): Jack Reacher: Never Go Back (2016) - Action, Thriller, Crime
-- kept (not its first genre): We're the Millers (2013) - Comedy, Crime
+- kept (not its first genre): 21 Jump Street (2012) - Action, Comedy, Crime
 - kept (not its first genre): Collateral (2004) - Drama, Crime, Thriller
+- kept (not its first genre): Rush Hour 2 (2001) - Action, Comedy, Crime
+- kept (not its first genre): We're the Millers (2013) - Comedy, Crime
 - kept (not its first genre): Rush Hour 3 (2007) - Action, Comedy, Crime
-- kept (not its first genre): The Italian Job (2003) - Action, Crime
+- kept (not its first genre): The A-Team (2010) - Action, Comedy, Crime
 - left out: Gangs of New York (2002) [movie:3131] - Drama, History, Crime
 - left out: Scream VI (2023) [movie:934433] - Horror, Thriller, Crime
 - left out: Nancy Drew (2007) [movie:14043] - Family, Adventure, Crime, Mystery, Comedy
@@ -4118,9 +4119,9 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Sound of Violence (2021) [movie:766358] - Horror, Thriller, Crime, Music
 
 ## Paramount+ · Crime Series (series) - 65 kept of 68 looked at
+- kept (not its first genre): Marshals (2026) - Drama, Crime, Action & Adventure
 - kept (not its first genre): CSI: Miami (2002) - Drama, Mystery, Crime
 - kept (not its first genre): JAG (1995) - Drama, Action & Adventure, Crime
-- kept (not its first genre): Marshals (2026) - Drama, Crime, Action & Adventure
 - kept (not its first genre): Tracker (2024) - Drama, Crime
 - kept (not its first genre): MacGyver (1985) - Drama, Action & Adventure, Crime
 - kept (not its first genre): Mission: Impossible (1966) - Action & Adventure, Crime, Drama
@@ -4151,8 +4152,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Top Gun (1986) - Action, Drama, Romance
 - kept (not its first genre): First Blood (1982) - Action, Thriller, Drama
 - kept (not its first genre): Gravity (2013) - Sci-Fi, Thriller, Drama
-- kept (not its first genre): Jack Reacher (2012) - Crime, Drama, Thriller, Action
 - kept (not its first genre): Ghost in the Shell (2017) - Sci-Fi, Drama, Action
+- kept (not its first genre): Jack Reacher (2012) - Crime, Drama, Thriller, Action
 - left out: Forrest Gump (1994) [movie:13] - Comedy, Drama, Romance
 - left out: A Quiet Place (2018) [movie:447332] - Horror, Drama, Sci-Fi
 - left out: Life Is Beautiful (1997) [movie:637] - Comedy, Drama
@@ -4185,14 +4186,14 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Tulsa King (2022) - Crime, Drama, Comedy
 - kept (not its first genre): NCIS (2003) - Crime, Drama, Action & Adventure
 - kept (not its first genre): CSI: Crime Scene Investigation (2000) - Crime, Drama, Mystery
-- kept (not its first genre): Blue Bloods (2010) - Crime, Drama
 - kept (not its first genre): Dexter (2006) - Crime, Drama, Mystery
+- kept (not its first genre): Blue Bloods (2010) - Crime, Drama
 - kept (not its first genre): Hawaii Five-0 (2010) - Crime, Drama, Action & Adventure
 - kept (not its first genre): FBI (2018) - Crime, Action & Adventure, Drama
-- kept (not its first genre): Dexter: Resurrection (2025) - Crime, Drama, Mystery
 - kept (not its first genre): Star Trek: The Next Generation (1987) - Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery
-- kept (not its first genre): Star Trek: Voyager (1995) - Sci-Fi & Fantasy, Drama, Action & Adventure
+- kept (not its first genre): Dexter: Resurrection (2025) - Crime, Drama, Mystery
 - kept (not its first genre): Star Trek: Deep Space Nine (1993) - Sci-Fi & Fantasy, Action & Adventure, Drama
+- kept (not its first genre): Star Trek: Voyager (1995) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): Medium (2005) - Crime, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): SEAL Team (2017) - Action & Adventure, Drama, War & Politics
 - left out: Californication (2007) [tv:1215] - Comedy, Drama
@@ -4220,18 +4221,18 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Sonic the Hedgehog 3 (2024) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
 - kept (not its first genre): Clash of the Thundermans (2026) - TV Movie, Family, Action, Sci-Fi
-- kept (not its first genre): Sonic the Hedgehog (2020) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
+- kept (not its first genre): Sonic the Hedgehog (2020) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
-- kept (not its first genre): The School of Rock (2003) - Comedy, Family, Music
-- kept (not its first genre): IF (2024) - Comedy, Fantasy, Family
 - kept (not its first genre): Stardust (2007) - Adventure, Fantasy, Romance, Family
+- kept (not its first genre): IF (2024) - Comedy, Fantasy, Family
+- kept (not its first genre): The School of Rock (2003) - Comedy, Family, Music
 - kept (not its first genre): Teenage Mutant Ninja Turtles: Out of the Shadows (2016) - Action, Adventure, Comedy, Family, Sci-Fi
 - kept (not its first genre): Hugo (2011) - Adventure, Drama, Family
 - kept (not its first genre): Addams Family Values (1993) - Comedy, Family, Fantasy
 - kept (not its first genre): Garfield (2004) - Comedy, Family
+- kept (not its first genre): MouseHunt (1997) - Comedy, Family
 - kept (not its first genre): Holes (2003) - Adventure, Family, Drama, Comedy
-- kept (not its first genre): Henry Danger: The Movie (2025) - Action, Comedy, Family, Sci-Fi
 - left out: Justin Bieber: Never Say Never (2011) [movie:54518] - Music, Documentary, Family
 - left out: Show Dogs (2018) [movie:425148] - Adventure, Crime, Family, Comedy
 - left out: One Crazy Cruise (2015) [movie:345363] - Comedy, Adventure, Mystery, Family, TV Movie
@@ -4239,12 +4240,12 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Paramount+ · Family Series (series) - 23 kept of 26 looked at
 - kept (not its first genre): Frasier (1993) - Comedy, Family
-- kept (not its first genre): Moesha (1996) - Comedy, Family
 - kept (not its first genre): The Andy Griffith Show (1960) - Comedy, Family
 - kept (not its first genre): Sabrina, the Teenage Witch (1996) - Comedy, Family, Sci-Fi & Fantasy
-- kept (not its first genre): Family Ties (1982) - Comedy, Drama, Family
-- kept (not its first genre): Henry Danger (2014) - Comedy, Family, Kids, Sci-Fi & Fantasy
+- kept (not its first genre): Moesha (1996) - Comedy, Family
 - kept (not its first genre): Touched by an Angel (1994) - Sci-Fi & Fantasy, Drama, Family
+- kept (not its first genre): Henry Danger (2014) - Comedy, Family, Kids, Sci-Fi & Fantasy
+- kept (not its first genre): Family Ties (1982) - Comedy, Drama, Family
 - kept (not its first genre): I Love Lucy (1951) - Comedy, Family
 - kept (not its first genre): Sister, Sister (1994) - Comedy, Family, Kids, Drama
 - kept (not its first genre): The Thundermans (2013) - Action & Adventure, Comedy, Family, Sci-Fi & Fantasy
@@ -4265,10 +4266,10 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Dracula (2025) - Horror, Fantasy, Romance
 - kept (not its first genre): World War Z (2013) - Action, Horror, Sci-Fi
 - kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
-- kept (not its first genre): War of the Worlds (2005) - Adventure, Thriller, Sci-Fi
 - kept (not its first genre): Edge of Tomorrow (2014) - Action, Sci-Fi
-- kept (not its first genre): The Running Man (2025) - Action, Thriller, Sci-Fi
+- kept (not its first genre): War of the Worlds (2005) - Adventure, Thriller, Sci-Fi
 - kept (not its first genre): Jumanji: Welcome to the Jungle (2017) - Adventure, Comedy, Fantasy
+- kept (not its first genre): The Running Man (2025) - Action, Thriller, Sci-Fi
 - kept (not its first genre): V for Vendetta (2006) - Action, Thriller, Sci-Fi
 - kept (not its first genre): A Quiet Place (2018) - Horror, Drama, Sci-Fi
 - kept (not its first genre): Sonic the Hedgehog (2020) - Action, Sci-Fi, Comedy, Family
@@ -4288,13 +4289,13 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Must Love Christmas (2022) [movie:971511] - TV Movie, Comedy, Romance, Fantasy
 
 ## Paramount+ · Sci-Fi & Fantasy Series (series) - 28 kept of 32 looked at
-- kept (not its first genre): Ghosts (2021) - Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Sabrina, the Teenage Witch (1996) - Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): Ghosts (2021) - Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Under the Dome (2013) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Ghosts (2019) - Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Caprica (2010) - Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Eternally Yours (2026) - Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Every Witch Way (2014) - Comedy, Sci-Fi & Fantasy, Drama
+- kept (not its first genre): Eternally Yours (2026) - Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Battlestar Galactica (2003) - Action & Adventure, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): I Am Frankie (2017) - Comedy, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Yonder (2022) - Drama, Sci-Fi & Fantasy
@@ -4307,16 +4308,16 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): 300 (2007) - Action, Adventure, War
 - kept (not its first genre): Gangs of New York (2002) - Drama, History, Crime
 - kept (not its first genre): 13 Hours: The Secret Soldiers of Benghazi (2016) - Action, War, Thriller
-- kept (not its first genre): Rambo: First Blood Part II (1985) - Action, Adventure, Thriller, War
 - kept (not its first genre): 300: Rise of an Empire (2014) - Action, Drama, War
+- kept (not its first genre): Rambo: First Blood Part II (1985) - Action, Adventure, Thriller, War
 - kept (not its first genre): The Untouchables (1987) - Crime, History, Thriller
-- kept (not its first genre): The King's Speech (2010) - Drama, History
 - kept (not its first genre): The Ten Commandments (1956) - Drama, History
-- kept (not its first genre): Marie Antoinette (2006) - Drama, History
-- kept (not its first genre): Rambo III (1988) - Action, Adventure, Thriller, War
+- kept (not its first genre): The King's Speech (2010) - Drama, History
 - kept (not its first genre): Coach Carter (2005) - Drama, History
-- kept (not its first genre): We Were Soldiers (2002) - Action, History, War
+- kept (not its first genre): Rambo III (1988) - Action, Adventure, Thriller, War
+- kept (not its first genre): Marie Antoinette (2006) - Drama, History
 - kept (not its first genre): Allied (2016) - Action, Drama, War, Romance, Thriller
+- kept (not its first genre): We Were Soldiers (2002) - Action, History, War
 - kept (not its first genre): The Ghost and the Darkness (1996) - Adventure, Thriller, History
 - kept (not its first genre): Behind Enemy Lines (2001) - Action, Drama, Thriller, War
 - left out: Tropic Thunder (2008) [movie:7446] - Comedy, War, Action, Adventure
@@ -4342,14 +4343,14 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Sweeney Todd: The Demon Barber of Fleet Street (2007) - Drama, Horror
 - kept (not its first genre): Hansel & Gretel: Witch Hunters (2013) - Fantasy, Horror, Action
 - kept (not its first genre): Rosemary's Baby (1968) - Drama, Horror, Thriller
-- kept (not its first genre): Jacob's Ladder (1990) - Drama, Mystery, Horror
-- kept (not its first genre): Queen of the Damned (2002) - Fantasy, Horror, Romance
 - kept (not its first genre): What Lies Beneath (2000) - Drama, Horror, Mystery, Thriller
+- kept (not its first genre): Queen of the Damned (2002) - Fantasy, Horror, Romance
+- kept (not its first genre): Jacob's Ladder (1990) - Drama, Mystery, Horror
 - kept (not its first genre): The Woman in Black (2012) - Drama, Horror, Thriller
+- kept (not its first genre): The Snowman (2017) - Crime, Thriller, Mystery, Horror
 - kept (not its first genre): The Dead Zone (1983) - Thriller, Horror, Sci-Fi
 - kept (not its first genre): King Kong (1976) - Adventure, Horror
-- kept (not its first genre): The Snowman (2017) - Crime, Thriller, Mystery, Horror
-- kept (not its first genre): Invasion of the Body Snatchers (1956) - Sci-Fi, Horror, Thriller
+- kept (not its first genre): Crimes of the Future (2022) - Sci-Fi, Horror, Thriller
 - left out: Piranha 3D (2010) [movie:43593] - Comedy, Horror
 - left out: Scouts Guide to the Zombie Apocalypse (2015) [movie:273477] - Comedy, Horror
 - left out: A Haunted House (2013) [movie:139038] - Comedy, Horror
@@ -4363,21 +4364,21 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: A Really Haunted Loud House (2023) [movie:1146147] - TV Movie, Comedy, Family, Horror
 
 ## Paramount+ · Mystery & Thriller Movies (movie) - 217 kept of 239 looked at
-- kept (not its first genre): The Crow (1994) - Fantasy, Action, Thriller
 - kept (not its first genre): Se7en (1995) - Crime, Mystery, Thriller
 - kept (not its first genre): Terminator 2: Judgment Day (1991) - Action, Thriller, Sci-Fi
+- kept (not its first genre): The Crow (1994) - Fantasy, Action, Thriller
 - kept (not its first genre): Arrival (2016) - Drama, Sci-Fi, Mystery
-- kept (not its first genre): Mission: Impossible - The Final Reckoning (2025) - Action, Thriller, Adventure
 - kept (not its first genre): Shutter Island (2010) - Drama, Thriller, Mystery
+- kept (not its first genre): Mission: Impossible - The Final Reckoning (2025) - Action, Thriller, Adventure
 - kept (not its first genre): No Country for Old Men (2007) - Crime, Thriller, Western
 - kept (not its first genre): The Get Out (2026) - Action, Thriller
-- kept (not its first genre): War of the Worlds (2005) - Adventure, Thriller, Sci-Fi
-- kept (not its first genre): Scream (1996) - Crime, Horror, Mystery
-- kept (not its first genre): The Running Man (2025) - Action, Thriller, Sci-Fi
-- kept (not its first genre): First Blood (1982) - Action, Thriller, Drama
+- kept (not its first genre): Zodiac (2007) - Crime, Mystery, Thriller
+- kept (not its first genre): Terminator Genisys (2015) - Sci-Fi, Action, Thriller
 - kept (not its first genre): Quantum of Solace (2008) - Adventure, Action, Thriller
-- kept (not its first genre): Shooter (2007) - Drama, Action, Thriller
+- kept (not its first genre): Scream (1996) - Crime, Horror, Mystery
+- kept (not its first genre): War of the Worlds (2005) - Adventure, Thriller, Sci-Fi
 - kept (not its first genre): The Equalizer 2 (2018) - Action, Thriller, Crime
+- kept (not its first genre): Mission: Impossible - Dead Reckoning Part One (2023) - Action, Adventure, Thriller
 - left out: The Untouchables (1987) [movie:117] - Crime, History, Thriller
 - left out: Ghost (1990) [movie:251] - Fantasy, Romance, Thriller
 - left out: Allied (2016) [movie:369885] - Action, Drama, War, Romance, Thriller
@@ -4406,8 +4407,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): CSI: Crime Scene Investigation (2000) - Crime, Drama, Mystery
 - kept (not its first genre): Dexter (2006) - Crime, Drama, Mystery
 - kept (not its first genre): CSI: Miami (2002) - Drama, Mystery, Crime
-- kept (not its first genre): Dexter: Resurrection (2025) - Crime, Drama, Mystery
 - kept (not its first genre): Star Trek: The Next Generation (1987) - Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery
+- kept (not its first genre): Dexter: Resurrection (2025) - Crime, Drama, Mystery
 - kept (not its first genre): Medium (2005) - Crime, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Yellowjackets (2021) - Drama, Mystery
 - kept (not its first genre): Twin Peaks (1990) - Drama, Mystery
@@ -4421,19 +4422,19 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 ## Paramount+ · Romance Movies (movie) - 127 kept of 143 looked at
 - kept (not its first genre): Titanic (1997) - Drama, Romance
 - kept (not its first genre): Forrest Gump (1994) - Comedy, Drama, Romance
+- kept (not its first genre): Tuner (2026) - Crime, Romance, Music
 - kept (not its first genre): The Idea of You (2024) - Comedy, Romance, Drama
 - kept (not its first genre): What Women Want (2000) - Comedy, Romance
-- kept (not its first genre): Tuner (2026) - Crime, Romance, Music
 - kept (not its first genre): Challengers (2024) - Drama, Romance
 - kept (not its first genre): Ghost (1990) - Fantasy, Romance, Thriller
 - kept (not its first genre): How to Lose a Guy in 10 Days (2003) - Comedy, Romance
 - kept (not its first genre): 50 First Dates (2004) - Comedy, Romance
-- kept (not its first genre): Just Go with It (2011) - Comedy, Romance
-- kept (not its first genre): A Knight's Tale (2001) - Adventure, Drama, Romance, Action
-- kept (not its first genre): When Harry Met Sally... (1989) - Comedy, Romance, Drama
 - kept (not its first genre): Stardust (2007) - Adventure, Fantasy, Romance, Family
-- kept (not its first genre): Revolutionary Road (2008) - Drama, Romance
+- kept (not its first genre): A Knight's Tale (2001) - Adventure, Drama, Romance, Action
 - kept (not its first genre): 13 Going on 30 (2004) - Comedy, Fantasy, Romance
+- kept (not its first genre): Just Go with It (2011) - Comedy, Romance
+- kept (not its first genre): When Harry Met Sally... (1989) - Comedy, Romance, Drama
+- kept (not its first genre): He's Just Not That Into You (2009) - Comedy, Romance, Drama
 - left out: Top Gun (1986) [movie:744] - Action, Drama, Romance
 - left out: Allied (2016) [movie:369885] - Action, Drama, War, Romance, Thriller
 - left out: Cold Mountain (2003) [movie:2289] - War, History, Adventure, Romance
@@ -4456,17 +4457,17 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Billie Eilish - Hit Me Hard and Soft: The Tour (Live in 3D) (2026) - Music, Documentary
 - kept (not its first genre): EPiC: Elvis Presley in Concert (2026) - Music, Documentary
 - kept (not its first genre): Jackass: The Movie (2002) - Action, Comedy, Documentary
-- kept (not its first genre): Jackass Number Two (2006) - Action, Comedy, Documentary
 - kept (not its first genre): Jackass 3D (2010) - Comedy, Documentary, Action
+- kept (not its first genre): Jackass Number Two (2006) - Action, Comedy, Documentary
 - kept (not its first genre): Jackass Forever (2022) - Action, Comedy, Documentary
 - kept (not its first genre): Jackass Presents: Bad Grandpa .5 (2014) - Comedy, Documentary
 - kept (not its first genre): Justin Bieber: Never Say Never (2011) - Music, Documentary, Family
-- kept (not its first genre): Jackass 2.5 (2007) - Comedy, Documentary
 - kept (not its first genre): Jackass 3.5 (2011) - Comedy, Documentary, Action
-- kept (not its first genre): Comedy Central Roast of Bruce Willis (2018) - Comedy, TV Movie, Documentary
+- kept (not its first genre): Jackass 2.5 (2007) - Comedy, Documentary
 - kept (not its first genre): Whitney (2018) - Music, Documentary
+- kept (not its first genre): South Park: The 25th Anniversary Concert (2022) - Music, Comedy, Documentary, TV Movie
+- kept (not its first genre): Comedy Central Roast of Bruce Willis (2018) - Comedy, TV Movie, Documentary
 - kept (not its first genre): Whitney: Can I Be Me (2017) - Music, Documentary
-- kept (not its first genre): Milli Vanilli (2023) - Music, Documentary
 
 ## Paramount+ · Docuseries (series) - 39 kept of 40 looked at
 - kept (not its first genre): Penn & Teller: Bull! (2003) - Comedy, Documentary
@@ -4492,8 +4493,8 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - left out: Wild Wild West (1999) [movie:8487] - Action, Adventure, Comedy, Sci-Fi, Western
 
 ## Paramount+ · Western Series (series) - 8 kept of 9 looked at
-- kept (not its first genre): Hell on Wheels (2011) - Action & Adventure, Drama, Western
 - kept (not its first genre): 1923 (2022) - Drama, Western
+- kept (not its first genre): Hell on Wheels (2011) - Action & Adventure, Drama, Western
 - kept (not its first genre): 1883 (2021) - Drama, Western
 - kept (not its first genre): Joe Pickett (2021) - Drama, Western
 - left out: Jericho (2006) [tv:365] - Action & Adventure, Drama, Mystery, Western
@@ -4515,11 +4516,11 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Let the Bullets Fly (2010) - Action, Comedy
 - kept (not its first genre): Little Big Soldier (2010) - Action, Comedy, Adventure
 - kept (not its first genre): Dracula (2025) - Sci-Fi, Comedy, Horror
-- kept (not its first genre): First Love (2019) - Crime, Action, Comedy
 - kept (not its first genre): Shall We Dance? (1996) - Music, Comedy, Drama, Romance
-- kept (not its first genre): A Dessert for Constance (1981) - TV Movie, Comedy, Drama
+- kept (not its first genre): First Love (2019) - Crime, Action, Comedy
 - kept (not its first genre): Innocent Sorcerers (1960) - Romance, Comedy
 - kept (not its first genre): Ga-ga: Glory to the Heroes (1986) - Sci-Fi, Comedy, Drama
+- kept (not its first genre): A Dessert for Constance (1981) - TV Movie, Comedy, Drama
 - kept (not its first genre): Being John Smith (2024) - Documentary, Comedy
 - left out: Fallen Leaves (2023) [movie:986280] - Romance, Drama, Comedy
 - left out: Soul Kitchen (2009) [movie:31175] - Drama, Comedy
@@ -4559,15 +4560,15 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 - kept (not its first genre): Sweet Smell of Success (1957) - Drama, Crime
 - kept (not its first genre): The Mastermind (2025) - Drama, Crime
 - kept (not its first genre): Free Chol Soo Lee (2022) - Documentary, Crime
-- kept (not its first genre): Intermission (2003) - Comedy, Crime, Drama
 - kept (not its first genre): Dead or Alive (1999) - Action, Thriller, Crime
-- kept (not its first genre): Terminal Island (1973) - Action, Drama, Thriller, Crime
-- kept (not its first genre): Detective (1985) - Comedy, Crime, Drama
-- kept (not its first genre): Birds of Passage (2018) - Drama, Crime
-- kept (not its first genre): Kill the Jockey (2024) - Comedy, Crime, Drama
 - kept (not its first genre): Switchblade Sisters (1975) - Action, Crime, Drama
-- kept (not its first genre): Red Peony Gambler: Gambler's Obligation (1968) - Drama, Crime
+- kept (not its first genre): Intermission (2003) - Comedy, Crime, Drama
+- kept (not its first genre): Birds of Passage (2018) - Drama, Crime
+- kept (not its first genre): Terminal Island (1973) - Action, Drama, Thriller, Crime
+- kept (not its first genre): Kill the Jockey (2024) - Comedy, Crime, Drama
+- kept (not its first genre): Detective (1985) - Comedy, Crime, Drama
 - kept (not its first genre): The Cat (1988) - Thriller, Crime
+- kept (not its first genre): Red Peony Gambler: Gambler's Obligation (1968) - Drama, Crime
 - left out: Great Freedom (2021) [movie:835975] - Drama, Romance, Crime
 - left out: Within Our Gates (1920) [movie:77621] - Drama, Romance, Crime
 - left out: Plainclothes (2025) [movie:1255718] - Drama, Romance, Crime
@@ -4575,20 +4576,20 @@ EMPTY gen-streaming-services-apple-tv-romantic-comedy-series
 
 ## Mubi · Drama Movies (movie) - 263 kept of 306 looked at
 - kept (not its first genre): Monster (2023) - Mystery, Thriller, Drama
-- kept (not its first genre): Burning (2018) - Mystery, Drama, Thriller
 - kept (not its first genre): Wasteman (2026) - Crime, Drama, Thriller
+- kept (not its first genre): Burning (2018) - Mystery, Drama, Thriller
 - kept (not its first genre): The Fall (2008) - Adventure, Fantasy, Drama
 - kept (not its first genre): Dogville (2003) - Crime, Drama, Thriller
-- kept (not its first genre): The Night of the Hunter (1955) - Crime, Drama, Thriller
 - kept (not its first genre): Benedetta (2021) - History, Drama, Romance
+- kept (not its first genre): The Night of the Hunter (1955) - Crime, Drama, Thriller
 - kept (not its first genre): Enter the Void (2010) - Fantasy, Drama
-- kept (not its first genre): Faust (1926) - Fantasy, Drama, Horror
-- kept (not its first genre): The Great Silence (1968) - Western, Drama
-- kept (not its first genre): The Beasts (2022) - Thriller, Drama
 - kept (not its first genre): Fallen Leaves (2023) - Romance, Drama, Comedy
-- kept (not its first genre): Night Moves (2014) - Thriller, Drama
-- kept (not its first genre): First Name: Carmen (1983) - Crime, Drama, Comedy, Romance
+- kept (not its first genre): The Beasts (2022) - Thriller, Drama
+- kept (not its first genre): The Great Silence (1968) - Western, Drama
+- kept (not its first genre): Faust (1926) - Fantasy, Drama, Horror
 - kept (not its first genre): Passages (2023) - Romance, Drama
+- kept (not its first genre): Night Moves (2014) - Thriller, Drama
+- kept (not its first genre): Undine (2020) - Fantasy, Drama, Romance
 - left out: Shiva Baby (2021) [movie:664300] - Comedy, Drama
 - left out: Yannick (2023) [movie:1110358] - Comedy, Drama, Thriller
 - left out: The Idiots (1998) [movie:452] - Comedy, Drama
@@ -4619,19 +4620,19 @@ EMPTY gen-streaming-services-mubi-family-movies
 ## Mubi · Sci-Fi & Fantasy Movies (movie) - 42 kept of 43 looked at
 - kept (not its first genre): The Substance (2024) - Horror, Sci-Fi
 - kept (not its first genre): The Fall (2008) - Adventure, Fantasy, Drama
+- kept (not its first genre): Humanist Vampire Seeking Consenting Suicidal Person (2023) - Comedy, Fantasy, Horror
 - kept (not its first genre): Byzantium (2013) - Drama, Fantasy, Thriller
 - kept (not its first genre): Alphaville (1965) - Drama, Sci-Fi, Mystery
-- kept (not its first genre): Humanist Vampire Seeking Consenting Suicidal Person (2023) - Comedy, Fantasy, Horror
-- kept (not its first genre): The Quiet Earth (1985) - Drama, Sci-Fi, Thriller
 - kept (not its first genre): Rose of Nevada (2026) - Drama, Mystery, Fantasy
+- kept (not its first genre): The Quiet Earth (1985) - Drama, Sci-Fi, Thriller
 - kept (not its first genre): The Five Devils (2022) - Drama, Fantasy, Romance
-- kept (not its first genre): Cemetery of Splendor (2015) - Drama, Fantasy
-- kept (not its first genre): Hagazussa (2018) - Horror, Drama, Fantasy
 - kept (not its first genre): Dona Flor and Her Two Husbands (1976) - Comedy, Drama, Fantasy, Romance
+- kept (not its first genre): Hagazussa (2018) - Horror, Drama, Fantasy
 - kept (not its first genre): Daaaaaalí! (2024) - Comedy, Fantasy, Drama
-- kept (not its first genre): The People's Joker (2024) - Comedy, Drama, Fantasy
 - kept (not its first genre): The Element of Crime (1984) - Crime, Drama, Sci-Fi
-- kept (not its first genre): O-Bi, O-Ba: The End of Civilization (1985) - Drama, Sci-Fi
+- kept (not its first genre): Cemetery of Splendor (2015) - Drama, Fantasy
+- kept (not its first genre): The People's Joker (2024) - Comedy, Drama, Fantasy
+- kept (not its first genre): Marjorie Prime (2017) - Drama, Mystery, Sci-Fi
 
 ## Mubi · History & War Movies (movie) - 25 kept of 26 looked at
 - kept (not its first genre): Marie Antoinette (2006) - Drama, History
@@ -4642,12 +4643,12 @@ EMPTY gen-streaming-services-mubi-family-movies
 - kept (not its first genre): The Girl with the Needle (2024) - Drama, History
 - kept (not its first genre): Hara-Kiri: Death of a Samurai (2011) - Drama, History
 - kept (not its first genre): Heroes Shed No Tears (1984) - Adventure, Action, War
-- kept (not its first genre): Harvest (2025) - Drama, History
 - kept (not its first genre): Saipan (2025) - Drama, History
-- kept (not its first genre): Putin's Witnesses (2018) - Documentary, History
+- kept (not its first genre): Harvest (2025) - Drama, History
 - kept (not its first genre): The Promised Land (1975) - Drama, History
+- kept (not its first genre): Putin's Witnesses (2018) - Documentary, History
 - kept (not its first genre): The Death of Louis XIV (2016) - Drama, History
-- kept (not its first genre): Liberté (2019) - Drama, History
+- kept (not its first genre): Man of Iron (1981) - Drama, History
 - kept (not its first genre): State Funeral (2019) - Documentary, History
 - left out: Ennio (2022) [movie:396194] - Documentary, Music, History
 
@@ -4660,12 +4661,12 @@ EMPTY gen-streaming-services-mubi-family-movies
 - kept (not its first genre): Lux Æterna (2020) - Drama, Thriller, Horror
 - kept (not its first genre): A Field in England (2013) - History, Horror, Thriller
 - kept (not its first genre): Orgy of the Dead (1965) - Fantasy, Horror, Music
-- kept (not its first genre): I, the Executioner (1968) - Thriller, Horror, Drama, Crime
 - kept (not its first genre): Epidemic (1987) - Drama, Horror
+- kept (not its first genre): I, the Executioner (1968) - Thriller, Horror, Drama, Crime
 - kept (not its first genre): If Footmen Tire You, What Will Horses Do? (1971) - Drama, Horror, Fantasy
 - kept (not its first genre): The Bloodiest (2005) - Thriller, Horror, Sci-Fi, Drama
-- kept (not its first genre): The Nest of the Cuckoo Birds (1965) - Drama, Horror
 - kept (not its first genre): Green Vinyl (2004) - Drama, Horror, Fantasy
+- kept (not its first genre): The Nest of the Cuckoo Birds (1965) - Drama, Horror
 - kept (not its first genre): Hollywood 90028 (1973) - Drama, Horror
 - left out: Spree (2020) [movie:653598] - Comedy, Horror, Thriller
 - left out: Sick of Myself (2022) [movie:788734] - Comedy, Horror
@@ -4680,18 +4681,18 @@ EMPTY gen-streaming-services-mubi-family-movies
 - kept (not its first genre): Wasteman (2026) - Crime, Drama, Thriller
 - kept (not its first genre): Ring (1998) - Horror, Thriller
 - kept (not its first genre): The Man from Nowhere (2010) - Action, Thriller, Crime
-- kept (not its first genre): Amores Perros (2000) - Drama, Thriller
-- kept (not its first genre): Dogville (2003) - Crime, Drama, Thriller
 - kept (not its first genre): Antichrist (2009) - Drama, Horror, Thriller
+- kept (not its first genre): Dogville (2003) - Crime, Drama, Thriller
+- kept (not its first genre): Amores Perros (2000) - Drama, Thriller
 - kept (not its first genre): The Night of the Hunter (1955) - Crime, Drama, Thriller
+- kept (not its first genre): Deep Red (1975) - Horror, Mystery, Thriller
 - kept (not its first genre): Byzantium (2013) - Drama, Fantasy, Thriller
 - kept (not its first genre): Alphaville (1965) - Drama, Sci-Fi, Mystery
-- kept (not its first genre): Deep Red (1975) - Horror, Mystery, Thriller
 - kept (not its first genre): Thelma (2017) - Drama, Mystery, Thriller
-- kept (not its first genre): The Quiet Earth (1985) - Drama, Sci-Fi, Thriller
 - kept (not its first genre): Rose of Nevada (2026) - Drama, Mystery, Fantasy
+- kept (not its first genre): The Quiet Earth (1985) - Drama, Sci-Fi, Thriller
 - kept (not its first genre): Miroirs No. 3 (2025) - Drama, Mystery
-- kept (not its first genre): The Woman in the Fifth (2011) - Drama, Mystery, Thriller
+- kept (not its first genre): Europa (1991) - Crime, Drama, Thriller
 - left out: Yannick (2023) [movie:1110358] - Comedy, Drama, Thriller
 - left out: Spree (2020) [movie:653598] - Comedy, Horror, Thriller
 - left out: A Field in England (2013) [movie:179111] - History, Horror, Thriller
@@ -4702,21 +4703,21 @@ EMPTY gen-streaming-services-mubi-family-movies
 - left out: Occidental (2018) [movie:440086] - Drama, Comedy, Thriller
 
 ## Mubi · Romance Movies (movie) - 51 kept of 58 looked at
-- kept (not its first genre): Breaking the Waves (1996) - Drama, Romance
 - kept (not its first genre): Wheel of Fortune and Fantasy (2021) - Drama, Romance
+- kept (not its first genre): Breaking the Waves (1996) - Drama, Romance
 - kept (not its first genre): The History of Sound (2025) - Drama, Romance, Music
 - kept (not its first genre): Paris, 13th District (2021) - Drama, Romance
 - kept (not its first genre): Plainclothes (2025) - Drama, Romance, Crime
 - kept (not its first genre): Asako I & II (2018) - Drama, Romance
+- kept (not its first genre): Shall We Dance? (1996) - Music, Comedy, Drama, Romance
 - kept (not its first genre): Sometimes I Think About Dying (2024) - Drama, Comedy, Romance
+- kept (not its first genre): Undine (2020) - Fantasy, Drama, Romance
 - kept (not its first genre): Matthias & Maxime (2019) - Drama, Romance
 - kept (not its first genre): The Five Devils (2022) - Drama, Fantasy, Romance
 - kept (not its first genre): Shanghai Blues (1984) - Comedy, Romance
-- kept (not its first genre): Undine (2020) - Fantasy, Drama, Romance
-- kept (not its first genre): Party Girl (1995) - Comedy, Drama, Romance
-- kept (not its first genre): Shall We Dance? (1996) - Music, Comedy, Drama, Romance
 - kept (not its first genre): Transit (2018) - Drama, Romance
-- kept (not its first genre): Great Freedom (2021) - Drama, Romance, Crime
+- kept (not its first genre): Dona Flor and Her Two Husbands (1976) - Comedy, Drama, Fantasy, Romance
+- kept (not its first genre): Party Girl (1995) - Comedy, Drama, Romance
 - left out: Decision to Leave (2022) [movie:705996] - Thriller, Mystery, Romance
 - left out: Benedetta (2021) [movie:454527] - History, Drama, Romance
 - left out: Teenage Sex and Death at Camp Miasma (2026) [movie:1240889] - Comedy, Horror, Romance
@@ -4738,17 +4739,17 @@ EMPTY gen-streaming-services-mubi-family-movies
 - kept (not its first genre): Chainsaw Man - The Movie: Reze Arc (2025) - Animation, Action, Romance, Fantasy
 - kept (not its first genre): Jujutsu Kaisen 0 (2021) - Animation, Action, Fantasy
 - kept (not its first genre): Street Fighter II: The Animated Movie (1994) - Animation, Action
-- kept (not its first genre): Sword Art Online the Movie – Progressive – Scherzo of Deep Night (2022) - Animation, Action, Fantasy, Sci-Fi
-- kept (not its first genre): Dragon Ball Z: Battle of Gods (2013) - Animation, Action, Sci-Fi
-- kept (not its first genre): Dragon Ball Z: Dead Zone (1989) - Animation, Action, Fantasy
 - kept (not its first genre): One Piece Film Red (2022) - Animation, Adventure, Action, Fantasy, Music
+- kept (not its first genre): Dragon Ball Z: Battle of Gods (2013) - Animation, Action, Sci-Fi
+- kept (not its first genre): Sword Art Online the Movie – Progressive – Scherzo of Deep Night (2022) - Animation, Action, Fantasy, Sci-Fi
 - kept (not its first genre): My Hero Academia: You're Next (2024) - Animation, Action, Adventure, Sci-Fi
-- kept (not its first genre): Dragon Ball Z: Bio-Broly (1994) - Animation, Action, Sci-Fi
-- kept (not its first genre): Dragon Ball Z: Fusion Reborn (1995) - Animation, Action, Sci-Fi
-- kept (not its first genre): Big Fish & Begonia (2016) - Animation, Adventure, Fantasy
-- kept (not its first genre): Dragon Ball Z: Wrath of the Dragon (1995) - Animation, Action, Sci-Fi
+- kept (not its first genre): Dragon Ball Z: Dead Zone (1989) - Animation, Action, Fantasy
+- kept (not its first genre): Sword Art Online the Movie: Ordinal Scale (2017) - Animation, Action, Adventure, Fantasy, Sci-Fi
 - kept (not its first genre): My Hero Academia: Two Heroes (2018) - Animation, Action, Adventure, Fantasy
-- kept (not its first genre): Dragon Ball Z: Broly - Second Coming (1994) - Animation, Action, Sci-Fi
+- kept (not its first genre): My Hero Academia: Heroes Rising (2019) - Animation, Action, Fantasy, Adventure
+- kept (not its first genre): Dragon Ball Z: Fusion Reborn (1995) - Animation, Action, Sci-Fi
+- kept (not its first genre): My Hero Academia: World Heroes' Mission (2021) - Animation, Action, Adventure, Sci-Fi
+- kept (not its first genre): Dragon Ball Z: Bio-Broly (1994) - Animation, Action, Sci-Fi
 - left out: Akira (1988) [movie:149] - Animation, Sci-Fi, Action
 - left out: Dragon Ball Super: Super Hero (2022) [movie:610150] - Animation, Sci-Fi, Action
 - left out: Suzume (2022) [movie:916224] - Animation, Drama, Adventure, Fantasy
@@ -4777,20 +4778,20 @@ EMPTY gen-streaming-services-mubi-family-movies
 
 ## Crunchyroll · Action & Adventure Series (series) - 300 kept of 560 looked at
 - kept (not its first genre): JoJo's Bizarre Adventure (2012) - Animation, Action & Adventure, Sci-Fi & Fantasy
-- kept (not its first genre): Dragon Ball Super: Beerus (2026) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Naruto Shippūden (2007) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Bonanza (1959) - Western, Action & Adventure, Drama, Family
 - kept (not its first genre): Naruto (2002) - Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Dragon Ball Super: Beerus (2026) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Hunter x Hunter (2011) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Lupin the 3rd (1971) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Yu-Gi-Oh! Duel Monsters (2000) - Animation, Action & Adventure
 - kept (not its first genre): Frieren: Beyond Journey's End (2023) - Animation, Action & Adventure, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): SPY x FAMILY (2022) - Animation, Action & Adventure, Comedy
-- kept (not its first genre): Gurren Lagann (2007) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Fullmetal Alchemist: Brotherhood (2009) - Animation, Action & Adventure, Sci-Fi & Fantasy, Drama
-- kept (not its first genre): Tokyo Revengers (2021) - Animation, Action & Adventure, Crime, Drama
+- kept (not its first genre): Gurren Lagann (2007) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Bungo Stray Dogs (2016) - Animation, Action & Adventure, Mystery, Sci-Fi & Fantasy
-- kept (not its first genre): High School DxD (2012) - Animation, Action & Adventure, Comedy, Sci-Fi & Fantasy
+- kept (not its first genre): Tokyo Revengers (2021) - Animation, Action & Adventure, Crime, Drama
+- kept (not its first genre): Mob Psycho 100 (2016) - Animation, Action & Adventure, Comedy, Sci-Fi & Fantasy
 - left out: Attack on Titan (2013) [tv:1429] - Animation, Sci-Fi & Fantasy, Action & Adventure
 - left out: Dragon Ball Z (1989) [tv:12971] - Animation, Sci-Fi & Fantasy, Action & Adventure
 - left out: JUJUTSU KAISEN (2020) [tv:95479] - Animation, Sci-Fi & Fantasy, Action & Adventure
@@ -4813,13 +4814,13 @@ EMPTY gen-streaming-services-mubi-family-movies
 - left out: Angel Beats! (2010) [tv:42942] - Animation, Comedy, Drama, Sci-Fi & Fantasy, Action & Adventure
 - left out: TSUKIMICHI -Moonlit Fantasy- (2021) [tv:111819] - Animation, Sci-Fi & Fantasy, Action & Adventure, Comedy
 - left out: FLCL (2000) [tv:5895] - Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy
+- left out: Wise Man's Grandchild (2019) [tv:85844] - Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy
 - left out: Vampire Knight (2008) [tv:17149] - Animation, Drama, Action & Adventure, Sci-Fi & Fantasy, Mystery
 - left out: The Devil Is a Part-Timer! (2013) [tv:45997] - Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy
-- left out: Yu-Gi-Oh! GX (2004) [tv:12536] - Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy, Family
 
 ## Crunchyroll · Animation Movies (movie) - 7 kept of 7 looked at
-- kept (not its first genre): Dragon Age: Dawn of the Seeker (2012) - Fantasy, Animation
 - kept (not its first genre): Robotech: The Shadow Chronicles (2006) - Action, Adventure, Animation, Sci-Fi
+- kept (not its first genre): Dragon Age: Dawn of the Seeker (2012) - Fantasy, Animation
 - kept (not its first genre): Lady Death (2004) - Fantasy, Animation, Horror, Action, Sci-Fi
 
 ## Crunchyroll · Animation Series (series) - 10 kept of 10 looked at
@@ -4832,23 +4833,23 @@ EMPTY gen-streaming-services-mubi-family-movies
 - kept (not its first genre): Dragon Ball Z: Cooler's Revenge (1991) - Action, Animation, Sci-Fi
 - kept (not its first genre): Puella Magi Madoka Magica the Movie -Rebellion- (2013) - Mystery, Animation, Fantasy
 - kept (not its first genre): Sword of the Stranger (2007) - Action, Animation, History
-- kept (not its first genre): Dragon Ball Z: Bojack Unbound (1993) - Action, Animation, Sci-Fi
 - kept (not its first genre): Dragon Ball Z: Super Android 13! (1992) - Action, Animation, Sci-Fi
-- kept (not its first genre): Fullmetal Alchemist the Movie: Conqueror of Shamballa (2005) - Action, Adventure, Animation, Drama
+- kept (not its first genre): Dragon Ball Z: Bojack Unbound (1993) - Action, Animation, Sci-Fi
 - kept (not its first genre): Dragon Ball Z: Lord Slug (1991) - Action, Animation, Sci-Fi
+- kept (not its first genre): Dragon Ball Z: The Tree of Might (1990) - Action, Animation, Sci-Fi, TV Movie
+- kept (not its first genre): Fullmetal Alchemist the Movie: Conqueror of Shamballa (2005) - Action, Adventure, Animation, Drama
+- kept (not its first genre): One Piece Film: GOLD (2016) - Action, Animation, Adventure, Comedy
 - kept (not its first genre): Dragon Ball Z: The Return of Cooler (1992) - Action, Animation, Sci-Fi
 - kept (not its first genre): Puella Magi Madoka Magica the Movie Part I: Beginnings (2012) - Thriller, Animation, Fantasy
-- kept (not its first genre): Dragon Ball Z: The Tree of Might (1990) - Action, Animation, Sci-Fi, TV Movie
-- kept (not its first genre): One Piece Film: GOLD (2016) - Action, Animation, Adventure, Comedy
 - kept (not its first genre): One Piece: The Desert Princess and the Pirates: Adventure in Alabasta (2007) - Action, Adventure, Animation, Comedy, Fantasy
-- kept (not its first genre): Night on the Galactic Railroad (1985) - Adventure, Animation, Drama, Family, Fantasy
+- kept (not its first genre): Cardcaptor Sakura: The Movie (1999) - Fantasy, Animation, Adventure
 
 ## Crunchyroll · Anime Series (series) - 300 kept of 380 looked at
 - kept (not its first genre): One Piece (1999) - Action & Adventure, Comedy, Animation
 - kept (not its first genre): Mushoku Tensei: Jobless Reincarnation (2021) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Kingdom (2012) - Action & Adventure, Animation, Drama
-- kept (not its first genre): Fate/stay night [Unlimited Blade Works] (2014) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Cardfight!! Vanguard (2011) - Action & Adventure, Animation, Comedy
+- kept (not its first genre): Fate/stay night [Unlimited Blade Works] (2014) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Golden Kamuy (2018) - Action & Adventure, Animation, Comedy
 - kept (not its first genre): Fist of the North Star (1984) - Action & Adventure, Animation, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Mobile Suit Gundam SEED (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy, War & Politics
@@ -4864,18 +4865,18 @@ EMPTY gen-streaming-services-mubi-family-movies
 - kept (not its first genre): Demon Slayer: Kimetsu no Yaiba Infinity Castle (2025) - Animation, Action, Fantasy
 - kept (not its first genre): Akira (1988) - Animation, Sci-Fi, Action
 - kept (not its first genre): That Time I Got Reincarnated as a Slime the Movie: Tears of the Azure Sea (2026) - Animation, Fantasy, Adventure, Comedy
-- kept (not its first genre): The Legend of Hei (2019) - Animation, Fantasy, Action, Adventure
 - kept (not its first genre): Jujutsu Kaisen 0 (2021) - Animation, Action, Fantasy
+- kept (not its first genre): The Legend of Hei (2019) - Animation, Fantasy, Action, Adventure
 - kept (not its first genre): Dragon Ball Super: Super Hero (2022) - Animation, Sci-Fi, Action
 - kept (not its first genre): Dragon Ball Z: Broly - The Legendary Super Saiyan (1993) - Animation, Sci-Fi, Action
-- kept (not its first genre): Dragon Ball Z: Resurrection 'F' (2015) - Action, Animation, Sci-Fi
-- kept (not its first genre): Sword Art Online the Movie – Progressive – Scherzo of Deep Night (2022) - Animation, Action, Fantasy, Sci-Fi
 - kept (not its first genre): Dragon Ball Z: Battle of Gods (2013) - Animation, Action, Sci-Fi
-- kept (not its first genre): Dragon Ball Z: Dead Zone (1989) - Animation, Action, Fantasy
-- kept (not its first genre): KONOSUBA – God's blessing on this wonderful world! Legend of Crimson (2019) - Animation, Comedy, Fantasy
+- kept (not its first genre): Dragon Ball Z: Resurrection 'F' (2015) - Action, Animation, Sci-Fi
 - kept (not its first genre): Dragon Ball Z: Cooler's Revenge (1991) - Action, Animation, Sci-Fi
-- kept (not its first genre): Dragon Ball Z: Bio-Broly (1994) - Animation, Action, Sci-Fi
+- kept (not its first genre): Sword Art Online the Movie – Progressive – Scherzo of Deep Night (2022) - Animation, Action, Fantasy, Sci-Fi
+- kept (not its first genre): KONOSUBA – God's blessing on this wonderful world! Legend of Crimson (2019) - Animation, Comedy, Fantasy
+- kept (not its first genre): Dragon Ball Z: Dead Zone (1989) - Animation, Action, Fantasy
 - kept (not its first genre): That Time I Got Reincarnated as a Slime the Movie: Scarlet Bond (2022) - Animation, Fantasy, Adventure
+- kept (not its first genre): Puella Magi Madoka Magica the Movie -Rebellion- (2013) - Mystery, Animation, Fantasy
 - left out: Suzume (2022) [movie:916224] - Animation, Drama, Adventure, Fantasy
 - left out: Chainsaw Man - The Movie: Reze Arc (2025) [movie:1218925] - Animation, Action, Romance, Fantasy
 - left out: One Piece Film Red (2022) [movie:900667] - Animation, Adventure, Action, Fantasy, Music
@@ -4902,19 +4903,19 @@ EMPTY gen-streaming-services-mubi-family-movies
 - left out: Digimon Adventure tri. Part 3: Confession (2016) [movie:378106] - Adventure, Action, Animation, Family, Fantasy, Sci-Fi
 - left out: The Girl from the Other Side (2023) [movie:802699] - Animation, Drama, Mystery, Fantasy
 
-## Crunchyroll · Sci-Fi & Fantasy Series (series) - 300 kept of 560 looked at
+## Crunchyroll · Sci-Fi & Fantasy Series (series) - 300 kept of 540 looked at
 - kept (not its first genre): JoJo's Bizarre Adventure (2012) - Animation, Action & Adventure, Sci-Fi & Fantasy
-- kept (not its first genre): Dragon Ball Z (1989) - Animation, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): JUJUTSU KAISEN (2020) - Animation, Sci-Fi & Fantasy, Action & Adventure
-- kept (not its first genre): Dragon Ball Super: Beerus (2026) - Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Dragon Ball Z (1989) - Animation, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Naruto Shippūden (2007) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Naruto (2002) - Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Dragon Ball Super: Beerus (2026) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Hunter x Hunter (2011) - Animation, Action & Adventure, Sci-Fi & Fantasy
-- kept (not its first genre): Mushoku Tensei: Jobless Reincarnation (2021) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Lupin the 3rd (1971) - Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Mushoku Tensei: Jobless Reincarnation (2021) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): Fullmetal Alchemist: Brotherhood (2009) - Animation, Action & Adventure, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Gurren Lagann (2007) - Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Attack on Titan (2013) - Animation, Sci-Fi & Fantasy, Action & Adventure
-- kept (not its first genre): Fullmetal Alchemist: Brotherhood (2009) - Animation, Action & Adventure, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Natsume's Book of Friends (2008) - Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Urusei Yatsura (1981) - Animation, Comedy, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): The Ancient Magus' Bride (2017) - Animation, Drama, Sci-Fi & Fantasy
@@ -4946,20 +4947,20 @@ EMPTY gen-streaming-services-mubi-family-movies
 
 ## Shudder · Sci-Fi & Fantasy Movies (movie) - 110 kept of 119 looked at
 - kept (not its first genre): Spawn (1997) - Action, Fantasy, Horror
-- kept (not its first genre): Color Out of Space (2020) - Horror, Sci-Fi, Mystery, Thriller
-- kept (not its first genre): Ash (2025) - Horror, Sci-Fi
 - kept (not its first genre): Tale of Tales (2015) - Romance, Fantasy, Horror
-- kept (not its first genre): Tokyo Gore Police (2008) - Horror, Action, Sci-Fi
+- kept (not its first genre): Ash (2025) - Horror, Sci-Fi
+- kept (not its first genre): Color Out of Space (2020) - Horror, Sci-Fi, Mystery, Thriller
+- kept (not its first genre): Peter Pan's Neverland Nightmare (2025) - Horror, Thriller, Fantasy
 - kept (not its first genre): Prisoners of the Ghostland (2021) - Action, Fantasy, Thriller, Western, Horror
 - kept (not its first genre): A Dark Song (2016) - Horror, Fantasy, Mystery
-- kept (not its first genre): Peter Pan's Neverland Nightmare (2025) - Horror, Thriller, Fantasy
 - kept (not its first genre): Threads (1984) - War, Drama, Sci-Fi
-- kept (not its first genre): The Company of Wolves (1984) - Horror, Fantasy
-- kept (not its first genre): Superdeep (2020) - Horror, Sci-Fi, Thriller
 - kept (not its first genre): The Innocents (2021) - Horror, Drama, Fantasy
+- kept (not its first genre): V/H/S/Beyond (2024) - Horror, Sci-Fi, Thriller
+- kept (not its first genre): Tokyo Gore Police (2008) - Horror, Action, Sci-Fi
 - kept (not its first genre): Humanoids from the Deep (1980) - Horror, Sci-Fi
 - kept (not its first genre): A Chinese Ghost Story III (1991) - Action, Comedy, Fantasy
-- kept (not its first genre): Holidays (2016) - Comedy, Horror, Fantasy, Mystery
+- kept (not its first genre): Superdeep (2020) - Horror, Sci-Fi, Thriller
+- kept (not its first genre): Deathstalker (1983) - Action, Fantasy
 - left out: The Room (2019) [movie:582913] - Horror, Drama, Mystery, Sci-Fi
 - left out: Galaxy of Terror (1981) [movie:28893] - Action, Adventure, Horror, Sci-Fi
 - left out: Prevenge (2017) [movie:395982] - Horror, Comedy, Drama, Thriller, Fantasy
@@ -4979,22 +4980,22 @@ EMPTY gen-streaming-services-mubi-family-movies
 - kept (not its first genre): Stan Against Evil (2016) - Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Blood Machines (2020) - Action & Adventure, Sci-Fi & Fantasy
 
-## Shudder · Horror Movies (movie) - 300 kept of 420 looked at
+## Shudder · Horror Movies (movie) - 300 kept of 400 looked at
 - kept (not its first genre): The Cycle (2026) - Crime, Horror, Thriller
 - kept (not its first genre): Exhuma (2024) - Mystery, Horror, Thriller
 - kept (not its first genre): The Human Centipede 2 (Full Sequence) (2011) - Drama, Horror, Crime
 - kept (not its first genre): Strange Darling (2024) - Crime, Thriller, Horror
 - kept (not its first genre): The Babadook (2014) - Drama, Horror
-- kept (not its first genre): Revenge (2017) - Action, Horror, Thriller, Drama
-- kept (not its first genre): Mandy (2018) - Fantasy, Action, Horror
 - kept (not its first genre): Bone Tomahawk (2015) - Drama, Horror, Western
 - kept (not its first genre): The House That Jack Built (2018) - Drama, Horror, Crime, Thriller
+- kept (not its first genre): Revenge (2017) - Action, Horror, Thriller, Drama
+- kept (not its first genre): Mandy (2018) - Fantasy, Action, Horror
 - kept (not its first genre): Spawn (1997) - Action, Fantasy, Horror
+- kept (not its first genre): Azrael (2024) - Action, Horror, Thriller
+- kept (not its first genre): This Is Not a Test (2026) - Thriller, Horror
 - kept (not its first genre): Grave Encounters (2011) - Thriller, Horror
 - kept (not its first genre): The Green Inferno (2014) - Adventure, Horror
-- kept (not its first genre): Azrael (2024) - Action, Horror, Thriller
 - kept (not its first genre): Sputnik (2020) - Sci-Fi, Drama, Horror
-- kept (not its first genre): This Is Not a Test (2026) - Thriller, Horror
 - left out: Tale of Tales (2015) [movie:314405] - Romance, Fantasy, Horror
 - left out: One Cut of the Dead (2017) [movie:513434] - Comedy, Horror, Drama
 - left out: Mayhem (2017) [movie:429733] - Action, Comedy, Horror
@@ -5016,26 +5017,26 @@ EMPTY gen-streaming-services-mubi-family-movies
 - left out: The Toxic Avenger Part III: The Last Temptation of Toxie (1989) [movie:28169] - Action, Comedy, Horror, Sci-Fi
 - left out: Vicious Fun (2021) [movie:728054] - Comedy, Horror, Romance
 - left out: Hollywood Chainsaw Hookers (1988) [movie:27412] - Comedy, Horror
-- left out: Combat Shock (1986) [movie:26558] - War, Drama, Horror
-- left out: Flux Gourmet (2022) [movie:848818] - Drama, Comedy, Horror
 - left out: Buffet Infinity (2026) [movie:1495041] - Comedy, Horror
 - left out: Touch Me (2026) [movie:1400763] - Comedy, Sci-Fi, Horror
+- left out: Penny Lane Is Dead (2026) [movie:1428766] - Comedy, Horror, Thriller
+- left out: Crazy Lips (2000) [movie:40106] - Comedy, Horror, Action
 
 ## Shudder · Mystery & Thriller Movies (movie) - 288 kept of 304 looked at
 - kept (not its first genre): The Cycle (2026) - Crime, Horror, Thriller
 - kept (not its first genre): The Mortuary Assistant (2026) - Horror, Mystery
 - kept (not its first genre): Exit 8 (2025) - Horror, Mystery
 - kept (not its first genre): Halloween (1978) - Horror, Thriller
-- kept (not its first genre): The Medium (2021) - Horror, Mystery
 - kept (not its first genre): The Autopsy of Jane Doe (2016) - Horror, Mystery
 - kept (not its first genre): The Others (2001) - Horror, Mystery, Thriller
 - kept (not its first genre): Whistle (2026) - Horror, Mystery
+- kept (not its first genre): The Medium (2021) - Horror, Mystery
 - kept (not its first genre): Gonjiam: Haunted Asylum (2018) - Horror, Mystery
-- kept (not its first genre): The Sadness (2021) - Horror, Thriller
 - kept (not its first genre): Dark Nuns (2025) - Horror, Mystery, Thriller, Drama
-- kept (not its first genre): When Evil Lurks (2023) - Horror, Thriller
+- kept (not its first genre): The Sadness (2021) - Horror, Thriller
 - kept (not its first genre): Strange Darling (2024) - Crime, Thriller, Horror
 - kept (not its first genre): Scary Stories to Tell in the Dark (2019) - Horror, Mystery
+- kept (not its first genre): When Evil Lurks (2023) - Horror, Thriller
 - kept (not its first genre): Oddity (2024) - Horror, Mystery
 - left out: Spree (2020) [movie:653598] - Comedy, Horror, Thriller
 - left out: Maniac Cop (1988) [movie:14240] - Action, Horror, Mystery, Crime
@@ -5205,23 +5206,22 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The Hunger Games: Mockingjay - Part 1 (2014) - Sci-Fi, Adventure, Thriller
 - kept (not its first genre): The Hunger Games: The Ballad of Songbirds & Snakes (2023) - Sci-Fi, Action, Adventure
 - kept (not its first genre): The Hunger Games (2012) - Sci-Fi, Adventure, Action, Thriller
-- kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Dune: Part Two (2024) - Sci-Fi, Adventure
+- kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Avatar: Fire and Ash (2025) - Sci-Fi, Adventure, Fantasy
-- kept (not its first genre): The Avengers (2012) - Sci-Fi, Action, Adventure
 - kept (not its first genre): Dune (2021) - Sci-Fi, Adventure
+- kept (not its first genre): The Avengers (2012) - Sci-Fi, Action, Adventure
 - kept (not its first genre): Home Alone 2: Lost in New York (1992) - Comedy, Family, Adventure
 - kept (not its first genre): Doctor Strange in the Multiverse of Madness (2022) - Fantasy, Action, Adventure
-- kept (not its first genre): The Crow (1994) - Fantasy, Action, Thriller
-- kept (not its first genre): Animals (2026) - Thriller, Drama, Action, Crime
 - kept (not its first genre): The Fantastic 4: First Steps (2025) - Sci-Fi, Adventure, Action
+- kept (not its first genre): Avatar (2009) - Sci-Fi, Action, Adventure
+- kept (not its first genre): Guardians of the Galaxy Vol. 3 (2023) - Sci-Fi, Adventure, Action
 - left out: 2001: A Space Odyssey (1968) [movie:62] - Sci-Fi, Mystery, Adventure
 - left out: Jaws (1975) [movie:578] - Horror, Thriller, Adventure
 - left out: Braveheart (1995) [movie:197] - History, Drama, War, Action
 - left out: Ford v Ferrari (2019) [movie:359724] - Drama, History, Action
 - left out: The Day After Tomorrow (2004) [movie:435] - Sci-Fi, Thriller, Adventure
 - left out: Resident Evil (2002) [movie:1576] - Horror, Action, Sci-Fi
-- left out: Hansel & Gretel: Witch Hunters (2013) [movie:60304] - Fantasy, Horror, Action
 - left out: Blade (1998) [movie:36647] - Horror, Action
 - left out: Van Helsing (2004) [movie:7131] - Horror, Adventure, Action
 - left out: Alien Resurrection (1997) [movie:8078] - Sci-Fi, Horror, Action
@@ -5229,7 +5229,6 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Blade II (2002) [movie:36586] - Fantasy, Horror, Action, Thriller
 - left out: The Princess Bride (1987) [movie:2493] - Fantasy, Comedy, Romance, Adventure
 - left out: Dawn of the Dead (2004) [movie:924] - Horror, Action
-- left out: The Blues Brothers (1980) [movie:525] - Music, Comedy, Action, Adventure
 - left out: Midway (2019) [movie:522162] - War, History, Action
 - left out: Resident Evil (2026) [movie:1423191] - Horror, Sci-Fi, Adventure
 - left out: Deep Water (2026) [movie:1127384] - Horror, Thriller, Adventure
@@ -5243,14 +5242,14 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Game of Thrones (2011) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - kept (not its first genre): Doctor Who (1963) - Drama, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Smallville (2001) - Sci-Fi & Fantasy, Action & Adventure, Drama
+- kept (not its first genre): Marshals (2026) - Drama, Crime, Action & Adventure
 - kept (not its first genre): Hawaii Five-0 (2010) - Crime, Drama, Action & Adventure
 - kept (not its first genre): Lost (2004) - Mystery, Action & Adventure, Drama
 - kept (not its first genre): 9-1-1 (2018) - Drama, Crime, Action & Adventure
-- kept (not its first genre): FBI (2018) - Crime, Action & Adventure, Drama
 - kept (not its first genre): S.W.A.T. (2017) - Crime, Action & Adventure, Drama
-- kept (not its first genre): Star Trek: The Next Generation (1987) - Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery
-- kept (not its first genre): Stargate SG-1 (1997) - Sci-Fi & Fantasy, Action & Adventure
+- kept (not its first genre): FBI (2018) - Crime, Action & Adventure, Drama
 - kept (not its first genre): JAG (1995) - Drama, Action & Adventure, Crime
+- kept (not its first genre): Star Trek: The Next Generation (1987) - Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery
 - kept (not its first genre): Arrow (2012) - Crime, Drama, Action & Adventure
 - left out: Hawkeye (2021) [tv:88329] - Drama, Comedy, Action & Adventure
 - left out: Limitless (2015) [tv:62687] - Drama, Comedy, Action & Adventure
@@ -5359,8 +5358,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Mike & Nick & Nick & Alice (2026) - Comedy, Sci-Fi, Action
 - kept (not its first genre): The Runner (2026) - Thriller, Action
 - kept (not its first genre): Your Mother Your Mother Your Mother (2026) - Crime, Thriller, Action
-- kept (not its first genre): Citizen Vigilante (2026) - Crime, Action
 - kept (not its first genre): Allen (2026) - Sci-Fi, Adventure, Comedy
+- kept (not its first genre): Citizen Vigilante (2026) - Crime, Action
 - kept (not its first genre): Pizza Movie (2026) - Comedy, Adventure, Fantasy
 - kept (not its first genre): Lucky Strike (2026) - War, Action
 - left out: Resident Evil (2026) [movie:1423191] - Horror, Sci-Fi, Adventure
@@ -5384,17 +5383,17 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The Fifth Element (1997) - Sci-Fi, Action, Adventure
 - kept (not its first genre): Hero (2002) - Drama, Adventure, Action, History
 - kept (not its first genre): Battle Royale (2000) - Drama, Thriller, Action
-- kept (not its first genre): Asterix & Obelix: Mission Cleopatra (2002) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): The Chaser (2008) - Crime, Thriller, Action
-- kept (not its first genre): Ip Man (2008) - Drama, Action, History
-- kept (not its first genre): Wasabi (2001) - Drama, Action, Comedy
-- kept (not its first genre): The Wolf's Call (2019) - Thriller, Action, Adventure
+- kept (not its first genre): Asterix & Obelix: Mission Cleopatra (2002) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Elite Squad (2007) - Drama, Action, Crime
+- kept (not its first genre): Wasabi (2001) - Drama, Action, Comedy
 - kept (not its first genre): The Big Blue (1988) - Romance, Adventure, Drama
-- kept (not its first genre): The Girl Who Played with Fire (2009) - Drama, Action, Thriller, Crime, Mystery
+- kept (not its first genre): Ip Man (2008) - Drama, Action, History
 - kept (not its first genre): The Extraordinary Adventures of Adèle Blanc-Sec (2010) - Fantasy, Adventure, Action, Mystery
-- kept (not its first genre): Elite Squad: The Enemy Within (2010) - Drama, Action, Crime
+- kept (not its first genre): The Wolf's Call (2019) - Thriller, Action, Adventure
+- kept (not its first genre): The Girl Who Played with Fire (2009) - Drama, Action, Thriller, Crime, Mystery
 - kept (not its first genre): Asterix and Obelix Take On Caesar (1999) - Family, Adventure, Comedy, Fantasy
+- kept (not its first genre): Elite Squad: The Enemy Within (2010) - Drama, Action, Crime
 - left out: Crouching Tiger, Hidden Dragon (2000) [movie:146] - Romance, Drama, Action
 - left out: Godzilla Minus One (2023) [movie:940721] - Sci-Fi, Horror, Action
 - left out: Peninsula (2020) [movie:581392] - Horror, Action, Thriller, Adventure
@@ -5412,19 +5411,19 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Action & Adventure · Popular Anime Movies (movie) - 499 kept of 514 looked at
 - kept (not its first genre): Castle in the Sky (1986) - Adventure, Fantasy, Animation, Action, Family
 - kept (not its first genre): Ninja Scroll (1993) - Fantasy, Animation, Action, Horror
-- kept (not its first genre): Naruto the Movie: Ninja Clash in the Land of Snow (2004) - Comedy, Action, Animation, Adventure
 - kept (not its first genre): Boruto: Naruto the Movie (2015) - Adventure, Action, Animation, Comedy, Fantasy
-- kept (not its first genre): Dragon Ball GT: A Hero's Legacy (1997) - Adventure, Action, Animation, Sci-Fi
-- kept (not its first genre): Pokémon Ranger and the Temple of the Sea (2006) - Family, Animation, Action, Adventure, Fantasy, Sci-Fi
-- kept (not its first genre): Fullmetal Alchemist: The Sacred Star of Milos (2011) - Adventure, Fantasy, Animation, Action, Sci-Fi
-- kept (not its first genre): Naruto the Movie: Guardians of the Crescent Moon Kingdom (2006) - Adventure, Animation, Action
-- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
+- kept (not its first genre): Naruto the Movie: Ninja Clash in the Land of Snow (2004) - Comedy, Action, Animation, Adventure
 - kept (not its first genre): Iron Man: Rise of Technovore (2013) - Sci-Fi, Animation, Action
 - kept (not its first genre): Pokémon 3: The Movie (2000) - Adventure, Fantasy, Animation, Action, Family
+- kept (not its first genre): Pokémon Ranger and the Temple of the Sea (2006) - Family, Animation, Action, Adventure, Fantasy, Sci-Fi
 - kept (not its first genre): Naruto Shippuden the Movie: Bonds (2008) - Fantasy, Animation, Action
-- kept (not its first genre): Pokémon: Jirachi Wish Maker (2003) - Family, Action, Animation, Adventure, Fantasy, Sci-Fi
-- kept (not its first genre): Naruto Shippuden the Movie: The Lost Tower (2010) - Adventure, Action, Animation
 - kept (not its first genre): Pokémon the Movie: Hoopa and the Clash of Ages (2015) - Family, Adventure, Animation, Action, Fantasy
+- kept (not its first genre): Naruto the Movie: Guardians of the Crescent Moon Kingdom (2006) - Adventure, Animation, Action
+- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
+- kept (not its first genre): Pokémon: Jirachi Wish Maker (2003) - Family, Action, Animation, Adventure, Fantasy, Sci-Fi
+- kept (not its first genre): Fullmetal Alchemist: The Sacred Star of Milos (2011) - Adventure, Fantasy, Animation, Action, Sci-Fi
+- kept (not its first genre): Yu-Gi-Oh!: The Dark Side of Dimensions (2016) - Adventure, Animation, Action, Fantasy
+- kept (not its first genre): Naruto Shippuden the Movie: The Lost Tower (2010) - Adventure, Action, Animation
 - left out: Neon Genesis Evangelion: The End of Evangelion (1997) [movie:18491] - Animation, Sci-Fi, Drama, Fantasy, Action
 - left out: Pokémon: The First Movie (1998) [movie:10228] - Animation, Family, Adventure, Fantasy, Action
 - left out: Pokémon: Lucario and the Mystery of Mew (2005) [movie:34067] - Family, Adventure, Animation, Fantasy, Action, Sci-Fi
@@ -5443,22 +5442,22 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Ranma ½ (1989) - Comedy, Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Hunter x Hunter (1999) - Sci-Fi & Fantasy, Action & Adventure, Animation, Comedy, Drama
 - kept (not its first genre): Saint Seiya Omega (2012) - Sci-Fi & Fantasy, Animation, Action & Adventure
-- kept (not its first genre): Beyblade (2001) - Kids, Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): The Mysterious Cities of Gold (1982) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Beyblade (2001) - Kids, Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Shangri-La Frontier (2023) - Sci-Fi & Fantasy, Action & Adventure, Comedy, Animation
 - kept (not its first genre): GeGeGe no Kitaro (2018) - Comedy, Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): Yu-Gi-Oh! VRAINS (2017) - Sci-Fi & Fantasy, Animation, Action & Adventure
-- kept (not its first genre): Dragon Ball Z Kai (2009) - Sci-Fi & Fantasy, Animation, Action & Adventure, Comedy
 - kept (not its first genre): Medabots (1999) - Sci-Fi & Fantasy, Animation, Action & Adventure, Comedy, Kids
+- kept (not its first genre): Dragon Ball Z Kai (2009) - Sci-Fi & Fantasy, Animation, Action & Adventure, Comedy
 - kept (not its first genre): Zenki (1995) - Sci-Fi & Fantasy, Animation, Comedy, Action & Adventure
 - kept (not its first genre): TRIGUN (1998) - Sci-Fi & Fantasy, Action & Adventure, Animation
 - kept (not its first genre): Patlabor: The TV Series (1989) - Comedy, Animation, Action & Adventure
-- kept (not its first genre): LAST HOPE (2018) - Drama, Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Baccano! (2007) - Comedy, Action & Adventure, Animation, Crime, Mystery
 - left out: Angel Beats! (2010) [tv:42942] - Animation, Comedy, Drama, Sci-Fi & Fantasy, Action & Adventure
 - left out: Witchblade (2006) [tv:20450] - Animation, Drama, Comedy, Sci-Fi & Fantasy, Action & Adventure, Mystery
 - left out: Eden of the East (2009) [tv:21750] - Animation, Drama, Mystery, Comedy, Action & Adventure
-- left out: Kaiba (2008) [tv:34747] - Animation, Sci-Fi & Fantasy, Drama, Mystery, Action & Adventure
 - left out: Level E (2011) [tv:38559] - Animation, Comedy, Drama, Sci-Fi & Fantasy, Action & Adventure
+- left out: Kaiba (2008) [tv:34747] - Animation, Sci-Fi & Fantasy, Drama, Mystery, Action & Adventure
 - left out: Mermaid Melody: Pichi Pichi Pitch (2003) [tv:42862] - Animation, Kids, Drama, Sci-Fi & Fantasy, Comedy, Family, Action & Adventure
 - left out: Yo-kai Watch (2014) [tv:66562] - Animation, Comedy, Kids, Mystery, Sci-Fi & Fantasy, Action & Adventure
 - left out: Shugo Chara! (2007) [tv:14451] - Animation, Comedy, Kids, Drama, Action & Adventure, Sci-Fi & Fantasy
@@ -5477,8 +5476,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Hunter x Hunter: The Last Mission (2013) - Adventure, Animation, Action, Fantasy
 - kept (not its first genre): Fullmetal Alchemist: The Sacred Star of Milos (2011) - Adventure, Fantasy, Animation, Action, Sci-Fi
 - kept (not its first genre): Pokémon the Movie: Hoopa and the Clash of Ages (2015) - Family, Adventure, Animation, Action, Fantasy
-- kept (not its first genre): Pokémon 3: The Movie (2000) - Adventure, Fantasy, Animation, Action, Family
 - kept (not its first genre): Pokémon: Jirachi Wish Maker (2003) - Family, Action, Animation, Adventure, Fantasy, Sci-Fi
+- kept (not its first genre): Pokémon 3: The Movie (2000) - Adventure, Fantasy, Animation, Action, Family
 - left out: Neon Genesis Evangelion: The End of Evangelion (1997) [movie:18491] - Animation, Sci-Fi, Drama, Fantasy, Action
 - left out: Pokémon: The First Movie (1998) [movie:10228] - Animation, Family, Adventure, Fantasy, Action
 - left out: Pokémon: Lucario and the Mystery of Mew (2005) [movie:34067] - Family, Adventure, Animation, Fantasy, Action, Sci-Fi
@@ -5509,6 +5508,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 
 ## Sci-Fi & Fantasy · New Movies (movie) - 500 kept of 660 looked at
 - kept (not its first genre): Model Citizen (2026) - Crime, Sci-Fi, Thriller
+- kept (not its first genre): Wicker (2026) - Romance, Fantasy, Comedy
 - kept (not its first genre): Street Fighter (2026) - Action, Comedy, Fantasy
 - kept (not its first genre): Resident Evil (2026) - Horror, Sci-Fi, Adventure
 - kept (not its first genre): Practical Magic 2 (2026) - Romance, Fantasy, Comedy
@@ -5522,7 +5522,6 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Her Private Hell (2026) - Horror, Thriller, Sci-Fi
 - kept (not its first genre): Pinocchio: Unstrung (2026) - Horror, Fantasy, Mystery
 - kept (not its first genre): The Odyssey (2026) - Adventure, Action, Fantasy
-- kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - left out: Red One (2024) [movie:845781] - Action, Adventure, Comedy, Fantasy
 - left out: Clifford the Big Red Dog (2021) [movie:585245] - Family, Adventure, Comedy, Fantasy
 - left out: The Exorcism of God (2022) [movie:836225] - Horror, Crime, Drama, Fantasy
@@ -5591,18 +5590,18 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Iron Man (2008) - Action, Sci-Fi, Adventure
 - kept (not its first genre): The Odyssey (2026) - Adventure, Action, Fantasy
 - kept (not its first genre): Resident Evil (2026) - Horror, Sci-Fi, Adventure
+- kept (not its first genre): The Hunger Games: Catching Fire (2013) - Adventure, Action, Sci-Fi
 - kept (not its first genre): Buddy (2026) - Horror, Comedy, Fantasy
+- kept (not its first genre): The Dog Stars (2026) - Action, Thriller, Sci-Fi
 - kept (not its first genre): Avengers: Endgame (2019) - Adventure, Sci-Fi, Action
 - kept (not its first genre): Street Fighter (2026) - Action, Comedy, Fantasy
-- kept (not its first genre): The Hunger Games: Catching Fire (2013) - Adventure, Action, Sci-Fi
-- kept (not its first genre): The Dog Stars (2026) - Action, Thriller, Sci-Fi
 - kept (not its first genre): Interstellar (2014) - Adventure, Drama, Sci-Fi
 - kept (not its first genre): Inception (2010) - Action, Sci-Fi, Crime
-- kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
-- kept (not its first genre): Avengers: Infinity War (2018) - Adventure, Action, Sci-Fi
-- kept (not its first genre): Backrooms (2026) - Horror, Mystery, Sci-Fi
 - kept (not its first genre): The Hunger Games: Mockingjay - Part 2 (2015) - Action, Adventure, Sci-Fi
-- kept (not its first genre): Pinocchio: Unstrung (2026) - Horror, Fantasy, Mystery
+- kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
+- kept (not its first genre): Backrooms (2026) - Horror, Mystery, Sci-Fi
+- kept (not its first genre): Avengers: Infinity War (2018) - Adventure, Action, Sci-Fi
+- kept (not its first genre): Harry Potter and the Philosopher's Stone (2001) - Adventure, Fantasy
 - left out: Thor: Ragnarok (2017) [movie:284053] - Action, Adventure, Comedy, Sci-Fi
 - left out: Charlie and the Chocolate Factory (2005) [movie:118] - Adventure, Comedy, Family, Fantasy
 - left out: Men in Black (1997) [movie:607] - Action, Adventure, Comedy, Sci-Fi
@@ -5614,20 +5613,20 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: 1408 (2007) [movie:3021] - Horror, Mystery
 - left out: G.I. Joe: The Rise of Cobra (2009) [movie:14869] - Adventure, Action, Thriller, Sci-Fi
 - left out: Teenage Mutant Ninja Turtles: Out of the Shadows (2016) [movie:308531] - Action, Adventure, Comedy, Family, Sci-Fi
-- left out: Spy Kids (2001) [movie:10054] - Family, Action, Comedy, Adventure, Sci-Fi
 - left out: Wild Wild West (1999) [movie:8487] - Action, Adventure, Comedy, Sci-Fi, Western
 - left out: Big Trouble in Little China (1986) [movie:6978] - Action, Adventure, Comedy, Fantasy
 - left out: Honey, I Shrunk the Kids (1989) [movie:9354] - Adventure, Comedy, Family, Sci-Fi
+- left out: Mirror Mirror (2012) [movie:62764] - Adventure, Comedy, Family, Fantasy
 - left out: 10,000 BC (2008) [movie:7840] - Adventure, Action, Drama, Fantasy
 - left out: Red One (2024) [movie:845781] - Action, Adventure, Comedy, Fantasy
 - left out: Robin Hood (2018) [movie:375588] - Adventure, Action, Thriller, Fantasy
 - left out: Herbie Fully Loaded (2005) [movie:11451] - Comedy, Family, Adventure, Fantasy, Romance
 - left out: The Christmas Chronicles (2018) [movie:527435] - Comedy, Adventure, Family, Fantasy
-- left out: Spy Kids 2: The Island of Lost Dreams (2002) [movie:9488] - Family, Action, Adventure, Comedy, Sci-Fi
+- left out: Spy Kids 3-D: Game Over (2003) [movie:12279] - Family, Action, Comedy, Adventure, Sci-Fi
 - left out: Moonraker (1979) [movie:698] - Action, Adventure, Thriller, Sci-Fi
 - left out: The Family Man (2000) [movie:5994] - Comedy, Drama, Romance, Fantasy
+- left out: The Tuxedo (2002) [movie:10771] - Thriller, Action, Comedy, Sci-Fi
 - left out: Clifford the Big Red Dog (2021) [movie:585245] - Family, Adventure, Comedy, Fantasy
-- left out: The Muppet Christmas Carol (1992) [movie:10437] - Music, Comedy, Family, Fantasy, Drama
 
 ## Sci-Fi & Fantasy · Popular Series (series) - 500 kept of 660 looked at
 - kept (not its first genre): Supernatural (2005) - Drama, Mystery, Sci-Fi & Fantasy
@@ -5635,16 +5634,16 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The Lord of the Rings: The Rings of Power (2022) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): The Flash (2014) - Drama, Sci-Fi & Fantasy
 - kept (not its first genre): What We Do in the Shadows (2019) - Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Doctor Who (2005) - Action & Adventure, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): The Vampire Diaries (2009) - Drama, Sci-Fi & Fantasy
+- kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): The Magicians (2015) - Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Manimal (1983) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): FROM (2022) - Mystery, Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Airwolf (1984) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Doctor Who (1963) - Drama, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): The Walking Dead (2010) - Action & Adventure, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Percy Jackson and the Olympians (2023) - Action & Adventure, Sci-Fi & Fantasy, Drama, Family
+- kept (not its first genre): The X-Files (1993) - Mystery, Sci-Fi & Fantasy, Crime
 - left out: Charmed (1998) [tv:1981] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Henry Danger (2014) [tv:61852] - Comedy, Family, Kids, Sci-Fi & Fantasy
 - left out: Utopia (2013) [tv:46511] - Mystery, Drama, Comedy, Sci-Fi & Fantasy, Action & Adventure
@@ -5782,9 +5781,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The NeverEnding Story (1984) - Adventure, Fantasy, Family
 - kept (not its first genre): Nosferatu (1922) - Horror, Fantasy
 - kept (not its first genre): #Alive (2020) - Action, Horror, Sci-Fi
-- kept (not its first genre): Asterix & Obelix: Mission Cleopatra (2002) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Solaris (1972) - Drama, Sci-Fi, Mystery
 - kept (not its first genre): Metropolis (1927) - Drama, Sci-Fi
+- kept (not its first genre): Asterix & Obelix: Mission Cleopatra (2002) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Wings of Desire (1987) - Drama, Fantasy, Romance
 - kept (not its first genre): A Trip to the Moon (1902) - Adventure, Sci-Fi, Comedy
 - left out: Kung Fu Hustle (2004) [movie:9470] - Action, Comedy, Crime, Fantasy
@@ -5814,9 +5813,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Puella Magi Madoka Magica the Movie -Rebellion- (2013) - Mystery, Animation, Fantasy
 - kept (not its first genre): Pokémon 4Ever (2001) - Adventure, Fantasy, Animation, Sci-Fi, Family
 - kept (not its first genre): No Game No Life: Zero (2017) - Adventure, Animation, Drama, Fantasy, Romance
-- kept (not its first genre): Pokémon: Giratina and the Sky Warrior (2008) - Family, Adventure, Animation, Fantasy
-- kept (not its first genre): Pokémon: Destiny Deoxys (2004) - Family, Adventure, Animation, Fantasy
 - kept (not its first genre): Pokémon: Lucario and the Mystery of Mew (2005) - Family, Adventure, Animation, Fantasy, Action, Sci-Fi
+- kept (not its first genre): Pokémon: Destiny Deoxys (2004) - Family, Adventure, Animation, Fantasy
+- kept (not its first genre): Pokémon: Giratina and the Sky Warrior (2008) - Family, Adventure, Animation, Fantasy
 - left out: Boruto: Naruto the Movie (2015) [movie:347201] - Adventure, Action, Animation, Comedy, Fantasy
 - left out: The Boy and the Beast (2015) [movie:315465] - Action, Adventure, Animation, Drama, Family, Fantasy
 - left out: Dragon Ball Z: Bardock - The Father of Goku (1990) [movie:39323] - Animation, Action, Sci-Fi, Drama, Fantasy
@@ -5851,20 +5850,21 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Ranma ½ (1989) - Comedy, Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Mushoku Tensei: Jobless Reincarnation (2021) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Sailor Moon (1992) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Kids
-- kept (not its first genre): Fate/stay night [Unlimited Blade Works] (2014) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): MegaMan NT Warrior (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Bakugan Battle Brawlers (2007) - Action & Adventure, Animation, Kids, Sci-Fi & Fantasy
+- kept (not its first genre): Fate/stay night [Unlimited Blade Works] (2014) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Fist of the North Star (1984) - Action & Adventure, Animation, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Mobile Suit Gundam SEED (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy, War & Politics
 - kept (not its first genre): Yu-Gi-Oh! Arc-V (2014) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): That Time I Got Reincarnated as a Slime (2018) - Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
-- kept (not its first genre): Beyblade (2001) - Kids, Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
+- kept (not its first genre): Eureka Seven (2005) - Action & Adventure, Sci-Fi & Fantasy, Animation, Drama
 - left out: Elfen Lied (2004) [tv:42671] - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Gleipnir (2020) [tv:96203] - Animation, Mystery, Comedy, Action & Adventure, Sci-Fi & Fantasy
 - left out: Akashic Records of Bastard Magic Instructor (2017) [tv:70637] - Animation, Comedy, Drama, Action & Adventure, Sci-Fi & Fantasy
 - left out: Beyblade Burst (2016) [tv:67667] - Action & Adventure, Animation, Comedy, Kids, Sci-Fi & Fantasy, Family
 - left out: Black Butler (2008) [tv:50712] - Animation, Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: B: The Beginning (2018) [tv:77529] - Action & Adventure, Animation, Drama, Crime, Mystery, Sci-Fi & Fantasy
+- left out: Servamp (2016) [tv:67710] - Animation, Comedy, Drama, Action & Adventure, Sci-Fi & Fantasy
 - left out: Land of the Lustrous (2017) [tv:74091] - Animation, Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy
 - left out: PERSONA5 the Animation (2018) [tv:77701] - Animation, Action & Adventure, Comedy, Drama, Sci-Fi & Fantasy, Crime
 - left out: ID: INVADED (2020) [tv:92602] - Animation, Drama, Mystery, Action & Adventure, Sci-Fi & Fantasy
@@ -5947,13 +5947,13 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Devils' Line (2018) [tv:78462] - Animation, Drama, Action & Adventure, Crime, Mystery, Sci-Fi & Fantasy
 - left out: B: The Beginning (2018) [tv:77529] - Action & Adventure, Animation, Drama, Crime, Mystery, Sci-Fi & Fantasy
 - left out: Servamp (2016) [tv:67710] - Animation, Comedy, Drama, Action & Adventure, Sci-Fi & Fantasy
-- left out: Battle Game in 5 Seconds (2021) [tv:112940] - Animation, Drama, Mystery, Action & Adventure, Sci-Fi & Fantasy
 - left out: Land of the Lustrous (2017) [tv:74091] - Animation, Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy
+- left out: Battle Game in 5 Seconds (2021) [tv:112940] - Animation, Drama, Mystery, Action & Adventure, Sci-Fi & Fantasy
 - left out: PERSONA5 the Animation (2018) [tv:77701] - Animation, Action & Adventure, Comedy, Drama, Sci-Fi & Fantasy, Crime
 
 ## Superhero · Popular Anime Series (series) - 37 kept of 37 looked at
-- kept (not its first genre): TIGER & BUNNY (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): My Hero Academia (2016) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): TIGER & BUNNY (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Ronin Warriors (1988) - Action & Adventure, Animation
 - kept (not its first genre): Gatchaman Crowds (2013) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): HEROMAN (2010) - Action & Adventure, Animation, Sci-Fi & Fantasy
@@ -5992,7 +5992,6 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Borderline (2025) [movie:1013482] - Comedy, Thriller, Horror
 - left out: What You Wish For (2024) [movie:1126934] - Thriller, Comedy, Horror
 - left out: Beast of War (2025) [movie:1244531] - Thriller, Action, War, Horror
-- left out: Ebenezer (2026) [movie:1567605] - Fantasy, Comedy
 - left out: Your Monster (2024) [movie:1098378] - Romance, Comedy, Horror
 - left out: F Marry Kill (2025) [movie:1200801] - Comedy, Thriller, Horror
 - left out: The Radleys (2024) [movie:1139713] - Comedy, Horror, Thriller
@@ -6006,23 +6005,24 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Onyx the Fortuitous and the Talisman of Souls (2023) [movie:929230] - Comedy, Horror
 - left out: Adult Swim Yule Log (2022) [movie:1060421] - Comedy, Horror, Sci-Fi
 - left out: Spider Island (2026) [movie:1462861] - Comedy, Horror
+- left out: Place of Bones (2024) [movie:1080249] - Western, Thriller, Horror, Action
 
 ## Horror · Popular Movies (movie) - 500 kept of 680 looked at
 - kept (not its first genre): Onslaught (2026) - Action, Horror, Thriller
-- kept (not its first genre): Get Out (2017) - Mystery, Thriller, Horror
 - kept (not its first genre): The Cycle (2026) - Crime, Horror, Thriller
-- kept (not its first genre): World War Z (2013) - Action, Horror, Sci-Fi
+- kept (not its first genre): Get Out (2017) - Mystery, Thriller, Horror
 - kept (not its first genre): Frankenstein (2025) - Drama, Fantasy, Horror
+- kept (not its first genre): World War Z (2013) - Action, Horror, Sci-Fi
 - kept (not its first genre): Constantine (2005) - Fantasy, Action, Horror
 - kept (not its first genre): Black Swan (2010) - Drama, Thriller, Horror
 - kept (not its first genre): Scream (1996) - Crime, Horror, Mystery
-- kept (not its first genre): Pretty Lethal (2026) - Action, Thriller, Horror
-- kept (not its first genre): Resident Evil: Welcome to Raccoon City (2021) - Action, Horror, Sci-Fi
-- kept (not its first genre): Prometheus (2012) - Sci-Fi, Mystery, Horror
-- kept (not its first genre): Gremlins (1984) - Fantasy, Horror, Comedy
 - kept (not its first genre): Longlegs (2024) - Crime, Horror, Mystery
+- kept (not its first genre): Prometheus (2012) - Sci-Fi, Mystery, Horror
 - kept (not its first genre): The Meg (2018) - Action, Sci-Fi, Horror
-- kept (not its first genre): A Quiet Place Part II (2021) - Sci-Fi, Thriller, Horror
+- kept (not its first genre): Resident Evil: Welcome to Raccoon City (2021) - Action, Horror, Sci-Fi
+- kept (not its first genre): Pretty Lethal (2026) - Action, Thriller, Horror
+- kept (not its first genre): Gremlins (1984) - Fantasy, Horror, Comedy
+- kept (not its first genre): Bram Stoker's Dracula (1992) - Romance, Horror
 - left out: Zombieland (2009) [movie:19908] - Comedy, Horror
 - left out: The Mummy (2017) [movie:282035] - Fantasy, Thriller, Action, Adventure, Horror
 - left out: The Menu (2022) [movie:593643] - Comedy, Horror
@@ -6091,7 +6091,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: A Haunted House (2013) [movie:139038] - Comedy, Horror
 - left out: The Voices (2014) [movie:244458] - Comedy, Crime, Horror, Fantasy, Thriller
 
-## Horror · Top of the Year Movies (movie) - 59 kept of 64 looked at
+## Horror · Top of the Year Movies (movie) - 59 kept of 63 looked at
 - kept (not its first genre): Good Boy (2026) - Drama, Mystery, Horror
 - kept (not its first genre): The Cycle (2026) - Crime, Horror, Thriller
 - kept (not its first genre): Pretty Lethal (2026) - Action, Thriller, Horror
@@ -6103,7 +6103,6 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Killer Whale (2026) - Thriller, Horror, Action
 - left out: They Will Kill You (2026) [movie:1292695] - Action, Comedy, Horror
 - left out: Teenage Sex and Death at Camp Miasma (2026) [movie:1240889] - Comedy, Horror, Romance
-- left out: Ebenezer (2026) [movie:1567605] - Fantasy, Comedy
 
 ## Horror · International Hits Movies (movie) - 40 kept of 42 looked at
 - kept (not its first genre): Godzilla Minus One (2023) - Sci-Fi, Horror, Action
@@ -6115,11 +6114,11 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Brotherhood of the Wolf (2001) - Adventure, Horror, History
 - kept (not its first genre): The Platform 2 (2024) - Sci-Fi, Horror, Thriller
 - kept (not its first genre): Revenge (2017) - Action, Horror, Thriller, Drama
-- kept (not its first genre): The Cabinet of Dr. Caligari (1920) - Drama, Horror, Thriller, Crime
-- kept (not its first genre): Marrowbone (2017) - Thriller, Horror, Mystery
 - kept (not its first genre): Funny Games (1997) - Drama, Horror, Thriller
-- kept (not its first genre): [REC]² (2009) - Thriller, Horror
+- kept (not its first genre): Marrowbone (2017) - Thriller, Horror, Mystery
 - kept (not its first genre): Titane (2021) - Drama, Thriller, Horror
+- kept (not its first genre): The Cabinet of Dr. Caligari (1920) - Drama, Horror, Thriller, Crime
+- kept (not its first genre): [REC]² (2009) - Thriller, Horror
 - kept (not its first genre): Climax (2018) - Drama, Horror, Music
 - left out: Come and See (1985) [movie:25237] - Drama, War, Horror, History
 - left out: Tale of Tales (2015) [movie:314405] - Romance, Fantasy, Horror
@@ -6130,9 +6129,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Resident Evil: Damnation (2012) - Action, Animation, Sci-Fi, Horror
 - kept (not its first genre): Dragon Ball: Sleeping Princess in Devil's Castle (1987) - Action, Animation, Fantasy, Horror
 - kept (not its first genre): Demon City Shinjuku (1988) - Action, Fantasy, Animation, Horror
+- kept (not its first genre): Devilman - Volume 2: Demon Bird (1990) - Fantasy, Animation, Horror, Action
 - kept (not its first genre): X (1996) - Action, Animation, Fantasy, Horror
 - kept (not its first genre): Devilman - Volume 1: The Birth (1987) - Action, Fantasy, Horror, Animation
-- kept (not its first genre): Devilman - Volume 2: Demon Bird (1990) - Fantasy, Animation, Horror, Action
 - kept (not its first genre): Giant God Warrior Appears in Tokyo (2012) - Sci-Fi, Horror, Action, Animation
 - kept (not its first genre): Lily C.A.T. (1987) - Sci-Fi, Horror, Animation
 - kept (not its first genre): The Guyver: Bio-Booster Armor (1989) - Sci-Fi, Animation, Action, Horror
@@ -6146,12 +6145,12 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Horror · Popular Anime Series (series) - 106 kept of 106 looked at
 - kept (not its first genre): GeGeGe no Kitaro (2018) - Comedy, Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): Berserk (1997) - Action & Adventure, Sci-Fi & Fantasy, Animation
-- kept (not its first genre): Ushio and Tora (2015) - Action & Adventure, Animation, Comedy, Drama
-- kept (not its first genre): Danganronpa: The Animation (2013) - Action & Adventure, Animation, Drama, Mystery
 - kept (not its first genre): Zenki (1995) - Sci-Fi & Fantasy, Animation, Comedy, Action & Adventure
+- kept (not its first genre): Danganronpa: The Animation (2013) - Action & Adventure, Animation, Drama, Mystery
+- kept (not its first genre): Ushio and Tora (2015) - Action & Adventure, Animation, Comedy, Drama
 - kept (not its first genre): Terra Formars (2014) - Action & Adventure, Animation, Sci-Fi & Fantasy
-- kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): BLOOD-C (2011) - Action & Adventure, Animation, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Berserk (2016) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Hellsing (2001) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Devil Lady (1998) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
@@ -6187,6 +6186,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The Mongoose (2026) - Action, Thriller
 - kept (not its first genre): Masterplan (2026) - Action, Thriller
 - kept (not its first genre): The Beast (2026) - Action, Thriller
+- kept (not its first genre): The Social Reckoning (2026) - Drama, Thriller
 - kept (not its first genre): Beware Boiúna (2026) - Horror, Thriller, Action
 - kept (not its first genre): Your Mother Your Mother Your Mother (2026) - Crime, Thriller, Action
 - kept (not its first genre): The Florist (2026) - Action, Thriller
@@ -6197,7 +6197,6 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The Weight (2026) - Drama, Thriller
 - kept (not its first genre): After Impact (2026) - Sci-Fi, Drama, Thriller
 - kept (not its first genre): The Last Kiss (2026) - Horror, Mystery
-- kept (not its first genre): Drive Through Fire (2026) - Action, Crime, Thriller
 - left out: The Gorge (2025) [movie:950396] - Romance, Sci-Fi, Thriller
 - left out: Saltburn (2023) [movie:930564] - Drama, Comedy, Thriller
 - left out: The Sheep Detectives (2026) [movie:1301421] - Comedy, Crime, Mystery
@@ -6270,18 +6269,18 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Heart of the Beast (2026) - Adventure, Thriller
 - kept (not its first genre): The Mongoose (2026) - Action, Thriller
 - kept (not its first genre): Mutiny (2026) - Action, Thriller
-- kept (not its first genre): War of the Worlds (2025) - Sci-Fi, Thriller
 - kept (not its first genre): Obsession (2026) - Horror, Thriller
-- kept (not its first genre): The Hunger Games: Mockingjay - Part 1 (2014) - Sci-Fi, Adventure, Thriller
 - kept (not its first genre): The End of Oak Street (2026) - Sci-Fi, Mystery, Thriller
-- kept (not its first genre): Insidious: Out of the Further (2026) - Horror, Thriller
+- kept (not its first genre): The Hunger Games: Mockingjay - Part 1 (2014) - Sci-Fi, Adventure, Thriller
+- kept (not its first genre): War of the Worlds (2025) - Sci-Fi, Thriller
 - kept (not its first genre): The Dog Stars (2026) - Action, Thriller, Sci-Fi
+- kept (not its first genre): Insidious: Out of the Further (2026) - Horror, Thriller
 - kept (not its first genre): The Hunger Games (2012) - Sci-Fi, Adventure, Action, Thriller
 - kept (not its first genre): Disclosure Day (2026) - Sci-Fi, Thriller
-- kept (not its first genre): The Dark Knight (2008) - Action, Thriller, Crime
 - kept (not its first genre): Backrooms (2026) - Horror, Mystery, Sci-Fi
+- kept (not its first genre): The Dark Knight (2008) - Action, Thriller, Crime
+- kept (not its first genre): The Social Reckoning (2026) - Drama, Thriller
 - kept (not its first genre): Pinocchio: Unstrung (2026) - Horror, Fantasy, Mystery
-- kept (not its first genre): The Batman (2022) - Crime, Mystery, Thriller
 - left out: The Imitation Game (2014) [movie:205596] - History, Drama, Thriller, War
 - left out: Whiplash (2014) [movie:244786] - Drama, Music, Thriller
 - left out: Once Upon a Time in... Hollywood (2019) [movie:466272] - Comedy, Drama, Thriller
@@ -6301,8 +6300,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: The Untouchables (1987) [movie:117] - Crime, History, Thriller
 - left out: Ghost (1990) [movie:251] - Fantasy, Romance, Thriller
 - left out: National Treasure: Book of Secrets (2007) [movie:6637] - Action, Adventure, Mystery
+- left out: Murder Mystery (2019) [movie:514999] - Comedy, Mystery, Crime, Romance
 - left out: Allied (2016) [movie:369885] - Action, Drama, War, Romance, Thriller
-- left out: The Mortal Instruments: City of Bones (2013) [movie:123553] - Fantasy, Action, Mystery
 - left out: Match Point (2005) [movie:116] - Drama, Romance, Thriller
 - left out: RED 2 (2013) [movie:146216] - Action, Adventure, Comedy, Crime, Thriller
 - left out: The Gorge (2025) [movie:950396] - Romance, Sci-Fi, Thriller
@@ -6311,17 +6310,17 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Mystery & Thriller · Popular Series (series) - 500 kept of 602 looked at
 - kept (not its first genre): Black Mirror (2011) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Shetland (2013) - Crime, Drama, Mystery
-- kept (not its first genre): Supernatural (2005) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Slow Horses (2022) - Crime, Drama, Mystery
-- kept (not its first genre): American Horror Story (2011) - Drama, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Supernatural (2005) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): The Mentalist (2008) - Crime, Drama, Mystery
+- kept (not its first genre): American Horror Story (2011) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Law & Order: Special Victims Unit (1999) - Crime, Drama, Mystery
 - kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
 - kept (not its first genre): Luther (2010) - Crime, Drama, Mystery
 - kept (not its first genre): CSI: Crime Scene Investigation (2000) - Crime, Drama, Mystery
-- kept (not its first genre): The Blacklist (2013) - Drama, Crime, Mystery
 - kept (not its first genre): Midsomer Murders (1997) - Crime, Drama, Mystery
+- kept (not its first genre): The Blacklist (2013) - Drama, Crime, Mystery
 - kept (not its first genre): Dexter (2006) - Crime, Drama, Mystery
 - kept (not its first genre): CSI: Miami (2002) - Drama, Mystery, Crime
 - left out: Bodyguard (2018) [tv:80307] - Crime, Drama, War & Politics, Mystery
@@ -6385,8 +6384,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 
 ## Mystery & Thriller · Top All Time Series (series) - 234 kept of 239 looked at
 - kept (not its first genre): The Originals (2013) - Sci-Fi & Fantasy, Drama, Mystery
-- kept (not its first genre): Crystal Lake (2026) - Drama, Mystery
 - kept (not its first genre): Stranger Things (2016) - Action & Adventure, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Crystal Lake (2026) - Drama, Mystery
 - kept (not its first genre): Dexter: Resurrection (2025) - Crime, Drama, Mystery
 - kept (not its first genre): The Twilight Zone (1959) - Sci-Fi & Fantasy, Mystery, Drama
 - kept (not its first genre): Sherlock (2010) - Crime, Drama, Mystery
@@ -6405,7 +6404,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Night Stalker: The Hunt for a Serial Killer (2021) [tv:114705] - Documentary, Crime, Mystery
 - left out: Unsolved Mysteries (2020) [tv:105177] - Documentary, Drama, Mystery
 
-## Mystery & Thriller · Top of the Year Movies (movie) - 93 kept of 110 looked at
+## Mystery & Thriller · Top of the Year Movies (movie) - 94 kept of 110 looked at
 - kept (not its first genre): Protector (2026) - Action, Thriller
 - kept (not its first genre): Remarkably Bright Creatures (2026) - Drama, Mystery
 - kept (not its first genre): Obsession (2026) - Horror, Thriller
@@ -6444,11 +6443,11 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Small Prophets (2026) - Comedy, Drama, Mystery
 - kept (not its first genre): Neagley (2026) - Drama, Mystery, Crime
 - kept (not its first genre): Young Sherlock (2026) - Action & Adventure, Mystery
-- kept (not its first genre): The Good Daughter (2026) - Drama, Mystery
 - kept (not its first genre): Nocturne (2026) - Crime, Drama, Mystery
+- kept (not its first genre): The Good Daughter (2026) - Drama, Mystery
 - kept (not its first genre): Last Seen (2026) - Crime, Drama, Mystery
-- kept (not its first genre): R.J. Decker (2026) - Crime, Mystery
 - kept (not its first genre): Steal (2026) - Drama, Crime, Mystery
+- kept (not its first genre): R.J. Decker (2026) - Crime, Mystery
 - kept (not its first genre): 56 Days (2026) - Drama, Crime, Mystery
 - kept (not its first genre): HIS & HERS (2026) - Drama, Crime, Mystery
 - left out: The Body (2026) [tv:291507] - Drama, Sci-Fi & Fantasy
@@ -6459,17 +6458,17 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Train to Busan (2016) - Action, Horror, Thriller, Adventure
 - kept (not its first genre): Memories of Murder (2003) - Crime, Drama, Thriller
 - kept (not its first genre): The Invisible Guest (2017) - Drama, Mystery, Thriller
-- kept (not its first genre): Peninsula (2020) - Horror, Action, Thriller, Adventure
 - kept (not its first genre): The Wailing (2016) - Horror, Mystery
 - kept (not its first genre): Shoplifters (2018) - Drama, Crime, Thriller
-- kept (not its first genre): Battle Royale (2000) - Drama, Thriller, Action
 - kept (not its first genre): Irreversible (2002) - Drama, Thriller, Crime
+- kept (not its first genre): Battle Royale (2000) - Drama, Thriller, Action
+- kept (not its first genre): Peninsula (2020) - Horror, Action, Thriller, Adventure
 - kept (not its first genre): Martyrs (2008) - Horror, Drama, Thriller
-- kept (not its first genre): Rashomon (1950) - Crime, Drama, Mystery
-- kept (not its first genre): Infernal Affairs (2002) - Drama, Thriller, Crime
-- kept (not its first genre): The Lives of Others (2006) - Drama, Thriller
 - kept (not its first genre): The Gangster, the Cop, the Devil (2019) - Action, Crime, Thriller
-- kept (not its first genre): The Platform (2019) - Drama, Sci-Fi, Thriller
+- kept (not its first genre): Rashomon (1950) - Crime, Drama, Mystery
+- kept (not its first genre): Ong-Bak (2003) - Action, Crime, Thriller
+- kept (not its first genre): The Lives of Others (2006) - Drama, Thriller
+- kept (not its first genre): Infernal Affairs (2002) - Drama, Thriller, Crime
 - left out: Parasite (2019) [movie:496243] - Comedy, Thriller, Drama
 - left out: My Fault (2023) [movie:1010581] - Drama, Romance, Thriller
 - left out: Incendies (2010) [movie:46738] - Drama, War, Mystery
@@ -6483,8 +6482,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Dark (2017) - Crime, Drama, Sci-Fi & Fantasy, Mystery
 - kept (not its first genre): Elite (2018) - Crime, Mystery, Drama
 - kept (not its first genre): Alchemy of Souls (2022) - Drama, Sci-Fi & Fantasy, Action & Adventure, Mystery
-- kept (not its first genre): Ragnarok (2020) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Kingdom (2019) - Drama, Mystery
+- kept (not its first genre): Ragnarok (2020) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Girl from Nowhere (2018) - Drama, Mystery, Crime
 - kept (not its first genre): Hellbound (2021) - Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): The Boat (2011) - Action & Adventure, Mystery, Drama
@@ -6495,9 +6494,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Mystery & Thriller · Popular Anime Movies (movie) - 80 kept of 91 looked at
 - kept (not its first genre): Detective Conan: Fallen Angel of the Highway (2026) - Action, Animation, Mystery, Crime
 - kept (not its first genre): Patlabor: The Movie (1989) - Action, Animation, Sci-Fi, Mystery
-- kept (not its first genre): The Garden of Sinners: Paradox Spiral (2008) - Action, Animation, Drama, Mystery, Thriller, Fantasy
 - kept (not its first genre): Detective Conan: The Disappearance of Conan Edogawa - The Worst Two Days in History (2015) - TV Movie, Animation, Mystery
 - kept (not its first genre): Professor Layton and the Eternal Diva (2009) - Family, Animation, Mystery
+- kept (not its first genre): The Garden of Sinners: Paradox Spiral (2008) - Action, Animation, Drama, Mystery, Thriller, Fantasy
 - kept (not its first genre): Princess Arete (2001) - Adventure, Animation, Fantasy, Mystery
 - kept (not its first genre): Thunder (1982) - Fantasy, Mystery, Animation
 - left out: Naruto Shippuden the Movie: Blood Prison (2011) [movie:75624] - Thriller, Animation, Action, Comedy, Horror, Mystery
@@ -6518,9 +6517,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): .hack (2002) - Action & Adventure, Animation, Mystery
 - kept (not its first genre): Danganronpa: The Animation (2013) - Action & Adventure, Animation, Drama, Mystery
 - kept (not its first genre): The Future Diary (2011) - Action & Adventure, Animation, Drama, Mystery
-- kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
-- kept (not its first genre): BLOOD-C (2011) - Action & Adventure, Animation, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): JOKER GAME (2016) - Drama, Animation, Mystery
+- kept (not its first genre): BLOOD-C (2011) - Action & Adventure, Animation, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Karakuri Circus (2018) - Action & Adventure, Mystery, Crime, Animation, Drama
 - kept (not its first genre): Black Bullet (2014) - Action & Adventure, Animation, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Island (2018) - Comedy, Drama, Mystery, Animation
@@ -6645,17 +6644,17 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Crime · Popular Movies (movie) - 500 kept of 680 looked at
 - kept (not its first genre): The Dark Knight (2008) - Action, Thriller, Crime
 - kept (not its first genre): The Shawshank Redemption (1994) - Drama, Crime
-- kept (not its first genre): The Godfather (1972) - Drama, Crime
 - kept (not its first genre): Primetime (2026) - Thriller, Drama, Crime
+- kept (not its first genre): The Godfather (1972) - Drama, Crime
 - kept (not its first genre): Pulp Fiction (1994) - Thriller, Crime, Comedy
-- kept (not its first genre): Training Day (2001) - Action, Crime, Drama
-- kept (not its first genre): Shelter (2026) - Action, Crime, Thriller
-- kept (not its first genre): Animals (2026) - Thriller, Drama, Action, Crime
 - kept (not its first genre): One Battle After Another (2025) - Thriller, Crime, Comedy
+- kept (not its first genre): Shelter (2026) - Action, Crime, Thriller
+- kept (not its first genre): Training Day (2001) - Action, Crime, Drama
+- kept (not its first genre): Animals (2026) - Thriller, Drama, Action, Crime
 - kept (not its first genre): The Godfather Part II (1974) - Drama, Crime
 - kept (not its first genre): The Beekeeper (2024) - Action, Crime, Thriller
+- kept (not its first genre): What's the Worst That Could Happen? (2001) - Action, Comedy, Crime
 - kept (not its first genre): Fast X (2023) - Action, Crime, Thriller
-- kept (not its first genre): The Punisher: One Last Kill (2026) - Action, Drama, Crime
 - kept (not its first genre): Motor City (2026) - Action, Thriller, Crime
 - kept (not its first genre): GoodFellas (1990) - Drama, Crime
 - left out: Inception (2010) [movie:27205] - Action, Sci-Fi, Crime
@@ -6680,9 +6679,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: The House That Jack Built (2018) [movie:398173] - Drama, Horror, Crime, Thriller
 - left out: Green Room (2016) [movie:313922] - Horror, Crime, Thriller
 - left out: Code 8 (2019) [movie:461130] - Sci-Fi, Action, Crime
+- left out: Repo Men (2010) [movie:31867] - Action, Sci-Fi, Thriller, Crime
 - left out: Drive Angry (2011) [movie:47327] - Fantasy, Thriller, Action, Crime
 - left out: West Side Story (2021) [movie:511809] - Drama, Romance, Crime
-- left out: Hit Man (2024) [movie:974635] - Comedy, Romance, Crime
 
 ## Crime · Popular Series (series) - 500 kept of 700 looked at
 - kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
@@ -6690,16 +6689,16 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Perry Mason (1957) - Mystery, Drama, Crime
 - kept (not its first genre): Magnum P.I. (2018) - Action & Adventure, Drama, Crime
 - kept (not its first genre): Reacher (2022) - Action & Adventure, Crime
+- kept (not its first genre): MINDHUNTER (2017) - Drama, Crime
 - kept (not its first genre): The Blacklist (2013) - Drama, Crime, Mystery
 - kept (not its first genre): Breaking Bad (2008) - Drama, Crime
+- kept (not its first genre): Marshals (2026) - Drama, Crime, Action & Adventure
 - kept (not its first genre): CSI: Miami (2002) - Drama, Mystery, Crime
 - kept (not its first genre): The X-Files (1993) - Mystery, Sci-Fi & Fantasy, Crime
-- kept (not its first genre): 9-1-1 (2018) - Drama, Crime, Action & Adventure
 - kept (not its first genre): Castle (2009) - Drama, Crime
-- kept (not its first genre): 24 (2001) - Action & Adventure, Drama, Crime
 - kept (not its first genre): NCIS: Los Angeles (2009) - Action & Adventure, Drama, Crime, Mystery
-- kept (not its first genre): Prison Break (2005) - Action & Adventure, Crime, Drama
-- kept (not its first genre): JAG (1995) - Drama, Action & Adventure, Crime
+- kept (not its first genre): 24 (2001) - Action & Adventure, Drama, Crime
+- kept (not its first genre): 9-1-1 (2018) - Drama, Crime, Action & Adventure
 - left out: Brooklyn Nine-Nine (2013) [tv:48891] - Comedy, Crime
 - left out: The End of the F***ing World (2017) [tv:74577] - Comedy, Drama, Crime
 - left out: Orange Is the New Black (2013) [tv:1424] - Drama, Comedy, Crime
@@ -6810,9 +6809,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Death in Paradise (2011) [tv:41956] - Comedy, Crime, Drama, Mystery
 - left out: Lilyhammer (2012) [tv:42368] - Drama, Comedy, Crime
 
-## Crime · Top of the Year Movies (movie) - 40 kept of 46 looked at
+## Crime · Top of the Year Movies (movie) - 39 kept of 45 looked at
 - kept (not its first genre): The Punisher: One Last Kill (2026) - Action, Drama, Crime
-- kept (not its first genre): The Sheep Detectives (2026) - Comedy, Crime, Mystery
 - kept (not its first genre): Shelter (2026) - Action, Crime, Thriller
 - kept (not its first genre): In the Grey (2026) - Action, Crime
 - kept (not its first genre): The Truth and Tragedy of Moriah Wilson (2026) - Documentary, Crime
@@ -6826,6 +6824,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The Crash (2026) - Documentary, Crime
 - kept (not its first genre): The Christophers (2026) - Comedy, Drama, Crime
 - kept (not its first genre): Primetime (2026) - Thriller, Drama, Crime
+- kept (not its first genre): 72 HOURS (2026) - Comedy, Crime
 - left out: Mercy (2026) [movie:1236153] - Sci-Fi, Thriller, Crime, Mystery
 - left out: Scream 7 (2026) [movie:1159559] - Horror, Mystery, Crime
 - left out: Faces of Death (2026) [movie:855435] - Horror, Crime
@@ -6858,30 +6857,30 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Anatomy of a Fall (2023) - Thriller, Mystery, Crime
 - kept (not its first genre): Shoplifters (2018) - Drama, Crime, Thriller
 - kept (not its first genre): Irreversible (2002) - Drama, Thriller, Crime
-- kept (not its first genre): Infernal Affairs (2002) - Drama, Thriller, Crime
 - kept (not its first genre): The Gangster, the Cop, the Devil (2019) - Action, Crime, Thriller
 - kept (not its first genre): Ong-Bak (2003) - Action, Crime, Thriller
+- kept (not its first genre): Infernal Affairs (2002) - Drama, Thriller, Crime
 - kept (not its first genre): The Man from Nowhere (2010) - Action, Thriller, Crime
-- kept (not its first genre): Taxi (1998) - Action, Comedy, Crime, Adventure
 - kept (not its first genre): The Girl with the Dragon Tattoo (2009) - Drama, Thriller, Crime, Mystery
-- kept (not its first genre): M (1931) - Drama, Thriller, Crime
-- kept (not its first genre): Breathless (1960) - Drama, Crime, Romance
+- kept (not its first genre): Taxi (1998) - Action, Comedy, Crime, Adventure
 - kept (not its first genre): Elite Squad (2007) - Drama, Action, Crime
+- kept (not its first genre): Breathless (1960) - Drama, Crime, Romance
+- kept (not its first genre): M (1931) - Drama, Thriller, Crime
 - left out: 365 Days (2020) [movie:664413] - Romance, Drama, Crime
 - left out: The Best Offer (2013) [movie:152742] - Drama, Romance, Crime
 - left out: The Cabinet of Dr. Caligari (1920) [movie:234] - Drama, Horror, Thriller, Crime
 
 ## Crime · International Hits Series (series) - 20 kept of 22 looked at
+- kept (not its first genre): The Queen of Flow (2018) - Drama, Crime
 - kept (not its first genre): Sin senos sí hay paraíso (2016) - Action & Adventure, Crime, Drama, Mystery
 - kept (not its first genre): The Glory (2022) - Drama, Crime
 - kept (not its first genre): Bloodhounds (2023) - Drama, Action & Adventure, Crime
-- kept (not its first genre): The Queen of Flow (2018) - Drama, Crime
-- kept (not its first genre): Rosario Tijeras (Mexico) (2016) - Drama, Crime
 - kept (not its first genre): Locked Up (2015) - Drama, Crime
+- kept (not its first genre): Rosario Tijeras (Mexico) (2016) - Drama, Crime
 - kept (not its first genre): Without Breasts There Is No Paradise (2008) - Action & Adventure, Drama, Crime
 - kept (not its first genre): El Chapo (2017) - Drama, Crime
-- kept (not its first genre): La Reina del Sur (2011) - Drama, Crime
 - kept (not its first genre): Girl from Nowhere (2018) - Drama, Mystery, Crime
+- kept (not its first genre): La Reina del Sur (2011) - Drama, Crime
 - kept (not its first genre): Surviving Escobar - Alias JJ (2017) - Drama, Crime
 - kept (not its first genre): Rosario Tijeras (2010) - Action & Adventure, Crime, Drama
 - kept (not its first genre): Who Killed Sara? (2021) - Drama, Crime, Mystery
@@ -6891,8 +6890,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Crime · Popular Anime Series (series) - 60 kept of 70 looked at
 - kept (not its first genre): Black Lagoon (2006) - Action & Adventure, Animation, Drama, Crime
 - kept (not its first genre): Master Keaton (1998) - Mystery, Animation, Drama, Crime
-- kept (not its first genre): Karakuri Circus (2018) - Action & Adventure, Mystery, Crime, Animation, Drama
 - kept (not its first genre): Baccano! (2007) - Comedy, Action & Adventure, Animation, Crime, Mystery
+- kept (not its first genre): Karakuri Circus (2018) - Action & Adventure, Mystery, Crime, Animation, Drama
 - kept (not its first genre): Gangsta. (2015) - Drama, Action & Adventure, Animation, Crime
 - kept (not its first genre): B: The Beginning (2018) - Action & Adventure, Animation, Drama, Crime, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Onihei (2017) - Drama, Animation, Crime
@@ -6925,6 +6924,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Comedy · New Movies (movie) - 500 kept of 760 looked at
 - kept (not its first genre): Guarding Stars (2026) - Romance, Comedy
 - kept (not its first genre): Allen (2026) - Sci-Fi, Adventure, Comedy
+- kept (not its first genre): Wicker (2026) - Romance, Fantasy, Comedy
 - kept (not its first genre): Street Fighter (2026) - Action, Comedy, Fantasy
 - kept (not its first genre): Matchbox the Movie (2026) - Action, Comedy, Adventure
 - kept (not its first genre): The Love Hypothesis (2026) - Romance, Comedy
@@ -6937,7 +6937,6 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): One Night Only (2026) - Romance, Comedy
 - kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Jackass: Best and Last (2026) - Action, Comedy, Documentary
-- kept (not its first genre): Voicemails for Isabelle (2026) - Romance, Comedy, Drama
 - left out: One Battle After Another (2025) [movie:1054867] - Thriller, Crime, Comedy
 - left out: Anora (2024) [movie:1064213] - Drama, Comedy, Romance
 - left out: Saltburn (2023) [movie:930564] - Drama, Comedy, Thriller
@@ -7007,21 +7006,21 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: All Creatures Great & Small (2020) [tv:108255] - Drama, Comedy
 
 ## Comedy · Popular Movies (movie) - 500 kept of 720 looked at
+- kept (not its first genre): Guarding Stars (2026) - Romance, Comedy
 - kept (not its first genre): Street Fighter (2026) - Action, Comedy, Fantasy
-- kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Matchbox the Movie (2026) - Action, Comedy, Adventure
+- kept (not its first genre): Moana (2026) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Runner (2026) - Action, Comedy, Thriller
 - kept (not its first genre): Deadpool & Wolverine (2024) - Action, Comedy, Sci-Fi
 - kept (not its first genre): How the Grinch Stole Christmas (2000) - Family, Comedy, Fantasy
 - kept (not its first genre): Practical Magic 2 (2026) - Romance, Fantasy, Comedy
 - kept (not its first genre): Back to the Future (1985) - Adventure, Comedy, Sci-Fi
-- kept (not its first genre): The Love Hypothesis (2026) - Romance, Comedy
 - kept (not its first genre): What's the Worst That Could Happen? (2001) - Action, Comedy, Crime
-- kept (not its first genre): The Devil Wears Prada (2006) - Drama, Comedy
 - kept (not its first genre): Deadpool (2016) - Action, Adventure, Comedy
+- kept (not its first genre): The Love Hypothesis (2026) - Romance, Comedy
+- kept (not its first genre): The Devil Wears Prada (2006) - Drama, Comedy
 - kept (not its first genre): A Minecraft Movie (2025) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): The Wrecking Crew (2026) - Action, Comedy, Crime, Mystery
-- kept (not its first genre): The Drama (2026) - Romance, Comedy, Drama
 - left out: Pulp Fiction (1994) [movie:680] - Thriller, Crime, Comedy
 - left out: The Wolf of Wall Street (2013) [movie:106646] - Crime, Drama, Comedy
 - left out: Birdman or (The Unexpected Virtue of Ignorance) (2014) [movie:194662] - Drama, Comedy
@@ -7052,8 +7051,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Eureka (2006) - Sci-Fi & Fantasy, Comedy, Drama
 - kept (not its first genre): Girlfriends (2000) - Drama, Comedy
 - kept (not its first genre): Shameless (2011) - Drama, Comedy
-- kept (not its first genre): Sesame Street (1969) - Kids, Comedy
 - kept (not its first genre): Desperate Housewives (2004) - Mystery, Drama, Comedy
+- kept (not its first genre): Sesame Street (1969) - Kids, Comedy
 - kept (not its first genre): Orange Is the New Black (2013) - Drama, Comedy, Crime
 - kept (not its first genre): Ted Lasso (2020) - Drama, Comedy
 - kept (not its first genre): Monk (2002) - Drama, Comedy, Crime, Mystery
@@ -7174,7 +7173,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: The Librarians (2014) [tv:61599] - Action & Adventure, Drama, Comedy
 - left out: Dead Like Me (2003) [tv:2566] - Sci-Fi & Fantasy, Drama, Comedy
 
-## Comedy · Top of the Year Movies (movie) - 63 kept of 75 looked at
+## Comedy · Top of the Year Movies (movie) - 63 kept of 76 looked at
 - kept (not its first genre): Voicemails for Isabelle (2026) - Romance, Comedy, Drama
 - kept (not its first genre): Runner (2026) - Action, Comedy, Thriller
 - kept (not its first genre): The Love Hypothesis (2026) - Romance, Comedy
@@ -7188,8 +7187,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Practical Magic 2 (2026) - Romance, Fantasy, Comedy
 - kept (not its first genre): Good Luck, Have Fun, Don't Die (2026) - Sci-Fi, Action, Comedy
 - kept (not its first genre): The Wrecking Crew (2026) - Action, Comedy, Crime, Mystery
-- kept (not its first genre): Guarding Stars (2026) - Romance, Comedy
 - kept (not its first genre): Finding Emily (2026) - Romance, Comedy
+- kept (not its first genre): The Drama (2026) - Romance, Comedy, Drama
 - left out: Send Help (2026) [movie:1198994] - Horror, Thriller, Comedy
 - left out: Ready or Not: Here I Come (2026) [movie:1266127] - Horror, Comedy
 - left out: Cold Storage (2026) [movie:696393] - Horror, Sci-Fi, Comedy
@@ -7216,11 +7215,11 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Shaolin Soccer (2001) - Action, Comedy, Fantasy
 - kept (not its first genre): Asterix & Obelix: Mission Cleopatra (2002) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Taxi (1998) - Action, Comedy, Crime, Adventure
-- kept (not its first genre): A Trip to the Moon (1902) - Adventure, Sci-Fi, Comedy
-- kept (not its first genre): Taxi 2 (2000) - Action, Comedy, Adventure, Crime
 - kept (not its first genre): Taxi 3 (2003) - Action, Comedy, Crime
-- kept (not its first genre): They Call Me Trinity (1970) - Action, Comedy, Western
+- kept (not its first genre): Taxi 2 (2000) - Action, Comedy, Adventure, Crime
+- kept (not its first genre): A Trip to the Moon (1902) - Adventure, Sci-Fi, Comedy
 - kept (not its first genre): Asterix and Obelix Take On Caesar (1999) - Family, Adventure, Comedy, Fantasy
+- kept (not its first genre): They Call Me Trinity (1970) - Action, Comedy, Western
 - kept (not its first genre): The Visitors (1993) - Fantasy, Comedy
 - kept (not its first genre): Asterix at the Olympic Games (2008) - Fantasy, Adventure, Comedy, Family
 - kept (not its first genre): OSS 117: Cairo, Nest of Spies (2006) - Crime, Action, Adventure, Comedy
@@ -7255,19 +7254,19 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Comedy · Popular Anime Movies (movie) - 258 kept of 287 looked at
 - kept (not its first genre): Dragon Ball: Curse of the Blood Rubies (1986) - Action, Animation, Adventure, Comedy, Fantasy, Sci-Fi
 - kept (not its first genre): Boruto: Naruto the Movie (2015) - Adventure, Action, Animation, Comedy, Fantasy
-- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
-- kept (not its first genre): One Piece Film: GOLD (2016) - Action, Animation, Adventure, Comedy
 - kept (not its first genre): Naruto Shippuden the Movie: The Will of Fire (2009) - Action, Adventure, Comedy, Drama, Fantasy, Animation
-- kept (not its first genre): One Piece: The Desert Princess and the Pirates: Adventure in Alabasta (2007) - Action, Adventure, Animation, Comedy, Fantasy
+- kept (not its first genre): One Piece Film: GOLD (2016) - Action, Animation, Adventure, Comedy
+- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
 - kept (not its first genre): One Piece: The Movie (2000) - Action, Animation, Adventure, Comedy, Fantasy
+- kept (not its first genre): One Piece: The Desert Princess and the Pirates: Adventure in Alabasta (2007) - Action, Adventure, Animation, Comedy, Fantasy
+- kept (not its first genre): One Piece: Episode of Chopper Plus: Bloom in the Winter, Miracle Cherry Blossom (2008) - Action, Animation, Adventure, Comedy
+- kept (not its first genre): Gintama: The Final Chapter - Be Forever Yorozuya (2013) - Action, Animation, Sci-Fi, Comedy
 - kept (not its first genre): One Piece: Baron Omatsuri and the Secret Island (2005) - Action, Animation, Comedy, Adventure, Fantasy
 - kept (not its first genre): Doraemon: Nobita's Secret Gadget Museum (2013) - Adventure, Family, Animation, Comedy, Fantasy, Sci-Fi
-- kept (not its first genre): One Piece: Episode of Chopper Plus: Bloom in the Winter, Miracle Cherry Blossom (2008) - Action, Animation, Adventure, Comedy
-- kept (not its first genre): Lupin III: The First (2019) - Adventure, Animation, Comedy, Crime, Mystery
-- kept (not its first genre): Gintama: The Final Chapter - Be Forever Yorozuya (2013) - Action, Animation, Sci-Fi, Comedy
-- kept (not its first genre): Gurren Lagann The Movie: Childhood's End (2008) - Action, Comedy, Animation, Sci-Fi, Adventure
-- kept (not its first genre): The Wonderful World of Puss 'n Boots (1969) - Family, Action, Adventure, Comedy, Animation
+- kept (not its first genre): Doraemon: Nobita and the Green Giant Legend (2008) - Adventure, Animation, Family, Comedy, Sci-Fi, Fantasy
 - kept (not its first genre): Gintama: The Movie (2010) - Action, Sci-Fi, Animation, Comedy
+- kept (not its first genre): Lupin III: The First (2019) - Adventure, Animation, Comedy, Crime, Mystery
+- kept (not its first genre): Tamako Love Story (2014) - Romance, Animation, Comedy
 - left out: Dragon Ball: Yo! Son Goku and His Friends Return!! (2008) [movie:38594] - Animation, Action, Adventure, Sci-Fi, Comedy
 - left out: Earwig and the Witch (2021) [movie:683127] - Animation, Fantasy, Family, Music, Comedy
 - left out: Pokémon the Movie: Diancie and the Cocoon of Destruction (2014) [movie:303903] - Animation, Family, Adventure, Action, Comedy, Drama
@@ -7305,11 +7304,11 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Hunter x Hunter (1999) - Sci-Fi & Fantasy, Action & Adventure, Animation, Comedy, Drama
 - kept (not its first genre): Rurouni Kenshin (1996) - Action & Adventure, Animation, Comedy
 - kept (not its first genre): KONOSUBA - God's blessing on this wonderful world! (2016) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): City Hunter (1987) - Action & Adventure, Animation, Comedy, Mystery
 - kept (not its first genre): Kenichi: The Mightiest Disciple (2006) - Action & Adventure, Animation, Comedy
+- kept (not its first genre): City Hunter (1987) - Action & Adventure, Animation, Comedy, Mystery
 - kept (not its first genre): Shangri-La Frontier (2023) - Sci-Fi & Fantasy, Action & Adventure, Comedy, Animation
-- kept (not its first genre): TIGER & BUNNY (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Kill la Kill (2013) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
+- kept (not its first genre): Hozuki's Coolheadedness (2014) - Sci-Fi & Fantasy, Animation, Comedy
 - left out: Beyblade (2001) [tv:54728] - Kids, Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
 - left out: Yu-Gi-Oh! (1998) [tv:36406] - Animation, Family, Sci-Fi & Fantasy, Action & Adventure, Kids, Comedy
 - left out: Tokyo Mew Mew (2002) [tv:46345] - Animation, Kids, Sci-Fi & Fantasy, Action & Adventure, Comedy, Family
@@ -7411,12 +7410,12 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): La La Land (2016) - Comedy, Drama, Romance
 - kept (not its first genre): Fifty Shades of Grey (2015) - Drama, Romance, Thriller
 - kept (not its first genre): The Dreamers (2003) - Drama, Romance
-- kept (not its first genre): The Invite (2026) - Comedy, Drama, Romance
-- kept (not its first genre): Fifty Shades Freed (2018) - Drama, Romance
-- kept (not its first genre): Eternal Sunshine of the Spotless Mind (2004) - Sci-Fi, Drama, Romance
-- kept (not its first genre): Beauty and the Beast (2017) - Family, Fantasy, Romance
 - kept (not its first genre): The Twilight Saga: New Moon (2009) - Adventure, Fantasy, Drama, Romance
-- kept (not its first genre): Pride & Prejudice (2005) - Drama, Romance
+- kept (not its first genre): Fifty Shades Freed (2018) - Drama, Romance
+- kept (not its first genre): Wicked (2024) - Drama, Romance, Fantasy
+- kept (not its first genre): The Invite (2026) - Comedy, Drama, Romance
+- kept (not its first genre): Beauty and the Beast (2017) - Family, Fantasy, Romance
+- kept (not its first genre): Eternal Sunshine of the Spotless Mind (2004) - Sci-Fi, Drama, Romance
 - left out: Maleficent (2014) [movie:102651] - Fantasy, Adventure, Action, Family, Romance
 - left out: The Mask (1994) [movie:854] - Comedy, Fantasy, Crime, Romance
 - left out: Top Gun (1986) [movie:744] - Action, Drama, Romance
@@ -7425,6 +7424,7 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: The Tourist (2010) [movie:37710] - Action, Thriller, Romance
 - left out: The Illusionist (2006) [movie:1491] - Fantasy, Drama, Thriller, Romance
 - left out: Crimson Peak (2015) [movie:201085] - Horror, Romance
+- left out: Paper Towns (2015) [movie:286565] - Mystery, Drama, Romance
 - left out: The Adjustment Bureau (2011) [movie:38050] - Sci-Fi, Thriller, Romance
 - left out: Murder Mystery (2019) [movie:514999] - Comedy, Mystery, Crime, Romance
 - left out: Allied (2016) [movie:369885] - Action, Drama, War, Romance, Thriller
@@ -7435,13 +7435,12 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: The Bodyguard (1992) [movie:619] - Action, Drama, Romance
 - left out: Brooklyn (2015) [movie:167073] - Drama, History, Romance
 - left out: True Romance (1993) [movie:319] - Action, Crime, Romance
+- left out: The Bounty Hunter (2010) [movie:27573] - Action, Comedy, Romance
 - left out: Legends of the Fall (1994) [movie:4476] - Drama, Western, Romance, War
 - left out: The Darkest Minds (2018) [movie:445651] - Action, Adventure, Drama, Sci-Fi, Romance
 - left out: The Karate Kid Part II (1986) [movie:8856] - Adventure, Drama, Action, Romance, Family
 - left out: Where the Crawdads Sing (2022) [movie:682507] - Drama, Mystery, Romance
 - left out: Killers (2010) [movie:37821] - Action, Comedy, Thriller, Romance
-- left out: Ghosted (2023) [movie:868759] - Action, Comedy, Romance
-- left out: West Side Story (1961) [movie:1725] - Crime, Drama, Romance
 
 ## Romance & Rom-Com · Top All Time Movies (movie) - 500 kept of 652 looked at
 - kept (not its first genre): Forrest Gump (1994) - Comedy, Drama, Romance
@@ -7498,18 +7497,18 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): My Fault (2023) - Drama, Romance, Thriller
 - kept (not its first genre): In the Mood for Love (2000) - Drama, Romance
 - kept (not its first genre): Amélie (2001) - Comedy, Romance
+- kept (not its first genre): Chungking Express (1994) - Drama, Comedy, Romance
 - kept (not its first genre): Portrait of a Lady on Fire (2019) - Drama, Romance
 - kept (not its first genre): Cinema Paradiso (1988) - Drama, Romance
-- kept (not its first genre): Chungking Express (1994) - Drama, Comedy, Romance
 - kept (not its first genre): Your Fault (2024) - Drama, Romance
 - kept (not its first genre): Dilwale Dulhania Le Jayenge (1995) - Comedy, Drama, Romance
 - kept (not its first genre): Y Tu Mamá También (2001) - Drama, Romance
-- kept (not its first genre): Youth (2015) - Comedy, Drama, Romance
 - kept (not its first genre): Love (2015) - Drama, Romance
-- kept (not its first genre): I Want You (2012) - Drama, Romance
 - kept (not its first genre): The Worst Person in the World (2021) - Drama, Romance, Comedy
+- kept (not its first genre): I Want You (2012) - Drama, Romance
 - kept (not its first genre): My Name Is Khan (2010) - Drama, Romance
-- kept (not its first genre): Beauty and the Beast (2014) - Fantasy, Romance
+- kept (not its first genre): Youth (2015) - Comedy, Drama, Romance
+- kept (not its first genre): Wings of Desire (1987) - Drama, Fantasy, Romance
 - left out: The Handmaiden (2016) [movie:290098] - Thriller, Drama, Romance
 - left out: Breathless (1960) [movie:269] - Drama, Crime, Romance
 - left out: Decision to Leave (2022) [movie:705996] - Thriller, Mystery, Romance
@@ -7521,19 +7520,19 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Fist of the North Star: Legend of Raoh - Chapter of Fierce Fighting (2007) - Action, Animation, Adventure, Romance
 - kept (not its first genre): Night Is Short, Walk On Girl (2017) - Comedy, Romance, Animation, Fantasy
 - kept (not its first genre): The Princess and the Pilot (2011) - Adventure, Animation, Drama, Romance
-- kept (not its first genre): Love, Chunibyo & Other Delusions! Rikka Version (2013) - Comedy, Animation, Drama, Romance
-- kept (not its first genre): The Moment You Fall in Love (2016) - Drama, Animation, Romance, Comedy
 - kept (not its first genre): Initial D: Third Stage (2001) - Action, Animation, Romance
+- kept (not its first genre): The Moment You Fall in Love (2016) - Drama, Animation, Romance, Comedy
+- kept (not its first genre): Love, Chunibyo & Other Delusions! Rikka Version (2013) - Comedy, Animation, Drama, Romance
 - kept (not its first genre): Stormy Night (2005) - Adventure, Animation, Drama, Romance
+- kept (not its first genre): Orange: Future (2016) - Drama, Animation, Romance, Sci-Fi
 - kept (not its first genre): Macross Frontier: The Wings of Farewell (2011) - Action, Animation, Romance, Sci-Fi
 - kept (not its first genre): Macross Frontier: The False Songstress (2009) - Drama, Romance, Animation, Sci-Fi
-- kept (not its first genre): Orange: Future (2016) - Drama, Animation, Romance, Sci-Fi
 - kept (not its first genre): Sea Prince and the Fire Child (1981) - Family, Fantasy, Animation, Romance
 - kept (not its first genre): Candy Candy: The Movie (1992) - Drama, Romance, Animation
 - left out: No Game No Life: Zero (2017) [movie:445030] - Adventure, Animation, Drama, Fantasy, Romance
 - left out: Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion (2019) [movie:553835] - Animation, Action, Adventure, Comedy, Fantasy, Romance
-- left out: NiNoKuni (2019) [movie:594188] - Animation, Action, Adventure, Family, Fantasy, Romance
 - left out: Fate/stay night: Heaven's Feel II. Lost Butterfly (2019) [movie:390634] - Animation, Action, Fantasy, Drama, Romance
+- left out: NiNoKuni (2019) [movie:594188] - Animation, Action, Adventure, Family, Fantasy, Romance
 - left out: Fate/stay night: Heaven's Feel I. Presage Flower (2017) [movie:283984] - Action, Animation, Drama, Fantasy, Romance
 - left out: Origin: Spirits of the Past (2006) [movie:14945] - Animation, Sci-Fi, Adventure, Drama, Fantasy, Romance, Action
 - left out: Detective Conan: The Scarlet Bullet (2021) [movie:662638] - Animation, Action, Crime, Mystery, Romance, Thriller
@@ -7555,8 +7554,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Sailor Moon (1992) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Mobile Suit Gundam SEED (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy, War & Politics
 - kept (not its first genre): Kaguya-sama: Love Is War (2019) - Comedy, Animation
-- kept (not its first genre): Shakugan no Shana (2005) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Rurouni Kenshin (1996) - Action & Adventure, Animation, Comedy
+- kept (not its first genre): Shakugan no Shana (2005) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): City Hunter (1987) - Action & Adventure, Animation, Comedy, Mystery
 - kept (not its first genre): Infinite Stratos (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
@@ -7571,8 +7570,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Night Is Short, Walk On Girl (2017) - Comedy, Romance, Animation, Fantasy
 - left out: No Game No Life: Zero (2017) [movie:445030] - Adventure, Animation, Drama, Fantasy, Romance
 - left out: Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion (2019) [movie:553835] - Animation, Action, Adventure, Comedy, Fantasy, Romance
-- left out: NiNoKuni (2019) [movie:594188] - Animation, Action, Adventure, Family, Fantasy, Romance
 - left out: Fate/stay night: Heaven's Feel II. Lost Butterfly (2019) [movie:390634] - Animation, Action, Fantasy, Drama, Romance
+- left out: NiNoKuni (2019) [movie:594188] - Animation, Action, Adventure, Family, Fantasy, Romance
 - left out: Fate/stay night: Heaven's Feel I. Presage Flower (2017) [movie:283984] - Action, Animation, Drama, Fantasy, Romance
 - left out: Origin: Spirits of the Past (2006) [movie:14945] - Animation, Sci-Fi, Adventure, Drama, Fantasy, Romance, Action
 
@@ -7682,15 +7681,15 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Primetime (2026) - Thriller, Drama, Crime
 - kept (not its first genre): Michael (2026) - Music, Drama
 - kept (not its first genre): Blade Runner 2049 (2017) - Sci-Fi, Drama
-- kept (not its first genre): Training Day (2001) - Action, Crime, Drama
-- kept (not its first genre): Premonition (2007) - Thriller, Drama, Mystery
-- kept (not its first genre): Top Gun: Maverick (2022) - Action, Drama
-- kept (not its first genre): Animals (2026) - Thriller, Drama, Action, Crime
 - kept (not its first genre): F1 (2025) - Action, Drama
+- kept (not its first genre): Top Gun: Maverick (2022) - Action, Drama
+- kept (not its first genre): Premonition (2007) - Thriller, Drama, Mystery
+- kept (not its first genre): Training Day (2001) - Action, Crime, Drama
 - kept (not its first genre): Joker (2019) - Crime, Thriller, Drama
-- kept (not its first genre): Gladiator (2000) - Action, Drama, Adventure
+- kept (not its first genre): Animals (2026) - Thriller, Drama, Action, Crime
 - kept (not its first genre): The Green Mile (1999) - Fantasy, Drama, Crime
 - kept (not its first genre): Twilight (2008) - Fantasy, Drama, Romance
+- kept (not its first genre): Gladiator (2000) - Action, Drama, Adventure
 - kept (not its first genre): The Wolf of Wall Street (2013) - Crime, Drama, Comedy
 - kept (not its first genre): The Death of Robin Hood (2026) - Adventure, Drama, Action
 - left out: Forrest Gump (1994) [movie:13] - Comedy, Drama, Romance
@@ -7722,19 +7721,19 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## Drama · Popular Series (series) - 500 kept of 720 looked at
 - kept (not its first genre): Black Mirror (2011) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Shetland (2013) - Crime, Drama, Mystery
-- kept (not its first genre): Banshee (2013) - Crime, Drama
 - kept (not its first genre): Slow Horses (2022) - Crime, Drama, Mystery
 - kept (not its first genre): The Wire (2002) - Crime, Drama
+- kept (not its first genre): Banshee (2013) - Crime, Drama
 - kept (not its first genre): The Mentalist (2008) - Crime, Drama, Mystery
 - kept (not its first genre): Law & Order: Special Victims Unit (1999) - Crime, Drama, Mystery
-- kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Doctor Who (2005) - Action & Adventure, Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
+- kept (not its first genre): Person of Interest (2011) - Action & Adventure, Crime, Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Baywatch (1989) - Action & Adventure, Drama, Crime
+- kept (not its first genre): Criminal Minds (2005) - Crime, Drama, Mystery
 - kept (not its first genre): Perry Mason (1957) - Mystery, Drama, Crime
-- kept (not its first genre): UFO (1970) - Sci-Fi & Fantasy, Drama, Action & Adventure
-- kept (not its first genre): Luther (2010) - Crime, Drama, Mystery
 - kept (not its first genre): MobLand (2025) - Crime, Drama
+- kept (not its first genre): The Rookie (2018) - Crime, Drama, Comedy
+- kept (not its first genre): UFO (1970) - Sci-Fi & Fantasy, Drama, Action & Adventure
 - left out: Sex Education (2019) [tv:81356] - Comedy, Drama
 - left out: Young Sheldon (2017) [tv:71728] - Comedy, Family, Drama
 - left out: Charmed (1998) [tv:1981] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
@@ -7751,9 +7750,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Chuck (2007) [tv:1404] - Action & Adventure, Comedy, Drama
 - left out: Barry (2018) [tv:73107] - Comedy, Crime, Drama
 - left out: The Wonder Years (1988) [tv:4500] - Comedy, Drama, Family
+- left out: The Chosen (2019) [tv:85077] - Action & Adventure, Family, Drama
 - left out: The Gentlemen (2024) [tv:236235] - Comedy, Drama, Crime
 - left out: BEEF (2023) [tv:154385] - Comedy, Drama
-- left out: The Chosen (2019) [tv:85077] - Action & Adventure, Family, Drama
 - left out: Weeds (2005) [tv:186] - Comedy, Crime, Drama
 - left out: The Marvelous Mrs. Maisel (2017) [tv:70796] - Comedy, Drama
 - left out: Glee (2009) [tv:1417] - Comedy, Drama
@@ -7839,13 +7838,13 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: After Life (2019) [tv:79410] - Comedy, Drama
 - left out: The Wonder Years (1988) [tv:4500] - Comedy, Drama, Family
 - left out: Russian Doll (2019) [tv:84977] - Comedy, Drama
+- left out: The Chosen (2019) [tv:85077] - Action & Adventure, Family, Drama
 - left out: The Gentlemen (2024) [tv:236235] - Comedy, Drama, Crime
 - left out: BEEF (2023) [tv:154385] - Comedy, Drama
-- left out: The Chosen (2019) [tv:85077] - Action & Adventure, Family, Drama
 - left out: Maniac (2018) [tv:73411] - Comedy, Drama, Sci-Fi & Fantasy
 - left out: Weeds (2005) [tv:186] - Comedy, Crime, Drama
 
-## Drama · Top of the Year Movies (movie) - 43 kept of 61 looked at
+## Drama · Top of the Year Movies (movie) - 44 kept of 60 looked at
 - kept (not its first genre): Michael (2026) - Music, Drama
 - kept (not its first genre): The Punisher: One Last Kill (2026) - Action, Drama, Crime
 - kept (not its first genre): Doing Life (2026) - Romance, Drama
@@ -7868,12 +7867,11 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Digger (2026) [movie:1248832] - Comedy, Drama
 - left out: Outcome (2026) [movie:1049471] - Comedy, Drama
 - left out: Motor City (2026) [movie:87513] - Action, Thriller, Crime
-- left out: Ebenezer (2026) [movie:1567605] - Fantasy, Comedy
 - left out: Don't Say Good Luck (2026) [movie:1504358] - Comedy, Music, Drama
 - left out: Camp Rock 3 (2026) [movie:1493400] - Music, Comedy, Drama, TV Movie
 - left out: Power Ballad (2026) [movie:1284016] - Comedy, Music, Drama
-- left out: The Christophers (2026) [movie:1400357] - Comedy, Drama, Crime
 - left out: Your Mother Your Mother Your Mother (2026) [movie:1437396] - Crime, Thriller, Action
+- left out: The Christophers (2026) [movie:1400357] - Comedy, Drama, Crime
 - left out: A Dog's Perfect Christmas (2026) [movie:1570488] - Comedy, Drama
 - left out: Rosebush Pruning (2026) [movie:1130948] - Comedy, Drama, Thriller
 
@@ -7911,14 +7909,14 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Memories of Murder (2003) - Crime, Drama, Thriller
 - kept (not its first genre): 365 Days: This Day (2022) - Romance, Drama
 - kept (not its first genre): Snowpiercer (2013) - Action, Sci-Fi, Drama
-- kept (not its first genre): Pan's Labyrinth (2006) - Fantasy, Drama, War
-- kept (not its first genre): Crouching Tiger, Hidden Dragon (2000) - Romance, Drama, Action
 - kept (not its first genre): All Quiet on the Western Front (2022) - War, Drama
+- kept (not its first genre): Crouching Tiger, Hidden Dragon (2000) - Romance, Drama, Action
+- kept (not its first genre): Pan's Labyrinth (2006) - Fantasy, Drama, War
 - kept (not its first genre): RRR (2022) - Action, History, Drama
 - kept (not its first genre): Three Steps Above Heaven (2010) - Romance, Drama
 - kept (not its first genre): The Count of Monte Cristo (2024) - Adventure, Action, Drama
 - kept (not its first genre): Ran (1985) - Action, Drama, History
-- kept (not its first genre): Burning (2018) - Mystery, Drama, Thriller
+- kept (not its first genre): 365 Days (2020) - Romance, Drama, Crime
 - left out: Parasite (2019) [movie:496243] - Comedy, Thriller, Drama
 - left out: Life Is Beautiful (1997) [movie:637] - Comedy, Drama
 - left out: Dilwale Dulhania Le Jayenge (1995) [movie:19404] - Comedy, Drama, Romance
@@ -7975,16 +7973,16 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): The Boy and the Beast (2015) - Action, Adventure, Animation, Drama, Family, Fantasy
 - kept (not its first genre): Detective Conan: The Last Wizard of the Century (1999) - Adventure, Animation, Crime, Drama, Mystery
 - kept (not its first genre): No Game No Life: Zero (2017) - Adventure, Animation, Drama, Fantasy, Romance
-- kept (not its first genre): Fullmetal Alchemist the Movie: Conqueror of Shamballa (2005) - Action, Adventure, Animation, Drama
 - kept (not its first genre): Naruto Shippuden the Movie: The Will of Fire (2009) - Action, Adventure, Comedy, Drama, Fantasy, Animation
+- kept (not its first genre): Fullmetal Alchemist the Movie: Conqueror of Shamballa (2005) - Action, Adventure, Animation, Drama
 - kept (not its first genre): A Letter to Momo (2012) - Comedy, Fantasy, Animation, Drama, Family
 - kept (not its first genre): Death Note Relight 1: Visions of a God (2007) - TV Movie, Crime, Drama, Fantasy, Thriller, Animation
-- kept (not its first genre): Night on the Galactic Railroad (1985) - Adventure, Animation, Drama, Family, Fantasy
-- kept (not its first genre): Bleach the Movie: Fade to Black (2008) - Action, Animation, Fantasy, Drama
 - kept (not its first genre): BLAME! (2017) - Action, Drama, Sci-Fi, Animation
-- kept (not its first genre): Fate/stay night: Heaven's Feel I. Presage Flower (2017) - Action, Animation, Drama, Fantasy, Romance
-- kept (not its first genre): Steins;Gate: The Movie - Load Region of Déjà Vu (2013) - Sci-Fi, Animation, Drama
+- kept (not its first genre): Bleach the Movie: Fade to Black (2008) - Action, Animation, Fantasy, Drama
+- kept (not its first genre): Night on the Galactic Railroad (1985) - Adventure, Animation, Drama, Family, Fantasy
+- kept (not its first genre): Fate/stay night: Unlimited Blade Works (2010) - Action, Fantasy, Animation, Drama
 - kept (not its first genre): Napping Princess (2017) - Fantasy, Adventure, Animation, Drama, Sci-Fi
+- kept (not its first genre): Steins;Gate: The Movie - Load Region of Déjà Vu (2013) - Sci-Fi, Animation, Drama
 - left out: Mirai (2018) [movie:475215] - Animation, Family, Fantasy, Adventure, Drama
 - left out: Vampire Hunter D: Bloodlust (2001) [movie:15999] - Animation, Fantasy, Horror, Action, Drama
 - left out: Berserk: The Golden Age Arc I - The Egg of the King (2012) [movie:113082] - Animation, Action, Adventure, Fantasy, Drama
@@ -8022,9 +8020,9 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Black Lagoon (2006) - Action & Adventure, Animation, Drama, Crime
 - kept (not its first genre): Mobile Suit Zeta Gundam (1985) - Action & Adventure, Animation, War & Politics, Drama
 - kept (not its first genre): Mobile Suit Gundam 00 (2007) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, War & Politics
-- kept (not its first genre): Star Blazers: Space Battleship Yamato 2199 (2013) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, War & Politics
 - kept (not its first genre): Claymore (2007) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Ushio and Tora (2015) - Action & Adventure, Animation, Comedy, Drama
+- kept (not its first genre): Gate (2015) - Action & Adventure, Animation, Comedy, Drama
+- kept (not its first genre): Star Blazers: Space Battleship Yamato 2199 (2013) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, War & Politics
 - left out: Hunter x Hunter (1999) [tv:45952] - Sci-Fi & Fantasy, Action & Adventure, Animation, Comedy, Drama
 - left out: Karakuri Circus (2018) [tv:83054] - Action & Adventure, Mystery, Crime, Animation, Drama
 - left out: Ikki Tousen (2003) [tv:37584] - Animation, Sci-Fi & Fantasy, Comedy, Action & Adventure, Drama
@@ -8158,21 +8156,21 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: The American Buffalo (2023) [tv:219756] - Documentary, Crime, War & Politics
 - left out: 1066: The Battle for Middle Earth (2009) [tv:37656] - Action & Adventure, Documentary, War & Politics
 
-## History & War · Popular Movies (movie) - 500 kept of 740 looked at
+## History & War · Popular Movies (movie) - 500 kept of 760 looked at
 - kept (not its first genre): Oppenheimer (2023) - Drama, History, War
 - kept (not its first genre): Schindler's List (1993) - Drama, History, War
-- kept (not its first genre): Inglourious Basterds (2009) - Drama, Thriller, War
 - kept (not its first genre): Hacksaw Ridge (2016) - Drama, History, War
+- kept (not its first genre): Inglourious Basterds (2009) - Drama, Thriller, War
 - kept (not its first genre): The Uprising (2026) - Action, Drama, History
 - kept (not its first genre): The Pianist (2002) - Drama, War
-- kept (not its first genre): Tenzing (2026) - Drama, History, Adventure
 - kept (not its first genre): Kingdom of Heaven (2005) - Drama, Action, Adventure, History, War
+- kept (not its first genre): Tenzing (2026) - Drama, History, Adventure
 - kept (not its first genre): By Any Means (2026) - Thriller, History, Crime
-- kept (not its first genre): Apocalypse Now (1979) - Drama, War
-- kept (not its first genre): Full Metal Jacket (1987) - Drama, War
-- kept (not its first genre): Ford v Ferrari (2019) - Drama, History, Action
-- kept (not its first genre): The Last Samurai (2003) - Drama, Action, War
 - kept (not its first genre): Killers of the Flower Moon (2023) - Crime, History, Drama
+- kept (not its first genre): Full Metal Jacket (1987) - Drama, War
+- kept (not its first genre): Apocalypse Now (1979) - Drama, War
+- kept (not its first genre): The Last Samurai (2003) - Drama, Action, War
+- kept (not its first genre): Apocalypto (2006) - Action, Drama, History
 - kept (not its first genre): Hidden Figures (2016) - Drama, History
 - left out: Green Book (2018) [movie:490132] - Drama, Comedy, History
 - left out: Jojo Rabbit (2019) [movie:515001] - Comedy, War, Drama
@@ -8186,8 +8184,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Memoirs of a Geisha (2005) [movie:1904] - Drama, Romance, History
 - left out: Good Morning, Vietnam (1987) [movie:801] - Comedy, Drama, War
 - left out: Legends of the Fall (1994) [movie:4476] - Drama, Western, Romance, War
-- left out: Ed Wood (1994) [movie:522] - Comedy, Drama, History
 - left out: Hostiles (2017) [movie:384680] - Drama, Western, History, Adventure
+- left out: Ed Wood (1994) [movie:522] - Comedy, Drama, History
 - left out: Hot Shots! (1991) [movie:9595] - Action, Comedy, War
 - left out: Cinderella Man (2005) [movie:921] - Romance, Drama, History
 - left out: Australia (2008) [movie:6972] - Adventure, Romance, History
@@ -8205,12 +8203,12 @@ EMPTY gen-streaming-services-discovery-reality-series
 - kept (not its first genre): Vikings (2013) - Action & Adventure, Drama, War & Politics
 - kept (not its first genre): Homeland (2011) - Drama, War & Politics, Crime
 - kept (not its first genre): SEAL Team (2017) - Action & Adventure, Drama, War & Politics
-- kept (not its first genre): The Last Kingdom (2015) - Action & Adventure, Drama, War & Politics
 - kept (not its first genre): Madam Secretary (2014) - Drama, War & Politics
 - kept (not its first genre): L.A. Law (1986) - Drama, War & Politics
+- kept (not its first genre): The Last Kingdom (2015) - Action & Adventure, Drama, War & Politics
 - kept (not its first genre): The Diplomat (2023) - Drama, War & Politics
-- kept (not its first genre): Shōgun (2024) - Drama, War & Politics
 - kept (not its first genre): Veep (2012) - Comedy, War & Politics
+- kept (not its first genre): Shōgun (2024) - Drama, War & Politics
 - kept (not its first genre): Band of Brothers (2001) - Drama, War & Politics
 - kept (not its first genre): Designated Survivor (2016) - Drama, War & Politics
 - kept (not its first genre): 'Allo 'Allo! (1984) - Comedy, War & Politics
@@ -8259,8 +8257,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 - left out: Memoirs of a Geisha (2005) [movie:1904] - Drama, Romance, History
 - left out: Good Morning, Vietnam (1987) [movie:801] - Comedy, Drama, War
 - left out: Legends of the Fall (1994) [movie:4476] - Drama, Western, Romance, War
-- left out: Ed Wood (1994) [movie:522] - Comedy, Drama, History
 - left out: Hostiles (2017) [movie:384680] - Drama, Western, History, Adventure
+- left out: Ed Wood (1994) [movie:522] - Comedy, Drama, History
 - left out: Hot Shots! (1991) [movie:9595] - Action, Comedy, War
 - left out: Cinderella Man (2005) [movie:921] - Romance, Drama, History
 - left out: Australia (2008) [movie:6972] - Adventure, Romance, History
@@ -8309,8 +8307,8 @@ EMPTY gen-streaming-services-discovery-reality-series
 ## History & War · International Hits Movies (movie) - 17 kept of 20 looked at
 - kept (not its first genre): RRR (2022) - Action, History, Drama
 - kept (not its first genre): Hero (2002) - Drama, Adventure, Action, History
-- kept (not its first genre): Ran (1985) - Action, Drama, History
 - kept (not its first genre): Incendies (2010) - Drama, War, Mystery
+- kept (not its first genre): Ran (1985) - Action, Drama, History
 - kept (not its first genre): Come and See (1985) - Drama, War, Horror, History
 - kept (not its first genre): Society of the Snow (2023) - Drama, History
 - kept (not its first genre): Das Boot (1981) - Drama, History, War
@@ -8352,8 +8350,8 @@ EMPTY gen-genres-history-war-international-hits-series
 - left out: Ain't Them Bodies Saints (2013) [movie:152748] - Crime, Drama, Romance, Western
 - left out: Down in the Valley (2005) [movie:7870] - Drama, Romance, Thriller, Western
 - left out: Ride with the Devil (1999) [movie:22267] - Drama, War, Romance, Western
-- left out: The Hollow Point (2016) [movie:262982] - Action, Drama, Thriller, Crime, Western, Adventure, Mystery
 - left out: Extreme Prejudice (1987) [movie:20287] - Action, Thriller, Crime, Drama, Western
+- left out: The Hollow Point (2016) [movie:262982] - Action, Drama, Thriller, Crime, Western, Adventure, Mystery
 - left out: Mystery Road (2013) [movie:199818] - Thriller, Crime, Drama, Western
 - left out: Renegade (1987) [movie:11496] - Action, Adventure, Comedy, Western
 - left out: Diablo (2016) [movie:362703] - Action, Adventure, Thriller, Western
@@ -8394,8 +8392,8 @@ EMPTY gen-genres-history-war-international-hits-series
 ## Western · Popular Movies (movie) - 500 kept of 680 looked at
 - kept (not its first genre): Django Unchained (2012) - Drama, Western
 - kept (not its first genre): No Country for Old Men (2007) - Crime, Thriller, Western
-- kept (not its first genre): The Hateful Eight (2015) - Drama, Mystery, Western
 - kept (not its first genre): The Last Stand of Ellen Cole (2024) - Action, Adventure, Western
+- kept (not its first genre): The Hateful Eight (2015) - Drama, Mystery, Western
 - kept (not its first genre): The Isolate Thief (2026) - Action, Drama, Western
 - kept (not its first genre): The Magnificent Seven (2016) - Adventure, Action, Western
 - kept (not its first genre): Dances with Wolves (1990) - Adventure, Drama, Western
@@ -8406,7 +8404,7 @@ EMPTY gen-genres-history-war-international-hits-series
 - kept (not its first genre): The Lone Ranger (2013) - Action, Adventure, Western
 - kept (not its first genre): The Legend of Zorro (2005) - Action, Adventure, Western
 - kept (not its first genre): Cowboys & Aliens (2011) - Sci-Fi, Western
-- kept (not its first genre): Shanghai Noon (2000) - Adventure, Comedy, Western
+- kept (not its first genre): The Assassination of Jesse James by the Coward Robert Ford (2007) - Drama, Western
 - left out: Wild Wild West (1999) [movie:8487] - Action, Adventure, Comedy, Sci-Fi, Western
 - left out: The Forever Purge (2021) [movie:602223] - Action, Horror, Thriller, Western
 - left out: Maverick (1994) [movie:9359] - Action, Adventure, Comedy, Drama, Western
@@ -8435,20 +8433,20 @@ EMPTY gen-genres-history-war-international-hits-series
 
 ## Western · Popular Series (series) - 102 kept of 108 looked at
 - kept (not its first genre): Westworld (2016) - Sci-Fi & Fantasy, Western
-- kept (not its first genre): The Rifleman (1958) - Action & Adventure, Western, Family
 - kept (not its first genre): Maverick (1957) - Comedy, Western
+- kept (not its first genre): The Rifleman (1958) - Action & Adventure, Western, Family
 - kept (not its first genre): When Calls the Heart (2014) - Drama, Western
 - kept (not its first genre): The Life and Legend of Wyatt Earp (1955) - Drama, Western
 - kept (not its first genre): Daniel Boone (1964) - Action & Adventure, Western
 - kept (not its first genre): Walker, Texas Ranger (1993) - Drama, Western, Crime
-- kept (not its first genre): Hell on Wheels (2011) - Action & Adventure, Drama, Western
 - kept (not its first genre): 1923 (2022) - Drama, Western
+- kept (not its first genre): Hell on Wheels (2011) - Action & Adventure, Drama, Western
 - kept (not its first genre): The Doris Day Show (1968) - Comedy, Western
 - kept (not its first genre): 1883 (2021) - Drama, Western
 - kept (not its first genre): The Man from Snowy River (1994) - Drama, Western
 - kept (not its first genre): F Troop (1965) - Comedy, Western
-- kept (not its first genre): Little House on the Prairie (2026) - Drama, Western, Family
 - kept (not its first genre): Ransom Canyon (2025) - Drama, Western
+- kept (not its first genre): Little House on the Prairie (2026) - Drama, Western, Family
 - left out: Wynonna Earp (2016) [tv:65988] - Action & Adventure, Sci-Fi & Fantasy, Western
 - left out: Warrior (2019) [tv:73544] - Crime, Drama, Action & Adventure, Western
 - left out: Jericho (2006) [tv:365] - Action & Adventure, Drama, Mystery, Western
@@ -8520,11 +8518,11 @@ EMPTY gen-genres-history-war-international-hits-series
 - kept (not its first genre): My Name Is Nobody (1973) - Comedy, Western
 - kept (not its first genre): They Call Me Trinity (1970) - Action, Comedy, Western
 - kept (not its first genre): Trinity Is Still My Name (1971) - Comedy, Western
-- kept (not its first genre): Django (1966) - Action, Western
 - kept (not its first genre): The Salvation (2014) - Drama, Western
+- kept (not its first genre): Django (1966) - Action, Western
 - kept (not its first genre): Bacurau (2019) - Mystery, Western, Thriller
-- kept (not its first genre): El Topo (1970) - Adventure, Drama, Western
 - kept (not its first genre): Strange Way of Life (2023) - Drama, Western, Romance
+- kept (not its first genre): El Topo (1970) - Adventure, Drama, Western
 - kept (not its first genre): Lucky Luke (2009) - Comedy, Western, Adventure
 - left out: The Good, the Bad, the Weird (2008) [movie:15067] - Action, Adventure, Comedy, Western
 EMPTY gen-genres-western-international-hits-series
@@ -8569,15 +8567,15 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Minions & Monsters (2026) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): The Super Mario Galaxy Movie (2026) - Family, Comedy, Adventure, Fantasy, Animation
 - kept (not its first genre): Zootopia 2 (2025) - Adventure, Animation, Comedy, Mystery, Family
-- kept (not its first genre): Swapped (2026) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): Toy Story (1995) - Family, Comedy, Animation, Adventure
+- kept (not its first genre): Swapped (2026) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): KPop Demon Hunters (2025) - Fantasy, Music, Comedy, Animation
-- kept (not its first genre): The Super Mario Bros. Movie (2023) - Family, Comedy, Adventure, Fantasy, Animation
 - kept (not its first genre): The Wild Robot (2024) - Family, Animation, Sci-Fi, Adventure
+- kept (not its first genre): The Super Mario Bros. Movie (2023) - Family, Comedy, Adventure, Fantasy, Animation
 - kept (not its first genre): The Nightmare Before Christmas (1993) - Fantasy, Animation, Family
-- kept (not its first genre): Corpse Bride (2005) - Romance, Fantasy, Animation
-- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): Beauty and the Beast (1991) - Romance, Family, Animation, Fantasy
+- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
+- kept (not its first genre): Corpse Bride (2005) - Romance, Fantasy, Animation
 - kept (not its first genre): The Incredibles (2004) - Action, Adventure, Animation, Family
 
 ## Animation · Popular Series (series) - 500 kept of 640 looked at
@@ -8585,17 +8583,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Rugrats (1991) - Family, Animation, Kids, Comedy
 - kept (not its first genre): Star Wars: The Clone Wars (2008) - Action & Adventure, Sci-Fi & Fantasy, Animation
 - kept (not its first genre): Robot Chicken (2005) - Comedy, Animation
-- kept (not its first genre): Tom & Jerry Kids Show (1990) - Kids, Animation, Comedy
 - kept (not its first genre): The Tom and Jerry Show (2014) - Family, Animation, Comedy, Kids
+- kept (not its first genre): Tom & Jerry Kids Show (1990) - Kids, Animation, Comedy
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2012) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy, Comedy
-- kept (not its first genre): Star vs. the Forces of Evil (2015) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family
 - kept (not its first genre): Archer (2009) - Comedy, Action & Adventure, Animation
 - kept (not its first genre): The Flintstones (1960) - Family, Animation, Comedy, Kids
-- kept (not its first genre): The Powerpuff Girls (1998) - Action & Adventure, Animation, Comedy, Kids, Family
 - kept (not its first genre): The Patrick Star Show (2021) - Family, Comedy, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): The Powerpuff Girls (1998) - Action & Adventure, Animation, Comedy, Kids, Family
 - kept (not its first genre): Jackie Chan Adventures (2000) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
+- kept (not its first genre): Star vs. the Forces of Evil (2015) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family
+- kept (not its first genre): Mickey Mouse Clubhouse (2006) - Kids, Animation, Comedy, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Batman: The Animated Series (1992) - Action & Adventure, Animation, Drama, Mystery
-- kept (not its first genre): Teenage Mutant Ninja Turtles (1987) - Action & Adventure, Animation, Comedy, Kids
 
 ## Animation · Top All Time Movies (movie) - 500 kept of 640 looked at
 - kept (not its first genre): Swapped (2026) - Adventure, Animation, Family, Fantasy
@@ -8645,36 +8643,36 @@ EMPTY gen-genres-western-international-hits-series
 ## Animation · International Animation (movie) - 48 kept of 49 looked at
 - kept (not its first genre): Arthur and the Invisibles (2006) - Adventure, Fantasy, Animation, Family
 - kept (not its first genre): White Snake (2019) - Romance, Animation, Fantasy
-- kept (not its first genre): The Twelve Tasks of Asterix (1976) - Family, Animation, Comedy, Adventure
 - kept (not its first genre): Arthur and the Revenge of Maltazard (2009) - Adventure, Fantasy, Animation, Family
 - kept (not its first genre): A Monster in Paris (2011) - Adventure, Animation, Family, Fantasy
+- kept (not its first genre): The Twelve Tasks of Asterix (1976) - Family, Animation, Comedy, Adventure
 - kept (not its first genre): Asterix: The Secret of the Magic Potion (2018) - Family, Animation, Comedy, Adventure
-- kept (not its first genre): Asterix and the Vikings (2006) - Family, Animation, Comedy, Adventure
 - kept (not its first genre): Kirikou and the Sorceress (1998) - Fantasy, Adventure, Animation, Family
+- kept (not its first genre): Asterix and the Vikings (2006) - Family, Animation, Comedy, Adventure
 - kept (not its first genre): Asterix and the Big Fight (1989) - Family, Animation, Adventure, Comedy
 - kept (not its first genre): Asterix vs. Caesar (1985) - Comedy, Animation, Family, Adventure
-- kept (not its first genre): Asterix the Gaul (1967) - Family, Animation, Adventure, Comedy
 - kept (not its first genre): Asterix and Cleopatra (1968) - Family, Animation, Adventure, Comedy
-- kept (not its first genre): Asterix in Britain (1986) - Family, Animation, Adventure, Comedy
+- kept (not its first genre): Asterix the Gaul (1967) - Family, Animation, Adventure, Comedy
 - kept (not its first genre): Asterix Conquers America (1994) - Family, Animation, Adventure, Comedy
 - kept (not its first genre): The Suicide Shop (2012) - Comedy, Animation, Music
+- kept (not its first genre): Asterix in Britain (1986) - Family, Animation, Adventure, Comedy
 
 ## Animation · Action & Adventure Movies (movie) - 288 kept of 326 looked at
 - kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): How to Train Your Dragon 2 (2014) - Fantasy, Action, Adventure, Animation, Family
-- kept (not its first genre): Beowulf (2007) - Adventure, Action, Animation
 - kept (not its first genre): Quantum Supremacy (2026) - Sci-Fi, Animation, Adventure, Action
+- kept (not its first genre): Beowulf (2007) - Adventure, Action, Animation
 - kept (not its first genre): Batman: The Dark Knight Returns, Part 1 (2012) - Sci-Fi, Action, Animation, Mystery
+- kept (not its first genre): Batman: Assault on Arkham (2014) - Thriller, Animation, Action, Crime
 - kept (not its first genre): Batman: The Dark Knight Returns, Part 2 (2013) - Sci-Fi, Action, Animation, Mystery
 - kept (not its first genre): The Death of Superman (2019) - Sci-Fi, Animation, Action, Drama, Adventure
-- kept (not its first genre): PAW Patrol: Mighty Pups (2018) - Adventure, Animation, Family, Action
-- kept (not its first genre): Batman: Assault on Arkham (2014) - Thriller, Animation, Action, Crime
-- kept (not its first genre): Constantine: City of Demons - The Movie (2018) - Fantasy, Animation, Horror, Action
 - kept (not its first genre): Suicide Squad: Hell to Pay (2018) - Sci-Fi, Action, Animation, Fantasy, Adventure
-- kept (not its first genre): Superman/Batman: Apocalypse (2010) - Sci-Fi, Action, Adventure, Animation, TV Movie
+- kept (not its first genre): PAW Patrol: Mighty Pups (2018) - Adventure, Animation, Family, Action
 - kept (not its first genre): Justice League: Throne of Atlantis (2015) - Sci-Fi, Action, Animation, Adventure
 - kept (not its first genre): Justice League vs. Teen Titans (2016) - Sci-Fi, Action, Animation
-- kept (not its first genre): Teen Titans: The Judas Contract (2017) - Sci-Fi, Animation, Action
+- kept (not its first genre): Constantine: City of Demons - The Movie (2018) - Fantasy, Animation, Horror, Action
+- kept (not its first genre): Superman/Batman: Apocalypse (2010) - Sci-Fi, Action, Adventure, Animation, TV Movie
+- kept (not its first genre): Reign of the Supermen (2019) - Sci-Fi, Animation, Action, Fantasy, Drama, Adventure
 - left out: Atlantis: Milo's Return (2003) [movie:8965] - Fantasy, Animation, Sci-Fi, Family, Action
 - left out: The Angry Birds Movie 2 (2019) [movie:454640] - Animation, Adventure, Comedy, Family, Action
 - left out: DC League of Super-Pets (2022) [movie:539681] - Family, Comedy, Adventure, Animation, Sci-Fi, Action
@@ -8704,18 +8702,18 @@ EMPTY gen-genres-western-international-hits-series
 ## Animation · Action & Adventure Series (series) - 407 kept of 434 looked at
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2012) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Archer (2009) - Comedy, Action & Adventure, Animation
-- kept (not its first genre): Samurai Jack (2001) - Sci-Fi & Fantasy, Action & Adventure, Animation
 - kept (not its first genre): Ben 10 (2016) - Kids, Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy
-- kept (not its first genre): Dragons: Race to the Edge (2015) - Family, Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Samurai Jack (2001) - Sci-Fi & Fantasy, Action & Adventure, Animation
 - kept (not its first genre): 101 Dalmatians: The Series (1997) - Kids, Animation, Action & Adventure
+- kept (not its first genre): Dragons: Race to the Edge (2015) - Family, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): X-Men (1992) - Kids, Sci-Fi & Fantasy, Animation, Action & Adventure
-- kept (not its first genre): Star Wars Resistance (2018) - Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): Hercules (1998) - Comedy, Kids, Animation, Action & Adventure
+- kept (not its first genre): Star Wars Resistance (2018) - Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): TaleSpin (1990) - Family, Animation, Kids, Action & Adventure
 - kept (not its first genre): Miles from Tomorrowland (2015) - Family, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Lazarus (2025) - Sci-Fi & Fantasy, Action & Adventure, Animation
-- kept (not its first genre): The Powerpuff Girls (2016) - Comedy, Animation, Action & Adventure, Kids, Family
 - kept (not its first genre): Trollhunters: Tales of Arcadia (2016) - Family, Animation, Action & Adventure, Comedy, Sci-Fi & Fantasy
+- kept (not its first genre): The Powerpuff Girls (2016) - Comedy, Animation, Action & Adventure, Kids, Family
 - kept (not its first genre): X-Men: Evolution (2000) - Kids, Animation, Sci-Fi & Fantasy, Action & Adventure, Drama
 - left out: Lilo & Stitch: The Series (2003) [tv:2355] - Animation, Comedy, Family, Sci-Fi & Fantasy, Action & Adventure, Kids
 - left out: Pucca (2006) [tv:6782] - Animation, Sci-Fi & Fantasy, Comedy, Kids, Family, Action & Adventure
@@ -8742,8 +8740,8 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Super Mario Galaxy Movie (2026) - Family, Comedy, Adventure, Fantasy, Animation
 - kept (not its first genre): Swapped (2026) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): The Super Mario Bros. Movie (2023) - Family, Comedy, Adventure, Fantasy, Animation
-- kept (not its first genre): Corpse Bride (2005) - Romance, Fantasy, Animation
 - kept (not its first genre): Beauty and the Beast (1991) - Romance, Family, Animation, Fantasy
+- kept (not its first genre): Corpse Bride (2005) - Romance, Fantasy, Animation
 - kept (not its first genre): The Polar Express (2004) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): Cinderella (1950) - Family, Fantasy, Animation, Romance
 - kept (not its first genre): Brave (2012) - Adventure, Animation, Family, Fantasy
@@ -8752,8 +8750,8 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Trolls World Tour (2020) - Family, Animation, Comedy, Fantasy, Adventure, Music
 - kept (not its first genre): Sausage Party (2016) - Adventure, Animation, Comedy, Fantasy
 - kept (not its first genre): Space Jam (1996) - Family, Sci-Fi, Fantasy, Comedy, Animation
+- kept (not its first genre): Alvin and the Chipmunks: Chipwrecked (2011) - Comedy, Fantasy, Family, Music, Animation
 - kept (not its first genre): The Addams Family (2019) - Family, Animation, Comedy, Fantasy
-- kept (not its first genre): Alvin and the Chipmunks: The Squeakquel (2009) - Comedy, Family, Animation, Fantasy, Music
 - left out: Soul (2020) [movie:508442] - Animation, Drama, Family, Music, Fantasy
 - left out: Frozen II (2019) [movie:330457] - Family, Animation, Adventure, Comedy, Fantasy
 - left out: The Lego Movie (2014) [movie:137106] - Animation, Family, Adventure, Comedy, Fantasy
@@ -8783,17 +8781,17 @@ EMPTY gen-genres-western-international-hits-series
 ## Animation · Sci-Fi & Fantasy Series (series) - 393 kept of 443 looked at
 - kept (not its first genre): Star Wars: The Clone Wars (2008) - Action & Adventure, Sci-Fi & Fantasy, Animation
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2012) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy, Comedy
-- kept (not its first genre): Star vs. the Forces of Evil (2015) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family
 - kept (not its first genre): The Patrick Star Show (2021) - Family, Comedy, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Jackie Chan Adventures (2000) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
+- kept (not its first genre): Star vs. the Forces of Evil (2015) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family
 - kept (not its first genre): Mickey Mouse Clubhouse (2006) - Kids, Animation, Comedy, Sci-Fi & Fantasy, Action & Adventure
-- kept (not its first genre): Uncle Grandpa (2013) - Comedy, Animation, Sci-Fi & Fantasy, Family
 - kept (not its first genre): Star Wars Rebels (2014) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): Uncle Grandpa (2013) - Comedy, Animation, Sci-Fi & Fantasy, Family
 - kept (not its first genre): Solar Opposites (2020) - Comedy, Animation, Sci-Fi & Fantasy
-- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): Dragons: Race to the Edge (2015) - Family, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Marvel's Avengers (2013) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Kid vs. Kat (2008) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family, Kids
+- kept (not its first genre): Dragons: Race to the Edge (2015) - Family, Animation, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Kung Fu Panda: Legends of Awesomeness (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): X-Men (1992) - Kids, Sci-Fi & Fantasy, Animation, Action & Adventure
 - left out: The Boss Baby: Back in Business (2018) [tv:77606] - Animation, Action & Adventure, Comedy, Kids, Sci-Fi & Fantasy
@@ -8833,9 +8831,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Kung Fu Panda (2008) - Action, Animation, Comedy, Family
 - kept (not its first genre): Frozen II (2019) - Family, Animation, Adventure, Comedy, Fantasy
 - kept (not its first genre): Wreck-It Ralph (2012) - Family, Animation, Comedy, Adventure
-- kept (not its first genre): The Emperor's New Groove (2000) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Toy Story 4 (2019) - Family, Comedy, Animation, Adventure
 - kept (not its first genre): Madagascar (2005) - Adventure, Animation, Comedy, Family
+- kept (not its first genre): The Emperor's New Groove (2000) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Ice Age: Collision Course (2016) - Adventure, Animation, Family, Comedy, Sci-Fi
 - kept (not its first genre): Penguins of Madagascar (2014) - Family, Animation, Adventure, Comedy
 - left out: Inside Out (2015) [movie:150540] - Animation, Family, Adventure, Drama, Comedy
@@ -8866,19 +8864,19 @@ EMPTY gen-genres-western-international-hits-series
 
 ## Animation · Adult Animated Comedy Series (series) - 226 kept of 230 looked at
 - kept (not its first genre): Jackie Chan Adventures (2000) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): Star Trek: Lower Decks (2020) - Sci-Fi & Fantasy, Animation, Comedy
 - kept (not its first genre): The Boondocks (2005) - Action & Adventure, Comedy, Animation
+- kept (not its first genre): Star Trek: Lower Decks (2020) - Sci-Fi & Fantasy, Animation, Comedy
+- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Randy Cunningham: 9th Grade Ninja (2012) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Oddballs (2022) - Action & Adventure, Comedy, Animation
 - kept (not its first genre): Harvey Birdman, Attorney at Law (2000) - Sci-Fi & Fantasy, Animation, Comedy, Action & Adventure, Crime
 - kept (not its first genre): HarmonQuest (2016) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Mike Tyson Mysteries (2014) - Mystery, Animation, Comedy
 - kept (not its first genre): Superjail! (2008) - Action & Adventure, Animation, Comedy
-- kept (not its first genre): Abominable and the Invisible City (2022) - Action & Adventure, Animation, Comedy
 - kept (not its first genre): Gotham Girls (2000) - Drama, Animation, Comedy, Action & Adventure, Crime
-- kept (not its first genre): Farzar (2022) - Sci-Fi & Fantasy, Comedy, Animation
+- kept (not its first genre): Abominable and the Invisible City (2022) - Action & Adventure, Animation, Comedy
 - kept (not its first genre): Black Dynamite (2012) - Action & Adventure, Animation, Comedy
+- kept (not its first genre): Farzar (2022) - Sci-Fi & Fantasy, Comedy, Animation
 - kept (not its first genre): Don't Hug Me I'm Scared (2022) - Mystery, Animation, Comedy
 
 ## Animation · Family Movies (movie) - 500 kept of 680 looked at
@@ -8886,17 +8884,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Minions & Monsters (2026) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Swapped (2026) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): The Nightmare Before Christmas (1993) - Fantasy, Animation, Family
-- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): Beauty and the Beast (1991) - Romance, Family, Animation, Fantasy
+- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): The Incredibles (2004) - Action, Adventure, Animation, Family
 - kept (not its first genre): Moana 2 (2024) - Adventure, Animation, Comedy, Family, Fantasy
+- kept (not its first genre): How to Train Your Dragon (2010) - Fantasy, Adventure, Animation, Family
 - kept (not its first genre): Kung Fu Panda (2008) - Action, Animation, Comedy, Family
 - kept (not its first genre): The Polar Express (2004) - Adventure, Animation, Family, Fantasy
-- kept (not its first genre): How to Train Your Dragon (2010) - Fantasy, Adventure, Animation, Family
 - kept (not its first genre): The Lion King (2019) - Adventure, Drama, Family, Animation
-- kept (not its first genre): The Emperor's New Groove (2000) - Adventure, Animation, Comedy, Family, Fantasy
+- kept (not its first genre): Madagascar (2005) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): The Good Dinosaur (2015) - Adventure, Animation, Family
-- kept (not its first genre): Snow White and the Seven Dwarfs (1938) - Fantasy, Animation, Family
+- kept (not its first genre): Brave (2012) - Adventure, Animation, Family, Fantasy
 - left out: Shrek (2001) [movie:808] - Animation, Comedy, Fantasy, Adventure, Family
 - left out: Despicable Me (2010) [movie:20352] - Animation, Comedy, Crime, Sci-Fi, Family
 - left out: How to Train Your Dragon 2 (2014) [movie:82702] - Fantasy, Action, Adventure, Animation, Family
@@ -8928,17 +8926,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Uncle Grandpa (2013) - Comedy, Animation, Sci-Fi & Fantasy, Family
 - kept (not its first genre): Mr. Bean: The Animated Series (2002) - Kids, Animation, Comedy, Family
 - kept (not its first genre): Dora the Explorer (2000) - Action & Adventure, Animation, Family, Kids
-- kept (not its first genre): Shaun the Sheep (2007) - Kids, Animation, Family, Comedy
-- kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Big Hero 6 The Series (2017) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
-- kept (not its first genre): Blue's Clues (1996) - Kids, Comedy, Animation, Family
+- kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): Shaun the Sheep (2007) - Kids, Animation, Family, Comedy
 - kept (not its first genre): The Avengers: Earth's Mightiest Heroes (2010) - Action & Adventure, Animation, Sci-Fi & Fantasy, Family
-- kept (not its first genre): Foster's Home for Imaginary Friends (2004) - Kids, Animation, Family, Sci-Fi & Fantasy, Comedy
+- kept (not its first genre): Blue's Clues (1996) - Kids, Comedy, Animation, Family
 - kept (not its first genre): Buzz Lightyear of Star Command (2000) - Kids, Animation, Sci-Fi & Fantasy, Family, Comedy, Action & Adventure
+- kept (not its first genre): Foster's Home for Imaginary Friends (2004) - Kids, Animation, Family, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Unikitty! (2017) - Kids, Animation, Comedy, Family
 - kept (not its first genre): Transformers: Animated (2007) - Action & Adventure, Animation, Family, Sci-Fi & Fantasy, Kids
-- kept (not its first genre): Numberblocks (2017) - Kids, Animation, Family
 - kept (not its first genre): The Spectacular Spider-Man (2008) - Action & Adventure, Animation, Kids, Family
+- kept (not its first genre): Danger Mouse (2015) - Comedy, Animation, Family, Action & Adventure, Sci-Fi & Fantasy
 - left out: Gravity Falls (2012) [tv:40075] - Animation, Action & Adventure, Comedy, Mystery, Family
 - left out: The Owl House (2020) [tv:92685] - Animation, Action & Adventure, Comedy, Sci-Fi & Fantasy, Family
 - left out: Star vs. the Forces of Evil (2015) [tv:61923] - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family
@@ -8975,29 +8973,29 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): DC League of Super-Pets (2022) - Family, Comedy, Adventure, Animation, Sci-Fi, Action
 - kept (not its first genre): TMNT (2007) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): Batman: Under the Red Hood (2010) - Mystery, Crime, Animation
-- kept (not its first genre): The Death of Superman (2019) - Sci-Fi, Animation, Action, Drama, Adventure
-- kept (not its first genre): Green Lantern: Emerald Knights (2011) - Action, Adventure, Animation, Sci-Fi
 - kept (not its first genre): Batman: Assault on Arkham (2014) - Thriller, Animation, Action, Crime
-- kept (not its first genre): Batman: Gotham Knight (2008) - Action, Crime, Animation, Drama, Sci-Fi
+- kept (not its first genre): The Death of Superman (2019) - Sci-Fi, Animation, Action, Drama, Adventure
 - kept (not its first genre): Batman: Mystery of the Batwoman (2003) - Fantasy, Animation, Adventure, Crime, Action, Drama
-- kept (not its first genre): Batman: Hush (2019) - Action, Animation, Crime, Mystery
+- kept (not its first genre): Batman: Gotham Knight (2008) - Action, Crime, Animation, Drama, Sci-Fi
+- kept (not its first genre): Teen Titans Go! vs. Teen Titans (2019) - Action, Animation, Comedy, Family, Fantasy, Sci-Fi
+- kept (not its first genre): Green Lantern: Emerald Knights (2011) - Action, Adventure, Animation, Sci-Fi
 
 ## Animation · Superhero Series (series) - 113 kept of 115 looked at
 - kept (not its first genre): The Powerpuff Girls (1998) - Action & Adventure, Animation, Comedy, Kids, Family
 - kept (not its first genre): Batman: The Animated Series (1992) - Action & Adventure, Animation, Drama, Mystery
 - kept (not its first genre): Teenage Mutant Ninja Turtles (1987) - Action & Adventure, Animation, Comedy, Kids
 - kept (not its first genre): Ben 10 (2016) - Kids, Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy
-- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
 - kept (not its first genre): Marvel's Avengers (2013) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
+- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Batwheels (2022) - Kids, Animation, Comedy
-- kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Big Hero 6 The Series (2017) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): X-Men (1992) - Kids, Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): The Avengers: Earth's Mightiest Heroes (2010) - Action & Adventure, Animation, Sci-Fi & Fantasy, Family
 - kept (not its first genre): The Powerpuff Girls (2016) - Comedy, Animation, Action & Adventure, Kids, Family
-- kept (not its first genre): The Super Hero Squad Show (2009) - Action & Adventure, Animation, Comedy, Kids, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Static Shock (2000) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
+- kept (not its first genre): X-Men: Evolution (2000) - Kids, Animation, Sci-Fi & Fantasy, Action & Adventure, Drama
 
 ## Animation · Kids Series (series) - 448 kept of 495 looked at
 - kept (not its first genre): Rugrats (1991) - Family, Animation, Kids, Comedy
@@ -9005,16 +9003,16 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Flintstones (1960) - Family, Animation, Comedy, Kids
 - kept (not its first genre): The Powerpuff Girls (1998) - Action & Adventure, Animation, Comedy, Kids, Family
 - kept (not its first genre): Teenage Mutant Ninja Turtles (1987) - Action & Adventure, Animation, Comedy, Kids
-- kept (not its first genre): Dora the Explorer (2000) - Action & Adventure, Animation, Family, Kids
 - kept (not its first genre): Sofia the First (2013) - Family, Animation, Kids
+- kept (not its first genre): Dora the Explorer (2000) - Action & Adventure, Animation, Family, Kids
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
 - kept (not its first genre): The Real Ghostbusters (1986) - Action & Adventure, Animation, Comedy, Kids, Sci-Fi & Fantasy, Family
-- kept (not its first genre): He-Man and the Masters of the Universe (1983) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Hercules (1998) - Comedy, Kids, Animation, Action & Adventure
-- kept (not its first genre): Ben 10: Omniverse (2012) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Transformers: Prime (2010) - Action & Adventure, Animation, Kids
+- kept (not its first genre): He-Man and the Masters of the Universe (1983) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
+- kept (not its first genre): Ben 10: Omniverse (2012) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): All Hail King Julien (2014) - Family, Animation, Comedy, Kids
-- kept (not its first genre): Snorks (1984) - Family, Animation, Kids
+- kept (not its first genre): TaleSpin (1990) - Family, Animation, Kids, Action & Adventure
 - left out: Ben 10 (2005) [tv:4686] - Animation, Sci-Fi & Fantasy, Action & Adventure, Comedy, Kids
 - left out: Courage the Cowardly Dog (1999) [tv:2085] - Animation, Family, Sci-Fi & Fantasy, Comedy, Kids
 - left out: Scooby-Doo! Mystery Incorporated (2010) [tv:18123] - Animation, Mystery, Family, Sci-Fi & Fantasy, Kids
@@ -9101,9 +9099,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Mushoku Tensei: Jobless Reincarnation (2021) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Sailor Moon (1992) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Kingdom (2012) - Action & Adventure, Animation, Drama
-- kept (not its first genre): Fate/stay night [Unlimited Blade Works] (2014) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Beyblade Burst (2016) - Action & Adventure, Animation, Comedy, Kids, Sci-Fi & Fantasy, Family
 - kept (not its first genre): Bakugan Battle Brawlers (2007) - Action & Adventure, Animation, Kids, Sci-Fi & Fantasy
+- kept (not its first genre): Fate/stay night [Unlimited Blade Works] (2014) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Golden Kamuy (2018) - Action & Adventure, Animation, Comedy
 - kept (not its first genre): Fist of the North Star (1984) - Action & Adventure, Animation, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Mobile Suit Gundam SEED (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy, War & Politics
@@ -9146,7 +9144,7 @@ EMPTY gen-genres-western-international-hits-series
 ## Anime · Top of the Year Movies (movie) - 13 kept of 13 looked at
 - kept (not its first genre): Detective Conan: Fallen Angel of the Highway (2026) - Action, Animation, Mystery, Crime
 
-## Anime · Top of the Year Series (series) - 131 kept of 131 looked at
+## Anime · Top of the Year Series (series) - 132 kept of 132 looked at
 - kept (not its first genre): Fist of the North Star: HOKUTO NO KEN (2026) - Action & Adventure, Animation
 - kept (not its first genre): I Want to End This Love Game (2026) - Comedy, Animation
 - kept (not its first genre): My Ribdiculous Reincarnation (2026) - Comedy, Animation, Sci-Fi & Fantasy, Action & Adventure
@@ -9154,22 +9152,22 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The World's Strongest Rearguard (2026) - Action & Adventure, Sci-Fi & Fantasy, Animation
 - kept (not its first genre): Petals of Reincarnation (2026) - Action & Adventure, Mystery, Animation
 
-## Anime · Action & Adventure Movies (movie) - 423 kept of 437 looked at
+## Anime · Action & Adventure Movies (movie) - 424 kept of 438 looked at
 - kept (not its first genre): Castle in the Sky (1986) - Adventure, Fantasy, Animation, Action, Family
 - kept (not its first genre): Ninja Scroll (1993) - Fantasy, Animation, Action, Horror
-- kept (not its first genre): Naruto the Movie: Ninja Clash in the Land of Snow (2004) - Comedy, Action, Animation, Adventure
 - kept (not its first genre): Boruto: Naruto the Movie (2015) - Adventure, Action, Animation, Comedy, Fantasy
-- kept (not its first genre): Dragon Ball GT: A Hero's Legacy (1997) - Adventure, Action, Animation, Sci-Fi
-- kept (not its first genre): Pokémon Ranger and the Temple of the Sea (2006) - Family, Animation, Action, Adventure, Fantasy, Sci-Fi
-- kept (not its first genre): Fullmetal Alchemist: The Sacred Star of Milos (2011) - Adventure, Fantasy, Animation, Action, Sci-Fi
-- kept (not its first genre): Naruto the Movie: Guardians of the Crescent Moon Kingdom (2006) - Adventure, Animation, Action
-- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
+- kept (not its first genre): Naruto the Movie: Ninja Clash in the Land of Snow (2004) - Comedy, Action, Animation, Adventure
 - kept (not its first genre): Iron Man: Rise of Technovore (2013) - Sci-Fi, Animation, Action
 - kept (not its first genre): Pokémon 3: The Movie (2000) - Adventure, Fantasy, Animation, Action, Family
+- kept (not its first genre): Pokémon Ranger and the Temple of the Sea (2006) - Family, Animation, Action, Adventure, Fantasy, Sci-Fi
 - kept (not its first genre): Naruto Shippuden the Movie: Bonds (2008) - Fantasy, Animation, Action
-- kept (not its first genre): Pokémon: Jirachi Wish Maker (2003) - Family, Action, Animation, Adventure, Fantasy, Sci-Fi
-- kept (not its first genre): Naruto Shippuden the Movie: The Lost Tower (2010) - Adventure, Action, Animation
 - kept (not its first genre): Pokémon the Movie: Hoopa and the Clash of Ages (2015) - Family, Adventure, Animation, Action, Fantasy
+- kept (not its first genre): Naruto the Movie: Guardians of the Crescent Moon Kingdom (2006) - Adventure, Animation, Action
+- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
+- kept (not its first genre): Pokémon: Jirachi Wish Maker (2003) - Family, Action, Animation, Adventure, Fantasy, Sci-Fi
+- kept (not its first genre): Fullmetal Alchemist: The Sacred Star of Milos (2011) - Adventure, Fantasy, Animation, Action, Sci-Fi
+- kept (not its first genre): Yu-Gi-Oh!: The Dark Side of Dimensions (2016) - Adventure, Animation, Action, Fantasy
+- kept (not its first genre): Naruto Shippuden the Movie: The Lost Tower (2010) - Adventure, Action, Animation
 - left out: Neon Genesis Evangelion: The End of Evangelion (1997) [movie:18491] - Animation, Sci-Fi, Drama, Fantasy, Action
 - left out: Pokémon: The First Movie (1998) [movie:10228] - Animation, Family, Adventure, Fantasy, Action
 - left out: Pokémon: Lucario and the Mystery of Mew (2005) [movie:34067] - Family, Adventure, Animation, Fantasy, Action, Sci-Fi
@@ -9188,22 +9186,22 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Ranma ½ (1989) - Comedy, Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Hunter x Hunter (1999) - Sci-Fi & Fantasy, Action & Adventure, Animation, Comedy, Drama
 - kept (not its first genre): Saint Seiya Omega (2012) - Sci-Fi & Fantasy, Animation, Action & Adventure
-- kept (not its first genre): Beyblade (2001) - Kids, Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): The Mysterious Cities of Gold (1982) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Beyblade (2001) - Kids, Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Shangri-La Frontier (2023) - Sci-Fi & Fantasy, Action & Adventure, Comedy, Animation
 - kept (not its first genre): GeGeGe no Kitaro (2018) - Comedy, Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): Yu-Gi-Oh! VRAINS (2017) - Sci-Fi & Fantasy, Animation, Action & Adventure
-- kept (not its first genre): Dragon Ball Z Kai (2009) - Sci-Fi & Fantasy, Animation, Action & Adventure, Comedy
 - kept (not its first genre): Medabots (1999) - Sci-Fi & Fantasy, Animation, Action & Adventure, Comedy, Kids
+- kept (not its first genre): Dragon Ball Z Kai (2009) - Sci-Fi & Fantasy, Animation, Action & Adventure, Comedy
 - kept (not its first genre): Zenki (1995) - Sci-Fi & Fantasy, Animation, Comedy, Action & Adventure
 - kept (not its first genre): TRIGUN (1998) - Sci-Fi & Fantasy, Action & Adventure, Animation
 - kept (not its first genre): Patlabor: The TV Series (1989) - Comedy, Animation, Action & Adventure
-- kept (not its first genre): LAST HOPE (2018) - Drama, Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Baccano! (2007) - Comedy, Action & Adventure, Animation, Crime, Mystery
 - left out: Angel Beats! (2010) [tv:42942] - Animation, Comedy, Drama, Sci-Fi & Fantasy, Action & Adventure
 - left out: Witchblade (2006) [tv:20450] - Animation, Drama, Comedy, Sci-Fi & Fantasy, Action & Adventure, Mystery
 - left out: Eden of the East (2009) [tv:21750] - Animation, Drama, Mystery, Comedy, Action & Adventure
-- left out: Kaiba (2008) [tv:34747] - Animation, Sci-Fi & Fantasy, Drama, Mystery, Action & Adventure
 - left out: Level E (2011) [tv:38559] - Animation, Comedy, Drama, Sci-Fi & Fantasy, Action & Adventure
+- left out: Kaiba (2008) [tv:34747] - Animation, Sci-Fi & Fantasy, Drama, Mystery, Action & Adventure
 - left out: Mermaid Melody: Pichi Pichi Pitch (2003) [tv:42862] - Animation, Kids, Drama, Sci-Fi & Fantasy, Comedy, Family, Action & Adventure
 - left out: Yo-kai Watch (2014) [tv:66562] - Animation, Comedy, Kids, Mystery, Sci-Fi & Fantasy, Action & Adventure
 - left out: Shugo Chara! (2007) [tv:14451] - Animation, Comedy, Kids, Drama, Action & Adventure, Sci-Fi & Fantasy
@@ -9221,9 +9219,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Puella Magi Madoka Magica the Movie -Rebellion- (2013) - Mystery, Animation, Fantasy
 - kept (not its first genre): Pokémon 4Ever (2001) - Adventure, Fantasy, Animation, Sci-Fi, Family
 - kept (not its first genre): No Game No Life: Zero (2017) - Adventure, Animation, Drama, Fantasy, Romance
-- kept (not its first genre): Pokémon: Giratina and the Sky Warrior (2008) - Family, Adventure, Animation, Fantasy
-- kept (not its first genre): Pokémon: Destiny Deoxys (2004) - Family, Adventure, Animation, Fantasy
 - kept (not its first genre): Pokémon: Lucario and the Mystery of Mew (2005) - Family, Adventure, Animation, Fantasy, Action, Sci-Fi
+- kept (not its first genre): Pokémon: Destiny Deoxys (2004) - Family, Adventure, Animation, Fantasy
+- kept (not its first genre): Pokémon: Giratina and the Sky Warrior (2008) - Family, Adventure, Animation, Fantasy
 - left out: Boruto: Naruto the Movie (2015) [movie:347201] - Adventure, Action, Animation, Comedy, Fantasy
 - left out: The Boy and the Beast (2015) [movie:315465] - Action, Adventure, Animation, Drama, Family, Fantasy
 - left out: Dragon Ball Z: Bardock - The Father of Goku (1990) [movie:39323] - Animation, Action, Sci-Fi, Drama, Fantasy
@@ -9258,20 +9256,21 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Ranma ½ (1989) - Comedy, Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Mushoku Tensei: Jobless Reincarnation (2021) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Sailor Moon (1992) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Kids
-- kept (not its first genre): Fate/stay night [Unlimited Blade Works] (2014) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): MegaMan NT Warrior (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Bakugan Battle Brawlers (2007) - Action & Adventure, Animation, Kids, Sci-Fi & Fantasy
+- kept (not its first genre): Fate/stay night [Unlimited Blade Works] (2014) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Fist of the North Star (1984) - Action & Adventure, Animation, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Mobile Suit Gundam SEED (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy, War & Politics
 - kept (not its first genre): Yu-Gi-Oh! Arc-V (2014) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): That Time I Got Reincarnated as a Slime (2018) - Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
-- kept (not its first genre): Beyblade (2001) - Kids, Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
+- kept (not its first genre): Eureka Seven (2005) - Action & Adventure, Sci-Fi & Fantasy, Animation, Drama
 - left out: Elfen Lied (2004) [tv:42671] - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Gleipnir (2020) [tv:96203] - Animation, Mystery, Comedy, Action & Adventure, Sci-Fi & Fantasy
 - left out: Akashic Records of Bastard Magic Instructor (2017) [tv:70637] - Animation, Comedy, Drama, Action & Adventure, Sci-Fi & Fantasy
 - left out: Beyblade Burst (2016) [tv:67667] - Action & Adventure, Animation, Comedy, Kids, Sci-Fi & Fantasy, Family
 - left out: Black Butler (2008) [tv:50712] - Animation, Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: B: The Beginning (2018) [tv:77529] - Action & Adventure, Animation, Drama, Crime, Mystery, Sci-Fi & Fantasy
+- left out: Servamp (2016) [tv:67710] - Animation, Comedy, Drama, Action & Adventure, Sci-Fi & Fantasy
 - left out: Land of the Lustrous (2017) [tv:74091] - Animation, Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy
 - left out: PERSONA5 the Animation (2018) [tv:77701] - Animation, Action & Adventure, Comedy, Drama, Sci-Fi & Fantasy, Crime
 - left out: ID: INVADED (2020) [tv:92602] - Animation, Drama, Mystery, Action & Adventure, Sci-Fi & Fantasy
@@ -9301,9 +9300,9 @@ EMPTY gen-genres-western-international-hits-series
 
 ## Anime · Mystery & Thriller Movies (movie) - 68 kept of 79 looked at
 - kept (not its first genre): Patlabor: The Movie (1989) - Action, Animation, Sci-Fi, Mystery
-- kept (not its first genre): The Garden of Sinners: Paradox Spiral (2008) - Action, Animation, Drama, Mystery, Thriller, Fantasy
 - kept (not its first genre): Detective Conan: The Disappearance of Conan Edogawa - The Worst Two Days in History (2015) - TV Movie, Animation, Mystery
 - kept (not its first genre): Professor Layton and the Eternal Diva (2009) - Family, Animation, Mystery
+- kept (not its first genre): The Garden of Sinners: Paradox Spiral (2008) - Action, Animation, Drama, Mystery, Thriller, Fantasy
 - kept (not its first genre): Princess Arete (2001) - Adventure, Animation, Fantasy, Mystery
 - kept (not its first genre): Thunder (1982) - Fantasy, Mystery, Animation
 - left out: Naruto Shippuden the Movie: Blood Prison (2011) [movie:75624] - Thriller, Animation, Action, Comedy, Horror, Mystery
@@ -9324,9 +9323,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): .hack (2002) - Action & Adventure, Animation, Mystery
 - kept (not its first genre): Danganronpa: The Animation (2013) - Action & Adventure, Animation, Drama, Mystery
 - kept (not its first genre): The Future Diary (2011) - Action & Adventure, Animation, Drama, Mystery
-- kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
-- kept (not its first genre): BLOOD-C (2011) - Action & Adventure, Animation, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): JOKER GAME (2016) - Drama, Animation, Mystery
+- kept (not its first genre): BLOOD-C (2011) - Action & Adventure, Animation, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Karakuri Circus (2018) - Action & Adventure, Mystery, Crime, Animation, Drama
 - kept (not its first genre): Black Bullet (2014) - Action & Adventure, Animation, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Island (2018) - Comedy, Drama, Mystery, Animation
@@ -9349,17 +9348,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Fist of the North Star: Legend of Raoh - Chapter of Fierce Fighting (2007) - Action, Animation, Adventure, Romance
 - kept (not its first genre): Night Is Short, Walk On Girl (2017) - Comedy, Romance, Animation, Fantasy
 - kept (not its first genre): The Princess and the Pilot (2011) - Adventure, Animation, Drama, Romance
-- kept (not its first genre): Love, Chunibyo & Other Delusions! Rikka Version (2013) - Comedy, Animation, Drama, Romance
-- kept (not its first genre): The Moment You Fall in Love (2016) - Drama, Animation, Romance, Comedy
 - kept (not its first genre): Initial D: Third Stage (2001) - Action, Animation, Romance
+- kept (not its first genre): The Moment You Fall in Love (2016) - Drama, Animation, Romance, Comedy
+- kept (not its first genre): Love, Chunibyo & Other Delusions! Rikka Version (2013) - Comedy, Animation, Drama, Romance
 - kept (not its first genre): Stormy Night (2005) - Adventure, Animation, Drama, Romance
-- kept (not its first genre): Macross Frontier: The False Songstress (2009) - Drama, Romance, Animation, Sci-Fi
 - kept (not its first genre): Orange: Future (2016) - Drama, Animation, Romance, Sci-Fi
+- kept (not its first genre): Macross Frontier: The False Songstress (2009) - Drama, Romance, Animation, Sci-Fi
 - kept (not its first genre): Candy Candy: The Movie (1992) - Drama, Romance, Animation
 - left out: No Game No Life: Zero (2017) [movie:445030] - Adventure, Animation, Drama, Fantasy, Romance
 - left out: Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion (2019) [movie:553835] - Animation, Action, Adventure, Comedy, Fantasy, Romance
-- left out: NiNoKuni (2019) [movie:594188] - Animation, Action, Adventure, Family, Fantasy, Romance
 - left out: Fate/stay night: Heaven's Feel II. Lost Butterfly (2019) [movie:390634] - Animation, Action, Fantasy, Drama, Romance
+- left out: NiNoKuni (2019) [movie:594188] - Animation, Action, Adventure, Family, Fantasy, Romance
 - left out: Fate/stay night: Heaven's Feel I. Presage Flower (2017) [movie:283984] - Action, Animation, Drama, Fantasy, Romance
 - left out: Origin: Spirits of the Past (2006) [movie:14945] - Animation, Sci-Fi, Adventure, Drama, Fantasy, Romance, Action
 - left out: Detective Conan: The Scarlet Bullet (2021) [movie:662638] - Animation, Action, Crime, Mystery, Romance, Thriller
@@ -9377,8 +9376,8 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Sailor Moon (1992) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Mobile Suit Gundam SEED (2002) - Action & Adventure, Animation, Sci-Fi & Fantasy, War & Politics
 - kept (not its first genre): Kaguya-sama: Love Is War (2019) - Comedy, Animation
-- kept (not its first genre): Shakugan no Shana (2005) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Rurouni Kenshin (1996) - Action & Adventure, Animation, Comedy
+- kept (not its first genre): Shakugan no Shana (2005) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): City Hunter (1987) - Action & Adventure, Animation, Comedy, Mystery
 - kept (not its first genre): Infinite Stratos (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
@@ -9388,22 +9387,22 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Demon King Daimao (2010) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Dragonaut: The Resonance (2007) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 
-## Anime · Comedy Movies (movie) - 201 kept of 224 looked at
+## Anime · Comedy Movies (movie) - 202 kept of 225 looked at
 - kept (not its first genre): Dragon Ball: Curse of the Blood Rubies (1986) - Action, Animation, Adventure, Comedy, Fantasy, Sci-Fi
 - kept (not its first genre): Boruto: Naruto the Movie (2015) - Adventure, Action, Animation, Comedy, Fantasy
-- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
-- kept (not its first genre): One Piece Film: GOLD (2016) - Action, Animation, Adventure, Comedy
 - kept (not its first genre): Naruto Shippuden the Movie: The Will of Fire (2009) - Action, Adventure, Comedy, Drama, Fantasy, Animation
-- kept (not its first genre): One Piece: The Desert Princess and the Pirates: Adventure in Alabasta (2007) - Action, Adventure, Animation, Comedy, Fantasy
+- kept (not its first genre): One Piece Film: GOLD (2016) - Action, Animation, Adventure, Comedy
+- kept (not its first genre): Naruto Shippuden the Movie: Blood Prison (2011) - Thriller, Animation, Action, Comedy, Horror, Mystery
 - kept (not its first genre): One Piece: The Movie (2000) - Action, Animation, Adventure, Comedy, Fantasy
+- kept (not its first genre): One Piece: The Desert Princess and the Pirates: Adventure in Alabasta (2007) - Action, Adventure, Animation, Comedy, Fantasy
+- kept (not its first genre): One Piece: Episode of Chopper Plus: Bloom in the Winter, Miracle Cherry Blossom (2008) - Action, Animation, Adventure, Comedy
+- kept (not its first genre): Gintama: The Final Chapter - Be Forever Yorozuya (2013) - Action, Animation, Sci-Fi, Comedy
 - kept (not its first genre): One Piece: Baron Omatsuri and the Secret Island (2005) - Action, Animation, Comedy, Adventure, Fantasy
 - kept (not its first genre): Doraemon: Nobita's Secret Gadget Museum (2013) - Adventure, Family, Animation, Comedy, Fantasy, Sci-Fi
-- kept (not its first genre): One Piece: Episode of Chopper Plus: Bloom in the Winter, Miracle Cherry Blossom (2008) - Action, Animation, Adventure, Comedy
-- kept (not its first genre): Lupin III: The First (2019) - Adventure, Animation, Comedy, Crime, Mystery
-- kept (not its first genre): Gintama: The Final Chapter - Be Forever Yorozuya (2013) - Action, Animation, Sci-Fi, Comedy
-- kept (not its first genre): Gurren Lagann The Movie: Childhood's End (2008) - Action, Comedy, Animation, Sci-Fi, Adventure
-- kept (not its first genre): The Wonderful World of Puss 'n Boots (1969) - Family, Action, Adventure, Comedy, Animation
+- kept (not its first genre): Doraemon: Nobita and the Green Giant Legend (2008) - Adventure, Animation, Family, Comedy, Sci-Fi, Fantasy
 - kept (not its first genre): Gintama: The Movie (2010) - Action, Sci-Fi, Animation, Comedy
+- kept (not its first genre): Lupin III: The First (2019) - Adventure, Animation, Comedy, Crime, Mystery
+- kept (not its first genre): Tamako Love Story (2014) - Romance, Animation, Comedy
 - left out: Dragon Ball: Yo! Son Goku and His Friends Return!! (2008) [movie:38594] - Animation, Action, Adventure, Sci-Fi, Comedy
 - left out: Earwig and the Witch (2021) [movie:683127] - Animation, Fantasy, Family, Music, Comedy
 - left out: Pokémon the Movie: Diancie and the Cocoon of Destruction (2014) [movie:303903] - Animation, Family, Adventure, Action, Comedy, Drama
@@ -9438,11 +9437,11 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Hunter x Hunter (1999) - Sci-Fi & Fantasy, Action & Adventure, Animation, Comedy, Drama
 - kept (not its first genre): Rurouni Kenshin (1996) - Action & Adventure, Animation, Comedy
 - kept (not its first genre): KONOSUBA - God's blessing on this wonderful world! (2016) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): City Hunter (1987) - Action & Adventure, Animation, Comedy, Mystery
 - kept (not its first genre): Kenichi: The Mightiest Disciple (2006) - Action & Adventure, Animation, Comedy
+- kept (not its first genre): City Hunter (1987) - Action & Adventure, Animation, Comedy, Mystery
 - kept (not its first genre): Shangri-La Frontier (2023) - Sci-Fi & Fantasy, Action & Adventure, Comedy, Animation
-- kept (not its first genre): TIGER & BUNNY (2011) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Kill la Kill (2013) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
+- kept (not its first genre): Hozuki's Coolheadedness (2014) - Sci-Fi & Fantasy, Animation, Comedy
 - left out: Beyblade (2001) [tv:54728] - Kids, Action & Adventure, Animation, Sci-Fi & Fantasy, Comedy
 - left out: Yu-Gi-Oh! (1998) [tv:36406] - Animation, Family, Sci-Fi & Fantasy, Action & Adventure, Kids, Comedy
 - left out: Tokyo Mew Mew (2002) [tv:46345] - Animation, Kids, Sci-Fi & Fantasy, Action & Adventure, Comedy, Family
@@ -9460,16 +9459,16 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Boy and the Beast (2015) - Action, Adventure, Animation, Drama, Family, Fantasy
 - kept (not its first genre): Detective Conan: The Last Wizard of the Century (1999) - Adventure, Animation, Crime, Drama, Mystery
 - kept (not its first genre): No Game No Life: Zero (2017) - Adventure, Animation, Drama, Fantasy, Romance
-- kept (not its first genre): Fullmetal Alchemist the Movie: Conqueror of Shamballa (2005) - Action, Adventure, Animation, Drama
 - kept (not its first genre): Naruto Shippuden the Movie: The Will of Fire (2009) - Action, Adventure, Comedy, Drama, Fantasy, Animation
+- kept (not its first genre): Fullmetal Alchemist the Movie: Conqueror of Shamballa (2005) - Action, Adventure, Animation, Drama
 - kept (not its first genre): A Letter to Momo (2012) - Comedy, Fantasy, Animation, Drama, Family
 - kept (not its first genre): Death Note Relight 1: Visions of a God (2007) - TV Movie, Crime, Drama, Fantasy, Thriller, Animation
-- kept (not its first genre): Night on the Galactic Railroad (1985) - Adventure, Animation, Drama, Family, Fantasy
-- kept (not its first genre): Bleach the Movie: Fade to Black (2008) - Action, Animation, Fantasy, Drama
 - kept (not its first genre): BLAME! (2017) - Action, Drama, Sci-Fi, Animation
-- kept (not its first genre): Fate/stay night: Heaven's Feel I. Presage Flower (2017) - Action, Animation, Drama, Fantasy, Romance
-- kept (not its first genre): Steins;Gate: The Movie - Load Region of Déjà Vu (2013) - Sci-Fi, Animation, Drama
+- kept (not its first genre): Bleach the Movie: Fade to Black (2008) - Action, Animation, Fantasy, Drama
+- kept (not its first genre): Night on the Galactic Railroad (1985) - Adventure, Animation, Drama, Family, Fantasy
+- kept (not its first genre): Fate/stay night: Unlimited Blade Works (2010) - Action, Fantasy, Animation, Drama
 - kept (not its first genre): Napping Princess (2017) - Fantasy, Adventure, Animation, Drama, Sci-Fi
+- kept (not its first genre): Steins;Gate: The Movie - Load Region of Déjà Vu (2013) - Sci-Fi, Animation, Drama
 - left out: Mirai (2018) [movie:475215] - Animation, Family, Fantasy, Adventure, Drama
 - left out: Vampire Hunter D: Bloodlust (2001) [movie:15999] - Animation, Fantasy, Horror, Action, Drama
 - left out: Berserk: The Golden Age Arc I - The Egg of the King (2012) [movie:113082] - Animation, Action, Adventure, Fantasy, Drama
@@ -9504,9 +9503,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Black Lagoon (2006) - Action & Adventure, Animation, Drama, Crime
 - kept (not its first genre): Mobile Suit Zeta Gundam (1985) - Action & Adventure, Animation, War & Politics, Drama
 - kept (not its first genre): Mobile Suit Gundam 00 (2007) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, War & Politics
-- kept (not its first genre): Star Blazers: Space Battleship Yamato 2199 (2013) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, War & Politics
 - kept (not its first genre): Claymore (2007) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Ushio and Tora (2015) - Action & Adventure, Animation, Comedy, Drama
+- kept (not its first genre): Gate (2015) - Action & Adventure, Animation, Comedy, Drama
+- kept (not its first genre): Star Blazers: Space Battleship Yamato 2199 (2013) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy, War & Politics
 - left out: Hunter x Hunter (1999) [tv:45952] - Sci-Fi & Fantasy, Action & Adventure, Animation, Comedy, Drama
 - left out: Karakuri Circus (2018) [tv:83054] - Action & Adventure, Mystery, Crime, Animation, Drama
 - left out: Ikki Tousen (2003) [tv:37584] - Animation, Sci-Fi & Fantasy, Comedy, Action & Adventure, Drama
@@ -9524,9 +9523,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Resident Evil: Damnation (2012) - Action, Animation, Sci-Fi, Horror
 - kept (not its first genre): Dragon Ball: Sleeping Princess in Devil's Castle (1987) - Action, Animation, Fantasy, Horror
 - kept (not its first genre): Demon City Shinjuku (1988) - Action, Fantasy, Animation, Horror
+- kept (not its first genre): Devilman - Volume 2: Demon Bird (1990) - Fantasy, Animation, Horror, Action
 - kept (not its first genre): X (1996) - Action, Animation, Fantasy, Horror
 - kept (not its first genre): Devilman - Volume 1: The Birth (1987) - Action, Fantasy, Horror, Animation
-- kept (not its first genre): Devilman - Volume 2: Demon Bird (1990) - Fantasy, Animation, Horror, Action
 - kept (not its first genre): Giant God Warrior Appears in Tokyo (2012) - Sci-Fi, Horror, Action, Animation
 - kept (not its first genre): Lily C.A.T. (1987) - Sci-Fi, Horror, Animation
 - kept (not its first genre): High School of the Dead: Drifters of the Dead (2011) - Comedy, Animation, Adventure, Horror
@@ -9538,12 +9537,12 @@ EMPTY gen-genres-western-international-hits-series
 ## Anime · Horror Series (series) - 106 kept of 106 looked at
 - kept (not its first genre): GeGeGe no Kitaro (2018) - Comedy, Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): Berserk (1997) - Action & Adventure, Sci-Fi & Fantasy, Animation
-- kept (not its first genre): Ushio and Tora (2015) - Action & Adventure, Animation, Comedy, Drama
-- kept (not its first genre): Danganronpa: The Animation (2013) - Action & Adventure, Animation, Drama, Mystery
 - kept (not its first genre): Zenki (1995) - Sci-Fi & Fantasy, Animation, Comedy, Action & Adventure
+- kept (not its first genre): Danganronpa: The Animation (2013) - Action & Adventure, Animation, Drama, Mystery
+- kept (not its first genre): Ushio and Tora (2015) - Action & Adventure, Animation, Comedy, Drama
 - kept (not its first genre): Terra Formars (2014) - Action & Adventure, Animation, Sci-Fi & Fantasy
-- kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): BLOOD-C (2011) - Action & Adventure, Animation, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Elfen Lied (2004) - Action & Adventure, Animation, Drama, Mystery, Sci-Fi & Fantasy
 - kept (not its first genre): Berserk (2016) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
 - kept (not its first genre): Hellsing (2001) - Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Devil Lady (1998) - Action & Adventure, Animation, Drama, Sci-Fi & Fantasy
@@ -9556,18 +9555,18 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Poor Things (2023) - Sci-Fi, Romance, Comedy
 - kept (not its first genre): The Princess Bride (1987) - Fantasy, Comedy, Romance, Adventure
 - kept (not its first genre): Midnight in Paris (2011) - Fantasy, Comedy, Romance
-- kept (not its first genre): George of the Jungle (1997) - Adventure, Comedy, Family, Romance
 - kept (not its first genre): Lady and the Tramp (2019) - Family, Romance, Comedy
+- kept (not its first genre): George of the Jungle (1997) - Adventure, Comedy, Family, Romance
+- kept (not its first genre): Fool's Gold (2008) - Adventure, Romance, Comedy
 - kept (not its first genre): Bedazzled (2000) - Fantasy, Comedy, Romance
 - kept (not its first genre): What a Girl Wants (2003) - Family, Comedy, Drama, Romance
 - kept (not its first genre): Bedtime Stories (2008) - Fantasy, Comedy, Family, Romance
-- kept (not its first genre): Fool's Gold (2008) - Adventure, Romance, Comedy
-- kept (not its first genre): Cinderella (2021) - Fantasy, Romance, Comedy
 - kept (not its first genre): Monte Carlo (2011) - Adventure, Comedy, Romance
-- kept (not its first genre): First Daughter (2004) - Family, Comedy, Drama, Romance
-- kept (not its first genre): Another Cinderella Story (2008) - Music, Comedy, Romance, Family
-- kept (not its first genre): Are We There Yet? (2005) - Family, Adventure, Comedy, Romance
+- kept (not its first genre): Cinderella (2021) - Fantasy, Romance, Comedy
 - kept (not its first genre): Around the World in 80 Days (1956) - Adventure, Comedy, Family, Fantasy, Romance
+- kept (not its first genre): Another Cinderella Story (2008) - Music, Comedy, Romance, Family
+- kept (not its first genre): First Daughter (2004) - Family, Comedy, Drama, Romance
+- kept (not its first genre): Are We There Yet? (2005) - Family, Adventure, Comedy, Romance
 - left out: Silver Linings Playbook (2012) [movie:82693] - Drama, Comedy, Romance
 - left out: The Mask (1994) [movie:854] - Comedy, Fantasy, Crime, Romance
 - left out: Scott Pilgrim vs. the World (2010) [movie:22538] - Action, Comedy, Romance
@@ -9596,20 +9595,20 @@ EMPTY gen-genres-western-international-hits-series
 
 ## Cozy & Comforting · Heartwarming TV Comedies & Dramas (series) - 283 kept of 301 looked at
 - kept (not its first genre): Eureka (2006) - Sci-Fi & Fantasy, Comedy, Drama
-- kept (not its first genre): Tulsa King (2022) - Crime, Drama, Comedy
 - kept (not its first genre): The Rookie (2018) - Crime, Drama, Comedy
+- kept (not its first genre): Tulsa King (2022) - Crime, Drama, Comedy
 - kept (not its first genre): Desperate Housewives (2004) - Mystery, Drama, Comedy
 - kept (not its first genre): Will Trent (2023) - Crime, Drama, Comedy
-- kept (not its first genre): Heartland (2007) - Family, Drama, Comedy
 - kept (not its first genre): Teen Wolf (2011) - Sci-Fi & Fantasy, Drama, Comedy
+- kept (not its first genre): Heartland (2007) - Family, Drama, Comedy
 - kept (not its first genre): Rizzoli & Isles (2010) - Crime, Drama, Mystery, Comedy
-- kept (not its first genre): Cobra Kai (2018) - Action & Adventure, Drama, Comedy
 - kept (not its first genre): NCIS: New Orleans (2014) - Action & Adventure, Drama, Comedy
-- kept (not its first genre): Chuck (2007) - Action & Adventure, Comedy, Drama
-- kept (not its first genre): Bull (2016) - Crime, Drama, Comedy
+- kept (not its first genre): Cobra Kai (2018) - Action & Adventure, Drama, Comedy
 - kept (not its first genre): Lois & Clark: The New Adventures of Superman (1993) - Action & Adventure, Drama, Sci-Fi & Fantasy, Comedy
-- kept (not its first genre): Elsbeth (2024) - Crime, Drama, Comedy
+- kept (not its first genre): Bull (2016) - Crime, Drama, Comedy
 - kept (not its first genre): Veronica Mars (2004) - Mystery, Drama, Comedy
+- kept (not its first genre): Chuck (2007) - Action & Adventure, Comedy, Drama
+- kept (not its first genre): Elsbeth (2024) - Crime, Drama, Comedy
 - left out: Young Sheldon (2017) [tv:71728] - Comedy, Family, Drama
 - left out: That '70s Show (1998) [tv:52] - Comedy, Family, Drama
 - left out: High School Musical: The Musical: The Series (2019) [tv:85801] - Family, Comedy, Drama
@@ -9631,20 +9630,20 @@ EMPTY gen-genres-western-international-hits-series
 
 ## Cozy & Comforting · Cozy Romantic Stories (movie) - 500 kept of 784 looked at
 - kept (not its first genre): Twilight (2008) - Fantasy, Drama, Romance
-- kept (not its first genre): Eternal Sunshine of the Spotless Mind (2004) - Sci-Fi, Drama, Romance
 - kept (not its first genre): The Twilight Saga: New Moon (2009) - Adventure, Fantasy, Drama, Romance
+- kept (not its first genre): Eternal Sunshine of the Spotless Mind (2004) - Sci-Fi, Drama, Romance
 - kept (not its first genre): The Twilight Saga: Breaking Dawn - Part 2 (2012) - Fantasy, Drama, Romance
 - kept (not its first genre): Edward Scissorhands (1990) - Fantasy, Drama, Romance
 - kept (not its first genre): The Twilight Saga: Eclipse (2010) - Adventure, Fantasy, Drama, Romance
 - kept (not its first genre): Meet Joe Black (1998) - Fantasy, Drama, Romance
 - kept (not its first genre): A Star Is Born (2018) - Music, Drama, Romance
 - kept (not its first genre): A Knight's Tale (2001) - Adventure, Drama, Romance, Action
-- kept (not its first genre): Mr. Nobody (2009) - Sci-Fi, Drama, Romance
 - kept (not its first genre): The Blue Lagoon (1980) - Adventure, Drama, Romance
+- kept (not its first genre): Mr. Nobody (2009) - Sci-Fi, Drama, Romance
 - kept (not its first genre): Step Up 2: The Streets (2008) - Music, Drama, Romance
 - kept (not its first genre): Far and Away (1992) - Adventure, Drama, Romance, Western
 - kept (not its first genre): Starman (1984) - Sci-Fi, Drama, Romance
-- kept (not its first genre): Honey (2003) - Music, Drama, Romance
+- kept (not its first genre): The Horse Whisperer (1998) - Adventure, Drama, Romance
 - left out: Forrest Gump (1994) [movie:13] - Comedy, Drama, Romance
 - left out: La La Land (2016) [movie:313369] - Comedy, Drama, Romance
 - left out: (500) Days of Summer (2009) [movie:19913] - Comedy, Drama, Romance
@@ -9676,17 +9675,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Minions & Monsters (2026) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Swapped (2026) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): The Nightmare Before Christmas (1993) - Fantasy, Animation, Family
-- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): Beauty and the Beast (1991) - Romance, Family, Animation, Fantasy
+- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): The Incredibles (2004) - Action, Adventure, Animation, Family
 - kept (not its first genre): Moana 2 (2024) - Adventure, Animation, Comedy, Family, Fantasy
+- kept (not its first genre): How to Train Your Dragon (2010) - Fantasy, Adventure, Animation, Family
 - kept (not its first genre): Kung Fu Panda (2008) - Action, Animation, Comedy, Family
 - kept (not its first genre): The Polar Express (2004) - Adventure, Animation, Family, Fantasy
-- kept (not its first genre): How to Train Your Dragon (2010) - Fantasy, Adventure, Animation, Family
 - kept (not its first genre): The Lion King (2019) - Adventure, Drama, Family, Animation
-- kept (not its first genre): The Emperor's New Groove (2000) - Adventure, Animation, Comedy, Family, Fantasy
+- kept (not its first genre): Madagascar (2005) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): The Good Dinosaur (2015) - Adventure, Animation, Family
-- kept (not its first genre): Snow White and the Seven Dwarfs (1938) - Fantasy, Animation, Family
+- kept (not its first genre): Brave (2012) - Adventure, Animation, Family, Fantasy
 - left out: Shrek (2001) [movie:808] - Animation, Comedy, Fantasy, Adventure, Family
 - left out: Despicable Me (2010) [movie:20352] - Animation, Comedy, Crime, Sci-Fi, Family
 - left out: How to Train Your Dragon 2 (2014) [movie:82702] - Fantasy, Action, Adventure, Animation, Family
@@ -9772,14 +9771,14 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Greenland 2: Migration (2026) - Adventure, Thriller, Sci-Fi
 - kept (not its first genre): Tenet (2020) - Action, Thriller, Sci-Fi
 - kept (not its first genre): The Terminator (1984) - Action, Thriller, Sci-Fi
-- kept (not its first genre): Aliens (1986) - Action, Thriller, Sci-Fi
 - kept (not its first genre): 28 Years Later (2025) - Horror, Thriller, Sci-Fi
 - kept (not its first genre): Captain America: Brave New World (2025) - Action, Thriller, Sci-Fi
+- kept (not its first genre): Aliens (1986) - Action, Thriller, Sci-Fi
 - kept (not its first genre): Insurgent (2015) - Action, Sci-Fi, Thriller
 - kept (not its first genre): Jurassic World (2015) - Adventure, Sci-Fi, Thriller, Action
 - kept (not its first genre): The Matrix Reloaded (2003) - Action, Thriller, Sci-Fi
-- kept (not its first genre): 28 Years Later: The Bone Temple (2026) - Horror, Thriller, Sci-Fi
-- kept (not its first genre): War of the Worlds (2005) - Adventure, Thriller, Sci-Fi
+- kept (not its first genre): Jurassic World Dominion (2022) - Adventure, Sci-Fi, Thriller
+- kept (not its first genre): Jurassic World: Fallen Kingdom (2018) - Adventure, Sci-Fi, Thriller
 - left out: Rise of the Planet of the Apes (2011) [movie:61791] - Thriller, Action, Drama, Sci-Fi
 - left out: Battleship (2012) [movie:44833] - Thriller, Action, Adventure, Sci-Fi
 - left out: Starship Troopers (1997) [movie:563] - Adventure, Action, Thriller, Sci-Fi
@@ -9814,9 +9813,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Midsomer Murders (1997) - Crime, Drama, Mystery
 - kept (not its first genre): Dexter (2006) - Crime, Drama, Mystery
 - kept (not its first genre): NCIS: Los Angeles (2009) - Action & Adventure, Drama, Crime, Mystery
+- kept (not its first genre): Star Trek: The Next Generation (1987) - Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery
 - kept (not its first genre): Dexter: Resurrection (2025) - Crime, Drama, Mystery
 - kept (not its first genre): Columbo (1971) - Crime, Drama, Mystery
-- kept (not its first genre): Star Trek: The Next Generation (1987) - Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery
 - left out: Charmed (1998) [tv:1981] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: The White Lotus (2021) [tv:111803] - Comedy, Drama, Mystery
 - left out: Bodyguard (2018) [tv:80307] - Crime, Drama, War & Politics, Mystery
@@ -9840,8 +9839,8 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Platform (2019) - Drama, Sci-Fi, Thriller
 - kept (not its first genre): The Flu (2013) - Action, Sci-Fi, Thriller
 - kept (not its first genre): District B13 (2004) - Action, Thriller, Sci-Fi
-- kept (not its first genre): Open Your Eyes (1997) - Drama, Thriller, Sci-Fi
 - kept (not its first genre): Bird Box Barcelona (2023) - Horror, Sci-Fi, Thriller
+- kept (not its first genre): Open Your Eyes (1997) - Drama, Thriller, Sci-Fi
 - kept (not its first genre): The Night Eats the World (2018) - Horror, Thriller, Sci-Fi
 - kept (not its first genre): Just a Breath Away (2018) - Drama, Sci-Fi, Thriller
 - left out: Guardians (2017) [movie:354556] - Sci-Fi, Action, Fantasy, Comedy, Thriller
@@ -9850,39 +9849,39 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Sin senos sí hay paraíso (2016) - Action & Adventure, Crime, Drama, Mystery
 - kept (not its first genre): Lupin (2021) - Crime, Drama, Mystery
 - kept (not its first genre): Squid Game (2021) - Action & Adventure, Mystery, Drama
-- kept (not its first genre): The Innocent (2021) - Crime, Mystery, Drama
 - kept (not its first genre): Dark (2017) - Crime, Drama, Sci-Fi & Fantasy, Mystery
 - kept (not its first genre): Elite (2018) - Crime, Mystery, Drama
+- kept (not its first genre): The Innocent (2021) - Crime, Mystery, Drama
 - kept (not its first genre): Inspector Rex (1994) - Crime, Mystery, Drama
 - kept (not its first genre): The Bridge (2011) - Crime, Mystery, Drama
 - kept (not its first genre): The Killing (2007) - Crime, Mystery, Drama
 - kept (not its first genre): Ragnarok (2020) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Money Heist: Korea - Joint Economic Area (2022) - Action & Adventure, Crime, Drama, Mystery
 - kept (not its first genre): Gyeongseong Creature (2023) - Sci-Fi & Fantasy, Mystery, Action & Adventure, Drama
+- kept (not its first genre): Are You Human? (2018) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): 30 Coins (2020) - Crime, Mystery, Drama
 - kept (not its first genre): The Boat (2011) - Action & Adventure, Mystery, Drama
-- kept (not its first genre): Are You Human? (2018) - Sci-Fi & Fantasy, Drama, Mystery
 - left out: Second chance (2005) [tv:4879] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: The 8 Show (2024) [tv:156484] - Mystery, Comedy, Drama
 - left out: Healer (2014) [tv:61670] - Comedy, Action & Adventure, Mystery, Drama
 - left out: A Korean Odyssey (2017) [tv:75123] - Comedy, Mystery, Sci-Fi & Fantasy, Drama
 
-## Adrenaline Rush · High-Octane Action Blockbusters (movie) - 500 kept of 633 looked at
+## Adrenaline Rush · High-Octane Action Blockbusters (movie) - 500 kept of 632 looked at
 - kept (not its first genre): The Odyssey (2026) - Adventure, Action, Fantasy
 - kept (not its first genre): Spider-Man: Brand New Day (2026) - Sci-Fi, Action, Adventure
-- kept (not its first genre): Avengers: Endgame (2019) - Adventure, Sci-Fi, Action
 - kept (not its first genre): The Hunger Games: Catching Fire (2013) - Adventure, Action, Sci-Fi
 - kept (not its first genre): The Hunger Games: The Ballad of Songbirds & Snakes (2023) - Sci-Fi, Action, Adventure
+- kept (not its first genre): Avengers: Endgame (2019) - Adventure, Sci-Fi, Action
 - kept (not its first genre): The Hunger Games (2012) - Sci-Fi, Adventure, Action, Thriller
 - kept (not its first genre): Avengers: Infinity War (2018) - Adventure, Action, Sci-Fi
 - kept (not its first genre): The Avengers (2012) - Sci-Fi, Action, Adventure
 - kept (not its first genre): The Lord of the Rings: The Fellowship of the Ring (2001) - Adventure, Fantasy, Action
 - kept (not its first genre): The Lord of the Rings: The Return of the King (2003) - Adventure, Fantasy, Action
 - kept (not its first genre): Doctor Strange in the Multiverse of Madness (2022) - Fantasy, Action, Adventure
-- kept (not its first genre): Star Wars (1977) - Adventure, Action, Sci-Fi
-- kept (not its first genre): The Lord of the Rings: The Two Towers (2002) - Adventure, Fantasy, Action
-- kept (not its first genre): The Crow (1994) - Fantasy, Action, Thriller
 - kept (not its first genre): The Fantastic 4: First Steps (2025) - Sci-Fi, Adventure, Action
+- kept (not its first genre): The Lord of the Rings: The Two Towers (2002) - Adventure, Fantasy, Action
+- kept (not its first genre): Star Wars (1977) - Adventure, Action, Sci-Fi
+- kept (not its first genre): Avatar (2009) - Sci-Fi, Action, Adventure
 - left out: Braveheart (1995) [movie:197] - History, Drama, War, Action
 - left out: Ford v Ferrari (2019) [movie:359724] - Drama, History, Action
 - left out: Resident Evil (2002) [movie:1576] - Horror, Action, Sci-Fi
@@ -9899,7 +9898,6 @@ EMPTY gen-genres-western-international-hits-series
 - left out: The Blues Brothers (1980) [movie:525] - Music, Comedy, Action, Adventure
 - left out: Planet Terror (2007) [movie:1992] - Horror, Action, Thriller
 - left out: Hellboy (2019) [movie:456740] - Fantasy, Horror, Action, Adventure
-- left out: Underwater (2020) [movie:443791] - Horror, Sci-Fi, Action, Adventure
 - left out: A Knight's Tale (2001) [movie:9476] - Adventure, Drama, Romance, Action
 - left out: The Pacifier (2005) [movie:10022] - Comedy, Family, Action
 - left out: Ben-Hur (1959) [movie:665] - History, Drama, Adventure, Action
@@ -9910,14 +9908,14 @@ EMPTY gen-genres-western-international-hits-series
 ## Adrenaline Rush · Action & Thriller Series (series) - 149 kept of 155 looked at
 - kept (not its first genre): Strike Back (2010) - Drama, Action & Adventure
 - kept (not its first genre): NCIS (2003) - Crime, Drama, Action & Adventure
+- kept (not its first genre): Marshals (2026) - Drama, Crime, Action & Adventure
 - kept (not its first genre): Hawaii Five-0 (2010) - Crime, Drama, Action & Adventure
 - kept (not its first genre): Lost (2004) - Mystery, Action & Adventure, Drama
 - kept (not its first genre): 9-1-1 (2018) - Drama, Crime, Action & Adventure
-- kept (not its first genre): FBI (2018) - Crime, Action & Adventure, Drama
 - kept (not its first genre): S.W.A.T. (2017) - Crime, Action & Adventure, Drama
+- kept (not its first genre): FBI (2018) - Crime, Action & Adventure, Drama
 - kept (not its first genre): JAG (1995) - Drama, Action & Adventure, Crime
 - kept (not its first genre): Arrow (2012) - Crime, Drama, Action & Adventure
-- kept (not its first genre): Marshals (2026) - Drama, Crime, Action & Adventure
 - kept (not its first genre): Without a Trace (2002) - Crime, Mystery, Action & Adventure, Drama
 - kept (not its first genre): MacGyver (1985) - Drama, Action & Adventure, Crime
 - kept (not its first genre): Las Vegas (2003) - Drama, Action & Adventure, Crime
@@ -9929,7 +9927,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Rise of Empires: Ottoman (2020) [tv:96481] - Documentary, War & Politics, Action & Adventure
 - left out: Sledge Hammer! (1986) [tv:520] - Comedy, Crime, Action & Adventure
 
-## Adrenaline Rush · Top Rated Action Hits (movie) - 500 kept of 633 looked at
+## Adrenaline Rush · Top Rated Action Hits (movie) - 500 kept of 632 looked at
 - kept (not its first genre): The Lord of the Rings: The Return of the King (2003) - Adventure, Fantasy, Action
 - kept (not its first genre): Spider-Man: Brand New Day (2026) - Sci-Fi, Action, Adventure
 - kept (not its first genre): The Lord of the Rings: The Fellowship of the Ring (2001) - Adventure, Fantasy, Action
@@ -9961,7 +9959,6 @@ EMPTY gen-genres-western-international-hits-series
 - left out: The Blues Brothers (1980) [movie:525] - Music, Comedy, Action, Adventure
 - left out: Planet Terror (2007) [movie:1992] - Horror, Action, Thriller
 - left out: Hellboy (2019) [movie:456740] - Fantasy, Horror, Action, Adventure
-- left out: Underwater (2020) [movie:443791] - Horror, Sci-Fi, Action, Adventure
 - left out: A Knight's Tale (2001) [movie:9476] - Adventure, Drama, Romance, Action
 - left out: The Pacifier (2005) [movie:10022] - Comedy, Family, Action
 - left out: Ben-Hur (1959) [movie:665] - History, Drama, Adventure, Action
@@ -10020,13 +10017,13 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Count of Monte Cristo (2024) - Adventure, Action, Drama
 - kept (not its first genre): The Three Musketeers: D'Artagnan (2023) - Adventure, Action, Drama, History
 - kept (not its first genre): Battle Royale (2000) - Drama, Thriller, Action
-- kept (not its first genre): Fist of Fury (1972) - Drama, Action, Thriller
 - kept (not its first genre): The Wandering Earth (2019) - Sci-Fi, Action, Drama
+- kept (not its first genre): Fist of Fury (1972) - Drama, Action, Thriller
 - kept (not its first genre): Fearless (2006) - Drama, Action
 - kept (not its first genre): House of Flying Daggers (2004) - Adventure, Drama, Action
 - kept (not its first genre): Rumble in the Bronx (1995) - Crime, Action, Comedy, Thriller
-- kept (not its first genre): Who Am I? (1998) - Adventure, Action, Comedy, Thriller
 - kept (not its first genre): Zatoichi (2003) - Adventure, Drama, Action
+- kept (not its first genre): The Chaser (2008) - Crime, Thriller, Action
 - left out: Crouching Tiger, Hidden Dragon (2000) [movie:146] - Romance, Drama, Action
 - left out: Godzilla Minus One (2023) [movie:940721] - Sci-Fi, Horror, Action
 - left out: Peninsula (2020) [movie:581392] - Horror, Action, Thriller, Adventure
@@ -10041,35 +10038,35 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Kuruluş Osman (2019) - War & Politics, Action & Adventure, Drama
 - kept (not its first genre): Alice in Borderland (2020) - Mystery, Drama, Action & Adventure
 - kept (not its first genre): The Magnificent Century (2011) - Drama, Action & Adventure
-- kept (not its first genre): Fauda (2015) - Drama, Action & Adventure, War & Politics
 - kept (not its first genre): Bloodhounds (2023) - Drama, Action & Adventure, Crime
-- kept (not its first genre): The Uncanny Counter (2020) - Drama, Mystery, Action & Adventure
+- kept (not its first genre): Fauda (2015) - Drama, Action & Adventure, War & Politics
 - kept (not its first genre): Sweet Home (2020) - Sci-Fi & Fantasy, Action & Adventure
+- kept (not its first genre): The Uncanny Counter (2020) - Drama, Mystery, Action & Adventure
 - kept (not its first genre): Alchemy of Souls (2022) - Drama, Sci-Fi & Fantasy, Action & Adventure, Mystery
 - kept (not its first genre): False Identity (2018) - Crime, Action & Adventure
 - kept (not its first genre): Moving (2023) - Mystery, Drama, Action & Adventure
-- kept (not its first genre): The Boarding School (2007) - Drama, Action & Adventure, Family
 - kept (not its first genre): Apocalipse (2017) - Drama, Action & Adventure, Mystery
+- kept (not its first genre): The Boarding School (2007) - Drama, Action & Adventure, Family
 - kept (not its first genre): Berlin (2023) - Drama, Action & Adventure, Crime
-- kept (not its first genre): Strong Girl Bong-soon (2017) - Comedy, Action & Adventure, Drama
 - kept (not its first genre): El Dragón: Return of a Warrior (2019) - Drama, Action & Adventure
+- kept (not its first genre): Descendants of the Sun (2016) - Drama, Action & Adventure
 
 ## Epic & Sweeping · Historical & War Epics (movie) - 140 kept of 166 looked at
 - kept (not its first genre): Oppenheimer (2023) - Drama, History, War
 - kept (not its first genre): Schindler's List (1993) - Drama, History, War
-- kept (not its first genre): Inglourious Basterds (2009) - Drama, Thriller, War
 - kept (not its first genre): Hacksaw Ridge (2016) - Drama, History, War
+- kept (not its first genre): Inglourious Basterds (2009) - Drama, Thriller, War
 - kept (not its first genre): The Pianist (2002) - Drama, War
 - kept (not its first genre): Kingdom of Heaven (2005) - Drama, Action, Adventure, History, War
-- kept (not its first genre): Apocalypse Now (1979) - Drama, War
-- kept (not its first genre): Full Metal Jacket (1987) - Drama, War
-- kept (not its first genre): Ford v Ferrari (2019) - Drama, History, Action
-- kept (not its first genre): The Last Samurai (2003) - Drama, Action, War
 - kept (not its first genre): Killers of the Flower Moon (2023) - Crime, History, Drama
-- kept (not its first genre): Hidden Figures (2016) - Drama, History
+- kept (not its first genre): Full Metal Jacket (1987) - Drama, War
+- kept (not its first genre): Apocalypse Now (1979) - Drama, War
+- kept (not its first genre): The Last Samurai (2003) - Drama, Action, War
 - kept (not its first genre): Apocalypto (2006) - Action, Drama, History
-- kept (not its first genre): The Boy in the Striped Pyjamas (2008) - Drama, War, History
+- kept (not its first genre): Hidden Figures (2016) - Drama, History
+- kept (not its first genre): Ford v Ferrari (2019) - Drama, History, Action
 - kept (not its first genre): 300 (2007) - Action, Adventure, War
+- kept (not its first genre): The Boy in the Striped Pyjamas (2008) - Drama, War, History
 - left out: Green Book (2018) [movie:490132] - Drama, Comedy, History
 - left out: Jojo Rabbit (2019) [movie:515001] - Comedy, War, Drama
 - left out: War for the Planet of the Apes (2017) [movie:281338] - Drama, Sci-Fi, War
@@ -10082,8 +10079,8 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Memoirs of a Geisha (2005) [movie:1904] - Drama, Romance, History
 - left out: Good Morning, Vietnam (1987) [movie:801] - Comedy, Drama, War
 - left out: Legends of the Fall (1994) [movie:4476] - Drama, Western, Romance, War
-- left out: Ed Wood (1994) [movie:522] - Comedy, Drama, History
 - left out: Hostiles (2017) [movie:384680] - Drama, Western, History, Adventure
+- left out: Ed Wood (1994) [movie:522] - Comedy, Drama, History
 - left out: Hot Shots! (1991) [movie:9595] - Action, Comedy, War
 - left out: Cinderella Man (2005) [movie:921] - Romance, Drama, History
 - left out: Australia (2008) [movie:6972] - Adventure, Romance, History
@@ -10098,20 +10095,20 @@ EMPTY gen-genres-western-international-hits-series
 
 ## Epic & Sweeping · Grand Fantasy Epics (movie) - 131 kept of 146 looked at
 - kept (not its first genre): Avatar: Fire and Ash (2025) - Sci-Fi, Adventure, Fantasy
-- kept (not its first genre): The Hobbit: The Battle of the Five Armies (2014) - Action, Adventure, Fantasy
 - kept (not its first genre): Shang-Chi and the Legend of the Ten Rings (2021) - Action, Adventure, Fantasy
 - kept (not its first genre): Barbie (2023) - Comedy, Adventure, Fantasy
+- kept (not its first genre): The Hobbit: The Battle of the Five Armies (2014) - Action, Adventure, Fantasy
 - kept (not its first genre): Mortal Kombat II (2026) - Action, Fantasy, Adventure
 - kept (not its first genre): A Minecraft Movie (2025) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Kong: Skull Island (2017) - Action, Adventure, Fantasy
-- kept (not its first genre): Zack Snyder's Justice League (2021) - Action, Adventure, Fantasy
 - kept (not its first genre): Batman v Superman: Dawn of Justice (2016) - Action, Adventure, Fantasy
+- kept (not its first genre): Zack Snyder's Justice League (2021) - Action, Adventure, Fantasy
 - kept (not its first genre): Aquaman and the Lost Kingdom (2023) - Action, Adventure, Fantasy
-- kept (not its first genre): Alice in Wonderland (2010) - Family, Fantasy, Adventure
 - kept (not its first genre): Thor: The Dark World (2013) - Action, Adventure, Fantasy
+- kept (not its first genre): Alice in Wonderland (2010) - Family, Fantasy, Adventure
 - kept (not its first genre): Wonder Woman (2017) - Action, Adventure, Fantasy
 - kept (not its first genre): Suicide Squad (2016) - Action, Adventure, Fantasy
-- kept (not its first genre): Wonder Woman 1984 (2020) - Action, Adventure, Fantasy
+- kept (not its first genre): Maleficent: Mistress of Evil (2019) - Family, Fantasy, Adventure
 - left out: Charlie and the Chocolate Factory (2005) [movie:118] - Adventure, Comedy, Family, Fantasy
 - left out: The Secret Life of Walter Mitty (2013) [movie:116745] - Adventure, Comedy, Drama, Fantasy
 - left out: The Mummy (2017) [movie:282035] - Fantasy, Thriller, Action, Adventure, Horror
@@ -10135,18 +10132,18 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Interstellar (2014) - Adventure, Drama, Sci-Fi
 - kept (not its first genre): Avengers: Infinity War (2018) - Adventure, Action, Sci-Fi
 - kept (not its first genre): Star Wars (1977) - Adventure, Action, Sci-Fi
-- kept (not its first genre): Supergirl (2026) - Action, Adventure, Sci-Fi
 - kept (not its first genre): The Mandalorian and Grogu (2026) - Action, Adventure, Sci-Fi
+- kept (not its first genre): Supergirl (2026) - Action, Adventure, Sci-Fi
 - kept (not its first genre): Alien (1979) - Horror, Sci-Fi
 - kept (not its first genre): Aliens (1986) - Action, Thriller, Sci-Fi
-- kept (not its first genre): The Empire Strikes Back (1980) - Adventure, Action, Sci-Fi
 - kept (not its first genre): Star Wars: The Force Awakens (2015) - Adventure, Action, Sci-Fi
 - kept (not its first genre): Star Wars: The Last Jedi (2017) - Adventure, Action, Sci-Fi
+- kept (not its first genre): The Empire Strikes Back (1980) - Adventure, Action, Sci-Fi
 - kept (not its first genre): Alien: Covenant (2017) - Horror, Sci-Fi
-- kept (not its first genre): Guardians of the Galaxy (2014) - Action, Sci-Fi, Adventure
 - kept (not its first genre): Oblivion (2013) - Action, Sci-Fi, Adventure, Mystery
+- kept (not its first genre): Guardians of the Galaxy (2014) - Action, Sci-Fi, Adventure
+- kept (not its first genre): Dune (1984) - Action, Sci-Fi, Adventure
 - kept (not its first genre): Star Wars: The Rise of Skywalker (2019) - Adventure, Action, Sci-Fi
-- kept (not its first genre): Fantastic Four (2005) - Action, Fantasy, Sci-Fi
 - left out: Sharknado 3: Oh Hell No! (2015) [movie:331446] - Action, Comedy, Horror, Sci-Fi, TV Movie
 
 ## Epic & Sweeping · Top Rated Epic Masterpieces (movie) - 327 kept of 342 looked at
@@ -10204,7 +10201,6 @@ EMPTY gen-genres-western-international-hits-series
 - left out: No Time to Die (2021) [movie:370172] - Action, Thriller, Adventure
 - left out: Skyscraper (2018) [movie:447200] - Action, Thriller, Adventure
 - left out: Hellboy (2019) [movie:456740] - Fantasy, Horror, Action, Adventure
-- left out: Underwater (2020) [movie:443791] - Horror, Sci-Fi, Action, Adventure
 - left out: Triple Frontier (2019) [movie:399361] - Action, Thriller, Crime, Adventure
 - left out: Mission: Impossible - The Final Reckoning (2025) [movie:575265] - Action, Thriller, Adventure
 - left out: Adrift (2018) [movie:429300] - Thriller, Romance, Adventure
@@ -10222,6 +10218,7 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Captive State (2019) [movie:429471] - Sci-Fi, Thriller, Adventure
 - left out: Blacklight (2022) [movie:823625] - Action, Thriller, Adventure
 - left out: Downton Abbey (2019) [movie:535544] - Drama, Romance, History
+- left out: War Machine (2017) [movie:354287] - Comedy, Drama, War
 
 ## Epic & Sweeping · International Hits Movies (movie) - 97 kept of 111 looked at
 - kept (not its first genre): The Fifth Element (1997) - Sci-Fi, Action, Adventure
@@ -10229,10 +10226,10 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Hero (2002) - Drama, Adventure, Action, History
 - kept (not its first genre): Harakiri (1962) - Action, Drama, History
 - kept (not its first genre): Caligula (1979) - Drama, History
-- kept (not its first genre): Ran (1985) - Action, Drama, History
 - kept (not its first genre): Incendies (2010) - Drama, War, Mystery
-- kept (not its first genre): The Great Flood (2025) - Sci-Fi, Adventure, Drama
+- kept (not its first genre): Ran (1985) - Action, Drama, History
 - kept (not its first genre): Come and See (1985) - Drama, War, Horror, History
+- kept (not its first genre): The Great Flood (2025) - Sci-Fi, Adventure, Drama
 - kept (not its first genre): Society of the Snow (2023) - Drama, History
 - kept (not its first genre): Along with the Gods: The Two Worlds (2017) - Action, Adventure, Drama, Fantasy, Thriller
 - kept (not its first genre): Das Boot (1981) - Drama, History, War
@@ -10257,9 +10254,9 @@ EMPTY gen-genres-western-international-hits-series
 ## Epic & Sweeping · International Hits Series (series) - 39 kept of 42 looked at
 - kept (not its first genre): Dark (2017) - Crime, Drama, Sci-Fi & Fantasy, Mystery
 - kept (not its first genre): All of Us Are Dead (2022) - Action & Adventure, Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Welcome to Eden (2022) - Action & Adventure, Sci-Fi & Fantasy, Drama
-- kept (not its first genre): The Returned (2012) - Mystery, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): 1899 (2022) - Mystery, Drama, Sci-Fi & Fantasy
+- kept (not its first genre): The Returned (2012) - Mystery, Sci-Fi & Fantasy, Drama
+- kept (not its first genre): Welcome to Eden (2022) - Action & Adventure, Sci-Fi & Fantasy, Drama
 - kept (not its first genre): Invisible City (2021) - Mystery, Drama, Sci-Fi & Fantasy
 - left out: Second chance (2005) [tv:4879] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: Hi Bye, Mama! (2020) [tv:97219] - Sci-Fi & Fantasy, Comedy, Drama
@@ -10270,8 +10267,8 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Wednesday (2022) - Sci-Fi & Fantasy, Mystery, Comedy
 - kept (not its first genre): Batman (1966) - Sci-Fi & Fantasy, Comedy, Action & Adventure
 - kept (not its first genre): Hogan's Heroes (1965) - War & Politics, Comedy
-- kept (not its first genre): Impractical Jokers (2011) - Reality, Comedy
 - kept (not its first genre): I Dream of Jeannie (1965) - Sci-Fi & Fantasy, Comedy, Family
+- kept (not its first genre): Impractical Jokers (2011) - Reality, Comedy
 - kept (not its first genre): Peacemaker (2022) - Action & Adventure, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Fuller House (2016) - Family, Comedy
 - kept (not its first genre): The Good Place (2016) - Sci-Fi & Fantasy, Comedy
@@ -10302,6 +10299,7 @@ EMPTY gen-genres-western-international-hits-series
 ## Feel-Good · Recent Feel-Good Releases (movie) - 500 kept of 700 looked at
 - kept (not its first genre): Guarding Stars (2026) - Romance, Comedy
 - kept (not its first genre): Allen (2026) - Sci-Fi, Adventure, Comedy
+- kept (not its first genre): Wicker (2026) - Romance, Fantasy, Comedy
 - kept (not its first genre): Street Fighter (2026) - Action, Comedy, Fantasy
 - kept (not its first genre): Matchbox the Movie (2026) - Action, Comedy, Adventure
 - kept (not its first genre): The Love Hypothesis (2026) - Romance, Comedy
@@ -10314,7 +10312,6 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Jackass: Best and Last (2026) - Action, Comedy, Documentary
 - kept (not its first genre): Voicemails for Isabelle (2026) - Romance, Comedy, Drama
 - kept (not its first genre): Stop! That! Train! (2026) - Action, Comedy
-- kept (not its first genre): Office Romance (2026) - Romance, Comedy
 - left out: Babylon (2022) [movie:615777] - Drama, Comedy
 - left out: The Banshees of Inisherin (2022) [movie:674324] - Drama, Comedy
 - left out: Anora (2024) [movie:1064213] - Drama, Comedy, Romance
@@ -10344,19 +10341,19 @@ EMPTY gen-genres-western-international-hits-series
 ## Feel-Good · International Hits Movies (movie) - 160 kept of 193 looked at
 - kept (not its first genre): Kung Fu Hustle (2004) - Action, Comedy, Crime, Fantasy
 - kept (not its first genre): Shaolin Soccer (2001) - Action, Comedy, Fantasy
-- kept (not its first genre): Police Story (1985) - Action, Crime, Comedy
 - kept (not its first genre): Drunken Master (1978) - Action, Comedy
 - kept (not its first genre): The Legend of Drunken Master (1994) - Action, Comedy
+- kept (not its first genre): Police Story (1985) - Action, Crime, Comedy
 - kept (not its first genre): Rumble in the Bronx (1995) - Crime, Action, Comedy, Thriller
-- kept (not its first genre): Asterix & Obelix: Mission Cleopatra (2002) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Who Am I? (1998) - Adventure, Action, Comedy, Thriller
+- kept (not its first genre): Asterix & Obelix: Mission Cleopatra (2002) - Family, Fantasy, Comedy, Adventure
 - kept (not its first genre): Taxi (1998) - Action, Comedy, Crime, Adventure
 - kept (not its first genre): Asterix & Obelix: The Middle Kingdom (2023) - Family, Comedy, Adventure, Fantasy
-- kept (not its first genre): A Trip to the Moon (1902) - Adventure, Sci-Fi, Comedy
-- kept (not its first genre): Taxi 2 (2000) - Action, Comedy, Adventure, Crime
 - kept (not its first genre): Taxi 3 (2003) - Action, Comedy, Crime
+- kept (not its first genre): Riders of Justice (2020) - Action, Comedy, Drama, Thriller
 - kept (not its first genre): Guardians (2017) - Sci-Fi, Action, Fantasy, Comedy, Thriller
-- kept (not its first genre): They Call Me Trinity (1970) - Action, Comedy, Western
+- kept (not its first genre): Taxi 2 (2000) - Action, Comedy, Adventure, Crime
+- kept (not its first genre): A Trip to the Moon (1902) - Adventure, Sci-Fi, Comedy
 - left out: The Intouchables (2011) [movie:77338] - Drama, Comedy
 - left out: Wild Tales (2014) [movie:265195] - Drama, Thriller, Comedy
 - left out: The Artist (2011) [movie:74643] - Drama, Comedy, Romance
@@ -10386,12 +10383,12 @@ EMPTY gen-genres-western-international-hits-series
 ## Feel-Good · International Hits Series (series) - 51 kept of 80 looked at
 - kept (not its first genre): Vincenzo (2021) - Action & Adventure, Comedy, Drama, Crime
 - kept (not its first genre): 100 días para enamorarnos (2020) - Drama, Comedy
-- kept (not its first genre): SKAM España (2018) - Drama, Comedy
 - kept (not its first genre): Hi Bye, Mama! (2020) - Sci-Fi & Fantasy, Comedy, Drama
+- kept (not its first genre): SKAM España (2018) - Drama, Comedy
 - kept (not its first genre): María de Todos los Ángeles (2009) - Drama, Comedy, Family
 - kept (not its first genre): The 8 Show (2024) - Mystery, Comedy, Drama
-- kept (not its first genre): Rebelde (2022) - Drama, Comedy
 - kept (not its first genre): A Love So Beautiful (2020) - Drama, Comedy
+- kept (not its first genre): Rebelde (2022) - Drama, Comedy
 - kept (not its first genre): Hi! School - Love On (2014) - Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Run Coyote Run (2017) - Action & Adventure, Comedy
 - left out: Rebelde (2004) [tv:12637] - Drama, Comedy
@@ -10535,18 +10532,18 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Sin senos sí hay paraíso (2016) - Action & Adventure, Crime, Drama, Mystery
 - kept (not its first genre): Lupin (2021) - Crime, Drama, Mystery
 - kept (not its first genre): Squid Game (2021) - Action & Adventure, Mystery, Drama
-- kept (not its first genre): The Innocent (2021) - Crime, Mystery, Drama
 - kept (not its first genre): Dark (2017) - Crime, Drama, Sci-Fi & Fantasy, Mystery
 - kept (not its first genre): Elite (2018) - Crime, Mystery, Drama
+- kept (not its first genre): The Innocent (2021) - Crime, Mystery, Drama
 - kept (not its first genre): Inspector Rex (1994) - Crime, Mystery, Drama
 - kept (not its first genre): The Bridge (2011) - Crime, Mystery, Drama
 - kept (not its first genre): The Killing (2007) - Crime, Mystery, Drama
 - kept (not its first genre): Ragnarok (2020) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): Money Heist: Korea - Joint Economic Area (2022) - Action & Adventure, Crime, Drama, Mystery
 - kept (not its first genre): Gyeongseong Creature (2023) - Sci-Fi & Fantasy, Mystery, Action & Adventure, Drama
+- kept (not its first genre): Are You Human? (2018) - Sci-Fi & Fantasy, Drama, Mystery
 - kept (not its first genre): 30 Coins (2020) - Crime, Mystery, Drama
 - kept (not its first genre): The Boat (2011) - Action & Adventure, Mystery, Drama
-- kept (not its first genre): Are You Human? (2018) - Sci-Fi & Fantasy, Drama, Mystery
 - left out: Second chance (2005) [tv:4879] - Comedy, Drama, Mystery, Sci-Fi & Fantasy
 - left out: The 8 Show (2024) [tv:156484] - Mystery, Comedy, Drama
 - left out: Healer (2014) [tv:61670] - Comedy, Action & Adventure, Mystery, Drama
@@ -10572,9 +10569,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Heartland (2007) - Family, Drama, Comedy
 - kept (not its first genre): Little House on the Prairie (1974) - Western, Drama, Family
 - kept (not its first genre): Dr. Quinn, Medicine Woman (1993) - Western, Drama
+- kept (not its first genre): R. L. Stine's The Haunting Hour (2010) - Family, Drama
 - kept (not its first genre): Dutton Ranch (2026) - Western, Drama
 - kept (not its first genre): 7th Heaven (1996) - Family, Drama, Comedy
-- kept (not its first genre): R. L. Stine's The Haunting Hour (2010) - Family, Drama
 - kept (not its first genre): TURN: Washington's Spies (2014) - War & Politics, Drama
 - kept (not its first genre): Big Shot (2021) - Family, Drama, Comedy
 - kept (not its first genre): Godless (2017) - Western, Drama
@@ -10650,19 +10647,19 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Elizabeth: The Golden Age (2007) [movie:4517] - Drama, History, Romance
 - left out: The New World (2005) [movie:11400] - Drama, History, Romance
 
-## Tearjerkers · Family & Loss Stories (movie) - 163 kept of 262 looked at
+## Tearjerkers · Family & Loss Stories (movie) - 163 kept of 263 looked at
 - kept (not its first genre): Cinderella (2015) - Romance, Fantasy, Family, Drama
 - kept (not its first genre): The Karate Kid (2010) - Action, Adventure, Drama, Family
 - kept (not its first genre): Bridge to Terabithia (2007) - Adventure, Drama, Family
 - kept (not its first genre): The Santa Clause (1994) - Fantasy, Drama, Comedy, Family
 - kept (not its first genre): Hugo (2011) - Adventure, Drama, Family
 - kept (not its first genre): The Call of the Wild (2020) - Adventure, Family, Drama
-- kept (not its first genre): The Karate Kid Part II (1986) - Adventure, Drama, Action, Romance, Family
 - kept (not its first genre): Miracle on 34th Street (1994) - Fantasy, Drama, Family
-- kept (not its first genre): The Karate Kid Part III (1989) - Action, Family, Drama
+- kept (not its first genre): The Karate Kid Part II (1986) - Adventure, Drama, Action, Romance, Family
 - kept (not its first genre): Babe (1995) - Fantasy, Drama, Comedy, Family
 - kept (not its first genre): Eight Below (2006) - Adventure, Drama, Family
 - kept (not its first genre): A Dog's Purpose (2017) - Adventure, Fantasy, Family, Drama
+- kept (not its first genre): The Karate Kid Part III (1989) - Action, Family, Drama
 - kept (not its first genre): Holes (2003) - Adventure, Family, Drama, Comedy
 - kept (not its first genre): The Next Karate Kid (1994) - Action, Drama, Family
 - kept (not its first genre): A Beautiful Day in the Neighborhood (2019) - History, Family, Drama
@@ -10781,17 +10778,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Handmaiden (2016) - Thriller, Drama, Romance
 - kept (not its first genre): Léon: The Professional (1994) - Crime, Drama, Action
 - kept (not its first genre): Seven Samurai (1954) - Action, Drama
-- kept (not its first genre): Lust, Caution (2007) - Action, Drama, Romance, Thriller
 - kept (not its first genre): Memories of Murder (2003) - Crime, Drama, Thriller
+- kept (not its first genre): Lust, Caution (2007) - Action, Drama, Romance, Thriller
 - kept (not its first genre): 365 Days: This Day (2022) - Romance, Drama
 - kept (not its first genre): Snowpiercer (2013) - Action, Sci-Fi, Drama
-- kept (not its first genre): Pan's Labyrinth (2006) - Fantasy, Drama, War
-- kept (not its first genre): Crouching Tiger, Hidden Dragon (2000) - Romance, Drama, Action
 - kept (not its first genre): All Quiet on the Western Front (2022) - War, Drama
+- kept (not its first genre): Crouching Tiger, Hidden Dragon (2000) - Romance, Drama, Action
+- kept (not its first genre): Pan's Labyrinth (2006) - Fantasy, Drama, War
 - kept (not its first genre): RRR (2022) - Action, History, Drama
-- kept (not its first genre): Harakiri (1962) - Action, Drama, History
-- kept (not its first genre): Three Steps Above Heaven (2010) - Romance, Drama
 - kept (not its first genre): Monster (2023) - Mystery, Thriller, Drama
+- kept (not its first genre): Three Steps Above Heaven (2010) - Romance, Drama
+- kept (not its first genre): The Count of Monte Cristo (2024) - Adventure, Action, Drama
 - left out: Parasite (2019) [movie:496243] - Comedy, Thriller, Drama
 - left out: Life Is Beautiful (1997) [movie:637] - Comedy, Drama
 - left out: Dilwale Dulhania Le Jayenge (1995) [movie:19404] - Comedy, Drama, Romance
@@ -10823,17 +10820,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Lupin (2021) - Crime, Drama, Mystery
 - kept (not its first genre): Kuruluş Osman (2019) - War & Politics, Action & Adventure, Drama
 - kept (not its first genre): Squid Game (2021) - Action & Adventure, Mystery, Drama
-- kept (not its first genre): The Innocent (2021) - Crime, Mystery, Drama
 - kept (not its first genre): Teach You a Lesson (2026) - Action & Adventure, Drama, Comedy
 - kept (not its first genre): Dark (2017) - Crime, Drama, Sci-Fi & Fantasy, Mystery
 - kept (not its first genre): Elite (2018) - Crime, Mystery, Drama
+- kept (not its first genre): The Innocent (2021) - Crime, Mystery, Drama
 - kept (not its first genre): Alice in Borderland (2020) - Mystery, Drama, Action & Adventure
-- kept (not its first genre): Money Heist (2017) - Crime, Drama
-- kept (not its first genre): Weak Hero (2022) - Action & Adventure, Drama
 - kept (not its first genre): Inspector Rex (1994) - Crime, Mystery, Drama
-- kept (not its first genre): The Bridge (2011) - Crime, Mystery, Drama
+- kept (not its first genre): Money Heist (2017) - Crime, Drama
 - kept (not its first genre): All of Us Are Dead (2022) - Action & Adventure, Drama, Sci-Fi & Fantasy
-- kept (not its first genre): Pablo Escobar: The Drug Lord (2012) - Crime, Drama
+- kept (not its first genre): Weak Hero (2022) - Action & Adventure, Drama
+- kept (not its first genre): The Bridge (2011) - Crime, Mystery, Drama
+- kept (not its first genre): Gomorrah (2014) - Crime, Drama
 - left out: True Beauty (2020) [tv:112888] - Comedy, Drama
 - left out: El Chavo del Ocho (1973) [tv:47] - Comedy, Family, Drama
 - left out: Boys Over Flowers (2009) [tv:16420] - Comedy, Drama
@@ -10863,19 +10860,19 @@ EMPTY gen-genres-western-international-hits-series
 ## 80s & 90s Vibes · 80s & 90s Popcorn Action (movie) - 244 kept of 256 looked at
 - kept (not its first genre): The Crow (1994) - Fantasy, Action, Thriller
 - kept (not its first genre): Heat (1995) - Crime, Drama, Action
-- kept (not its first genre): Raiders of the Lost Ark (1981) - Adventure, Action
-- kept (not its first genre): The Empire Strikes Back (1980) - Adventure, Action, Sci-Fi
-- kept (not its first genre): Predator (1987) - Sci-Fi, Action, Adventure, Thriller
 - kept (not its first genre): The Mummy (1999) - Adventure, Action, Fantasy
-- kept (not its first genre): Indiana Jones and the Temple of Doom (1984) - Adventure, Action
+- kept (not its first genre): Raiders of the Lost Ark (1981) - Adventure, Action
+- kept (not its first genre): Predator (1987) - Sci-Fi, Action, Adventure, Thriller
+- kept (not its first genre): The Empire Strikes Back (1980) - Adventure, Action, Sci-Fi
 - kept (not its first genre): GoldenEye (1995) - Adventure, Action, Thriller
-- kept (not its first genre): Mission: Impossible (1996) - Adventure, Action, Thriller
-- kept (not its first genre): Indiana Jones and the Last Crusade (1989) - Adventure, Action
-- kept (not its first genre): Star Wars: Episode I - The Phantom Menace (1999) - Adventure, Action, Sci-Fi
-- kept (not its first genre): Godzilla (1998) - Sci-Fi, Action, Thriller
+- kept (not its first genre): Indiana Jones and the Temple of Doom (1984) - Adventure, Action
 - kept (not its first genre): Batman (1989) - Fantasy, Action, Crime
+- kept (not its first genre): Indiana Jones and the Last Crusade (1989) - Adventure, Action
+- kept (not its first genre): Godzilla (1998) - Sci-Fi, Action, Thriller
+- kept (not its first genre): Star Wars: Episode I - The Phantom Menace (1999) - Adventure, Action, Sci-Fi
+- kept (not its first genre): Mission: Impossible (1996) - Adventure, Action, Thriller
 - kept (not its first genre): Return of the Jedi (1983) - Adventure, Action, Sci-Fi
-- kept (not its first genre): Platoon (1986) - Drama, War, Action
+- kept (not its first genre): Tomorrow Never Dies (1997) - Adventure, Action, Thriller
 - left out: Braveheart (1995) [movie:197] - History, Drama, War, Action
 - left out: Blade (1998) [movie:36647] - Horror, Action
 - left out: Alien Resurrection (1997) [movie:8078] - Sci-Fi, Horror, Action
@@ -10891,20 +10888,20 @@ EMPTY gen-genres-western-international-hits-series
 
 ## 80s & 90s Vibes · 80s & 90s Classic Comedies (movie) - 380 kept of 430 looked at
 - kept (not its first genre): Back to the Future (1985) - Adventure, Comedy, Sci-Fi
-- kept (not its first genre): Rush Hour (1998) - Action, Comedy, Crime
 - kept (not its first genre): Men in Black (1997) - Action, Adventure, Comedy, Sci-Fi
-- kept (not its first genre): Groundhog Day (1993) - Romance, Fantasy, Comedy
+- kept (not its first genre): Rush Hour (1998) - Action, Comedy, Crime
 - kept (not its first genre): Bad Boys (1995) - Action, Comedy, Crime
-- kept (not its first genre): Pretty Woman (1990) - Romance, Comedy
+- kept (not its first genre): Groundhog Day (1993) - Romance, Fantasy, Comedy
 - kept (not its first genre): The Princess Bride (1987) - Fantasy, Comedy, Romance, Adventure
-- kept (not its first genre): Beetlejuice (1988) - Fantasy, Comedy
-- kept (not its first genre): The Goonies (1985) - Adventure, Comedy, Family
+- kept (not its first genre): Pretty Woman (1990) - Romance, Comedy
 - kept (not its first genre): Back to the Future Part II (1989) - Adventure, Comedy, Sci-Fi
 - kept (not its first genre): Practical Magic (1998) - Romance, Fantasy, Comedy
-- kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
+- kept (not its first genre): Beetlejuice (1988) - Fantasy, Comedy
+- kept (not its first genre): The Goonies (1985) - Adventure, Comedy, Family
 - kept (not its first genre): Jingle All the Way (1996) - Family, Adventure, Comedy
+- kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
 - kept (not its first genre): Notting Hill (1999) - Romance, Comedy
-- kept (not its first genre): 101 Dalmatians (1996) - Family, Comedy
+- kept (not its first genre): Casper (1995) - Fantasy, Comedy, Family
 - left out: Pulp Fiction (1994) [movie:680] - Thriller, Crime, Comedy
 - left out: Gremlins (1984) [movie:927] - Fantasy, Horror, Comedy
 - left out: Fear and Loathing in Las Vegas (1998) [movie:1878] - Adventure, Drama, Comedy
@@ -10935,18 +10932,18 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Law & Order: Special Victims Unit (1999) - Crime, Drama, Mystery
 - kept (not its first genre): Manimal (1983) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Midsomer Murders (1997) - Crime, Drama, Mystery
-- kept (not its first genre): Airwolf (1984) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Charmed (1998) - Comedy, Drama, Mystery, Sci-Fi & Fantasy
+- kept (not its first genre): Airwolf (1984) - Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Agatha Christie's Poirot (1989) - Crime, Drama, Mystery
-- kept (not its first genre): Twin Peaks (1990) - Drama, Mystery
 - kept (not its first genre): Buffy the Vampire Slayer (1997) - Comedy, Drama, Sci-Fi & Fantasy
+- kept (not its first genre): Twin Peaks (1990) - Drama, Mystery
 - kept (not its first genre): Magnum, P.I. (1980) - Crime, Drama, Mystery
 - kept (not its first genre): Sabrina, the Teenage Witch (1996) - Comedy, Family, Sci-Fi & Fantasy
-- kept (not its first genre): Beyond Belief: Fact or Fiction (1997) - Documentary, Mystery, Reality
 - kept (not its first genre): Xena: Warrior Princess (1995) - Drama, Action & Adventure, Sci-Fi & Fantasy
 - kept (not its first genre): Babylon 5 (1994) - Drama, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Knight Rider (1982) - Action & Adventure, Sci-Fi & Fantasy, Crime
 - kept (not its first genre): 3rd Rock from the Sun (1996) - Family, Sci-Fi & Fantasy, Comedy, Drama
+- kept (not its first genre): Lois & Clark: The New Adventures of Superman (1993) - Action & Adventure, Drama, Sci-Fi & Fantasy, Comedy
 - left out: Diagnosis: Murder (1993) [tv:2625] - Drama, Family, Mystery, Crime
 - left out: Blue Thunder (1984) [tv:11573] - Action & Adventure, Crime, Drama, Sci-Fi & Fantasy
 - left out: The Adventures of Brisco County, Jr. (1993) [tv:1463] - Western, Comedy, Action & Adventure, Sci-Fi & Fantasy
@@ -10959,14 +10956,14 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Wrath of Man (2021) - Thriller, Crime, Drama
 - kept (not its first genre): xXx (2002) - Action, Adventure, Thriller, Crime, Drama
 - kept (not its first genre): Murder on the Orient Express (2017) - Mystery, Drama, Crime
+- kept (not its first genre): Boyka: Undisputed IV (2016) - Action, Drama, Thriller, Crime
 - kept (not its first genre): Mystic River (2003) - Thriller, Drama, Mystery, Crime
 - kept (not its first genre): Havoc (2025) - Action, Crime, Thriller, Drama
-- kept (not its first genre): Boyka: Undisputed IV (2016) - Action, Drama, Thriller, Crime
 - kept (not its first genre): Need for Speed (2014) - Action, Crime, Drama, Thriller
 - kept (not its first genre): The Punisher (2004) - Action, Crime, Drama
 - kept (not its first genre): Hell or High Water (2016) - Western, Crime, Drama
-- kept (not its first genre): The Talented Mr. Ripley (1999) - Thriller, Crime, Drama
 - kept (not its first genre): Insomnia (2002) - Thriller, Crime, Drama
+- kept (not its first genre): The Talented Mr. Ripley (1999) - Thriller, Crime, Drama
 - left out: The Green Mile (1999) [movie:497] - Fantasy, Drama, Crime
 - left out: Gangs of New York (2002) [movie:3131] - Drama, History, Crime
 - left out: Snowden (2016) [movie:302401] - Drama, History, Crime, Thriller
@@ -11096,14 +11093,14 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): City of God (2002) - Drama, Crime
 - kept (not its first genre): Anatomy of a Fall (2023) - Thriller, Mystery, Crime
 - kept (not its first genre): No Other Choice (2025) - Comedy, Crime, Thriller
-- kept (not its first genre): High and Low (1963) - Drama, Crime, Thriller, Mystery
 - kept (not its first genre): Shoplifters (2018) - Drama, Crime, Thriller
 - kept (not its first genre): Irreversible (2002) - Drama, Thriller, Crime
-- kept (not its first genre): Infernal Affairs (2002) - Drama, Thriller, Crime
+- kept (not its first genre): High and Low (1963) - Drama, Crime, Thriller, Mystery
 - kept (not its first genre): The Gangster, the Cop, the Devil (2019) - Action, Crime, Thriller
 - kept (not its first genre): Ong-Bak (2003) - Action, Crime, Thriller
-- kept (not its first genre): The Way of the Dragon (1972) - Action, Crime
+- kept (not its first genre): Infernal Affairs (2002) - Drama, Thriller, Crime
 - kept (not its first genre): Hard Boiled (1992) - Action, Thriller, Crime
+- kept (not its first genre): The Way of the Dragon (1972) - Action, Crime
 - kept (not its first genre): Police Story (1985) - Action, Crime, Comedy
 - left out: 365 Days (2020) [movie:664413] - Romance, Drama, Crime
 - left out: The Best Offer (2013) [movie:152742] - Drama, Romance, Crime
@@ -11120,8 +11117,8 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Without Breasts There Is No Paradise (2008) - Action & Adventure, Drama, Crime
 - kept (not its first genre): Big Mouth (2022) - Mystery, Drama, Crime
 - kept (not its first genre): Money Heist: Korea - Joint Economic Area (2022) - Action & Adventure, Crime, Drama, Mystery
-- kept (not its first genre): Griselda Blanco: The Black Widow (2014) - Action & Adventure, Drama, Crime
 - kept (not its first genre): Killer Women (2008) - Mystery, Drama, Crime
+- kept (not its first genre): Griselda Blanco: The Black Widow (2014) - Action & Adventure, Drama, Crime
 - kept (not its first genre): Sky Rojo (2021) - Action & Adventure, Crime, Drama
 - kept (not its first genre): Rosario Tijeras (2010) - Action & Adventure, Crime, Drama
 - kept (not its first genre): Black (2017) - Sci-Fi & Fantasy, Crime, Drama, Comedy
@@ -11133,9 +11130,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Skeleton Key (2005) - Drama, Horror, Mystery, Thriller
 - kept (not its first genre): What Lies Beneath (2000) - Drama, Horror, Mystery, Thriller
 - kept (not its first genre): The Woman in Black (2012) - Drama, Horror, Thriller
+- kept (not its first genre): Ghosts of Mars (2001) - Action, Horror, Sci-Fi
 - kept (not its first genre): Phantom of the Paradise (1974) - Drama, Horror, Music
 - kept (not its first genre): Grave Encounters (2011) - Thriller, Horror
-- kept (not its first genre): Ghosts of Mars (2001) - Action, Horror, Sci-Fi
 - kept (not its first genre): Below (2002) - Thriller, Horror, Mystery
 - kept (not its first genre): The Woman in Black 2: Angel of Death (2014) - Thriller, Horror, Drama
 - kept (not its first genre): The Grudge 3 (2009) - Mystery, Horror, Thriller
@@ -11144,7 +11141,7 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Castle Freak (1996) - Thriller, Drama, Horror, Mystery
 - kept (not its first genre): Demonic (2015) - Thriller, Horror
 - kept (not its first genre): Twixt (2011) - Mystery, Fantasy, Horror
-- kept (not its first genre): A Field in England (2013) - History, Horror, Thriller
+- kept (not its first genre): Devil's Gate (2018) - Thriller, Horror, Sci-Fi
 - left out: Beetlejuice Beetlejuice (2024) [movie:917496] - Comedy, Fantasy, Horror
 - left out: The House with a Clock in Its Walls (2018) [movie:463821] - Comedy, Family, Fantasy, Horror, Mystery
 - left out: A Haunted House (2013) [movie:139038] - Comedy, Horror
@@ -11163,10 +11160,10 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Rosemary's Baby (1968) - Drama, Horror, Thriller
 - kept (not its first genre): Run (2020) - Thriller, Horror, Drama
 - kept (not its first genre): Funny Games (2008) - Thriller, Horror
-- kept (not its first genre): The Plague (2025) - Drama, Thriller, Horror
-- kept (not its first genre): Peeping Tom (1960) - Thriller, Horror
 - kept (not its first genre): It Comes at Night (2017) - Drama, Horror, Mystery
+- kept (not its first genre): The Plague (2025) - Drama, Thriller, Horror
 - kept (not its first genre): Repulsion (1965) - Drama, Thriller, Horror
+- kept (not its first genre): Peeping Tom (1960) - Thriller, Horror
 - kept (not its first genre): Magic (1978) - Drama, Horror
 - kept (not its first genre): We're All Going to the World's Fair (2022) - Drama, Horror
 - kept (not its first genre): Red Dragon (2002) - Crime, Thriller, Horror
@@ -11180,13 +11177,13 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Pacific Rim (2013) - Action, Sci-Fi, Adventure
 - kept (not its first genre): Jurassic World Dominion (2022) - Adventure, Sci-Fi, Thriller
 - kept (not its first genre): Dune (1984) - Action, Sci-Fi, Adventure
+- kept (not its first genre): The Meg (2018) - Action, Sci-Fi, Horror
 - kept (not its first genre): Rampage (2018) - Action, Adventure, Sci-Fi
 - kept (not its first genre): Gremlins (1984) - Fantasy, Horror, Comedy
-- kept (not its first genre): The Meg (2018) - Action, Sci-Fi, Horror
 - kept (not its first genre): Meg 2: The Trench (2023) - Action, Sci-Fi, Horror
 - kept (not its first genre): Goosebumps (2015) - Adventure, Horror, Comedy
-- kept (not its first genre): Worldbreaker (2025) - Action, Horror, Sci-Fi
 - kept (not its first genre): Pacific Rim: Uprising (2018) - Action, Fantasy, Sci-Fi
+- kept (not its first genre): Worldbreaker (2025) - Action, Horror, Sci-Fi
 - kept (not its first genre): 65 (2023) - Action, Adventure, Sci-Fi
 - left out: The Mummy (2017) [movie:282035] - Fantasy, Thriller, Action, Adventure, Horror
 - left out: Gremlins 2: The New Batch (1990) [movie:928] - Comedy, Horror, Fantasy
@@ -11271,13 +11268,13 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Borderline (2025) [movie:1013482] - Comedy, Thriller, Horror
 - left out: What You Wish For (2024) [movie:1126934] - Thriller, Comedy, Horror
 - left out: Beast of War (2025) [movie:1244531] - Thriller, Action, War, Horror
-- left out: Ebenezer (2026) [movie:1567605] - Fantasy, Comedy
 - left out: All My Friends Hate Me (2022) [movie:821489] - Comedy, Horror, Thriller, Mystery
 - left out: Bring It On: Cheer Or Die (2022) [movie:831410] - Comedy, Horror
 - left out: Vicious Fun (2021) [movie:728054] - Comedy, Horror, Romance
 - left out: Something in the Dirt (2022) [movie:843621] - Comedy, Horror, Mystery, Sci-Fi
 - left out: Your Monster (2024) [movie:1098378] - Romance, Comedy, Horror
 - left out: F Marry Kill (2025) [movie:1200801] - Comedy, Thriller, Horror
+- left out: The Radleys (2024) [movie:1139713] - Comedy, Horror, Thriller
 
 ## Spooky & Creepy · International Hits Movies (movie) - 78 kept of 84 looked at
 - kept (not its first genre): Godzilla Minus One (2023) - Sci-Fi, Horror, Action
@@ -11285,16 +11282,16 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Shin Godzilla (2016) - Action, Sci-Fi, Horror
 - kept (not its first genre): Apocalypse Z: The Beginning of the End (2024) - Drama, Action, Horror
 - kept (not its first genre): Exhuma (2024) - Mystery, Horror, Thriller
-- kept (not its first genre): Godzilla (1954) - Thriller, Horror, Sci-Fi
 - kept (not its first genre): I Saw the Devil (2010) - Thriller, Horror
+- kept (not its first genre): Godzilla (1954) - Thriller, Horror, Sci-Fi
 - kept (not its first genre): #Alive (2020) - Action, Horror, Sci-Fi
 - kept (not its first genre): A Tale of Two Sisters (2003) - Drama, Horror, Mystery
 - kept (not its first genre): The Skin I Live In (2011) - Drama, Horror, Mystery, Thriller
 - kept (not its first genre): Brotherhood of the Wolf (2001) - Adventure, Horror, History
 - kept (not its first genre): The Platform 2 (2024) - Sci-Fi, Horror, Thriller
-- kept (not its first genre): Revenge (2017) - Action, Horror, Thriller, Drama
 - kept (not its first genre): Thirst (2009) - Drama, Horror, Thriller
-- kept (not its first genre): Under Paris (2024) - Action, Horror
+- kept (not its first genre): Revenge (2017) - Action, Horror, Thriller, Drama
+- kept (not its first genre): Nosferatu the Vampyre (1979) - Drama, Horror
 - left out: Come and See (1985) [movie:25237] - Drama, War, Horror, History
 - left out: Tale of Tales (2015) [movie:314405] - Romance, Fantasy, Horror
 - left out: Rubber (2010) [movie:45649] - Comedy, Drama, Fantasy, Horror, Mystery
@@ -11316,54 +11313,54 @@ EMPTY gen-genres-western-international-hits-series
 
 ## Türkiye · Turkish Action, Crime & Thrillers · Movies (movie) - 137 kept of 137 looked at
 - kept (not its first genre): Once Upon a Time in Anatolia (2011) - Drama, Crime
-- kept (not its first genre): D@bbe 4: The Possession (2013) - Horror, Thriller, Fantasy
 - kept (not its first genre): Art of Love (2024) - Romance, Action, Drama
-- kept (not its first genre): Money Trap (2019) - Comedy, Crime, Action
-- kept (not its first genre): Baskin (2015) - Horror, Thriller
+- kept (not its first genre): D@bbe 4: The Possession (2013) - Horror, Thriller, Fantasy
 - kept (not its first genre): D@bbe 5: Curse of the Jinn (2014) - Horror, Thriller, Fantasy
+- kept (not its first genre): Money Trap (2019) - Comedy, Crime, Action
+- kept (not its first genre): The Mountain (2012) - War, Action, Thriller
+- kept (not its first genre): Three Monkeys (2008) - Drama, Thriller
+- kept (not its first genre): Baskin (2015) - Horror, Thriller
+- kept (not its first genre): Turks in Space (2006) - Comedy, Sci-Fi, Action, Adventure
+- kept (not its first genre): Everything About Mustafa (2004) - Drama, Thriller
 - kept (not its first genre): Son of a Rich (2024) - Comedy, Romance, Action
 - kept (not its first genre): Dab6e: The Return (2015) - Horror, Thriller, Fantasy
+- kept (not its first genre): Burning Days (2022) - Drama, Thriller
 - kept (not its first genre): Conquest 1453 (2012) - Adventure, Drama, Action, War
-- kept (not its first genre): Turks in Space (2006) - Comedy, Sci-Fi, Action, Adventure
-- kept (not its first genre): The Mountain (2012) - War, Action, Thriller
-- kept (not its first genre): Everything About Mustafa (2004) - Drama, Thriller
-- kept (not its first genre): The Man Who Saved the World (1982) - Sci-Fi, Action, Adventure, Fantasy
 - kept (not its first genre): Dry Summer (1963) - Drama, Crime
-- kept (not its first genre): Dabbe (2006) - Horror, Thriller, Fantasy
 
 ## Türkiye · Turkish Action, Crime & Thrillers · Series (series) - 121 kept of 121 looked at
-- kept (not its first genre): Kuruluş Osman (2019) - War & Politics, Action & Adventure, Drama
 - kept (not its first genre): Far Away (2024) - Drama, Family, Action & Adventure
+- kept (not its first genre): Kuruluş Osman (2019) - War & Politics, Action & Adventure, Drama
 - kept (not its first genre): The Magnificent Century (2011) - Drama, Action & Adventure
 - kept (not its first genre): The Shadow Team (2021) - War & Politics, Drama, Action & Adventure
 - kept (not its first genre): Valley of the Wolves: Ambush (2007) - Drama, War & Politics, Action & Adventure, Crime
 - kept (not its first genre): Underground (2026) - Drama, Action & Adventure
 - kept (not its first genre): Family Secrets (2021) - Family, Drama, Crime
 - kept (not its first genre): Eşref Rüya (2025) - Drama, Action & Adventure, Crime
-- kept (not its first genre): Ethos (2020) - Drama, Mystery
 - kept (not its first genre): Behzat Ç.: An Ankara Policeman (2010) - Drama, War & Politics, Action & Adventure, Crime
+- kept (not its first genre): Ethos (2020) - Drama, Mystery
 - kept (not its first genre): Karadayi (2012) - Family, Action & Adventure, Drama, Crime
-- kept (not its first genre): Money Trap (2026) - Comedy, Crime, Action & Adventure
 - kept (not its first genre): Söz (2017) - War & Politics, Drama, Action & Adventure
+- kept (not its first genre): Money Trap (2026) - Comedy, Crime, Action & Adventure
+- kept (not its first genre): Saladın: The Conqueror of Jerusalem (2023) - War & Politics, Drama, Action & Adventure
 - kept (not its first genre): Resurrection: Ertugrul (2014) - War & Politics, Action & Adventure, Drama
-- kept (not its first genre): Umutsuz Ev Kadınları (2011) - Family, Comedy, Drama, Crime
 
 ## Türkiye · Turkish Drama, Romance & Comedy Hits · Movies (movie) - 300 kept of 380 looked at
-- kept (not its first genre): 10 Days of a Curious Man (2024) - Thriller, Drama, Crime
-- kept (not its first genre): 10 Days of a Bad Man (2023) - Crime, Drama
 - kept (not its first genre): D.I.S.C.O. (2026) - Action, Comedy
-- kept (not its first genre): 10 Days of a Good Man (2023) - Crime, Drama
 - kept (not its first genre): The Mountain II (2016) - War, Drama
+- kept (not its first genre): 10 Days of a Bad Man (2023) - Crime, Drama
+- kept (not its first genre): The Bandit (1996) - Crime, Drama, Thriller
+- kept (not its first genre): 10 Days of a Curious Man (2024) - Thriller, Drama, Crime
+- kept (not its first genre): 10 Days of a Good Man (2023) - Crime, Drama
+- kept (not its first genre): Everything's Gonna Be Great (1998) - Family, Drama, Comedy, Adventure
+- kept (not its first genre): A Small September Affair (2014) - Mystery, Romance
 - kept (not its first genre): Only You (2014) - Action, Drama, Romance
 - kept (not its first genre): Conquest 1453 (2012) - Adventure, Drama, Action, War
-- kept (not its first genre): The Bandit (1996) - Crime, Drama, Thriller
-- kept (not its first genre): A Small September Affair (2014) - Mystery, Romance
 - kept (not its first genre): Valley of the Wolves: Iraq (2006) - Action, War, Drama
-- kept (not its first genre): Chokehold (2023) - Thriller, Drama
-- kept (not its first genre): Grudge (2021) - Thriller, Drama
 - kept (not its first genre): A.R.O.G (2008) - Sci-Fi, Fantasy, Comedy
+- kept (not its first genre): Zero Zone (2020) - Action, Drama
 - kept (not its first genre): The Things You Kill (2025) - Thriller, Drama
-- kept (not its first genre): Ali Baba and the 7 Dwarfs (2015) - Adventure, Action, Comedy
+- kept (not its first genre): A Madonna in Laleli (1999) - Thriller, Drama, Crime
 
 ## Türkiye · Turkish Drama, Romance & Comedy Hits · Series (series) - 300 kept of 380 looked at
 - kept (not its first genre): Kuruluş Osman (2019) - War & Politics, Action & Adventure, Drama
@@ -11376,28 +11373,28 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Falling Leaves (2006) - Family, Drama
 - kept (not its first genre): The Pit (2017) - Crime, Action & Adventure, Drama
 - kept (not its first genre): Our People (1989) - Family, Comedy
-- kept (not its first genre): Family Secrets (2021) - Family, Drama, Crime
-- kept (not its first genre): Mehmed: Sultan of Conquests (2024) - War & Politics, Drama
-- kept (not its first genre): Valley of the Wolves (2003) - Action & Adventure, Drama, War & Politics, Crime
 - kept (not its first genre): Bandits Cannot Rule The World (2015) - Crime, Action & Adventure, Drama
+- kept (not its first genre): Mehmed: Sultan of Conquests (2024) - War & Politics, Drama
+- kept (not its first genre): Family Secrets (2021) - Family, Drama, Crime
+- kept (not its first genre): Valley of the Wolves (2003) - Action & Adventure, Drama, War & Politics, Crime
 - kept (not its first genre): Payitaht: Abdulhamid (2017) - Action & Adventure, Drama, War & Politics
 
 ## Discover Family · Popular Family Movies (movie) - 500 kept of 660 looked at
 - kept (not its first genre): Home Alone 2: Lost in New York (1992) - Comedy, Family, Adventure
+- kept (not its first genre): Home Alone (1990) - Comedy, Family
 - kept (not its first genre): The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005) - Adventure, Family, Fantasy
-- kept (not its first genre): Sonic the Hedgehog 3 (2024) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): How to Train Your Dragon (2025) - Fantasy, Family, Action, Adventure
-- kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
+- kept (not its first genre): Sonic the Hedgehog 3 (2024) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): The Cat in the Hat (2003) - Fantasy, Adventure, Family, Comedy
-- kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
+- kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
 - kept (not its first genre): Cinderella (2015) - Romance, Fantasy, Family, Drama
 - kept (not its first genre): Maleficent (2014) - Fantasy, Adventure, Action, Family, Romance
 - kept (not its first genre): E.T. the Extra-Terrestrial (1982) - Adventure, Sci-Fi, Family
 - kept (not its first genre): The Wizard of Oz (1939) - Adventure, Fantasy, Family
+- kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
 - kept (not its first genre): Elf (2003) - Comedy, Family, Fantasy
+- kept (not its first genre): Home Alone 3 (1997) - Comedy, Family
 - kept (not its first genre): Wonka (2023) - Comedy, Family, Fantasy
-- kept (not its first genre): Alice Through the Looking Glass (2016) - Adventure, Family, Fantasy
-- kept (not its first genre): The Magic Faraway Tree (2026) - Adventure, Family, Fantasy
 - left out: The Pink Panther (2006) [movie:12096] - Comedy, Mystery, Crime, Adventure, Family
 - left out: The Haunted Mansion (2003) [movie:10756] - Thriller, Fantasy, Comedy, Family, Mystery
 - left out: The Sheep Detectives (2026) [movie:1301421] - Comedy, Crime, Mystery
@@ -11417,28 +11414,28 @@ EMPTY gen-genres-western-international-hits-series
 - left out: Addams Family Reunion (1998) [movie:11508] - Comedy, Horror, Fantasy, Family, TV Movie
 - left out: Toast (2010) [movie:52850] - Drama, Comedy, History, Family
 - left out: Show Dogs (2018) [movie:425148] - Adventure, Crime, Family, Comedy
+- left out: Hope and Glory (1987) [movie:32054] - Drama, War, Family
 - left out: Getting Even with Dad (1994) [movie:41579] - Comedy, Crime, Family
 - left out: Descendants: Wicked Wonderland (2026) [movie:1318621] - Fantasy, TV Movie, Family, Adventure
 - left out: The Man from Snowy River (1982) [movie:24266] - Drama, Romance, Adventure, Western, Family
 - left out: Love Comes Softly (2003) [movie:16250] - Drama, Romance, Western, Family, TV Movie
 - left out: Mom's Got a Date with a Vampire (2000) [movie:92208] - TV Movie, Comedy, Family, Fantasy, Horror
-- left out: The Even Stevens Movie (2003) [movie:50794] - TV Movie, Comedy, Family
 
 ## Discover Family · Popular Family Series (series) - 241 kept of 252 looked at
 - kept (not its first genre): The Chosen (2019) - Action & Adventure, Family, Drama
 - kept (not its first genre): Percy Jackson and the Olympians (2023) - Action & Adventure, Sci-Fi & Fantasy, Drama, Family
 - kept (not its first genre): Frasier (1993) - Comedy, Family
 - kept (not its first genre): Young Sheldon (2017) - Comedy, Family, Drama
-- kept (not its first genre): Moesha (1996) - Comedy, Family
 - kept (not its first genre): Diagnosis: Murder (1993) - Drama, Family, Mystery, Crime
 - kept (not its first genre): The Andy Griffith Show (1960) - Comedy, Family
 - kept (not its first genre): Bewitched (1964) - Sci-Fi & Fantasy, Comedy, Family, Drama
 - kept (not its first genre): Lassie (1954) - Action & Adventure, Drama, Family, Comedy
 - kept (not its first genre): That '70s Show (1998) - Comedy, Family, Drama
-- kept (not its first genre): The Nanny (1993) - Comedy, Family
 - kept (not its first genre): Full House (1987) - Comedy, Family
-- kept (not its first genre): The Cosby Show (1984) - Comedy, Family
 - kept (not its first genre): Sabrina, the Teenage Witch (1996) - Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): The Nanny (1993) - Comedy, Family
+- kept (not its first genre): The Cosby Show (1984) - Comedy, Family
+- kept (not its first genre): Family Matters (1989) - Comedy, Family
 - kept (not its first genre): Nature (1982) - Documentary, Family
 - left out: Little House on the Prairie (1974) [tv:1781] - Western, Drama, Family
 - left out: Bonanza (1959) [tv:1018] - Western, Action & Adventure, Drama, Family
@@ -11580,17 +11577,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Minions & Monsters (2026) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Swapped (2026) - Adventure, Animation, Family, Fantasy
 - kept (not its first genre): The Nightmare Before Christmas (1993) - Fantasy, Animation, Family
-- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): Beauty and the Beast (1991) - Romance, Family, Animation, Fantasy
+- kept (not its first genre): Big Hero 6 (2014) - Adventure, Family, Animation, Action, Comedy
 - kept (not its first genre): The Incredibles (2004) - Action, Adventure, Animation, Family
 - kept (not its first genre): Moana 2 (2024) - Adventure, Animation, Comedy, Family, Fantasy
+- kept (not its first genre): How to Train Your Dragon (2010) - Fantasy, Adventure, Animation, Family
 - kept (not its first genre): Kung Fu Panda (2008) - Action, Animation, Comedy, Family
 - kept (not its first genre): The Polar Express (2004) - Adventure, Animation, Family, Fantasy
-- kept (not its first genre): How to Train Your Dragon (2010) - Fantasy, Adventure, Animation, Family
 - kept (not its first genre): The Lion King (2019) - Adventure, Drama, Family, Animation
-- kept (not its first genre): The Emperor's New Groove (2000) - Adventure, Animation, Comedy, Family, Fantasy
+- kept (not its first genre): Madagascar (2005) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): The Good Dinosaur (2015) - Adventure, Animation, Family
-- kept (not its first genre): Snow White and the Seven Dwarfs (1938) - Fantasy, Animation, Family
+- kept (not its first genre): Brave (2012) - Adventure, Animation, Family, Fantasy
 - left out: Shrek (2001) [movie:808] - Animation, Comedy, Fantasy, Adventure, Family
 - left out: Despicable Me (2010) [movie:20352] - Animation, Comedy, Crime, Sci-Fi, Family
 - left out: How to Train Your Dragon 2 (2014) [movie:82702] - Fantasy, Action, Adventure, Animation, Family
@@ -11623,16 +11620,16 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Flintstones (1960) - Family, Animation, Comedy, Kids
 - kept (not its first genre): The Powerpuff Girls (1998) - Action & Adventure, Animation, Comedy, Kids, Family
 - kept (not its first genre): Teenage Mutant Ninja Turtles (1987) - Action & Adventure, Animation, Comedy, Kids
-- kept (not its first genre): Dora the Explorer (2000) - Action & Adventure, Animation, Family, Kids
 - kept (not its first genre): Sofia the First (2013) - Family, Animation, Kids
+- kept (not its first genre): Dora the Explorer (2000) - Action & Adventure, Animation, Family, Kids
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
 - kept (not its first genre): The Real Ghostbusters (1986) - Action & Adventure, Animation, Comedy, Kids, Sci-Fi & Fantasy, Family
-- kept (not its first genre): He-Man and the Masters of the Universe (1983) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Hercules (1998) - Comedy, Kids, Animation, Action & Adventure
-- kept (not its first genre): Ben 10: Omniverse (2012) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Transformers: Prime (2010) - Action & Adventure, Animation, Kids
+- kept (not its first genre): He-Man and the Masters of the Universe (1983) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
+- kept (not its first genre): Ben 10: Omniverse (2012) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): All Hail King Julien (2014) - Family, Animation, Comedy, Kids
-- kept (not its first genre): Snorks (1984) - Family, Animation, Kids
+- kept (not its first genre): TaleSpin (1990) - Family, Animation, Kids, Action & Adventure
 - left out: Ben 10 (2005) [tv:4686] - Animation, Sci-Fi & Fantasy, Action & Adventure, Comedy, Kids
 - left out: Courage the Cowardly Dog (1999) [tv:2085] - Animation, Family, Sci-Fi & Fantasy, Comedy, Kids
 - left out: Scooby-Doo! Mystery Incorporated (2010) [tv:18123] - Animation, Mystery, Family, Sci-Fi & Fantasy, Kids
@@ -11672,8 +11669,8 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Onward (2020) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): The Little Prince (2015) - Adventure, Animation, Fantasy, Family
 - kept (not its first genre): Treasure Planet (2002) - Sci-Fi, Adventure, Animation, Family, Fantasy
-- kept (not its first genre): The Emperor's New Groove (2000) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Moana (2016) - Adventure, Comedy, Family, Animation
+- kept (not its first genre): The Emperor's New Groove (2000) - Adventure, Animation, Comedy, Family, Fantasy
 - kept (not its first genre): Minions & Monsters (2026) - Adventure, Animation, Comedy, Family, Fantasy
 - left out: Shrek (2001) [movie:808] - Animation, Comedy, Fantasy, Adventure, Family
 - left out: Despicable Me (2010) [movie:20352] - Animation, Comedy, Crime, Sci-Fi, Family
@@ -11750,14 +11747,14 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Boy Meets World (1993) - Drama, Comedy, Family
 - kept (not its first genre): Dinosaurs (1991) - Sci-Fi & Fantasy, Comedy, Family
 - kept (not its first genre): The Thundermans (2013) - Action & Adventure, Comedy, Family, Sci-Fi & Fantasy
-- kept (not its first genre): K.C. Undercover (2015) - Kids, Comedy, Family, Drama
 - kept (not its first genre): Amazing Stories (1985) - Sci-Fi & Fantasy, Comedy, Family
 - kept (not its first genre): Blossom (1990) - Drama, Comedy, Family
+- kept (not its first genre): K.C. Undercover (2015) - Kids, Comedy, Family, Drama
 - kept (not its first genre): My Favorite Martian (1963) - Sci-Fi & Fantasy, Comedy, Family
 - kept (not its first genre): A Series of Unfortunate Events (2017) - Action & Adventure, Family, Comedy, Mystery
 - kept (not its first genre): Fraggle Rock (1983) - Kids, Family, Sci-Fi & Fantasy, Comedy
-- kept (not its first genre): Melissa & Joey (2010) - Drama, Comedy, Family
 - kept (not its first genre): Adventures of Superman (1952) - Action & Adventure, Sci-Fi & Fantasy, Drama, Comedy, Family
+- kept (not its first genre): Melissa & Joey (2010) - Drama, Comedy, Family
 - kept (not its first genre): Phil of the Future (2004) - Sci-Fi & Fantasy, Comedy, Family, Kids
 - left out: Heartland (2007) [tv:14929] - Family, Drama, Comedy
 - left out: My Babysitter's a Vampire (2011) [tv:39518] - Comedy, Action & Adventure, Sci-Fi & Fantasy, Mystery, Kids, Family
@@ -11784,9 +11781,9 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Adventures of Superman (1952) - Action & Adventure, Sci-Fi & Fantasy, Drama, Comedy, Family
 - kept (not its first genre): Faerie Tale Theatre (1982) - Drama, Family, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Harry and the Hendersons (1991) - Comedy, Sci-Fi & Fantasy, Family
-- kept (not its first genre): The Way Home (2023) - Drama, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Star Wars: Skeleton Crew (2024) - Action & Adventure, Sci-Fi & Fantasy, Family
-- kept (not its first genre): The Santa Clauses (2022) - Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): The Way Home (2023) - Drama, Family, Sci-Fi & Fantasy
+- kept (not its first genre): The Neighbors (2012) - Comedy, Sci-Fi & Fantasy, Family
 - left out: Henry Danger (2014) [tv:61852] - Comedy, Family, Kids, Sci-Fi & Fantasy
 - left out: The Thundermans (2013) [tv:58981] - Action & Adventure, Comedy, Family, Sci-Fi & Fantasy
 - left out: My Babysitter's a Vampire (2011) [tv:39518] - Comedy, Action & Adventure, Sci-Fi & Fantasy, Mystery, Kids, Family
@@ -11799,37 +11796,37 @@ EMPTY gen-genres-western-international-hits-series
 
 ## Family Movie Night · Iconic Family Classics (movie) - 41 kept of 41 looked at
 - kept (not its first genre): Home Alone 2: Lost in New York (1992) - Comedy, Family, Adventure
+- kept (not its first genre): Home Alone (1990) - Comedy, Family
 - kept (not its first genre): The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005) - Adventure, Family, Fantasy
 - kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
-- kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
 - kept (not its first genre): E.T. the Extra-Terrestrial (1982) - Adventure, Sci-Fi, Family
 - kept (not its first genre): The Wizard of Oz (1939) - Adventure, Fantasy, Family
+- kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
 - kept (not its first genre): Elf (2003) - Comedy, Family, Fantasy
 - kept (not its first genre): Home Alone 3 (1997) - Comedy, Family
 - kept (not its first genre): The Parent Trap (1998) - Comedy, Family, Romance
+- kept (not its first genre): The Sound of Music (1965) - Drama, Family, Music, Romance
 - kept (not its first genre): The Goonies (1985) - Adventure, Comedy, Family
 - kept (not its first genre): The Princess Diaries (2001) - Comedy, Family, Romance
-- kept (not its first genre): The Sound of Music (1965) - Drama, Family, Music, Romance
-- kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
 - kept (not its first genre): Matilda (1996) - Comedy, Family, Fantasy
-- kept (not its first genre): The School of Rock (2003) - Comedy, Family, Music
+- kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
 
 ## Family Movie Night · Magical Fantasy Adventures (movie) - 147 kept of 186 looked at
 - kept (not its first genre): The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005) - Adventure, Family, Fantasy
-- kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
 - kept (not its first genre): Cinderella (2015) - Romance, Fantasy, Family, Drama
 - kept (not its first genre): The Wizard of Oz (1939) - Adventure, Fantasy, Family
+- kept (not its first genre): It's a Wonderful Life (1946) - Drama, Family, Fantasy
 - kept (not its first genre): Elf (2003) - Comedy, Family, Fantasy
 - kept (not its first genre): Wonka (2023) - Comedy, Family, Fantasy
 - kept (not its first genre): Alice Through the Looking Glass (2016) - Adventure, Family, Fantasy
 - kept (not its first genre): Percy Jackson & the Olympians: The Lightning Thief (2010) - Adventure, Fantasy, Family
 - kept (not its first genre): Aladdin (2019) - Adventure, Fantasy, Romance, Family
-- kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
-- kept (not its first genre): The Jungle Book (2016) - Adventure, Family, Fantasy
 - kept (not its first genre): Night at the Museum: Secret of the Tomb (2014) - Adventure, Comedy, Fantasy, Family
+- kept (not its first genre): The Jungle Book (2016) - Adventure, Family, Fantasy
 - kept (not its first genre): Enchanted (2007) - Comedy, Family, Fantasy, Romance
 - kept (not its first genre): The Little Mermaid (2023) - Adventure, Family, Fantasy, Romance
-- kept (not its first genre): The Chronicles of Narnia: The Voyage of the Dawn Treader (2010) - Adventure, Family, Fantasy
+- kept (not its first genre): Matilda (1996) - Comedy, Family, Fantasy
+- kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
 - left out: Charlie and the Chocolate Factory (2005) [movie:118] - Adventure, Comedy, Family, Fantasy
 - left out: Mirror Mirror (2012) [movie:62764] - Adventure, Comedy, Family, Fantasy
 - left out: Christopher Robin (2018) [movie:420814] - Adventure, Comedy, Family, Fantasy
@@ -11858,19 +11855,19 @@ EMPTY gen-genres-western-international-hits-series
 
 ## Family Movie Night · Family Comedies (movie) - 312 kept of 343 looked at
 - kept (not its first genre): Sonic the Hedgehog 3 (2024) - Action, Sci-Fi, Comedy, Family
-- kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
 - kept (not its first genre): The Cat in the Hat (2003) - Fantasy, Adventure, Family, Comedy
+- kept (not its first genre): Charlie and the Chocolate Factory (2005) - Adventure, Comedy, Family, Fantasy
+- kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
 - kept (not its first genre): Sonic the Hedgehog (2020) - Action, Sci-Fi, Comedy, Family
 - kept (not its first genre): Night at the Museum (2006) - Fantasy, Family, Comedy
-- kept (not its first genre): Sonic the Hedgehog 2 (2022) - Action, Adventure, Family, Comedy
+- kept (not its first genre): Night at the Museum: Secret of the Tomb (2014) - Adventure, Comedy, Fantasy, Family
 - kept (not its first genre): The Goonies (1985) - Adventure, Comedy, Family
 - kept (not its first genre): Hook (1991) - Adventure, Fantasy, Comedy, Family
-- kept (not its first genre): Night at the Museum: Secret of the Tomb (2014) - Adventure, Comedy, Fantasy, Family
-- kept (not its first genre): Paddington 2 (2017) - Adventure, Comedy, Family
-- kept (not its first genre): Casper (1995) - Fantasy, Comedy, Family
 - kept (not its first genre): Mary Poppins Returns (2018) - Fantasy, Family, Comedy
+- kept (not its first genre): Paddington 2 (2017) - Adventure, Comedy, Family
+- kept (not its first genre): Paul Blart: Mall Cop 2 (2015) - Action, Comedy, Family
+- kept (not its first genre): Casper (1995) - Fantasy, Comedy, Family
 - kept (not its first genre): Hocus Pocus (1993) - Fantasy, Comedy, Family
-- kept (not its first genre): Teenage Mutant Ninja Turtles (1990) - Sci-Fi, Action, Adventure, Comedy, Family
 - kept (not its first genre): Teenage Mutant Ninja Turtles: Out of the Shadows (2016) - Action, Adventure, Comedy, Family, Sci-Fi
 - left out: Babe (1995) [movie:9598] - Fantasy, Drama, Comedy, Family
 - left out: We Bought a Zoo (2011) [movie:74465] - Drama, Comedy, Family
@@ -11903,17 +11900,17 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): The Jungle Book (2016) - Adventure, Family, Fantasy
 - kept (not its first genre): Paddington 2 (2017) - Adventure, Comedy, Family
 - kept (not its first genre): Roald Dahl's The Witches (2020) - Comedy, Fantasy, Family
-- kept (not its first genre): Paddington in Peru (2024) - Adventure, Comedy, Family
 - kept (not its first genre): The Call of the Wild (2020) - Adventure, Family, Drama
+- kept (not its first genre): Paddington in Peru (2024) - Adventure, Comedy, Family
 - kept (not its first genre): Pinocchio (2022) - Fantasy, Adventure, Family
-- kept (not its first genre): Marley & Me (2008) - Comedy, Family
-- kept (not its first genre): Son of the Mask (2005) - Fantasy, Comedy, Family, Adventure
-- kept (not its first genre): Lyle, Lyle, Crocodile (2022) - Comedy, Family, Music
 - kept (not its first genre): We Bought a Zoo (2011) - Drama, Comedy, Family
+- kept (not its first genre): Son of the Mask (2005) - Fantasy, Comedy, Family, Adventure
 - kept (not its first genre): Evan Almighty (2007) - Fantasy, Comedy, Family
+- kept (not its first genre): Marley & Me (2008) - Comedy, Family
+- kept (not its first genre): A Dog's Way Home (2019) - Drama, Adventure, Family
 - kept (not its first genre): Babe (1995) - Fantasy, Drama, Comedy, Family
 - kept (not its first genre): A Dog's Purpose (2017) - Adventure, Fantasy, Family, Drama
-- kept (not its first genre): Doctor Dolittle (1998) - Comedy, Family, Fantasy
+- kept (not its first genre): Zookeeper (2011) - Comedy, Romance, Family
 - left out: The Sheep Detectives (2026) [movie:1301421] - Comedy, Crime, Mystery
 - left out: Frankenweenie (1984) [movie:33914] - Horror, Family, Sci-Fi, Comedy
 - left out: Show Dogs (2018) [movie:425148] - Adventure, Crime, Family, Comedy
@@ -11986,16 +11983,16 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Cinderella (2015) - Romance, Fantasy, Family, Drama
 - kept (not its first genre): Maleficent (2014) - Fantasy, Adventure, Action, Family, Romance
 - kept (not its first genre): Alice Through the Looking Glass (2016) - Adventure, Family, Fantasy
-- kept (not its first genre): The Parent Trap (1998) - Comedy, Family, Romance
 - kept (not its first genre): Aladdin (2019) - Adventure, Fantasy, Romance, Family
-- kept (not its first genre): The Princess Diaries (2001) - Comedy, Family, Romance
+- kept (not its first genre): The Parent Trap (1998) - Comedy, Family, Romance
 - kept (not its first genre): The Jungle Book (2016) - Adventure, Family, Fantasy
 - kept (not its first genre): Enchanted (2007) - Comedy, Family, Fantasy, Romance
 - kept (not its first genre): The Little Mermaid (2023) - Adventure, Family, Fantasy, Romance
+- kept (not its first genre): The Princess Diaries (2001) - Comedy, Family, Romance
 - kept (not its first genre): The Santa Clause (1994) - Fantasy, Drama, Comedy, Family
-- kept (not its first genre): The Chronicles of Narnia: Prince Caspian (2008) - Adventure, Family, Fantasy
 - kept (not its first genre): Mary Poppins Returns (2018) - Fantasy, Family, Comedy
-- kept (not its first genre): Oz the Great and Powerful (2013) - Fantasy, Adventure, Family
+- kept (not its first genre): The Chronicles of Narnia: Prince Caspian (2008) - Adventure, Family, Fantasy
+- kept (not its first genre): Tomorrowland (2015) - Adventure, Family, Mystery, Sci-Fi
 - kept (not its first genre): Hocus Pocus (1993) - Fantasy, Comedy, Family
 - left out: The Haunted Mansion (2003) [movie:10756] - Thriller, Fantasy, Comedy, Family, Mystery
 - left out: Muppets Most Wanted (2014) [movie:145220] - Comedy, Adventure, Crime, Family
@@ -12008,13 +12005,13 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Honey, I Shrunk the Kids (1989) - Adventure, Comedy, Family, Sci-Fi
 - kept (not its first genre): George of the Jungle (1997) - Adventure, Comedy, Family, Romance
 - kept (not its first genre): Homeward Bound: The Incredible Journey (1993) - Adventure, Comedy, Family
-- kept (not its first genre): Flubber (1997) - Comedy, Family, Sci-Fi
-- kept (not its first genre): Angels in the Outfield (1994) - Comedy, Family, Fantasy
-- kept (not its first genre): D2: The Mighty Ducks (1994) - Comedy, Action, Family, Drama
 - kept (not its first genre): Inspector Gadget (1999) - Action, Adventure, Comedy, Family
+- kept (not its first genre): D2: The Mighty Ducks (1994) - Comedy, Action, Family, Drama
+- kept (not its first genre): Flubber (1997) - Comedy, Family, Sci-Fi
 - kept (not its first genre): Blank Check (1994) - Comedy, Family
+- kept (not its first genre): Angels in the Outfield (1994) - Comedy, Family, Fantasy
 - kept (not its first genre): White Fang (1991) - Action, Adventure, Drama, Family
-- kept (not its first genre): The Mighty Ducks (1992) - Comedy, Drama, Family
+- kept (not its first genre): Honey, I Blew Up the Kid (1992) - Adventure, Comedy, Family, Sci-Fi
 - kept (not its first genre): Mighty Joe Young (1998) - Adventure, Family, Action, Fantasy
 - left out: Frankenweenie (1984) [movie:33914] - Horror, Family, Sci-Fi, Comedy
 
@@ -12025,13 +12022,13 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Wallace & Gromit: The Curse of the Were-Rabbit (2005) - Adventure, Animation, Comedy, Family
 - kept (not its first genre): Isle of Dogs (2018) - Adventure, Comedy, Animation
 - kept (not its first genre): ParaNorman (2012) - Family, Animation, Adventure, Comedy
-- kept (not its first genre): Shaun the Sheep Movie (2015) - Family, Animation, Comedy, Adventure
-- kept (not its first genre): James and the Giant Peach (1996) - Family, Animation, Adventure, Fantasy
 - kept (not its first genre): Chicken Run: Dawn of the Nugget (2023) - Family, Animation, Adventure, Comedy
+- kept (not its first genre): Shaun the Sheep Movie (2015) - Family, Animation, Comedy, Adventure
 - kept (not its first genre): The Little Prince (2015) - Adventure, Animation, Fantasy, Family
+- kept (not its first genre): James and the Giant Peach (1996) - Family, Animation, Adventure, Fantasy
 - kept (not its first genre): A Shaun the Sheep Movie: Farmageddon (2019) - Family, Comedy, Adventure, Animation, Sci-Fi
-- kept (not its first genre): Early Man (2018) - Family, Comedy, Animation, Adventure
 - kept (not its first genre): Missing Link (2019) - Family, Animation, Comedy, Adventure, Action
+- kept (not its first genre): Early Man (2018) - Family, Comedy, Animation, Adventure
 - kept (not its first genre): A Grand Day Out (1990) - Family, Animation, Comedy, Sci-Fi, Adventure
 - kept (not its first genre): A Close Shave (1996) - Family, Animation, Comedy
 
@@ -12046,10 +12043,10 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): She-Ra: Princess of Power (1985) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): Rambo: The Force of Freedom (1986) - Action & Adventure, Animation, Kids
 - kept (not its first genre): Ewoks (1985) - Kids, Animation, Sci-Fi & Fantasy, Action & Adventure
-- kept (not its first genre): Postman Pat (1981) - Kids, Animation
 - kept (not its first genre): Ghostbusters (1986) - Mystery, Animation, Comedy, Kids
-- kept (not its first genre): Dennis the Menace (1985) - Kids, Animation, Comedy, Action & Adventure
+- kept (not its first genre): Postman Pat (1981) - Kids, Animation
 - kept (not its first genre): Star Wars: Droids (1985) - Kids, Animation, Action & Adventure, Sci-Fi & Fantasy
+- kept (not its first genre): Dennis the Menace (1985) - Kids, Animation, Comedy, Action & Adventure
 - kept (not its first genre): Spider-Man and His Amazing Friends (1981) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 
 ## Saturday Morning & Classic Cartoons · Iconic 90s Cartoons (series) - 122 kept of 123 looked at
@@ -12059,11 +12056,11 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Batman: The Animated Series (1992) - Action & Adventure, Animation, Drama, Mystery
 - kept (not its first genre): 101 Dalmatians: The Series (1997) - Kids, Animation, Action & Adventure
 - kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
-- kept (not its first genre): Blue's Clues (1996) - Kids, Comedy, Animation, Family
-- kept (not its first genre): X-Men (1992) - Kids, Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): Caroline in the City (1995) - Comedy, Drama, Animation
+- kept (not its first genre): X-Men (1992) - Kids, Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): Hercules (1998) - Comedy, Kids, Animation, Action & Adventure
 - kept (not its first genre): Aladdin (1994) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Kids
+- kept (not its first genre): Blue's Clues (1996) - Kids, Comedy, Animation, Family
 - kept (not its first genre): TaleSpin (1990) - Family, Animation, Kids, Action & Adventure
 - kept (not its first genre): Taz-Mania (1991) - Family, Animation, Comedy
 - kept (not its first genre): Goof Troop (1992) - Comedy, Kids, Animation
@@ -12074,50 +12071,50 @@ EMPTY gen-genres-western-international-hits-series
 - kept (not its first genre): Jackie Chan Adventures (2000) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Mickey Mouse Clubhouse (2006) - Kids, Animation, Comedy, Sci-Fi & Fantasy, Action & Adventure
 - kept (not its first genre): Mr. Bean: The Animated Series (2002) - Kids, Animation, Comedy, Family
-- kept (not its first genre): Dora the Explorer (2000) - Action & Adventure, Animation, Family, Kids
 - kept (not its first genre): Samurai Jack (2001) - Sci-Fi & Fantasy, Action & Adventure, Animation
+- kept (not its first genre): Dora the Explorer (2000) - Action & Adventure, Animation, Family, Kids
 - kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
 - kept (not its first genre): Kid vs. Kat (2008) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy, Family, Kids
 - kept (not its first genre): Shaun the Sheep (2007) - Kids, Animation, Family, Comedy
-- kept (not its first genre): Foster's Home for Imaginary Friends (2004) - Kids, Animation, Family, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): Buzz Lightyear of Star Command (2000) - Kids, Animation, Sci-Fi & Fantasy, Family, Comedy, Action & Adventure
+- kept (not its first genre): Foster's Home for Imaginary Friends (2004) - Kids, Animation, Family, Sci-Fi & Fantasy, Comedy
 - kept (not its first genre): The Emperor's New School (2006) - Comedy, Kids, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Squidbillies (2005) - Comedy, Animation
 - kept (not its first genre): Transformers: Animated (2007) - Action & Adventure, Animation, Family, Sci-Fi & Fantasy, Kids
-- kept (not its first genre): The Super Hero Squad Show (2009) - Action & Adventure, Animation, Comedy, Kids, Family, Sci-Fi & Fantasy
+- kept (not its first genre): Static Shock (2000) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 
 ## Saturday Morning & Classic Cartoons · Superhero Animated Series (series) - 88 kept of 89 looked at
 - kept (not its first genre): The Powerpuff Girls (1998) - Action & Adventure, Animation, Comedy, Kids, Family
 - kept (not its first genre): Batman: The Animated Series (1992) - Action & Adventure, Animation, Drama, Mystery
 - kept (not its first genre): Teenage Mutant Ninja Turtles (1987) - Action & Adventure, Animation, Comedy, Kids
 - kept (not its first genre): Ben 10 (2016) - Kids, Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy
-- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
-- kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
 - kept (not its first genre): Marvel's Avengers (2013) - Action & Adventure, Animation, Sci-Fi & Fantasy
-- kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): Teenage Mutant Ninja Turtles (2003) - Action & Adventure, Animation, Kids
+- kept (not its first genre): Harley Quinn (2019) - Action & Adventure, Animation, Comedy, Sci-Fi & Fantasy
 - kept (not its first genre): Big Hero 6 The Series (2017) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
+- kept (not its first genre): Darkwing Duck (1991) - Action & Adventure, Animation, Comedy, Family, Sci-Fi & Fantasy
 - kept (not its first genre): X-Men (1992) - Kids, Sci-Fi & Fantasy, Animation, Action & Adventure
 - kept (not its first genre): The Avengers: Earth's Mightiest Heroes (2010) - Action & Adventure, Animation, Sci-Fi & Fantasy, Family
 - kept (not its first genre): The Powerpuff Girls (2016) - Comedy, Animation, Action & Adventure, Kids, Family
-- kept (not its first genre): The Super Hero Squad Show (2009) - Action & Adventure, Animation, Comedy, Kids, Family, Sci-Fi & Fantasy
 - kept (not its first genre): Static Shock (2000) - Action & Adventure, Animation, Sci-Fi & Fantasy, Kids
 - kept (not its first genre): X-Men: Evolution (2000) - Kids, Animation, Sci-Fi & Fantasy, Action & Adventure, Drama
+- kept (not its first genre): The Super Hero Squad Show (2009) - Action & Adventure, Animation, Comedy, Kids, Family, Sci-Fi & Fantasy
 
 ## Saturday Morning & Classic Cartoons · Classic Cartoons of the Golden Age (series) - 108 kept of 113 looked at
 - kept (not its first genre): The Flintstones (1960) - Family, Animation, Comedy, Kids
 - kept (not its first genre): Thunderbirds (1965) - Family, Action & Adventure, Animation, Sci-Fi & Fantasy
 - kept (not its first genre): Spider-Man (1967) - Kids, Animation, Action & Adventure
 - kept (not its first genre): The Quick Draw McGraw Show (1959) - Kids, Animation, Comedy, Crime, Western, Action & Adventure
-- kept (not its first genre): The Gumby Show (1956) - Family, Animation, Kids
 - kept (not its first genre): The Wonderful World of Disney (1954) - Action & Adventure, Animation, Documentary, Kids, Family
+- kept (not its first genre): The Gumby Show (1956) - Family, Animation, Kids
 - kept (not its first genre): The Ruff and Reddy Show (1957) - Family, Animation, Comedy
-- kept (not its first genre): The Tom and Jerry Show (1975) - Kids, Animation, Family, Comedy
-- kept (not its first genre): Godzilla (1978) - Family, Animation, Action & Adventure
-- kept (not its first genre): Star Blazers (1974) - Sci-Fi & Fantasy, Action & Adventure, Drama, Animation
 - kept (not its first genre): Birdman and the Galaxy Trio (1967) - Sci-Fi & Fantasy, Animation
-- kept (not its first genre): Pixie and Dixie and Mr. Jinks (1958) - Kids, Animation, Comedy
+- kept (not its first genre): The Tom and Jerry Show (1975) - Kids, Animation, Family, Comedy
+- kept (not its first genre): Star Blazers (1974) - Sci-Fi & Fantasy, Action & Adventure, Drama, Animation
 - kept (not its first genre): Captain Scarlet and the Mysterons (1967) - Action & Adventure, Animation, Sci-Fi & Fantasy
+- kept (not its first genre): Godzilla (1978) - Family, Animation, Action & Adventure
 - kept (not its first genre): Wacky Races (1968) - Family, Animation, Comedy, Kids
+- kept (not its first genre): Pixie and Dixie and Mr. Jinks (1958) - Kids, Animation, Comedy
 - kept (not its first genre): Jonny Quest (1964) - Action & Adventure, Animation
 
 ## Discover catalogs
@@ -12239,7 +12236,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Mystery & Thriller (movie) / Mystery: 300
 - Discover · Mystery & Thriller (movie) / Thriller: 300
 - Discover · Mystery & Thriller (movie) / Psychological: 122
-- Discover · Mystery & Thriller (movie) / Whodunit: 48
+- Discover · Mystery & Thriller (movie) / Whodunit: 47
 - Discover · Mystery & Thriller (movie) / Neo-Noir: 257
 - Discover · Mystery & Thriller (movie) / Conspiracy: 94
 - Discover · Mystery & Thriller (movie) / Serial Killer: 278
@@ -12326,7 +12323,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Romance (movie) / Romantic Comedy: 300
 - Discover · Romance (movie) / Romantic Drama: 300
 - Discover · Romance (movie) / Period Romance: 27
-- Discover · Romance (movie) / Holiday: 121
+- Discover · Romance (movie) / Holiday: 122
 - Discover · Romance (movie) / Teen Romance: 87
 - Discover · Romance (movie) / LGBTQ+: 128
 - Discover · Romance (movie) / Musical: 108
@@ -12395,14 +12392,14 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Documentary (movie) / Popular: 300
 - Discover · Documentary (movie) / Top Rated: 146
 - Discover · Documentary (movie) / New Releases: 300
-- Discover · Documentary (movie) / Hidden Gems: 253
+- Discover · Documentary (movie) / Hidden Gems: 255
 - Discover · Documentary (movie) / Nature: 34
 - Discover · Documentary (movie) / True Crime: 32
-- Discover · Documentary (movie) / Music: 197
+- Discover · Documentary (movie) / Music: 198
 - Discover · Documentary (movie) / Sports: 42
 - Discover · Documentary (movie) / History: 79
 - Discover · Documentary (movie) / Science: 3
-- Discover · Documentary (movie) / Biography: 138
+- Discover · Documentary (movie) / Biography: 139
 - Discover · Documentary (movie) / Food: 9
 - Discover · Documentary (movie) / Politics: 27
 - Discover · Documentary (movie) / Space: 16
@@ -12423,7 +12420,7 @@ EMPTY gen-genres-western-international-hits-series
 - Discover · Family (movie) / Popular: 300
 - Discover · Family (movie) / Top Rated: 300
 - Discover · Family (movie) / New Releases: 300
-- Discover · Family (movie) / Hidden Gems: 280
+- Discover · Family (movie) / Hidden Gems: 279
 - Discover · Family (movie) / Animated: 300
 - Discover · Family (movie) / Fantasy & Adventure: 300
 - Discover · Family (movie) / Family Comedy: 300
@@ -12442,7 +12439,7 @@ EMPTY gen-genres-western-international-hits-series
 - mdb-205811 (IMDb Top 250): 249
 - mdb-205902 (Letterboxd Top 500): 493
 - mdb-207869 (Sight and Sound Greatest Films): 263
-- mdb-146624 (Cannes Winners): 1432
+- mdb-146624 (Cannes Winners): 1433
 - mdb-146622 (Venice Winners): 1307
 - mdb-146625 (Sundance Winners): 867
 - mdb-146627 (Golden Globe Winners): 923
