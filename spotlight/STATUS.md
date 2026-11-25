@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-24
+# Spotlight status — 2026-11-25
 
 Next rotation (all rotating cards): **2026-12-07**
 Next Cultural Pulse theme starts: **2026-12-01**
@@ -14,7 +14,7 @@ Next Cultural Pulse theme starts: **2026-12-01**
 | Retro Rewind | Screwball Comedies | 100 | 0 |  |
 | Yerli Yıldız | Beren Saat | 5 | 7 |  |
 | The Cultural Pulse | Family Gatherings | 100 | 55 |  |
-| Fresh Out of Theaters | daily | 50 | 26 |  |
+| Fresh Out of Theaters | daily | 50 | 27 |  |
 | Box Office Champions | daily | 37 | 100 |  |
 | Certified Fresh & Must-See | daily | 58 | 51 |  |
 
@@ -32,7 +32,3 @@ Next Cultural Pulse theme starts: **2026-12-01**
 - **Retro Rewind**: 1934–1949; keywords=-
 - **Yerli Yıldız**: TMDB person 145499 Beren Saat (Acting)
 - **The Cultural Pulse**: keywords movie=4543|18187|10041|33694 series=4543|18187|10041|33694
-- headliner: added to the auto pool: Jesse Plemons, Tom Holland, Sadie Sink
-- visionary: added to the auto pool: David Ayer, Francis Lawrence, Destin Daniel Cretton
-- saga: added to the auto pool: The Avengers, Meet the Parents
-- yerli: added to the auto pool: Helin Kandemir, Murat Yildirim, Cemre Baysel
