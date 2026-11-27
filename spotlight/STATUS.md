@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-26
+# Spotlight status — 2026-11-27
 
 Next rotation (all rotating cards): **2026-12-07**
 Next Cultural Pulse theme starts: **2026-12-01**
@@ -15,7 +15,7 @@ Next Cultural Pulse theme starts: **2026-12-01**
 | Yerli Yıldız | Beren Saat | 5 | 7 |  |
 | The Cultural Pulse | Family Gatherings | 100 | 55 |  |
 | Fresh Out of Theaters | daily | 50 | 24 |  |
-| Box Office Champions | daily | 37 | 100 |  |
+| Box Office Champions | daily | 38 | 100 |  |
 | Certified Fresh & Must-See | daily | 58 | 52 |  |
 
 ## Notes
