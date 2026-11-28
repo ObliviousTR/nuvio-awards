@@ -1,4 +1,4 @@
-# Spotlight status — 2026-11-27
+# Spotlight status — 2026-11-28
 
 Next rotation (all rotating cards): **2026-12-07**
 Next Cultural Pulse theme starts: **2026-12-01**
@@ -14,9 +14,9 @@ Next Cultural Pulse theme starts: **2026-12-01**
 | Retro Rewind | Screwball Comedies | 100 | 0 |  |
 | Yerli Yıldız | Beren Saat | 5 | 7 |  |
 | The Cultural Pulse | Family Gatherings | 100 | 55 |  |
-| Fresh Out of Theaters | daily | 50 | 24 |  |
+| Fresh Out of Theaters | daily | 50 | 23 |  |
 | Box Office Champions | daily | 38 | 100 |  |
-| Certified Fresh & Must-See | daily | 58 | 52 |  |
+| Certified Fresh & Must-See | daily | 57 | 53 |  |
 
 ## Notes
 - **The Headliner**: TMDB person 88124 Jesse Plemons (Acting)
